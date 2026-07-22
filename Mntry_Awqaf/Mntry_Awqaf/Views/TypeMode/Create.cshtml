@@ -1,0 +1,286 @@
+﻿@* @model Mntry_Awqaf.Models.TypeModel
+
+@{
+    Layout=null;
+    ViewData["Title"] = "Create";
+}
+
+
+
+<form asp-action="Create" method="post">
+    <div class="modal-body">
+        <div class="row mb-3">
+            <div class="col-12">
+                <h4 class="fw-bold"> قالب معيار النوع</h4>
+                <hr>
+            </div>
+        </div>
+        <div class="table-responsive" id="table1">
+            <table class="table table-bordered table-hover">
+                <thead class="table-light">
+                    <tr>
+                        <th style="width: 40px">#</th>
+                       
+                       
+                        
+                      
+                      
+                       
+                        <th>  المساحه</th>
+                        <th>  السعر</th>
+                        <th colspan="2" class="text-center" >
+     <div>المدة الزمنية</div>
+     <div>لتسليم التقرير</div>
+     <hr class="my-1">
+     <div style="display: flex; justify-content: center; gap: 20px;">
+         <span>من</span>
+         <span>|</span>
+         <span>إلى</span>
+     </div>
+ </th>
+                        <th style="width: 50px">
+                            <button type="button" class="btn btn-sm btn-outline-primary" onclick="addWagesTableRow()">
+                                <i class="bi bi-plus"></i>
+                            </button>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody id="wagesTemplateTableBody1">
+                    <tr>
+                        <td>1</td>
+                   
+            <td>
+                         
+                                <input type="number" class="form-control form-control-sm" placeholder="أقل من">
+                          
+         
+            </td>
+
+           
+           
+
+                        <td>
+                            <input type="number" class="form-control form-control-sm" placeholder="0.00" >
+
+                        </td>
+
+                        <td>
+                            <input type="number" class="form-control form-control-sm" placeholder="0.00" step="0.01">
+                        </td>
+     
+                        <td>
+                            <input type="number" class="form-control form-control-sm">
+                        </td>
+                        
+                        <td>
+                            <input type="number" class="form-control form-control-sm">
+                        </td>
+                        <td>
+                            <button type="button" class="btn btn-sm btn-outline-danger" onclick="removeWagesTableRow(this)">
+                                <i class="bi bi-trash"></i>
+                            </button>
+                        </td>
+                    </tr>
+                  
+                         <tr>
+                        <td>2</td>
+                         <td>
+
+                    <input type="number" class="form-control form-control-sm" placeholder="أكثر من">
+
+
+
+            </td>
+           
+
+           
+        
+
+                        @*  <td>
+                            <input type="number" class="form-control form-control-sm" placeholder="اكثر من" >
+
+                        </td>
+                        <td>
+                            <input type="number" class="form-control form-control-sm" placeholder=" اقل من" >
+
+                        </td> *
+                        
+                        <td>
+                            <input type="number" class="form-control form-control-sm" placeholder="0.00" >
+
+                        </td>
+                       
+
+                        <td>
+                            <input type="number" class="form-control form-control-sm" placeholder="0.00" step="0.01">
+                        </td>
+
+                        <td>
+                            <input type="number" class="form-control form-control-sm">
+                        </td>
+
+                        <td>
+                            <input type="number" class="form-control form-control-sm">
+                        </td>
+                        <td>
+                            <button type="button" class="btn btn-sm btn-outline-danger" onclick="removeWagesTableRow(this)">
+                                <i class="bi bi-trash"></i>
+                            </button>
+                        </td>
+                    </tr>
+                       
+                    
+
+
+
+                    <tr>
+                        <td>3</td>
+
+            <td>
+
+ <div class="d-flex gap-2">
+                    <input type="number" class="form-control form-control-sm" placeholder=" من">
+                    <input type="number" class="form-control form-control-sm" placeholder=" الى">
+                </div>
+            </td>
+
+           
+
+                        <td>
+                            <input type="number" class="form-control form-control-sm" placeholder="0.00" >
+
+                        </td>
+
+                        <td>
+                            <input type="number" class="form-control form-control-sm" placeholder="0.00" step="0.01">
+                        </td>
+
+                        <td>
+                            <input type="number" class="form-control form-control-sm">
+                        </td>
+
+                        <td>
+                            <input type="number" class="form-control form-control-sm">
+                        </td>
+                        <td>
+                            <button type="button" class="btn btn-sm btn-outline-danger" onclick="removeWagesTableRow(this)">
+                                <i class="bi bi-trash"></i>
+                            </button>
+                        </td>
+                    </tr>
+
+
+
+
+
+
+
+
+
+
+                </tbody>
+            </table>
+
+        </div>
+        <div class="col-md-3">
+            <div class="form-check">
+                <input type="hidden" id="hiddenAreaDifferent" name="AreaDifferent" value="0" />
+                <input type="checkbox" class="form-check-input" id="AreaDifferentCheckbox" />
+                <label class="form-check-label" for="AreaDifferentCheckbox">  السعر شامل اجور الجهاز  </label>
+            </div>
+        </div>
+        </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-primary">حفظ </button>
+    </div> *@
+        
+  @*   <div class="container">
+        <div class="row mb-3">
+            <div class="col-12">
+                <h4 class="fw-bold"> قالب معيار النوع</h4>
+                <hr>
+            </div>
+        </div>
+        <h5>معيار المساحة</h5>
+        <div class="mb-3">
+            <select class="form-select" id="conditionSelect">
+                <option value="less">Less than</option>
+                <option value="greater">Greater than</option>
+                <option value="range">من الى</option>
+            </select>
+        </div>
+
+        <!-- الحقول (مخفيه بالبداية) -->
+        <div class="row mb-3" id="rangeFields" style="display:flex;">
+            <div class="form-title mb-2">المدة الزمنية لتسليم التقرير</div>
+
+            <div class="col-md-6">
+                <div class="input-label-en">من (باليوم)</div>
+                <input type="number" class="form-control" name="WorkCostFrom" step="0.01" />
+            </div>
+
+            <div class="col-md-6">
+                <div class="input-label-en">الى (باليوم)</div>
+                <input type="number" class="form-control" name="WorkCostTo" step="0.01" />
+            </div>
+        </div>
+
+      
+
+        <!-- الصف الأول: موقع الأرض (4 أعمدة) -->
+        <div class="row mb-3">
+           
+            <div class="col-md-3">
+                <label class="input-label"> سعر استاجار الجهاز</label>
+                <input type="number" class="form-control" id="documentArea" name="Notes" placeholder="0.00" step="0.01" />
+            </div>
+
+
+
+          
+           
+            <div class="col-md-3">
+                <div class="input-label-en"> السعر</div>
+                <input type="number" class="form-control" id="workCost" name="WorkCost" step="0.01" />
+            </div>
+            <div class="col-md-3">
+                <div class="input-label-en"> Total Price</div>
+                <input type="number" class="form-control" id="workCost" name="WorkCost" step="0.01" />
+            </div>
+            <div class="col-md-3">
+                <label class="input-label">المساحة كما في الوثيقة </label>
+                <input type="number" class="form-control" id="documentArea" name="Notes" placeholder="0.00" step="0.01" />
+            </div>
+        </div>
+        <div class="row mb-3">
+           
+        <div class="col-md-3">
+            <div class="form-check">
+                <input type="hidden" id="hiddenAreaDifferent" name="AreaDifferent" value="0" />
+                <input type="checkbox" class="form-check-input" id="AreaDifferentCheckbox" />
+                <label class="form-check-label" for="AreaDifferentCheckbox">  السعر شامل اجور الجهاز المساحي </label>
+            </div>
+        </div>
+        </div>
+
+       
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">إلغاء</button>
+            <button type="button" class="btn btn-primary">حفظ القالب</button>
+        </div>
+        </div> 
+</form>*@
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    <script>
+        document.getElementById("conditionSelect").addEventListener("change", function () {
+            var rangeFields = document.getElementById("rangeFields");
+            if (this.value === "range") {
+                rangeFields.style.display = "flex"; // يظهر الصف
+            } else {
+                rangeFields.style.display = "none"; // يخفيه
+            }
+        });
+    </script>
+}

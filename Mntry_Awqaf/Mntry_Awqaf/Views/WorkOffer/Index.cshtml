@@ -1,0 +1,688 @@
+@model IEnumerable<Mntry_Awqaf.Models.WorkOffer>
+
+@{
+
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="col">
+    <h5>عروض</h5>
+</div>
+
+<div class="row" dir="rtl">
+
+
+
+   @*  <div class="col-md-3">
+        <div class="form-group ">
+            <select id="inputState" class="form-select">
+                <option selected=""> </option>
+                <option>المجال الهندسي</option>
+                <option>مجال التعليم والتأهيل</option>
+                <option> المجال الخيري </option>
+            </select>
+        </div>
+
+    </div>
+
+    <div class="col-md-3">
+        <div class="form-group ">
+            <select id="inputState" class="form-select">
+                <option selected=""> </option>
+                <option>الهندس المدنية </option>
+                <option>العمارة </option>
+                <option> تقنية المعلومات </option>
+            </select>
+        </div>
+
+    </div>
+
+    <div class="col-md-3">
+        <div class="form-group ">
+            <select id="inputState" class="form-select">
+                <option selected=""> </option>
+                <option> المساحة </option>
+                <option>الإنشاء </option>
+                <option> الطرق  </option>
+            </select>
+        </div>
+
+    </div>
+
+    <div class="col-md-3">
+        <div class="form-group ">
+            <select id="inputState" class="form-select">
+                <option selected=""> </option>
+                <option> مسح  </option>
+                <option>تقسيم بين ورثة </option>
+                <option> فصل نزاع  </option>
+            </select>
+        </div>
+
+    </div>
+
+
+    <div class="col-md-3">
+        <div class="form-group ">
+            <select id="inputState" class="form-select">
+                <option selected=""> </option>
+                <option>اراضي</option>
+                <option>معمورات </option>
+                <option>  مراهق  </option>
+            </select>
+        </div>
+
+    </div> *@
+
+    <div class="col-md-3">
+
+
+    </div>
+</div>
+
+<div dir="rtl">
+
+
+
+    <ul class="nav nav-tabs profile-tabs justify-content-center justify-content-md-end" id="myTab" role="tablist" dir="ltr">
+
+     
+        @*  <a href="#"
+           class="btn btn-outline-primary"
+           onclick="showFormDialog('WorkOffer'); return false;">
+            <i class="ti ti-user-plus me-1"></i> إنشاء عروض
+        </a>
+            <button type="button" onclick="showFormDialog('WorkOffer')" class="btn btn-sm btn-outline-primary">
+                <i class="bi bi-plus"></i>
+            </button> *@
+
+       @*  <li class="nav-item">
+            <a asp-controller="WorkOffer" asp-action="Create" class="btn btn-outline-primary">
+                <i class="ti ti-user-plus me-1"></i> انشاء عروض
+            </a>
+      
+        </li> *@
+        <li class="nav-item">
+            <button id="btnCreateWorkOffer" class="btn btn-outline-primary">
+                <i class="ti ti-user-plus me-1"></i> انشاء عروض
+            </button>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link active" id="request-tab" data-bs-toggle="tab" href="#to_me" role="tab" aria-controls="request" aria-selected="false">
+                <i class="ti ti-user-plus me-2"></i>عروض الآخرين
+            </a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link " id="gallery-tab" data-bs-toggle="tab" href="#from_me" role="tab" aria-controls="gallery" aria-selected="false">
+                <i class="ti ti-photo me-2"></i>عروضي
+            </a>
+
+        </li> 
+      
+
+
+    </ul>
+
+    <div class="tab-pane" id="to_me" role="tabpanel" aria-labelledby="request-tab">
+        <div class="card">
+            @{
+                var dynamicValues = ViewBag.DynamicValues as IEnumerable<Mntry_Awqaf.Models.DynamicFieldValue>;
+            }
+            <div class="card-body">
+
+                <div class="table-responsive">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>رقم العرض</th>
+                                @if (ViewBag.DynamicFields != null)
+                                {
+                                    foreach (var field in ViewBag.DynamicFields)
+                                    {
+                                        <th>@field.Name</th>
+                                    }
+                                }
+                                <th>العمليات</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                             @if (Model != null && Model.Any())
+ {
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td>@item.Id</td>
+                                    @if (ViewBag.DynamicFields != null)
+                                    {
+                                        foreach (var field in ViewBag.DynamicFields)
+                                        {
+                                            int fId = (int)field.Id;
+                                            var val = dynamicValues?.FirstOrDefault(v => v.RecordId == item.Id && v.DynamicFieldId == fId)?.Value ?? "-";
+                                            string fieldType = (string)field.Type;
+
+                                            if (fieldType == "file" && val != "-" && val != "")
+                                            {
+                                                string ext = System.IO.Path.GetExtension(val).ToLower();
+                                                bool isImage = ext == ".jpg" || ext == ".jpeg" || ext == ".png" || ext == ".gif" || ext == ".bmp" || ext == ".webp" || ext == ".svg";
+
+                                                if (isImage)
+                                                {
+                                                    <td>
+                                                        <a href="@val" target="_blank" title="عرض الصورة">
+                                                            <img src="@val" alt="مرفق" style="width:55px;height:55px;object-fit:cover;border-radius:5px;border:1px solid #ccc;" 
+                                                                 onerror="this.style.display='none';this.nextElementSibling.style.display='inline'" />
+                                                            <span style="display:none">🖼️ <small>@System.IO.Path.GetFileName(val)</small></span>
+                                                        </a>
+                                                    </td>
+                                                }
+                                                else
+                                                {
+                                                    <td>
+                                                        <a href="@val" target="_blank" title="فتح المرفق" style="text-decoration:none; color:#0d6efd;">
+                                                            📎 <small>@System.IO.Path.GetFileName(val)</small>
+                                                        </a>
+                                                    </td>
+                                                }
+                                            }
+                                            else
+                                            {
+                                                <td>@val</td>
+                                            }
+                                        }
+                                    }
+                                    <td>
+                                         @{
+                                             var contractsDict = ViewBag.Contracts as Dictionary<int, int> ?? new Dictionary<int, int>();
+                                             if (contractsDict.TryGetValue(item.Id, out var contractId))
+                                             {
+                                                 <a href="#" class="view-contract-btn" data-contract-id="@contractId">
+                                                     <i class="feather icon-eye f-w-600 f-16 m-r-15 text-primary"> عرض العقد</i>
+                                                 </a>
+                                             }
+                                             else
+                                             {
+                                                 <span class="text-muted">لا يوجد عقد</span>
+                                             }
+                                         }
+                                         <a asp-controller="WorkOffer" asp-action="Edit" asp-route-id="@item.Id"><i class="icon feather icon-edit f-w-600 f-16 m-r-15 text-success"></i></a>
+                                         <a href="#" title="حذف" onclick="confirmDelete(@item.Id); return false;">
+                                             <i class="feather icon-trash-2 f-w-600 f-16 text-danger"></i>
+                                         </a>
+                                    </td>
+                                </tr>
+                                    
+                            }
+
+                            }
+                            else
+                            {
+                                <tr>
+                                    <td colspan="17" class="text-muted">لا توجد بيانات متاحة حاليًا</td>
+                                </tr>
+                            }
+                                        </tbody>
+                                    </table>
+                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+    @Html.Partial("~/Views/Service/show.cshtml")
+    @Html.Partial("~/Views/Service/alert_sms.cshtml")
+
+                </div>
+
+
+
+    <div id="contractAlertsContainer"
+         style="position: fixed; bottom: 20px; right: 20px; z-index: 9999; cursor: pointer;">
+    </div>
+
+    <!-- Modal for View Contract -->
+    <div class="modal fade" id="viewContractModal" tabindex="-1" role="dialog" aria-labelledby="viewContractModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="viewContractModalLabel">عرض تفاصيل العقد</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-0">
+                    <!-- سيتم تحميل المحتوى هنا -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- مكان عرض المودال -->
+    <div id="contractModalContainer"></div>
+@section Scripts {
+    <script>
+        const container = document.getElementById('contractAlertsContainer');
+
+        async function fetchNotifications() {
+            try {
+                const response = await fetch('/User/GetNotificationsPartial');
+                if (!response.ok) throw new Error('فشل جلب الإشعارات');
+
+                const html = await response.text();
+                const tempDiv = document.createElement('div');
+                tempDiv.innerHTML = html;
+                const notifications = tempDiv.querySelectorAll('li a.dropdown-item');
+
+                container.innerHTML = "";
+
+                notifications.forEach(n => {
+                    const title = n.childNodes[0].textContent.trim();
+                    const time = n.querySelector("small")?.innerText || "";
+                    const notifId = n.dataset.notifId;
+                    const contractId = n.dataset.contractId;
+                    const url = n.dataset.url;
+
+                    const alertDiv = document.createElement("div");
+                    alertDiv.className = "alert alert-info alert-dismissible fade show";
+                    alertDiv.style.marginBottom = "10px";
+                    alertDiv.innerHTML = `
+                        ${title} <br>
+                        <small class="text-muted">${time}</small>
+                        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                    `;
+
+                    alertDiv.onclick = async () => {
+                        try {
+                            // تعليم الإشعار كمقروء
+                            await fetch(`/User/MarkAsRead/${notifId}`);
+
+                            if (url && url !== "javascript:void(0);") {
+                                const response = await fetch(url);
+                                if (response.ok) {
+                                    const modalHtml = await response.text();
+                                    const modalContainer = document.getElementById("contractModalContainer");
+                                    modalContainer.innerHTML = modalHtml;
+
+                                    // عرض المودال داخل الـ Partial
+                                    const modalEl = modalContainer.querySelector('.modal.fade');
+                                    if (modalEl) {
+                                        const modalInstance = new bootstrap.Modal(modalEl);
+                                        modalInstance.show();
+                                    } else {
+                                        console.error("لم يتم العثور على مودال داخل Partial View");
+                                    }
+                                } else {
+                                    console.error("فشل تحميل محتوى الإشعار من الرابط:", url);
+                                }
+                            }
+                        } catch (err) {
+                            console.error("خطأ عند الضغط على الإشعار:", err);
+                        }
+                    };
+
+                    container.appendChild(alertDiv);
+                });
+
+            } catch (err) {
+                console.error(err);
+            }
+        }
+
+        // تحديث الإشعارات كل 10 ثواني
+        setInterval(fetchNotifications, 10000);
+        fetchNotifications();
+
+        function initContractModalEvents(modalContainer, contractId) {
+            if(!modalContainer) return;
+
+            const workContractModalEl = modalContainer.querySelector('#workContractModal');
+            if(workContractModalEl){
+                new bootstrap.Modal(workContractModalEl).show();
+            }
+
+            const amendmentModalEl = modalContainer.querySelector("#amendmentModal");
+            const fieldNameWrapper = modalContainer.querySelector("#fieldNameWrapper");
+            const descriptionWrapper = modalContainer.querySelector("#descriptionWrapper");
+            const modificationFields = modalContainer.querySelector("#modificationFields");
+            const hiddenTypeInput = modalContainer.querySelector("#HiddenAmendmentType");
+            const tempMessage = modalContainer.querySelector("#temp-message-amendment");
+            const amendmentForm = modalContainer.querySelector("#amendmentForm");
+
+            const engineerId = parseInt(modalContainer.querySelector("#EngineerIdHidden")?.value || 0, 10);
+
+            function showTempMessage(msg){
+                if(tempMessage){
+                    tempMessage.style.display = "block";
+                    tempMessage.innerText = msg;
+                    setTimeout(()=> tempMessage.style.display = "none", 3000);
+                }
+            }
+
+            function showAmendmentFields(type){
+                fieldNameWrapper.style.display = "block";
+                descriptionWrapper.style.display = "block";
+                modificationFields.style.display = (type === "Modification") ? "block" : "none";
+            }
+
+            modalContainer.querySelectorAll(".btn-reject").forEach(btn => {
+                btn.addEventListener("click", () => {
+                    const amendmentModal = new bootstrap.Modal(amendmentModalEl);
+                    amendmentModalEl.querySelector("form").reset();
+
+                    const actionText = btn.textContent.trim();
+                    hiddenTypeInput.value = actionText.includes("الاعتراض") ? "Objection" : "Modification";
+                    showAmendmentFields(hiddenTypeInput.value);
+                    amendmentModal.show();
+                });
+            });
+
+            if(amendmentForm){
+                amendmentForm.addEventListener("submit", async function(e){
+                    e.preventDefault();
+
+                    const type = hiddenTypeInput.value;
+                    const fieldName = modalContainer.querySelector("#FieldName")?.value.trim() || null;
+                    const description = modalContainer.querySelector("#Description")?.value.trim() || null;
+                    const newValue = modalContainer.querySelector("#NewValue")?.value.trim() || null;
+                    const clientRaw = modalContainer.querySelector("#ClientID")?.value || "";
+                    const clientId = clientRaw === "" ? null : parseInt(clientRaw, 10);
+
+                    if(type === "Objection" && (!fieldName || !description)){
+                        showTempMessage("يرجى إدخال اسم البند والتفاصيل.");
+                        return;
+                    }
+                    if(type === "Modification" && (!fieldName || !newValue)){
+                        showTempMessage("يرجى تعبئة اسم البند والقيمة الجديدة.");
+                        return;
+                    }
+
+                    const amendments = [{
+                        AmendmentType: type,
+                        FieldName: fieldName,
+                        Description: description,
+                        NewValue: newValue,
+                        ClientId: clientId,
+                        EngineerId: engineerId
+                    }];
+
+                    try {
+                        const formData = new FormData();
+                        formData.append("AmendmentsJson", JSON.stringify(amendments));
+
+                        const response = await fetch(`/User/AddAmendments?contractId=${contractId}`, {
+                            method: "POST",
+                            body: formData
+                        });
+                        const result = await response.json();
+                        showTempMessage(result.message);
+                    } catch(err){
+                        showTempMessage("حدث خطأ أثناء إرسال البيانات.");
+                        console.error(err);
+                    }
+
+                    amendmentForm.reset();
+                    fieldNameWrapper.style.display = "none";
+                    descriptionWrapper.style.display = "none";
+                    modificationFields.style.display = "none";
+                    hiddenTypeInput.value = "";
+                });
+            }
+                             const approveBtn = modalContainer.querySelector("#approveContractBtn");
+        const rejectBtn = modalContainer.querySelector("#rejectContractBtn");
+
+        // تعريف القيم الرقمية للـ enum
+        const ContractStatusEnum = {
+            PendingEngineerApproval: 0,
+            EngineerApproved: 1,
+            EngineerRejected: 2,
+            PendingClientFinalApproval: 3,
+            FinalApproved: 4,
+            ClientRejected: 5
+        };
+
+        function showTempMessage(msg){
+            const tempMessage = modalContainer.querySelector("#temp-message-amendment");
+            if(tempMessage){
+                tempMessage.style.display = "block";
+                tempMessage.innerText = msg;
+                setTimeout(() => tempMessage.style.display = "none", 3000);
+            }
+        }
+
+        async function updateContract(statusValue) {
+            try {
+                const res = await fetch(`/User/UpdateContractStatusWithNotification?contractId=${contractId}`, {
+                    method: 'PUT',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ status: statusValue }) // يجب أن يكون "status" صغير
+                });
+
+                const result = await res.json();
+                showTempMessage(result.message + (result.details ? " | " + result.details : ""));
+            } catch(err){
+                console.error(err);
+                showTempMessage("حدث خطأ أثناء إرسال العملية: " + err.message);
+            }
+        }
+
+        if(approveBtn){
+            approveBtn.addEventListener("click", () => updateContract(ContractStatusEnum.EngineerApproved));
+        }
+
+        if(rejectBtn){
+            rejectBtn.addEventListener("click", () => updateContract(ContractStatusEnum.EngineerRejected));
+        }
+
+        }
+
+        function initAddItemModal(modalContainer, contractId){ // ✅ تمرير contractId
+            if(!modalContainer) return;
+
+            const addItemModalEl = modalContainer.querySelector("#addItemModal");
+            if(!addItemModalEl) return;
+
+            const addItemModal = new bootstrap.Modal(addItemModalEl);
+            const saveBtn = addItemModalEl.querySelector("#saveNewItemBtn");
+            const form = addItemModalEl.querySelector("#addItemForm");
+            const tempMessage = addItemModalEl.querySelector("#temp-message-additem");
+
+            function showTempMessage(msg, type="info"){
+                if(tempMessage){
+                    tempMessage.className = "alert alert-" + type;
+                    tempMessage.style.display = "block";
+                    tempMessage.innerText = msg;
+                    setTimeout(()=> tempMessage.style.display = "none", 3000);
+                } else {
+                    alert(msg);
+                }
+            }
+
+            const showBtn = modalContainer.querySelector("#showAddItemModalBtn");
+            if(showBtn){
+                showBtn.addEventListener("click", ()=> addItemModal.show());
+            }
+
+            saveBtn.addEventListener("click", async function(){
+                const count = form.querySelector("#newItemCount").value.trim();
+                const title = form.querySelector("#newItemTitle").value.trim();
+                const description = form.querySelector("#newItemDescription").value.trim();
+                const userId = form.querySelector("#UserID").value;
+
+                if(!title){ showTempMessage("الرجاء إدخال اسم البند!", "danger"); return; }
+                if(!count || isNaN(count)){ showTempMessage("الرجاء إدخال رقم ترتيب صالح!", "danger"); return; }
+
+                const data = {
+                    Title: title,
+                    DescriptionTemplate: description,
+                    UserID: parseInt(userId),
+                    Count: parseInt(count),
+                    WorkContractId: parseInt(contractId) // ✅ إضافة WorkContractId
+                };
+
+                try{
+                    const res = await fetch('@Url.Action("CreateContractItems", "User")', {
+                        method: "POST",
+                        headers: {'Content-Type':'application/json'},
+                        body: JSON.stringify(data)
+                    });
+                    const result = await res.json();
+                    if(result && result.success){
+                        const select = modalContainer.querySelector("#FieldName");
+                        if(select){
+                            const option = document.createElement("option");
+                            option.value = result.data.id + "- " + result.data.title;
+                            option.text = count + "- " + result.data.title;
+                            select.appendChild(option);
+                        }
+                        const container = modalContainer.querySelector("#contractItemsContainer");
+                        if(container){
+                            const div = document.createElement("div");
+                            div.classList.add("contract-section");
+                            div.innerHTML = `<strong>${count}- ${title}:</strong> ${description.replace(/\n/g,"<div></div>")}`;
+                            container.appendChild(div);
+                        }
+                        showTempMessage(result.message,"success");
+                        addItemModal.hide();
+                        form.reset();
+                    } else {
+                        showTempMessage(result.message + (result.details ? ": " + result.details : ""), "danger"); // ✅ عرض تفاصيل الخطأ
+                    }
+                } catch(err){
+                    console.error(err);
+                    showTempMessage("خطأ بالاتصال: " + err.message,"danger");
+                }
+            });
+        }
+
+          function submitForm(value) {
+            document.getElementById('Is_Authentic').value = value;
+            document.querySelector('#userDetailsModal form').submit();
+        }
+    </script>
+    <script>
+        $(document).ready(function () {
+
+            $("#btnCreateWorkOffer").click(function () {
+                window.location.href = '/WorkOffer/Create';
+            });
+
+            $(document).on('click', '.view-contract-btn', function (e) {
+                e.preventDefault();
+                var contractId = $(this).data('contract-id');
+                var modalBody = $('#viewContractModal').find('.modal-body');
+                
+                modalBody.html('<div class="text-center p-3"><span class="spinner-border"></span></div>');
+                
+                var modal = new bootstrap.Modal(document.getElementById('viewContractModal'));
+                modal.show();
+                
+                $.get('/User/GetWorkContract', { contractId: contractId }, function (data) {
+                    modalBody.html(data);
+                }).fail(function () {
+                    modalBody.html('<div class="alert alert-danger m-3">فشل تحميل تفاصيل العقد.</div>');
+                });
+            });
+
+            $('#viewContractModal').on('hidden.bs.modal', function () {
+                $('.modal-backdrop').remove();
+                $('body').removeClass('modal-open');
+            });
+        });
+
+    </script>
+
+}
+
+
+
+
+
+
+
+
+
+@* 
+@section Scripts {
+    <script src="~/assets/js/modalFormHandler.js"></script>
+    <!-- مكان عرض التنبيهات -->
+   
+
+    <script>
+            $('#viewContractModal').on('hidden.bs.modal', function () {
+            $('.modal-backdrop').remove();
+            $('body').removeClass('modal-open');
+        });
+
+    </script>
+
+} *@
+
+<div class="modal fade" id="deleteConfirmModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-sm">
+        <div class="modal-content">
+            <div class="modal-header bg-danger text-white">
+                <h6 class="modal-title">⚠️ تأكيد الحذف</h6>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body text-center">
+                <p class="mb-0">هل أنت متأكد من حذف هذا العرض؟</p>
+                <small class="text-muted">لا يمكن التراجع عن هذا الإجراء</small>
+            </div>
+            <div class="modal-footer justify-content-center">
+                <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">إلغاء</button>
+                <button type="button" class="btn btn-danger btn-sm" id="confirmDeleteBtn">حذف</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    var _deleteId = 0;
+    var _deleteModalInstance = null;
+
+    function confirmDelete(id) {
+        _deleteId = id;
+        var modalEl = document.getElementById('deleteConfirmModal');
+        if (modalEl) {
+            _deleteModalInstance = bootstrap.Modal.getInstance(modalEl);
+            if (!_deleteModalInstance) {
+                _deleteModalInstance = new bootstrap.Modal(modalEl);
+            }
+            _deleteModalInstance.show();
+        }
+    }
+
+    document.addEventListener('click', function (e) {
+        if (e.target && e.target.id === 'confirmDeleteBtn') {
+            var btn = e.target;
+            btn.disabled = true; // تعطيل الزر لتجنب النقرات المتكررة
+            
+            fetch('/WorkOffer/DeleteConfirmed?id=' + _deleteId, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' }
+            })
+            .then(function(r) {
+                if (r.ok) return r.json();
+                else throw new Error('Network response was not ok');
+            })
+            .then(function(data) {
+                if (data.success) {
+                    if (_deleteModalInstance) {
+                        _deleteModalInstance.hide();
+                    }
+                    setTimeout(function () {
+                        location.reload();
+                    }, 500);
+                } else {
+                    alert('خطأ: ' + (data.message || 'فشل الحذف'));
+                    btn.disabled = false;
+                }
+            })
+            .catch(function(error) {
+                console.error('Error:', error);
+                alert('حدث خطأ أثناء الاتصال بالخادم.');
+                btn.disabled = false;
+            });
+        }
+    });
+</script>

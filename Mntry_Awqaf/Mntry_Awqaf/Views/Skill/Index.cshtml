@@ -1,0 +1,194 @@
+<div class="tab-pane" id="profile-5" role="tabpanel" aria-labelledby="profile-tab-5">
+    <div class="container my-5">
+        <h2 class="text-center mb-4">إنشاء السيرة الذاتية</h2>
+
+        <div id="cv-form">
+<!-- المستخدم -->
+<div id="personal-section"></div>
+<!-- المهارات -->
+<div id="skills-section" ></div>
+
+<!-- المؤهلات العلمية -->
+<div id="education-section" ></div>
+
+<!-- الخبرات العملية -->
+<div id="experience-section" ></div>
+
+<!-- الدورات التدريبية -->
+<div id="courses-section" ></div>
+
+<!-- اللغات -->
+<div id="languages-section" ></div>
+            <div class="text-center mt-4">
+                <button class="btn btn-success" onclick="generateCV()">حفظ السيرة الذاتية</button>
+            </div>
+        </div>
+
+        <!-- عرض السيرة الذاتية -->
+        <div id="cv-preview"></div>
+    </div>
+</div>
+
+<div class="modal fade" id="confirmModal" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header bg-primary text-white">
+                <h5 class="modal-title">تأكيد إنشاء السيرة الذاتية PDF</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" id="cv-preview-modal">
+                <!-- سيتم عرض السيرة الذاتية هنا مؤقتًا -->
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">إلغاء</button>
+                <button type="button" class="btn btn-success" onclick="exportToPDF()">تأكيد وإنشاء PDF</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+
+
+<script>
+    $(document).ready(function() {
+        // تحميل كل الأقسام عند تحميل الصفحة
+        loadAllSections();
+    });
+
+    function loadAllSections() {
+        $("#personal-section").load("/Experience/GetUser");
+        $("#skills-section").load("/Skill/GetUserSkills");
+        $("#education-section").load("/Qualification/GetUserQualifications");
+        $("#experience-section").load("/Experience/GetUserExperiences");
+        $("#courses-section").load("/Certificate/GetUserCertificates");
+        $("#languages-section").load("/Project/GetUserProjects");
+    }
+</script>
+<script>
+    function toggleSection(id) {
+        const sections = document.querySelectorAll('.section-content');
+        sections.forEach(sec => {
+            if (sec.id === id) $(sec).slideToggle();
+            else $(sec).slideUp();
+        });
+    }
+
+    function createItemBox(content, editCallback) {
+        const box = $(`
+            <div class="item-box">
+                <div>${content}</div>
+                <div class="action-btns">
+                    <button class="btn btn-sm btn-outline-primary">تعديل</button>
+                    <button class="btn btn-sm btn-outline-danger">حذف</button>
+                </div>
+            </div>
+        `);
+        box.find('.btn-outline-primary').click(editCallback);
+        box.find('.btn-outline-danger').click(() => box.remove());
+        return box;
+    }
+
+    function addSkill() {
+        const name = $('#skillName').val(), field = $('#skillField').val(), from = $('#skillFrom').val(), to = $('#skillTo').val(), desc = $('#skillDesc').val();
+        if (!name) return alert("يرجى إدخال اسم المهارة.");
+        const content = `<strong>${name}</strong> (${field})<br><small>${from} - ${to}</small><br>${desc}`;
+        const box = createItemBox(content, () => {
+            $('#skillName').val(name); $('#skillField').val(field);
+            $('#skillFrom').val(from); $('#skillTo').val(to);
+            $('#skillDesc').val(desc); box.remove();
+        });
+        $('#skills-list').append(box); $('#skills input').val('');
+    }
+
+    function addExperience() {
+        const company = $('#expCompany').val(), title = $('#expTitle').val(), field = $('#expField').val(), from = $('#expFrom').val(), to = $('#expTo').val(), tasks = $('#expTasks').val();
+        if (!company) return alert("يرجى إدخال جهة العمل.");
+        const content = `<strong>${title}</strong> - ${company}<br><small>${field} (${from} - ${to})</small><br>${tasks}`;
+        const box = createItemBox(content, () => {
+            $('#expCompany').val(company); $('#expTitle').val(title);
+            $('#expField').val(field); $('#expFrom').val(from);
+            $('#expTo').val(to); $('#expTasks').val(tasks); box.remove();
+        });
+        $('#experience-list').append(box); $('#experience input').val('');
+    }
+
+    function addEducation() {
+        const country = $('#eduCountry').val(), univ = $('#eduUniv').val(), major = $('#eduMajor').val(), dept = $('#eduDept').val(), year = $('#eduYear').val(), grade = $('#eduGrade').val();
+        if (!univ) return alert("يرجى إدخال اسم الجامعة.");
+        const content = `<strong>${major}</strong> - ${univ}, ${country}<br><small>${dept} | سنة ${year}</small><br>التقدير: ${grade}`;
+        const box = createItemBox(content, () => {
+            $('#eduCountry').val(country); $('#eduUniv').val(univ);
+            $('#eduMajor').val(major); $('#eduDept').val(dept);
+            $('#eduYear').val(year); $('#eduGrade').val(grade); box.remove();
+        });
+        $('#education-list').append(box); $('#education input').val('');
+    }
+
+    function addCert() {
+        const country = $('#certCountry').val(), name = $('#certName').val(), org = $('#certOrg').val(), year = $('#certYear').val(), type = $('#certType').val();
+        if (!name) return alert("يرجى إدخال اسم الشهادة أو الدورة.");
+        const content = `<strong>${name}</strong> - ${org} (${country})<br><small>${year} | التصنيف: ${type}</small>`;
+        const box = createItemBox(content, () => {
+            $('#certCountry').val(country); $('#certName').val(name);
+            $('#certOrg').val(org); $('#certYear').val(year);
+            $('#certType').val(type); box.remove();
+        });
+        $('#cert-list').append(box); $('#cert input').val('');
+    }
+
+    function addProject() {
+        const name = $('#projName').val(), company = $('#projCompany').val(), field = $('#projField').val(), from = $('#projFrom').val(), to = $('#projTo').val(), value = $('#projValue').val(), role = $('#projRole').val();
+        if (!name) return alert("يرجى إدخال اسم المشروع.");
+        const content = `<strong>${name}</strong> - ${company}<br><small>${field} (${from} - ${to})</small><br>القيمة: ${value} | الدور: ${role}`;
+        const box = createItemBox(content, () => {
+            $('#projName').val(name); $('#projCompany').val(company);
+            $('#projField').val(field); $('#projFrom').val(from);
+            $('#projTo').val(to); $('#projValue').val(value);
+            $('#projRole').val(role); box.remove();
+        });
+        $('#project-list').append(box); $('#project input').val('');
+    }
+
+    /* إنشاء السيرة الذاتية داخل نفس الصفحة */
+            function generateCV() {
+        const cloneSkills = $('#skills-list').clone();
+        const cloneExperiences = $('#experience-list').clone();
+        const cloneEducations = $('#education-list').clone();
+        const cloneCerts = $('#cert-list').clone();
+        const cloneProjects = $('#project-list').clone();
+
+        // إزالة الأزرار من النسخة التي ستعرض في الـ Modal
+        cloneSkills.find('button').remove();
+        cloneExperiences.find('button').remove();
+        cloneEducations.find('button').remove();
+        cloneCerts.find('button').remove();
+        cloneProjects.find('button').remove();
+
+        const cvHtml = `
+            <div id="cv-content" class="p-3">
+                <h2 class="text-center text-primary mb-4">السيرة الذاتية</h2>
+                <h4>المعلومات الشخصية</h4>
+                <p><strong>الجنس:</strong> ${$('input[placeholder="الجنس"]').val() || '-'} </p>
+                <p><strong>الجنسية:</strong> ${$('input[placeholder="الجنسية"]').val() || '-'} </p>
+                <p><strong>الحالة الاجتماعية:</strong> ${$('input[placeholder="الحالة الاجتماعية"]').val() || '-'} </p>
+                <p><strong>تاريخ الميلاد:</strong> ${$('input[placeholder="تاريخ الميلاد"]').val() || '-'} </p>
+                <p><strong>البريد الإلكتروني:</strong> ${$('input[placeholder="البريد الإلكتروني"]').val() || '-'} </p>
+                <p><strong>رقم الجوال:</strong> ${$('input[placeholder="رقم الجوال"]').val() || '-'} </p>
+                <p><strong>رقم قريب:</strong> ${$('input[placeholder="رقم جوال أحد الأقارب"]').val() || '-'} </p>
+
+                ${cloneSkills.children().length ? `<h4>المهارات التقنية</h4>${cloneSkills.html()}` : ''}
+                ${cloneExperiences.children().length ? `<h4>الخبرات العملية</h4>${cloneExperiences.html()}` : ''}
+                ${cloneEducations.children().length ? `<h4>المؤهلات العلمية</h4>${cloneEducations.html()}` : ''}
+                ${cloneCerts.children().length ? `<h4>الشهادات والدورات</h4>${cloneCerts.html()}` : ''}
+                ${cloneProjects.children().length ? `<h4>المشاريع السابقة والإنجازات</h4>${cloneProjects.html()}` : ''}
+            </div>
+        `;
+
+        $('#cv-preview-modal').html(cvHtml);
+        $('#confirmModal').modal('show');
+    }
+
+
+</script>

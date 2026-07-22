@@ -1,0 +1,278 @@
+@model IEnumerable<Mntry_Awqaf.Models.Notification>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+
+<div id="alert-area"></div>
+<div class="tab-pane" id="to_me" role="tabpanel" aria-labelledby="request-tab">
+    <div class="card">
+        <div class="card-body">
+            <div class="table-responsive">
+
+                <table class="table table-hover">
+    <thead>
+        <tr>
+           
+            <th>
+                @Html.DisplayNameFor(model => model.ReciveId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UserType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ContractId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Message)
+            </th>
+           
+            <th>
+                @Html.DisplayNameFor(model => model.IsRead)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CreatedAt)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+                            <tr id="row-@item.Id">
+           
+            <td>
+                @Html.DisplayFor(modelItem => item.ReciveId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UserType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ContractId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Message)
+            </td>
+           
+            <td>
+                @Html.DisplayFor(modelItem => item.IsRead)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CreatedAt)
+            </td>
+                                <td>
+                                    <button class="btn btn-sm btn-primary open-notification"
+                                            data-id="@item.Id"
+                                            data-userid="@item.ReciveId"
+                                            data-url="@item.Url">
+                                        عرض الإشعار
+                                    </button>
+                                </td> 
+                                <td>
+                                    <a href="javascript:void(0);" class="btn btn-success open-modal"
+                                       data-url="/Notification/Delete/@item.Id"
+                                       data-title="حذف البيانات"
+                                       data-id="@item.Id"
+                                       data-row="#row-@item.Id"
+                                       data-message-container="#alert-area">
+                                        حذف
+                                    </a>
+                                </td>
+
+          
+        </tr>
+}
+    </tbody>
+</table>
+                @* <div id="contractAlertsContainer"
+                     style="position: fixed; bottom: 20px; right: 20px; z-index: 9999; cursor: pointer;">
+                </div>
+                <div id="alertMessageContainer" style="margin-bottom:15px;"></div> *@
+
+</div>
+            <!-- ✅ مكان عرض الرسائل -->
+            <div id="tableMessage" class="mt-3"></div>
+</div>
+</div>
+</div>
+
+<div id="contractModalContainer"></div>
+    <div class="modal fade" id="dynamicModal" tabindex="-1" aria-labelledby="dynamicModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <!-- إزالة القيود على الحجم -->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="dynamicModalLabel">تحميل...</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="إغلاق"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="modalContent">
+                        <!-- سيتم تحميل محتوى الصفحة هنا -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+
+
+
+<script>
+    $(document).ready(function () {
+
+        // فتح أي مودال وتحميل Partial View
+        $(document).on("click", ".open-modal", function (e) {
+            e.preventDefault();
+
+            var url = $(this).data("url");
+            var title = $(this).data("title");
+
+            $("#dynamicModalLabel").text(title);
+            $("#modalContent").html('<div class="text-center p-3"><span class="spinner-border"></span></div>');
+
+            $.get(url, function (data) {
+                $("#modalContent").html(data);
+                setTimeout(() => adjustModalSize(), 100); // ضبط الحجم بعد التحميل
+                $("#dynamicModal").modal("show");
+            });
+        });
+
+        // التعامل مع أي form داخل المودال (مثلاً حذف أو تعديل)
+        $(document).on("submit", "form[data-action='ajax']", function (e) {
+            e.preventDefault();
+
+            var form = $(this);
+            var url = form.attr("action");
+            var method = form.attr("method") || 'POST';
+            var id = form.data("id");
+            var rowSelector = form.data("row"); // الصف الذي سيتم إخفاؤه
+            var msgContainerSelector = form.data("message-container") || "#alert-area";
+            var msgContainer = $(msgContainerSelector);
+
+            $.ajax({
+                url: url,
+                type: method,
+                data: form.serialize(),
+                success: function () {
+                    $("#dynamicModal").modal('hide'); // إخفاء المودال
+                    if (rowSelector) {
+                        $(rowSelector).fadeOut(500, function () { $(this).remove(); });
+                    }
+                    msgContainer.html('<div class="alert alert-success mt-2">✅ تم تنفيذ العملية بنجاح</div>');
+                },
+                error: function (xhr) {
+                    var msg = xhr.responseJSON?.message || '❌ فشل العملية';
+                    $("#modalContent").prepend('<div class="alert alert-danger mt-2">' + msg + '</div>');
+                }
+            });
+        });
+
+        // ضبط حجم المودال حسب المحتوى (نفس السكربت السابق)
+        function adjustModalSize() {
+            var modalDialog = $("#dynamicModal .modal-dialog");
+            modalDialog.css("max-width", "");
+
+            var modalHeight = $("#modalContent").outerHeight();
+            if (modalHeight < 300) {
+                modalDialog.css("max-width", "400px");
+            } else if (modalHeight < 600) {
+                modalDialog.css("max-width", "600px");
+            } else {
+                modalDialog.css("max-width", "80%");
+            }
+        }
+
+    });
+</script>
+
+@section Scripts {
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const buttons = document.querySelectorAll(".open-notification");
+
+            buttons.forEach(btn => {
+                btn.addEventListener("click", async function () {
+                    const url = this.getAttribute("data-url");
+                    const userId = this.getAttribute("data-userid");
+
+                    if (!url || url.trim() === "") return;
+
+                    if (!url.includes("GetWorkContract")) {
+                        window.location.href = url;
+                        return;
+                    }
+
+                    try {
+                        const response = await fetch(url, { headers: { "X-Requested-With": "XMLHttpRequest" } });
+                        if (!response.ok) throw new Error("فشل تحميل محتوى الإشعار");
+
+                        const modalHtml = await response.text();
+                        const modalContainer = document.getElementById("contractModalContainer");
+                        modalContainer.innerHTML = modalHtml;
+
+                        const modalEl = modalContainer.querySelector(".modal.fade");
+                        if (modalEl) {
+                            const hiddenInput = modalEl.querySelector('input[name="engineerId"]');
+                            if (hiddenInput) hiddenInput.value = userId;
+
+                            const modalInstance = new bootstrap.Modal(modalEl);
+                            modalInstance.show();
+
+                            // ✅ عند الضغط على أي زر (موافقة / توثيق / رفض)
+                            modalEl.querySelectorAll(".approve-btn").forEach(btn => {
+                                btn.addEventListener("click", async function () {
+                                    const status = this.getAttribute("data-status");
+                                    await submitApproval(userId, status, modalEl);
+                                });
+                            });
+
+                            modalEl.addEventListener("hidden.bs.modal", () => { modalContainer.innerHTML = ""; });
+                        }
+                    } catch (err) {
+                        console.error("خطأ أثناء عرض الإشعار:", err);
+                    }
+                });
+            });
+        });
+
+        // ✅ دالة الإرسال إلى السيرفر
+        async function submitApproval(engineerId, status, modalEl) {
+            const alertBox = modalEl.querySelector("#alertMessage");
+
+            try {
+                const response = await fetch('/User/ApproveEngineer', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ engineerId: engineerId, Is_Authentic: status })
+                });
+
+                const result = await response.json();
+
+                if (result.success) {
+                    const modalInstance = bootstrap.Modal.getInstance(modalEl);
+                    modalInstance.hide();
+                    showPageMessage(result.message, true);
+                } else {
+                    alertBox.innerHTML = `<div class="alert alert-danger">${result.message}</div>`;
+                }
+            } catch {
+                alertBox.innerHTML = `<div class="alert alert-danger">فشل الاتصال بالخادم ❌</div>`;
+            }
+        }
+
+                function showPageMessage(message, isSuccess) {
+            const container = document.getElementById('tableMessage');
+            container.innerHTML = `
+                <div class="alert ${isSuccess ? 'alert-success' : 'alert-danger'} alert-dismissible fade show" role="alert">
+                    ${message}
+                </div>
+            `;
+            setTimeout(() => container.innerHTML = "", 5000);
+        }
+
+    </script>
+}
+
+

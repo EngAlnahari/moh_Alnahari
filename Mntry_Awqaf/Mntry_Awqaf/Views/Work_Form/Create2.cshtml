@@ -1,0 +1,455 @@
+@model Mntry_Awqaf.Models.LandBoundaryWithWorkForm
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+<style>
+    .draggable-item {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 10px 15px;
+        margin-bottom: 8px;
+        background: white;
+        border: 2px dashed #dee2e6;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: all 0.2s;
+        text-align: right;
+    }
+    .draggable-item:hover {
+        border-color: #0d6efd;
+        background: #e7f1ff;
+        transform: translateX(-3px);
+    }
+    .draggable-item i {
+        font-size: 1.2rem;
+        color: #0d6efd;
+    }
+    .field-item {
+        background: white;
+        border: 2px solid #e9ecef;
+        border-radius: 12px;
+        padding: 20px;
+        margin-bottom: 15px;
+        position: relative;
+        cursor: pointer;
+        transition: all 0.2s;
+    }
+    .field-item:hover {
+        border-color: #86b7fe;
+        box-shadow: 0 2px 8px rgba(13,110,253,0.1);
+    }
+    .field-item.selected {
+        border-color: #0d6efd;
+        box-shadow: 0 0 0 3px rgba(13,110,253,0.15);
+    }
+    .section-title {
+        font-size: 1.1rem;
+        font-weight: 700;
+        color: #0d6efd;
+        border-right: 4px solid #0d6efd;
+        padding-right: 12px;
+        margin-bottom: 15px;
+    }
+    .custom-input-container {
+        position: relative;
+        margin-bottom: 1rem;
+    }
+    .custom-input-container input,
+    .custom-input-container select {
+        width: 100%;
+        padding: 12px 10px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        background-color: #fff;
+        font-size: 15px;
+        transition: border-color 0.3s, box-shadow 0.3s;
+    }
+    .custom-input-container input:focus,
+    .custom-input-container select:focus {
+        border-color: #007bff;
+        box-shadow: 0 0 5px rgba(0,123,255,0.3);
+        outline: none;
+    }
+    .custom-input-container label {
+        position: absolute;
+        top: 12px;
+        right: 12px;
+        color: #777;
+        background: #fff;
+        padding: 0 5px;
+        transition: 0.2s ease all;
+        pointer-events: none;
+    }
+    .custom-input-container input:focus + label,
+    .custom-input-container input:not(:placeholder-shown) + label,
+    .custom-input-container select:focus + label,
+    .custom-input-container select:not([value=""]) + label {
+        top: -10px;
+        right: 10px;
+        font-size: 13px;
+        color: #007bff;
+    }
+    .dropdown-menu { width: 100%; }
+    .input-with-button { display: flex; align-items: center; }
+    .input-with-button input { flex: 1; margin-right: 0.5rem; }
+    .input-with-button button { flex-shrink: 0; }
+</style>
+
+<div class="main-card">
+    <form id="createRequestForm">
+
+        <!-- ===== Form Builder Section ===== -->
+        <div class="section-title mt-3">بناء النموذج الديناميكي</div>
+        <div style="border: 1px solid #dee2e6; border-radius: 12px; overflow: hidden;" class="mt-3 mb-4">
+            <div class="row g-0">
+                <!-- Sidebar - Tools -->
+                <div class="col-md-3">
+                    <div style="background: #f8f9fa; padding: 20px; border-left: 1px solid #dee2e6; height: 100%;">
+                        <h5 class="mb-3"><i class="bi bi-lightning-charge"></i> إضافة سريعة</h5>
+                        <div class="mb-4">
+                            <button type="button" class="draggable-item w-100" onclick="quickAddField('text', 'نص جديد')">
+                                <i class="bi bi-type"></i> <span>نص</span>
+                            </button>
+                            <button type="button" class="draggable-item w-100" onclick="quickAddField('number', 'رقم جديد')">
+                                <i class="bi bi-123"></i> <span>رقم</span>
+                            </button>
+                            <button type="button" class="draggable-item w-100" onclick="quickAddField('date', 'تاريخ جديد')">
+                                <i class="bi bi-calendar"></i> <span>تاريخ</span>
+                            </button>
+                            <button type="button" class="draggable-item w-100" onclick="quickAddField('select', 'قائمة جديدة')">
+                                <i class="bi bi-list"></i> <span>قائمة</span>
+                            </button>
+                            <button type="button" class="draggable-item w-100" onclick="quickAddField('checkbox', 'صندوق اختيار جديد')">
+                                <i class="bi bi-check-square"></i> <span>صندوق اختيار</span>
+                            </button>
+                            <button type="button" class="draggable-item w-100" onclick="quickAddField('textarea', 'نص طويل جديد')">
+                                <i class="bi bi-text-paragraph"></i> <span>نص طويل</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Form Canvas -->
+                <div class="col-md-6">
+                    <div style="background: white; min-height: 400px; padding: 30px;">
+                        <div class="text-center text-muted" id="emptyState" style="padding: 40px 0; display: none;">
+                            <i class="bi bi-plus-circle-dotted" style="font-size: 3rem; opacity: 0.5;"></i>
+                            <h5>أضف حقول هنا</h5>
+                        </div>
+                        <div id="fieldsContainer"></div>
+                    </div>
+                </div>
+
+                <!-- Properties Panel -->
+                <div class="col-md-3">
+                    <div id="fieldProperties" style="display: none; background: #f8f9fa; padding: 20px; border-right: 1px solid #dee2e6; height: 100%;">
+                        <h5 class="mb-3"><i class="bi bi-gear"></i> خصائص الحقل</h5>
+                        <div class="mb-3">
+                            <label>العنوان</label>
+                            <input type="text" class="form-control" id="propLabel" oninput="updateSelectedField()">
+                        </div>
+                        <div class="mb-3">
+                            <label>النوع</label>
+                            <select class="form-select" id="propType" onchange="updateSelectedField()">
+                                <option value="text">نص</option>
+                                <option value="number">رقم</option>
+                                <option value="date">تاريخ</option>
+                                <option value="select">قائمة منسدلة</option>
+                                <option value="checkbox">صندوق اختيار</option>
+                                <option value="radio">أزرار اختيار</option>
+                                <option value="textarea">نص طويل</option>
+                            </select>
+                        </div>
+                        <div class="mb-3" id="optionsSection" style="display: none;">
+                            <label>الخيارات (كل سطر خيار)</label>
+                            <textarea class="form-control" id="propOptions" rows="3" oninput="updateSelectedField()"></textarea>
+                        </div>
+                        <div class="form-check mb-2">
+                            <input class="form-check-input" type="checkbox" id="propRequired" onchange="updateSelectedField()">
+                            <label class="form-check-label">مطلوب</label>
+                        </div>
+                        <hr>
+                        <button type="button" class="btn btn-outline-danger w-100" onclick="deleteSelectedField()">
+                            <i class="bi bi-trash"></i> حذف الحقل
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== Land Boundaries Table ===== -->
+        @Html.Partial("~/Views/Work_Form/CreateLand.cshtml", Model)
+
+        <!-- ===== Save Buttons ===== -->
+        <div class="row mt-4">
+            <div class="col-12 text-center">
+                <button type="submit" id="saveRequestBtn" class="btn btn-primary me-2">
+                    <i class="fas fa-save me-2"></i>حفظ البيانات
+                </button>
+                <button type="button" class="btn btn-info me-2" onclick="sendReportToClient()"> حفظ وإرسال التقرير للعميل</button>
+            </div>
+        </div>
+
+    </form>
+
+    <!-- DIV لعرض الرسائل -->
+    <div id="responseMessage" class="mt-3"></div>
+</div>
+
+<script>
+    // ========== GLOBAL SCOPE - All functions accessible from onclick ==========
+    let fields = [];
+    let selectedFieldId = null;
+    let fieldCounter = 0;
+
+    // Default template: same fields that were previously static HTML
+    const defaultTemplate = [
+        { type: 'select', label: 'نوع الطلب', options: ['طلب جديد', 'تعديل'], name: 'work_Form.RequestType' },
+        { type: 'text', label: 'رقم التقديم', name: 'work_Form.SubmissionNumber' },
+        { type: 'text', label: 'الرقم المزيد لموضوع الكلي/الشامل', name: 'work_Form.GeneralSubjectNumber' },
+        { type: 'text', label: 'رقم التكليف', name: 'work_Form.AssignmentNumber' },
+        { type: 'select', label: 'وكلاء أوقاف في القرى', options: ['عادل محمد صالح عايش-77088864', '+ إنشاء عدل الروية جديد'], name: 'work_Form.VillageEndowmentAgents' },
+        { type: 'text', label: 'عدول التروية', name: 'work_Form.AdoulAlTaruya' },
+        { type: 'text', label: 'الفئة', name: 'work_Form.Category' },
+        { type: 'text', label: 'تصنيف الفئة', name: 'work_Form.CategoryClassification' },
+        { type: 'text', label: 'ملاحظات', name: 'work_Form.Notes' },
+        { type: 'number', label: 'المساحة', name: 'work_Form.Area' },
+        { type: 'text', label: 'رقم القطعة', name: 'work_Form.PieceNumber' },
+        { type: 'text', label: 'استخدام القطعة', name: 'work_Form.PieceUsage' },
+        { type: 'number', label: 'مساحة القطعة', name: 'work_Form.PieceArea' },
+        { type: 'text', label: 'رقم الهوية العقارية', name: 'work_Form.PropertyIdentityNumber' },
+        { type: 'text', label: 'الشماليات', name: 'work_Form.NorthBoundaries' },
+        { type: 'text', label: 'الشرقيات', name: 'work_Form.EastBoundaries' }
+    ];
+
+    function quickAddField(type, label) {
+        addField(type, { label: label });
+        renderFields();
+        document.getElementById('emptyState').style.display = 'none';
+    }
+
+    function addField(type, config) {
+        config = config || {};
+        fieldCounter++;
+        const field = {
+            id: 'field_' + fieldCounter,
+            type: type,
+            label: config.label || 'حقل جديد',
+            name: config.name || ('field_' + fieldCounter),
+            required: config.required || false,
+            options: config.options || [],
+            value: ''
+        };
+        fields.push(field);
+        return field;
+    }
+
+    function createFieldInput(field) {
+        const safeId = field.id;
+        switch(field.type) {
+            case 'text':
+                return '<input type="text" name="' + field.name + '" class="form-control" ' +
+                       (field.required ? 'required' : '') +
+                       ' value="' + (field.value || '') + '"' +
+                       ' onclick="event.stopPropagation()"' +
+                       ' oninput="event.stopPropagation(); updateFieldValue(\'' + safeId + '\', this.value)">';
+
+            case 'number':
+                return '<input type="number" name="' + field.name + '" class="form-control" ' +
+                       (field.required ? 'required' : '') +
+                       ' value="' + (field.value || '') + '"' +
+                       ' onclick="event.stopPropagation()"' +
+                       ' oninput="event.stopPropagation(); updateFieldValue(\'' + safeId + '\', this.value)">';
+
+            case 'date':
+                return '<input type="date" name="' + field.name + '" class="form-control" ' +
+                       (field.required ? 'required' : '') +
+                       ' value="' + (field.value || '') + '"' +
+                       ' onclick="event.stopPropagation()"' +
+                       ' oninput="event.stopPropagation(); updateFieldValue(\'' + safeId + '\', this.value)">';
+
+            case 'textarea':
+                return '<textarea name="' + field.name + '" class="form-control" rows="3" ' +
+                       (field.required ? 'required' : '') +
+                       ' onclick="event.stopPropagation()"' +
+                       ' oninput="event.stopPropagation(); updateFieldValue(\'' + safeId + '\', this.value)">' +
+                       (field.value || '') + '</textarea>';
+
+            case 'select':
+                var html = '<select name="' + field.name + '" class="form-select" ' +
+                           (field.required ? 'required' : '') +
+                           ' onclick="event.stopPropagation()"' +
+                           ' onchange="event.stopPropagation(); updateFieldValue(\'' + safeId + '\', this.value)">';
+                html += '<option value="">-- اختر --</option>';
+                for (var i = 0; i < field.options.length; i++) {
+                    var opt = field.options[i];
+                    html += '<option value="' + opt + '"' + (field.value === opt ? ' selected' : '') + '>' + opt + '</option>';
+                }
+                html += '</select>';
+                return html;
+
+            case 'checkbox':
+                return '<div class="form-check" onclick="event.stopPropagation()">' +
+                       '<input class="form-check-input" type="checkbox" name="' + field.name + '" ' +
+                       (field.value ? 'checked' : '') +
+                       ' onclick="event.stopPropagation()"' +
+                       ' onchange="event.stopPropagation(); updateFieldValue(\'' + safeId + '\', this.checked)">' +
+                       '<label class="form-check-label">' + field.label + '</label></div>';
+
+            case 'radio':
+                var rhtml = '<div onclick="event.stopPropagation()">';
+                for (var j = 0; j < field.options.length; j++) {
+                    var ropt = field.options[j];
+                    rhtml += '<div class="form-check form-check-inline" onclick="event.stopPropagation()">' +
+                             '<input class="form-check-input" type="radio" name="' + field.name + '" value="' + ropt + '"' +
+                             (field.value === ropt ? ' checked' : '') +
+                             ' onclick="event.stopPropagation()"' +
+                             ' onchange="event.stopPropagation(); updateFieldValue(\'' + safeId + '\', this.value)">' +
+                             '<label class="form-check-label">' + ropt + '</label></div>';
+                }
+                rhtml += '</div>';
+                return rhtml;
+
+            default:
+                return '<input type="text" name="' + field.name + '" class="form-control" value="' + (field.value || '') + '"' +
+                       ' onclick="event.stopPropagation()"' +
+                       ' oninput="event.stopPropagation(); updateFieldValue(\'' + safeId + '\', this.value)">';
+        }
+    }
+
+    function updateFieldValue(id, val) {
+        var field = fields.find(function(f) { return f.id === id; });
+        if (field) {
+            field.value = val;
+        }
+    }
+
+    function renderFields() {
+        var container = document.getElementById('fieldsContainer');
+        container.innerHTML = '';
+
+        fields.forEach(function(field, index) {
+            var div = document.createElement('div');
+            div.className = 'field-item' + (selectedFieldId === field.id ? ' selected' : '');
+
+            div.innerHTML =
+                '<div style="position: absolute; top: 10px; left: 10px; display: flex; gap: 5px;">' +
+                    (index > 0 ?
+                        '<button type="button" class="btn btn-sm btn-outline-secondary" onclick="moveField(' + index + ', -1); event.stopPropagation();"><i class="bi bi-arrow-up"></i></button>' : '') +
+                    (index < fields.length - 1 ?
+                        '<button type="button" class="btn btn-sm btn-outline-secondary" onclick="moveField(' + index + ', 1); event.stopPropagation();"><i class="bi bi-arrow-down"></i></button>' : '') +
+                    '<button type="button" class="btn btn-sm btn-outline-danger" onclick="deleteField(\'' + field.id + '\'); event.stopPropagation();">' +
+                        '<i class="bi bi-trash"></i>' +
+                    '</button>' +
+                '</div>' +
+                '<label class="form-label">' +
+                    field.label + (field.required ? ' <span class="text-danger">*</span>' : '') +
+                '</label>' +
+                createFieldInput(field);
+
+            div.onclick = function() { selectField(field.id); };
+            container.appendChild(div);
+        });
+
+        if (fields.length === 0) {
+            document.getElementById('emptyState').style.display = 'block';
+        } else {
+            document.getElementById('emptyState').style.display = 'none';
+        }
+    }
+
+    function moveField(index, direction) {
+        var newIndex = index + direction;
+        if (newIndex < 0 || newIndex >= fields.length) return;
+        var temp = fields[index];
+        fields[index] = fields[newIndex];
+        fields[newIndex] = temp;
+        renderFields();
+    }
+
+    function selectField(id) {
+        selectedFieldId = id;
+        var field = fields.find(function(f) { return f.id === id; });
+        if (field) {
+            document.getElementById('fieldProperties').style.display = 'block';
+            document.getElementById('propLabel').value = field.label;
+            document.getElementById('propType').value = field.type;
+            document.getElementById('propRequired').checked = field.required;
+            document.getElementById('propOptions').value = field.options.join('\n');
+            document.getElementById('optionsSection').style.display =
+                (field.type === 'select' || field.type === 'radio') ? 'block' : 'none';
+        }
+        renderFields();
+    }
+
+    function updateSelectedField() {
+        if (!selectedFieldId) return;
+        var field = fields.find(function(f) { return f.id === selectedFieldId; });
+        if (field) {
+            field.label = document.getElementById('propLabel').value;
+            var newType = document.getElementById('propType').value;
+            field.type = newType;
+            field.required = document.getElementById('propRequired').checked;
+            var optionsText = document.getElementById('propOptions').value;
+            field.options = optionsText.split('\n').filter(function(o) { return o.trim() !== ''; });
+            document.getElementById('optionsSection').style.display =
+                (newType === 'select' || newType === 'radio') ? 'block' : 'none';
+            renderFields();
+        }
+    }
+
+    function deleteField(id) {
+        fields = fields.filter(function(f) { return f.id !== id; });
+        if (selectedFieldId === id) {
+            selectedFieldId = null;
+            document.getElementById('fieldProperties').style.display = 'none';
+        }
+        renderFields();
+    }
+
+    function deleteSelectedField() {
+        if (selectedFieldId) deleteField(selectedFieldId);
+    }
+
+    // ========== Load default template on page load ==========
+    document.addEventListener("DOMContentLoaded", function () {
+        // Load all default fields
+        defaultTemplate.forEach(function(tmpl) {
+            addField(tmpl.type, tmpl);
+        });
+        renderFields();
+
+        // Form submit handler
+        var form = document.getElementById("createRequestForm");
+        var responseDiv = document.getElementById("responseMessage");
+
+        form.addEventListener("submit", async function (e) {
+            e.preventDefault();
+
+            var formData = new FormData(form);
+            // Also save full field definitions as DynamicFields JSON
+            var dynamicData = fields.map(function(f) {
+                return { name: f.name, label: f.label, type: f.type, required: f.required, options: f.options, value: f.value };
+            });
+            formData.append("work_Form.DynamicFields", JSON.stringify(dynamicData));
+
+            try {
+                var response = await fetch("@Url.Action("Create2", "Work_Form")", {
+                    method: "POST",
+                    body: formData
+                });
+
+                var result = await response.json();
+
+                if (result.success) {
+                    responseDiv.innerHTML = '<div class="alert alert-success">' + result.message + '</div>';
+                } else {
+                    responseDiv.innerHTML = '<div class="alert alert-danger">' + result.message + '</div>';
+                }
+            } catch (err) {
+                responseDiv.innerHTML = '<div class="alert alert-danger">حدث خطأ في الاتصال بالسيرفر: ' + err.message + '</div>';
+            }
+        });
+    });
+</script>

@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>شجرة المجالات الهندسية والقانونية والقضاء</title>
+  <link href="libs/bootstrap.rtl.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+  <link href="libs/bootstrap.rtl.min.css" rel="stylesheet">
+  <script src="libs/jquery.min.js"></script>
+  <script src="libs/bootstrap.bundle.min.js"></script>
+
+  <style>
+    .custom-input-container {
+      position: relative;
+      margin-bottom: 1rem;
+    }
+    
+    .custom-input-container input,
+    .custom-input-container select {
+      width: 100%;
+      padding: 12px 10px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      background-color: #fff;
+      font-size: 15px;
+      transition: border-color 0.3s, box-shadow 0.3s;
+    }
+    
+    .custom-input-container input:focus,
+    .custom-input-container select:focus {
+      border-color: #007bff;
+      box-shadow: 0 0 5px rgba(0,123,255,0.3);
+      outline: none;
+    }
+    
+    .custom-input-container label {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      color: #777;
+      background: #fff;
+      padding: 0 5px;
+      transition: 0.2s ease all;
+      pointer-events: none;
+    }
+    
+    .custom-input-container input:focus + label,
+    .custom-input-container input:not(:placeholder-shown) + label,
+    .custom-input-container select:focus + label,
+    .custom-input-container select:not([value=""]) + label {
+      top: -10px;
+      right: 10px;
+      font-size: 13px;
+      color: #007bff;
+    }
+    
+    .dropdown-menu {
+      width: 100%;
+    }
+    </style>
+</head>
+
+<body class="p-4">
+
+<div dir="rtl">
+    <form id="tanjezForm" method="post" enctype="multipart/form-data">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+            <h2 class="page-title">عرض جديد</h2>
+            <span class="status-label">لم يتم الحفظ</span>
+        </div>
+    <input type="hidden" name="UserID" value="@Context.Session.GetInt32("UserID")" />
+
+        <!-- الحقول الرئيسية أعلى الصفحة -->
+        <div class="row g-3 mb-2">  
+            <div class="col-md-6">
+                <label asp-for="OfferName" class="form-label required">اسم العرض <span class="text-danger">*</span></label>
+                <input asp-for="OfferName" type="text" class="form-control"  required
+                       data-val="true" data-val-required="اسم العرض مطلوب" />
+                <span class="text-danger field-validation-valid" data-valmsg-for="OfferName" data-valmsg-replace="true"></span>
+            </div>
+
+       
+        <div class="col-md-6">
+            <label class="form-label">تاريخ نهاية العرض</label>
+
+            <!-- اختيار النوع -->
+            <select id="endDateOption" class="form-select">
+                <option value="unspecified">غير محدد</option>
+                <option value="specified">محدد</option>
+            </select>
+
+            <!-- حقل التاريخ -->
+            <input id="endDateInput" name="EndDate" type="date" class="form-control mt-2" style="display:none;" />
+        </div>
+
+        <script>
+            const endDateOption = document.getElementById("endDateOption");
+            const endDateInput = document.getElementById("endDateInput");
+
+            endDateOption.addEventListener("change", function () {
+                if (this.value === "specified") {
+                    endDateInput.style.display = "block";
+                    endDateInput.value = "";
+                } else {
+                    endDateInput.style.display = "none";
+                    endDateInput.value = ""; // إرسال فارغ = null في السيرفر
+                }
+            });
+        </script>
+
+
+        
+
+        </div>
+    <div class="row g-3 mb-2">
+        <!-- جدول الأنواع -->
+        <div class="col-md-6">
+    <div class="section-title">اجور العمل
+    <div class="table-responsive mb-3">
+
+        <!-- قائمة القوالب -->
+        
+            <label asp-for="WorkWagesTemplateId" class="form-label"></label>
+            <select asp-for="WorkWagesTemplateId" id="transportTemplateSelect1" class="form-select">
+                <option value="">-- اختر قالب --</option>
+              
+                <option value="create-new-template1">+ إنشاء جديد قالب أجور العمل</option>
+                <option value="advanced-search">🔍 البحث المتقدم</option>
+            </select>
+            <span asp-validation-for="WagesTemplate" class="text-danger"></span>
+        
+
+        <!-- جدول الأنواع (تم الاستغناء عنه) -->
+        <div id="wagesTableContainer">
+            <table class="table table-bordered align-middle text-center offer-table">
+                <tbody>
+                    <tr><td colspan="6" class="text-center">اختر قالب لعرض البيانات</td></tr>
+                </tbody>
+            </table>
+        </div>
+              
+
+     
+    </div>
+        </div>
+        </div>
+    <!-- سكربت لتعبئة الجدول عند اختيار القالب -->
+   
+
+
+
+
+        <!-- جدول التنقلات والمبيت -->
+        <div class="col-md-6">
+    <div class="section-title">التنقلات والمبيت</div>
+    <div class="table-responsive mb-3">
+        
+            <label asp-for="TransportationScheduleTemplateId" class="form-label">قالب التنقلات والمبيت</label>
+            <select asp-for="TransportationScheduleTemplateId" id="transportTemplateSelect" class="form-select">
+                <option value=""></option>
+              
+                <option value="create-new-template">+ إنشاء جديد قالب التنقلات والمبيت</option>
+            </select>
+       
+
+            <div id="transportTableContainer">
+                <table class="table table-bordered align-middle text-center offer-table">
+                    <tbody>
+                        <tr><td colspan="6" class="text-center">اختر قالب لعرض البيانات</td></tr>
+                    </tbody>
+                </table>
+            </div>
+          
+        </div>
+    
+    
+    <script>
+            function filterTransportRows(value) {
+            document.querySelectorAll("#transportRows tr").forEach(row => {
+                const statuse1 = row.querySelector("input[name='StatuseType1']")?.value;
+                const statuse2 = row.querySelector("input[name='StatuseType2']")?.value;
+
+                if (value === "myAccount" && statuse1 == "2") {
+                    row.style.display = "";
+                } else if (value === "clientAccount" && statuse2 == "3") {
+                    row.style.display = "";
+                } else if (value === "") {
+                    row.style.display = "";
+                } else {
+                    row.style.display = "none";
+                }
+            });
+        }
+
+    </script>
+    <script>
+         document.getElementById("transportTemplateSelect").addEventListener("change", function() {
+            const templateId = this.value;
+            const container = document.getElementById("transportTableContainer");
+
+            if (!templateId || templateId === "create-new-template") {
+                container.innerHTML = `<table class="table table-bordered text-center offer-table"><tbody><tr><td colspan="6" class="text-center">لا توجد بيانات</td></tr></tbody></table>`;
+                return;
+            }
+
+            fetch(`@Url.Action("GetTemplateDetails", "WorkOffer")?id=${templateId}`)
+                .then(res => res.text())
+                .then(html => container.innerHTML = html)
+                .catch(err => {
+                    console.error(err);
+                    container.innerHTML = `<table class="table table-bordered text-center offer-table"><tbody><tr><td colspan="6" class="text-center text-danger">${err.message}</td></tr></tbody></table>`;
+                });
+        });
+
+    </script>
+
+
+    </div>
+    </div>
+
+
+        <!-- جدول التكلفة الاضافية -->
+        
+         <div class="section-title">تكلفة إضافية</div>
+        <div class="table-responsive mb-3">
+        <div class="col-md-6">
+            <label asp-for="AdditionalCostTypeId" class="form-label">قالب التكاليف الاضافية </label>
+            <select asp-for="AdditionalCostTypeId" id="additionalCostSelect" class="form-select">
+                <option value="">-- اختر قالب --</option>
+               
+            </select>
+       
+            <div id="additionalCostContainer">
+                <table class="table table-bordered align-middle text-center offer-table">
+                    <tbody>
+                        <tr><td colspan="6" class="text-center">اختر قالب لعرض البيانات</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+        <button type="button" class="btn btn-outline-primary"
+                onclick="showFormDialog('AdditionalCostModel')">
+            <i class="bi bi-plus-lg me-1"></i> إضافة تكلفة
+        </button>
+        </div>
+        </div>
+        
+       
+    
+      
+        <!-- المدفوعات والغرامات -->
+        <div class="section-title">المدفوعات </div>
+    <div class="row mb-3">
+          
+            <div class="col-md">
+                <label class="form-label">نسبة الدفع مقدماً (%)</label>
+                <input asp-for="AdvancePaymentPercentage" type="number" class="form-control"
+                        />
+            </div>
+           
+            <div class="col-md">
+                <label class="form-label">نسبة الدفع عند النزول (%)</label>
+                <input asp-for="OnSitePaymentPercentage" type="number" class="form-control"
+                        />
+            </div>
+          
+            <div class="col-md">
+                <label class="form-label">نسبة الدفع بعد تسليم العمل (%)</label>
+                <input asp-for="AfterDeliveryPaymentPercentage" type="number" class="form-control"
+                        />
+            </div>
+        </div>
+        <div class="section-title"> الغرامات</div>
+    <div class="row mb-3">
+            <div class="col-md">
+                <label class="form-label">غرامات التأخر عن تسليم العمل عن المدة المتفق عليها (%)</label>
+            <input asp-for="LatePenaltyPercentage" type="number" class="form-control" placeholder="يخصم من المبلغ المتفق نسبة" />
+            </div>
+         
+            <div class="col-md">
+                <label class="form-label">في حال الاعتذار عن العمل بعد استلام الدفعة المقدمة (%)</label>
+                <input asp-for="ResignationAfterAdvancePercentage" type="number" class="form-control" placeholder="يخصم من المبلغ المتفق نسبة"
+                      />
+            </div>
+         
+            <div class="col-md">
+                <label class="form-label">في حال اعتذار العميل عن العمل بعد استلام الدفعة المقدمة (%)</label>
+            <input asp-for="CamelResignationPenaltyPercentage" type="number" class="form-control" placeholder="يخصم من المبلغ المتفق نسبة" />
+            </div>
+          
+        </div>
+
+        <!-- ملاحظات -->
+        <div class="accordion mt-4" id="notesAccordion">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingNotes">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseNotes" aria-expanded="false" aria-controls="collapseNotes">
+                        ملاحظات
+                    </button>
+                </h2>
+                <div id="collapseNotes" class="accordion-collapse collapse" aria-labelledby="headingNotes"
+                     data-bs-parent="#notesAccordion">
+                    <div class="accordion-body">
+                        <textarea class="form-control" rows="3" placeholder="ملاحظات"
+                                  name="Notes"></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- زر الحفظ في نهاية الصفحة -->
+        <button type="submit" class="btn btn-dark save-btn mt-4" >حفظ</button>
+    </form>
+    </div>
+
+
+</body>
+</html>

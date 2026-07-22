@@ -1,0 +1,208 @@
+﻿@model WorkOfferWithDetailsViewModel
+@{
+    Layout = null;
+    ViewData["Title"] = "Create Work Offer";
+}
+<div class="table-responsive" id="table1">
+    <table class="table table-bordered text-center align-middle">
+        <thead class="table-light">
+            <tr>
+                <th style="width: 40px">#</th>
+                <th> اخترالقطعه المراد مسحها</th>
+                <th class="space-column"> معيار المساحة</th>
+                <th id="priceHeader">السعر</th>
+                <th id="priceTaple" style="display:none;">جدول الاسعار</th>
+                <th colspan="2" class="text-center">
+                    <div>المدة الزمنية</div>
+                    <div>لتسليم التقرير</div>
+                    <hr class="my-1">
+                    <div style="display: flex; justify-content: center; gap: 20px;">
+                        <span>من</span>
+                        <span>|</span>
+                        <span>إلى</span>
+                    </div>
+                </th>
+                <th style="width: 50px">
+                    <button type="button" class="btn btn-sm btn-outline-primary" onclick="addWagesTableRow()">
+                        <i class="bi bi-plus"></i>
+                    </button>
+                </th>
+            </tr>
+        </thead>
+        <tbody id="wagesTemplateTableBody1">
+            @{
+                var types = new[] { "ارض", "ارض مع رهق", "رهق", "مبنى" };
+            }
+
+            @for (int i = 0; i < 4; i++)
+            {
+                <tr>
+                    <td>@(i + 1)</td>
+                    <td>
+                        <!-- عرض النص فقط -->
+                        <span>@types[i]</span>
+                        <!-- إرسال القيمة مع الفورم -->
+                        <input type="hidden" name="WorkWages[@i].EachTypeSimilar" value="@types[i]" />
+                    </td>
+                    <td class="space-column">
+                        <select asp-for="WorkWages[@i].SpaceStandard" class="form-select form-select-sm transportTemplateSelect11">
+                            <option value="">اختر معيار المساحة</option>
+                            <option value="مساحة مفتوحة">مساحة مفتوحة</option>
+                            <option value="مساحة لكل متر">مساحة لكل متر</option>
+                            <option value="مساحة محددة">مساحة محددة</option>
+                        </select>
+                    </td>
+                    <td data-col="price">
+                        <input asp-for="WorkWages[@i].Price" type="number" class="form-control form-control-sm" placeholder="0.00" step="0.01">
+                    </td>
+                    <td style="display:none;">
+                        <input asp-for="WorkWages[@i].WorkType" type="hidden" class="tyInput">
+                    </td>
+                     <td data-col="priceTaple" style="display:none;">
+                     
+                        <input name="WorkWages[@i].AlmjalID" type="number" class="form-control form-control-sm" placeholder="اختار السعر">
+                    </td> 
+                    <td>
+                        <input asp-for="WorkWages[@i].FromDate" type="number" class="form-control form-control-sm">
+                    </td>
+                   
+                    <td>
+                        <input asp-for="WorkWages[@i].ToDate" type="number" class="form-control form-control-sm">
+                    </td>
+                    <td>
+                        <button type="button" class="btn btn-sm btn-outline-danger" onclick="removeWagesTableRow(this)">
+                            <i class="bi bi-trash"></i>
+                        </button>
+                    </td>
+                </tr>
+            }
+
+       
+        </tbody>
+    </table>
+</div>
+
+<div id="modalMessage" class="w-100 mb-2"></div>
+<!-- الجدول الثاني -->
+<div class="table-responsive" id="table2" style="display:none;">
+    <table class="table table-bordered table-hover">
+        <thead class="table-light">
+            <tr>
+                <th style="width: 40px">#</th>
+                <th> شامل لكل الانواع المراد مسحها</th>
+
+                
+                <th class="space-column"> معيار المساحة</th>
+                <th id="priceHeader">السعر</th>
+               
+
+                <th colspan="2" class="text-center">
+
+                    <div>المدة الزمنية</div>
+                    <div>لتسليم التقرير</div>
+                    <hr class="my-1">
+                    <div style="display: flex; justify-content: center; gap: 20px;">
+                        <span>من</span>
+                        <span>|</span>
+                        <span>إلى</span>
+                    </div>
+                </th>
+                <th style="width: 50px">
+                    <button type="button" class="btn btn-sm btn-outline-primary" onclick="addWagesTableRow()">
+                        <i class="bi bi-plus"></i>
+                    </button>
+                </th>
+            </tr>
+        </thead>
+        <tbody id="wagesTemplateTableBody2">
+            <tr>
+                <td>1</td>
+                <td>
+                    <input type="text" class="form-control form-control-sm" value="شامل كل الانواع">
+                </td>
+                <td class="space-column">
+                    <select class="form-select form-select-sm transportTemplateSelect11">
+                        <option value="">اختر معيار المساحة</option>
+                        <option value="مساحة مفتوحة">مساحة مفتوحة</option>
+                        <option value="مساحة لكل متر">مساحة لكل متر</option>
+                        <option value="مساحة محددة">مساحة محددة</option>
+                    </select>
+                </td>
+              
+                <td>
+                    <input type="text" class="form-control form-control-sm">
+                </td>
+                <td>
+                    <input type="number" class="form-control form-control-sm">
+                </td>
+
+
+                <td>
+                    <input type="number" class="form-control form-control-sm">
+                </td>
+                <td>
+                    <button type="button" class="btn btn-sm btn-outline-danger" onclick="removeWagesTableRow(this)">
+                        <i class="bi bi-trash"></i>
+                    </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<script>
+    let rowIndex = 4; // لأن لدينا 4 أسطر ثابتة
+
+    function addWagesTableRow() {
+        rowIndex++;
+        let tbody = document.getElementById("wagesTemplateTableBody1");
+
+        let newRow = document.createElement("tr");
+        newRow.innerHTML = `
+            <td>${rowIndex}</td>
+            <td>
+                <select name="WorkWages[${rowIndex - 1}].PieceType" class="form-select form-select-sm">
+                    <option value="ارض">ارض</option>
+                    <option value="ارض مع رهق">ارض مع رهق</option>
+                    <option value="رهق">رهق</option>
+                    <option value="مبنى">مبنى</option>
+                </select>
+            </td>
+            <td class="space-column">
+                <select name="WorkWages[${rowIndex - 1}].SpaceStandard" class="form-select form-select-sm transportTemplateSelect11">
+                    <option value="">اختر معيار المساحة</option>
+                    <option value="daily">مساحة مفتوحة</option>
+                    <option value="daily">مساحة لكل متر</option>
+                    <option value="create-new">مساحة محددة</option>
+                </select>
+            </td>
+            <td>
+                <input name="WorkWages[${rowIndex - 1}].Price" type="number" class="form-control form-control-sm" placeholder="0.00" step="0.01">
+            </td>
+            <td>
+                <input name="WorkWages[${rowIndex - 1}].FromDate" type="number" class="form-control form-control-sm">
+            </td>
+            <td>
+                <input name="WorkWages[${rowIndex - 1}].ToDate" type="number" class="form-control form-control-sm">
+            </td>
+            <td>
+                <button type="button" class="btn btn-sm btn-outline-danger" onclick="removeWagesTableRow(this)">
+                    <i class="bi bi-trash"></i>
+                </button>
+            </td>
+        `;
+        tbody.appendChild(newRow);
+    }
+
+    function removeWagesTableRow(btn) {
+        btn.closest("tr").remove();
+    }
+</script>
+
+@*   <select class="form-control form-control-sm">
+                            <option value="">اختار السعر</option>
+                            @foreach (var item in (SelectList)ViewBag.Departs)
+                            {
+                                <option value="@item.Value">@item.Text</option>
+                            }
+                        </select> *@ 

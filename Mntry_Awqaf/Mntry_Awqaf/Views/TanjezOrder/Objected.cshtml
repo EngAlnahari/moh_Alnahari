@@ -1,0 +1,400 @@
+﻿@{
+
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="col">
+    <h5>الطلبات معترضة</h5>
+</div>
+
+<div class="row" dir="rtl">
+
+
+
+    <div class="col-md-3">
+        <div class="form-group ">
+            <select id="inputState" class="form-select">
+                <option selected=""> </option>
+                <option>المجال الهندسي</option>
+                <option>مجال التعليم والتأهيل</option>
+                <option> المجال الخيري </option>
+            </select>
+        </div>
+
+    </div>
+
+    <div class="col-md-3">
+        <div class="form-group ">
+            <select id="inputState" class="form-select">
+                <option selected=""> </option>
+                <option>الهندس المدنية </option>
+                <option>العمارة </option>
+                <option> تقنية المعلومات </option>
+            </select>
+        </div>
+
+    </div>
+
+    <div class="col-md-3">
+        <div class="form-group ">
+            <select id="inputState" class="form-select">
+                <option selected=""> </option>
+                <option> المساحة </option>
+                <option>الإنشاء </option>
+                <option> الطرق  </option>
+            </select>
+        </div>
+
+    </div>
+
+    <div class="col-md-3">
+        <div class="form-group ">
+            <select id="inputState" class="form-select">
+                <option selected=""> </option>
+                <option> مسح  </option>
+                <option>تقسيم بين ورثة </option>
+                <option> فصل نزاع  </option>
+            </select>
+        </div>
+
+    </div>
+
+
+    <div class="col-md-3">
+        <div class="form-group ">
+            <select id="inputState" class="form-select">
+                <option selected=""> </option>
+                <option>اراضي</option>
+                <option>معمورات </option>
+                <option>  مراهق  </option>
+            </select>
+        </div>
+
+    </div>
+
+    <div class="col-md-3">
+
+        <div id="exampleModalCenter" class="modal fade" tabindex="-1" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" style="display: none;">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalCenterTitle">بيانات الطلب</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+
+                        <div class="row">
+
+
+                            <div class="col-md-12">
+
+
+                                <div class="col-md-12">
+                                    <h5>موقع الأرض</h5>
+                                    </hr>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group ">
+                                        <select id="inputState" class="form-select">
+                                            <option selected="">اليمن</option>
+
+                                        </select>
+                                    </div>
+
+                                </div>
+
+                                <div class="col-md-12">
+                                    <div class="form-group ">
+                                        <select id="inputState" class="form-select">
+                                            <option selected=""> صنعاء </option>
+
+                                        </select>
+                                    </div>
+
+                                </div>
+
+                                <div class="col-md-12">
+                                    <div class="form-group ">
+                                        <select id="inputState" class="form-select">
+                                            <option selected=""> السبعين </option>
+
+                                        </select>
+                                    </div>
+
+                                </div>
+
+                                <div class="col-md-12">
+                                    <div class="form-group ">
+                                        <select id="inputState" class="form-select">
+                                            <option selected=""> بيت معياد  </option>
+
+                                        </select>
+                                    </div>
+
+                                </div>
+
+
+                                <div class="col-md-12">
+                                    <div class="form-group ">
+                                        <select id="inputState" class="form-select">
+                                            <option selected="">حارة دار الرعاية</option>
+
+                                        </select>
+                                    </div>
+
+                                </div>
+
+
+                            </div>
+
+
+
+                            <div class="col-md-6">
+
+
+                                <div class="col-md-12">
+                                    <h5>احداثيات X </h5>
+                                    </hr>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-floating mb-3">
+                                        <input type="text" class="form-control" id="floatingInput1" placeholder=" احداثيات">
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+                            <div class="col-md-6">
+
+
+                                <div class="col-md-12">
+                                    <h5>احداثيات Y </h5>
+                                    </hr>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-floating mb-3">
+                                        <input type="text" class="form-control" id="floatingInput1" placeholder=" احداثيات">
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="col-md-12">
+
+
+                                <div class="col-md-12">
+                                    <h5>  وحدة الجوار</h5>
+                                    </hr>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-floating mb-3">
+                                        <input type="text" class="form-control" id="floatingInput1" placeholder=" وحدة الجوار">
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="col-md-12">
+
+
+                                <div class="col-md-12">
+                                    <h5>  المساحة </h5>
+                                    </hr>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="form-floating mb-3">
+                                        <input type="text" class="form-control" id="floatingInput1" placeholder=" متر مربع">
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="form-floating mb-3">
+                                        <input type="text" class="form-control" id="floatingInput1" placeholder=" لبنة ">
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="col-md-12">
+
+
+                                <div class="col-md-12">
+                                    <h5>  الحدود </h5>
+                                    </hr>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-floating mb-3">
+                                        <input type="text" class="form-control" id="floatingInput1" placeholder=" شمال ">
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="form-floating mb-3">
+                                        <input type="text" class="form-control" id="floatingInput1" placeholder=" جنوب ">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-floating mb-3">
+                                        <input type="text" class="form-control" id="floatingInput1" placeholder=" شرق ">
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="form-floating mb-3">
+                                        <input type="text" class="form-control" id="floatingInput1" placeholder=" غرب ">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-12">
+
+
+                                <div class="col-md-12">
+                                    <h5>  المدة الزمنية</h5>
+                                    </hr>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-floating mb-3">
+                                        <input type="text" class="form-control" id="floatingInput1" placeholder=" مدة زمنية">
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="col-md-12">
+
+
+                                <div class="col-md-12">
+                                    <h5>  المبلغ المقترح</h5>
+                                    </hr>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-floating mb-3">
+                                        <input type="text" class="form-control" id="floatingInput1" placeholder=" وحدة الجوار">
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="col-md-6">
+                                <h5 class="mt-5">نوع الارسال</h5>
+
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault11">
+                                    <label class="form-check-label" for="flexRadioDefault11">  عام </label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault12" checked="">
+                                    <label class="form-check-label" for="flexRadioDefault12">   مخصص </label>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalCenter"><i class="ti ti-user-plus me-1"></i>انشاء طلب </button> -->
+
+
+    </div>
+</div>
+
+<div dir="rtl">
+
+
+
+    <ul class="nav nav-tabs profile-tabs justify-content-center justify-content-md-end" id="myTab" role="tablist" dir="ltr">
+
+
+
+        <li class="nav-item">
+            <a class="nav-link " id="gallery-tab" data-bs-toggle="tab" href="#from_me" role="tab" aria-controls="gallery" aria-selected="false">
+                <i class="ti ti-photo me-2"></i>  إرسال التقرير النهائي
+            </a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link active" id="request-tab" data-bs-toggle="tab" href="#to_me" role="tab" aria-controls="request" aria-selected="false">
+                <i class="ti ti-user-plus me-2"></i>طلبات مرسلة إلي
+            </a>
+        </li>
+
+
+        <li class="nav-item">
+            <a class="nav-link " id="gallery-tab" data-bs-toggle="tab" href="#from_me" role="tab" aria-controls="gallery" aria-selected="false">
+                <i class="ti ti-photo me-2"></i>طلبات قمت بارسالها
+            </a>
+        </li>
+
+
+        <!-- <li class="nav-item">
+          <a class="nav-link" id="request-tab" data-bs-toggle="tab" href="#generic" role="tab" aria-controls="request" aria-selected="false">
+          <i class="ti ti-user-plus me-2"></i>طلبات  عامة
+          </a>
+          </li> -->
+    </ul>
+
+    <div class="tab-pane" id="to_me" role="tabpanel" aria-labelledby="request-tab">
+        <div class="card">
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>العنوان</th>
+                                <th>موقع الأرض</th>
+                                <th>إحداثيات X</th>
+                                <th>إحداثيات Y</th>
+                                <th>وحدة الجوار</th>
+                                <th>المساحة</th>
+                                <th>الحدود</th>
+                                <th>المدة الزمنية</th>
+                                <th>المبلغ المقترح</th>
+                                <th>نوع الإرسال</th>
+                                <th> ملفات المشروع</th>
+                                <th>  حالة الطلب</th>
+                                <th>  مقدم الطلب</th>
+                                <th>
+                                    <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#exampleModalCenter"><i class="ti ti-user-plus me-1"></i>انشاء طلب </button>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>2</td>
+                                <td>صنعاء</td>
+                                <td>543.21</td>
+                                <td>987.65</td>
+                                <td>حي النهضة</td>
+                                <td>300 متر مربع</td>
+                                <td>جنوب</td>
+                                <td>60 يوم</td>
+                                <td>15000 ريال</td>
+                                <td>مخصص</td>
+                                <td>.pdf</td>
+                                <td>معترضة</td>
+                                <td>احمد محمد</td>
+                                <td>
+                                    <a href="#!"><i class="icon feather icon-edit f-w-600 f-16 m-r-15 text-success"></i></a><a href="#!"><i class="feather icon-trash-2 f-w-600 f-16 text-danger"></i></a>
+                                </td>
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>

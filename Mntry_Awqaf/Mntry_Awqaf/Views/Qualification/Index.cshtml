@@ -1,0 +1,83 @@
+﻿@model IEnumerable<Mntry_Awqaf.Models.Qualification>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EduDegree)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EduCountry)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EduUniv)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EduMajor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EduDept)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EduYear)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EduGrade)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UserID)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EduDegree)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EduCountry)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EduUniv)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EduMajor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EduDept)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EduYear)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EduGrade)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UserID)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -1,0 +1,174 @@
+@model IEnumerable<Mntry_Awqaf.Models.WorkForm>
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="tab-pane fade show active" id="estimaraAmalTab" role="tabpanel" aria-labelledby="estimaraAmal-tab">
+    <div class="card shadow-sm border-0">
+        <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center">
+            <h5 class="mb-0">📋 استمارة عمل</h5>
+
+            <a asp-controller="Work_Form" asp-action="Create" class="btn btn-light btn-sm text-primary fw-bold">
+                <i class="ti ti-user-plus me-1"></i> إنشاء استمارة
+            </a>
+        </div>
+
+        <div class="card-body">
+            @{
+                var dynamicValues = ViewBag.DynamicValues as IEnumerable<Mntry_Awqaf.Models.DynamicFieldValue>;
+            }
+            <div class="table-responsive">
+                <table class="table table-hover align-middle text-center">
+                    <thead class="table-light">
+                        <tr>
+                            <th>رقم الاستمارة</th>
+                            @if (ViewBag.DynamicFields != null)
+                            {
+                                foreach (var field in ViewBag.DynamicFields)
+                                {
+                                    <th>@field.Name</th>
+                                }
+                            }
+                            <th>العمليات</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        @if (Model != null && Model.Any())
+                        {
+                            foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td>@item.Id</td>
+                                    @if (ViewBag.DynamicFields != null)
+                                    {
+                                        foreach (var field in ViewBag.DynamicFields)
+                                        {
+                                            int fId = (int)field.Id;
+                                            var val = dynamicValues?.FirstOrDefault(v => v.RecordId == item.Id && v.DynamicFieldId == fId)?.Value ?? "-";
+                                            string fieldType = (string)field.Type;
+
+                                            if (fieldType == "file" && val != "-" && val != "")
+                                            {
+                                                string ext = System.IO.Path.GetExtension(val).ToLower();
+                                                bool isImage = ext == ".jpg" || ext == ".jpeg" || ext == ".png" || ext == ".gif" || ext == ".bmp" || ext == ".webp" || ext == ".svg";
+
+                                                if (isImage)
+                                                {
+                                                    <td>
+                                                        <a href="@val" target="_blank" title="عرض الصورة">
+                                                            <img src="@val" alt="مرفق" style="width:55px;height:55px;object-fit:cover;border-radius:5px;border:1px solid #ccc;" 
+                                                                 onerror="this.style.display='none';this.nextElementSibling.style.display='inline'" />
+                                                            <span style="display:none">🖼️ <small>@System.IO.Path.GetFileName(val)</small></span>
+                                                        </a>
+                                                    </td>
+                                                }
+                                                else
+                                                {
+                                                    <td>
+                                                        <a href="@val" target="_blank" title="فتح المرفق" style="text-decoration:none; color:#0d6efd;">
+                                                            📎 <small>@System.IO.Path.GetFileName(val)</small>
+                                                        </a>
+                                                    </td>
+                                                }
+                                            }
+                                            else
+                                            {
+                                                <td>@val</td>
+                                            }
+                                        }
+                                    }
+                                    <td>
+                                        <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-sm btn-outline-success me-1">
+                                            <i class="feather icon-edit"></i> تعديل
+                                        </a>
+                                        <a href="#" class="btn btn-sm btn-outline-danger" title="حذف" onclick="confirmDelete(@item.Id); return false;">
+                                            <i class="feather icon-trash-2"></i> حذف
+                                        </a>
+                                    </td>
+                                </tr>
+                            }
+                        }
+                        else
+                        {
+                            <tr>
+                                <td colspan="17" class="text-muted">لا توجد بيانات متاحة حاليًا</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="deleteConfirmModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-sm">
+        <div class="modal-content">
+            <div class="modal-header bg-danger text-white">
+                <h6 class="modal-title">⚠️ تأكيد الحذف</h6>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body text-center">
+                <p class="mb-0">هل أنت متأكد من حذف هذه الاستمارة؟</p>
+                <small class="text-muted">لا يمكن التراجع عن هذا الإجراء</small>
+            </div>
+            <div class="modal-footer justify-content-center">
+                <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">إلغاء</button>
+                <button type="button" class="btn btn-danger btn-sm" id="confirmDeleteBtn">حذف</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    var _deleteId = 0;
+    var _deleteModalInstance = null;
+
+    function confirmDelete(id) {
+        _deleteId = id;
+        var modalEl = document.getElementById('deleteConfirmModal');
+        if (modalEl) {
+            _deleteModalInstance = bootstrap.Modal.getInstance(modalEl);
+            if (!_deleteModalInstance) {
+                _deleteModalInstance = new bootstrap.Modal(modalEl);
+            }
+            _deleteModalInstance.show();
+        }
+    }
+
+    document.addEventListener('click', function (e) {
+        if (e.target && e.target.id === 'confirmDeleteBtn') {
+            var btn = e.target;
+            btn.disabled = true;
+            
+            fetch('/Work_Form/DeleteConfirmed?id=' + _deleteId, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' }
+            })
+            .then(function(r) {
+                if (r.ok) return r.json();
+                else throw new Error('Network response was not ok');
+            })
+            .then(function(data) {
+                if (data.success) {
+                    if (_deleteModalInstance) {
+                        _deleteModalInstance.hide();
+                    }
+                    setTimeout(function () {
+                        location.reload();
+                    }, 500);
+                } else {
+                    alert('خطأ: ' + (data.message || 'فشل الحذف'));
+                    btn.disabled = false;
+                }
+            })
+            .catch(function(error) {
+                console.error('Error:', error);
+                alert('حدث خطأ أثناء الاتصال بالخادم.');
+                btn.disabled = false;
+            });
+        }
+    });
+</script>

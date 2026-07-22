@@ -1,0 +1,649 @@
+/* RTL Support for Arabic Language */
+
+/* Basic RTL Direction */
+[dir="rtl"] {
+    direction: rtl;
+    text-align: right;
+}
+
+/* Header RTL Adjustments */
+[dir="rtl"] .pc-header .header-wrapper .me-auto {
+    margin-left: 0 !important;
+    margin-right: auto !important;
+}
+
+[dir="rtl"] .pc-header .header-wrapper .ms-auto {
+    margin-right: 0 !important;
+    margin-left: auto !important;
+}
+
+[dir="rtl"] .pc-header .header-search {
+    margin-left: 0;
+    margin-right: 1rem;
+}
+
+[dir="rtl"] .pc-header .header-search .icon-search {
+    left: auto;
+    right: 1rem;
+}
+
+[dir="rtl"] .pc-header .header-search input {
+    padding-left: 1rem;
+    padding-right: 3rem;
+}
+
+/* Sidebar RTL Adjustments */
+[dir="rtl"] .pc-sidebar {
+    right: 0;
+    left: auto;
+    transform: none;
+}
+
+[dir="rtl"] .pc-sidebar .pc-navbar .pc-item .pc-link .pc-arrow {
+    transform: rotate(180deg);
+}
+
+[dir="rtl"] .pc-sidebar .pc-navbar .pc-item .pc-link .pc-arrow i {
+    transform: rotate(180deg);
+}
+
+[dir="rtl"] .pc-sidebar .pc-navbar .pc-item .pc-link .pc-micon {
+    margin-left: 0.5rem;
+    margin-right: 0;
+}
+
+/* Fix sidebar positioning and layout */
+[dir="rtl"] .pc-sidebar .pc-navbar {
+    direction: rtl;
+}
+
+[dir="rtl"] .pc-sidebar .pc-navbar .pc-item {
+    direction: rtl;
+}
+
+[dir="rtl"] .pc-sidebar .pc-navbar .pc-item .pc-link {
+    direction: rtl;
+    text-align: right;
+    padding: 0.75rem 1rem 0.75rem 0.5rem;
+}
+
+/* Fix sidebar item spacing and alignment */
+[dir="rtl"] .pc-sidebar .pc-navbar .pc-item .pc-link .pc-mtext {
+    margin-right: 0.5rem;
+    margin-left: 0;
+    text-align: right;
+}
+
+[dir="rtl"] .pc-sidebar .pc-navbar .pc-item .pc-link .pc-arrow {
+    margin-left: auto;
+    margin-right: 0;
+    transform: rotate(180deg);
+}
+
+/* Fix sidebar caption items */
+[dir="rtl"] .pc-sidebar .pc-navbar .pc-item.pc-caption {
+    direction: rtl;
+    text-align: right;
+}
+
+[dir="rtl"] .pc-sidebar .pc-navbar .pc-item.pc-caption label {
+    text-align: right;
+    margin-right: 0;
+    margin-left: 0.5rem;
+}
+
+[dir="rtl"] .pc-sidebar .pc-navbar .pc-item.pc-caption i {
+    margin-left: 0.5rem;
+    margin-right: 0;
+}
+
+/* Fix submenu positioning and layout */
+[dir="rtl"] .pc-sidebar .pc-navbar .pc-submenu {
+    padding-right: 0;
+    padding-left: 1rem;
+    direction: rtl;
+}
+
+[dir="rtl"] .pc-sidebar .pc-navbar .pc-submenu .pc-item .pc-link {
+    padding-right: 1rem;
+    padding-left: 0.5rem;
+    text-align: right;
+}
+
+[dir="rtl"] .pc-sidebar .pc-navbar .pc-submenu .pc-submenu {
+    padding-right: 1rem;
+    padding-left: 0;
+}
+
+/* Fix sidebar brand/logo */
+[dir="rtl"] .pc-sidebar .m-header .b-brand {
+    text-align: right;
+    direction: rtl;
+}
+
+/* Fix sidebar navigation wrapper */
+[dir="rtl"] .pc-sidebar .navbar-wrapper {
+    direction: rtl;
+}
+
+[dir="rtl"] .pc-sidebar .navbar-content {
+    direction: rtl;
+}
+
+/* Fix sidebar item spacing */
+[dir="rtl"] .pc-sidebar .pc-navbar .pc-item {
+    text-align: right;
+    direction: rtl;
+}
+
+/* Fix sidebar link hover effects */
+[dir="rtl"] .pc-sidebar .pc-navbar .pc-item .pc-link:hover {
+    padding-right: 1rem;
+    padding-left: 0.5rem;
+}
+
+/* Fix sidebar active state */
+[dir="rtl"] .pc-sidebar .pc-navbar .pc-item.active .pc-link {
+    border-right: 3px solid var(--bs-primary);
+    border-left: none;
+}
+
+/* Fix sidebar collapsed state */
+[dir="rtl"] .pc-sidebar.pc-sidebar-collapsed .pc-navbar .pc-item .pc-link .pc-mtext {
+    margin-right: 0;
+}
+
+[dir="rtl"] .pc-sidebar.pc-sidebar-collapsed .pc-navbar .pc-item .pc-link .pc-arrow {
+    margin-left: 0;
+    margin-right: auto;
+}
+
+/* Fix sidebar mobile responsiveness */
+@media (max-width: 991.98px) {
+    [dir="rtl"] .pc-sidebar {
+        right: -260px;
+        left: auto;
+        transform: translateX(0);
+    }
+    
+    [dir="rtl"] .pc-sidebar.show {
+        right: 0;
+        left: auto;
+        transform: translateX(0);
+    }
+}
+
+/* Fix sidebar animations for RTL */
+[dir="rtl"] .pc-sidebar {
+    transition: right 0.3s ease, transform 0.3s ease;
+}
+
+[dir="rtl"] .pc-sidebar.pc-sidebar-collapsed {
+    right: 0;
+    left: auto;
+}
+
+/* Fix sidebar content overflow */
+[dir="rtl"] .pc-sidebar .navbar-content {
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+/* Fix sidebar item borders and spacing */
+[dir="rtl"] .pc-sidebar .pc-navbar .pc-item .pc-link {
+    border-radius: 0;
+    margin: 0;
+}
+
+/* Fix sidebar submenu positioning */
+[dir="rtl"] .pc-sidebar .pc-navbar .pc-item.pc-hasmenu .pc-submenu {
+    position: relative;
+    right: auto;
+    left: 0;
+}
+
+/* Fix sidebar arrow positioning */
+[dir="rtl"] .pc-sidebar .pc-navbar .pc-item .pc-link .pc-arrow {
+    position: absolute;
+    right: 1rem;
+    left: auto;
+    top: 50%;
+    transform: translateY(-50%) rotate(180deg);
+}
+
+/* Fix sidebar icon positioning */
+[dir="rtl"] .pc-sidebar .pc-navbar .pc-item .pc-link .pc-micon {
+    position: relative;
+    margin-left: 0.5rem;
+    margin-right: 0;
+}
+
+/* Fix sidebar text positioning */
+[dir="rtl"] .pc-sidebar .pc-navbar .pc-item .pc-link .pc-mtext {
+    position: relative;
+    margin-right: 0.5rem;
+    margin-left: 0;
+}
+
+/* Fix sidebar link functionality */
+[dir="rtl"] .pc-sidebar .pc-navbar .pc-item .pc-link {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+[dir="rtl"] .pc-sidebar .pc-navbar .pc-item .pc-link:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
+[dir="rtl"] .pc-sidebar .pc-navbar .pc-item .pc-link:focus {
+    outline: none;
+    text-decoration: none;
+}
+
+/* Fix sidebar submenu functionality */
+[dir="rtl"] .pc-sidebar .pc-navbar .pc-submenu {
+    display: none;
+}
+
+[dir="rtl"] .pc-sidebar .pc-navbar .pc-item.pc-hasmenu.show .pc-submenu {
+    display: block;
+}
+
+/* Fix sidebar item click areas */
+[dir="rtl"] .pc-sidebar .pc-navbar .pc-item .pc-link {
+    position: relative;
+    z-index: 1;
+}
+
+/* Fix sidebar arrow click functionality */
+[dir="rtl"] .pc-sidebar .pc-navbar .pc-item .pc-link .pc-arrow {
+    cursor: pointer;
+    pointer-events: auto;
+}
+
+/* Fix sidebar mobile touch targets */
+@media (max-width: 991.98px) {
+    [dir="rtl"] .pc-sidebar .pc-navbar .pc-item .pc-link {
+        min-height: 44px;
+        padding: 0.75rem 1rem 0.75rem 0.5rem;
+    }
+}
+
+/* Fix sidebar focus states */
+[dir="rtl"] .pc-sidebar .pc-navbar .pc-item .pc-link:focus-visible {
+    outline: 2px solid var(--bs-primary);
+    outline-offset: -2px;
+}
+
+/* Fix sidebar active states */
+[dir="rtl"] .pc-sidebar .pc-navbar .pc-item.active .pc-link {
+    background-color: var(--bs-primary);
+    color: white;
+}
+
+[dir="rtl"] .pc-sidebar .pc-navbar .pc-item.active .pc-link:hover {
+    background-color: var(--bs-primary);
+    color: white;
+}
+
+/* Fix sidebar hover states */
+[dir="rtl"] .pc-sidebar .pc-navbar .pc-item .pc-link:hover {
+    background-color: rgba(var(--bs-primary-rgb), 0.1);
+}
+
+/* Fix sidebar submenu hover states */
+[dir="rtl"] .pc-sidebar .pc-navbar .pc-submenu .pc-item .pc-link:hover {
+    background-color: rgba(var(--bs-primary-rgb), 0.05);
+}
+
+/* Enhanced Sidebar RTL Support */
+[dir="rtl"] .pc-sidebar .pc-navbar .pc-item .pc-link {
+    text-align: right;
+}
+
+[dir="rtl"] .pc-sidebar .pc-navbar .pc-item .pc-link .pc-mtext {
+    margin-right: 0.5rem;
+    margin-left: 0;
+}
+
+[dir="rtl"] .pc-sidebar .pc-navbar .pc-item .pc-link .pc-arrow {
+    margin-left: auto;
+    margin-right: 0;
+}
+
+[dir="rtl"] .pc-sidebar .pc-navbar .pc-item.pc-caption label {
+    text-align: right;
+}
+
+[dir="rtl"] .pc-sidebar .pc-navbar .pc-item.pc-caption i {
+    margin-left: 0.5rem;
+    margin-right: 0;
+}
+
+
+
+/* Submenu RTL Adjustments */
+[dir="rtl"] .pc-sidebar .pc-navbar .pc-submenu {
+    padding-right: 0;
+    padding-left: 1rem;
+}
+
+[dir="rtl"] .pc-sidebar .pc-navbar .pc-submenu .pc-item .pc-link {
+    padding-right: 1rem;
+    padding-left: 0.5rem;
+}
+
+[dir="rtl"] .pc-sidebar .pc-navbar .pc-submenu .pc-submenu {
+    padding-right: 1rem;
+    padding-left: 0;
+}
+
+/* Sidebar Brand/Logo RTL */
+[dir="rtl"] .pc-sidebar .m-header .b-brand {
+    text-align: right;
+}
+
+/* Sidebar Navigation Wrapper RTL */
+[dir="rtl"] .pc-sidebar .navbar-wrapper {
+    direction: rtl;
+}
+
+[dir="rtl"] .pc-sidebar .navbar-content {
+    direction: rtl;
+}
+
+/* Sidebar Item Spacing RTL */
+[dir="rtl"] .pc-sidebar .pc-navbar .pc-item {
+    text-align: right;
+}
+
+/* Sidebar Link Hover Effects RTL */
+[dir="rtl"] .pc-sidebar .pc-navbar .pc-item .pc-link:hover {
+    padding-right: 1rem;
+    padding-left: 0.5rem;
+}
+
+/* Sidebar Active State RTL */
+[dir="rtl"] .pc-sidebar .pc-navbar .pc-item.active .pc-link {
+    border-right: 3px solid var(--bs-primary);
+    border-left: none;
+}
+
+/* Sidebar Collapsed State RTL */
+[dir="rtl"] .pc-sidebar.pc-sidebar-collapsed .pc-navbar .pc-item .pc-link .pc-mtext {
+    margin-right: 0;
+}
+
+[dir="rtl"] .pc-sidebar.pc-sidebar-collapsed .pc-navbar .pc-item .pc-link .pc-arrow {
+    margin-left: 0;
+    margin-right: auto;
+}
+
+/* Main Content RTL Adjustments */
+[dir="rtl"] .pc-container {
+    margin-left: 0;
+    margin-right: 260px;
+}
+
+[dir="rtl"] .pc-container.pc-sidebar-collapsed {
+    margin-right: 70px;
+}
+
+/* Dropdown RTL Adjustments */
+[dir="rtl"] .dropdown-menu-end {
+    right: auto;
+    left: 0;
+}
+
+[dir="rtl"] .dropdown-menu {
+    text-align: right;
+}
+
+[dir="rtl"] .dropdown-item {
+    text-align: right;
+}
+
+/* Card RTL Adjustments */
+[dir="rtl"] .card-body .row .col-auto {
+    margin-left: 0;
+    margin-right: auto;
+}
+
+[dir="rtl"] .card-body .d-flex .ms-2 {
+    margin-left: 0 !important;
+    margin-right: 0.5rem !important;
+}
+
+[dir="rtl"] .card-body .d-flex .me-2 {
+    margin-right: 0 !important;
+    margin-left: 0.5rem !important;
+}
+
+/* List Group RTL Adjustments */
+[dir="rtl"] .list-group-item .d-flex .flex-grow-1.ms-1 {
+    margin-left: 0 !important;
+    margin-right: 0.25rem !important;
+}
+
+[dir="rtl"] .list-group-item .d-flex .float-end {
+    float: left !important;
+}
+
+/* Button RTL Adjustments */
+[dir="rtl"] .btn-group .btn:not(:last-child) {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0.375rem;
+    border-bottom-right-radius: 0.375rem;
+}
+
+[dir="rtl"] .btn-group .btn:not(:first-child) {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-top-left-radius: 0.375rem;
+    border-bottom-left-radius: 0.375rem;
+}
+
+/* Form RTL Adjustments */
+[dir="rtl"] .form-check {
+    padding-left: 0;
+    padding-right: 1.5rem;
+}
+
+[dir="rtl"] .form-check .form-check-input {
+    margin-left: 0;
+    margin-right: -1.5rem;
+}
+
+[dir="rtl"] .form-check-input {
+    margin-left: 0;
+    margin-right: 0.5rem;
+}
+
+/* Input Group RTL Adjustments */
+[dir="rtl"] .input-group > .form-control:not(:last-child) {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0.375rem;
+    border-bottom-right-radius: 0.375rem;
+}
+
+[dir="rtl"] .input-group > .form-control:not(:first-child) {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-top-left-radius: 0.375rem;
+    border-bottom-left-radius: 0.375rem;
+}
+
+/* Badge RTL Adjustments */
+[dir="rtl"] .badge.ms-1 {
+    margin-left: 0 !important;
+    margin-right: 0.25rem !important;
+}
+
+[dir="rtl"] .badge.ms-2 {
+    margin-left: 0 !important;
+    margin-right: 0.5rem !important;
+}
+
+/* Alert RTL Adjustments */
+[dir="rtl"] .alert .btn-close {
+    right: auto;
+    left: 0;
+}
+
+/* Modal RTL Adjustments */
+[dir="rtl"] .modal-header .btn-close {
+    margin: -0.5rem auto -0.5rem -0.5rem;
+}
+
+[dir="rtl"] .modal-footer .btn + .btn {
+    margin-left: 0;
+    margin-right: 0.5rem;
+}
+
+/* Offcanvas RTL Adjustments */
+[dir="rtl"] .offcanvas-end {
+    right: auto;
+    left: 0;
+}
+
+[dir="rtl"] .offcanvas-header .btn-close {
+    margin: -0.5rem auto -0.5rem -0.5rem;
+}
+
+/* Tab RTL Adjustments */
+[dir="rtl"] .nav-tabs .nav-link {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0.375rem;
+}
+
+[dir="rtl"] .nav-tabs .nav-link.active {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0.375rem;
+}
+
+/* Progress Bar RTL Adjustments */
+[dir="rtl"] .progress-bar {
+    float: right;
+}
+
+/* Table RTL Adjustments */
+[dir="rtl"] .table th,
+[dir="rtl"] .table td {
+    text-align: right;
+}
+
+/* Pagination RTL Adjustments */
+[dir="rtl"] .pagination .page-link {
+    margin-left: 0;
+    margin-right: -1px;
+}
+
+[dir="rtl"] .pagination .page-item:first-child .page-link {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0.375rem;
+    border-bottom-right-radius: 0.375rem;
+}
+
+[dir="rtl"] .pagination .page-item:last-child .page-link {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-top-left-radius: 0.375rem;
+    border-bottom-left-radius: 0.375rem;
+}
+
+/* Breadcrumb RTL Adjustments */
+[dir="rtl"] .breadcrumb-item + .breadcrumb-item {
+    padding-left: 0;
+    padding-right: 0.5rem;
+}
+
+[dir="rtl"] .breadcrumb-item + .breadcrumb-item::before {
+    padding-left: 0.5rem;
+    padding-right: 0;
+    content: var(--bs-breadcrumb-divider, "/");
+}
+
+/* Custom RTL Classes */
+[dir="rtl"] .rtl-flip {
+    transform: scaleX(-1);
+}
+
+[dir="rtl"] .rtl-mirror {
+    transform: scaleX(-1);
+}
+
+/* Responsive RTL Adjustments */
+@media (max-width: 991.98px) {
+    [dir="rtl"] .pc-container {
+        margin-right: 0;
+    }
+    
+    [dir="rtl"] .pc-sidebar {
+        right: -260px;
+        left: auto;
+    }
+    
+    [dir="rtl"] .pc-sidebar.show {
+        right: 0;
+        left: auto;
+    }
+}
+
+/* Animation RTL Adjustments */
+[dir="rtl"] .slide-in-right {
+    animation: slideInLeft 0.3s ease-out;
+}
+
+[dir="rtl"] .slide-out-right {
+    animation: slideOutLeft 0.3s ease-out;
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideOutLeft {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(100%);
+    }
+}
+
+/* Font Adjustments for Arabic */
+[dir="rtl"] {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+
+/* Icon RTL Adjustments */
+[dir="rtl"] .ti-chevron-right::before {
+    content: "\ea3c"; /* ti-chevron-left */
+}
+
+[dir="rtl"] .ti-chevron-left::before {
+    content: "\ea3d"; /* ti-chevron-right */
+}
+
+[dir="rtl"] .ti-arrow-right::before {
+    content: "\ea3e"; /* ti-arrow-left */
+}
+
+[dir="rtl"] .ti-arrow-left::before {
+    content: "\ea3f"; /* ti-arrow-right */
+}

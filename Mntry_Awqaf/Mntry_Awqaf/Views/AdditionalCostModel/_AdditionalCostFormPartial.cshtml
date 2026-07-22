@@ -1,0 +1,100 @@
+﻿@model AdditionalCostWithModel
+@{
+    Layout = null; // مهم جداً عند PartialView
+}
+
+<form id="formModal" asp-action="Create" method="post">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <div class="modal-body">
+        <div class="row mb-3">
+            <div class="col-12">
+                <h4 class="fw-bold">التكلفة الإضافية</h4>
+                <hr>
+            </div>
+        </div>
+        <div class="row mb-3">
+    <input type="hidden" name="AdditionalCostModeles[0].UserID" value="@Context.Session.GetInt32("UserID")" />
+            <div class="row mb-3">
+                <div class="col-md-3">
+                    <label asp-for="AdditionalCost.AdditionalCostTypeName" class="control-label"></label>
+                    <input asp-for="AdditionalCost.AdditionalCostTypeName"
+                           type="text"
+                           class="form-control"
+                           list="additionalCostTypeList"
+                           placeholder="أدخل اسم القالب أو اختر من القائمة">
+
+                    <datalist id="additionalCostTypeList">
+                        @if (ViewBag.WagesTemp != null)
+                        {
+                            foreach (var item in (SelectList)ViewBag.WagesTemp)
+                            {
+                                <option value="@item.Text" data-id="@item.Value"></option>
+                            }
+                        }
+                    </datalist>
+
+                    <span asp-validation-for="AdditionalCost.AdditionalCostTypeName" class="text-danger"></span>
+                </div>
+            </div>
+
+
+            <div class="table-responsive">
+                <table class="table table-bordered table-hover">
+                    <thead class="table-light">
+                        <tr>
+                            <th>#</th>
+                            <th> البند</th>
+                            <th>السعر</th>
+                            <th> ملاحظات</th>
+                            <th>
+                                <button type="button" class="btn btn-sm btn-outline-primary" onclick="addTableRow()">
+                                    <i class="bi bi-plus"></i>
+                                </button>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody id="templateTableBody">
+                        @for (int i = 0; i < Model.AdditionalCostModeles.Count; i++)
+                        {
+                            <tr>
+                                <td>@(i + 1)</td>
+                                
+                                <td>
+                                    <input name="AdditionalCostModeles[@i].Price" type="number" class="form-control form-control-sm price-input" placeholder="0.00" oninput="updateTotal()" />
+                                </td>
+                                <td>
+                                    <input name="AdditionalCostModeles[@i].Img" type="text" class="form-control form-control-sm" />
+
+                                    @* <input name="AdditionalCostModeles[@i].Img" type="file" class="form-control form-control-sm" /> *@
+                                </td>
+                                <td>
+                                    <input name="AdditionalCostModeles[@i].CostType" type="text" class="form-control form-control-sm" />
+                                </td>
+                                <td>
+                                    <button type="button" class="btn btn-sm btn-outline-danger" onclick="removeTableRow(this)">
+                                        <i class="bi bi-trash"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                    <tfoot>
+                        <tr class="table-light fw-bold">
+                            <td colspan="2">الإجمالي</td>
+                            <td id="totalPrice">0.00</td>
+                            <td colspan="2"></td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">إلغاء</button>
+        <button type="submit" class="btn btn-primary">حفظ القالب</button>
+    </div>
+</form>
+
+
+

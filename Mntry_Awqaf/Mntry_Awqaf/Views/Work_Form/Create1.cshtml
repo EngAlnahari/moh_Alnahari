@@ -1,0 +1,39 @@
+﻿@{
+    Layout = null;
+    ViewData["Title"] = "Create";
+}
+
+<div class="modal fade" id="clientModal" tabindex="-1" aria-labelledby="clientModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="clientModalLabel">بيانات العميل</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="clientForm">
+                    <div class="mb-3">
+                        <label for="clientName" class="form-label">اسم العميل</label>
+                        <input type="text" class="form-control" id="clientName" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="clientEmail" class="form-label">البريد الإلكتروني</label>
+                        <input type="email" class="form-control" id="clientEmail" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="clientPhone" class="form-label">رقم الهاتف</label>
+                        <input type="tel" class="form-control" id="clientPhone">
+                    </div>
+                    <div class="mb-3">
+                        <label for="reportNotes" class="form-label">ملاحظات إضافية</label>
+                        <textarea class="form-control" id="reportNotes" rows="3"></textarea>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">إلغاء</button>
+                <button type="button" class="btn btn-primary" onclick="sendReport()">إرسال التقرير</button>
+            </div>
+        </div>
+    </div>
+</div>

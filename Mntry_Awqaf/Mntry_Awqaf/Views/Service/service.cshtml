@@ -1,0 +1,32 @@
+﻿
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var searchInput = document.getElementById('searchInput');
+            var table = document.getElementById('myTable');
+            var rows = table.getElementsByTagName('tr');
+
+            searchInput.addEventListener('input', function () {
+                var filter = searchInput.value.toLowerCase();
+
+                for (var i = 0; i < rows.length; i++) {
+                    var cells = rows[i].getElementsByTagName('td');
+                    var found = false;
+
+                    for (var j = 0; j < cells.length; j++) {
+                        var cellValue = cells[j].textContent || cells[j].innerText;
+
+                        if (cellValue.toLowerCase().indexOf(filter) > -1) {
+                            found = true;
+                            break;
+                        }
+                    }
+
+                    rows[i].style.display = found ? '' : 'none';
+                }
+            });
+        });
+    </script>
+
+
+

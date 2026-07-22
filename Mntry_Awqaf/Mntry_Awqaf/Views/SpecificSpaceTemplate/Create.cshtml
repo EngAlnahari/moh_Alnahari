@@ -1,0 +1,214 @@
+﻿ @model Mntry_Awqaf.Models.SpecificwithAlmjal
+
+@{
+    Layout = null;
+    ViewData["Title"] = "Create";
+}
+
+
+
+<form id="specificSpaceTemplateForm" asp-action="Create" method="post">
+    <div class="modal-body">
+        @{
+            var rop = Context.Session.GetInt32("UserID");
+        }
+        <div class="row mb-3">
+
+
+            <div class="col-12">
+                <h4 class="fw-bold"> قالب معيار النوع</h4>
+                <hr>
+            </div>
+        </div>
+        
+         <!-- اسم القالب -->
+             <div class="col-md-4">
+            <input type="hidden" id="almjalHiddenInput" name="almjal.AlmjalName" />
+
+            </div> 
+        <div class="table-responsive" id="table1">
+            <table class="table table-bordered table-hover">
+                <thead class="table-light">
+                    <tr>
+                        <th style="width: 40px">#</th>
+
+                        <th>   معيار المساحة </th>
+
+
+                        @* <th>  المساحه</th> *@
+                        <th>  السعر</th>
+                        <th colspan="2" class="text-center">
+                            <div>المدة الزمنية</div>
+                            <div>لتسليم التقرير</div>
+                            <hr class="my-1">
+                            <div style="display: flex; justify-content: center; gap: 20px;">
+                                <span>من</span>
+                                <span>|</span>
+                                <span>إلى</span>
+                            </div>
+                        </th>
+
+                        <th style="width: 50px">
+                            <button type="button" class="btn btn-sm btn-outline-primary" onclick="addWagesTableRow()">
+                                <i class="bi bi-plus"></i>
+                            </button>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody id="wagesTemplateTableBody1">
+                    <tr>
+                        <td>1</td>
+
+                        <td>
+                            <input asp-for="specificSpaceTemplates[0].LessThan" type="text" class="form-control form-control-sm" placeholder="أقل من">
+                        </td>
+                        @* <td>
+                            <input asp-for="specificSpaceTemplates[0].Space" type="number" class="form-control form-control-sm" placeholder="0.00">
+                        </td> *@
+                        <td>
+                            <input asp-for="specificSpaceTemplates[0].Price" type="text" class="form-control form-control-sm" placeholder="0.00">
+                        </td>
+                        <td>
+                            <input asp-for="specificSpaceTemplates[0].FromDate" type="text" class="form-control form-control-sm">
+                        </td>
+                        <td>
+                            <input asp-for="specificSpaceTemplates[0].ToDate" type="text" class="form-control form-control-sm">
+                        </td>
+                        <input asp-for="specificSpaceTemplates[0].UserID" type="hidden" value="@rop" />
+
+                        <td>
+                            <button type="button" class="btn btn-sm btn-outline-danger" onclick="removeWagesTableRow(this)">
+                                <i class="bi bi-trash"></i>
+                            </button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>2</td>
+                        <td>
+
+                            <input asp-for="specificSpaceTemplates[1].BiggerThan" type="text" class="form-control form-control-sm" placeholder="أكثر من">
+
+
+
+                        </td>
+
+
+
+
+                       @*  <td>
+                            <input asp-for="specificSpaceTemplates[1].Space" type="number" class="form-control form-control-sm" placeholder="0.00">
+                        </td> *@
+                        <td>
+                            <input asp-for="specificSpaceTemplates[1].Price" type="text" class="form-control form-control-sm" placeholder="0.00">
+                        </td>
+                        <td>
+                            <input asp-for="specificSpaceTemplates[1].FromDate" type="text" class="form-control form-control-sm">
+                        </td>
+                        <td>
+                            <input asp-for="specificSpaceTemplates[1].ToDate" type="text" class="form-control form-control-sm">
+                        </td>
+                        <input asp-for="specificSpaceTemplates[1].UserID" type="hidden" value="@rop" />
+
+                        <td>
+                            <button type="button" class="btn btn-sm btn-outline-danger" onclick="removeWagesTableRow(this)">
+                                <i class="bi bi-trash"></i>
+                            </button>
+                        </td>
+                    </tr>
+
+
+
+
+
+                    <tr>
+                        <td>3</td>
+
+                        <td>
+
+                            <div class="d-flex gap-2">
+                                <input asp-for="specificSpaceTemplates[2].SpaceFrom" type="text" class="form-control form-control-sm" placeholder=" من">
+                                <input asp-for="specificSpaceTemplates[2].SpaceTo" type="text" class="form-control form-control-sm" placeholder=" الى">
+                            </div>
+                        </td>
+
+
+
+                      @*   <td>
+                            <input asp-for="specificSpaceTemplates[2].Space" type="number" class="form-control form-control-sm" placeholder="0.00">
+                        </td> *@
+                        <td>
+                            <input asp-for="specificSpaceTemplates[2].Price" type="text" class="form-control form-control-sm" placeholder="0.00">
+                        </td>
+                        <td>
+                            <input asp-for="specificSpaceTemplates[2].FromDate" type="text" class="form-control form-control-sm">
+                        </td>
+                        <td>
+                            <input asp-for="specificSpaceTemplates[2].ToDate" type="text" class="form-control form-control-sm">
+                        </td>
+                      
+
+                       
+                        <input asp-for="specificSpaceTemplates[2].UserID" type="hidden" value="@rop" />
+                        <td>
+                            <button type="button" class="btn btn-sm btn-outline-danger" onclick="removeWagesTableRow(this)">
+                                <i class="bi bi-trash"></i>
+                            </button>
+                        </td>
+                    </tr>
+
+
+
+
+
+
+
+
+
+
+                </tbody>
+            </table>
+
+        </div>
+       
+        <li class="nav-item">
+            <a class="nav-link">مرحباً مستخدم رقم: @rop</a>
+        </li>
+        <div class="col-md-3">
+            <div class="form-check">
+                <!-- هذا يضمن أنه إذا لم يتم التشيك يرسل 0 -->
+                <input type="hidden" name="specificSpaceTemplates.PriceWithDevice" value="0" />
+
+                <!-- إذا تم التشيك يرسل 1 -->
+                <input type="checkbox" class="form-check-input" id="PriceWithDeviceCheckbox" name="specificSpaceTemplates.PriceWithDevice" value="1" />
+
+                <label class="form-check-label" for="PriceWithDeviceCheckbox">
+                    السعر شامل أجور الجهاز
+                </label>
+            </div>
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="submit" class="btn btn-primary">حفظ</button>
+
+        @Html.Partial("~/Views/Service/show.cshtml")
+    </div>
+</form>
+  
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    <script>
+        document.getElementById("conditionSelect").addEventListener("change", function () {
+            var rangeFields = document.getElementById("rangeFields");
+            if (this.value === "range") {
+                rangeFields.style.display = "flex"; // يظهر الصف
+            } else {
+                rangeFields.style.display = "none"; // يخفيه
+            }
+        });
+    </script>
+}

@@ -1,0 +1,205 @@
+﻿ @model Mntry_Awqaf.Models.TransportModelWithDetails
+@{
+    Layout = null;
+    ViewData["Title"] = "Create";
+}
+
+         @* <form asp-action="Create" method="post"> *@
+<form id="createTransportForm" action="@Url.Action("Create", "TransportModel")" method="post">
+
+           
+  <div class="row mb-3">
+        @{
+            var rop = Context.Session.GetInt32("UserID");
+        }
+
+     
+        <div class="col-12 d-flex align-items-center">
+            <label asp-for="scheduleTemplate.NameTemplete" class="form-label me-2" style="min-width: 100px; text-align: right;">اسم القالب</label>
+
+            <input asp-for="scheduleTemplate.NameTemplete"
+                   type="text"
+                   class="form-control"
+                   list="scheduleTemplatesList"
+                   placeholder="أدخل اسم القالب أو اختر من القائمة">
+
+            <datalist id="scheduleTemplatesList">
+                @foreach (var item in (SelectList)ViewBag.WagesTemplate)
+                {
+                    <option value="@item.Text"></option>
+                }
+            </datalist>
+        </div>
+
+        @* <input type="hidden" asp-for="scheduleTemplate.StatuseType" id="hiddenStatuseType" /> *@
+
+                 <hr style="border: 2px solid #000; margin: 1rem 0;">
+
+
+        <!-- القسم الأول -->
+        <div class="mt-2 p-2 border rounded" style="background-color: #f8f9fa; font-size: 12px;">
+            <div class="mb-2">
+                <span style="font-weight: bold; font-size: 18px;">أولاً:</span>
+                <span style="font-weight: bold; font-size: 18px;">
+                    في حال كان التنقلات والسفر والمبيت على حسابي الخاص
+                </span>
+                <br>
+                <span style="font-weight: normal; font-size: 16px;">
+                    يقوم النظام باحتساب مبالغ إضافية مع أجور العمل حسب الحالة التالية:
+                </span>
+            </div>
+
+            <div class="col-md-14">
+                <select  class="form-select" id="extraChargesSelect1">
+                    <option value="">الحالات</option>
+                    <option value="ارض مع رهق">  ︎لا يقوم النظام باحتساب اي مبالغ اضافية، ويكتفي بمبلغ اجور العمل. </option>
+
+                    <option value="2"> يقوم النظام باحتساب مبالغ اضافية حسب تسعير كل محافظة كما هو موضح بالجدول التالي:</option>
+
+
+                    <option value="3">يقوم النظام باحتساب تسعيره موحدة لجميع المحافظات بما فيها مكان اقامتي كما يلي:</option>
+                    <option value="4">يقوم النظام باحتساب تسعيره موحدة باستثناء بعض المحافظات كما يلي:</option>
+                </select>
+            </div>
+
+            <div id="additionalContent1" class="mt-3"></div>
+        </div>
+
+        <hr style="border-top: 3px solid #6c757d; margin: 1rem 0;">
+
+
+        <!-- القسم الثاني -->
+        <div class="mt-2 p-2 border rounded" style="background-color: #f8f9fa; font-size: 12px;">
+            <div class="mt-2">
+                <span style="font-weight: bold; font-size: 18px;">ثانياً:</span>
+                <span style="font-weight: bold; font-size: 18px;">في حال كان التنقلات والسفر والمبيت على حساب العميل</span>
+                <br>
+                <span style="font-weight: normal; font-size: 16px;">يقوم النظام باحتساب مبالغ إضافية مع أجور العمل حسب الحالة التالية:</span>
+                <br />
+                <div class="col-md-14">
+                    <select  class="form-select" id="extraChargesSelect2">
+                        <option value="">الحالات</option>
+                        <option value="ارض مع رهق">  ︎لا يقوم النظام باحتساب اي مبالغ اضافية، ويكتفي بمبلغ اجور العمل. </option>
+
+                        <option value="5"> يقوم النظام باحتساب مبالغ اضافية حسب تسعير كل محافظة كما هو موضح بالجدول التالي:</option>
+
+
+                        <option value="6">يقوم النظام باحتساب تسعيره موحدة لجميع المحافظات بما فيها مكان اقامتي كما يلي:</option>
+                        <option value="7">يقوم النظام باحتساب تسعيره موحدة باستثناء بعض المحافظات كما يلي:</option>
+                    </select>
+                </div>
+            </div>
+            <input asp-for="scheduleTemplate.UserID" type="hidden" value="@rop" />
+
+            <div id="additionalContent2" class="mt-3"></div>
+        </div>
+        <div id="formMessages" class="mt-2"></div> <!-- مكان عرض الرسائل -->
+        @Html.Partial("~/Views/Service/alert_sms.cshtml");
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">إلغاء</button>
+        <button type="submit" class="btn btn-primary">حفظ القالب</button>
+    </div>
+   
+        
+        </form>
+
+
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var form = document.getElementById("createTransportForm");
+        if(!form) return;
+
+        form.addEventListener("submit", function(e) {
+            e.preventDefault();
+
+            var formData = new FormData(form);
+
+            fetch(form.action, {
+                method: form.method,
+                body: formData
+            })
+            .then(res => res.json())
+            .then(data => {
+                var messagesDiv = document.getElementById("formMessages");
+                if(data.success) {
+                    messagesDiv.innerHTML = '<div class="alert alert-success">' + data.message + '</div>';
+
+                    // اغلاق المودال بعد 3 ثواني
+                    setTimeout(function() {
+                        var modalInstance = bootstrap.Modal.getInstance(
+                            document.getElementById('transportTemplateModal1')
+                        );
+                        if(modalInstance) modalInstance.hide();
+                    }, 3000);
+                } else {
+                    messagesDiv.innerHTML = '<div class="alert alert-danger">' + data.message + '</div>';
+                }
+            })
+            .catch(err => {
+                document.getElementById("formMessages").innerHTML =
+                    '<div class="alert alert-danger">حدث خطأ أثناء الحفظ.</div>';
+                console.error(err);
+            });
+        });
+    });
+</script>
+
+
+<script>
+    let rowIndex = 1; // عشان يبدأ بعد الموجود
+
+    function addTableRow() {
+        const tableBody = document.getElementById("templateTableBody");
+
+        // أنشئ صف جديد
+        const newRow = document.createElement("tr");
+
+        newRow.innerHTML = `
+            <td>${rowIndex + 1}</td>
+            <td>
+                <select name="transportModels[${rowIndex}].Governorate" class="form-select form-select-sm">
+                    <option value="">-- اختر محافظة --</option>
+                    <option value="صنعاء">صنعاء</option>
+                    <option value="تعز">تعز</option>
+                    <option value="عدن">عدن</option>
+                    <option value="عمران">عمران</option>
+                    <option value="اب">إب</option>
+                </select>
+            </td>
+            <td>
+                <input name="transportModels[${rowIndex}].TransportationFees" type="number" class="form-control form-control-sm" placeholder="0.00">
+            </td>
+            <td>
+                <input name="transportModels[${rowIndex}].OverNightFees" type="number" class="form-control form-control-sm" placeholder="0.00">
+            </td>
+            <td>
+                <input name="transportModels[${rowIndex}].AllowanceFees" type="number" class="form-control form-control-sm" placeholder="0.00">
+            </td>
+            <td>
+                <button type="button" class="btn btn-sm btn-outline-danger" onclick="removeTableRow(this)">
+                    <i class="bi bi-trash"></i>
+                </button>
+            </td>
+        `;
+
+        tableBody.appendChild(newRow);
+        rowIndex++;
+    }
+
+    function removeTableRow(button) {
+        const row = button.closest("tr");
+        row.remove();
+    }
+</script>
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+
+
+
+
+
+

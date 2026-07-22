@@ -1,0 +1,170 @@
+﻿@model LandBoundaryWithWorkForm
+
+@{
+    Layout = null;
+
+    ViewData["Title"] = "Create";
+}
+
+<table class="table table-bordered text-center align-middle">
+    <thead class="table-light">
+        <tr>
+            <th style="min-width:150px;">الصفة</th>
+            <th>الحد الشمالي</th>
+            <th>الحد الجنوبي</th>
+            <th>الحد الشرقي</th>
+            <th>الحد الغربي</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            
+            <td><input type="text" class="form-control form-control-sm" name="landBoundaryModels[0].AttributeName" value="وصف الحد حسب الطبيعه" readonly></td>
+            <td><input type="text" class="form-control form-control-sm" name="landBoundaryModels[0].NorthBoundary"></td>
+            <td><input type="text" class="form-control form-control-sm" name="landBoundaryModels[0].SouthBoundary"></td>
+            <td><input type="text" class="form-control form-control-sm" name="landBoundaryModels[0].WestBoundary"></td>
+            <td><input type="text" class="form-control form-control-sm" name="landBoundaryModels[0].EastBoundary"></td>
+        </tr>
+        <tr>
+            <td><input type="text" class="form-control form-control-sm" name="landBoundaryModels[1].AttributeName" value="طول الحد " readonly></td>
+            <td><input type="text" class="form-control form-control-sm" name="landBoundaryModels[1].NorthBoundary"></td>
+            <td><input type="text" class="form-control form-control-sm" name="landBoundaryModels[1].SouthBoundary"></td>
+            <td><input type="text" class="form-control form-control-sm" name="landBoundaryModels[1].WestBoundary"></td>
+            <td><input type="text" class="form-control form-control-sm" name="landBoundaryModels[1].EastBoundary"></td>
+          
+        </tr>
+        <tr>
+           
+            <td><input type="text" class="form-control form-control-sm" name="landBoundaryModels[2].AttributeName" value="فئة الحد " readonly></td>
+
+            <td>
+                <select name="landBoundaryModels[2].NorthBoundary" class="form-select form-select-sm">
+                    <option value="نمتيسا">1- لا يوجد</option>
+                    <option value="lands">2- الاراضي</option>
+                    <option value="">     3- المعمورات    </option>
+                    <option value="يال">        4- دور العبادة       </option>
+                    <option value="ستنيا">     5- المقابر    </option>
+                    <option value="نتسيا">      6- الاسواق    </option>
+                    <option value="">    7- الطرقات      </option>
+                    <option value="">     8- رهق\\مسقئ    </option>
+                    <option value="">      9- اخرى تذكر   </option>
+                </select>
+            </td>
+            <td>
+                <select name="landBoundaryModels[2].SouthBoundary" class="form-select form-select-sm">
+                    <option value="نتاكن">1- لا يوجد</option>
+                    <option value="lands">2- الاراضي</option>
+                    <option value="">     3- المعمورات    </option>
+                    <option value="">        4- دور العبادة       </option>
+                    <option value="">     5- المقابر    </option>
+                    <option value="">      6- الاسواق    </option>
+                    <option value="">    7- الطرقات      </option>
+                    <option value="">     8- رهق\\مسقئ    </option>
+                    <option value="">      9- اخرى تذكر   </option>
+                </select>
+            </td>
+            <td>
+                <select name="landBoundaryModels[2].WestBoundary" class="form-select form-select-sm">
+                    <option value="نتك">1- لا يوجد</option>
+                    <option value="lands">2- الاراضي</option>
+                    <option value="">     3- المعمورات    </option>
+                    <option value="">        4- دور العبادة       </option>
+                    <option value="">     5- المقابر    </option>
+                    <option value="">      6- الاسواق    </option>
+                    <option value="">    7- الطرقات      </option>
+                    <option value="">     8- رهق\\مسقئ    </option>
+                    <option value="">      9- اخرى تذكر   </option>
+                </select>
+            </td>
+            <td>
+                <select name="landBoundaryModels[2].EastBoundary" class="form-select form-select-sm">
+                    <option value="نتان">1- لا يوجد</option>
+                    <option value="lands">2- الاراضي</option>
+                    <option value="">     3- المعمورات    </option>
+                    <option value="">        4- دور العبادة       </option>
+                    <option value="">     5- المقابر    </option>
+                    <option value="">      6- الاسواق    </option>
+                    <option value="">    7- الطرقات      </option>
+                    <option value="">     8- رهق\\مسقئ    </option>
+                    <option value="">      9- اخرى تذكر   </option>
+                </select>
+            </td>
+
+            
+        </tr>
+        <!-- المودال -->
+        <div class="modal fade" id="GovernorateModal" tabindex="-1">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content" id="GovernorateContent">
+                    <!-- هنا يجي البارتشل -->
+                </div>
+            </div>
+        </div>
+        <tr>
+            
+            <td><input type="text" class="form-control form-control-sm" name="landBoundaryModels[3].AttributeName" value=" تصنيف الفئة " readonly></td>
+            <td><input type="text" class="form-control form-control-sm" name="landBoundaryModels[3].NorthBoundary"></td>
+            <td><input type="text" class="form-control form-control-sm" name="landBoundaryModels[3].SouthBoundary"></td>
+            <td><input type="text" class="form-control form-control-sm" name="landBoundaryModels[3].WestBoundary"></td>
+            <td><input type="text" class="form-control form-control-sm" name="landBoundaryModels[3].EastBoundary"></td>
+
+           
+        </tr>
+        <tr>
+            <td><input type="text" class="form-control form-control-sm" name="landBoundaryModels[4].AttributeName" value=" جار الحد " readonly></td>
+            <td><input type="text" class="form-control form-control-sm" name="landBoundaryModels[4].NorthBoundary"></td>
+            <td><input type="text" class="form-control form-control-sm" name="landBoundaryModels[4].SouthBoundary"></td>
+            <td><input type="text" class="form-control form-control-sm" name="landBoundaryModels[4].WestBoundary"></td>
+            <td><input type="text" class="form-control form-control-sm" name="landBoundaryModels[4].EastBoundary"></td>
+        </tr>
+        <tr>
+            <td><input type="text" class="form-control form-control-sm" name="landBoundaryModels[5].AttributeName" value="  نوع الفاصل مع الجار " readonly></td>
+            <td><input type="text" class="form-control form-control-sm" name="landBoundaryModels[5].NorthBoundary"></td>
+            <td><input type="text" class="form-control form-control-sm" name="landBoundaryModels[5].SouthBoundary"></td>
+            <td><input type="text" class="form-control form-control-sm" name="landBoundaryModels[5].WestBoundary"></td>
+            <td><input type="text" class="form-control form-control-sm" name="landBoundaryModels[5].EastBoundary"></td>
+        </tr>
+        <tr>
+            <td><input type="text" class="form-control form-control-sm" name="landBoundaryModels[6].AttributeName" value="عدد الانكسارات" readonly></td>
+            <td><input type="text" class="form-control form-control-sm" name="landBoundaryModels[6].NorthBoundary"></td>
+            <td><input type="text" class="form-control form-control-sm" name="landBoundaryModels[6].SouthBoundary"></td>
+            <td><input type="text" class="form-control form-control-sm" name="landBoundaryModels[6].WestBoundary"></td>
+            <td><input type="text" class="form-control form-control-sm" name="landBoundaryModels[6].EastBoundary"></td>
+          
+        </tr>
+        <tr>
+            <td><input type="text" class="form-control form-control-sm" name="landBoundaryModels[7].AttributeName" value="طول الانكسارات " readonly></td>
+            <td><input type="text" class="form-control form-control-sm" name="landBoundaryModels[7].NorthBoundary"></td>
+            <td><input type="text" class="form-control form-control-sm" name="landBoundaryModels[7].SouthBoundary"></td>
+            <td><input type="text" class="form-control form-control-sm" name="landBoundaryModels[7].WestBoundary"></td>
+            <td><input type="text" class="form-control form-control-sm" name="landBoundaryModels[7].EastBoundary"></td>
+          
+        </tr>
+        <tr>
+            <td><input type="text" class="form-control form-control-sm" name="landBoundaryModels[8].AttributeName" value="  الشطفة " readonly></td>
+            <td><input type="text" class="form-control form-control-sm" name="landBoundaryModels[8].NorthBoundary"></td>
+            <td><input type="text" class="form-control form-control-sm" name="landBoundaryModels[8].SouthBoundary"></td>
+            <td><input type="text" class="form-control form-control-sm" name="landBoundaryModels[8].WestBoundary"></td>
+            <td><input type="text" class="form-control form-control-sm" name="landBoundaryModels[8].EastBoundary"></td>
+     
+        </tr>
+        <tr>
+            <td><input type="text" class="form-control form-control-sm" name="landBoundaryModels[9].AttributeName" value="اقل ارتداد " readonly></td>
+            <td><input type="text" class="form-control form-control-sm" name="landBoundaryModels[9].NorthBoundary"></td>
+            <td><input type="text" class="form-control form-control-sm" name="landBoundaryModels[9].SouthBoundary"></td>
+            <td><input type="text" class="form-control form-control-sm" name="landBoundaryModels[9].WestBoundary"></td>
+            <td><input type="text" class="form-control form-control-sm" name="landBoundaryModels[9].EastBoundary"></td>
+
+        </tr>
+        <tr>
+            <td><input type="text" class="form-control form-control-sm" name="landBoundaryModels[10].AttributeName" value="  اقصئ بروز " readonly></td>
+            <td><input type="text" class="form-control form-control-sm" name="landBoundaryModels[10].NorthBoundary"></td>
+            <td><input type="text" class="form-control form-control-sm" name="landBoundaryModels[10].SouthBoundary"></td>
+            <td><input type="text" class="form-control form-control-sm" name="landBoundaryModels[10].WestBoundary"></td>
+            <td><input type="text" class="form-control form-control-sm" name="landBoundaryModels[10].EastBoundary"></td>
+
+        </tr>
+
+    </tbody>
+</table>
+

@@ -1,0 +1,206 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+.contracts-list {
+    max-width: 1200px;
+    margin: 40px auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    justify-content: center;
+}
+
+.contract-card {
+    width: 420px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px #0002;
+    padding: 32px 28px 24px 28px;
+    margin-bottom: 0;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.contract-header {
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 18px;
+}
+
+.contract-section {
+    margin-bottom: 14px;
+}
+
+.contract-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+    .contract-table th, .contract-table td {
+        border: 1px solid #dee2e6;
+        padding: 6px 8px;
+        text-align: right;
+        font-size: 14px;
+    }
+
+    .contract-table th {
+        background: #f1f3f4;
+    }
+
+.signatures {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 24px;
+}
+
+.signature-block {
+    text-align: center;
+    width: 40%;
+}
+
+.footer {
+    text-align: center;
+    color: #888;
+    margin-top: 18px;
+    font-size: 13px;
+}
+
+.contract-actions {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 18px;
+    flex-wrap: wrap;
+}
+
+.btn-approve, .btn-reject {
+    border: none;
+    border-radius: 6px;
+    padding: 6px 16px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-weight: 500;
+    min-width: 80px;
+    text-align: center;
+}
+
+.btn-approve {
+    background: #27ae60;
+    color: #fff;
+}
+
+    .btn-approve:hover {
+        background: #219150;
+        transform: translateY(-1px);
+        box-shadow: 0 2px 4px rgba(39, 174, 96, 0.3);
+    }
+
+.btn-reject {
+    background: #e74c3c;
+    color: #fff;
+}
+
+    .btn-reject:hover {
+        background: #c0392b;
+        transform: translateY(-1px);
+        box-shadow: 0 2px 4px rgba(231, 76, 60, 0.3);
+    }
+
+/* Inline Form Styles */
+.reject-form {
+    display: none;
+    background: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 15px;
+}
+
+    .reject-form h4 {
+        margin-top: 0;
+        color: #2c3e50;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+    .form-group label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+        color: #2c3e50;
+    }
+
+    .form-group select {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+    }
+
+    .form-group textarea {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        resize: vertical;
+        min-height: 80px;
+    }
+
+.form-buttons {
+    text-align: center;
+    margin-top: 15px;
+}
+
+    .form-buttons button {
+        margin: 0 5px;
+        padding: 8px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+.btn-cancel {
+    background: #95a5a6;
+    color: white;
+}
+
+.btn-submit {
+    background: #e74c3c;
+    color: white;
+}
+
+.btn-cancel:hover {
+    background: #7f8c8d;
+}
+
+.btn-submit:hover {
+    background: #c0392b;
+}

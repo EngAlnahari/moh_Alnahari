@@ -1,0 +1,134 @@
+﻿@model Mntry_Awqaf.Models.TransportModel
+@{
+    Layout = null;
+    ViewData["Title"] = "Create";
+}
+
+@* <div class="table-responsive">
+    <table class="table table-bordered table-hover">
+        <thead class="table-light">
+            <tr>
+                <th style="width: 40px">#</th>
+                <th>المحافظة</th>
+                <th>رسوم التنقل</th>
+                <th>أجر المبيت</th>
+                <th>أجر النثريات</th>
+                <th style="width: 50px">
+                    <button type="button" class="btn btn-sm btn-outline-primary" onclick="addTableRow()">
+                        <i class="bi bi-plus"></i>
+                    </button>
+                </th>
+            </tr>
+        </thead>
+        <tbody id="templateTableBody">
+            <tr>
+                <td>1</td>
+                <td>
+                    <select asp-for="Governorate" class="form-select form-select-sm">
+                        <option value="كل المحافضات">كل المحافظة</option>
+
+                    </select>
+                </td>
+                <td>
+                    <input asp-for="TransportationFees" type="number" class="form-control form-control-sm" placeholder="0.00">
+                </td>
+                <td>
+                    <input asp-for="OverNightFees" type="number" class="form-control form-control-sm" placeholder="0.00">
+                </td>
+                <td>
+                    <input asp-for="AllowanceFees" type="number" class="form-control form-control-sm" placeholder="0.00">
+                </td>
+                <td>
+                    <button type="button" class="btn btn-sm btn-outline-danger" onclick="removeTableRow(this)">
+                        <i class="bi bi-trash"></i>
+                    </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">إلغاء</button>
+        <button type="submit" class="btn btn-primary">حفظ القالب</button>
+    </div>
+</div>
+<br /> *@
+<hr style="border: 2px solid #000; margin: 1rem 0;">
+<br />
+
+<div class="table-responsive">
+    <table class="table table-bordered table-hover">
+        <thead class="table-light">
+            <tr>
+                <th style="width: 40px">#</th>
+                <th>المحافظة</th>
+                <th>رسوم التنقل</th>
+                <th>أجر المبيت</th>
+                <th>أجر النثريات</th>
+                <th style="width: 50px">
+                    <button type="button" class="btn btn-sm btn-outline-primary" onclick="addTableRow()">
+                        <i class="bi bi-plus"></i>
+                    </button>
+                </th>
+            </tr>
+        </thead>
+        <tbody id="templateTableBody">
+            <tr>
+                <td>1</td>
+                <td>
+                    <select asp-for="Governorate" class="form-select form-select-sm">
+                        <option value="">اختر المحافظة</option>
+                        <option value="صنعاء">صنعاء</option>
+                        <option value="تعز">تعز</option>
+                        <option value="عدن">عدن</option>
+                        <option value="عدن"> عمران</option>
+                        <option value="اب">اب </option>
+                    </select>
+                </td>
+                <td>
+                    <input asp-for="TransportationFees" type="number" class="form-control form-control-sm" placeholder="0.00">
+                </td>
+                <td>
+                    <input asp-for="OverNightFees" type="number" class="form-control form-control-sm" placeholder="0.00">
+                </td>
+                <td>
+                    <input asp-for="AllowanceFees" type="number" class="form-control form-control-sm" placeholder="0.00">
+                </td>
+                <td>
+                    <button type="button" class="btn btn-sm btn-outline-danger" onclick="removeTableRow(this)">
+                        <i class="bi bi-trash"></i>
+                    </button>
+                </td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td>
+                    <select asp-for="Governorate" class="form-select form-select-sm">
+                        <option value="كل المحافضات">بقية المحافضات </option>
+
+                    </select>
+                </td>
+                <td>
+                    <input asp-for="TransportationFees" type="number" class="form-control form-control-sm" placeholder="0.00">
+                </td>
+                <td>
+                    <input asp-for="OverNightFees" type="number" class="form-control form-control-sm" placeholder="0.00">
+                </td>
+                <td>
+                    <input asp-for="AllowanceFees" type="number" class="form-control form-control-sm" placeholder="0.00">
+                </td>
+                <td>
+                    <button type="button" class="btn btn-sm btn-outline-danger" onclick="removeTableRow(this)">
+                        <i class="bi bi-trash"></i>
+                    </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">إلغاء</button>
+        <button type="submit" class="btn btn-primary">حفظ القالب</button>
+    </div>
+</div>

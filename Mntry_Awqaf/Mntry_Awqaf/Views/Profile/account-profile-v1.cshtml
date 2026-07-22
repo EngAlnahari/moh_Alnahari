@@ -1,0 +1,1590 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!-- Mirrored from berrydashboard.io/bootstrap/default/application/account-profile-v1.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 06 Jun 2023 11:50:32 GMT -->
+<head>
+<title>Account Profile 1 | Berry Bootstrap 5 Admin Template</title>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="Berry is made using Bootstrap 5 design framework. Download the free admin template & use it for your project.">
+<meta name="keywords" content="Berry, Dashboard UI Kit, Bootstrap 5, Admin Template, Admin Dashboard, CRM, CMS, Bootstrap Admin Template">
+<meta name="author" content="CodedThemes">
+
+<link rel="icon" href="../assets/images/favicon.svg" type="image/x-icon">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap" id="main-font-link">
+
+<link rel="stylesheet" href="../assets/fonts/tabler-icons.min.css">
+
+<link rel="stylesheet" href="../assets/fonts/feather.css">
+
+<link rel="stylesheet" href="../assets/fonts/fontawesome.css">
+
+<link rel="stylesheet" href="../assets/fonts/material.css">
+
+<link rel="stylesheet" href="../assets/css/style.css" id="main-style-link">
+<link rel="stylesheet" href="../assets/css/style-preset.css" id="preset-style-link">
+</head>
+
+
+<body>
+
+<div class="loader-bg">
+<div class="loader-track">
+<div class="loader-fill"></div>
+</div>
+</div>
+
+
+<header class="pc-header">
+<div class="m-header">
+<a href="index.html" class="b-brand">
+
+<img src="../assets/images/logo-dark.svg" alt class="logo logo-lg">
+</a>
+
+<div class="pc-h-item">
+<a href="#" class="pc-head-link head-link-secondary m-0" id="sidebar-hide">
+<i class="ti ti-menu-2"></i>
+</a>
+</div>
+</div>
+<div class="header-wrapper"> 
+<div class="me-auto pc-mob-drp">
+<ul class="list-unstyled">
+<li class="pc-h-item header-mobile-collapse">
+<a href="#" class="pc-head-link head-link-secondary ms-0" id="mobile-collapse">
+<i class="ti ti-menu-2"></i>
+</a>
+</li>
+<li class="dropdown pc-h-item d-inline-flex d-md-none">
+<a class="pc-head-link head-link-secondary dropdown-toggle arrow-none m-0" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+<i class="ti ti-search"></i>
+</a>
+<div class="dropdown-menu pc-h-dropdown drp-search">
+<form class="px-3">
+<div class="form-group mb-0 d-flex align-items-center">
+<i data-feather="search"></i>
+<input type="search" class="form-control border-0 shadow-none" placeholder="Search here. . .">
+</div>
+</form>
+</div>
+</li>
+<li class="pc-h-item d-none d-md-inline-flex">
+<form class="header-search">
+<i data-feather="search" class="icon-search"></i>
+<input type="search" class="form-control" placeholder="Search here. . .">
+<button class="btn btn-light-secondary btn-search"><i class="ti ti-adjustments-horizontal"></i></button>
+</form>
+</li>
+</ul>
+</div>
+
+<div class="ms-auto">
+<ul class="list-unstyled">
+<li class="dropdown pc-h-item pc-mega-menu">
+<a class="pc-head-link head-link-secondary dropdown-toggle arrow-none me-0" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+<i class="ti ti-access-point"></i>
+</a>
+<div class="dropdown-menu pc-h-dropdown pc-mega-dmenu">
+<div class="row g-0">
+<div class="col text-center image-block">
+<img src="../assets/images/pages/img-megamenu.svg" alt="image" class="img-fluid rounded">
+</div>
+<div class="col">
+<h6 class="mega-title">UI Components</h6>
+<ul class="pc-mega-list">
+<li><a href="#!" class="dropdown-item"><i class="fas fa-circle"></i> Alerts</a></li>
+<li><a href="#!" class="dropdown-item"><i class="fas fa-circle"></i> Accordions</a></li>
+<li><a href="#!" class="dropdown-item"><i class="fas fa-circle"></i> Avatars</a></li>
+<li><a href="#!" class="dropdown-item"><i class="fas fa-circle"></i> Badges</a></li>
+<li><a href="#!" class="dropdown-item"><i class="fas fa-circle"></i> Breadcrumbs</a></li>
+</ul>
+</div>
+<div class="col">
+<h6 class="mega-title">UI Components</h6>
+<ul class="pc-mega-list">
+<li><a href="#!" class="dropdown-item"><i class="fas fa-circle"></i> Menus</a></li>
+<li><a href="#!" class="dropdown-item"><i class="fas fa-circle"></i> Modals</a></li>
+<li><a href="#!" class="dropdown-item"><i class="fas fa-circle"></i> Pagination</a></li>
+<li><a href="#!" class="dropdown-item"><i class="fas fa-circle"></i> Search Bar</a></li>
+<li><a href="#!" class="dropdown-item"><i class="fas fa-circle"></i> Tabs</a></li>
+</ul>
+</div>
+<div class="col">
+<h6 class="mega-title">Advance Components</h6>
+<ul class="pc-mega-list">
+<li><a href="#!" class="dropdown-item"><i class="fas fa-circle"></i> Advanced Stats</a></li>
+<li><a href="#!" class="dropdown-item"><i class="fas fa-circle"></i> Advanced Cards</a></li>
+<li><a href="#!" class="dropdown-item"><i class="fas fa-circle"></i> Lightbox</a></li>
+<li><a href="#!" class="dropdown-item"><i class="fas fa-circle"></i> Notification</a></li>
+</ul>
+</div>
+</div>
+</div>
+</li>
+<li class="dropdown pc-h-item">
+<a class="pc-head-link head-link-primary dropdown-toggle arrow-none me-0" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+<i class="ti ti-language"></i>
+</a>
+<div class="dropdown-menu dropdown-menu-end pc-h-dropdown">
+<a href="#!" class="dropdown-item">
+<span>English <small>(UK)</small></span>
+</a>
+<a href="#!" class="dropdown-item">
+<span>français <small>(French)</small></span>
+</a>
+<a href="#!" class="dropdown-item">
+<span>Română <small>(Romanian)</small></span>
+</a>
+<a href="#!" class="dropdown-item">
+<span>中国人 <small>(Chinese)</small></span>
+</a>
+</div>
+</li>
+<li class="dropdown pc-h-item">
+<a class="pc-head-link head-link-secondary dropdown-toggle arrow-none me-0" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+<i class="ti ti-bell"></i>
+</a>
+<div class="dropdown-menu dropdown-notification dropdown-menu-end pc-h-dropdown">
+<div class="dropdown-header">
+<a href="#!" class="link-primary float-end text-decoration-underline">Mark as all read</a>
+<h5>All Notification <span class="badge bg-warning rounded-pill ms-1">01</span></h5>
+</div>
+<div class="dropdown-header px-0 text-wrap header-notification-scroll position-relative" style="max-height: calc(100vh - 215px)">
+<div class="list-group list-group-flush w-100">
+<div class="list-group-item">
+<select class="form-select">
+<option value="all">All Notification</option>
+<option value="new">New</option>
+<option value="unread">Unread</option>
+<option value="other">Other</option>
+</select>
+</div>
+<div class="list-group-item list-group-item-action">
+<div class="d-flex">
+<div class="flex-shrink-0">
+<img src="../assets/images/user/avatar-2.jpg" alt="user-image" class="user-avtar">
+</div>
+<div class="flex-grow-1 ms-1">
+<span class="float-end text-muted">2 min ago</span>
+<h5>John Doe</h5>
+<p class="text-body fs-6">It is a long established fact that a reader will be distracted </p>
+<div class="badge rounded-pill bg-light-danger">Unread</div>
+<div class="badge rounded-pill bg-light-warning">New</div>
+</div>
+</div>
+</div>
+<div class="list-group-item list-group-item-action">
+<div class="d-flex">
+<div class="flex-shrink-0">
+<div class="user-avtar bg-light-success"><i class="ti ti-building-store"></i></div>
+</div>
+<div class="flex-grow-1 ms-1">
+<span class="float-end text-muted">3 min ago</span>
+<h5>Store Verification Done</h5>
+<p class="text-body fs-6">We have successfully received your request.</p>
+<div class="badge rounded-pill bg-light-danger">Unread</div>
+</div>
+</div>
+</div>
+<div class="list-group-item list-group-item-action">
+<div class="d-flex">
+<div class="flex-shrink-0">
+<div class="user-avtar bg-light-primary"><i class="ti ti-mailbox"></i></div>
+</div>
+<div class="flex-grow-1 ms-1">
+<span class="float-end text-muted">5 min ago</span>
+<h5>Check Your Mail.</h5>
+<p class="text-body fs-6">All done! Now check your inbox as you're in for a sweet treat! </p>
+<button class="btn btn-sm btn-primary">Mail <i class="ti ti-brand-telegram"></i></button>
+</div>
+</div>
+</div>
+<div class="list-group-item list-group-item-action">
+<div class="d-flex">
+<div class="flex-shrink-0">
+<img src="../assets/images/user/avatar-1.jpg" alt="user-image" class="user-avtar">
+</div>
+<div class="flex-grow-1 ms-1">
+<span class="float-end text-muted">8 min ago</span>
+<h5>John Doe</h5>
+<p class="text-body fs-6">Uploaded two file on &nbsp;<strong>21 Jan 2020</strong></p>
+<div class="notification-file d-flex p-3 bg-light-secondary rounded">
+<i class="ti ti-arrow-bar-to-down"></i>
+<h5 class="m-0">demo.jpg</h5>
+</div>
+</div>
+</div>
+</div>
+<div class="list-group-item list-group-item-action">
+<div class="d-flex">
+<div class="flex-shrink-0">
+<img src="../assets/images/user/avatar-3.jpg" alt="user-image" class="user-avtar">
+</div>
+<div class="flex-grow-1 ms-1">
+<span class="float-end text-muted">10 min ago</span>
+<h5>Joseph William</h5>
+<p class="text-body fs-6">It is a long established fact that a reader will be distracted </p>
+<div class="badge rounded-pill bg-light-success">Confirmation of Account</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="dropdown-divider"></div>
+<div class="text-center py-2">
+<a href="#!" class="link-primary">Mark as all read</a>
+</div>
+</div>
+</li>
+<li class="dropdown pc-h-item header-user-profile">
+<a class="pc-head-link head-link-primary dropdown-toggle arrow-none me-0" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+<img src="../assets/images/user/avatar-2.jpg" alt="user-image" class="user-avtar">
+<span>
+<i class="ti ti-settings"></i>
+</span>
+</a>
+<div class="dropdown-menu dropdown-user-profile dropdown-menu-end pc-h-dropdown">
+<div class="dropdown-header">
+<h4>Good Morning, <span class="small text-muted"> John Doe</span></h4>
+<p class="text-muted">Project Admin</p>
+<form class="header-search">
+<i data-feather="search" class="icon-search"></i>
+<input type="search" class="form-control" placeholder="Search profile options">
+</form>
+<hr>
+<div class="profile-notification-scroll position-relative" style="max-height: calc(100vh - 280px)">
+<div class="upgradeplan-block bg-light-warning rounded">
+<h4>Explore full code</h4>
+<p class="text-muted">Buy now to get full access of code files</p>
+<a href="https://codedthemes.com/item/berry-bootstrap-5-admin-template/" target="_blank" class="btn btn-warning">Buy Now</a>
+</div>
+<hr>
+<div class="settings-block bg-light-primary rounded">
+<div class="form-check form-switch">
+<input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+<label class="form-check-label" for="flexSwitchCheckDefault">Start DND Mode</label>
+</div>
+<div class="form-check form-switch">
+<input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+<label class="form-check-label" for="flexSwitchCheckChecked">Allow Notifications</label>
+</div>
+</div>
+<hr>
+<a href="account-profile-v1.html" class="dropdown-item">
+<i class="ti ti-settings"></i>
+<span>Account Settings</span>
+</a>
+<a href="social-profile.html" class="dropdown-item">
+<i class="ti ti-user"></i>
+<span>Social Profile</span>
+</a>
+<a href="../pages/login-v1.html" class="dropdown-item">
+<i class="ti ti-logout"></i>
+<span>Logout</span>
+</a>
+</div>
+</div>
+</div>
+</li>
+</ul>
+</div> </div>
+</header>
+
+
+<nav class="pc-sidebar">
+<div class="navbar-wrapper">
+<div class="m-header">
+<a href="index.html" class="b-brand">
+
+<img src="../assets/images/logo-dark.svg" alt class="logo logo-lg">
+</a>
+</div>
+<div class="navbar-content">
+<ul class="pc-navbar">
+<li class="pc-item pc-caption">
+<label>Dashboard</label>
+<i class="ti ti-dashboard"></i>
+</li>
+<li class="pc-item">
+<a href="../dashboard/index.html" class="pc-link"><span class="pc-micon"><i class="ti ti-dashboard"></i></span><span class="pc-mtext">Default</span></a>
+</li>
+<li class="pc-item">
+<a href="../dashboard/analytics.html" class="pc-link"><span class="pc-micon"><i class="ti ti-device-analytics"></i></span><span class="pc-mtext">Analytics</span></a>
+</li>
+<li class="pc-item pc-caption">
+<label>Widget</label>
+<i class="ti ti-chart-arcs"></i>
+</li>
+<li class="pc-item">
+<a href="../widget/w_statistics.html" class="pc-link"><span class="pc-micon"><i class="ti ti-chart-arcs"></i></span><span class="pc-mtext">Statistics</span></a>
+</li>
+<li class="pc-item">
+<a href="../widget/w_data.html" class="pc-link"><span class="pc-micon"><i class="ti ti-clipboard-list"></i></span><span class="pc-mtext">Data</span></a>
+</li>
+<li class="pc-item">
+<a href="../widget/w_chart.html" class="pc-link"><span class="pc-micon"><i class="ti ti-chart-infographic"></i></span><span class="pc-mtext">Chart</span></a>
+</li>
+<li class="pc-item pc-caption">
+<label>Layout Demo</label>
+<i class="ti ti-layout"></i>
+</li>
+<li class="pc-item">
+<a href="../demo/layout-vertical.html" class="pc-link"><span class="pc-micon"><i class="ti ti-layout-sidebar"></i></span><span class="pc-mtext">Vertical</span></a>
+</li>
+<li class="pc-item">
+<a href="../demo/layout-horizontal.html" class="pc-link"><span class="pc-micon"><i class="ti ti-layout-navbar"></i></span><span class="pc-mtext">Horizontal</span></a>
+</li>
+<li class="pc-item">
+<a href="../demo/layout-compact.html" class="pc-link"><span class="pc-micon"><i class="ti ti-layout"></i></span><span class="pc-mtext">Compact</span></a>
+</li>
+<li class="pc-item pc-caption">
+<label>Application</label>
+<i class="ti ti-layout-kanban"></i>
+</li>
+<li class="pc-item pc-hasmenu">
+<a href="#!" class="pc-link"><span class="pc-micon"><i class="ti ti-user-check"></i></span><span class="pc-mtext">Users</span><span class="pc-arrow"><i data-feather="chevron-right"></i></span></a>
+<ul class="pc-submenu">
+<li class="pc-item"><a class="pc-link" href="social-profile.html">Social Profile</a></li>
+<li class="pc-item pc-hasmenu">
+<a href="#!" class="pc-link">Account Profile<span class="pc-arrow"><i data-feather="chevron-right"></i></span></a>
+<ul class="pc-submenu">
+<li class="pc-item"><a class="pc-link" href="account-profile-v1.html">Profile 01</a></li>
+<li class="pc-item"><a class="pc-link" href="account-profile-v2.html">Profile 02</a></li>
+<li class="pc-item"><a class="pc-link" href="account-profile-v3.html">Profile 03</a></li>
+</ul>
+</li>
+<li class="pc-item pc-hasmenu">
+<a href="#!" class="pc-link">Cards<span class="pc-arrow"><i data-feather="chevron-right"></i></span></a>
+<ul class="pc-submenu">
+<li class="pc-item"><a class="pc-link" href="user-card-v1.html">Style 01</a></li>
+<li class="pc-item"><a class="pc-link" href="user-card-v2.html">Style 02</a></li>
+<li class="pc-item"><a class="pc-link" href="user-card-v3.html">Style 03</a></li>
+</ul>
+</li>
+<li class="pc-item pc-hasmenu">
+<a href="#!" class="pc-link">List<span class="pc-arrow"><i data-feather="chevron-right"></i></span></a>
+<ul class="pc-submenu">
+<li class="pc-item"><a class="pc-link" href="user-list-v1.html">Style 01</a></li>
+<li class="pc-item"><a class="pc-link" href="user-list-v2.html">Style 02</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="pc-item pc-hasmenu">
+<a href="#!" class="pc-link"><span class="pc-micon"><i class="ti ti-basket"></i></span><span class="pc-mtext">Customer</span><span class="pc-arrow"><i data-feather="chevron-right"></i></span></a>
+<ul class="pc-submenu">
+<li class="pc-item"><a class="pc-link" href="cust_customer_list.html">Customer List</a></li>
+<li class="pc-item"><a class="pc-link" href="cust_order_list.html">Order List</a></li>
+<li class="pc-item"><a class="pc-link" href="cust_create_invoice.html">Create Invoice</a></li>
+<li class="pc-item"><a class="pc-link" href="cust_order_details.html">Order Details</a></li>
+<li class="pc-item"><a class="pc-link" href="cust_product_list.html">Product</a></li>
+<li class="pc-item"><a class="pc-link" href="cust_product_review.html">Product Review</a></li>
+</ul>
+</li>
+<li class="pc-item">
+<a href="chat.html" class="pc-link"><span class="pc-micon"><i class="ti ti-messages"></i></span><span class="pc-mtext">Chat</span></a>
+</li>
+<li class="pc-item">
+<a href="kanban.html" class="pc-link"><span class="pc-micon"><i class="ti ti-layout-kanban"></i></span><span class="pc-mtext">Kanban</span></a>
+</li>
+<li class="pc-item">
+<a href="mail.html" class="pc-link"><span class="pc-micon"><i class="ti ti-mail"></i></span><span class="pc-mtext">Mail</span></a>
+</li>
+<li class="pc-item">
+<a href="calendar.html" class="pc-link"><span class="pc-micon"><i class="ti ti-calendar"></i></span><span class="pc-mtext">Calendar</span></a>
+</li>
+<li class="pc-item pc-hasmenu">
+<a href="#!" class="pc-link"><span class="pc-micon"><i class="ti ti-nfc"></i></span><span class="pc-mtext">Contact</span><span class="pc-arrow"><i data-feather="chevron-right"></i></span></a>
+<ul class="pc-submenu">
+<li class="pc-item"><a class="pc-link" href="contact_cards.html">Cards</a></li>
+<li class="pc-item"><a class="pc-link" href="contact_list.html">List</a></li>
+</ul>
+</li>
+<li class="pc-item pc-hasmenu">
+<a href="#!" class="pc-link"><span class="pc-micon"><i class="ti ti-basket"></i></span><span class="pc-mtext">E-commerce</span><span class="pc-arrow"><i data-feather="chevron-right"></i></span></a>
+<ul class="pc-submenu">
+<li class="pc-item"><a class="pc-link" href="ecom_product.html">Product</a></li>
+<li class="pc-item"><a class="pc-link" href="ecom_product-details.html">Product details</a></li>
+<li class="pc-item"><a class="pc-link" href="ecom_product-list.html">Product List</a></li>
+<li class="pc-item"><a class="pc-link" href="ecom_checkout.html">Checkout</a></li>
+</ul>
+</li>
+<li class="pc-item pc-caption">
+<label>Elements</label>
+<i class="ti ti-apps"></i>
+</li>
+<li class="pc-item">
+<a href="../elements/bc_typography.html" class="pc-link"><span class="pc-micon"><i class="ti ti-typography"></i></span><span class="pc-mtext">Typography</span></a>
+</li>
+<li class="pc-item pc-hasmenu">
+<a href="#!" class="pc-link"><span class="pc-micon"><i class="ti ti-apps"></i></span><span class="pc-mtext">Basic</span><span class="pc-arrow"><i data-feather="chevron-right"></i></span></a>
+<ul class="pc-submenu">
+<li class="pc-item"><a class="pc-link" href="../elements/bc_alert.html">Alert</a></li>
+<li class="pc-item"><a class="pc-link" href="../elements/bc_button.html">Button</a></li>
+<li class="pc-item"><a class="pc-link" href="../elements/bc_badges.html">Badges</a></li>
+<li class="pc-item"><a class="pc-link" href="../elements/bc_breadcrumb-pagination.html">Breadcrumb</a></li>
+<li class="pc-item"><a class="pc-link" href="../elements/bc_card.html">Cards</a></li>
+<li class="pc-item"><a class="pc-link" href="../elements/bc_color.html">Color</a></li>
+<li class="pc-item"><a class="pc-link" href="../elements/bc_collapse.html">Collapse</a></li>
+<li class="pc-item"><a class="pc-link" href="../elements/bc_carousel.html">Carousel</a></li>
+<li class="pc-item"><a class="pc-link" href="../elements/bc_dropdowns.html">Dropdowns</a></li>
+<li class="pc-item"><a class="pc-link" href="../elements/bc_grid.html">Grid system</a></li>
+<li class="pc-item"><a class="pc-link" href="../elements/bc_offcanvas.html">Offcanvas</a></li>
+<li class="pc-item"><a class="pc-link" href="../elements/bc_progress.html">Progress</a></li>
+<li class="pc-item"><a class="pc-link" href="../elements/bc_list-group.html">List group</a></li>
+<li class="pc-item"><a class="pc-link" href="../elements/bc_modal.html">Modal</a></li>
+<li class="pc-item"><a class="pc-link" href="../elements/bc_spinner.html">Spinner</a></li>
+<li class="pc-item"><a class="pc-link" href="../elements/bc_tabs.html">Tabs & pills</a></li>
+<li class="pc-item"><a class="pc-link" href="../elements/bc_tooltip-popover.html">Tooltip</a></li>
+<li class="pc-item"><a class="pc-link" href="../elements/bc_toasts.html">Toasts</a></li>
+<li class="pc-item"><a class="pc-link" href="../elements/bc_extra.html">Other</a></li>
+</ul>
+</li>
+<li class="pc-item pc-hasmenu">
+<a href="#!" class="pc-link"><span class="pc-micon"><i class="ti ti-briefcase"></i></span><span class="pc-mtext">Advance</span><span class="pc-arrow"><i data-feather="chevron-right"></i></span></a>
+<ul class="pc-submenu">
+<li class="pc-item"><a class="pc-link" href="../elements/ac_alert.html">Sweet alert</a></li>
+<li class="pc-item"><a class="pc-link" href="../elements/ac_datepicker-componant.html">Datepicker</a></li>
+<li class="pc-item"><a class="pc-link" href="../elements/ac_lightbox.html">Lightbox</a></li>
+<li class="pc-item"><a class="pc-link" href="../elements/ac_modal.html">Model</a></li>
+<li class="pc-item"><a class="pc-link" href="../elements/ac_notification.html">Notification</a></li>
+<li class="pc-item"><a class="pc-link" href="../elements/ac_rangeslider.html">Range slider</a></li>
+<li class="pc-item"><a class="pc-link" href="../elements/ac_slider.html">Slider</a></li>
+<li class="pc-item"><a class="pc-link" href="../elements/ac_syntax_highlighter.html">Syntax Highlighter</a></li>
+<li class="pc-item"><a class="pc-link" href="../elements/ac_tour.html">Tour</a></li>
+<li class="pc-item"><a class="pc-link" href="../elements/ac_treeview.html">Tree view</a></li>
+</ul>
+</li>
+<li class="pc-item pc-hasmenu">
+<a href="#!" class="pc-link"><span class="pc-micon"><i class="ti ti-plant-2"></i></span><span class="pc-mtext">Icons</span><span class="pc-arrow"><i data-feather="chevron-right"></i></span></a>
+<ul class="pc-submenu">
+<li class="pc-item"><a class="pc-link" href="../elements/icon-feather.html">Feather</a></li>
+<li class="pc-item"><a class="pc-link" href="../elements/icon-fontawesome.html">Font Awesome 5</a></li>
+<li class="pc-item"><a class="pc-link" href="../elements/icon-material.html">Material</a></li>
+<li class="pc-item"><a class="pc-link" href="../elements/icon-tabler.html">Tabler</a></li>
+</ul>
+</li>
+<li class="pc-item pc-caption">
+<label>Forms</label>
+<i class="ti ti-forms"></i>
+</li>
+<li class="pc-item pc-hasmenu">
+<a href="#!" class="pc-link"><span class="pc-micon"><i class="ti ti-forms"></i></span><span class="pc-mtext">Forms
+Elements</span><span class="pc-arrow"><i data-feather="chevron-right"></i></span></a>
+<ul class="pc-submenu">
+<li class="pc-item"><a class="pc-link" href="../forms/form_elements.html">Form Basic</a></li>
+<li class="pc-item"><a class="pc-link" href="../forms/form_floating.html">Form Floating</a></li>
+<li class="pc-item"><a class="pc-link" href="../forms/form2_basic.html">Form Options</a></li>
+<li class="pc-item"><a class="pc-link" href="../forms/form2_input_group.html">Input Groups</a></li>
+<li class="pc-item"><a class="pc-link" href="../forms/form2_checkbox.html">Checkbox</a></li>
+<li class="pc-item"><a class="pc-link" href="../forms/form2_radio.html">Radio</a></li>
+<li class="pc-item"><a class="pc-link" href="../forms/form2_switch.html">Switch</a></li>
+<li class="pc-item"><a class="pc-link" href="../forms/form2_megaoption.html">Mega option</a></li>
+</ul>
+</li>
+<li class="pc-item pc-hasmenu">
+<a href="#!" class="pc-link"><span class="pc-micon"><i class="ti ti-plug"></i></span><span class="pc-mtext">Forms
+Plugins</span><span class="pc-arrow"><i data-feather="chevron-right"></i></span></a>
+<ul class="pc-submenu">
+<li class="pc-item pc-hasmenu">
+<a class="pc-link" href="#">Date<span class="pc-arrow"><i data-feather="chevron-right"></i></span></a>
+<ul class="pc-submenu">
+<li class="pc-item"><a class="pc-link" href="../forms/form2_datepicker.html">Datepicker</a></li>
+<li class="pc-item"><a class="pc-link" href="../forms/form2_daterangepicker.html">Date Range Picker</a> </li>
+<li class="pc-item"><a class="pc-link" href="../forms/form2_timepicker.html">Timepicker</a></li>
+</ul>
+</li>
+<li class="pc-item pc-hasmenu">
+<a class="pc-link" href="#">Select<span class="pc-arrow"><i data-feather="chevron-right"></i></span></a>
+<ul class="pc-submenu">
+<li class="pc-item"><a class="pc-link" href="../forms/form2_choices.html">Choices js</a></li>
+</ul>
+</li>
+<li class="pc-item"><a class="pc-link" href="../forms/form2_recaptcha.html">Google reCaptcha</a></li>
+<li class="pc-item"><a class="pc-link" href="../forms/form2_inputmask.html">Input Masks</a></li>
+<li class="pc-item"><a class="pc-link" href="../forms/form2_clipboard.html">Clipboard</a></li>
+<li class="pc-item"><a class="pc-link" href="../forms/form2_nouislider.html">Nouislider</a></li>
+<li class="pc-item"><a class="pc-link" href="../forms/form2_switchjs.html">Bootstrap Switch</a></li>
+<li class="pc-item"><a class="pc-link" href="../forms/form2_typeahead.html">Typeahead</a></li>
+</ul>
+</li>
+<li class="pc-item pc-hasmenu">
+<a href="#!" class="pc-link"><span class="pc-micon"> <i class="ti ti-pencil"></i></span><span class="pc-mtext">Text
+Editors</span><span class="pc-arrow"><i data-feather="chevron-right"></i></span></a>
+<ul class="pc-submenu">
+<li class="pc-item"><a class="pc-link" href="../forms/form2_tinymce.html">Tinymce</a></li>
+<li class="pc-item"><a class="pc-link" href="../forms/form2_quill.html">Quill</a></li>
+<li class="pc-item pc-hasmenu">
+<a class="pc-link" href="#">CK editor<span class="pc-arrow"><i data-feather="chevron-right"></i></span></a>
+<ul class="pc-submenu">
+<li class="pc-item"><a class="pc-link" href="../forms/editor-classic.html">classic</a></li>
+<li class="pc-item"><a class="pc-link" href="../forms/editor-document.html">Document</a></li>
+<li class="pc-item"><a class="pc-link" href="../forms/editor-inline.html">Inline</a></li>
+<li class="pc-item"><a class="pc-link" href="../forms/editor-balloon.html">Balloon</a></li>
+</ul>
+</li>
+<li class="pc-item"><a class="pc-link" href="../forms/form2_markdown.html">Markdown</a></li>
+</ul>
+</li>
+<li class="pc-item pc-hasmenu">
+<a href="#!" class="pc-link"><span class="pc-micon"><i class="ti ti-layout"></i></span><span class="pc-mtext">Form
+Layouts</span><span class="pc-arrow"><i data-feather="chevron-right"></i></span></a>
+<ul class="pc-submenu">
+<li class="pc-item"><a class="pc-link" href="../forms/form2_lay-default.html">Layouts</a></li>
+<li class="pc-item"><a class="pc-link" href="../forms/form2_lay-multicolumn.html">Multicolumn</a></li>
+<li class="pc-item"><a class="pc-link" href="../forms/form2_lay-actionbars.html">Actionbars</a></li>
+<li class="pc-item"><a class="pc-link" href="../forms/form2_lay-stickyactionbars.html">Sticky Action bars</a> </li>
+</ul>
+</li>
+<li class="pc-item pc-hasmenu">
+<a href="#!" class="pc-link"><span class="pc-micon"><i class="ti ti-cloud-upload"></i></span><span class="pc-mtext">File upload</span><span class="pc-arrow"><i data-feather="chevron-right"></i></span></a>
+<ul class="pc-submenu">
+<li class="pc-item"><a class="pc-link" href="../forms/file-upload.html">Dropzone</a></li>
+<li class="pc-item"><a class="pc-link" href="../forms/form2_flu-uppy.html">Uppy</a></li>
+</ul>
+</li>
+<li class="pc-item">
+<a href="../forms/form-validation.html" class="pc-link"><span class="pc-micon"><i class="ti ti-clipboard-check"></i></span><span class="pc-mtext">Form Validation</span></a>
+</li>
+<li class="pc-item"><a href="../forms/image_crop.html" class="pc-link"><span class="pc-micon"><i class="ti ti-crop"></i></span><span class="pc-mtext">Image cropper</span></a></li>
+<li class="pc-item pc-caption">
+<label>table</label>
+<i class="ti ti-table-export"></i>
+</li>
+<li class="pc-item pc-hasmenu">
+<a href="#!" class="pc-link"><span class="pc-micon"><i class="ti ti-table"></i></span><span class="pc-mtext">Bootstrap
+table</span><span class="pc-arrow"><i data-feather="chevron-right"></i></span></a>
+<ul class="pc-submenu">
+<li class="pc-item"><a class="pc-link" href="../table/tbl_bootstrap.html">Basic table</a></li>
+<li class="pc-item"><a class="pc-link" href="../table/tbl_sizing.html">Sizing table</a></li>
+<li class="pc-item"><a class="pc-link" href="../table/tbl_border.html">Border table</a></li>
+<li class="pc-item"><a class="pc-link" href="../table/tbl_styling.html">Styling table</a></li>
+</ul>
+</li>
+<li class="pc-item pc-hasmenu">
+<a href="#!" class="pc-link"><span class="pc-micon"><i class="ti ti-table-export"></i></span><span class="pc-mtext">Vanilla table</span><span class="pc-arrow"><i data-feather="chevron-right"></i></span></a>
+<ul class="pc-submenu">
+<li class="pc-item"><a class="pc-link" href="../table/tbl_dt-simple.html">Basic initialization</a></li>
+<li class="pc-item"><a class="pc-link" href="../table/tbl_dt-dynamic-import.html">Dynamic Import</a></li>
+<li class="pc-item"><a class="pc-link" href="../table/tbl_dt-render-column-cells.html">Render Column Cells</a></li>
+<li class="pc-item"><a class="pc-link" href="../table/tbl_dt-column-manipulation.html">Column Manipulation</a></li>
+<li class="pc-item"><a class="pc-link" href="../table/tbl_dt-datetime-sorting.html">Datetime Sorting</a></li>
+<li class="pc-item"><a class="pc-link" href="../table/tbl_dt-methods.html">Methods</a></li>
+<li class="pc-item"><a class="pc-link" href="../table/tbl_dt-add-rows.html">Add Rows</a></li>
+<li class="pc-item"><a class="pc-link" href="../table/tbl_dt-fetch-api.html">Fetch API</a></li>
+<li class="pc-item"><a class="pc-link" href="../table/tbl_dt-filters.html">Filters</a></li>
+<li class="pc-item"><a class="pc-link" href="../table/tbl_dt-export.html">Export</a></li>
+</ul>
+</li>
+<li class="pc-item pc-hasmenu">
+<a href="#!" class="pc-link"><span class="pc-micon"><i class="ti ti-table"></i></span><span class="pc-mtext">Data
+table</span><span class="pc-arrow"><i data-feather="chevron-right"></i></span></a>
+<ul class="pc-submenu">
+<li class="pc-item"><a class="pc-link" href="../table/dt_advance.html">Advance initialization</a></li>
+<li class="pc-item"><a class="pc-link" href="../table/dt_styling.html">Styling</a></li>
+<li class="pc-item"><a class="pc-link" href="../table/dt_api.html">API</a></li>
+<li class="pc-item"><a class="pc-link" href="../table/dt_plugin.html">Plug-in</a></li>
+<li class="pc-item"><a class="pc-link" href="../table/dt_sources.html">Data sources</a></li>
+</ul>
+</li>
+<li class="pc-item pc-hasmenu">
+<a href="#!" class="pc-link"><span class="pc-micon"><i class="ti ti-table"></i></span><span class="pc-mtext">DT
+extensions</span><span class="pc-arrow"><i data-feather="chevron-right"></i></span></a>
+<ul class="pc-submenu">
+<li class="pc-item"><a class="pc-link" href="../table/dt_ext_autofill.html">Autofill</a></li>
+<li class="pc-item pc-hasmenu">
+<a href="#!" class="pc-link">Button<span class="pc-arrow"><i data-feather="chevron-right"></i></span></a>
+<ul class="pc-submenu">
+<li class="pc-item"><a class="pc-link" href="../table/dt_ext_basic_buttons.html">Basic button</a></li>
+<li class="pc-item"><a class="pc-link" href="../table/dt_ext_export_buttons.html">Data export</a></li>
+</ul>
+</li>
+<li class="pc-item"><a class="pc-link" href="../table/dt_ext_col_reorder.html">Col reorder</a></li>
+<li class="pc-item"><a class="pc-link" href="../table/dt_ext_fixed_columns.html">Fixed columns</a></li>
+<li class="pc-item"><a class="pc-link" href="../table/dt_ext_fixed_header.html">Fixed header</a></li>
+<li class="pc-item"><a class="pc-link" href="../table/dt_ext_key_table.html">Key table</a></li>
+<li class="pc-item"><a class="pc-link" href="../table/dt_ext_responsive.html">Responsive</a></li>
+<li class="pc-item"><a class="pc-link" href="../table/dt_ext_row_reorder.html">Row reorder</a></li>
+<li class="pc-item"><a class="pc-link" href="../table/dt_ext_scroller.html">Scroller</a></li>
+<li class="pc-item"><a class="pc-link" href="../table/dt_ext_select.html">Select table</a></li>
+</ul>
+</li>
+<li class="pc-item pc-caption">
+<label>Pages</label>
+<i class="ti ti-news"></i>
+</li>
+<li class="pc-item pc-hasmenu">
+<a href="#!" class="pc-link"><span class="pc-micon"><i class="ti ti-key"></i></span><span class="pc-mtext">Authentication</span><span class="pc-arrow"><i data-feather="chevron-right"></i></span></a>
+<ul class="pc-submenu">
+<li class="pc-item pc-hasmenu">
+<a href="#!" class="pc-link">Authentication 1<span class="pc-arrow"><i data-feather="chevron-right"></i></span></a>
+<ul class="pc-submenu">
+<li class="pc-item"><a class="pc-link" target="_blank" href="../pages/login-v1.html">Login</a></li>
+<li class="pc-item"><a class="pc-link" target="_blank" href="../pages/register-v1.html">Register</a></li>
+<li class="pc-item"><a class="pc-link" target="_blank" href="../pages/forgot-password-v1.html">Forgot
+Password</a></li>
+<li class="pc-item"><a class="pc-link" target="_blank" href="../pages/check-mail-v1.html">check mail</a></li>
+<li class="pc-item"><a class="pc-link" target="_blank" href="../pages/reset-password-v1.html">reset password</a>
+</li>
+<li class="pc-item"><a class="pc-link" target="_blank" href="../pages/code-verification-v1.html">code
+verification</a></li>
+</ul>
+</li>
+<li class="pc-item pc-hasmenu">
+<a href="#!" class="pc-link">Authentication 2<span class="pc-arrow"><i data-feather="chevron-right"></i></span></a>
+<ul class="pc-submenu">
+<li class="pc-item"><a class="pc-link" target="_blank" href="../pages/login-v2.html">Login</a></li>
+<li class="pc-item"><a class="pc-link" target="_blank" href="../pages/register-v2.html">Register</a></li>
+<li class="pc-item"><a class="pc-link" target="_blank" href="../pages/forgot-password-v2.html">Forgot
+password</a>
+</li>
+<li class="pc-item"><a class="pc-link" target="_blank" href="../pages/check-mail-v2.html">check mail</a></li>
+<li class="pc-item"><a class="pc-link" target="_blank" href="../pages/reset-password-v2.html">reset password</a>
+</li>
+<li class="pc-item"><a class="pc-link" target="_blank" href="../pages/code-verification-v2.html">code
+verification</a></li>
+</ul>
+</li>
+<li class="pc-item pc-hasmenu">
+<a href="#!" class="pc-link">Authentication 3<span class="pc-arrow"><i data-feather="chevron-right"></i></span></a>
+<ul class="pc-submenu">
+<li class="pc-item"><a class="pc-link" target="_blank" href="../pages/login-v3.html">Login</a></li>
+<li class="pc-item"><a class="pc-link" target="_blank" href="../pages/register-v3.html">register</a></li>
+<li class="pc-item"><a class="pc-link" target="_blank" href="../pages/forgot-password-v3.html">forgot
+password</a>
+</li>
+<li class="pc-item"><a class="pc-link" target="_blank" href="../pages/check-mail-v3.html">check mail</a></li>
+<li class="pc-item"><a class="pc-link" target="_blank" href="../pages/reset-password-v3.html">reset password</a>
+</li>
+<li class="pc-item"><a class="pc-link" target="_blank" href="../pages/code-verification-v3.html">code
+verification</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="pc-item pc-hasmenu">
+<a href="#!" class="pc-link"><span class="pc-micon"><i class="ti ti-receipt-2"></i></span><span class="pc-mtext">Price</span><span class="pc-arrow"><i data-feather="chevron-right"></i></span></a>
+<ul class="pc-submenu">
+<li class="pc-item"><a class="pc-link" href="../pages/price-v1.html">Price 1</a></li>
+<li class="pc-item"><a class="pc-link" href="../pages/price-v2.html">Price 2</a></li>
+</ul>
+</li>
+<li class="pc-item pc-hasmenu">
+<a href="#!" class="pc-link"><span class="pc-micon"><i class="ti ti-bug"></i></span><span class="pc-mtext">Maintenance</span><span class="pc-arrow"><i data-feather="chevron-right"></i></span></a>
+<ul class="pc-submenu">
+<li class="pc-item"><a class="pc-link" target="_blank" href="../pages/error-404.html">Error 404</a></li>
+<li class="pc-item pc-hasmenu">
+<a href="#!" class="pc-link">Coming soon<span class="pc-arrow"><i data-feather="chevron-right"></i></span></a>
+<ul class="pc-submenu">
+<li class="pc-item"><a class="pc-link" target="_blank" href="../pages/coming-soon-v1.html">Coming soon 1</a>
+</li>
+<li class="pc-item"><a class="pc-link" target="_blank" href="../pages/coming-soon-v2.html">Coming soon 2</a>
+</li>
+</ul>
+</li>
+<li class="pc-item"><a class="pc-link" target="_blank" href="../pages/under-construction.html">Under
+construction</a></li>
+</ul>
+</li>
+<li class="pc-item"><a href="../pages/contact-us.html" class="pc-link" target="_blank"><span class="pc-micon"><i class="ti ti-phone-call"></i></span><span class="pc-mtext">Contact us</span></a></li>
+<li class="pc-item"><a href="../pages/faq.html" class="pc-link" target="_blank"><span class="pc-micon"><i class="ti ti-question-mark"></i></span><span class="pc-mtext">FAQ</span></a></li>
+<li class="pc-item"><a href="../pages/privacy-policy.html" class="pc-link" target="_blank"><span class="pc-micon"><i class="ti ti-shield-lock"></i></span><span class="pc-mtext">Privacy policy</span></a></li>
+<li class="pc-item"><a href="../pages/landing.html" class="pc-link" target="_blank"><span class="pc-micon"><i class="ti ti-rocket"></i></span><span class="pc-mtext">Landing</span></a></li>
+<li class="pc-item pc-caption">
+<label>Other</label>
+<i class="ti ti-brand-chrome"></i>
+</li>
+<li class="pc-item pc-hasmenu">
+<a href="#!" class="pc-link"><span class="pc-micon"><i class="ti ti-menu"></i></span><span class="pc-mtext">Menu
+levels</span><span class="pc-arrow"><i data-feather="chevron-right"></i></span></a>
+<ul class="pc-submenu">
+<li class="pc-item"><a class="pc-link" href="#!">Level 2.1</a></li>
+<li class="pc-item pc-hasmenu">
+<a href="#!" class="pc-link">Level 2.2<span class="pc-arrow"><i data-feather="chevron-right"></i></span></a>
+<ul class="pc-submenu">
+<li class="pc-item"><a class="pc-link" href="#!">Level 3.1</a></li>
+<li class="pc-item"><a class="pc-link" href="#!">Level 3.2</a></li>
+<li class="pc-item pc-hasmenu">
+<a href="#!" class="pc-link">Level 3.3<span class="pc-arrow"><i data-feather="chevron-right"></i></span></a>
+<ul class="pc-submenu">
+<li class="pc-item"><a class="pc-link" href="#!">Level 4.1</a></li>
+<li class="pc-item"><a class="pc-link" href="#!">Level 4.2</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="pc-item pc-hasmenu">
+<a href="#!" class="pc-link">Level 2.3<span class="pc-arrow"><i data-feather="chevron-right"></i></span></a>
+<ul class="pc-submenu">
+<li class="pc-item"><a class="pc-link" href="#!">Level 3.1</a></li>
+<li class="pc-item"><a class="pc-link" href="#!">Level 3.2</a></li>
+<li class="pc-item pc-hasmenu">
+<a href="#!" class="pc-link">Level 3.3<span class="pc-arrow"><i data-feather="chevron-right"></i></span></a>
+<ul class="pc-submenu">
+<li class="pc-item"><a class="pc-link" href="#!">Level 4.1</a></li>
+<li class="pc-item"><a class="pc-link" href="#!">Level 4.2</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="pc-item"><a href="../other/sample-page.html" class="pc-link"><span class="pc-micon"><i class="ti ti-brand-chrome"></i></span><span class="pc-mtext">Sample page</span></a></li>
+<li class="pc-item"><a href="https://codedthemes.gitbook.io/berry-bootstrap/" target="_blank" class="pc-link"><span class="pc-micon"><i class="ti ti-vocabulary"></i></span><span class="pc-mtext">Document</span></a></li>
+</ul>
+<div class="pc-navbar-card bg-primary rounded">
+<h4 class="text-white">Explore full code</h4>
+<p class="text-white opacity-75">Buy now to get full access of code files</p>
+<a href="https://codedthemes.com/item/berry-bootstrap-5-admin-template/" target="_blank" class="btn btn-light text-primary">Buy Now</a>
+</div>
+<div class="w-100 text-center">
+<div class="badge theme-version badge rounded-pill bg-light text-dark f-12"></div>
+</div>
+</div>
+</div>
+</nav>
+
+
+<div class="pc-container">
+<div class="pc-content">
+
+<div class="page-header">
+<div class="page-block">
+<div class="row align-items-center">
+<div class="col-md-12">
+<div class="page-header-title">
+<h5 class="m-b-10">Account Profile 1</h5>
+</div>
+<ul class="breadcrumb">
+<li class="breadcrumb-item"><a href="../navigation/index.html">Home</a></li>
+<li class="breadcrumb-item"><a href="javascript: void(0)">Users</a></li>
+<li class="breadcrumb-item" aria-current="page">Account Profile 1</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+
+<div class="row">
+
+<div class="col-sm-12">
+<div class="card">
+<div class="card-header pb-0">
+<ul class="nav nav-tabs profile-tabs" id="myTab" role="tablist">
+<li class="nav-item">
+<a class="nav-link active" id="profile-tab-1" data-bs-toggle="tab" href="#profile-1" role="tab" aria-selected="true">
+<i class="material-icons-two-tone me-2">account_circle</i>Profile
+</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" id="profile-tab-2" data-bs-toggle="tab" href="#profile-2" role="tab" aria-selected="true">
+<i class="material-icons-two-tone me-2">description</i>Personal Details
+</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" id="profile-tab-3" data-bs-toggle="tab" href="#profile-3" role="tab" aria-selected="true">
+<i class="material-icons-two-tone me-2">library_books</i>My Account
+</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" id="profile-tab-4" data-bs-toggle="tab" href="#profile-4" role="tab" aria-selected="true">
+<i class="material-icons-two-tone me-2">lock</i>Change Password
+</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" id="profile-tab-5" data-bs-toggle="tab" href="#profile-5" role="tab" aria-selected="true">
+<i class="material-icons-two-tone me-2">email</i>Settings
+</a>
+</li>
+</ul>
+</div>
+<div class="card-body">
+<div class="tab-content">
+<div class="tab-pane show active" id="profile-1" role="tabpanel" aria-labelledby="profile-tab-1">
+<div class="row">
+<div class="col-lg-4 col-xxl-3">
+<div class="card border">
+<div class="card-header">
+<div class="media align-items-center">
+<img class="img-radius img-fluid wid-40" src="../assets/images/user/avatar-1.jpg" alt="User image">
+<div class="media-body mx-3">
+<h5 class="mb-1">John Doe</h5>
+<h6 class="text-muted mb-0">UI/UX Designer</h6>
+</div>
+<div class="badge bg-primary rounded-pill text-base">Pro</div>
+</div>
+</div>
+<div class="card-body px-2 pb-0">
+<div class="list-group list-group-flush">
+<a href="#" class="list-group-item list-group-item-action">
+<div class="media align-items-center">
+<i class="material-icons-two-tone f-20">email</i>
+<div class="media-body mx-3">
+<h5 class="m-0">Email</h5>
+</div>
+<small><span class="__cf_email__" data-cfemail="86e2e3ebe9c6f5e7ebf6eae3a8e5e9eb">[email&#160;protected]</span></small>
+</div>
+</a>
+<a href="#" class="list-group-item list-group-item-action">
+<div class="media align-items-center">
+<i class="material-icons-two-tone f-20">phonelink_ring</i>
+<div class="media-body mx-3">
+<h5 class="m-0">Phone</h5>
+</div>
+<small>(+99) 9999 999 999</small>
+</div>
+</a>
+<a href="#" class="list-group-item list-group-item-action">
+<div class="media align-items-center">
+<i class="material-icons-two-tone f-20">pin_drop</i>
+<div class="media-body mx-3">
+<h5 class="m-0">Location</h5>
+</div>
+<small>Melbourne</small>
+</div>
+</a>
+</div>
+</div>
+<div class="card-body">
+<div class="row text-center">
+<div class="col-4">
+<h3 class="mb-0">37</h3>
+<small class="text-muted">Mails</small>
+</div>
+<div class="col-4">
+<h3 class="mb-0">2749</h3>
+<small class="text-muted">Followers</small>
+</div>
+<div class="col-4">
+<h3 class="mb-0">678</h3>
+<small class="text-muted">Following</small>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-8 col-xxl-9">
+<div class="card border">
+<div class="card-header">
+<h5>About me</h5>
+</div>
+<div class="card-body">
+<p class="mb-4">Hello,I’m Anshan Handgun Creative Graphic Designer & User Experience Designer based in Website, I create
+digital Products a more Beautiful and usable place. Morbid accusant ipsum. Nam nec tellus at.</p
+                            >
+<h5>Personal Details</h5>
+<hr class="my-3">
+<div class="table-responsive">
+<table class="table table-borderless">
+<tbody>
+<tr>
+<td><b class="text-header">Full Name</b></td>
+<td>:</td>
+<td>John Doe</td>
+</tr>
+<tr>
+<td><b class="text-header">Fathers Name</b></td>
+<td>:</td>
+<td>Mr. Deepen Handgun</td>
+</tr>
+<tr>
+<td><b class="text-header">Address</b></td>
+<td>:</td>
+<td>Street 110-B Kalians Bag, Dewan, M.P. INDIA</td>
+</tr>
+<tr>
+<td><b class="text-header">Zip Code</b></td>
+<td>:</td>
+<td>12345</td>
+</tr>
+<tr>
+<td><b class="text-header">Phone</b></td>
+<td>:</td>
+<td>+0 123456789 , +0 123456789</td>
+</tr>
+<tr>
+<td><b class="text-header">Email</b></td>
+<td>:</td>
+<td><a href="https://berrydashboard.io/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="a3d0d6d3d3ccd1d7e3c6dbc2ced3cfc68dc0ccce">[email&#160;protected]</a></td>
+</tr>
+<tr>
+<td><b class="text-header">Website</b></td>
+<td>:</td>
+<td>http://example.com</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="card border">
+<div class="card-header">
+<h5>Education</h5>
+</div>
+<div class="card-body">
+<div class="row align-items-center mb-3">
+<div class="col-sm-3"> <h5>2014-2017</h5><span>Master Degree</span> </div>
+<div class="col-sm-9">
+<h6>Master Degree in Computer Application</h6>
+<p>University of Oxford, England</p>
+</div>
+</div>
+<div class="row align-items-center mb-3">
+<div class="col-sm-3"> <h5>2011-2013</h5><span>Bachelor</span> </div>
+<div class="col-sm-9">
+<h6>Bachelor Degree in Computer Engineering</h6>
+<p>Imperial College London</p>
+</div>
+</div>
+<div class="row align-items-center mb-3">
+<div class="col-sm-3"> <h5>2009-2011</h5><span>School</span> </div>
+<div class="col-sm-9">
+<h6>Higher Secondary Education</h6>
+<p>School of London, England</p>
+</div>
+</div>
+</div>
+</div>
+<div class="card border">
+<div class="card-header">
+<h5>Employment</h5>
+</div>
+<div class="card-body">
+<div class="row align-items-center mb-3">
+<div class="col-sm-3"> <h5>Current</h5><span>Senior</span> </div>
+<div class="col-sm-9">
+<h6>Senior UI/UX designer</h6>
+<p class="mb-1">Perform task related to project manager with the 100+ team under my observation. Team management is key
+role in this company.</p
+                                >
+<span class="text-muted">Microsoft, TX, USA</span>
+</div>
+</div>
+<div class="row align-items-center mb-3">
+<div class="col-sm-3"> <h5>2017-2019</h5><span>Junior</span> </div>
+<div class="col-sm-9">
+<h6>Trainee cum Project Manager</h6>
+<span class="text-muted">Microsoft, TX, USA</span>
+</div>
+</div>
+</div>
+</div>
+<div class="card border">
+<div class="card-header">
+<h5>Skills</h5>
+</div>
+<div class="card-body">
+<div class="row align-items-center mt-3">
+<div class="col-md-6 mb-3">
+<h6 class="m-b-10 text-muted">Web Designer</h6>
+<div class="row align-items-center">
+<div class="col">
+<div class="progress" style="height: 4px">
+<div class="progress-bar bg-primary" style="width: 70%"></div>
+</div>
+</div>
+<div class="col-auto">
+<h6 class="m-b-0">70%</h6>
+</div>
+</div>
+</div>
+<div class="col-md-6 mb-3">
+<h6 class="m-b-10 text-muted">Graphic Designer</h6>
+<div class="row align-items-center">
+<div class="col">
+<div class="progress" style="height: 4px">
+<div class="progress-bar bg-primary" style="width: 85%"></div>
+</div>
+</div>
+<div class="col-auto">
+<h6 class="m-b-0">80%</h6>
+</div>
+</div>
+</div>
+<div class="col-md-6 mb-3">
+<h6 class="m-b-10 text-muted">UX Researcher</h6>
+<div class="row align-items-center">
+<div class="col">
+<div class="progress" style="height: 4px">
+<div class="progress-bar bg-secondary" style="width: 85%"></div>
+</div>
+</div>
+<div class="col-auto">
+<h6 class="m-b-0">3.2</h6>
+</div>
+</div>
+</div>
+<div class="col-md-6 mb-3">
+<h6 class="m-b-10 text-muted">HTML</h6>
+<div class="row align-items-center">
+<div class="col">
+<div class="progress" style="height: 4px">
+<div class="progress-bar bg-primary" style="width: 45%"></div>
+</div>
+</div>
+<div class="col-auto">
+<h6 class="m-b-0">45%</h6>
+</div>
+</div>
+</div>
+<div class="col-md-6 mb-3">
+<h6 class="m-b-10 text-muted">Wordpress</h6>
+<div class="row align-items-center">
+<div class="col">
+<div class="progress" style="height: 4px">
+<div class="progress-bar bg-secondary" style="width: 25%"></div>
+</div>
+</div>
+<div class="col-auto">
+<h6 class="m-b-0">25%</h6>
+</div>
+</div>
+</div>
+<div class="col-md-6 mb-3">
+<h6 class="m-b-10 text-muted">PHP</h6>
+<div class="row align-items-center">
+<div class="col">
+<div class="progress" style="height: 4px">
+<div class="progress-bar bg-primary" style="width: 65%"></div>
+</div>
+</div>
+<div class="col-auto">
+<h6 class="m-b-0">65%</h6>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="tab-pane" id="profile-2" role="tabpanel" aria-labelledby="profile-tab-2">
+<div class="row">
+<div class="col-lg-6">
+<div class="card border">
+<div class="card-header">
+<h5>Personal Information</h5>
+</div>
+<div class="card-body">
+<div class="row">
+<div class="col-sm-6">
+<div class="form-group">
+<label class="form-label">Name <span class="text-danger">*</span></label>
+<input type="text" class="form-control" value="John Doe">
+</div>
+</div>
+<div class="col-sm-6">
+<div class="form-group">
+<label class="form-label">Location</label>
+<select class="form-control">
+<option>Washington</option>
+<option>India</option>
+<option>Africa</option>
+<option>New York</option>
+<option>Malaysia</option>
+</select>
+</div>
+</div>
+<div class="col-sm-12">
+<div class="form-group">
+<label class="form-label">Bio <span class="text-danger">*</span></label>
+<textarea class="form-control">
+I consider myself as a creative, professional and a flexible person. I can adapt with any kind of brief and design style</textarea
+                                  >
+</div>
+</div>
+<div class="col-sm-6">
+<div class="form-group">
+<label class="form-label">Experience<span class="text-danger">*</span></label>
+<select class="form-control">
+<option>Startup</option>
+<option>2 year</option>
+<option>3 year</option>
+<option selected>4 year</option>
+<option>5 year</option>
+</select>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-6">
+<div class="card border">
+<div class="card-header">
+<h5>Contact Information</h5>
+</div>
+<div class="card-body">
+<div class="row">
+<div class="col-sm-6">
+<div class="form-group">
+<label class="form-label">Contact Phone</label>
+<input type="text" class="form-control" value="(+99) 9999 999 999">
+</div>
+</div>
+<div class="col-sm-6">
+<div class="form-group">
+<label class="form-label">Email <span class="text-danger">*</span></label>
+<input type="text" class="form-control" value="demo@sample.com">
+</div>
+</div>
+<div class="col-sm-12">
+<div class="form-group">
+<label class="form-label">Portfolio Url</label>
+<input type="text" class="form-control" value="https://demo.com/">
+</div>
+</div>
+<div class="col-sm-12">
+<div class="form-group">
+<label class="form-label">Address</label>
+<textarea class="form-control">3379  Monroe Avenue, Fort Myers, Florida(33912)</textarea>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-6">
+<div class="card border">
+<div class="card-header">
+<h5>Social Information</h5>
+</div>
+<div class="card-body">
+<div class="form-group">
+<label class="form-label">Facebook</label>
+<div class="input-group">
+<span class="input-group-text">
+<i class="fab fa-facebook-f"></i>
+</span>
+<input type="text" class="form-control" placeholder="Profile Url">
+<button class="btn text-white border-0 shadow-none bg-facebook" type="button">Connect</button>
+</div>
+</div>
+<div class="form-group">
+<label class="form-label">Twitter</label>
+<div class="input-group">
+<span class="input-group-text">
+<i class="fab fa-twitter"></i>
+</span>
+<input type="text" class="form-control" placeholder="Profile Url">
+<button class="btn text-white border-0 shadow-none bg-twitter" type="button">Connect</button>
+</div>
+</div>
+<div class="form-group">
+<label class="form-label">Google Plus</label>
+<div class="input-group">
+<span class="input-group-text">
+<i class="fab fa-google-plus-g"></i>
+</span>
+<input type="text" class="form-control" placeholder="Profile Url">
+<button class="btn text-white border-0 shadow-none bg-googleplus" type="button">Connect</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="tab-pane" id="profile-3" role="tabpanel" aria-labelledby="profile-tab-3">
+<div class="card border">
+<div class="card-header">
+<h5>General Settings</h5>
+</div>
+<div class="card-body">
+<div class="row">
+<div class="col-sm-6">
+<div class="form-group">
+<label class="form-label">Username <span class="text-danger">*</span></label>
+<input type="text" class="form-control" value="Ashoka_Tano_16">
+<small class="form-text text-muted">Your Profile URL: https://pc.com/Ashoka_Tano_16</small>
+</div>
+</div>
+<div class="col-sm-6">
+<div class="form-group">
+<label class="form-label">Account Email <span class="text-danger">*</span></label>
+<input type="text" class="form-control" value="demo@sample.com">
+</div>
+</div>
+<div class="col-sm-6">
+<div class="form-group">
+<label class="form-label">Language</label>
+<select class="form-control">
+<option>Washington</option>
+<option>India</option>
+<option>Africa</option>
+<option>New York</option>
+<option>Malaysia</option>
+</select>
+</div>
+</div>
+<div class="col-sm-6">
+<div class="form-group">
+<label class="form-label">Sign in Using</label>
+<select class="form-control">
+<option>Password</option>
+<option>Face Recognition</option>
+<option>Thumb Impression</option>
+<option>Key</option>
+<option>Pin</option>
+</select>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="card border">
+<div class="card-header">
+<h5>Advance Settings</h5>
+</div>
+<div class="card-body">
+<h5 class="mb-3 mt-4">Secure Browsing</h5>
+<div class="form-group">
+<div class="form-check form-switch">
+<input class="form-check-input" type="checkbox" id="customsecbrz1" checked>
+<label class="form-check-label" for="customsecbrz1">Browsing Securely ( https ) when it's necessary</label>
+</div>
+</div>
+<h5 class="mb-3 mt-4">Login Notifications</h5>
+<div class="form-check form-switch">
+<input class="form-check-input" type="checkbox" id="customsecbrz2" checked>
+<label class="form-check-label" for="customsecbrz2">Notify when login attempted from other place</label>
+</div>
+<h5 class="mb-3 mt-4">Login Approvals</h5>
+<div class="form-check form-switch">
+<input class="form-check-input" type="checkbox" id="customsecbrz3" checked>
+<label class="form-check-label" for="customsecbrz3">Approvals is not required when login from unrecognized devices.</label
+                          >
+</div>
+<hr>
+<h5 class="mb-4">Recognized Devices</h5>
+<div class="media mb-2">
+<i class="feather icon-monitor f-20 h3 me-3 wid-30 text-center"></i>
+<div class="media-body">
+<div class="float-end">
+<div class="text-success d-inline-block me-2">
+<i class="fas fa-circle f-10 me-2"></i>
+Current Active
+</div>
+<a href="#!" class="text-danger"><i class="feather icon-x-circle"></i></a>
+</div>
+<span class="text-dark font-weight-bold">Cent Desktop</span>
+<small class="text-muted">| 4351 Deans Lane, Chelmsford</small>
+</div>
+</div>
+<div class="media mb-2">
+<i class="feather icon-tablet f-20 h3 me-3 wid-30 text-center"></i>
+<div class="media-body">
+<div class="float-end">
+<div class="text-muted d-inline-block me-2">
+<i class="fas fa-circle f-10 me-2"></i>
+Active 5 days ago
+</div>
+<a href="#!" class="text-danger"><i class="feather icon-x-circle"></i></a>
+</div>
+<span class="text-dark font-weight-bold">Imho Tablet</span>
+<small class="text-muted">| 4185 Michigan Avenue</small>
+</div>
+</div>
+<div class="media mb-2">
+<i class="feather icon-smartphone f-20 h3 me-3 wid-30 text-center"></i>
+<div class="media-body">
+<div class="float-end">
+<div class="text-muted d-inline-block me-2">
+<i class="fas fa-circle f-10 me-2"></i>
+Active 1 month ago
+</div>
+<a href="#!" class="text-danger"><i class="feather icon-x-circle"></i></a>
+</div>
+<span class="text-dark font-weight-bold">Albs Mobile</span>
+<small class="text-muted">| 3462 Fairfax Drive, Montcalm</small>
+</div>
+</div>
+<hr>
+<h5 class="mb-3">Active Sessions</h5>
+<div class="media mb-2">
+<i class="feather icon-monitor f-20 h3 me-3 wid-30 text-center text-success"></i>
+<div class="media-body">
+<div class="float-end">
+<a href="#!" class="badge bg-light-danger">Logout</a>
+</div>
+<span class="text-dark font-weight-bold">Ceto Desktop</span>
+<small class="text-muted">| 4351 Deans Lane, Chelmsford</small>
+</div>
+</div>
+<div class="media mb-2">
+<i class="feather icon-tablet f-20 h3 me-3 wid-30 text-center text-success"></i>
+<div class="media-body">
+<div class="float-end">
+<a href="#!" class="badge bg-light-danger">Logout</a>
+</div>
+<span class="text-dark font-weight-bold">Moon Tablet</span>
+<small class="text-muted">| 4185 Michigan Avenue</small>
+</div>
+</div>
+</div>
+<div class="card-footer text-end">
+<button class="btn btn-success">Update Profile</button>
+<button class="btn btn-outline-dark ms-2">Clear</button>
+</div>
+</div>
+</div>
+<div class="tab-pane" id="profile-4" role="tabpanel" aria-labelledby="profile-tab-4">
+<div class="alert alert-warning" role="alert">
+<h5 class="alert-heading"><i class="feather icon-alert-circle me-2"></i>Alert!</h5>
+<p>Your Password will expire in every 3 months. So change it periodically.</p>
+<hr>
+<p class="mb-0"><b>Do not share your password</b></p>
+</div>
+<div class="card border">
+<div class="card-header">
+<h5>Change Password</h5>
+</div>
+<div class="card-body">
+<div class="row">
+<div class="col-sm-6">
+<div class="form-group">
+<label class="form-label">Current Password <span class="text-danger">*</span></label>
+<input type="password" class="form-control" placeholder="Enter Your current password">
+<small class="form-text text-muted">Forgot password? <a href="#!">Click here</a></small>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-6">
+<div class="form-group">
+<label class="form-label">New Password <span class="text-danger">*</span></label>
+<input type="password" class="form-control" placeholder="Enter New password">
+</div>
+</div>
+<div class="col-sm-6">
+<div class="form-group">
+<label class="form-label">Confirm Password <span class="text-danger">*</span></label>
+<input type="password" class="form-control" placeholder="Enter your password again">
+</div>
+</div>
+</div>
+</div>
+<div class="card-footer text-end">
+<button class="btn btn-danger">Change Password</button>
+<button class="btn btn-outline-dark ms-2">Clear</button>
+</div>
+</div>
+</div>
+<div class="tab-pane" id="profile-5" role="tabpanel" aria-labelledby="profile-tab-5">
+<div class="card border">
+<div class="card-header">
+<h5>Email Settings</h5>
+</div>
+<ul class="list-group list-group-flush">
+<li class="list-group-item py-4">
+<h5 class="mb-3">Setup Email Notification</h5>
+<div class="m-l-40">
+<div class="form-check form-switch">
+<input class="form-check-input" type="checkbox" id="customSwitchemlnot1" checked>
+<label class="form-check-label" for="customSwitchemlnot1">Email Notification</label>
+</div>
+<div class="form-check form-switch">
+<input class="form-check-input" type="checkbox" id="customSwitchemlnot2">
+<label class="form-check-label" for="customSwitchemlnot2">Send Copy To Personal Email</label>
+</div>
+</div>
+</li>
+<li class="list-group-item py-4">
+<h5 class="mb-3">Activity Related Emails</h5>
+<div class="m-l-40">
+<h6 class="mt-4 mb-2">When to email?</h6>
+<div class="form-check form-switch">
+<input class="form-check-input" type="checkbox" id="customCheckactmail1" checked>
+<label class="form-check-label" for="customCheckactmail1">have new notifications</label>
+</div>
+<div class="form-check form-switch">
+<input class="form-check-input" type="checkbox" id="customCheckactmail2" checked>
+<label class="form-check-label" for="customCheckactmail2">You're sent a direct message</label>
+</div>
+<div class="form-check form-switch">
+<input class="form-check-input" type="checkbox" id="customCheckactmail3" checked>
+<label class="form-check-label" for="customCheckactmail3">Someone adds you as a connection</label>
+</div>
+<h6 class="mt-4 mb-2">When to escalate emails?</h6>
+<div class="form-check form-switch">
+<input class="form-check-input" type="checkbox" id="customCheckactmail4" checked>
+<label class="form-check-label" for="customCheckactmail4">Upon new order</label>
+</div>
+<div class="form-check form-switch">
+<input class="form-check-input" type="checkbox" id="customCheckactmail5" checked>
+<label class="form-check-label" for="customCheckactmail5">New membership approval</label>
+</div>
+<div class="form-check form-switch">
+<input class="form-check-input" type="checkbox" id="customCheckactmail6" checked>
+<label class="form-check-label" for="customCheckactmail6">Member registration</label>
+</div>
+</div>
+</li>
+<li class="list-group-item py-4 border-bottom-0">
+<h5 class="mb-3">Updates From System Notification</h5>
+<div class="m-l-40">
+<h6 class="mt-4 mb-2">Email you with?</h6>
+<div class="form-check">
+<input class="form-check-input" type="checkbox" id="customCheckactmail7" checked>
+<label class="form-check-label" for="customCheckactmail7">News about PCT-themes products and feature updates</label
+                              >
+</div>
+<div class="form-check">
+<input class="form-check-input" type="checkbox" id="customCheckactmail8" checked>
+<label class="form-check-label" for="customCheckactmail8">Tips on getting more out of PCT-themes</label>
+</div>
+<div class="form-check">
+<input class="form-check-input" type="checkbox" id="customCheckactmail9" checked>
+<label class="form-check-label" for="customCheckactmail9">Things you missed since you last logged into PCT-themes</label
+                              >
+</div>
+<div class="form-check">
+<input class="form-check-input" type="checkbox" id="customCheckactmail10" checked>
+<label class="form-check-label" for="customCheckactmail10">News about products and other services</label>
+</div>
+<div class="form-check">
+<input class="form-check-input" type="checkbox" id="customCheckactmail11" checked>
+<label class="form-check-label" for="customCheckactmail11">Tips and Document business products</label>
+</div>
+</div>
+</li>
+</ul>
+<div class="card-footer text-end">
+<button class="btn btn-primary">Update Change</button>
+<button class="btn btn-outline-dark ms-2">Clear</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+<footer class="pc-footer">
+<div class="footer-wrapper container-fluid">
+<div class="row">
+<div class="col my-1 footer-link">
+<p class="m-0">Copyright &copy; <a href="#">Codedthemes</a></p>
+</div>
+<div class="col-auto my-1">
+<ul class="list-inline footer-link mb-0">
+<li class="list-inline-item"><a href="#">Home</a></li>
+<li class="list-inline-item"><a href="#">Privacy Policy</a></li>
+<li class="list-inline-item"><a href="#">Contact us</a></li>
+</ul>
+</div>
+</div>
+</div>
+</footer>
+
+<script data-cfasync="false" src="../../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="../assets/js/plugins/popper.min.js"></script>
+<script src="../assets/js/plugins/simplebar.min.js"></script>
+<script src="../assets/js/plugins/bootstrap.min.js"></script>
+<script src="../assets/js/config.js"></script>
+<script src="../assets/js/pcoded.js"></script>
+<script src="../assets/js/plugins/feather.min.js"></script>
+<div class="pct-c-btn">
+<button class="btn btn-secondary" data-bs-toggle="offcanvas" data-bs-target="#offcanvas_layout">
+<i data-feather="settings"></i>
+</button>
+</div>
+<div class="offcanvas pct-offcanvas offcanvas-end" tabindex="-1" id="offcanvas_layout">
+<div class="offcanvas-header">
+<h5 class="offcanvas-title">Berry Customizer</h5>
+<button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+</div>
+<div class="pct-body" style="height: calc(100% - 60px)">
+<div class="offcanvas-body">
+<div class="card">
+<div class="card-header">
+<h5>Layout</h5>
+</div>
+<div class="card-body">
+<p class="mb-1">Mode</p>
+<div class="form-check form-check-inline">
+<input class="form-check-input" type="radio" name="layout_mode" id="layoutmodelight" onclick="layout_change('light')">
+<label class="form-check-label" for="layoutmodelight"> Light </label>
+</div>
+<div class="form-check form-check-inline">
+<input class="form-check-input" type="radio" name="layout_mode" id="layoutmodedark" onclick="layout_change('dark')">
+<label class="form-check-label" for="layoutmodedark"> Dark </label>
+</div>
+<div class="pc-rtl">
+<p class="mt-3 mb-1">Direction</p>
+<div class="form-check form-switch">
+<input class="form-check-input" type="checkbox" role="switch" id="layoutmodertl">
+<label class="form-check-label" for="layoutmodertl">RTL</label>
+</div>
+</div>
+</div>
+</div>
+<div class="card">
+<div class="card-header">
+<h5>Preset Color</h5>
+</div>
+<div class="card-body">
+<div class="theme-color preset-color">
+<a href="#!" class="active" data-value="preset-1"><span></span><span></span></a>
+<a href="#!" class data-value="preset-2"><span></span><span></span></a>
+<a href="#!" class data-value="preset-3"><span></span><span></span></a>
+<a href="#!" class data-value="preset-4"><span></span><span></span></a>
+<a href="#!" class data-value="preset-5"><span></span><span></span></a>
+<a href="#!" class data-value="preset-6"><span></span><span></span></a>
+<a href="#!" class data-value="preset-7"><span></span><span></span></a>
+</div>
+</div>
+</div>
+<div class="card">
+<div class="card-header">
+<h5>Font Family</h5>
+</div>
+<div class="card-body">
+<div class="form-check">
+<input class="form-check-input" type="radio" name="layout_font" id="layoutfontRoboto" checked onclick="font_change('Roboto')">
+<label class="form-check-label" for="layoutfontRoboto"> Roboto </label>
+</div>
+<div class="form-check">
+<input class="form-check-input" type="radio" name="layout_font" id="layoutfontPoppins" onclick="font_change('Poppins')">
+<label class="form-check-label" for="layoutfontPoppins"> Poppins </label>
+</div>
+<div class="form-check">
+<input class="form-check-input" type="radio" name="layout_font" id="layoutfontInter" onclick="font_change('Inter')">
+<label class="form-check-label" for="layoutfontInter"> Inter </label>
+</div>
+</div>
+</div>
+<div class="card pc-boxcontainer">
+<div class="card-header">
+<h5>Box Container</h5>
+</div>
+<div class="card-body">
+<div class="form-check form-switch">
+<input class="form-check-input" type="checkbox" role="switch" id="layoutboxcontainer">
+<label class="form-check-label" for="layoutboxcontainer">Container</label>
+</div>
+</div>
+</div>
+<div class="d-grid">
+<button class="btn btn-light-danger" id="layoutreset">Reset Layout</button>
+</div>
+</div>
+</div>
+</div>
+<script src="../assets/js/customizer.js"></script>
+</body>
+
+
+<!-- Mirrored from berrydashboard.io/bootstrap/default/application/account-profile-v1.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 06 Jun 2023 11:50:32 GMT -->
+</html>

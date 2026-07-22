@@ -1,0 +1,217 @@
+@model Mntry_Awqaf.Models.LandBoundaryWithWorkForm
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+<style>
+    .field-item {
+        background: white;
+        border: 1px solid #e9ecef;
+        border-radius: 8px;
+        padding: 15px;
+        margin-bottom: 15px;
+        transition: all 0.2s;
+    }
+    .field-item:hover {
+        border-color: #86b7fe;
+        box-shadow: 0 2px 6px rgba(13,110,253,0.05);
+    }
+    .section-title {
+        font-size: 1.1rem;
+        font-weight: 700;
+        color: #0d6efd;
+        border-right: 4px solid #0d6efd;
+        padding-right: 12px;
+        margin-bottom: 15px;
+    }
+</style>
+
+<div class="main-card max-width-container mx-auto" style="max-width: 900px;">
+    <div class="card shadow-sm border-0 mb-4">
+        <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center">
+            <h5 class="mb-0">📋 تعبئة استمارة جديدة</h5>
+            <a asp-action="Index" class="btn btn-light btn-sm text-primary fw-bold">
+                <i class="ti ti-arrow-right me-1"></i> العودة للملفات
+            </a>
+        </div>
+        
+        <div class="card-body">
+            <form id="fillRequestForm">
+                <input type="hidden" name="work_Form.Id" value="0" />
+
+                <!-- ===== Form Fields Section ===== -->
+                <div class="section-title mt-3">بيانات الاستمارة</div>
+                <div style="border: 1px solid #dee2e6; border-radius: 12px; overflow: hidden;" class="mt-3 mb-4">
+                    <div style="background: white; padding: 30px;">
+                        <div id="fieldsContainer"></div>
+                    </div>
+                </div>
+
+                <!-- ===== Land Boundaries Table ===== -->
+                <div class="section-title mt-4">حدود ومساحة الأرض</div>
+                <div class="table-responsive">
+                    @Html.Partial("~/Views/Work_Form/EditLand.cshtml", Model)
+                </div>
+
+                <!-- ===== Save Buttons ===== -->
+                <div class="row mt-4">
+                    <div class="col-12 text-center mb-3">
+                        <button type="submit" id="saveRequestBtn" class="btn btn-primary me-2">
+                            <i class="fas fa-save me-2"></i>حفظ الاستمارة
+                        </button>
+                        <a asp-action="Index" class="btn btn-secondary">إلغاء</a>
+                    </div>
+                </div>
+
+            </form>
+
+            <!-- لعرض الرسائل -->
+            <div id="responseMessage" class="mt-3"></div>
+        </div>
+    </div>
+</div>
+
+<script>
+    let fields = [];
+
+    function createFieldInput(field) {
+        const safeId = field.id;
+        switch(field.type) {
+            case 'text':
+                return '<input type="text" name="' + field.name + '" class="form-control" ' +
+                       (field.required ? 'required' : '') +
+                       ' value="' + (field.value || '') + '"' +
+                       ' oninput="updateFieldValue(\'' + safeId + '\', this.value)">';
+
+            case 'number':
+                return '<input type="number" name="' + field.name + '" class="form-control" ' +
+                       (field.required ? 'required' : '') +
+                       ' value="' + (field.value || '') + '"' +
+                       ' oninput="updateFieldValue(\'' + safeId + '\', this.value)">';
+
+            case 'date':
+                return '<input type="date" name="' + field.name + '" class="form-control" ' +
+                       (field.required ? 'required' : '') +
+                       ' value="' + (field.value || '') + '"' +
+                       ' oninput="updateFieldValue(\'' + safeId + '\', this.value)">';
+
+            case 'textarea':
+                return '<textarea name="' + field.name + '" class="form-control" rows="3" ' +
+                       (field.required ? 'required' : '') +
+                       ' oninput="updateFieldValue(\'' + safeId + '\', this.value)">' +
+                       (field.value || '') + '</textarea>';
+
+            case 'select':
+                var html = '<select name="' + field.name + '" class="form-select" ' +
+                           (field.required ? 'required' : '') +
+                           ' onchange="updateFieldValue(\'' + safeId + '\', this.value)">';
+                html += '<option value="">-- اختر --</option>';
+                for (var i = 0; i < field.options.length; i++) {
+                    var opt = field.options[i];
+                    html += '<option value="' + opt + '"' + (field.value === opt ? ' selected' : '') + '>' + opt + '</option>';
+                }
+                html += '</select>';
+                return html;
+
+            case 'checkbox':
+                return '<div class="form-check">' +
+                       '<input class="form-check-input" type="checkbox" name="' + field.name + '" ' +
+                       (field.value ? 'checked' : '') +
+                       ' onchange="updateFieldValue(\'' + safeId + '\', this.checked)">' +
+                       '<label class="form-check-label">' + field.label + '</label></div>';
+
+            case 'radio':
+                var rhtml = '<div>';
+                for (var j = 0; j < field.options.length; j++) {
+                    var ropt = field.options[j];
+                    rhtml += '<div class="form-check form-check-inline">' +
+                             '<input class="form-check-input" type="radio" name="' + field.name + '" value="' + ropt + '"' +
+                             (field.value === ropt ? ' checked' : '') +
+                             ' onchange="updateFieldValue(\'' + safeId + '\', this.value)">' +
+                             '<label class="form-check-label">' + ropt + '</label></div>';
+                }
+                rhtml += '</div>';
+                return rhtml;
+
+            default:
+                return '<input type="text" name="' + field.name + '" class="form-control" value="' + (field.value || '') + '"' +
+                       ' oninput="updateFieldValue(\'' + safeId + '\', this.value)">';
+        }
+    }
+
+    function updateFieldValue(id, val) {
+        var field = fields.find(function(f) { return f.id === id; });
+        if (field) {
+            field.value = val;
+        }
+    }
+
+    function renderFields() {
+        var container = document.getElementById('fieldsContainer');
+        container.innerHTML = '';
+
+        fields.forEach(function(field) {
+            var div = document.createElement('div');
+            div.className = 'field-item';
+
+            div.innerHTML =
+                '<label class="form-label">' +
+                    field.label + (field.required ? ' <span class="text-danger">*</span>' : '') +
+                '</label>' +
+                createFieldInput(field);
+
+            container.appendChild(div);
+        });
+    }
+
+    // ========== Initialize values on load ==========
+    document.addEventListener("DOMContentLoaded", function () {
+        // Load dynamically saved layout from template
+        @if (Model.work_Form != null && !string.IsNullOrEmpty(Model.work_Form.DynamicFields))
+        {
+            <text>
+            fields = @Html.Raw(Model.work_Form.DynamicFields);
+            // Reset values for a blank fill instance
+            fields.forEach(function(f) {
+                f.value = '';
+            });
+            </text>
+        }
+        
+        renderFields();
+
+        // Form submit handler
+        var form = document.getElementById("fillRequestForm");
+        var responseDiv = document.getElementById("responseMessage");
+
+        form.addEventListener("submit", async function (e) {
+            e.preventDefault();
+
+            var formData = new FormData(form);
+            // Save full field layout and filled values as DynamicFields JSON
+            var dynamicData = fields.map(function(f) {
+                return { id: f.id, name: f.name, label: f.label, type: f.type, required: f.required, options: f.options, value: f.value };
+            });
+            formData.append("work_Form.DynamicFields", JSON.stringify(dynamicData));
+
+            try {
+                var response = await fetch("@Url.Action("Fill", "Work_Form")", {
+                    method: "POST",
+                    body: formData
+                });
+
+                var result = await response.json();
+
+                if (result.success) {
+                    responseDiv.innerHTML = '<div class="alert alert-success">' + result.message + '</div>';
+                    setTimeout(function() {
+                        window.location.href = '@Url.Action("Index", "Work_Form")';
+                    }, 1500);
+                } else {
+                    responseDiv.innerHTML = '<div class="alert alert-danger">' + result.message + '</div>';
+                }
+            } catch (err) {
+                responseDiv.innerHTML = '<div class="alert alert-danger">حدث خطأ في الاتصال بالسيرفر: ' + err.message + '</div>';
+            }
+        });
+    });
+</script>

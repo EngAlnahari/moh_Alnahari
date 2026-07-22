@@ -1,0 +1,102 @@
+﻿@model List<Mntry_Awqaf.Models.Experience>
+
+<div class="section">
+    <div class="section-header" onclick="toggleSection('experiences')">الخبرات العملية</div>
+    <div class="section-content" id="experiences">
+
+        <!-- نموذج الإدخال -->
+        <div class="row g-2 mb-3">
+            <div class="col-md-4"><input type="text" id="Company" class="form-control" placeholder="جهة العمل"></div>
+            <div class="col-md-4"><input type="text" id="JobTitle" class="form-control" placeholder="المسمى الوظيفي"></div>
+            <div class="col-md-4"><input type="text" id="Field" class="form-control" placeholder="المجال"></div>
+        </div>
+        <div class="row g-2 mb-3">
+            <div class="col-md-3"><input type="date" id="FromDate" class="form-control"></div>
+            <div class="col-md-3"><input type="date" id="ToDate" class="form-control"></div>
+            <div class="col-md-3">
+                <select id="StillWorking" class="form-control">
+                    <option value="0">انتهى العمل</option>
+                    <option value="1">ما زلت أعمل حالياً</option>
+                </select>
+            </div>
+        </div>
+        <textarea id="MainTasks" class="form-control mb-3" placeholder="المهام الرئيسية"></textarea>
+        <div id="exp-msg" style="display:none;" class="mb-3"></div>
+        <button class="btn btn-outline-primary w-100 mb-3" onclick="saveExperience()">حفظ الخبرة</button>
+
+        <!-- عرض الخبرات -->
+        <div id="experiences-list">
+            @foreach (var exp in Model)
+            {
+                <div class="item-box" data-id="@exp.Id">
+                    <div>
+                        <strong>@exp.Company</strong> – @exp.JobTitle (@exp.Field)<br />
+                        <small>@exp.FromDate?.ToString("yyyy-MM-dd") - @exp.ToDate?.ToString("yyyy-MM-dd")</small><br />
+                        @exp.MainTasks
+                    </div>
+                    <div class="action-btns">
+                        <button class="btn btn-sm btn-outline-primary" onclick="editExperience(@exp.Id)">تعديل</button>
+                        <button class="btn btn-sm btn-outline-danger" onclick="deleteExperience(@exp.Id)">حذف</button>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+<script>
+    let editExpId = 0;
+
+    function loadExperiences() {
+        $("#experiences-list").load("/Experience/GetUserExperiences #experiences-list > *");
+    }
+
+    function editExperience(id) {
+        $.get(`/Experience/GetById?id=${id}`, function(res) {
+            if(res){
+                $('#Company').val(res.company);
+                $('#JobTitle').val(res.jobTitle);
+                $('#Field').val(res.field);
+                $('#FromDate').val(res.fromDate);
+                $('#ToDate').val(res.toDate);
+                $('#StillWorking').val(res.stillWorking ? 1 : 0);
+                $('#MainTasks').val(res.mainTasks);
+                editExpId = res.id;
+                $('#exp-msg').text('✏️ الآن يمكنك تعديل الخبرة').css('color','blue').show();
+            }
+        });
+    }
+
+    function saveExperience() {
+        const data = new FormData();
+        ["Company","JobTitle","Field","FromDate","ToDate","StillWorking","MainTasks"].forEach(id=>{
+            data.append(id,$(`#${id}`).val());
+        });
+        if(editExpId>0) data.append("id", editExpId);
+        const url = editExpId>0 ? '/Experience/UpdateExperience' : '/Experience/CreateExperience';
+
+        $.ajax({
+            url:url,type:'POST',data:data,contentType:false,processData:false,
+            success:function(res){
+                if(res.success){
+                    loadExperiences();
+                    $('#exp-msg').text('✅ تم الحفظ بنجاح').css('color','green').show();
+                    ["Company","JobTitle","Field","FromDate","ToDate","StillWorking","MainTasks"].forEach(id=>{ $(`#${id}`).val(''); });
+                    editExpId=0;
+                } else {
+                    $('#exp-msg').text('❌ حدث خطأ').css('color','red').show();
+                }
+            }
+        });
+    }
+
+    function deleteExperience(id){
+        if(!confirm("هل تريد حذف هذه الخبرة؟")) return;
+        $.post('/Experience/DeleteExperience',{id:id},function(res){
+            if(res.success){ loadExperiences(); $('#exp-msg').text('🗑️ تم الحذف').css('color','green').show(); }
+            else $('#exp-msg').text('❌ فشل الحذف').css('color','red').show();
+        });
+    }
+
+    $(document).ready(loadExperiences);
+</script>

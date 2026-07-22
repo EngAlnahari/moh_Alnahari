@@ -1,0 +1,738 @@
+@model Mntry_Awqaf.Models.WorkOffer
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- Bootstrap & Icons -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css" />
+
+<style>
+    .dynamic-section {
+        transition: all 0.3s ease;
+        opacity: 0;
+        max-height: 0;
+        overflow: hidden;
+    }
+    .dynamic-section.show {
+        opacity: 1;
+        max-height: 1000px;
+    }
+    .field-group {
+        border-right: 3px solid #0d6efd;
+        padding-right: 15px;
+        margin-bottom: 20px;
+        background: #f8f9fa;
+        padding: 15px;
+        border-radius: 8px;
+    }
+    .conditional-field {
+        display: none;
+        animation: slideDown 0.3s ease;
+    }
+    .conditional-field.show {
+        display: block;
+    }
+    @@keyframes slideDown {
+        from { opacity: 0; transform: translateY(-10px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+    .smart-label {
+        font-weight: 600;
+        color: #495057;
+        margin-bottom: 8px;
+    }
+    .hint-text {
+        font-size: 0.85rem;
+        color: #6c757d;
+        margin-top: 4px;
+    }
+    .toggle-switch {
+        cursor: pointer;
+        padding: 10px 15px;
+        background: #e9ecef;
+        border-radius: 8px;
+        margin-bottom: 10px;
+        transition: all 0.2s;
+    }
+    .toggle-switch:hover {
+        background: #dee2e6;
+    }
+    .toggle-switch.active {
+        background: #d1ecf1;
+        border-right: 4px solid #0c5460;
+    }
+</style>
+
+@{
+    var rop = Context.Session.GetInt32("UserID");
+}
+
+<div dir="rtl" class="container-fluid">
+    <form id="tanjezForm" method="post" enctype="multipart/form-data">
+        
+        <!-- Header -->
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h2 class="page-title">
+                <i class="bi bi-plus-circle-fill text-primary"></i>
+                عرض جديد
+            </h2>
+            <span class="status-label badge bg-warning">لم يتم الحفظ</span>
+        </div>
+        
+        <input type="hidden" name="UserID" value="@Context.Session.GetInt32("UserID")" />
+
+        <!-- ============================================ -->
+        <!-- القسم 1: المعلومات الأساسية -->
+        <!-- ============================================ -->
+        <div class="card mb-4">
+            <div class="card-header bg-primary text-white">
+                <i class="bi bi-info-circle"></i> المعلومات الأساسية
+            </div>
+            <div class="card-body">
+                <div class="row g-3">
+                    <!-- اسم العرض -->
+                    <div class="col-md-6">
+                        <label asp-for="OfferName" class="form-label required fw-bold">
+                            اسم العرض <span class="text-danger">*</span>
+                        </label>
+                        <input asp-for="OfferName" type="text" class="form-control form-control-lg" 
+                               placeholder="أدخل اسم العرض..." required
+                               data-val="true" data-val-required="اسم العرض مطلوب" />
+                        <span class="text-danger field-validation-valid" data-valmsg-for="OfferName" data-valmsg-replace="true"></span>
+                    </div>
+
+                    <!-- تاريخ الانتهاء مع خيارات ذكية -->
+                    <div class="col-md-6">
+                        <label class="form-label fw-bold">تاريخ انتهاء العرض</label>
+                        <div class="btn-group w-100 mb-2" role="group">
+                            <input type="radio" class="btn-check" name="endDateType" id="endDateUnlimited" value="unlimited" checked>
+                            <label class="btn btn-outline-primary" for="endDateUnlimited">
+                                <i class="bi bi-infinity"></i> غير محدد
+                            </label>
+                            
+                            <input type="radio" class="btn-check" name="endDateType" id="endDateFixed" value="fixed">
+                            <label class="btn btn-outline-primary" for="endDateFixed">
+                                <i class="bi bi-calendar-date"></i> تاريخ محدد
+                            </label>
+                            
+                            <input type="radio" class="btn-check" name="endDateType" id="endDateDuration" value="duration">
+                            <label class="btn btn-outline-primary" for="endDateDuration">
+                                <i class="bi bi-clock-history"></i> مدة محددة
+                            </label>
+                        </div>
+                        
+                        <!-- حقل التاريخ (يظهر عند اختيار "تاريخ محدد") -->
+                        <div id="endDateCalendarField" class="conditional-field">
+                            <input name="EndDate" type="date" class="form-control" />
+                        </div>
+                        
+                        <!-- حقل المدة (يظهر عند اختيار "مدة محددة") -->
+                        <div id="endDateDurationField" class="conditional-field">
+                            <div class="input-group">
+                                <input type="number" class="form-control" placeholder="عدد الأيام" min="1" />
+                                <span class="input-group-text">يوم</span>
+                            </div>
+                            <small class="hint-text">سيتم حساب تاريخ الانتهاء تلقائياً</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================ -->
+        <!-- القسم 2: نوع العمل - حقول ديناميكية -->
+        <!-- ============================================ -->
+        <div class="card mb-4">
+            <div class="card-header bg-success text-white">
+                <i class="bi bi-briefcase"></i> تفاصيل العمل
+            </div>
+            <div class="card-body">
+                
+                <!-- اختيار نوع العمل الرئيسي -->
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <label class="form-label fw-bold">نوع العمل</label>
+                        <select id="workTypeSelector" class="form-select form-select-lg">
+                            <option value="">-- اختر نوع العمل --</option>
+                            <option value="engineering">الهندسة المدنية</option>
+                            <option value="surveying">المساحة</option>
+                            <option value="construction">الإنشاء</option>
+                            <option value="roads">الطرق</option>
+                            <option value="education">التعليم والتأهيل</option>
+                            <option value="charity">المجال الخيري</option>
+                        </select>
+                    </div>
+                    
+                    <!-- حقل المجال الفرعي (يظهر ديناميكياً) -->
+                    <div class="col-md-6 conditional-field" id="subWorkTypeField">
+                        <label class="form-label fw-bold">التخصص الفرعي</label>
+                        <select id="subWorkTypeSelector" class="form-select">
+                            <!-- يتم ملؤه ديناميكياً حسب اختيار النوع الرئيسي -->
+                        </select>
+                    </div>
+                </div>
+
+                <!-- قالب أجور العمل مع خيارات متقدمة -->
+                <div class="field-group">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <label asp-for="WorkWagesTemplateId" class="form-label fw-bold mb-0">
+                            <i class="bi bi-cash-stack"></i> قالب أجور العمل
+                        </label>
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" id="customWagesToggle">
+                            <label class="form-check-label" for="customWagesToggle">أجور مخصصة</label>
+                        </div>
+                    </div>
+                    
+                    <!-- القائمة القياسية -->
+                    <select asp-for="WorkWagesTemplateId" id="workWagesSelect" class="form-select">
+                        <option value="">-- اختر قالب --</option>
+                        @foreach (var item in ViewBag.Departs as List<WorkWagesTemplate>)
+                        {
+                            <option value="@item.Id" data-type="@item.WorkWagesType">
+                                @item.WorkWagesName
+                            </option>
+                        }
+                        <option value="create-new">+ إنشاء قالب جديد</option>
+                    </select>
+                    
+                    <!-- حقول الأجور المخصصة (تظهر عند تفعيل التبديل) -->
+                    <div id="customWagesFields" class="conditional-field mt-3">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <label>نوع العمل</label>
+                                <input type="text" class="form-control" placeholder="مثال: مساحة أراضي" />
+                            </div>
+                            <div class="col-md-4">
+                                <label>السعر لكل وحدة</label>
+                                <div class="input-group">
+                                    <input type="number" class="form-control" />
+                                    <span class="input-group-text">ر.س</span>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <label>نوع الوحدة</label>
+                                <select class="form-select">
+                                    <option>متر مربع</option>
+                                    <option>متر طولي</option>
+                                    <option>قطعة</option>
+                                    <option>ساعة عمل</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- التنقلات والمبيت مع خيارات ذكية -->
+                <div class="field-group">
+                    <label class="form-label fw-bold">
+                        <i class="bi bi-car-front"></i> التنقلات والمبيت
+                    </label>
+                    
+                    <div class="row">
+                        <div class="col-md-6">
+                            <select asp-for="TransportationScheduleTemplateId" id="transportSelect" class="form-select">
+                                <option value="">بدون تنقلات</option>
+                                @foreach (var item in ViewBag.Transports as List<TransportationScheduleTemplate>)
+                                {
+                                    <option value="@item.Id" data-hastype="@(!string.IsNullOrEmpty(item.StatuseType))">
+                                        @item.NameTemplete
+                                    </option>
+                                }
+                                <option value="custom">+ إعدادات مخصصة</option>
+                            </select>
+                        </div>
+                        
+                        <!-- حقول التنقل المخصصة -->
+                        <div class="col-md-6 conditional-field" id="customTransportFields">
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="includeTransport">
+                                        <label class="form-check-label" for="includeTransport">تكلفة التنقل</label>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="includeAccommodation">
+                                        <label class="form-check-label" for="includeAccommodation">تكلفة المبيت</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- تفاصيل التكلفة (تظهر عند اختيار تكلفة) -->
+                    <div id="transportCostDetails" class="conditional-field mt-3">
+                        <div class="row">
+                            <div class="col-md-6 conditional-field" id="transportCostField">
+                                <label>تكلفة التنقل (يومياً)</label>
+                                <div class="input-group">
+                                    <input type="number" class="form-control" placeholder="0.00" />
+                                    <span class="input-group-text">ر.س</span>
+                                </div>
+                            </div>
+                            <div class="col-md-6 conditional-field" id="accommodationCostField">
+                                <label>تكلفة المبيت (يومياً)</label>
+                                <div class="input-group">
+                                    <input type="number" class="form-control" placeholder="0.00" />
+                                    <span class="input-group-text">ر.س</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================ -->
+        <!-- القسم 3: التكاليف الإضافية - ديناميكية -->
+        <!-- ============================================ -->
+        <div class="card mb-4">
+            <div class="card-header bg-info text-white">
+                <i class="bi bi-plus-circle-dotted"></i> التكاليف الإضافية
+            </div>
+            <div class="card-body">
+                
+                <!-- تبديل إضافة تكاليف -->
+                <div class="toggle-switch" id="additionalCostsToggle">
+                    <i class="bi bi-chevron-down float-start"></i>
+                    <strong>إضافة تكاليف إضافية</strong>
+                    <small class="d-block text-muted">انقر لإضافة تكاليف مثل أدوات، معدات، إلخ</small>
+                </div>
+                
+                <!-- قسم التكاليف (يظهر عند النقر) -->
+                <div id="additionalCostsSection" class="conditional-field">
+                    
+                    <!-- قائمة التكاليف المسبقة -->
+                    <div class="mb-3">
+                        <label>اختر نوع التكلفة أو أضف جديد:</label>
+                        <select asp-for="AdditionalCostTypeId" id="costTypeSelect" class="form-select">
+                            <option value="">-- اختر نوع التكلفة --</option>
+                            @foreach (var item in ViewBag.AdditionalCosts as List<AdditionalCostType>)
+                            {
+                                <option value="@item.Id">@item.AdditionalCostTypeName</option>
+                            }
+                            <option value="custom">+ تكلفة مخصصة جديدة</option>
+                        </select>
+                    </div>
+                    
+                    <!-- حقل التكلفة المخصصة -->
+                    <div id="customCostField" class="conditional-field mb-3">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>اسم التكلفة</label>
+                                <input type="text" class="form-control" placeholder="مثال: أدوات قياس" />
+                            </div>
+                            <div class="col-md-6">
+                                <label>القيمة</label>
+                                <div class="input-group">
+                                    <input type="number" class="form-control" />
+                                    <span class="input-group-text">ر.س</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- جدول التكاليف المضافة -->
+                    <div id="costsTableContainer" class="mt-3">
+                        <table class="table table-sm table-bordered" id="addedCostsTable">
+                            <thead class="table-light">
+                                <tr>
+                                    <th>نوع التكلفة</th>
+                                    <th>القيمة</th>
+                                    <th>إجراء</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- يتم إضافة الصفوف ديناميكياً -->
+                            </tbody>
+                        </table>
+                        <button type="button" class="btn btn-outline-primary btn-sm" id="addCostRowBtn">
+                            <i class="bi bi-plus-lg"></i> إضافة تكلفة أخرى
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================ -->
+        <!-- القسم 4: المدفوعات والغرامات - ذكية -->
+        <!-- ============================================ -->
+        <div class="card mb-4">
+            <div class="card-header bg-warning text-dark">
+                <i class="bi bi-credit-card"></i> المدفوعات والغرامات
+            </div>
+            <div class="card-body">
+                
+                <!-- نمط الدفع -->
+                <div class="mb-4">
+                    <label class="form-label fw-bold">نمط الدفع</label>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="paymentPattern" id="paymentSimple" value="simple" checked>
+                                <label class="form-check-label" for="paymentSimple">بسيط (دفعة واحدة)</label>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="paymentPattern" id="paymentStandard" value="standard">
+                                <label class="form-check-label" for="paymentStandard">قياسي (3 دفعات)</label>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="paymentPattern" id="paymentCustom" value="custom">
+                                <label class="form-check-label" for="paymentCustom">مخصص</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- الحقول القياسية -->
+                <div id="standardPaymentFields">
+                    <div class="row mb-3">
+                        <div class="col-md-4">
+                            <label class="form-label">نسبة الدفع مقدماً (%)</label>
+                            <div class="input-group">
+                                <input asp-for="AdvancePaymentPercentage" type="number" class="form-control" min="0" max="100" value="30" />
+                                <span class="input-group-text">%</span>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <label class="form-label">نسبة الدفع عند البدء (%)</label>
+                            <div class="input-group">
+                                <input asp-for="OnSitePaymentPercentage" type="number" class="form-control" min="0" max="100" value="40" />
+                                <span class="input-group-text">%</span>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <label class="form-label">نسبة الدفع بعد التسليم (%)</label>
+                            <div class="input-group">
+                                <input asp-for="AfterDeliveryPaymentPercentage" type="number" class="form-control" min="0" max="100" value="30" />
+                                <span class="input-group-text">%</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- التحقق التلقائي من المجموع -->
+                    <div class="alert alert-info d-flex align-items-center">
+                        <i class="bi bi-info-circle-fill me-2"></i>
+                        <span>المجموع: <strong id="totalPercentage">100%</strong> - <span id="percentageStatus" class="text-success">صحيح</span></span>
+                    </div>
+                </div>
+
+                <!-- حقل الدفعة الواحدة (يظهر عند اختيار بسيط) -->
+                <div id="simplePaymentField" class="conditional-field">
+                    <div class="row">
+                        <div class="col-md-6 mx-auto">
+                            <label>نسبة الدفع الواحدة (%)</label>
+                            <input type="number" class="form-control" value="100" readonly />
+                            <small class="hint-text">دفعة واحدة 100% عند التعاقد</small>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- الغرامات -->
+                <div class="field-group mt-4">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <label class="form-label fw-bold mb-0">
+                            <i class="bi bi-exclamation-triangle"></i> شروط الغرامات
+                        </label>
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" id="penaltiesToggle">
+                            <label class="form-check-label" for="penaltiesToggle">تفعيل الغرامات</label>
+                        </div>
+                    </div>
+                    
+                    <div id="penaltiesFields" class="conditional-field">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <label>غرامة تأخير العميل (%)</label>
+                                <input asp-for="LatePenaltyPercentage" type="number" class="form-control" placeholder="0" min="0" max="100" />
+                                <small class="hint-text">خصم من المبلغ عند التأخر</small>
+                            </div>
+                            <div class="col-md-4">
+                                <label>غرامة الاعتذار بعد الدفعة (%)</label>
+                                <input asp-for="ResignationAfterAdvancePercentage" type="number" class="form-control" placeholder="0" min="0" max="100" />
+                            </div>
+                            <div class="col-md-4">
+                                <label>غرامة اعتذار المقاول (%)</label>
+                                <input asp-for="CamelResignationPenaltyPercentage" type="number" class="form-control" placeholder="0" min="0" max="100" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================ -->
+        <!-- القسم 5: ملخص وشروط إضافية -->
+        <!-- ============================================ -->
+        <div class="card mb-4">
+            <div class="card-header bg-secondary text-white">
+                <i class="bi bi-file-text"></i> ملاحظات وشروط
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-8">
+                        <label>ملاحظات عامة</label>
+                        <textarea name="Notes" class="form-control" rows="4" placeholder="أي ملاحظات أو شروط خاصة بالعرض..."></textarea>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card bg-light">
+                            <div class="card-body">
+                                <h6><i class="bi bi-calculator"></i> ملخص العرض</h6>
+                                <hr>
+                                <div class="d-flex justify-content-between">
+                                    <span>أجور العمل:</span>
+                                    <span id="summaryWages">--</span>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <span>التنقلات:</span>
+                                    <span id="summaryTransport">--</span>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <span>تكاليف إضافية:</span>
+                                    <span id="summaryCosts">--</span>
+                                </div>
+                                <hr>
+                                <div class="d-flex justify-content-between fw-bold">
+                                    <span>الإجمالي التقديري:</span>
+                                    <span id="summaryTotal" class="text-primary">--</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- أزرار التحكم -->
+        <div class="d-flex justify-content-between mb-5">
+            <a href="/WorkOffer/Index" class="btn btn-outline-secondary btn-lg">
+                <i class="bi bi-arrow-right"></i> رجوع
+            </a>
+            <button type="submit" class="btn btn-primary btn-lg px-5">
+                <i class="bi bi-check-lg"></i> حفظ العرض
+            </button>
+        </div>
+
+    </form>
+</div>
+
+<!-- ============================================ -->
+<!-- سكريبتات التحكم الديناميكي -->
+<!-- ============================================ -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+
+<script>
+    // ============================================
+    // 1. إدارة تاريخ الانتهاء
+    // ============================================
+    document.querySelectorAll('input[name="endDateType"]').forEach(radio => {
+        radio.addEventListener('change', function() {
+            const calendarField = document.getElementById('endDateCalendarField');
+            const durationField = document.getElementById('endDateDurationField');
+            
+            calendarField.classList.remove('show');
+            durationField.classList.remove('show');
+            
+            if (this.value === 'fixed') {
+                calendarField.classList.add('show');
+            } else if (this.value === 'duration') {
+                durationField.classList.add('show');
+            }
+        });
+    });
+
+    // ============================================
+    // 2. أنواع العمل الفرعية (ديناميكية)
+    // ============================================
+    const workSubTypes = {
+        engineering: [
+            { value: 'civil', text: 'الهندسة المدنية' },
+            { value: 'architecture', text: 'العمارة' },
+            { value: 'structural', text: 'الإنشاءات' }
+        ],
+        surveying: [
+            { value: 'land', text: 'مساحة أراضي' },
+            { value: 'building', text: 'مساحة مباني' },
+            { value: 'route', text: 'مساحة طرق' }
+        ],
+        construction: [
+            { value: 'residential', text: 'مباني سكنية' },
+            { value: 'commercial', text: 'مباني تجارية' },
+            { value: 'infrastructure', text: 'بنية تحتية' }
+        ],
+        roads: [
+            { value: 'highway', text: 'طرق سريعة' },
+            { value: 'street', text: 'شوارع داخلية' },
+            { value: 'bridge', text: 'جسور' }
+        ],
+        education: [
+            { value: 'training', text: 'تدريب' },
+            { value: 'consulting', text: 'استشارات' },
+            { value: 'assessment', text: 'تقييم' }
+        ],
+        charity: [
+            { value: 'religious', text: 'أوقاف دينية' },
+            { value: 'social', text: 'خدمات اجتماعية' },
+            { value: 'humanitarian', text: 'إغاثة' }
+        ]
+    };
+
+    document.getElementById('workTypeSelector').addEventListener('change', function() {
+        const subTypeField = document.getElementById('subWorkTypeField');
+        const subTypeSelect = document.getElementById('subWorkTypeSelector');
+        
+        if (this.value && workSubTypes[this.value]) {
+            subTypeSelect.innerHTML = '<option value="">-- اختر التخصص --</option>';
+            workSubTypes[this.value].forEach(type => {
+                subTypeSelect.innerHTML += `<option value="${type.value}">${type.text}</option>`;
+            });
+            subTypeField.classList.add('show');
+        } else {
+            subTypeField.classList.remove('show');
+        }
+    });
+
+    // ============================================
+    // 3. الأجور المخصصة
+    // ============================================
+    document.getElementById('customWagesToggle').addEventListener('change', function() {
+        const customFields = document.getElementById('customWagesFields');
+        const standardSelect = document.getElementById('workWagesSelect');
+        
+        if (this.checked) {
+            customFields.classList.add('show');
+            standardSelect.disabled = true;
+        } else {
+            customFields.classList.remove('show');
+            standardSelect.disabled = false;
+        }
+    });
+
+    // ============================================
+    // 4. التنقلات والمبيت
+    // ============================================
+    document.getElementById('transportSelect').addEventListener('change', function() {
+        const customFields = document.getElementById('customTransportFields');
+        const costDetails = document.getElementById('transportCostDetails');
+        
+        if (this.value === 'custom') {
+            customFields.classList.add('show');
+            costDetails.classList.add('show');
+        } else if (this.value === '') {
+            customFields.classList.remove('show');
+            costDetails.classList.remove('show');
+        } else {
+            customFields.classList.remove('show');
+            // إذا كان القالب يحتوي على أنواع، نظهر التفاصيل
+            const selected = this.options[this.selectedIndex];
+            if (selected.dataset.hastype === 'True') {
+                costDetails.classList.add('show');
+            }
+        }
+    });
+
+    // تفاصيل تكلفة التنقل
+    document.getElementById('includeTransport').addEventListener('change', function() {
+        document.getElementById('transportCostField').classList.toggle('show', this.checked);
+    });
+    
+    document.getElementById('includeAccommodation').addEventListener('change', function() {
+        document.getElementById('accommodationCostField').classList.toggle('show', this.checked);
+    });
+
+    // ============================================
+    // 5. التكاليف الإضافية
+    // ============================================
+    document.getElementById('additionalCostsToggle').addEventListener('click', function() {
+        const section = document.getElementById('additionalCostsSection');
+        const icon = this.querySelector('i');
+        
+        this.classList.toggle('active');
+        section.classList.toggle('show');
+        
+        if (section.classList.contains('show')) {
+            icon.classList.replace('bi-chevron-down', 'bi-chevron-up');
+        } else {
+            icon.classList.replace('bi-chevron-up', 'bi-chevron-down');
+        }
+    });
+
+    document.getElementById('costTypeSelect').addEventListener('change', function() {
+        const customField = document.getElementById('customCostField');
+        customField.classList.toggle('show', this.value === 'custom');
+    });
+
+    // ============================================
+    // 6. المدفوعات
+    // ============================================
+    document.querySelectorAll('input[name="paymentPattern"]').forEach(radio => {
+        radio.addEventListener('change', function() {
+            const standardFields = document.getElementById('standardPaymentFields');
+            const simpleField = document.getElementById('simplePaymentField');
+            
+            if (this.value === 'simple') {
+                standardFields.classList.add('d-none');
+                simpleField.classList.add('show');
+            } else {
+                standardFields.classList.remove('d-none');
+                simpleField.classList.remove('show');
+                
+                if (this.value === 'standard') {
+                    // القيم الافتراضية القياسية
+                    document.querySelector('[name="AdvancePaymentPercentage"]').value = 30;
+                    document.querySelector('[name="OnSitePaymentPercentage"]').value = 40;
+                    document.querySelector('[name="AfterDeliveryPaymentPercentage"]').value = 30;
+                }
+            }
+            calculateTotalPercentage();
+        });
+    });
+
+    // حساب المجموع التلقائي
+    function calculateTotalPercentage() {
+        const advance = parseFloat(document.querySelector('[name="AdvancePaymentPercentage"]')?.value) || 0;
+        const onsite = parseFloat(document.querySelector('[name="OnSitePaymentPercentage"]')?.value) || 0;
+        const after = parseFloat(document.querySelector('[name="AfterDeliveryPaymentPercentage"]')?.value) || 0;
+        
+        const total = advance + onsite + after;
+        const statusEl = document.getElementById('percentageStatus');
+        
+        document.getElementById('totalPercentage').textContent = total + '%';
+        
+        if (total === 100) {
+            statusEl.textContent = 'صحيح ✓';
+            statusEl.className = 'text-success';
+        } else if (total < 100) {
+            statusEl.textContent = `ناقص ${100 - total}%`;
+            statusEl.className = 'text-warning';
+        } else {
+            statusEl.textContent = `زائد ${total - 100}%`;
+            statusEl.className = 'text-danger';
+        }
+    }
+
+    document.querySelectorAll('#standardPaymentFields input[type="number"]').forEach(input => {
+        input.addEventListener('input', calculateTotalPercentage);
+    });
+
+    // ============================================
+    // 7. الغرامات
+    // ============================================
+    document.getElementById('penaltiesToggle').addEventListener('change', function() {
+        document.getElementById('penaltiesFields').classList.toggle('show', this.checked);
+    });
+
+    // تهيئة عند التحميل
+    document.addEventListener('DOMContentLoaded', function() {
+        calculateTotalPercentage();
+    });
+</script>

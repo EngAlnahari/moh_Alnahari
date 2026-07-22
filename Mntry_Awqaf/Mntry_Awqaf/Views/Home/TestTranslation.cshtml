@@ -1,0 +1,153 @@
+@{
+    ViewData["Title"] = "اختبار نظام الترجمة";
+}
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title" data-translate="test_translation">اختبار نظام الترجمة</h3>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h5 data-translate="basic_elements">العناصر الأساسية</h5>
+                            <div class="mb-3">
+                                <label class="form-label" data-translate="username">اسم المستخدم</label>
+                                <input type="text" class="form-control" placeholder="أدخل اسم المستخدم" data-translate="enter_username">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label" data-translate="password">كلمة المرور</label>
+                                <input type="password" class="form-control" placeholder="أدخل كلمة المرور" data-translate="enter_password">
+                            </div>
+                            <div class="mb-3">
+                                <button type="button" class="btn btn-primary me-2" data-translate="save">حفظ</button>
+                                <button type="button" class="btn btn-secondary me-2" data-translate="cancel">إلغاء</button>
+                                <button type="button" class="btn btn-danger" data-translate="delete">حذف</button>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-6">
+                            <h5 data-translate="status_messages">رسائل الحالة</h5>
+                            <div class="alert alert-success" role="alert">
+                                <span data-translate="success_message">تم حفظ البيانات بنجاح!</span>
+                            </div>
+                            <div class="alert alert-warning" role="alert">
+                                <span data-translate="warning_message">يرجى مراجعة البيانات المدخلة</span>
+                            </div>
+                            <div class="alert alert-danger" role="alert">
+                                <span data-translate="error_message">حدث خطأ أثناء حفظ البيانات</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <hr class="my-4">
+                    
+                    <div class="row">
+                        <div class="col-12">
+                            <h5 data-translate="language_controls">أدوات التحكم باللغة</h5>
+                            <div class="d-flex gap-2 mb-3">
+                                <button type="button" class="btn btn-outline-primary" onclick="switchToEnglish()">
+                                    🇺🇸 English
+                                </button>
+                                <button type="button" class="btn btn-outline-primary" onclick="switchToArabic()">
+                                    🇸🇦 العربية
+                                </button>
+                                <button type="button" class="btn btn-outline-info" onclick="showCurrentLanguage()">
+                                    ℹ️ اللغة الحالية
+                                </button>
+                            </div>
+                            
+                            <div class="alert alert-info">
+                                <strong data-translate="current_language">اللغة الحالية:</strong> 
+                                <span id="currentLanguageDisplay">English</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <hr class="my-4">
+                    
+                    <div class="row">
+                        <div class="col-12">
+                            <h5 data-translate="translation_examples">أمثلة على الترجمة</h5>
+                            <div class="table-responsive">
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th data-translate="english">English</th>
+                                            <th data-translate="arabic">العربية</th>
+                                            <th data-translate="status">الحالة</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Dashboard</td>
+                                            <td>لوحة التحكم</td>
+                                            <td><span class="badge bg-success" data-translate="translated">مترجم</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Settings</td>
+                                            <td>الإعدادات</td>
+                                            <td><span class="badge bg-success" data-translate="translated">مترجم</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Profile</td>
+                                            <td>الملف الشخصي</td>
+                                            <td><span class="badge bg-success" data-translate="translated">مترجم</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Reports</td>
+                                            <td>التقارير</td>
+                                            <td><span class="badge bg-success" data-translate="translated">مترجم</span></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        // دوال مساعدة لاختبار النظام
+        function switchToEnglish() {
+            if (window.languageSwitcher) {
+                window.languageSwitcher.setLanguage('en');
+                updateLanguageDisplay();
+            }
+        }
+        
+        function switchToArabic() {
+            if (window.languageSwitcher) {
+                window.languageSwitcher.setLanguage('ar');
+                updateLanguageDisplay();
+            }
+        }
+        
+        function showCurrentLanguage() {
+            if (window.languageSwitcher) {
+                const currentLang = window.languageSwitcher.getCurrentLanguage();
+                const langName = currentLang === 'ar' ? 'العربية' : 'English';
+                alert(`اللغة الحالية: ${langName}`);
+            }
+        }
+        
+        function updateLanguageDisplay() {
+            const display = document.getElementById('currentLanguageDisplay');
+            if (display && window.languageSwitcher) {
+                const currentLang = window.languageSwitcher.getCurrentLanguage();
+                display.textContent = currentLang === 'ar' ? 'العربية' : 'English';
+            }
+        }
+        
+        // تحديث العرض عند تحميل الصفحة
+        document.addEventListener('DOMContentLoaded', () => {
+            setTimeout(updateLanguageDisplay, 1000);
+        });
+    </script>
+}

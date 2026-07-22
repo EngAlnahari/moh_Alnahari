@@ -1,0 +1,66 @@
+Changed database context to 'Awqaf33'.
+name                                                                                                                             collation_name                                                                                                                  
+-------------------------------------------------------------------------------------------------------------------------------- --------------------------------------------------------------------------------------------------------------------------------
+Awqaf33                                                                                                                          SQL_Latin1_General_CP1_CI_AS                                                                                                    
+
+(1 rows affected)
+Msg 5030, Level 16, State 5, Server DESKTOP-JP00L7H, Line 3
+The database could not be exclusively locked to perform the operation.
+Msg 5072, Level 16, State 1, Server DESKTOP-JP00L7H, Line 3
+ALTER DATABASE failed. The default collation of database 'Awqaf33' cannot be set to Arabic_CI_AS.
+Msg 8624, Level 16, State 1, Server DESKTOP-JP00L7H, Line 11
+Internal Query Processor Error: The query processor could not produce a query plan. For more information, contact Customer Support Services.
+Checking identity information: current identity value '4'.
+DBCC execution completed. If DBCC printed error messages, contact your system administrator.
+Checking identity information: current identity value '5'.
+DBCC execution completed. If DBCC printed error messages, contact your system administrator.
+Checking identity information: current identity value '10'.
+DBCC execution completed. If DBCC printed error messages, contact your system administrator.
+Checking identity information: current identity value '1'.
+DBCC execution completed. If DBCC printed error messages, contact your system administrator.
+Checking identity information: current identity value '1'.
+DBCC execution completed. If DBCC printed error messages, contact your system administrator.
+Checking identity information: current identity value '4'.
+DBCC execution completed. If DBCC printed error messages, contact your system administrator.
+Checking identity information: current identity value '4'.
+DBCC execution completed. If DBCC printed error messages, contact your system administrator.
+Checking identity information: current identity value '4'.
+DBCC execution completed. If DBCC printed error messages, contact your system administrator.
+Checking identity information: current identity value '4'.
+DBCC execution completed. If DBCC printed error messages, contact your system administrator.
+Checking identity information: current identity value '4'.
+DBCC execution completed. If DBCC printed error messages, contact your system administrator.
+Checking identity information: current identity value '4'.
+DBCC execution completed. If DBCC printed error messages, contact your system administrator.
+Msg 2627, Level 14, State 1, Server DESKTOP-JP00L7H, Line 3
+Violation of PRIMARY KEY constraint 'PK_Users'. Cannot insert duplicate key in object 'dbo.Users'. The duplicate key value is (1).
+The statement has been terminated.
+Msg 2627, Level 14, State 1, Server DESKTOP-JP00L7H, Line 3
+Violation of PRIMARY KEY constraint 'PK_Almjals'. Cannot insert duplicate key in object 'dbo.Almjals'. The duplicate key value is (1).
+The statement has been terminated.
+Msg 2627, Level 14, State 1, Server DESKTOP-JP00L7H, Line 3
+Violation of PRIMARY KEY constraint 'PK_Classification'. Cannot insert duplicate key in object 'dbo.Classification'. The duplicate key value is (1).
+The statement has been terminated.
+Msg 2627, Level 14, State 1, Server DESKTOP-JP00L7H, Line 3
+Violation of PRIMARY KEY constraint 'PK_WorkOffer'. Cannot insert duplicate key in object 'dbo.WorkOffer'. The duplicate key value is (1).
+The statement has been terminated.
+Msg 2627, Level 14, State 1, Server DESKTOP-JP00L7H, Line 3
+Violation of PRIMARY KEY constraint 'PK_AdditionalCostType'. Cannot insert duplicate key in object 'dbo.AdditionalCostType'. The duplicate key value is (1).
+The statement has been terminated.
+Msg 2627, Level 14, State 1, Server DESKTOP-JP00L7H, Line 3
+Violation of PRIMARY KEY constraint 'PK_Certificates'. Cannot insert duplicate key in object 'dbo.Certificates'. The duplicate key value is (1).
+The statement has been terminated.
+Msg 2627, Level 14, State 1, Server DESKTOP-JP00L7H, Line 3
+Violation of PRIMARY KEY constraint 'PK_Projects'. Cannot insert duplicate key in object 'dbo.Projects'. The duplicate key value is (1).
+The statement has been terminated.
+Msg 2627, Level 14, State 1, Server DESKTOP-JP00L7H, Line 3
+Violation of PRIMARY KEY constraint 'PK_Notifications'. Cannot insert duplicate key in object 'dbo.Notifications'. The duplicate key value is (1).
+The statement has been terminated.
+Msg 2627, Level 14, State 1, Server DESKTOP-JP00L7H, Line 3
+Violation of PRIMARY KEY constraint 'PK_Lands'. Cannot insert duplicate key in object 'dbo.Lands'. The duplicate key value is (1).
+The statement has been terminated.
+Result                                                         
+---------------------------------------------------------------
+تم إدخال البيانات بالترميز الصحيح!
+
+(1 rows affected)

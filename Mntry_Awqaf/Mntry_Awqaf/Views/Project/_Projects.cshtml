@@ -1,0 +1,92 @@
+﻿@model List<Mntry_Awqaf.Models.Project>
+
+<div class="section">
+    <div class="section-header" onclick="toggleSection('projects')">المشاريع</div>
+    <div class="section-content" id="projects">
+
+        <div class="row g-2 mb-3">
+            <div class="col-md-3"><input type="text" id="ProjName" class="form-control" placeholder="اسم المشروع"></div>
+            <div class="col-md-3"><input type="text" id="ProjCompany" class="form-control" placeholder="جهة العمل"></div>
+            <div class="col-md-3"><input type="text" id="ProjField" class="form-control" placeholder="المجال"></div>
+            <div class="col-md-3"><input type="text" id="ProjValue" class="form-control" placeholder="القيمة التقريبية"></div>
+        </div>
+        <div class="row g-2 mb-3">
+            <div class="col-md-3"><input type="date" id="ProjFrom" class="form-control"></div>
+            <div class="col-md-3"><input type="date" id="ProjTo" class="form-control"></div>
+            <div class="col-md-6"><input type="text" id="ProjRole" class="form-control" placeholder="الدور"></div>
+        </div>
+
+        <div id="proj-msg" style="display:none;" class="mb-3"></div>
+        <button class="btn btn-outline-primary w-100 mb-3" onclick="saveProject()">حفظ المشروع</button>
+
+        <div id="projects-list">
+            @foreach (var p in Model)
+            {
+                <div class="item-box" data-id="@p.Id">
+                    <div>
+                        <strong>@p.ProjName</strong> - @p.ProjCompany (@p.ProjField)<br />
+                        <small>@p.ProjFrom - @p.ProjTo</small><br />
+                        الدور: @p.ProjRole - القيمة: @p.ProjValue
+                    </div>
+                    <div class="action-btns">
+                        <button class="btn btn-sm btn-outline-primary" onclick="editProject(@p.Id)">تعديل</button>
+                        <button class="btn btn-sm btn-outline-danger" onclick="deleteProject(@p.Id)">حذف</button>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+<script>
+    let editProjId = 0;
+
+    function loadProjects() {
+        $("#projects-list").load("/Project/GetUserProjects #projects-list > *");
+    }
+
+    function editProject(id){
+        $.get(`/Project/GetById?id=${id}`, function(res){
+            if(res){
+                $('#ProjName').val(res.projName);
+                $('#ProjCompany').val(res.projCompany);
+                $('#ProjField').val(res.projField);
+                $('#ProjValue').val(res.projValue);
+                $('#ProjFrom').val(res.projFrom);
+                $('#ProjTo').val(res.projTo);
+                $('#ProjRole').val(res.projRole);
+                editProjId = res.id;
+                $('#proj-msg').text('✏️ الآن يمكنك تعديل المشروع').css('color','blue').show();
+            }
+        });
+    }
+
+    function saveProject() {
+        const data = new FormData();
+        ["ProjName","ProjCompany","ProjField","ProjValue","ProjFrom","ProjTo","ProjRole"].forEach(id=>data.append(id,$(`#${id}`).val()));
+        if(editProjId>0) data.append("id", editProjId);
+        const url = editProjId>0 ? '/Project/UpdateProject' : '/Project/CreateProject';
+
+        $.ajax({
+            url:url,type:'POST',data:data,contentType:false,processData:false,
+            success:function(res){
+                if(res.success){
+                    loadProjects();
+                    $('#proj-msg').text('✅ تم الحفظ بنجاح').css('color','green').show();
+                    ["ProjName","ProjCompany","ProjField","ProjValue","ProjFrom","ProjTo","ProjRole"].forEach(id=>$(`#${id}`).val(''));
+                    editProjId=0;
+                } else $('#proj-msg').text('❌ حدث خطأ').css('color','red').show();
+            }
+        });
+    }
+
+    function deleteProject(id){
+        if(!confirm("هل تريد حذف هذا المشروع؟")) return;
+        $.post('/Project/DeleteProject',{id:id},function(res){
+            if(res.success){ loadProjects(); $('#proj-msg').text('🗑️ تم الحذف').css('color','green').show(); }
+            else $('#proj-msg').text('❌ فشل الحذف').css('color','red').show();
+        });
+    }
+
+    $(document).ready(loadProjects);
+</script>

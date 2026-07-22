@@ -1,0 +1,1009 @@
+﻿@model Mntry_Awqaf.Models.WorkOfferDataDto
+@{
+    ViewData["Title"] = "بيانات المهندس";
+}
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+@* <html lang="ar" dir="rtl"> *@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لوحة العقود للمهندس</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <style>
+        body {
+            font-family: 'Roboto', 'Cairo', sans-serif;
+            background: #f8f9fa;
+        }
+
+        .contracts-list {
+            max-width: 1200px;
+            margin: 40px auto;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 32px;
+            justify-content: center;
+        }
+
+        .contract-card {
+            width: 420px;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 2px 12px #0002;
+            padding: 32px 28px 24px 28px;
+            margin-bottom: 0;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .contract-header {
+            text-align: center;
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 18px;
+        }
+
+        .contract-section {
+            margin-bottom: 14px;
+        }
+
+        .contract-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+            .contract-table th, .contract-table td {
+                border: 1px solid #dee2e6;
+                padding: 6px 8px;
+                text-align: right;
+                font-size: 14px;
+            }
+
+            .contract-table th {
+                background: #f1f3f4;
+            }
+
+        .signatures {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 24px;
+        }
+
+        .signature-block {
+            text-align: center;
+            width: 40%;
+        }
+
+        .footer {
+            text-align: center;
+            color: #888;
+            margin-top: 18px;
+            font-size: 13px;
+        }
+
+        .contract-actions {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 18px;
+            flex-wrap: wrap;
+        }
+
+        .btn-approve, .btn-reject {
+            border: none;
+            border-radius: 6px;
+            padding: 6px 16px;
+            font-size: 0.85rem;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-weight: 500;
+            min-width: 80px;
+            text-align: center;
+        }
+
+        .btn-approve {
+            background: #27ae60;
+            color: #fff;
+        }
+
+            .btn-approve:hover {
+                background: #219150;
+                transform: translateY(-1px);
+                box-shadow: 0 2px 4px rgba(39, 174, 96, 0.3);
+            }
+
+        .btn-reject {
+            background: #e74c3c;
+            color: #fff;
+        }
+
+            .btn-reject:hover {
+                background: #c0392b;
+                transform: translateY(-1px);
+                box-shadow: 0 2px 4px rgba(231, 76, 60, 0.3);
+            }
+
+        /* Inline Form Styles */
+        .reject-form {
+            display: none;
+            background: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 8px;
+            padding: 20px;
+            margin-top: 15px;
+        }
+
+            .reject-form h4 {
+                margin-top: 0;
+                color: #2c3e50;
+                text-align: center;
+                margin-bottom: 15px;
+            }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+            .form-group label {
+                display: block;
+                margin-bottom: 5px;
+                font-weight: bold;
+                color: #2c3e50;
+            }
+
+            .form-group select {
+                width: 100%;
+                padding: 8px;
+                border: 1px solid #ddd;
+                border-radius: 4px;
+            }
+
+            .form-group textarea {
+                width: 100%;
+                padding: 8px;
+                border: 1px solid #ddd;
+                border-radius: 4px;
+                resize: vertical;
+                min-height: 80px;
+            }
+
+        .form-buttons {
+            text-align: center;
+            margin-top: 15px;
+        }
+
+            .form-buttons button {
+                margin: 0 5px;
+                padding: 8px 20px;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+            }
+
+        .btn-cancel {
+            background: #95a5a6;
+            color: white;
+        }
+
+        .btn-submit {
+            background: #e74c3c;
+            color: white;
+        }
+
+        .btn-cancel:hover {
+            background: #7f8c8d;
+        }
+
+        .btn-submit:hover {
+            background: #c0392b;
+        }
+    </style>
+</head>
+<body>
+    <div class="contracts-list" dir="rtl">
+        <!-- عقد 1 -->
+        <div class="contract-card">
+
+            <div class="contract-header">عقد عمل</div>
+
+            <!-- بيانات العقد -->
+           <div class="contract-section">
+            <strong>تاريخ العقد:</strong> <span>2024-06-07</span> &nbsp; <strong>الوقت:</strong> <span>10:30 صباحًا</span>
+        </div>
+
+        @if (Model.TanjezOrder != null)
+        {
+            <div class="contract-section">
+                <strong>الطرف الأول:</strong> <span> ...</span>
+            </div>
+            <div class="contract-section">
+                <strong> اسم المهندس:</strong> <span> @(Model.UserName ?? "...")</span> &nbsp;
+                <strong>رقم البطاقة الشخصية :</strong> <span></span>
+            </div>
+            <div class="contract-section">
+                <strong>الطرف الثاني:</strong> <span> ...</span>
+            </div>
+            <div class="contract-section">
+                <strong> اسم العميل:</strong> <span> @(Model.TanjezOrder.CreateOrderName ?? "...")</span> &nbsp;
+                <strong> رقم البطاقة:</strong> <span></span>
+            </div>
+            <div class="contract-section">
+                <strong> على التالي:</strong> <span> ...</span>
+            </div>
+                @* <input type="number" name="ClientId" value="@Model.TanjezOrder?.UserID" /> *@
+
+           
+               <!-- حاوية البنود -->
+<div id="contractItemsContainer">
+    @if (Model.ContractItems != null && Model.ContractItems.Any())
+    {
+        foreach (var item in Model.ContractItems.OrderBy(x => x.Count))
+        {
+            <div class="contract-section">
+                <strong>@item.Count- @item.Title:</strong>
+                @if (!string.IsNullOrEmpty(item.DescriptionTemplate))
+                {
+                    @Html.Raw(item.DescriptionTemplate.Replace("<br/>", "<div></div>"))
+                }
+            </div>
+        }
+
+    }
+</div>
+
+
+
+
+
+        }
+        else
+        {
+            <p>لا توجد بيانات للطلب.</p>
+        }
+
+       
+            <!-- نموذج الموافقة على العقد -->
+            <form id="approveContractForm">
+                @Html.AntiForgeryToken() <!-- مهم إذا تستخدم AntiForgery -->
+                <input type="hidden" name="OrderId" value="@Model.TanjezOrder?.Id" />
+                <input type="hidden" name="OfferId" value="@Model?.workofferid" />
+                <input type="hidden" name="EngineerId" value="@Model?.userid" />
+                <input type="hidden" name="FirstParty" value="@Model.TanjezOrder?.CreateOrderName" />
+                <input type="hidden" name="SecondParty" value="@Model.UserName" />
+                @* <input type="hidden" name="WorkContractDate" value="@DateTime.Now.ToString("yyyy-MM-dd")" /> *@
+                <input type="hidden" name="WorkContractDate" value="@Model.FromDate" />
+                <input type="hidden" name="WorkContractTime" value="@Model.ToDate" />
+                @* <input type="hidden" name="WorkContractTime" value="@DateTime.Now.TimeOfDay" /> *@
+                <input type="hidden" name="Location" value="@Model.TanjezOrder?.Village" />
+                <input type="hidden" name="WorkType" value="@Model.TanjezOrder?.PlaceName" />
+                <input type="hidden" name="Type" value="@Model.TanjezOrder?.TypePiece" />
+                <input type="hidden" name="Space" value="@Model.TanjezOrder?.Space" />
+                <input type="hidden" name="Governorate" value="@Model.TanjezOrder?.City" />
+                <input type="hidden" name="ClientId" value="@Model.TanjezOrder?.UserID" />
+                <input type="hidden" name="Transportation" value="@Model.TotalTransportationCost" />
+                <input type="hidden" name="AdditionalCostsTotal" value="@Model.AdditionalCostsTotal" />
+
+                @{
+                    var totalCost = (Model.SpecificSpaceTemplates.FirstOrDefault()?.Price ?? 0m) // ملاحظة: 0m بدلاً من 0
+                    + (Model.TotalTransportationCost )
+                    + (Model.AdditionalCostsTotal );
+                }
+
+                <input type="hidden" name="WorkCost" value="@totalCost" />
+
+
+
+                <input type="hidden" name="AfterDeliveryPaymentPercentage" value="@Model.OfferName1" />
+                <input type="hidden" name="CamelResignationPenaltyPercentage" value="@Model.OfferName2" />
+                <input type="hidden" name="OnSitePaymentPercentage" value="@Model.OfferName3" />
+                <input type="hidden" name="ResignationAfterAdvancePercentage" value="@Model.OfferName4" />
+                <input type="hidden" name="AdvancePaymentPercentage" value="@Model.OfferName5" />
+                <input type="hidden" name="LatePenaltyPercentage" value="@Model.OfferName6" />
+
+               @*  <input type="hidden" name="OrderId" value="@Model.TanjezOrder?.Id" />
+                <input type="hidden" name="OfferId" value="@Model?.workofferid" />
+                <input type="hidden" name="EngineerId" value="@Model?.userid" />
+
+                <input type="hidden" name="FirstParty" value="@Model.TanjezOrder?.CreateOrderName" />
+                <input type="hidden" name="SecondParty" value="@Model.UserName" />
+
+                <input type="hidden" name="WorkContractDate" value="@DateTime.Now.ToString("yyyy-MM-dd")" />
+                <input type="hidden" name="WorkContractTime" value="@DateTime.Now.TimeOfDay" />
+
+                <input type="hidden" name="Transportation" value="@Model.TotalTransportationCost" />
+                <input type="hidden" name="AdditionalCostsTotal" value="@Model.AdditionalCostsTotal" />
+                <input type="hidden" name="WorkCost" value="@Model.SelectedPrice" /> *@
+
+                <div class="contract-actions">
+                    <button type="submit" class="btn btn-success">الموافقة على العقد</button>
+                </div>
+            </form>
+            @if (TempData.ContainsKey("SuccessMessage"))
+            {
+                <div id="temp-message" class="alert alert-info" style="display:none;">
+                    @TempData["SuccessMessage"]
+                </div>
+            }
+
+            <div class="contract-actions" id="contractActions">
+                <button class="btn-reject">الاعتراض على احد البنود</button>
+                <button class="btn-reject"> تعديل بند</button>
+                <button class="btn btn-danger" id="showAddItemModalBtn">اضافة بند</button>
+
+            </div>
+            <div id="temp-message" class="alert alert-info" style="display:none;"></div>
+            <!-- المودال لإضافة/تعديل الاعتراضات -->
+            <div class="modal fade" id="amendmentModal" tabindex="-1">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">إرسال اعتراض / تعديل بند</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+                        <form id="amendmentForm">
+                            <div class="modal-body">
+                                <div class="mb-3">
+                                    <label>نوع الإجراء</label>
+                                    <select class="form-select" id="AmendmentType" name="AmendmentType" required>
+                                        <option value="">-- اختر --</option>
+                                        <option value="Modification">تعديل بند</option>
+                                        <option value="Addition">إضافة بند جديد</option> 
+                                    </select>
+                                </div>
+
+                                <!-- اسم البند -->
+                                <!-- اسم البند -->
+                                <div class="mb-3" id="fieldNameWrapper" style="display:none;">
+                                    <label>اسم البند</label>
+                                    <select id="FieldName" class="form-select text-end" style="direction: rtl;">
+                                        <option value="">-- اختر اسم البند --</option>
+                                        @if (Model.ContractItems != null && Model.ContractItems.Any())
+                                        {
+                                            foreach (var item in Model.ContractItems.OrderBy(x => x.Count))
+                                            {
+                                                <option value="@item.Count- @item.Title">
+                                                    @item.Count- @(item.DescriptionTemplate != null && item.DescriptionTemplate.Length > 80 ? item.DescriptionTemplate.Substring(0, 60) + "......" : item.DescriptionTemplate)
+                                                </option>
+
+                                            }
+                                        }
+                                    </select>
+                                </div>
+                                <input id="ClientID" type="hidden" name="ClientId"
+                                       value="@(Context.Session.GetInt32("UserID") ?? Model.TanjezOrder?.UserID ?? 0)" />
+
+
+                                <!-- الوصف -->
+                                <div class="mb-3" id="descriptionWrapper" style="display:none;">
+                                    <label>التفاصيل</label>
+                                    <textarea class="form-control" id="Description" rows="4"></textarea>
+                                </div>
+
+                                <!-- حقول التعديل -->
+                                <div id="modificationFields" style="display:none;">
+                                    <div class="mb-3" id="newValueWrapper">
+                                        <label>القيمة الجديدة</label>
+                                        <input type="text" id="NewValue" class="form-control" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">إلغاء</button>
+                                <button type="submit" class="btn btn-primary">إضافة</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- زر إضافة بند -->
+
+            <!-- مودال إضافة بند -->
+            <div class="modal fade" id="addItemModal" tabindex="-1" aria-labelledby="addItemModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="addItemModalLabel">إضافة بند جديد</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form id="addItemForm">
+                                <input type="hidden" id="UserID" value="@(Context.Session.GetInt32("UserID") ?? Model.TanjezOrder?.UserID ?? 0)" />
+
+                                <div class="mb-3">
+                                    <label for="newItemCount" class="form-label">ترتيب البند</label>
+                                    <input type="number" id="newItemCount" class="form-control" placeholder="أدخل رقم ترتيب البند" required>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="newItemTitle" class="form-label">عنوان البند</label>
+                                    <input type="text" id="newItemTitle" class="form-control" placeholder="أدخل عنوان البند" required>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="newItemDescription" class="form-label">وصف البند</label>
+                                    <textarea id="newItemDescription" class="form-control" rows="4" placeholder="أدخل وصف البند"></textarea>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">إلغاء</button>
+                            <button type="button" class="btn btn-primary" id="saveNewItemBtn">حفظ</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <script>
+                document.addEventListener("DOMContentLoaded", function () {
+                    // =========================
+                    // تخزين الاعتراضات والتعديلات والبنود الجديدة مؤقتًا
+                    // =========================
+                    let amendments = [];
+                    let newItems = [];
+
+                    // =========================
+                    // مودال إضافة بند جديد
+                    // =========================
+                    const addItemModal = new bootstrap.Modal(document.getElementById("addItemModal"));
+                    const addItemBtn = document.getElementById("showAddItemModalBtn");
+
+                    addItemBtn.addEventListener("click", () => addItemModal.show());
+
+                    document.getElementById("saveNewItemBtn").addEventListener("click", () => {
+                        const count = document.getElementById("newItemCount").value.trim();
+                        const title = document.getElementById("newItemTitle").value.trim();
+                        const description = document.getElementById("newItemDescription").value.trim();
+                        const userId = document.getElementById("UserID").value;
+
+                        if (!title) {
+                            alert("الرجاء إدخال اسم البند!");
+                            return;
+                        }
+                        if (!count || isNaN(count)) {
+                            alert("الرجاء إدخال رقم ترتيب صالح للبند!");
+                            return;
+                        }
+
+                        const newItem = {
+                            Title: title,
+                            DescriptionTemplate: description,
+                            UserID: parseInt(userId),
+                            Count: parseInt(count)
+                        };
+
+                        // إضافة البند إلى المصفوفة المؤقتة
+                        newItems.push(newItem);
+
+                        // إضافة البند للقائمة select
+                        const select = document.getElementById("FieldName");
+                        const option = document.createElement("option");
+                        option.value = title; // يمكن تعديل القيمة حسب حاجتك
+                        option.text = count + "- " + title;
+                        select.appendChild(option);
+
+                        // عرض البند مباشرة في صفحة البنود
+                        const container = document.getElementById("contractItemsContainer");
+                        const contractSection = document.createElement("div");
+                        contractSection.classList.add("contract-section");
+                        contractSection.innerHTML = `<strong>${count}- ${title}:</strong> ${description.replace(/\n/g, "<div></div>")}`;
+                        container.appendChild(contractSection);
+
+                        // إغلاق المودال ومسح الحقول
+                        addItemModal.hide();
+                        document.getElementById("addItemForm").reset();
+                    });
+
+                    // =========================
+                    // مودال الاعتراضات/التعديلات
+                    // =========================
+                    const amendmentModal = new bootstrap.Modal(document.getElementById('amendmentModal'));
+                    const amendmentType = document.getElementById("AmendmentType");
+                    const descriptionWrapper = document.getElementById("descriptionWrapper");
+                    const modificationFields = document.getElementById("modificationFields");
+                    const fieldNameWrapper = document.getElementById("fieldNameWrapper");
+                    const newValueWrapper = document.getElementById("newValueWrapper");
+                    const tempMessage = document.getElementById("temp-message");
+
+                    const hiddenTypeInput = document.createElement("input");
+                    hiddenTypeInput.type = "hidden";
+                    hiddenTypeInput.id = "HiddenAmendmentType";
+                    hiddenTypeInput.name = "HiddenAmendmentType";
+                    document.getElementById("amendmentForm").appendChild(hiddenTypeInput);
+
+                    function showTempMessage(msg) {
+                        if(tempMessage) {
+                            tempMessage.style.display = "block";
+                            tempMessage.innerText = msg;
+                            setTimeout(() => tempMessage.style.display = "none", 3000);
+                        }
+                    }
+
+                    amendmentType.addEventListener("change", function() {
+                        if(this.value === "Modification") {
+                            modificationFields.style.display = "block";
+                            fieldNameWrapper.style.display = "block";
+                            newValueWrapper.style.display = "block";
+                            hiddenTypeInput.value = "Modification";
+                            descriptionWrapper.style.display = "block";
+                        } else if(this.value === "Addition") {
+                            modificationFields.style.display = "block";
+                            fieldNameWrapper.style.display = "block";
+                            newValueWrapper.style.display = "none";
+                            descriptionWrapper.style.display = "block";
+                            hiddenTypeInput.value = "Addition";
+                        } else {
+                            modificationFields.style.display = "none";
+                            fieldNameWrapper.style.display = "none";
+                            descriptionWrapper.style.display = "none";
+                            hiddenTypeInput.value = "";
+                        }
+                    });
+
+                    // فتح المودال حسب الزر
+                    document.querySelectorAll(".btn-reject").forEach(btn => {
+                        btn.addEventListener("click", () => {
+                            const actionText = btn.textContent.trim();
+                            const form = document.getElementById("amendmentForm");
+                            form.reset();
+
+                            if(actionText.includes("الاعتراض")) {
+                                hiddenTypeInput.value = "Objection";
+                                amendmentType.required = false;
+                                amendmentType.parentElement.style.display = "none";
+                                fieldNameWrapper.style.display = "block";
+                                newValueWrapper.style.display = "none";
+                                modificationFields.style.display = "none";
+                                descriptionWrapper.style.display = "block";
+                            } else {
+                                hiddenTypeInput.value = "";
+                                amendmentType.required = true;
+                                amendmentType.parentElement.style.display = "block";
+                                fieldNameWrapper.style.display = "block";
+                                newValueWrapper.style.display = "none";
+                                modificationFields.style.display = "none";
+                                descriptionWrapper.style.display = "block";
+                            }
+
+                            amendmentModal.show();
+                        });
+                    });
+
+                    // حفظ الاعتراض/التعديل/الإضافة مؤقتًا
+                    document.getElementById("amendmentForm").addEventListener("submit", function(e){
+                        e.preventDefault();
+                        const type = hiddenTypeInput.value || amendmentType.value;
+                        const description = document.getElementById("Description").value.trim();
+                        const fieldName = document.getElementById("FieldName").value.trim() || null;
+                        const newValue = document.getElementById("NewValue").value.trim() || null;
+                        const clientRaw = document.getElementById("ClientID").value;
+                        const clientId = clientRaw === "" ? null : parseInt(clientRaw, 10);
+
+                        if(type === "Objection") {
+                            if(!fieldName || !description) { showTempMessage("يرجى إدخال اسم البند والتفاصيل."); return; }
+                        } else if(type === "Addition") {
+                            if(!description || !fieldName) { showTempMessage("يرجى تعبئة اسم البند والتفاصيل."); return; }
+                        } else if(type === "Modification") {
+                            if(!description || !fieldName || !newValue) { showTempMessage("يرجى تعبئة كل الحقول المطلوبة للتعديل."); return; }
+                        } else { showTempMessage("يرجى اختيار نوع الإجراء."); return; }
+
+                        amendments.push({
+                            AmendmentType: type,
+                            Description: description,
+                            FieldName: fieldName,
+                            NewValue: newValue,
+                            ClientId: clientId,
+                            EngineerId: @Model?.userid ?? 0
+                        });
+
+                        amendmentModal.hide();
+                        this.reset();
+                        hiddenTypeInput.value = "";
+                        amendmentType.required = true;
+                        amendmentType.parentElement.style.display = "block";
+                        fieldNameWrapper.style.display = "none";
+                        newValueWrapper.style.display = "none";
+                        modificationFields.style.display = "none";
+                        descriptionWrapper.style.display = "none";
+
+                        showTempMessage("تم إضافة الاعتراض/التعديل مؤقتاً.");
+                    });
+
+                    // إرسال العقد مع الاعتراضات والبنود الجديدة
+                    document.getElementById("approveContractForm").addEventListener("submit", async function(e){
+                        e.preventDefault();
+                        const form = e.target;
+                        const formData = new FormData(form);
+
+                        const tokenInput = form.querySelector('input[name="__RequestVerificationToken"]');
+                        if(tokenInput) formData.append("__RequestVerificationToken", tokenInput.value);
+
+                        formData.append("AmendmentsJson", JSON.stringify(amendments));
+                        formData.append("NewItemsJson", JSON.stringify(newItems));
+
+                        try {
+                            const response = await fetch("@Url.Action("CreateContract", "WorkContract")", {
+                                method: "POST",
+                                body: formData
+                            });
+                            const result = await response.json();
+
+                            if(result.success) {
+                                amendments = [];
+                                newItems = [];
+                                showTempMessage("✅ تم إنشاء العقد مع جميع الاعتراضات والبنود بنجاح!");
+                            } else {
+                                showTempMessage("❌ حدث خطأ: " + result.message);
+                            }
+                        } catch(err) {
+                            console.error(err);
+                            showTempMessage("⚠ حدث خطأ أثناء الاتصال بالسيرفر.");
+                        }
+                    });
+                });
+            </script>
+
+
+           @*  <script>
+                document.addEventListener("DOMContentLoaded", function () {
+                    var addItemModal = new bootstrap.Modal(document.getElementById("addItemModal"));
+                    var addItemBtn = document.getElementById("showAddItemModalBtn");
+
+                    addItemBtn.addEventListener("click", function () {
+                        addItemModal.show();
+                    });
+
+                    document.getElementById("saveNewItemBtn").addEventListener("click", function () {
+                        var count = document.getElementById("newItemCount").value.trim();
+                        var title = document.getElementById("newItemTitle").value.trim();
+                        var description = document.getElementById("newItemDescription").value.trim();
+                        var userId = document.getElementById("UserID").value;
+
+                        if (!title) {
+                            alert("الرجاء إدخال اسم البند!");
+                            return;
+                        }
+                        if (!count || isNaN(count)) {
+                            alert("الرجاء إدخال رقم ترتيب صالح للبند!");
+                            return;
+                        }
+
+                        var data = {
+                            Title: title,
+                            DescriptionTemplate: description,
+                            UserID: parseInt(userId),
+                            Count: parseInt(count)
+                        };
+
+                        fetch('@Url.Action("CreateContractItems", "TanjezOrder")', {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify(data)
+                        })
+                        .then(res => res.json())
+                        .then(result => {
+                            if (result && result.id) {
+                                // إضافة البند للقائمة select
+                                var select = document.getElementById("FieldName");
+                                var option = document.createElement("option");
+                                option.value = result.id + "- " + result.title;
+                                option.text = count + "- " + result.title;
+                                select.appendChild(option);
+
+                                // إضافة البند مباشرة في صفحة البنود
+                                var container = document.getElementById("contractItemsContainer");
+                                var contractSection = document.createElement("div");
+                                contractSection.classList.add("contract-section");
+                                contractSection.innerHTML = `<strong>${count}- ${title}:</strong> ${description.replace(/\n/g, "<div></div>")}`;
+                                container.appendChild(contractSection);
+
+                                // إغلاق المودال ومسح الحقول
+                                addItemModal.hide();
+                                document.getElementById("addItemForm").reset();
+                            } else {
+                                alert("حدث خطأ أثناء الحفظ!");
+                            }
+                        })
+                        .catch(err => console.error(err));
+                    });
+                });
+            </script>
+
+
+
+            <script>
+                document.addEventListener("DOMContentLoaded", function() {
+                    let amendments = [];
+                    const amendmentModal = new bootstrap.Modal(document.getElementById('amendmentModal'));
+                    const amendmentType = document.getElementById("AmendmentType");
+                    const descriptionWrapper = document.getElementById("descriptionWrapper");
+                    const modificationFields = document.getElementById("modificationFields");
+                    const fieldNameWrapper = document.getElementById("fieldNameWrapper");
+                    const newValueWrapper = document.getElementById("newValueWrapper");
+                    const tempMessage = document.getElementById("temp-message");
+
+                    // إضافة حقل مخفي لتخزين نوع الإجراء
+                    const hiddenTypeInput = document.createElement("input");
+                    hiddenTypeInput.type = "hidden";
+                    hiddenTypeInput.id = "HiddenAmendmentType";
+                    hiddenTypeInput.name = "HiddenAmendmentType";
+                    document.getElementById("amendmentForm").appendChild(hiddenTypeInput);
+
+                    function showTempMessage(msg) {
+                        if(tempMessage) {
+                            tempMessage.style.display = "block";
+                            tempMessage.innerText = msg;
+                            setTimeout(() => tempMessage.style.display = "none", 3000);
+                        }
+                    }
+
+                    // إظهار/إخفاء الحقول حسب النوع في select
+                    amendmentType.addEventListener("change", function() {
+                        if(this.value === "Modification") {
+                            modificationFields.style.display = "block";
+                            fieldNameWrapper.style.display = "block";
+                            newValueWrapper.style.display = "block";
+                           
+                            hiddenTypeInput.value = "Modification";
+                             descriptionWrapper.style.display = "block";
+                        } else if(this.value === "Addition") {
+                            modificationFields.style.display = "block";
+                            fieldNameWrapper.style.display = "block";
+                            newValueWrapper.style.display = "none";
+                            descriptionWrapper.style.display = "block";
+                            hiddenTypeInput.value = "Addition";
+                        } else {
+                            modificationFields.style.display = "none";
+                            fieldNameWrapper.style.display = "none";
+                            descriptionWrapper.style.display = "none";
+                            hiddenTypeInput.value = "";
+                        }
+                    });
+
+                    // فتح المودال حسب الزر
+                                   // فتح المودال حسب الزر
+                document.querySelectorAll(".btn-reject").forEach(btn => {
+                    btn.addEventListener("click", () => {
+                        const actionText = btn.textContent.trim();
+                        const form = document.getElementById("amendmentForm");
+                        form.reset(); // تنظيف الفورم
+
+                        if(actionText.includes("الاعتراض")) {
+                            hiddenTypeInput.value = "Objection";
+                            amendmentType.required = false;
+                            amendmentType.parentElement.style.display = "none";
+
+                            // عرض اسم البند أولاً
+                            fieldNameWrapper.style.display = "block";
+                            // اخفاء القيمة الجديدة
+                            newValueWrapper.style.display = "none";
+                            modificationFields.style.display = "none";
+
+                            // حقل التفاصيل دائمًا آخر
+                            descriptionWrapper.style.display = "block";
+                        } else { // إضافة أو تعديل
+                            hiddenTypeInput.value = "";
+                            amendmentType.required = true;
+                            amendmentType.parentElement.style.display = "block";
+
+                            // عرض الحقول المطلوبة حسب النوع
+                            fieldNameWrapper.style.display = "block";
+                            newValueWrapper.style.display = "none";
+                            modificationFields.style.display = "none";
+
+                            // حقل التفاصيل دائمًا آخر
+                            descriptionWrapper.style.display = "block";
+                        }
+
+                        amendmentModal.show();
+                    });
+                });
+
+
+                                   // حفظ الاعتراض/التعديل/الإضافة مؤقتًا
+                               document.getElementById("amendmentForm").addEventListener("submit", function(e){
+                    e.preventDefault();
+                    const type = hiddenTypeInput.value || amendmentType.value;
+                    const description = document.getElementById("Description").value.trim();
+                    const fieldName = document.getElementById("FieldName").value.trim() || null;
+                    const newValue = document.getElementById("NewValue").value.trim() || null;
+
+                    // ✅ تحويل ClientId لعدد أو null
+                    const clientRaw = document.getElementById("ClientID").value;
+                    const clientId = clientRaw === "" ? null : parseInt(clientRaw, 10);
+
+                    if(type === "Objection") {
+                        if(!fieldName || !description) {
+                            showTempMessage("يرجى إدخال اسم البند والتفاصيل.");
+                            return;
+                        }
+                    } else if(type === "Addition") {
+                        if(!description || !fieldName) {
+                            showTempMessage("يرجى تعبئة اسم البند والتفاصيل.");
+                            return;
+                        }
+                    } else if(type === "Modification") {
+                        if(!description || !fieldName || !newValue) {
+                            showTempMessage("يرجى تعبئة كل الحقول المطلوبة للتعديل.");
+                            return;
+                        }
+                    } else {
+                        showTempMessage("يرجى اختيار نوع الإجراء.");
+                        return;
+                    }
+
+                    amendments.push({
+                        AmendmentType: type,
+                        Description: description,
+                        FieldName: fieldName,
+                        NewValue: newValue,
+                        ClientId: clientId, // ✅ الآن رقم أو null وليس نص
+                        EngineerId: @Model?.userid ?? 0
+                    });
+
+                    amendmentModal.hide();
+                    this.reset();
+
+                    hiddenTypeInput.value = "";
+                    amendmentType.required = true;
+                    amendmentType.parentElement.style.display = "block";
+
+                    fieldNameWrapper.style.display = "none";
+                    newValueWrapper.style.display = "none";
+                    modificationFields.style.display = "none";
+                    descriptionWrapper.style.display = "none";
+
+                    showTempMessage("تم إضافة الاعتراض/التعديل مؤقتاً.");
+                });
+
+
+                    // إرسال العقد مع الاعتراضات
+                    document.getElementById("approveContractForm").addEventListener("submit", async function(e){
+                        e.preventDefault();
+                        const form = e.target;
+                        const formData = new FormData(form);
+
+                        const tokenInput = form.querySelector('input[name="__RequestVerificationToken"]');
+                        if(tokenInput) formData.append("__RequestVerificationToken", tokenInput.value);
+
+                        formData.append("AmendmentsJson", JSON.stringify(amendments));
+
+                        try {
+                            const response = await fetch("@Url.Action("CreateContract", "WorkContract")", {
+                                method: "POST",
+                                body: formData
+                            });
+                            const result = await response.json();
+
+                            if(result.success) {
+                                amendments = [];
+                                showTempMessage("✅ تم إنشاء العقد مع جميع الاعتراضات بنجاح!");
+                            } else {
+                                showTempMessage("❌ حدث خطأ: " + result.message);
+                            }
+                        } catch(err) {
+                            console.error(err);
+                            showTempMessage("⚠ حدث خطأ أثناء الاتصال بالسيرفر.");
+                        }
+                    });
+                });
+            </script>
+ *@
+
+
+      
+
+
+
+
+  
+</body>
+</html>
+
+
+
+
+
+@* 
+     @* <div class="contract-section">
+                <strong>1- يقوم الطرف الاول بمسح :</strong> <span>@(Model.TanjezOrder.TypePiece ?? "...")</span>
+                <strong>ومساحتها في الوثيقة:</strong> <span> @(Model.TanjezOrder.Space ?? 0)</span>
+                <strong>وحدودها:</strong> <span></span>
+            </div>
+           
+            <div class="contract-section">
+                <strong> حيث انها تحت :</strong> <span> @(Model.TanjezOrder.Alhiaza ?? "...") </span> &nbsp;
+            </div>
+            <div class="contract-section">
+                <strong>2- يقوم الطرف الثاني بدفع اجمالي مبلغ:</strong> <span>
+                    @{
+                        var totalCost = (Model.SpecificSpaceTemplates.FirstOrDefault()?.Price ?? 0)
+                        + Model.TotalTransportationCost
+                        + Model.AdditionalCostsTotal;
+                    }
+                    @totalCost
+                </span> &nbsp;
+                <strong>للطرف الاول كالتالي:</strong> <span></span>
+            </div>
+            <div class="contract-section">
+                <strong> مقدما:</strong> <span>(@(Model.OfferName2 ?? 0)%)</span> &nbsp;
+                <strong>عند النزول :</strong> <span>(@(Model.OfferName2 ?? 0)%)</span>
+                <strong>عند تسليم التقرير :</strong> <span>(@(Model.OfferName2 ?? 0)%)</span>
+            </div>
+            <div class="contract-section">
+                <strong>3- يحق للطرف الثاني الاعتراض على تقرير الطرف الاول وفي حال عدم قبول الطرف الاول :</strong> <span></span> &nbsp;
+                <strong>يمكن للطرف الثاني رفع الاعتراض الى المراجعة ويدفع مبلغ 20 الف ريال تعاد الية ان كان على صح او تخصم من مستحقات واجور المهندس</strong> <span> </span>
+            </div>
+            <div class="contract-section">
+                <strong>4- مدة تسليم التقرير:</strong> <span></span> &nbsp;
+                <strong> من :</strong> <span>0</span>
+                <strong>الى :</strong> <span>0</span>
+            </div>
+                <div class="contract-section">
+                    <h4>5- الغرامات والخصومات:</h4>
+                    <ol>
+                        <li>غرامات التأخر عن تسليم العمل عن المدة المتفق عليها (@(Model.OfferName1 ?? 0)%)</li>
+                        <li>في حال الاعتذار عن العمل بعد استلام الدفعة المقدمة (@(Model.OfferName3 ?? 0)%)</li>
+                        <li>في حال اعتذار الجمل عن العمل بعد استلام الدفعة المقدمة (@(Model.OfferName5 ?? 0)%)</li>
+                    </ol>
+                </div> *
+<input type="hidden" name="OrderId" value="@Model.TanjezOrder?.Id" />
+<input type="hidden" name="OfferId" value="@Model?.workofferid" />
+<input type="hidden" name="EngineerId" value="@Model?.userid" />
+<input type="hidden" name="FirstParty" value="@Model.TanjezOrder?.CreateOrderName" />
+<input type="hidden" name="SecondParty" value="@Model.UserName" />
+<input type="hidden" name="WorkContractDate" value="@DateTime.Now.ToString("yyyy-MM-dd")" />
+<input type="hidden" name="WorkContractTime" value="@DateTime.Now.TimeOfDay" />
+<input type="hidden" name="Location" value="@Model.TanjezOrder?.Village" />
+<input type="hidden" name="Type" value="@Model.TanjezOrder?.TypePiece" />
+<input type="hidden" name="Space" value="@Model.TanjezOrder?.Space" />
+<input type="hidden" name="Governorate" value="@Model.TanjezOrder?.City" />
+<input type="hidden" name="Transportation" value="@Model.TotalTransportationCost" />
+<input type="hidden" name="AdditionalCostsTotal" value="@Model.AdditionalCostsTotal" />
+<input type="hidden" name="WorkCost" value="@Model.SelectedPrice" />
+<input type="hidden" name="AfterDeliveryPaymentPercentage" value="@Model.OfferName1" />
+<input type="hidden" name="CamelResignationPenaltyPercentage" value="@Model.OfferName2" />
+<input type="hidden" name="OnSitePaymentPercentage" value="@Model.OfferName3" />
+<input type="hidden" name="ResignationAfterAdvancePercentage" value="@Model.OfferName4" />
+<input type="hidden" name="AdvancePaymentPercentage" value="@Model.OfferName5" />
+<input type="hidden" name="LatePenaltyPercentage" value="@Model.OfferName6" />
+
+ <div class="contract-section">
+                <h4>حدود الأرض</h4>
+                @if (Model.TanjezOrder.EarthBorders != null && Model.TanjezOrder.EarthBorders.Any())
+                {
+                    <table class="contract-table table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>م</th>
+                                <th>نوع الحد</th>
+                                <th>غير مطابق للواقع</th>
+                                <th>الحد كما في الوثيقة</th>
+                                <th>فرق</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @for (int i = 0; i < Model.TanjezOrder.EarthBorders.Count; i++)
+                            {
+                                var border = Model.TanjezOrder.EarthBorders[i];
+                                <tr>
+                                    <td>@(i + 1)</td>
+                                    <td>@(border.BorderType ?? "...")</td>
+                                    <td>@((border.IdenticalOrDifferent ?? 0) == 0 ? "لا" : "نعم")</td>
+                                    <td>@(border.BorderDescription ?? "...")</td>
+                                    @* <td>@(border.Difference ?? 0)m</td> *
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                }
+                else
+                {
+<p>لا توجد حدود مسجلة لهذه الأرض.</p>
+                }
+            </div>
+*@

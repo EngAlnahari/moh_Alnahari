@@ -1,0 +1,29 @@
+﻿@model Mntry_Awqaf.Models.TanjezOrder
+
+<div class="p-3">
+    <h5 class="text-danger mb-3">هل أنت متأكد أنك تريد حذف هذا الطلب؟</h5>
+
+    <div id="deleteMessage" class="mb-2"></div> <!-- رسالة النجاح/الفشل -->
+
+    <dl class="row">
+        <dt class="col-sm-4">@Html.DisplayNameFor(m => m.CreateOrderName)</dt>
+        <dd class="col-sm-8">@Html.DisplayFor(m => m.CreateOrderName)</dd>
+
+        <dt class="col-sm-4">@Html.DisplayNameFor(m => m.DescripPerson)</dt>
+        <dd class="col-sm-8">@Html.DisplayFor(m => m.DescripPerson)</dd>
+
+        <dt class="col-sm-4">@Html.DisplayNameFor(m => m.PurposeOrder)</dt>
+        <dd class="col-sm-8">@Html.DisplayFor(m => m.PurposeOrder)</dd>
+
+        <dt class="col-sm-4">@Html.DisplayNameFor(m => m.TypePiece)</dt>
+        <dd class="col-sm-8">@Html.DisplayFor(m => m.TypePiece)</dd>
+    </dl>
+
+    <form id="deleteForm">
+        <input type="hidden" name="id" value="@Model.Id" />
+        <div class="text-end mt-3">
+            <button type="submit" class="btn btn-danger">تأكيد الحذف</button>
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">إلغاء</button>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,22 @@
+﻿@model User
+
+
+
+@{
+    ViewData["Title"] = "Delete";
+    Layout = null;
+
+}
+
+<h1>حذف البيانات</h1>
+
+<h3> :هل انت متاكد من حذف بيانات  </h3>
+<div>
+    <h4>@Html.DisplayFor(model => model.Frist_Name)</h4>
+    <hr />
+
+    <form asp-action="Delete1">
+        <input type="submit" value="تاكيد الحذف" class="btn btn-danger" />
+
+    </form>
+</div>

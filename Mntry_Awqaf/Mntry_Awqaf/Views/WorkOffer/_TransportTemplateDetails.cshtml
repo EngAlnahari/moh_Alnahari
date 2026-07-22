@@ -1,0 +1,73 @@
+﻿@model List<Mntry_Awqaf.Models.TransportModel>
+<div class="col-md-4 mb-3">
+    <label class="form-label">عرض حسب الحساب</label>
+    <select id="filterAccount" class="form-select" onchange="filterTransportRows(this.value)">
+        <option value="">عرض الكل</option>
+        <option value="myAccount">على حسابي الخاص</option>
+        <option value="clientAccount">على حساب العميل</option>
+    </select>
+</div>
+
+<table class="table table-bordered align-middle text-center offer-table">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>المحافظة</th>
+            <th>رسوم التنقل</th>
+            <th>أجر المبيت</th>
+            <th>أجر النثريات</th>
+            <th>إجراءات</th>
+        </tr>
+    </thead>
+    <tbody id="transportRows">
+        @if (Model != null && Model.Any())
+        {
+            for (int i = 0; i < Model.Count; i++)
+            {
+                <tr>
+                    <td>@(i + 1)</td>
+                    <td class="governorate">@Model[i].Governorate</td>
+                    <td class="template-id d-none">@Model[i].TransportationScheduleTemplateID</td>
+                    <td class="status1 d-none">@Model[i].StatuseType1</td>
+                    <td class="status2 d-none">@Model[i].StatuseType2</td>
+                    <td class="transport-fees">@Model[i].TransportationFees</td>
+                    <td class="overnight-fees">@Model[i].OverNightFees</td>
+                    <td class="allowance-fees">@Model[i].AllowanceFees</td>
+                    <td class="d-none wage-id">@Model[i].ID</td>
+
+                    <td>
+                        <button type="button" class="btn btn-sm btn-outline-success" onclick="toggleTransportEdit(this)">تعديل</button>
+                       @*  <button type="button" class="btn btn-link text-danger p-0 remove-row-btn" onclick="this.closest('tr').remove()">
+                            <i class="bi bi-trash"></i>
+                        </button> *@
+                    </td>
+                </tr>
+            }
+        }
+        else
+        {
+            <tr><td colspan="9" class="text-center">لا توجد بيانات</td></tr>
+        }
+    </tbody>
+
+
+</table>
+<script>
+        function filterTransportRows(value) {
+        document.querySelectorAll("#transportRows tr").forEach(row => {
+            const statuse1 = row.querySelector("input[name='StatuseType1']")?.value;
+            const statuse2 = row.querySelector("input[name='StatuseType2']")?.value;
+
+            if (value === "myAccount" && statuse1 == "2") {
+                row.style.display = "";
+            } else if (value === "clientAccount" && statuse2 == "3") {
+                row.style.display = "";
+            } else if (value === "") {
+                row.style.display = "";
+            } else {
+                row.style.display = "none";
+            }
+        });
+    }
+
+</script>

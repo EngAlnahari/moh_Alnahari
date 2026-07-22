@@ -1,0 +1,50 @@
+﻿@model List<Mntry_Awqaf.Models.AdditionalCostModel>
+
+<table class="table table-bordered align-middle text-center offer-table" id="additionalCostTable">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th class="id d-none">ID</th>
+            <th class="type-id d-none">AdditionalCostTypeId</th>
+            <th>نوع التكلفة</th>
+            <th>السعر</th>
+            <th>الصورة</th>
+            <th>إجراءات</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model != null && Model.Any())
+        {
+            for (int i = 0; i < Model.Count; i++)
+            {
+                <tr>
+                    <td>@(i + 1)</td>
+                    <td class="id d-none">@Model[i].ID</td>
+                    <td class="type-id d-none">@Model[i].AdditionalCostTypeId</td>
+                    <td class="cost-type">@Model[i].CostType</td>
+                    <td class="price">@Model[i].Price</td>
+                    <td class="img">@Model[i].Img</td>
+                    <td>
+                        <button type="button" class="btn btn-outline-success btn-sm" onclick="toggleAdditionalEdit(this)">تعديل</button>
+                        <button type="button" class="btn btn-link text-danger p-0 remove-row-btn">
+                            <i class="bi bi-trash"></i>
+                        </button>
+                    </td>
+                </tr>
+            }
+        }
+        else
+        {
+            <tr><td colspan="7" class="text-center">لا توجد بيانات</td></tr>
+        }
+    </tbody>
+    <tfoot>
+        <tr class="table-light fw-bold">
+            <td colspan="3">الإجمالي</td>
+            <td id="totalPrice">0.00</td>
+            <td colspan="3"></td>
+        </tr>
+    </tfoot>
+</table>
+
+

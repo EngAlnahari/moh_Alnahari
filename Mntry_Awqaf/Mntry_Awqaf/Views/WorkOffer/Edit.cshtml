@@ -1,0 +1,117 @@
+@model Mntry_Awqaf.Models.WorkOffer
+@{
+    ViewData["Title"] = "تعديل عرض عمل";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="form-main-box">
+    <form id="workOfferForm" asp-action="Edit" method="post" enctype="multipart/form-data">
+        <input type="hidden" name="UserID" value="@Context.Session.GetInt32("UserID")" />
+        <input type="hidden" asp-for="Id" />
+
+        <div class="container">
+            <!-- حاوية الحقول الديناميكية -->
+            <div id="dynamicFieldsContainer" class="row mb-4"></div>
+            
+            <div class="text-center mt-4">
+                <button type="submit" id="saveRequestBtn" class="btn btn-success px-5">
+                    <i class="fas fa-save me-2"></i>حفظ التعديلات
+                </button>
+            </div>
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            var existingValues = @Html.Raw(System.Text.Json.JsonSerializer.Serialize(ViewBag.DynamicValues ?? new List<Mntry_Awqaf.Models.DynamicFieldValue>()));
+
+            // جلب الحقول المخصصة بناءً على الشاشة
+            $.get('/DynamicForms/GetFieldsByScreenTypeOnly?screenType=WorkOffer', function (groupedFields) {
+                const container = $('#dynamicFieldsContainer');
+                container.empty();
+                
+                if(groupedFields && groupedFields.length > 0) {
+                    groupedFields.forEach(group => {
+                        // Add Group Header
+                        container.append(`<div class="col-12"><h4 class="fw-bold mt-3 text-primary">${group.groupName}</h4><hr></div>`);
+                        
+                        // Add Fields in this Group
+                        if(group.fields && group.fields.length > 0) {
+                            let rowHtml = '<div class="row w-100">';
+                            group.fields.forEach(field => {
+                                let inputHtml = '';
+                                const requiredAttr = field.isRequired ? 'required' : '';
+                                const reqSpan = field.isRequired ? '<span class="text-danger">*</span>' : '';
+                                
+                                // ابحث عن القيمة المحفوظة لهذا الحقل
+                                let savedValueObj = existingValues.find(v => v.DynamicFieldId == field.id);
+                                let savedValue = savedValueObj ? savedValueObj.Value : '';
+
+                                if (field.type === 'dropdown' && field.options) {
+                                    const options = field.options.split(',');
+                                    inputHtml = `<select name="DynamicField_${field.id}" class="form-select" ${requiredAttr}>
+                                        <option value="">-- اختر --</option>
+                                        ${options.map(o => `<option value="${o}" ${savedValue === o ? 'selected' : ''}>${o}</option>`).join('')}
+                                    </select>`;
+                                } else if (field.type === 'radio' && field.options) {
+                                    const options = field.options.split(',');
+                                    inputHtml = '<div class="d-flex flex-wrap gap-3">';
+                                    options.forEach((o, index) => {
+                                        inputHtml += `
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="DynamicField_${field.id}" id="radio_${field.id}_${index}" value="${o}" ${requiredAttr} ${savedValue === o ? 'checked' : ''}>
+                                                <label class="form-check-label" for="radio_${field.id}_${index}">${o}</label>
+                                            </div>`;
+                                    });
+                                    inputHtml += '</div>';
+                                } else if (field.type === 'checkbox' && field.options) {
+                                    const options = field.options.split(',');
+                                    const savedArray = savedValue ? savedValue.split(',') : [];
+                                    inputHtml = '<div class="d-flex flex-wrap gap-3">';
+                                    options.forEach((o, index) => {
+                                        inputHtml += `
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" name="DynamicField_${field.id}" id="checkbox_${field.id}_${index}" value="${o}" ${savedArray.includes(o) ? 'checked' : ''}>
+                                                <label class="form-check-label" for="checkbox_${field.id}_${index}">${o}</label>
+                                            </div>`;
+                                    });
+                                    inputHtml += '</div>';
+                                } else if (field.type === 'textarea') {
+                                    inputHtml = `<textarea name="DynamicField_${field.id}" class="form-control" rows="2" ${requiredAttr}>${savedValue}</textarea>`;
+                                } else if (field.type === 'file') {
+                                    inputHtml = `<input type="file" name="DynamicField_${field.id}" class="form-control">`;
+                                    if (savedValue && savedValue !== '-') {
+                                        inputHtml += `<div class="mt-1"><a href="${savedValue}" target="_blank">عرض الملف الحالي</a></div>`;
+                                    }
+                                } else {
+                                    let htmlType = 'text';
+                                    if(field.type === 'number') htmlType = 'number';
+                                    if(field.type === 'date') htmlType = 'date';
+                                    if(field.type === 'time') htmlType = 'time';
+                                    if(field.type === 'email') htmlType = 'email';
+                                    if(field.type === 'password') htmlType = 'password';
+                                    
+                                    inputHtml = `<input type="${htmlType}" name="DynamicField_${field.id}" class="form-control" value="${savedValue}" ${requiredAttr}>`;
+                                }
+
+                                rowHtml += `
+                                    <div class="col-md-4 mb-3">
+                                        <label class="form-label">${field.name} ${reqSpan}</label>
+                                        ${inputHtml}
+                                    </div>
+                                `;
+                            });
+                            rowHtml += '</div>';
+                            container.append(rowHtml);
+                        }
+                    });
+                } else {
+                    container.append('<div class="col-12"><div class="alert alert-info">لا توجد حقول ديناميكية مخصصة لهذه الشاشة حالياً. يمكنك تعيينها من <a href="/DynamicForms/AssignFields">إعدادات النماذج</a>.</div></div>');
+                }
+            });
+        });
+    </script>
+}

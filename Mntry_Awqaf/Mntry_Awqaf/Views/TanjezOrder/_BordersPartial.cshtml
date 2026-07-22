@@ -1,0 +1,24 @@
+﻿@model List<EarthBorders>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>نوع الحد</th>
+            <th>الحد كما في الوثيقة</th>
+            <th>غير مطابق للواقع</th>
+            <th>الفرق</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var border in Model)
+        {
+            <tr>
+                <td>@border.BorderType</td>
+                 <td>@border.BorderDescription</td> 
+                <td>@(border.IdenticalOrDifferent == 1 ? "نعم" : "لا")</td>
+
+                <td>@border.Difference</td>
+            </tr>
+        }
+    </tbody>
+</table>

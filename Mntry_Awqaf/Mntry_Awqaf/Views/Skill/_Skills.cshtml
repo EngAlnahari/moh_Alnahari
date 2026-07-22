@@ -1,0 +1,182 @@
+﻿@model List<Mntry_Awqaf.Models.Skill>
+
+<div class="section">
+    <div class="section-header" onclick="toggleSection('skills')">المهارات التقنية</div>
+    <div class="section-content" id="skills">
+
+        <!-- نموذج الإدخال -->
+        <div class="row g-2 mb-3">
+            <div class="col-md-4">
+                <input type="text" id="SkillName" class="form-control" placeholder="أدخل المهارة">
+            </div>
+            <div class="col-md-4">
+                <input type="text" id="SkillField" class="form-control" placeholder="المجال">
+            </div>
+            <div class="col-md-2">
+                <input type="date" id="SkillFrom" class="form-control">
+            </div>
+            <div class="col-md-2">
+                <input type="date" id="SkillTo" class="form-control">
+            </div>
+        </div>
+        <input type="text" id="SkillDesc" class="form-control mb-3" placeholder="الوصف">
+        <div id="skill-msg" class="mb-3" style="display:none;"></div>
+        <button class="btn btn-outline-primary w-100 mb-3" onclick="saveSkill()">حفظ المهارة</button>
+
+
+        <!-- عرض المهارات -->
+        <div id="skills-list">
+            @foreach (var skill in Model)
+            {
+                <div class="item-box" data-id="@skill.Id">
+                    <div>
+                        <strong>@skill.SkillName</strong> (@skill.SkillField)<br />
+                        <small>@skill.SkillFrom - @skill.SkillTo</small><br />
+                        @skill.SkillDesc
+                    </div>
+                    <div class="action-btns">
+                        <button class="btn btn-sm btn-outline-primary" onclick="editSkill(@skill.Id)">تعديل</button>
+                        <button class="btn btn-sm btn-outline-danger" onclick="deleteSkill(@skill.Id)">حذف</button>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+<style>
+
+
+    .section-header {
+        cursor: pointer;
+        padding: 15px 20px;
+        background-color: #0d6efd;
+        color: #fff;
+        border-radius: 8px;
+        margin-bottom: 5px;
+        transition: background-color 0.3s;
+        font-size: 1.3rem;
+        font-weight: bold;
+    }
+
+        .section-header:hover {
+            background-color: #0b5ed7;
+        }
+
+    .section-content {
+        display: none;
+        padding: 15px 20px;
+        background-color: #ffffff;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        margin-bottom: 15px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+
+    .add-btn {
+        margin-top: 10px;
+    }
+
+    .item-box {
+        background: #f8f9fa;
+        border-radius: 8px;
+        padding: 10px 15px;
+        margin-top: 10px;
+        border: 1px solid #ddd;
+        position: relative;
+    }
+
+    .action-btns {
+        position: absolute;
+        left: 10px;
+        top: 10px;
+    }
+
+        .action-btns button {
+            margin-left: 5px;
+        }
+
+    /* تصميم عرض السيرة الذاتية */
+    #cv-preview {
+        display: none;
+        background: #fff;
+        border-radius: 10px;
+        padding: 30px;
+        box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    }
+
+        #cv-preview h2 {
+            color: #0d6efd;
+            border-bottom: 2px solid #0d6efd;
+            padding-bottom: 8px;
+            margin-top: 25px;
+        }
+
+    .info p {
+        margin: 0;
+        line-height: 1.8;
+    }
+
+    .item-box-preview {
+        background: #f9f9f9;
+        padding: 10px 15px;
+        border-radius: 8px;
+        margin-bottom: 10px;
+        border: 1px solid #ddd;
+    }
+
+
+</style>
+
+<script>
+    let editSkillId = 0;
+
+    function loadSkills(){
+        $("#skills-list").load("/Skill/GetUserSkills #skills-list > *");
+    }
+
+    function editSkill(id){
+        $.get(`/Skill/GetById?id=${id}`, function(res){
+            if(res){
+                $('#SkillName').val(res.skillName);
+                $('#SkillField').val(res.skillField);
+                $('#SkillFrom').val(res.skillFrom);
+                $('#SkillTo').val(res.skillTo);
+                $('#SkillDesc').val(res.skillDesc);
+                editSkillId=res.id;
+                $('#skill-msg').hide();
+            }
+        });
+    }
+
+    function saveSkill(){
+        const data = new FormData();
+        ["SkillName","SkillField","SkillFrom","SkillTo","SkillDesc"].forEach(id=>data.append(id,$(`#${id}`).val()));
+        if(editSkillId>0) data.append("id",editSkillId);
+        const url = editSkillId>0 ? '/Skill/Update' : '/Skill/Create';
+
+        $.ajax({
+            url:url,type:'POST',data:data,contentType:false,processData:false,
+            success:function(res){
+                if(res.success){
+                    loadSkills();
+                    ["SkillName","SkillField","SkillFrom","SkillTo","SkillDesc"].forEach(id=>$(`#${id}`).val(''));
+                    $('#skill-msg').text(editSkillId>0?'✅ تم التعديل':'✅ تم الإضافة').css('color','green').show();
+                    editSkillId=0;
+                } else $('#skill-msg').text('❌ حدث خطأ').css('color','red').show();
+            }
+        });
+    }
+
+    function deleteSkill(id){
+        if(!confirm("هل تريد حذف هذه المهارة؟")) return;
+        $.post('/Skill/Delete',{id:id},function(res){
+            if(res.success){ loadSkills(); $('#skill-msg').text('🗑️ تم الحذف').css('color','green').show(); }
+            else $('#skill-msg').text('❌ فشل الحذف').css('color','red').show();
+        });
+    }
+
+    function toggleSection(id){ $('#' + id).slideToggle(); }
+
+    $(document).ready(loadSkills);
+</script>

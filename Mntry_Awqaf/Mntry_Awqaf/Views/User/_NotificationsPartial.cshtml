@@ -1,0 +1,24 @@
+﻿@model List<Notification>
+
+@if (!Model.Any())
+{
+    <li><span class="dropdown-item">لا توجد إشعارات</span></li>
+}
+else
+{
+    @foreach (var notif in Model)
+    {
+        <li>
+            <a class="dropdown-item @(notif.IsRead ? "" : "unread fw-bold")"
+               href="javascript:void(0);"
+               data-notif-id="@notif.Id"
+               data-contract-id="@notif.ContractId"
+               data-url="@notif.Url">
+                <!-- هنا رابط Partial View -->
+                @notif.Message
+                <br />
+                <small class="text-muted">@notif.CreatedAt.ToString("HH:mm dd/MM/yyyy")</small>
+            </a>
+        </li>
+    }
+}

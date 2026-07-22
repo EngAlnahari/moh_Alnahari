@@ -1,0 +1,176 @@
+﻿@model TransportModelWithDetails
+@{
+    Layout = null;
+    ViewData["Title"] = "Create Work Offer";
+}
+
+<div class="table-responsive">
+    <table class="table table-bordered table-hover">
+        <thead class="table-light">
+            <tr>
+                <th style="width: 40px">#</th>
+                <th>المحافظة</th>
+                <th>رسوم التنقل</th>
+                <th>أجر المبيت</th>
+                <th>أجر النثريات</th>
+                <th style="width: 50px">
+                    <button type="button" class="btn btn-sm btn-outline-primary" onclick="addTableRow()">
+                        <i class="bi bi-plus"></i>
+                    </button>
+                </th>
+            </tr>
+        </thead>
+        <tbody id="templateTableBody">
+            <tr>
+                <td>1</td>
+                <td>
+                    <select asp-for="transportModels[0].Governorate" class="form-select form-select-sm">
+
+                        <option value="صنعاء">صنعاء</option>
+
+                    </select>
+                </td>
+                <input type="hidden" asp-for="transportModels[0].StatuseType1" class="type-status-1" />
+<input type="hidden" asp-for="transportModels[0].StatuseType2" class="type-status-2" />
+
+               
+                <td>
+                    <input asp-for="transportModels[0].TransportationFees" type="number" class="form-control form-control-sm" placeholder="0.00">
+                </td>
+                <td>
+                    <input asp-for="transportModels[0].OverNightFees" type="number" class="form-control form-control-sm" placeholder="0.00">
+                </td>
+                <td>
+                    <input asp-for="transportModels[0].AllowanceFees" type="number" class="form-control form-control-sm" placeholder="0.00">
+                </td>
+                <td>
+                    <button type="button" class="btn btn-sm btn-outline-danger" onclick="removeTableRow(this)">
+                        <i class="bi bi-trash"></i>
+                    </button>
+                </td>
+            </tr>
+
+            <tr>
+                <td>2</td>
+                <td>
+                    <select asp-for="transportModels[1].Governorate" class="form-select form-select-sm">
+
+                        <option value="تعز">تعز</option>
+
+
+                    </select>
+                </td>
+                <input type="hidden" asp-for="transportModels[1].StatuseType1" class="type-status-1" />
+<input type="hidden" asp-for="transportModels[1].StatuseType2" class="type-status-2" />
+
+                <td>
+                    <input asp-for="transportModels[1].TransportationFees" type="number" class="form-control form-control-sm" placeholder="0.00">
+                </td>
+                <td>
+                    <input asp-for="transportModels[1].OverNightFees" type="number" class="form-control form-control-sm" placeholder="0.00">
+                </td>
+                <td>
+                    <input asp-for="transportModels[1].AllowanceFees" type="number" class="form-control form-control-sm" placeholder="0.00">
+                </td>
+                <td>
+                    <button type="button" class="btn btn-sm btn-outline-danger" onclick="removeTableRow(this)">
+                        <i class="bi bi-trash"></i>
+                    </button>
+                </td>
+            </tr>
+
+            <tr>
+                <td>3</td>
+                <td>
+                    <select asp-for="transportModels[2].Governorate" class="form-select form-select-sm">
+
+
+                        <option value="dammam">عدن</option>
+
+
+                    </select>
+                </td>
+                <input type="hidden" asp-for="transportModels[2].StatuseType1" class="type-status-1" />
+<input type="hidden" asp-for="transportModels[2].StatuseType2" class="type-status-2" />
+
+                
+                <td>
+                    <input asp-for="transportModels[2].TransportationFees" type="number" class="form-control form-control-sm" placeholder="0.00">
+                </td>
+                <td>
+                    <input asp-for="transportModels[2].OverNightFees" type="number" class="form-control form-control-sm" placeholder="0.00">
+                </td>
+                <td>
+                    <input asp-for="transportModels[2].AllowanceFees" type="number" class="form-control form-control-sm" placeholder="0.00">
+                </td>
+                <td>
+                    <button type="button" class="btn btn-sm btn-outline-danger" onclick="removeTableRow(this)">
+                        <i class="bi bi-trash"></i>
+                    </button>
+                </td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>
+                    <select asp-for="transportModels[3].Governorate" class="form-select form-select-sm">
+
+
+                        <option value="عدن"> عمران</option>
+
+
+
+                    </select>
+                </td>
+                <input type="hidden" asp-for="transportModels[3].StatuseType1" class="type-status-1" />
+<input type="hidden" asp-for="transportModels[3].StatuseType2" class="type-status-2" />
+
+               
+                <td>
+                    <input asp-for="transportModels[3].TransportationFees" type="number" class="form-control form-control-sm" placeholder="0.00">
+                </td>
+                <td>
+                    <input asp-for="transportModels[3].OverNightFees" type="number" class="form-control form-control-sm" placeholder="0.00">
+                </td>
+                <td>
+                    <input asp-for="transportModels[3].AllowanceFees" type="number" class="form-control form-control-sm" placeholder="0.00">
+                </td>
+                <td>
+                    <button type="button" class="btn btn-sm btn-outline-danger" onclick="removeTableRow(this)">
+                        <i class="bi bi-trash"></i>
+                    </button>
+                </td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>
+                    <select asp-for="transportModels[4].Governorate" class="form-select form-select-sm">
+
+
+                        <option value="اب">اب </option>
+
+
+                    </select>
+                </td>
+                <input type="hidden" asp-for="transportModels[4].StatuseType1" class="type-status-1" />
+                <input type="hidden" asp-for="transportModels[4].StatuseType2" class="type-status-2" />
+
+               
+                <td>
+                    <input asp-for="transportModels[4].TransportationFees" type="number" class="form-control form-control-sm" placeholder="0.00">
+                </td>
+                <td>
+                    <input asp-for="transportModels[4].OverNightFees" type="number" class="form-control form-control-sm" placeholder="0.00">
+                </td>
+                <td>
+                    <input asp-for="transportModels[4].AllowanceFees" type="number" class="form-control form-control-sm" placeholder="0.00">
+                </td>
+                <td>
+                    <button type="button" class="btn btn-sm btn-outline-danger" onclick="removeTableRow(this)">
+                        <i class="bi bi-trash"></i>
+                    </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>

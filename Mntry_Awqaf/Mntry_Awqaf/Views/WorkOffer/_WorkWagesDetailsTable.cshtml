@@ -1,0 +1,95 @@
+﻿@model List<Mntry_Awqaf.Models.WorkWagesTaple>
+
+<div dir="rtl">
+    <div class="row mb-3">
+<div class="col-md-4">
+    <label class="form-label">فلترة حسب نوع العمل</label>
+    <select id="filterType" class="form-select" onchange="filterRows(this.value)">
+        <option value="">عرض الكل</option>
+        <option value="مقطوعة">مقطوعة</option>
+        <option value="يومية">يومية</option>
+        <option value="بالإنجاز (حسب المساحة)">بالإنجاز (حسب المساحة)</option>
+    </select>
+</div>
+    <div class="col-md-4">
+        <label class="form-label">اسم القالب المختار</label>
+        <input type="text" id="selectedTemplateName" class="form-control" readonly />
+    </div>
+    </div>
+
+    <table id="wagesDetailsTable" class="table table-bordered text-center align-middle">
+        <thead class="table-light">
+            <tr>
+                <th>#</th>
+                <th>القطعة</th>
+                <th class="space-col">معيار المساحة</th>
+                <th>السعر</th>
+                <th>من</th>
+                <th>إلى</th>
+                @* <th>ملاحظات</th> *@
+                <th>إجراءات</th>
+                <th class="d-none">معرف السطر</th>
+                <th class="d-none">AlmjalID</th>
+                <th class="d-none">WorkWagesTemplatesID</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (Model != null && Model.Any())
+            {
+                for (int i = 0; i < Model.Count; i++)
+                {
+                    <tr>
+                        <td>@(i + 1)</td>
+                        <td class="each-type">@Model[i].EachTypeSimilar</td>
+                        <td class="space-col">@Model[i].SpaceStandard</td>
+                        <td class="price">@Model[i].Price</td>
+                        <td class="from-date">@Model[i].FromDate</td>
+                        <td class="to-date">@Model[i].ToDate</td>
+                        <td class="notes d-none">@Model[i].Notes</td>
+                        <td class="wage-id d-none">@Model[i].Id</td>
+                        <td class="almjal-id d-none">@Model[i].AlmjalID</td>
+                        <td class="wages-template-id d-none">@Model[i].WorkWagesTemplatesID</td>
+                        <td>
+                            <button type="button" class="btn btn-sm btn-outline-success" onclick="toggleEdit(this)">تعديل</button>
+                        </td>
+                    </tr>
+
+                }
+            }
+            else
+            {
+                <tr><td colspan="11">لا توجد بيانات لهذا النوع</td></tr>
+            }
+        </tbody>
+    </table>
+
+@* <div class="modal-footer">
+    <button type="submit" class="btn btn-primary"> تاكيد</button>
+</div> *@
+</div>
+
+
+
+
+<script>
+    function filterRows(workType) {
+        document.querySelectorAll("#wagesDetailsTable tbody tr").forEach(row => {
+            const type = row.querySelector(".work-type").innerText.trim();
+            if (workType === "" || type === workType) {
+                row.style.display = "";
+            } else {
+                row.style.display = "none";
+            }
+        });
+
+        // التحكم في إظهار/إخفاء عمود "معيار المساحة"
+        if (workType === "مقطوعة" || workType === "يومية") {
+            document.querySelectorAll(".space-col").forEach(col => col.style.display = "none");
+        } else {
+            document.querySelectorAll(".space-col").forEach(col => col.style.display = "");
+        }
+    }
+</script>
+
+
+

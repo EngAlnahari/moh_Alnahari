@@ -1,0 +1,779 @@
+@model Mntry_Awqaf.Models.WorkOffer
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+    .form-builder-container {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        min-height: 100vh;
+        padding: 20px;
+    }
+    .builder-card {
+        background: white;
+        border-radius: 16px;
+        box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+        overflow: hidden;
+    }
+    .field-palette {
+        background: #f8f9fa;
+        padding: 20px;
+        height: 100%;
+        border-left: 1px solid #dee2e6;
+    }
+    .draggable-item {
+        background: white;
+        border: 2px dashed #dee2e6;
+        border-radius: 10px;
+        padding: 12px 15px;
+        margin-bottom: 10px;
+        cursor: pointer;
+        transition: all 0.2s;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    .draggable-item:hover {
+        border-color: #0d6efd;
+        background: #f1f8ff;
+        transform: translateX(-5px);
+    }
+    .draggable-item i {
+        font-size: 1.2rem;
+        color: #0d6efd;
+    }
+    .form-canvas {
+        background: white;
+        min-height: 600px;
+        padding: 30px;
+    }
+    .field-item {
+        background: white;
+        border: 2px solid #e9ecef;
+        border-radius: 12px;
+        padding: 20px;
+        margin-bottom: 15px;
+        position: relative;
+        transition: all 0.2s;
+    }
+    .field-item:hover {
+        border-color: #0d6efd;
+        box-shadow: 0 4px 12px rgba(13,110,253,0.15);
+    }
+    .field-item.selected {
+        border-color: #0d6efd;
+        background: #f8f9ff;
+    }
+    .field-actions {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        display: flex;
+        gap: 5px;
+        opacity: 0;
+        transition: all 0.2s;
+    }
+    .field-item:hover .field-actions {
+        opacity: 1;
+    }
+    .preview-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0,0,0,0.8);
+        z-index: 9999;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+    }
+    .preview-overlay.show {
+        display: flex;
+    }
+    .preview-content {
+        background: white;
+        border-radius: 16px;
+        width: 100%;
+        max-width: 800px;
+        max-height: 90vh;
+        overflow-y: auto;
+        padding: 30px;
+    }
+    .template-card {
+        background: white;
+        border: 2px solid #e9ecef;
+        border-radius: 12px;
+        padding: 15px;
+        margin-bottom: 10px;
+        cursor: pointer;
+        transition: all 0.2s;
+    }
+    .template-card:hover, .template-card.active {
+        border-color: #0d6efd;
+        background: #f1f8ff;
+    }
+    .success-toast {
+        position: fixed;
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: #28a745;
+        color: white;
+        padding: 15px 30px;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+        z-index: 10000;
+        display: none;
+    }
+    .success-toast.show {
+        display: block;
+        animation: slideDown 0.3s ease;
+    }
+    @@keyframes slideDown {
+        from { opacity: 0; transform: translate(-50%, -20px); }
+        to { opacity: 1; transform: translate(-50%, 0); }
+    }
+    .empty-state {
+        text-align: center;
+        padding: 60px 20px;
+        color: #6c757d;
+    }
+    .empty-state i {
+        font-size: 4rem;
+        margin-bottom: 20px;
+        opacity: 0.5;
+    }
+</style>
+
+<div class="form-builder-container" dir="rtl">
+    <!-- Toast Notification -->
+    <div id="successToast" class="success-toast">
+        <i class="bi bi-check-circle"></i> <span id="toastMessage">تم بنجاح!</span>
+    </div>
+
+    <!-- Preview Modal -->
+    <div id="previewModal" class="preview-overlay" onclick="closePreview(event)">
+        <div class="preview-content" onclick="event.stopPropagation()">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h3><i class="bi bi-eye"></i> معاينة العرض</h3>
+                <button class="btn btn-outline-secondary" onclick="closePreview()">
+                    <i class="bi bi-x-lg"></i> إغلاق
+                </button>
+            </div>
+            <div id="previewFormContainer">
+                <!-- هنا يُعرض النموذج -->
+            </div>
+            <div class="mt-4 text-center">
+                <button class="btn btn-primary btn-lg" onclick="submitFromPreview()">
+                    <i class="bi bi-check-lg"></i> تأكيد وحفظ العرض
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Save Template Modal -->
+    <div class="modal fade" id="saveTemplateModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title"><i class="bi bi-save"></i> حفظ القالب</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label>اسم القالب</label>
+                        <input type="text" class="form-control" id="templateNameInput" placeholder="مثال: عرض الهندسة المدنية">
+                    </div>
+                    <div class="mb-3">
+                        <label>وصف القالب (اختياري)</label>
+                        <textarea class="form-control" id="templateDescInput" rows="2" placeholder="وصف مختصر للقالب..."></textarea>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="templatePublicCheck">
+                        <label class="form-check-label">جعل القالب متاحاً للجميع</label>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">إلغاء</button>
+                    <button type="button" class="btn btn-primary" onclick="confirmSaveTemplate()">
+                        <i class="bi bi-save"></i> حفظ
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <!-- Header -->
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <div class="text-white">
+                <h2 class="mb-0"><i class="bi bi-building"></i> منشئ عروض العمل</h2>
+                <small>صمم عرضك بمرونة تامة</small>
+            </div>
+            <div class="btn-group">
+                <button class="btn btn-light" onclick="loadTemplateList()">
+                    <i class="bi bi-folder-open"></i> قوالبي
+                </button>
+                <button class="btn btn-warning" onclick="clearAllFields()">
+                    <i class="bi bi-trash"></i> مسح الكل
+                </button>
+                <button class="btn btn-info" onclick="showPreview()">
+                    <i class="bi bi-eye"></i> معاينة
+                </button>
+                <button class="btn btn-success" onclick="showSaveTemplateModal()">
+                    <i class="bi bi-save"></i> حفظ القالب
+                </button>
+                <button class="btn btn-primary" onclick="submitForm()">
+                    <i class="bi bi-check-lg"></i> حفظ العرض
+                </button>
+            </div>
+        </div>
+
+        <div class="builder-card">
+            <div class="row g-0">
+                <!-- Sidebar - Tools -->
+                <div class="col-md-3">
+                    <div class="field-palette">
+                        <h5 class="mb-3"><i class="bi bi-lightning-charge"></i> إضافة سريعة</h5>
+                        
+                        <!-- Quick Add Buttons -->
+                        <div class="mb-4">
+                            <button class="draggable-item" onclick="quickAddField('text', 'اسم العرض')">
+                                <i class="bi bi-type"></i> <span>نص</span>
+                            </button>
+                            <button class="draggable-item" onclick="quickAddField('number', 'المبلغ')">
+                                <i class="bi bi-123"></i> <span>رقم</span>
+                            </button>
+                            <button class="draggable-item" onclick="quickAddField('date', 'التاريخ')">
+                                <i class="bi bi-calendar"></i> <span>تاريخ</span>
+                            </button>
+                            <button class="draggable-item" onclick="quickAddField('select', 'النوع')">
+                                <i class="bi bi-list"></i> <span>قائمة</span>
+                            </button>
+                            <button class="draggable-item" onclick="quickAddField('checkbox', 'موافقة')">
+                                <i class="bi bi-check-square"></i> <span>صندوق</span>
+                            </button>
+                            <button class="draggable-item" onclick="quickAddField('textarea', 'ملاحظات')">
+                                <i class="bi bi-textarea-t"></i> <span>نص طويل</span>
+                            </button>
+                        </div>
+
+                        <h6 class="text-muted mb-2">قوالب جاهزة</h6>
+                        <div class="template-card" onclick="loadTemplate('basic')">
+                            <i class="bi bi-file-text"></i> <strong>عرض أساسي</strong>
+                            <small class="d-block text-muted">بيانات أساسية للعرض</small>
+                        </div>
+                        <div class="template-card" onclick="loadTemplate('engineering')">
+                            <i class="bi bi-building"></i> <strong>عرض هندسي</strong>
+                            <small class="d-block text-muted">مساحة + تكاليف + معدات</small>
+                        </div>
+                        <div class="template-card" onclick="loadTemplate('consulting')">
+                            <i class="bi bi-people"></i> <strong>عرض استشاري</strong>
+                            <small class="d-block text-muted">استشارات + غرامات</small>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Form Canvas -->
+                <div class="col-md-6">
+                    <div class="form-canvas">
+                        <div class="empty-state" id="emptyState">
+                            <i class="bi bi-plus-circle-dotted"></i>
+                            <h4>ابدأ ببناء عرضك</h4>
+                            <p>اختر أداة من القائمة أو استخدم قالب جاهز</p>
+                        </div>
+                        <div id="fieldsContainer"></div>
+                    </div>
+                </div>
+
+                <!-- Properties Panel -->
+                <div class="col-md-3">
+                    <div class="field-palette" id="fieldProperties" style="display: none;">
+                        <h5 class="mb-3"><i class="bi bi-gear"></i> إعدادات الحقل</h5>
+                        
+                        <div class="mb-3">
+                            <label>عنوان الحقل</label>
+                            <input type="text" class="form-control" id="propLabel" oninput="updateSelectedField()">
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label>نوع الحقل</label>
+                            <select class="form-select" id="propType" onchange="updateSelectedField()">
+                                <option value="text">نص</option>
+                                <option value="number">رقم</option>
+                                <option value="date">تاريخ</option>
+                                <option value="select">قائمة منسدلة</option>
+                                <option value="checkbox">صندوق اختيار</option>
+                                <option value="radio">أزرار اختيار</option>
+                                <option value="textarea">نص طويل</option>
+                                <option value="file">ملف</option>
+                                <option value="calculated">حقل محسوب</option>
+                            </select>
+                        </div>
+
+                        <div class="mb-3" id="optionsSection" style="display: none;">
+                            <label>خيارات القائمة (كل سطر خيار)</label>
+                            <textarea class="form-control" id="propOptions" rows="3" oninput="updateSelectedField()"></textarea>
+                        </div>
+
+                        <div class="mb-3" id="formulaSection" style="display: none;">
+                            <label>معادلة الحساب</label>
+                            <input type="text" class="form-control" id="propFormula" placeholder="مثال: field_1 + field_2" oninput="updateSelectedField()">
+                            <small class="text-muted">استخدم أسماء الحقول في المعادلة</small>
+                        </div>
+
+                        <div class="form-check mb-2">
+                            <input class="form-check-input" type="checkbox" id="propRequired" onchange="updateSelectedField()">
+                            <label class="form-check-label">حقل مطلوب</label>
+                        </div>
+
+                        <div class="mb-3">
+                            <label>تلميح</label>
+                            <input type="text" class="form-control" id="propPlaceholder" oninput="updateSelectedField()">
+                        </div>
+
+                        <hr>
+                        
+                        <button class="btn btn-outline-danger w-100" onclick="deleteSelectedField()">
+                            <i class="bi bi-trash"></i> حذف الحقل
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    let fields = [];
+    let selectedFieldId = null;
+    let fieldCounter = 0;
+    let savedTemplates = [];
+
+    // Templates
+    const templates = {
+        basic: [
+            { type: 'text', label: 'اسم العرض', required: true, name: 'OfferName' },
+            { type: 'date', label: 'تاريخ الانتهاء', name: 'EndDate' },
+            { type: 'number', label: 'السعر الإجمالي', required: true, name: 'TotalPrice' },
+            { type: 'textarea', label: 'ملاحظات', name: 'Notes' }
+        ],
+        engineering: [
+            { type: 'text', label: 'اسم المشروع', required: true, name: 'ProjectName' },
+            { type: 'select', label: 'نوع المشروع', options: ['سكني', 'تجاري', 'صناعي', 'بنية تحتية'], name: 'ProjectType' },
+            { type: 'number', label: 'المساحة (م²)', name: 'Area' },
+            { type: 'number', label: 'تكلفة العمالة', name: 'LaborCost' },
+            { type: 'number', label: 'تكلفة المواد', name: 'MaterialsCost' },
+            { type: 'number', label: 'تكلفة المعدات', name: 'EquipmentCost' },
+            { type: 'calculated', label: 'الإجمالي', formula: 'LaborCost + MaterialsCost + EquipmentCost', name: 'TotalCost' }
+        ],
+        consulting: [
+            { type: 'text', label: 'عنوان الاستشارة', required: true, name: 'ConsultationTitle' },
+            { type: 'select', label: 'نوع الاستشارة', options: ['قانونية', 'مالية', 'هندسية', 'إدارية'], name: 'ConsultationType' },
+            { type: 'number', label: 'عدد الساعات', name: 'Hours' },
+            { type: 'number', label: 'السعر للساعة', name: 'HourlyRate' },
+            { type: 'calculated', label: 'التكلفة الإجمالية', formula: 'Hours * HourlyRate', name: 'TotalConsultationCost' }
+        ]
+    };
+
+    function quickAddField(type, label) {
+        const field = addField(type, { label: label });
+        renderFields();
+        document.getElementById('emptyState').style.display = 'none';
+        showToast(`تم إضافة حقل: ${label}`);
+    }
+
+    function addField(type, config = {}) {
+        fieldCounter++;
+        const field = {
+            id: `field_${fieldCounter}`,
+            type: type,
+            label: config.label || 'حقل جديد',
+            name: config.name || `field_${fieldCounter}`,
+            required: config.required || false,
+            placeholder: config.placeholder || '',
+            options: config.options || [],
+            formula: config.formula || ''
+        };
+        fields.push(field);
+        selectField(field.id);
+        return field;
+    }
+
+    function loadTemplate(templateName) {
+        fields = [];
+        fieldCounter = 0;
+        
+        templates[templateName].forEach(field => {
+            addField(field.type, field);
+        });
+
+        renderFields();
+        document.getElementById('emptyState').style.display = 'none';
+        showToast(`تم تحميل قالب: ${templateName}`);
+    }
+
+    function renderFields() {
+        const container = document.getElementById('fieldsContainer');
+        container.innerHTML = '';
+
+        fields.forEach((field, index) => {
+            const div = document.createElement('div');
+            div.className = `field-item ${selectedFieldId === field.id ? 'selected' : ''}`;
+            div.innerHTML = `
+                <div class="field-actions">
+                    <button class="btn btn-sm btn-outline-secondary" onclick="moveField(${index}, -1); event.stopPropagation();" ${index === 0 ? 'disabled' : ''}>
+                        <i class="bi bi-arrow-up"></i>
+                    </button>
+                    <button class="btn btn-sm btn-outline-secondary" onclick="moveField(${index}, 1); event.stopPropagation();" ${index === fields.length - 1 ? 'disabled' : ''}>
+                        <i class="bi bi-arrow-down"></i>
+                    </button>
+                    <button class="btn btn-sm btn-outline-danger" onclick="deleteField('${field.id}'); event.stopPropagation();">
+                        <i class="bi bi-trash"></i>
+                    </button>
+                </div>
+                <label class="form-label ${field.required ? 'required' : ''}">
+                    ${field.label} ${field.required ? '<span class="text-danger">*</span>' : ''}
+                </label>
+                ${createFieldInput(field)}
+            `;
+            div.onclick = () => selectField(field.id);
+            container.appendChild(div);
+        });
+
+        if (fields.length === 0) {
+            document.getElementById('emptyState').style.display = 'block';
+        }
+    }
+
+    function createFieldInput(field) {
+        switch(field.type) {
+            case 'text':
+                return `<input type="text" class="form-control" placeholder="${field.placeholder}" ${field.required ? 'required' : ''}>`;
+            case 'number':
+                return `<input type="number" class="form-control" placeholder="${field.placeholder}" ${field.required ? 'required' : ''}>`;
+            case 'date':
+                return `<input type="date" class="form-control" ${field.required ? 'required' : ''}>`;
+            case 'textarea':
+                return `<textarea class="form-control" rows="2" placeholder="${field.placeholder}" ${field.required ? 'required' : ''}></textarea>`;
+            case 'select':
+                return `<select class="form-select" ${field.required ? 'required' : ''}>
+                    <option value="">-- اختر --</option>
+                    ${field.options.map(opt => `<option value="${opt}">${opt}</option>`).join('')}
+                </select>`;
+            case 'checkbox':
+                return `<div class="form-check"><input class="form-check-input" type="checkbox"><label class="form-check-label">${field.label}</label></div>`;
+            case 'radio':
+                return `<div>${field.options.map(opt => `
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="${field.name}">
+                        <label class="form-check-label">${opt}</label>
+                    </div>
+                `).join('')}</div>`;
+            case 'file':
+                return `<input type="file" class="form-control" ${field.required ? 'required' : ''}>`;
+            case 'calculated':
+                return `<input type="text" class="form-control bg-light" readonly value="[${field.formula}]">`;
+            default:
+                return `<input type="text" class="form-control">`;
+        }
+    }
+
+    function selectField(id) {
+        selectedFieldId = id;
+        const field = fields.find(f => f.id === id);
+        
+        if (field) {
+            document.getElementById('fieldProperties').style.display = 'block';
+            document.getElementById('propLabel').value = field.label;
+            document.getElementById('propType').value = field.type;
+            document.getElementById('propRequired').checked = field.required;
+            document.getElementById('propPlaceholder').value = field.placeholder || '';
+            document.getElementById('propOptions').value = field.options.join('\n');
+            document.getElementById('propFormula').value = field.formula || '';
+            
+            document.getElementById('optionsSection').style.display = ['select', 'radio'].includes(field.type) ? 'block' : 'none';
+            document.getElementById('formulaSection').style.display = field.type === 'calculated' ? 'block' : 'none';
+        }
+        renderFields();
+    }
+
+    function updateSelectedField() {
+        if (!selectedFieldId) return;
+        
+        const field = fields.find(f => f.id === selectedFieldId);
+        if (field) {
+            field.label = document.getElementById('propLabel').value;
+            field.type = document.getElementById('propType').value;
+            field.required = document.getElementById('propRequired').checked;
+            field.placeholder = document.getElementById('propPlaceholder').value;
+            field.options = document.getElementById('propOptions').value.split('\n').filter(o => o.trim());
+            field.formula = document.getElementById('propFormula').value;
+
+            document.getElementById('optionsSection').style.display = ['select', 'radio'].includes(field.type) ? 'block' : 'none';
+            document.getElementById('formulaSection').style.display = field.type === 'calculated' ? 'block' : 'none';
+
+            renderFields();
+        }
+    }
+
+    function deleteField(id) {
+        fields = fields.filter(f => f.id !== id);
+        if (selectedFieldId === id) {
+            selectedFieldId = null;
+            document.getElementById('fieldProperties').style.display = 'none';
+        }
+        renderFields();
+    }
+
+    function deleteSelectedField() {
+        if (selectedFieldId) deleteField(selectedFieldId);
+    }
+
+    function moveField(index, direction) {
+        const newIndex = index + direction;
+        if (newIndex < 0 || newIndex >= fields.length) return;
+        [fields[index], fields[newIndex]] = [fields[newIndex], fields[index]];
+        renderFields();
+    }
+
+    function clearAllFields() {
+        if (fields.length > 0 && confirm('هل أنت متأكد من مسح جميع الحقول؟')) {
+            fields = [];
+            fieldCounter = 0;
+            selectedFieldId = null;
+            document.getElementById('fieldProperties').style.display = 'none';
+            renderFields();
+        }
+    }
+
+    // Preview Functions
+    function showPreview() {
+        if (fields.length === 0) {
+            alert('الرجاء إضافة حقول أولاً');
+            return;
+        }
+
+        const container = document.getElementById('previewFormContainer');
+        container.innerHTML = fields.map(field => `
+            <div class="mb-3">
+                <label class="form-label ${field.required ? 'required' : ''}">
+                    ${field.label} ${field.required ? '<span class="text-danger">*</span>' : ''}
+                </label>
+                ${createPreviewInput(field)}
+            </div>
+        `).join('');
+
+        document.getElementById('previewModal').classList.add('show');
+    }
+
+    function createPreviewInput(field) {
+        switch(field.type) {
+            case 'text':
+                return `<input type="text" class="form-control" placeholder="${field.placeholder}" disabled>`;
+            case 'number':
+                return `<input type="number" class="form-control" placeholder="${field.placeholder}" disabled>`;
+            case 'date':
+                return `<input type="date" class="form-control" disabled>`;
+            case 'textarea':
+                return `<textarea class="form-control" rows="2" placeholder="${field.placeholder}" disabled></textarea>`;
+            case 'select':
+                return `<select class="form-select" disabled><option>-- اختر --</option></select>`;
+            case 'checkbox':
+                return `<div class="form-check"><input class="form-check-input" type="checkbox" disabled></div>`;
+            case 'calculated':
+                return `<input type="text" class="form-control bg-light" value="[حساب تلقائي]" disabled>`;
+            default:
+                return `<input type="text" class="form-control" disabled>`;
+        }
+    }
+
+    function closePreview(event) {
+        if (!event || event.target.id === 'previewModal') {
+            document.getElementById('previewModal').classList.remove('show');
+        }
+    }
+
+    function submitFromPreview() {
+        closePreview();
+        submitForm();
+    }
+
+    // Save Template Functions
+    function showSaveTemplateModal() {
+        if (fields.length === 0) {
+            alert('الرجاء إضافة حقول للقالب أولاً');
+            return;
+        }
+        new bootstrap.Modal(document.getElementById('saveTemplateModal')).show();
+    }
+
+    async function confirmSaveTemplate() {
+        const name = document.getElementById('templateNameInput').value.trim();
+        if (!name) {
+            alert('الرجاء إدخال اسم القالب');
+            return;
+        }
+
+        const templateData = {
+            name: name,
+            description: document.getElementById('templateDescInput').value,
+            isPublic: document.getElementById('templatePublicCheck').checked,
+            fields: fields,
+            createdAt: new Date().toISOString()
+        };
+
+        try {
+            // حفظ في LocalStorage مؤقتاً (حتى نربطه بالـ Backend)
+            savedTemplates.push(templateData);
+            localStorage.setItem('workOfferTemplates', JSON.stringify(savedTemplates));
+            
+            // TODO: ربط بـ API
+            // const response = await fetch('/api/templates', {
+            //     method: 'POST',
+            //     headers: { 'Content-Type': 'application/json' },
+            //     body: JSON.stringify(templateData)
+            // });
+
+            bootstrap.Modal.getInstance(document.getElementById('saveTemplateModal')).hide();
+            showToast(`تم حفظ القالب "${name}" بنجاح!`);
+            
+            // إعادة تعيين الحقول
+            document.getElementById('templateNameInput').value = '';
+            document.getElementById('templateDescInput').value = '';
+        } catch (error) {
+            alert('حدث خطأ أثناء حفظ القالب');
+            console.error(error);
+        }
+    }
+
+    function loadTemplateList() {
+        const stored = localStorage.getItem('workOfferTemplates');
+        if (stored) {
+            savedTemplates = JSON.parse(stored);
+        }
+        
+        if (savedTemplates.length === 0) {
+            alert('لا توجد قوالب محفوظة');
+            return;
+        }
+
+        const list = savedTemplates.map((t, i) => `${i + 1}. ${t.name}`).join('\n');
+        const selected = prompt(`اختر قالب (أدخل الرقم):\n${list}`);
+        
+        if (selected) {
+            const index = parseInt(selected) - 1;
+            if (savedTemplates[index]) {
+                fields = JSON.parse(JSON.stringify(savedTemplates[index].fields));
+                fieldCounter = fields.length;
+                renderFields();
+                document.getElementById('emptyState').style.display = 'none';
+                showToast(`تم تحميل القالب: ${savedTemplates[index].name}`);
+            }
+        }
+    }
+
+    // Submit Form
+    async function submitForm() {
+        if (fields.length === 0) {
+            alert('الرجاء إضافة حقول للنموذج أولاً');
+            return;
+        }
+
+        const requiredFields = fields.filter(f => f.required);
+        const offerNameField = fields.find(f => f.name === 'OfferName');
+        
+        // بناء بيانات العرض
+        const offerData = {
+            OfferName: offerNameField ? '' : 'عرض جديد',
+            EndDate: new Date().toISOString(),
+            WorkWagesTemplateId: null,
+            TransportationScheduleTemplateId: null,
+            AdditionalCostTypeId: null,
+            LatePenaltyPercentage: 0,
+            AdvancePaymentPercentage: 30,
+            OnSitePaymentPercentage: 40,
+            AfterDeliveryPaymentPercentage: 30,
+            ResignationAfterAdvancePercentage: 0,
+            CamelResignationPenaltyPercentage: 0,
+            Notes: '',
+            UserID: @Context.Session.GetInt32("UserID"),
+            // بيانات النموذج الديناميكي
+            DynamicFields: fields.map(f => ({
+                name: f.name,
+                label: f.label,
+                type: f.type,
+                required: f.required,
+                options: f.options,
+                formula: f.formula
+            }))
+        };
+
+        try {
+            // إرسال للـ API
+            const response = await fetch('http://localhost:5046/api/WorkOffers', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(offerData)
+            });
+
+            if (response.ok) {
+                const result = await response.json();
+                showToast('تم حفظ العرض بنجاح! 🎉');
+                
+                // إعادة تعيين أو الانتقال لصفحة العروض
+                setTimeout(() => {
+                    if (confirm('هل تريد الانتقال لصفحة العروض؟')) {
+                        window.location.href = '/WorkOffer/Index';
+                    }
+                }, 1500);
+            } else {
+                const error = await response.text();
+                alert('فشل حفظ العرض: ' + error);
+            }
+        } catch (error) {
+            console.error('Error:', error);
+            // في حالة فشل الـ API، نحفظ محلياً كـ Draft
+            localStorage.setItem('draftOffer', JSON.stringify(offerData));
+            alert('تم الحفظ كمسودة محلياً (لا يوجد اتصال بالخادم)');
+        }
+    }
+
+    // Toast Notification
+    function showToast(message) {
+        const toast = document.getElementById('successToast');
+        document.getElementById('toastMessage').textContent = message;
+        toast.classList.add('show');
+        setTimeout(() => toast.classList.remove('show'), 3000);
+    }
+
+    // Load saved templates on startup
+    document.addEventListener('DOMContentLoaded', function() {
+        const stored = localStorage.getItem('workOfferTemplates');
+        if (stored) {
+            savedTemplates = JSON.parse(stored);
+        }
+        
+        // Load draft if exists
+        const draft = localStorage.getItem('draftOffer');
+        if (draft && confirm('هل تريد استعادة العرض المحفوظ كمسودة؟')) {
+            const draftData = JSON.parse(draft);
+            if (draftData.DynamicFields) {
+                fields = draftData.DynamicFields.map((f, i) => ({
+                    ...f,
+                    id: `field_${i + 1}`,
+                    options: f.options || []
+                }));
+                fieldCounter = fields.length;
+                renderFields();
+                document.getElementById('emptyState').style.display = 'none';
+            }
+        }
+    });
+</script>

@@ -1,0 +1,531 @@
+﻿@{
+    ViewData["Title"] = "Privacy Policy";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="tab-pane" id="request" role="tabpanel" aria-labelledby="request-tab">
+    <div class="card">
+        <div class="card-header">
+            <div class="row align-items-center g-2">
+                <div class="col">
+                    <h5>العملاء</h5>
+                </div>
+
+                <div class="row" dir="rtl">
+
+
+
+                  
+
+                    <div class="col-md-3">
+
+                        <div id="exampleModalCenter" class="modal fade" tabindex="-1" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" style="display: none;">
+                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalCenterTitle">بيانات المستخدم</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+
+                                        <div class="row">
+
+
+                                            
+
+
+
+                                                <div class="col-md-12">
+
+
+                                                    <div class="col-md-12">
+                                                        <h5> اختار الدولة</h5>
+                                                        </hr>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <div class="form-group ">
+                                                            <select id="inputState" class="form-select">
+                                                                <option selected="">اليمن</option>
+
+                                                            </select>
+                                                        </div>
+
+                                                    </div>
+                                            </div>
+
+
+
+
+
+                                            <div class="col-md-12">
+
+
+                                                <div class="col-md-12">
+                                                    <h5>  الاسم الاول </h5>
+                                                    </hr>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-floating mb-3">
+                                                        <input type="text" class="form-control" id="floatingInput1" placeholder=" شمال ">
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-12">
+                                                    <h5>  الاسم الثاني </h5>
+                                                    </hr>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-floating mb-3">
+                                                        <input type="text" class="form-control" id="floatingInput1" placeholder=" جنوب ">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <h5>  الاسم الثالث </h5>
+                                                    </hr>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-floating mb-3">
+                                                        <input type="text" class="form-control" id="floatingInput1" placeholder=" شرق ">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <h5>  الاسم الرابع </h5>
+                                                    </hr>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-floating mb-3">
+                                                        <input type="text" class="form-control" id="floatingInput1" placeholder=" غرب ">
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-12">
+                                                    <h5>  اللقب </h5>
+                                                    </hr>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-floating mb-3">
+                                                        <input type="text" class="form-control" id="floatingInput1" placeholder=" غرب ">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <h5>  العمر </h5>
+                                                    </hr>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-floating mb-3">
+                                                        <input type="text" class="form-control" id="floatingInput1" placeholder=" غرب ">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                
+@* 
+                                            <div class="col-md-12">
+
+
+                                                <div class="col-md-12">
+                                                    <h5>   الاسم حسب البطاقة</h5>
+                                                    </hr>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div class="form-floating mb-3">
+                                                        <input type="text" class="form-control" id="floatingInput1" placeholder=" مدة زمنية">
+                                                    </div>
+                                                </div>
+
+                                            </div> *@
+
+                                            <div class="col-md-12">
+
+
+                                                <div class="col-md-12">
+                                                    <h5>   رقم البطاقة</h5>
+                                                    </hr>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div class="form-floating mb-3">
+                                                        <input type="text" class="form-control" id="floatingInput1" placeholder=" وحدة الجوار">
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+                                            <div class="col-md-12">
+
+
+                                                <div class="col-md-12">
+                                                    <h5>   رقم الجوال</h5>
+                                                    </hr>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div class="form-floating mb-3">
+                                                        <input type="text" class="form-control" id="floatingInput1" placeholder=" وحدة الجوار">
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+
+                                            <div class="col-md-12">
+
+
+                                                <div class="col-md-12">
+                                                    <h5>    العنوان</h5>
+                                                    </hr>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div class="form-floating mb-3">
+                                                        <input type="text" class="form-control" id="floatingInput1" placeholder=" وحدة الجوار">
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+
+                                            <div class="col-md-12">
+
+
+                                                <div class="col-md-12">
+                                                    <h5>    الايميل</h5>
+                                                    </hr>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div class="form-floating mb-3">
+                                                        <input type="text" class="form-control" id="floatingInput1" placeholder=" وحدة الجوار">
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+                                            <div class="col-md-6">
+                                                <h5 class="mt-5">نوع الحساب</h5>
+
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault11">
+                                                    <label class="form-check-label" for="flexRadioDefault11">  عميل </label>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault12" checked="">
+                                                    <label class="form-check-label" for="flexRadioDefault12">   مهندس </label>
+                                                </div>
+                                            </div>
+
+
+                                        </div>
+
+
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">الغاء</button>
+                                        <button type="button" class="btn btn-primary">انشاء حساب </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        @* <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalCenter"><i class="ti ti-user-plus me-1"></i>انشاء طلب </button> *@
+
+
+                    </div>
+                </div>
+
+                <div dir="rtl">
+
+
+
+                   @*  <ul class="nav nav-tabs profile-tabs justify-content-center justify-content-md-end" id="myTab" role="tablist" dir="ltr">
+
+
+                        <li class="nav-item">
+                            <a class="nav-link active" id="request-tab" data-bs-toggle="tab" href="#to_me" role="tab" aria-controls="request" aria-selected="false">
+                                <i class="ti ti-user-plus me-2"></i>طلبات مرسلة إلي
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link " id="gallery-tab" data-bs-toggle="tab" href="#from_me" role="tab" aria-controls="gallery" aria-selected="false">
+                                <i class="ti ti-photo me-2"></i>طلبات قمت بارسالها
+                            </a>
+                        </li>
+
+
+                        <li class="nav-item">
+                            <a class="nav-link" id="request-tab" data-bs-toggle="tab" href="#generic" role="tab" aria-controls="request" aria-selected="false">
+                                <i class="ti ti-user-plus me-2"></i>طلبات  عامة
+                            </a>
+                        </li>
+                    </ul>
+ *@
+                    <div class="tab-pane" id="to_me" role="tabpanel" aria-labelledby="request-tab">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table table-hover">
+                                        <thead>
+                                            <tr>
+                                                <th>الدولة</th>
+                                                <th>الاسم الاول </th>
+                                                <th>الاسم الثاني </th>
+                                                <th>الاسم الثالث </th>
+                                                <th>الاسم الرابع </th>
+                                                <th> اللقب</th>
+                                                <th> العمر</th>
+                                                <th>رقم البطاقة </th>
+                                                <th>رقم الجوال </th>
+                                                <th>الايميل  </th>
+                                                <th>العنوان  </th>
+                                                <th>نوع الحساب</th>
+                                                <th>حالة الحساب</th>
+                                                <th> العمليات</th>
+                                              @*   <th>
+                                                    <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#exampleModalCenter"><i class="ti ti-user-plus me-1"></i>انشاء طلب </button>
+                                                </th> *@
+                                               
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>اليمن</td>
+                                                <td>ماهر</td>
+                                                <td>حميد</td>
+                                                <td>علي</td>
+                                                <td>حميد </td>
+                                                <td> البدوي </td>
+                                                <td> 25 </td>
+                                                <td>9876544567</td>
+                                                <td>778654567 </td>
+                                                <td>ma@gmail.com </td>
+                                                <td>شارع 16  </td>
+                                                <td>عميل </td>
+                                                <td>
+                                                    <button type="button" class="btn btn-danger"> توقيف </button> نشط
+                                                </td>
+                                               
+                                                <td>
+                                                    <a href="#!"><i class="icon feather icon-edit f-w-600 f-16 m-r-15 text-success"></i></a><a href="#!"><i class="feather icon-trash-2 f-w-600 f-16 text-danger"></i></a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>اليمن</td>
+                                                <td>احمد</td>
+                                                <td>محمد</td>
+                                                <td>علي</td>
+                                                <td>احمد </td>
+                                                <td> النهاري </td>
+                                                <td> 25 </td>
+                                                <td>9876544567</td>
+                                                <td>778654567 </td>
+                                                <td>ma@gmail.com </td>
+                                                <td>شارع 16  </td>
+                                                <td>عميل </td>
+                                                <td>
+                                                    <button type="button" class="btn btn-primary"> تنشيط </button> موقف
+                                                </td>
+                                                <td>
+                                                    <a href="#!"><i class="icon feather icon-edit f-w-600 f-16 m-r-15 text-success"></i></a><a href="#!"><i class="feather icon-trash-2 f-w-600 f-16 text-danger"></i></a>
+                                                </td>
+                                            </tr>
+                                         
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                  @*   <div class="tab-pane" id="from_me" role="tabpanel" aria-labelledby="request-tab">
+                        <div class="card">
+                            <div class="card-header">
+
+                                <div class="card-body">
+                                    <div class="table-responsive">
+                                        <table class="table table-hover">
+                                            <thead>
+                                                <tr>
+                                                    <th>العنوان</th>
+                                                    <th>موقع الأرض</th>
+                                                    <th>إحداثيات X</th>
+                                                    <th>إحداثيات Y</th>
+                                                    <th>وحدة الجوار</th>
+                                                    <th>المساحة</th>
+                                                    <th>الحدود</th>
+                                                    <th>المدة الزمنية</th>
+                                                    <th>المبلغ المقترح</th>
+                                                    <th>نوع الإرسال</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>اليمن</td>
+                                                    <td>123.45</td>
+                                                    <td>678.90</td>
+                                                    <td>حي الزهور</td>
+                                                    <td>500 متر مربع</td>
+                                                    <td>شمال</td>
+                                                    <td>30 يوم</td>
+                                                    <td>10000 ريال</td>
+                                                    <td>عام</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>2</td>
+                                                    <td>صنعاء</td>
+                                                    <td>543.21</td>
+                                                    <td>987.65</td>
+                                                    <td>حي النهضة</td>
+                                                    <td>300 متر مربع</td>
+                                                    <td>جنوب</td>
+                                                    <td>60 يوم</td>
+                                                    <td>15000 ريال</td>
+                                                    <td>مخصص</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>3</td>
+                                                    <td>تعز</td>
+                                                    <td>111.22</td>
+                                                    <td>333.44</td>
+                                                    <td>حي الوحدة</td>
+                                                    <td>700 متر مربع</td>
+                                                    <td>شرق</td>
+                                                    <td>90 يوم</td>
+                                                    <td>20000 ريال</td>
+                                                    <td>عام</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="tab-pane" id="generic" role="tabpanel" aria-labelledby="request-tab">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table table-hover">
+                                        <thead>
+                                            <tr>
+                                                <th>العنوان</th>
+                                                <th>موقع الأرض</th>
+                                                <th>إحداثيات X</th>
+                                                <th>إحداثيات Y</th>
+                                                <th>وحدة الجوار</th>
+                                                <th>المساحة</th>
+                                                <th>الحدود</th>
+                                                <th>المدة الزمنية</th>
+                                                <th>المبلغ المقترح</th>
+                                                <th>نوع الإرسال</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>اليمن</td>
+                                                <td>123.45</td>
+                                                <td>678.90</td>
+                                                <td>حي الزهور</td>
+                                                <td>500 متر مربع</td>
+                                                <td>شمال</td>
+                                                <td>30 يوم</td>
+                                                <td>10000 ريال</td>
+                                                <td>عام</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2</td>
+                                                <td>صنعاء</td>
+                                                <td>543.21</td>
+                                                <td>987.65</td>
+                                                <td>حي النهضة</td>
+                                                <td>300 متر مربع</td>
+                                                <td>جنوب</td>
+                                                <td>60 يوم</td>
+                                                <td>15000 ريال</td>
+                                                <td>مخصص</td>
+                                            </tr>
+                                            <tr>
+                                                <td>3</td>
+                                                <td>تعز</td>
+                                                <td>111.22</td>
+                                                <td>333.44</td>
+                                                <td>حي الوحدة</td>
+                                                <td>700 متر مربع</td>
+                                                <td>شرق</td>
+                                                <td>90 يوم</td>
+                                                <td>20000 ريال</td>
+                                                <td>عام</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+ *@
+
+                </div>
+            </div>
+        </div>
+
+      @*   <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>العنوان</th>
+                            <th>موقع الأرض</th>
+                            <th>إحداثيات X</th>
+                            <th>إحداثيات Y</th>
+                            <th>وحدة الجوار</th>
+                            <th>المساحة</th>
+                            <th>الحدود</th>
+                            <th>المدة الزمنية</th>
+                            <th>المبلغ المقترح</th>
+                            <th>نوع الإرسال</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>اليمن</td>
+                            <td>123.45</td>
+                            <td>678.90</td>
+                            <td>حي الزهور</td>
+                            <td>500 متر مربع</td>
+                            <td>شمال</td>
+                            <td>30 يوم</td>
+                            <td>10000 ريال</td>
+                            <td>عام</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>صنعاء</td>
+                            <td>543.21</td>
+                            <td>987.65</td>
+                            <td>حي النهضة</td>
+                            <td>300 متر مربع</td>
+                            <td>جنوب</td>
+                            <td>60 يوم</td>
+                            <td>15000 ريال</td>
+                            <td>مخصص</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>تعز</td>
+                            <td>111.22</td>
+                            <td>333.44</td>
+                            <td>حي الوحدة</td>
+                            <td>700 متر مربع</td>
+                            <td>شرق</td>
+                            <td>90 يوم</td>
+                            <td>20000 ريال</td>
+                            <td>عام</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+ *@
+    </div>
+</div>

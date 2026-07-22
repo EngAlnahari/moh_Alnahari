@@ -1,0 +1,85 @@
+@model Mntry_Awqaf.Models.TanjezOrderWithEarthBordersViewModel
+
+@{
+    var rop = Context.Session.GetInt32("UserID");
+}
+<style>
+
+
+
+    .custom-input-container {
+        position: relative;
+        margin-bottom: 1rem;
+    }
+
+        .custom-input-container input,
+        .custom-input-container select {
+            width: 100%;
+            padding: 12px 10px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            background-color: #fff;
+            font-size: 15px;
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+
+            .custom-input-container input:focus,
+            .custom-input-container select:focus {
+                border-color: #007bff;
+                box-shadow: 0 0 5px rgba(0,123,255,0.3);
+                outline: none;
+            }
+
+        .custom-input-container label {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            color: #777;
+            background: #fff;
+            padding: 0 5px;
+            transition: 0.2s ease all;
+            pointer-events: none;
+        }
+
+        .custom-input-container input:focus + label,
+        .custom-input-container input:not(:placeholder-shown) + label,
+        .custom-input-container select:focus + label,
+        .custom-input-container select:not([value=""]) + label {
+            top: -10px;
+                                        // عرض رسالة خطأ داخل الـ Modal
+                                        var alertDiv = document.getElementById("modalAlert");
+                                        if(!alertDiv) {
+                                            alertDiv = document.createElement("div");
+                                            alertDiv.id = "modalAlert";
+                                            document.getElementById("modalBodyContent").prepend(alertDiv);
+                                        }
+                                        alertDiv.className = "alert alert-danger";
+                                        alertDiv.innerText = data.message || "حدث خطأ أثناء الحفظ";
+                                    }
+                                });
+                            });
+                        }
+                    });
+
+                // إعادة تعيين القيمة
+                this.value = "";
+            }
+        });
+    });
+</script>
+
+
+
+
+<!-- سكربت -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const descripSelect = document.querySelector('select[asp-for="tanjezOrder.DescripPerson"]');
+
+        if (descripSelect) {
+            descripSelect.addEventListener('change', function() {
+                if (this.value === 'وكيل') {
+                    // فتح المودال
+                    const modalEl = document.getElementById('agentModal');
+                    const agentModal = new bootstrap.Modal(modalEl);
+                    agentModal.show();

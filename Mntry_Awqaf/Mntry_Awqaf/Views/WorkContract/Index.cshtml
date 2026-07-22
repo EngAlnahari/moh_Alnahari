@@ -1,0 +1,332 @@
+@model IEnumerable<Mntry_Awqaf.Models.WorkContract>
+
+<style>
+    .contract-card {
+        border-radius: 12px;
+        border: none;
+        box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+        overflow: hidden;
+    }
+    .contract-card .card-header {
+        background: linear-gradient(135deg, #0d6efd, #0a58ca);
+        padding: 18px 24px;
+    }
+    .contract-table {
+        margin-bottom: 0;
+    }
+    .contract-table thead th {
+        background: #f8f9fa;
+        font-weight: 600;
+        font-size: 0.85rem;
+        color: #495057;
+        border-bottom: 2px solid #dee2e6;
+        padding: 12px 10px;
+        white-space: nowrap;
+    }
+    .contract-table tbody td {
+        padding: 14px 10px;
+        font-size: 0.9rem;
+        vertical-align: middle;
+    }
+    .contract-table tbody tr:hover {
+        background: #f0f6ff;
+    }
+    .status-badge {
+        padding: 5px 12px;
+        border-radius: 20px;
+        font-size: 0.78rem;
+        font-weight: 600;
+        display: inline-block;
+    }
+    .status-pending { background: #fff3cd; color: #856404; }
+    .status-approved { background: #d1e7dd; color: #0f5132; }
+    .status-rejected { background: #f8d7da; color: #842029; }
+    .status-final { background: #cfe2ff; color: #084298; }
+    .btn-action {
+        padding: 5px 12px;
+        border-radius: 8px;
+        font-size: 0.8rem;
+        font-weight: 500;
+        transition: all 0.2s;
+    }
+    .btn-action:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    }
+    .empty-state-contracts {
+        padding: 60px 20px;
+        text-align: center;
+        color: #6c757d;
+    }
+    .empty-state-contracts i {
+        font-size: 3.5rem;
+        opacity: 0.4;
+        margin-bottom: 15px;
+        display: block;
+    }
+    .contract-detail-modal .modal-header {
+        background: linear-gradient(135deg, #0d6efd, #0a58ca);
+        color: white;
+    }
+    .detail-row {
+        display: flex;
+        justify-content: space-between;
+        padding: 8px 0;
+        border-bottom: 1px solid #f0f0f0;
+    }
+    .detail-row:last-child { border-bottom: none; }
+    .detail-label { font-weight: 600; color: #495057; }
+    .detail-value { color: #212529; }
+</style>
+
+<div class="contract-card card">
+    <div class="card-header d-flex justify-content-between align-items-center">
+        <h5 class="mb-0 text-white"><i class="bi bi-file-earmark-text me-2"></i>عقود العمل</h5>
+        <span class="badge bg-light text-primary fs-6">@(Model?.Count() ?? 0) عقد</span>
+    </div>
+
+    <div class="card-body p-0">
+        @{
+            var dynamicValues = ViewBag.DynamicValues as IEnumerable<Mntry_Awqaf.Models.DynamicFieldValue>;
+        }
+        @if (Model != null && Model.Any())
+        {
+            <div class="table-responsive">
+                <table class="table contract-table align-middle text-center">
+                    <thead>
+                        <tr>
+                            <th>رقم العقد</th>
+                            @if (ViewBag.DynamicFields != null)
+                            {
+                                foreach (var field in ViewBag.DynamicFields)
+                                {
+                                    <th>@field.Name</th>
+                                }
+                            }
+                            <th>الحالة</th>
+                            <th>العمليات</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            var statusClass = item.Status switch
+                            {
+                                Mntry_Awqaf.Models.ContractStatus.FinalApproved => "status-final",
+                                Mntry_Awqaf.Models.ContractStatus.EngineerApproved => "status-approved",
+                                Mntry_Awqaf.Models.ContractStatus.EngineerRejected => "status-rejected",
+                                Mntry_Awqaf.Models.ContractStatus.ClientRejected => "status-rejected",
+                                _ => "status-pending"
+                            };
+                            var statusText = item.Status switch
+                            {
+                                Mntry_Awqaf.Models.ContractStatus.PendingEngineerApproval => "بانتظار المهندس",
+                                Mntry_Awqaf.Models.ContractStatus.EngineerApproved => "موافقة المهندس",
+                                Mntry_Awqaf.Models.ContractStatus.EngineerRejected => "مرفوض من المهندس",
+                                Mntry_Awqaf.Models.ContractStatus.PendingClientFinalApproval => "بانتظار العميل",
+                                Mntry_Awqaf.Models.ContractStatus.FinalApproved => "معتمد",
+                                Mntry_Awqaf.Models.ContractStatus.ClientRejected => "مرفوض من العميل",
+                                _ => "غير معروف"
+                            };
+                            <tr>
+                                <td><strong>@item.Id</strong></td>
+                                @if (ViewBag.DynamicFields != null)
+                                {
+                                    foreach (var field in ViewBag.DynamicFields)
+                                    {
+                                        int fId = (int)field.Id;
+                                        var val = dynamicValues?.FirstOrDefault(v => v.RecordId == item.Id && v.DynamicFieldId == fId)?.Value ?? "-";
+                                        string fieldType = (string)field.Type;
+
+                                        if (fieldType == "file" && val != "-" && val != "")
+                                        {
+                                            string ext = System.IO.Path.GetExtension(val).ToLower();
+                                            bool isImage = ext == ".jpg" || ext == ".jpeg" || ext == ".png" || ext == ".gif" || ext == ".bmp" || ext == ".webp" || ext == ".svg";
+
+                                            if (isImage)
+                                            {
+                                                <td>
+                                                    <a href="@val" target="_blank" title="عرض الصورة">
+                                                        <img src="@val" alt="مرفق" style="width:40px;height:40px;object-fit:cover;border-radius:5px;border:1px solid #ccc;" 
+                                                             onerror="this.style.display='none';this.nextElementSibling.style.display='inline'" />
+                                                        <span style="display:none">🖼️</span>
+                                                    </a>
+                                                </td>
+                                            }
+                                            else
+                                            {
+                                                <td>
+                                                    <a href="@val" target="_blank" title="فتح المرفق" style="text-decoration:none; color:#0d6efd;">
+                                                        📎
+                                                    </a>
+                                                </td>
+                                            }
+                                        }
+                                        else
+                                        {
+                                            <td>@val</td>
+                                        }
+                                    }
+                                }
+                                <td><span class="status-badge @statusClass">@statusText</span></td>
+                                <td>
+                                    <button type="button" class="btn btn-action btn-outline-primary me-1"
+                                            onclick="showContractDetails(@item.Id, '@statusText')">
+                                        <i class="bi bi-eye me-1"></i>عرض
+                                    </button>
+                                    <a asp-controller="Work_Form" asp-action="Create2" class="btn btn-action btn-outline-success me-1">
+                                        <i class="bi bi-file-earmark-plus me-1"></i>استمارة
+                                    </a>
+                                    <button class="btn btn-action btn-outline-danger" onclick="confirmDelete(@item.Id)">
+                                        <i class="bi bi-trash"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        }
+        else
+        {
+            <div class="empty-state-contracts">
+                <i class="bi bi-file-earmark-x"></i>
+                <h5>لا توجد عقود عمل حالياً</h5>
+                <p class="text-muted">ستظهر العقود هنا بمجرد إنشائها</p>
+            </div>
+        }
+    </div>
+</div>
+
+<!-- Modal for viewing dynamic details directly -->
+<div class="modal fade contract-detail-modal" id="contractDetailModal" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content" style="border-radius: 12px; overflow: hidden;">
+            <div class="modal-header">
+                <h5 class="modal-title"><i class="bi bi-file-earmark-text me-2"></i>تفاصيل العقد <span id="modalContractId"></span></h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-12 mb-3">
+                        <div class="detail-row"><span class="detail-label">الحالة</span><span class="detail-value fw-bold" id="mdStatus"></span></div>
+                    </div>
+                </div>
+                <hr />
+                <h6 class="text-primary mb-3"><i class="bi bi-list-check me-1"></i> تفاصيل الحقول (حسب ما تم إدخاله)</h6>
+                <div class="row" id="dynamicDetailsContainer">
+                    <!-- Dynamic fields will be injected here via JS -->
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">إغلاق</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Delete Confirmation Modal -->
+<div class="modal fade" id="deleteConfirmModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-sm">
+        <div class="modal-content">
+            <div class="modal-header bg-danger text-white">
+                <h6 class="modal-title">⚠️ تأكيد الحذف</h6>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body text-center">
+                <p class="mb-0">هل أنت متأكد من حذف هذا العقد؟</p>
+                <small class="text-muted">لا يمكن التراجع عن هذا الإجراء</small>
+            </div>
+            <div class="modal-footer justify-content-center">
+                <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">إلغاء</button>
+                <button type="button" class="btn btn-danger btn-sm" id="confirmDeleteBtn">حذف</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+<script>
+    // تمرير الحقول الديناميكية لكي يقرأها الجافاسكربت
+    var allDynamicValues = @Html.Raw(System.Text.Json.JsonSerializer.Serialize(dynamicValues ?? new List<Mntry_Awqaf.Models.DynamicFieldValue>()));
+    var allDynamicFields = @Html.Raw(System.Text.Json.JsonSerializer.Serialize(ViewBag.DynamicFields ?? new List<dynamic>()));
+
+    function showContractDetails(id, status) {
+        document.getElementById('modalContractId').textContent = '#' + id;
+        document.getElementById('mdStatus').textContent = status || '—';
+
+        // تصفية القيم التي تخص هذا العقد فقط
+        var recordValues = allDynamicValues.filter(function(v) { return v.RecordId === id; });
+        var container = document.getElementById('dynamicDetailsContainer');
+        container.innerHTML = '';
+
+        if(allDynamicFields && allDynamicFields.length > 0) {
+            allDynamicFields.forEach(function(field) {
+                var fieldObj = recordValues.find(function(v) { return v.DynamicFieldId === field.Id; });
+                var val = fieldObj ? fieldObj.Value : '-';
+
+                var html = '';
+                if(field.Type === 'file' && val !== '-' && val !== '') {
+                    html = '<a href="'+val+'" target="_blank" class="text-primary">عرض المرفق</a>';
+                } else {
+                    html = val;
+                }
+
+                var row = '<div class="col-md-6 mb-2">' +
+                          '<div class="detail-row"><span class="detail-label">' + field.Name + '</span>' +
+                          '<span class="detail-value text-break">' + html + '</span></div></div>';
+                
+                container.innerHTML += row;
+            });
+        } else {
+            container.innerHTML = '<div class="col-12 text-muted text-center">لا توجد حقول مسجلة</div>';
+        }
+
+        var modal = new bootstrap.Modal(document.getElementById('contractDetailModal'));
+        modal.show();
+    }
+
+    var _deleteId = 0;
+    var _deleteModalInstance = null;
+
+    function confirmDelete(id) {
+        _deleteId = id;
+        var modalEl = document.getElementById('deleteConfirmModal');
+        if (modalEl) {
+            _deleteModalInstance = bootstrap.Modal.getInstance(modalEl);
+            if (!_deleteModalInstance) {
+                _deleteModalInstance = new bootstrap.Modal(modalEl);
+            }
+            _deleteModalInstance.show();
+        }
+    }
+
+    document.getElementById('confirmDeleteBtn').addEventListener('click', function () {
+        var btn = this;
+        btn.disabled = true;
+        
+        fetch('/WorkContract/DeleteConfirmed?id=' + _deleteId, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' }
+        })
+        .then(function(r) { return r.json(); })
+        .then(function(data) {
+            if (data.success) {
+                if (_deleteModalInstance) {
+                    _deleteModalInstance.hide();
+                }
+                setTimeout(function () {
+                    location.reload();
+                }, 500);
+            } else {
+                alert('خطأ: ' + (data.message || 'فشل الحذف'));
+                btn.disabled = false;
+            }
+        })
+        .catch(function(error) {
+            console.error('Error:', error);
+            alert('حدث خطأ أثناء الاتصال بالخادم.');
+            btn.disabled = false;
+        });
+    });
+</script>

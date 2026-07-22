@@ -1,0 +1,53 @@
+@model IEnumerable<IGrouping<dynamic, Mntry_Awqaf.Models.FieldAssignment>>
+@{
+    ViewData["Title"] = "استعراض التعيينات";
+}
+
+<div class="container mt-4">
+    <div class="card shadow">
+        <div class="card-header bg-info text-white">
+            <h4 class="mb-0">جميع الحقول المسندة للتفاصيل</h4>
+        </div>
+        <div class="card-body">
+            @if(Model != null && Model.Any())
+            {
+                <div class="accordion" id="assignmentsAccordion">
+                    @{ int i = 0; }
+                    @foreach (var group in Model)
+                    {
+                        var headerId = "heading" + i;
+                        var collapseId = "collapse" + i;
+
+                        <div class="accordion-item mb-2">
+                            <h2 class="accordion-header" id="@headerId">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#@collapseId" aria-expanded="false" aria-controls="@collapseId">
+                                    <strong>المجال:</strong> @group.Key.MainCategory &nbsp;|&nbsp;
+                                    <strong>التفصيل:</strong> @group.Key.Detail &nbsp;|&nbsp;
+                                    <span class="badge bg-secondary ms-2">شاشة: @group.Key.ScreenType</span>
+                                </button>
+                            </h2>
+                            <div id="@collapseId" class="accordion-collapse collapse" aria-labelledby="@headerId" data-bs-parent="#assignmentsAccordion">
+                                <div class="accordion-body">
+                                    <ul class="list-group">
+                                        @foreach (var assignment in group)
+                                        {
+                                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                                @assignment.DynamicField.Name
+                                                <span class="badge bg-primary rounded-pill">@assignment.DynamicField.Type</span>
+                                            </li>
+                                        }
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        i++;
+                    }
+                </div>
+            }
+            else
+            {
+                <div class="alert alert-warning text-center">لا توجد تعيينات مسجلة حتى الآن.</div>
+            }
+        </div>
+    </div>
+</div>

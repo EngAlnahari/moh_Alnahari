@@ -1,0 +1,17 @@
+﻿@model Mntry_Awqaf.Models.Notification
+
+<h3>هل أنت متأكد من حذف بيانات الإشعار؟</h3>
+<div>
+    <h4>@Html.DisplayFor(model => model.Url)</h4>
+    <hr />
+
+    <form data-action="ajax" data-id="@Model.Id"
+          data-row="#row-@Model.Id"
+          data-message-container="#alert-area"
+          action="/Notification/Delete1/@Model.Id" method="post">
+        <div class="text-end">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">إلغاء</button>
+            <button type="submit" class="btn btn-danger">تأكيد الحذف</button>
+        </div>
+    </form>
+</div>

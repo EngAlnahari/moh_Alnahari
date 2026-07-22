@@ -1,0 +1,139 @@
+﻿@model List<Mntry_Awqaf.Models.Qualification>
+
+<div class="section">
+    <div class="section-header" onclick="toggleSection('qualifications')">المؤهلات العلمية</div>
+    <div class="section-content" id="qualifications">
+
+        <div class="row g-2 mb-3">
+            <div class="col-md-4"><input type="text" id="EduDegree" class="form-control" placeholder="المؤهل"></div>
+            <div class="col-md-4"><input type="text" id="EduCountry" class="form-control" placeholder="البلد"></div>
+            <div class="col-md-4"><input type="text" id="EduUniv" class="form-control" placeholder="الجامعة / المعهد"></div>
+        </div>
+
+        <div class="row g-2 mb-3">
+            <div class="col-md-4"><input type="text" id="EduMajor" class="form-control" placeholder="التخصص"></div>
+            <div class="col-md-4"><input type="text" id="EduDept" class="form-control" placeholder="القسم"></div>
+            <div class="col-md-2"><input type="text" id="EduYear" class="form-control" placeholder="سنة التخرج"></div>
+            <div class="col-md-2"><input type="text" id="EduGrade" class="form-control" placeholder="المعدل / التقدير"></div>
+        </div>
+
+        <div id="qual-msg" style="display:none;" class="mb-3"></div>
+        <button class="btn btn-outline-primary w-100 mb-3" onclick="saveQualification()">حفظ المؤهل</button>
+
+        <div id="qualifications-list">
+            @foreach (var q in Model)
+            {
+                <div class="item-box" data-id="@q.Id">
+                    <div>
+                        <strong>@q.EduDegree</strong> - @q.EduMajor (@q.EduUniv)<br />
+                        <small>@q.EduCountry - @q.EduYear - @q.EduGrade</small>
+                    </div>
+                    <div class="action-btns">
+                        <button class="btn btn-sm btn-outline-primary" onclick="editQualification(@q.Id)">تعديل</button>
+                        <button class="btn btn-sm btn-outline-danger" onclick="deleteQualification(@q.Id)">حذف</button>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+<script>
+    let editQualId = 0;
+
+    // 🔹 تحميل جميع المؤهلات
+    function loadQualifications() {
+        $("#qualifications-list").load("/Qualification/GetUserQualifications #qualifications-list>*");
+    }
+
+    // 🔹 حفظ أو تحديث المؤهل
+    function saveQualification() {
+        const data = new FormData();
+        ["EduDegree","EduCountry","EduUniv","EduMajor","EduDept","EduYear","EduGrade"].forEach(id=>{
+            data.append(id, $(`#${id}`).val());
+        });
+
+        // عند التعديل نضيف المعرّف للطلب
+        if (editQualId > 0) data.append("id", editQualId); // ملاحظة: اسم المعرف يجب أن يتطابق مع الدالة في Controller
+
+        const url = editQualId > 0 ? '/Qualification/UpdateQualification' : '/Qualification/CreateQualification';
+
+        $.ajax({
+            url: url,
+            type: 'POST',
+            data: data,
+            contentType: false,
+            processData: false,
+            headers: { 'Accept': 'application/json' },
+            success: function(res) {
+                console.log('server response:', res);
+
+                if (res && res.success) {
+                    loadQualifications();
+                    $('#qual-msg').text('✅ تم الحفظ بنجاح').css('color', 'green').show();
+
+                    // تفريغ الحقول بعد الحفظ
+                    ["EduDegree","EduCountry","EduUniv","EduMajor","EduDept","EduYear","EduGrade"].forEach(id=>{
+                        $(`#${id}`).val('');
+                    });
+                    editQualId = 0;
+                } else {
+                    const msg = (res && (res.message || res.error || JSON.stringify(res))) || '❌ حدث خطأ أثناء الحفظ';
+                    $('#qual-msg').text(msg).css('color', 'red').show();
+                }
+            },
+            error: function(xhr, status, err) {
+                console.error('AJAX error', status, err, xhr.responseText);
+                let text = '⚠️ فشل الاتصال بالخادم';
+                try {
+                    const json = JSON.parse(xhr.responseText);
+                    text = json.message || JSON.stringify(json);
+                } catch (e) {
+                    text = xhr.responseText || text;
+                }
+                $('#qual-msg').text(text).css('color', 'red').show();
+            }
+        });
+    }
+
+    // 🔹 جلب بيانات المؤهل لتعديله
+    function editQualification(id) {
+        $.get(`/Qualification/GetQualificationById?id=${id}`, function(res) {
+            if (res) {
+                $('#EduDegree').val(res.eduDegree);
+                $('#EduCountry').val(res.eduCountry);
+                $('#EduUniv').val(res.eduUniv);
+                $('#EduMajor').val(res.eduMajor);
+                $('#EduDept').val(res.eduDept);
+                $('#EduYear').val(res.eduYear);
+                $('#EduGrade').val(res.eduGrade);
+
+                editQualId = res.id;
+
+                $('#qual-msg').text('✏️ الآن يمكنك تعديل المؤهل').css('color', 'blue').show();
+            }
+        }).fail(function() {
+            $('#qual-msg').text('⚠️ فشل في تحميل بيانات المؤهل').css('color', 'red').show();
+        });
+    }
+
+    // 🔹 حذف المؤهل
+    function deleteQualification(id) {
+        if (!confirm("هل تريد حذف هذا المؤهل؟")) return;
+
+        $.post('/Qualification/DeleteQualification', { id: id }, function(res) {
+            if (res.success) {
+                loadQualifications();
+                $('#qual-msg').text('🗑️ تم الحذف بنجاح').css('color', 'green').show();
+            } else {
+                $('#qual-msg').text('❌ فشل الحذف').css('color', 'red').show();
+            }
+        }).fail(function() {
+            $('#qual-msg').text('⚠️ فشل الاتصال بالخادم أثناء الحذف').css('color', 'red').show();
+        });
+    }
+
+    // تحميل البيانات عند فتح الصفحة
+    $(document).ready(loadQualifications);
+</script>
+

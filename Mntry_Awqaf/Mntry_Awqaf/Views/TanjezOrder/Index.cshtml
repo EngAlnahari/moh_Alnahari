@@ -1,0 +1,1123 @@
+@model IEnumerable<Mntry_Awqaf.Models.TanjezOrder>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<div class="col">
+    <h5>طلبات</h5>
+</div>
+
+<div class="row" dir="ltr">
+@* <div class="row" dir="rtl"> *@
+
+    @* <!-- الحقول الرئيسية -->
+    <div class="row align-items-end" id="familyTreeContainer">
+        <div class="col-md-2">
+            <label>الجد</label>
+            <select id="grandParent" class="form-select">
+                <option value="">اختر الجد</option>
+            </select>
+        </div>
+        <div class="col-md-2">
+            <label>الأب</label>
+            <select id="parent" class="form-select">
+                <option value="">اختر الأب</option>
+            </select>
+        </div>
+        <div class="col-md-2">
+            <label>الابن</label>
+            <select id="child" class="form-select">
+                <option value="">اختر الابن</option>
+            </select>
+        </div>
+        <div class="col-md-2">
+            <label>ابن الابن</label>
+            <select id="grandChild" class="form-select">
+                <option value="">اختر ابن الابن</option>
+            </select>
+        </div>
+        <div class="col-md-2">
+            <label>ابن ابن الابن</label>
+            <select id="greatGrandChild" class="form-select">
+                <option value="">اختر ابن ابن الابن</option>
+            </select>
+        </div>
+        <div class="col-md-2">
+            <button id="addMemberBtn" class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#addFamilyModal">إضافة</button>
+        </div>
+    </div>
+
+    <!-- Modal إضافة العائلة -->
+    <div class="modal fade" id="addFamilyModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">إضافة عائلة جديدة</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- الجد -->
+                    <div class="mb-2">
+                        <label>الجد</label>
+                        <div class="input-group">
+                            <select id="selectGrandParentModal" class="form-select"></select>
+                            <input type="text" id="inputGrandParentModal" class="form-control d-none" placeholder="أدخل اسم جديد">
+                            <button class="btn btn-outline-secondary" onclick="enableInput('grandParent')">+</button>
+                        </div>
+                    </div>
+                    <!-- الأب -->
+                    <div class="mb-2">
+                        <label>الأب</label>
+                        <div class="input-group">
+                            <select id="selectParentModal" class="form-select"></select>
+                            <input type="text" id="inputParentModal" class="form-control d-none" placeholder="أدخل اسم جديد">
+                            <button class="btn btn-outline-secondary" onclick="enableInput('parent')">+</button>
+                        </div>
+                    </div>
+                    <!-- الابن -->
+                    <div class="mb-2">
+                        <label>الابن</label>
+                        <div class="input-group">
+                            <select id="selectChildModal" class="form-select"></select>
+                            <input type="text" id="inputChildModal" class="form-control d-none" placeholder="أدخل اسم جديد">
+                            <button class="btn btn-outline-secondary" onclick="enableInput('child')">+</button>
+                        </div>
+                    </div>
+                    <!-- ابن الابن -->
+                    <div class="mb-2">
+                        <label>ابن الابن</label>
+                        <div class="input-group">
+                            <select id="selectGrandChildModal" class="form-select"></select>
+                            <input type="text" id="inputGrandChildModal" class="form-control d-none" placeholder="أدخل اسم جديد">
+                            <button class="btn btn-outline-secondary" onclick="enableInput('grandChild')">+</button>
+                        </div>
+                    </div>
+                    <!-- ابن ابن الابن -->
+                    <div class="mb-2">
+                        <label>ابن ابن الابن</label>
+                        <div class="input-group">
+                            <select id="selectGreatGrandChildModal" class="form-select"></select>
+                            <input type="text" id="inputGreatGrandChildModal" class="form-control d-none" placeholder="أدخل اسم جديد">
+                            <button class="btn btn-outline-secondary" onclick="enableInput('greatGrandChild')">+</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" id="saveFamilyBtn" class="btn btn-success">حفظ</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">إغلاق</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const familyTree = [];
+
+        function capitalize(s){ return s.charAt(0).toUpperCase() + s.slice(1); }
+
+        function enableInput(level){
+            document.getElementById('select'+capitalize(level)+'Modal').classList.add('d-none');
+            const input = document.getElementById('input'+capitalize(level)+'Modal');
+            input.classList.remove('d-none');
+            input.focus();
+        }
+
+        function getSelectedOrInput(level){
+            const select = document.getElementById('select'+capitalize(level)+'Modal');
+            const input = document.getElementById('input'+capitalize(level)+'Modal');
+            return input.value.trim() || select.value;
+        }
+
+        function populateSelect(selectElement, items){
+            selectElement.innerHTML = '<option value="">اختر</option>';
+            items.forEach(item=>{
+                const opt = document.createElement('option');
+                opt.value = item.name;
+                opt.textContent = item.name;
+                selectElement.appendChild(opt);
+            });
+        }
+
+        // تحديث قائمة فرعية في المودال حسب العنصر الأب
+        function updateChildSelects(childId, parentId, sourceArray){
+            const childSelect = document.getElementById(childId);
+            const parentSelect = document.getElementById(parentId);
+            const selectedParent = parentSelect.value;
+            let items = [];
+            if(selectedParent){
+                const parentNode = sourceArray.find(x=>x.name===selectedParent);
+                if(parentNode && parentNode.children) items = parentNode.children;
+            }
+            populateSelect(childSelect, items);
+        }
+
+        function updateModalSelects(){
+            // تعبئة الجدود
+            populateSelect(document.getElementById('selectGrandParentModal'), familyTree);
+            // عند اختيار الجد → عرض الآباء
+            updateChildSelects('selectParentModal','selectGrandParentModal', familyTree);
+            // عند اختيار الأب → عرض الأبناء
+            const selectedGP = document.getElementById('selectGrandParentModal').value;
+            const gpNode = familyTree.find(x=>x.name===selectedGP);
+            updateChildSelects('selectChildModal','selectParentModal', gpNode?gpNode.children:[]);
+            // الابن → أبناءه
+            const selectedP = document.getElementById('selectParentModal').value;
+            const pNode = gpNode && selectedP ? gpNode.children.find(x=>x.name===selectedP):null;
+            updateChildSelects('selectGrandChildModal','selectChildModal', pNode?pNode.children:[]);
+            // ابن الابن → أبناءه
+            const selectedC = document.getElementById('selectChildModal').value;
+            const cNode = pNode && selectedC ? pNode.children.find(x=>x.name===selectedC):null;
+            updateChildSelects('selectGreatGrandChildModal','selectGrandChildModal', cNode?cNode.children:[]);
+        }
+
+        function updateMainSelects(){
+            const gpSelect = document.getElementById('grandParent');
+            const pSelect = document.getElementById('parent');
+            const cSelect = document.getElementById('child');
+            const gcSelect = document.getElementById('grandChild');
+            const ggcSelect = document.getElementById('greatGrandChild');
+
+            populateSelect(gpSelect, familyTree);
+
+            const selectedGP = gpSelect.value;
+            const gpNode = familyTree.find(x => x.name === selectedGP);
+            populateSelect(pSelect, gpNode ? gpNode.children : []);
+
+            const selectedP = pSelect.value;
+            const pNode = gpNode && selectedP ? gpNode.children.find(x => x.name === selectedP) : null;
+            populateSelect(cSelect, pNode ? pNode.children : []);
+
+            const selectedC = cSelect.value;
+            const cNode = pNode && selectedC ? pNode.children.find(x => x.name === selectedC) : null;
+            populateSelect(gcSelect, cNode ? cNode.children : []);
+
+            const selectedGC = gcSelect.value;
+            const gcNode = cNode && selectedGC ? cNode.children.find(x => x.name === selectedGC) : null;
+            populateSelect(ggcSelect, gcNode ? gcNode.children : []);
+        }
+
+        document.getElementById('saveFamilyBtn').addEventListener('click', ()=>{
+            const gParent = getSelectedOrInput('grandParent');
+            if(!gParent) return alert("يجب إدخال اسم الجد");
+
+            const parent = getSelectedOrInput('parent');
+            const child = getSelectedOrInput('child');
+            const gChild = getSelectedOrInput('grandChild');
+            const ggChild = getSelectedOrInput('greatGrandChild');
+
+            let gParentNode = familyTree.find(x=>x.name===gParent);
+            if(!gParentNode){ gParentNode={name:gParent,children:[]}; familyTree.push(gParentNode); }
+
+            if(parent){
+                let parentNode = gParentNode.children.find(x=>x.name===parent);
+                if(!parentNode){ parentNode={name:parent,children:[]}; gParentNode.children.push(parentNode); }
+
+                if(child){
+                    let childNode = parentNode.children.find(x=>x.name===child);
+                    if(!childNode){ childNode={name:child,children:[]}; parentNode.children.push(childNode); }
+
+                    if(gChild){
+                        let gChildNode = childNode.children.find(x=>x.name===gChild);
+                        if(!gChildNode){ gChildNode={name:gChild,children:[]}; childNode.children.push(gChildNode); }
+
+                        if(ggChild){
+                            let ggChildNode = gChildNode.children.find(x=>x.name===ggChild);
+                            if(!ggChildNode){ ggChildNode={name:ggChild,children:[]}; gChildNode.children.push(ggChildNode); }
+                        }
+                    }
+                }
+            }
+
+            // إعادة الحقول لحالتها الطبيعية
+            ['grandParent','parent','child','grandChild','greatGrandChild'].forEach(level=>{
+                const select = document.getElementById('select'+capitalize(level)+'Modal');
+                const input = document.getElementById('input'+capitalize(level)+'Modal');
+                if(select && input){
+                    input.value='';
+                    input.classList.add('d-none');
+                    select.classList.remove('d-none');
+                }
+            });
+
+            updateModalSelects();
+            updateMainSelects();
+            bootstrap.Modal.getInstance(document.getElementById('addFamilyModal')).hide();
+        });
+
+        // ربط الأحداث الرئيسية
+        document.getElementById('grandParent').addEventListener('change', updateMainSelects);
+        document.getElementById('parent').addEventListener('change', updateMainSelects);
+        document.getElementById('child').addEventListener('change', updateMainSelects);
+        document.getElementById('grandChild').addEventListener('change', updateMainSelects);
+
+        document.getElementById('addMemberBtn').addEventListener('click', updateModalSelects);
+    </script> *@
+
+
+
+    <div class="col-md-3">
+
+        <div id="exampleModalCenter" class="modal fade" tabindex="-1" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" style="display: none;">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalCenterTitle">بيانات الطلب</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+
+                        <div class="row">
+
+
+                            <div class="col-md-12">
+
+
+                                <div class="col-md-12">
+                                    <h5>موقع الأرض</h5>
+                                    </hr>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group ">
+                                        <select id="inputState" class="form-select">
+                                            <option selected="">اليمن</option>
+
+                                        </select>
+                                    </div>
+
+                                </div>
+
+                                <div class="col-md-12">
+                                    <div class="form-group ">
+                                        <select id="inputState" class="form-select">
+                                            <option selected=""> صنعاء </option>
+
+                                        </select>
+                                    </div>
+
+                                </div>
+
+                                <div class="col-md-12">
+                                    <div class="form-group ">
+                                        <select id="inputState" class="form-select">
+                                            <option selected=""> السبعين </option>
+
+                                        </select>
+                                    </div>
+
+                                </div>
+
+                                <div class="col-md-12">
+                                    <div class="form-group ">
+                                        <select id="inputState" class="form-select">
+                                            <option selected=""> بيت معياد  </option>
+
+                                        </select>
+                                    </div>
+
+                                </div>
+
+
+                                <div class="col-md-12">
+                                    <div class="form-group ">
+                                        <select id="inputState" class="form-select">
+                                            <option selected="">حارة دار الرعاية</option>
+
+                                        </select>
+                                    </div>
+
+                                </div>
+
+
+                            </div>
+
+
+
+                            <div class="col-md-6">
+
+
+                                <div class="col-md-12">
+                                    <h5>احداثيات X </h5>
+                                    </hr>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-floating mb-3">
+                                        <input type="text" class="form-control" id="floatingInput1" placeholder=" احداثيات">
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+                            <div class="col-md-6">
+
+
+                                <div class="col-md-12">
+                                    <h5>احداثيات Y </h5>
+                                    </hr>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-floating mb-3">
+                                        <input type="text" class="form-control" id="floatingInput1" placeholder=" احداثيات">
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="col-md-12">
+
+
+                                <div class="col-md-12">
+                                    <h5>  وحدة الجوار</h5>
+                                    </hr>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-floating mb-3">
+                                        <input type="text" class="form-control" id="floatingInput1" placeholder=" وحدة الجوار">
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="col-md-12">
+
+
+                                <div class="col-md-12">
+                                    <h5>  المساحة </h5>
+                                    </hr>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="form-floating mb-3">
+                                        <input type="text" class="form-control" id="floatingInput1" placeholder=" متر مربع">
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="form-floating mb-3">
+                                        <input type="text" class="form-control" id="floatingInput1" placeholder=" لبنة ">
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="col-md-12">
+
+
+                                <div class="col-md-12">
+                                    <h5>  الحدود </h5>
+                                    </hr>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-floating mb-3">
+                                        <input type="text" class="form-control" id="floatingInput1" placeholder=" شمال ">
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="form-floating mb-3">
+                                        <input type="text" class="form-control" id="floatingInput1" placeholder=" جنوب ">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-floating mb-3">
+                                        <input type="text" class="form-control" id="floatingInput1" placeholder=" شرق ">
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="form-floating mb-3">
+                                        <input type="text" class="form-control" id="floatingInput1" placeholder=" غرب ">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-12">
+
+
+                                <div class="col-md-12">
+                                    <h5>  المدة الزمنية</h5>
+                                    </hr>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-floating mb-3">
+                                        <input type="text" class="form-control" id="floatingInput1" placeholder=" مدة زمنية">
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="col-md-12">
+
+
+                                <div class="col-md-12">
+                                    <h5>  المبلغ المقترح</h5>
+                                    </hr>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-floating mb-3">
+                                        <input type="text" class="form-control" id="floatingInput1" placeholder=" وحدة الجوار">
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="col-md-6">
+                                <h5 class="mt-5">نوع الارسال</h5>
+
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault11">
+                                    <label class="form-check-label" for="flexRadioDefault11">  عام </label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault12" checked="">
+                                    <label class="form-check-label" for="flexRadioDefault12">   مخصص </label>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalCenter"><i class="ti ti-user-plus me-1"></i>انشاء طلب </button> -->
+
+
+    </div>
+</div>
+
+<div dir="rtl">
+
+
+
+    <ul class="nav nav-tabs profile-tabs justify-content-center justify-content-md-end" id="myTab" role="tablist" dir="ltr">
+
+        @* <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#exampleModalCenter"><i class="ti ti-user-plus me-1"></i>انشاء طلب </button> *@
+
+        <a asp-controller="TanjezOrder" asp-action="Create" class="btn btn-outline-primary">
+            <i class="ti ti-user-plus me-1"></i> انشاء طلب
+        </a>
+        <li class="nav-item">
+            <a class="nav-link " id="gallery-tab" data-bs-toggle="tab" href="#from_me" role="tab" aria-controls="gallery" aria-selected="false">
+                <i class="ti ti-photo me-2"></i>  إرسال التقرير النهائي
+            </a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link active" id="request-tab" data-bs-toggle="tab" href="#to_me" role="tab" aria-controls="request" aria-selected="false">
+                <i class="ti ti-user-plus me-2"></i>طلبات مرسلة إلي
+            </a>
+        </li>
+
+
+        <li class="nav-item">
+            <a class="nav-link " id="gallery-tab" data-bs-toggle="tab" href="#from_me" role="tab" aria-controls="gallery" aria-selected="false">
+                <i class="ti ti-photo me-2"></i>طلبات قمت بارسالها
+            </a>
+        </li>
+        <!-- <li class="nav-item">
+        <a class="nav-link" id="request-tab" data-bs-toggle="tab" href="#generic" role="tab" aria-controls="request" aria-selected="false">
+        <i class="ti ti-user-plus me-2"></i>طلبات  عامة
+        </a>
+        </li> -->
+    </ul>
+
+    <div class="tab-pane" id="to_me" role="tabpanel" aria-labelledby="request-tab">
+        <div class="card">
+            @{
+                var rop = Context.Session.GetInt32("UserID");
+                var dynamicValues = ViewBag.DynamicValues as IEnumerable<Mntry_Awqaf.Models.DynamicFieldValue>;
+            }
+            <li class="nav-item">
+                <a class="nav-link">مرحباً مستخدم رقم: @rop</a>
+            </li>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>رقم الطلب</th>
+                                @if (ViewBag.DynamicFields != null)
+                                {
+                                    foreach (var field in ViewBag.DynamicFields)
+                                    {
+                                        <th>@field.Name</th>
+                                    }
+                                }
+                                <th>العمليات</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                                                <tr id="row-@item.Id">
+                                    <td>@item.Id</td>
+
+                                    @if (ViewBag.DynamicFields != null)
+                                    {
+                                        foreach (var field in ViewBag.DynamicFields)
+                                        {
+                                            int fId = (int)field.Id;
+                                            var val = dynamicValues?.FirstOrDefault(v => v.RecordId == item.Id && v.DynamicFieldId == fId)?.Value ?? "-";
+                                            string fieldType = (string)field.Type;
+
+                                            if (fieldType == "file" && val != "-" && val != "")
+                                            {
+                                                // تحديد نوع الملف
+                                                string ext = System.IO.Path.GetExtension(val).ToLower();
+                                                bool isImage = ext == ".jpg" || ext == ".jpeg" || ext == ".png" || ext == ".gif" || ext == ".bmp" || ext == ".webp" || ext == ".svg";
+
+                                                if (isImage)
+                                                {
+                                                    <td>
+                                                        <a href="@val" target="_blank" title="عرض الصورة">
+                                                            <img src="@val" alt="مرفق" style="width:55px;height:55px;object-fit:cover;border-radius:5px;border:1px solid #ccc;" 
+                                                                 onerror="this.style.display='none';this.nextElementSibling.style.display='inline'" />
+                                                            <span style="display:none">🖼️ <small>@System.IO.Path.GetFileName(val)</small></span>
+                                                        </a>
+                                                    </td>
+                                                }
+                                                else
+                                                {
+                                                    <td>
+                                                        <a href="@val" target="_blank" title="فتح المرفق" style="text-decoration:none; color:#0d6efd;">
+                                                            📎 <small>@System.IO.Path.GetFileName(val)</small>
+                                                        </a>
+                                                    </td>
+                                                }
+                                            }
+                                            else
+                                            {
+                                                <td>@val</td>
+                                            }
+                                        }
+                                    }
+                                    <td>
+                                        <a href="/TanjezOrder/Edit/@item.Id" title="تعديل" class="me-2">
+                                            <i class="icon feather icon-edit f-w-600 f-16 text-success"></i>
+                                        </a>
+                                        <a href="#" title="حذف"
+                                           onclick="confirmDelete(@item.Id); return false;">
+                                            <i class="feather icon-trash-2 f-w-600 f-16 text-danger"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <div class="modal fade" id="bordersModal" tabindex="-1" aria-hidden="true">
+                                    <div class="modal-dialog modal-lg">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title">الحدود</h5>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body" id="bordersModalBody">
+                                                <!-- سيتم تحميل المحتوى هنا -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+                            }
+                      
+                                        </tbody>
+
+                                    </table>
+                   
+
+                    
+                   @*  <div id="contractAlert" class="alert  alert-info alert-dismissible fade"
+                         style="position: fixed; bottom: 20px; right: 20px; z-index: 9999; cursor: pointer;" role="alert">
+                        لديك عقد جديد، انقر للاطلاع
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+ *@
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+@if (TempData.ContainsKey("SuccessMessage"))
+{
+    <div id="temp-message" class="alert alert-info">
+        @TempData["SuccessMessage"]
+    </div>
+}
+
+<script>
+    // استخدام جافا سكربت نقية لتجنب مشكلة عدم تحميل مكتبة jQuery في هذا الجزء من الصفحة
+    (function () {
+        function initTempMessage() {
+            var tempMsg = document.getElementById('temp-message');
+            if (tempMsg) {
+                setTimeout(function () {
+                    tempMsg.style.transition = "opacity 1s ease";
+                    tempMsg.style.opacity = 0;
+                    setTimeout(function () {
+                        tempMsg.remove();
+                    }, 1000);
+                }, 9000);
+            }
+        }
+        if (document.readyState === "loading") {
+            document.addEventListener('DOMContentLoaded', initTempMessage);
+        } else {
+            initTempMessage();
+        }
+    })();
+
+    // ===== حذف السجل =====
+    var _deleteId = 0;
+    var _deleteModalInstance = null;
+
+    function confirmDelete(id) {
+        _deleteId = id;
+        var modalEl = document.getElementById('deleteConfirmModal');
+        if (modalEl) {
+            _deleteModalInstance = bootstrap.Modal.getInstance(modalEl);
+            if (!_deleteModalInstance) {
+                _deleteModalInstance = new bootstrap.Modal(modalEl);
+            }
+            _deleteModalInstance.show();
+        }
+    }
+
+    // استخدام مفوض الأحداث (Event Delegation) لضمان العمل دائماً بغض النظر عن وقت تحميل الصفحة أو السكربت
+    document.addEventListener('click', function (e) {
+        if (e.target && e.target.id === 'confirmDeleteBtn') {
+            var btn = e.target;
+            btn.disabled = true; // تعطيل الزر لتجنب النقرات المتكررة
+            
+            fetch('/TanjezOrder/DeleteConfirmed?id=' + _deleteId, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' }
+            })
+            .then(function(r) {
+                btn.disabled = false;
+                if (!r.ok) {
+                    showAlert('danger', 'خطأ في الخادم: ' + r.status);
+                    if (_deleteModalInstance) _deleteModalInstance.hide();
+                    return null;
+                }
+                return r.json();
+            })
+            .then(function(data) {
+                if (!data) return;
+                if (_deleteModalInstance) _deleteModalInstance.hide();
+                if (data.success) {
+                    var row = document.getElementById('row-' + _deleteId);
+                    if (row) row.remove();
+                    showAlert('success', data.message);
+                } else {
+                    showAlert('danger', data.message);
+                }
+            })
+            .catch(function(err) { 
+                btn.disabled = false;
+                if (_deleteModalInstance) _deleteModalInstance.hide();
+                showAlert('danger', 'حدث خطأ: ' + err.message); 
+            });
+        }
+    });
+
+    function showAlert(type, msg) {
+        var div = document.createElement('div');
+        div.className = 'alert alert-' + type + ' alert-dismissible fade show';
+        div.style = 'position:fixed;top:20px;right:20px;z-index:9999;min-width:250px;';
+        div.innerHTML = msg + '<button type="button" class="btn-close" data-bs-dismiss="alert"></button>';
+        document.body.appendChild(div);
+        setTimeout(function() { div.remove(); }, 4000);
+    }
+</script>
+
+<!-- مودال تأكيد الحذف -->
+<div class="modal fade" id="deleteConfirmModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-sm">
+        <div class="modal-content">
+            <div class="modal-header bg-danger text-white">
+                <h6 class="modal-title">⚠️ تأكيد الحذف</h6>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body text-center">
+                <p class="mb-0">هل أنت متأكد من حذف هذا الطلب؟</p>
+                <small class="text-muted">لا يمكن التراجع عن هذا الإجراء</small>
+            </div>
+            <div class="modal-footer justify-content-center">
+                <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">إلغاء</button>
+                <button type="button" class="btn btn-danger btn-sm" id="confirmDeleteBtn">حذف</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="createRequestModal" tabindex="-1" role="dialog" aria-labelledby="createRequestModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="createRequestModalLabel">إنشاء طلب جديد</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body p-0">
+                <iframe src="create-request.html" style="width: 100%; height: 80vh; border: none;"></iframe>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade" id="createContractModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">إنشاء عقد</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                @using (Html.BeginForm("ChooseEngineer", "TanjezOrder", FormMethod.Post, new { id = "contractForm" }))
+                {
+                    <input type="hidden" name="orderId" id="orderId">
+                    //<input type="number" name="offerId" id="offerId" value="1">
+
+                    <div class="mb-3">
+                        <label>المهندس</label>
+                        <select name="engineerId" id="engineerId" class="form-control" required>
+                            <option value="">-- اختر المهندس --</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label>العرض</label>
+                        <select name="offerId" id="offerId" class="form-control" required>
+                            <option value="">-- اختر العرض --</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label>نوع العمل</label>
+                        <select name="workType" id="workType" class="form-control" required>
+                            <option value="">-- اختر نوع العمل --</option>
+                            <option value="مقطوعة">مقطوعة</option>
+                            <option value="يومية">يومية</option>
+                            <option value="بالإنجاز (حسب المساحة)">بالإنجاز (حسب المساحة)</option>
+                        </select>
+                    </div>
+
+                    
+
+                    <div class="mb-3">
+                      @*   <label>نوع القطعة</label> *@
+                        <input type="hidden" name="type" id="type" class="form-control" readonly>
+                    </div>
+
+                    <div class="mb-3">
+                       
+                        <input type="hidden" name="space" id="space" class="form-control" readonly>
+                    </div>
+                    <input type="hidden" name="transportationFeesPayer" id="transportation" />
+                    <input type="hidden" name="overNightFeesPayer" id="overnight" />
+                    <input type="hidden" name="allowanceFeesPayer" id="allowance" />
+                    <div class="mb-3">
+                       @*  <label>المحافظة</label> *@
+                        <input type="hidden" name="governorateParam" id="governorateParam" class="form-control" readonly>
+                    </div>
+                  @*   <div class="mb-3">
+                        <label>التنقلات</label>
+                        <input type="number" name="transportation" id="transportation" class="form-control" readonly>
+                    </div>
+                    <div class="mb-3">
+                        <label>المبيت</label>
+                        <input type="number" name="overnight" id="overnight" class="form-control" readonly>
+                    </div>
+                    <div class="mb-3">
+                        <label>النثريات</label>
+                        <input type="number" name="allowance" id="allowance" class="form-control" readonly>
+                    </div> *@
+
+                    <button type="submit" class="btn btn-primary">إنشاء العقد</button>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+
+@* @using (Html.BeginForm("ChooseEngineer", "TanjezOrder", FormMethod.Post))
+{
+    <div class="form-group">
+        <label for="offerId">رقم العرض:</label>
+        <input type="number" name="offerId" class="form-control" value="1" required />
+    </div>
+    <div class="form-group">
+        <label for="orderId">رقم الطلب:</label>
+        <input type="number" name="orderId" class="form-control" value="1" required />
+    </div>
+
+    <div class="form-group">
+        <label for="type">الموضع:</label>
+        <input type="text" name="type" class="form-control" value="ارض" required />
+    </div>
+
+    <div class="form-group">
+        <label for="space">المساحة:</label>
+        <input type="number" name="space" class="form-control" value="4000" step="0.01" required />
+    </div>
+    <div class="form-group">
+        <label for="workType">نوع العمل:</label>
+        <select name="workType" class="form-control" required>
+            <option value="">-- اختر نوع العمل --</option>
+            <option value="مقطوعة" selected>مقطوعة</option>
+            <option value="يومية">يومية</option>
+            <option value="بالإنجاز (حسب المساحة)">بالإنجاز (حسب المساحة)</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="governorateParam">المحافضة:</label>
+        <input type="text" name="governorateParam" class="form-control" value="صنعاء" required />
+    </div>
+    <div class="form-group">
+        <label for="transportationFeesPayer">التنقلات :</label>
+        <select name="transportationFeesPayer" class="form-control" required>
+
+            <option value="2">على حسابي الخاص</option>
+            <option value="3">على حساب العميل</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="overNightFeesPayer">المبيت :</label>
+        <select name="overNightFeesPayer" class="form-control" required>
+
+            <option value="2">على حسابي الخاص</option>
+            <option value="3">على حساب العميل</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="allowanceFeesPayer">النثريات :</label>
+        <select name="allowanceFeesPayer" class="form-control" required>
+            <option value="3">على حساب العميل</option>
+            <option value="2" selected>على حسابي الخاص</option>
+
+        </select>
+    </div>
+
+
+
+    <button type="submit" class="btn btn-primary">انشاء عقد</button>
+} *@
+@* @using (Html.BeginForm("Choose", "TanjezOrder", FormMethod.Post))
+{
+    <div class="form-group">
+        <label for="userId">رقم المستخدم:</label>
+        <input type="number" name="userId" class="form-control" value="3" required />
+    </div>
+
+    <div class="form-group">
+        <label for="locat">الموقع:</label>
+        <input type="text" name="locat" class="form-control" value="ارض" required />
+    </div>
+
+    <div class="form-group">
+        <label for="width">العرض:</label>
+        <input type="number" name="width" class="form-control" value="4000" step="0.01" required />
+    </div>
+
+    <button type="submit" class="btn btn-primary">انشاء عقد  </button>
+}
+ *@<div id="result"></div>
+
+
+
+<!-- Modal for View Contract -->
+<!-- Modal for View Contract -->
+<div class="modal fade" id="viewContractModal" tabindex="-1" role="dialog" aria-labelledby="viewContractModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="viewContractModalLabel">عرض تفاصيل العقد</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body p-0">
+@*                 @Html.Partial("_ContractTemplate")
+ *@            </div>
+        </div>
+    </div>
+</div>
+
+
+@section Scripts {
+
+    <script>
+        document.querySelectorAll('.show-borders').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                e.preventDefault();
+                const orderId = this.dataset.orderId;
+
+                fetch(`/TanjezOrder/GetBorders?orderId=${orderId}`)
+                    .then(response => response.text())
+                    .then(html => {
+                        document.getElementById('bordersModalBody').innerHTML = html;
+                        const myModal = new bootstrap.Modal(document.getElementById('bordersModal'));
+                        myModal.show();
+                    })
+                    .catch(err => console.error("حدث خطأ أثناء التحميل: ", err));
+            });
+        });
+
+
+                    document.addEventListener("DOMContentLoaded", function () {
+
+            const buttons = document.querySelectorAll(".create-contract-btn");
+
+            buttons.forEach(btn => {
+                btn.addEventListener("click", function () {
+
+                    // ملء الحقول الثابتة
+                    $('#orderId').val(this.dataset.orderId);
+                    $('#type').val(this.dataset.type);
+                    $('#space').val(this.dataset.space);
+                    $('#governorateParam').val(this.dataset.governorate);
+                    $('#transportation').val(this.dataset.transportation || 0);
+                    $('#overnight').val(this.dataset.overnight || 0);
+                    $('#allowance').val(this.dataset.allowance || 0);
+
+                    // تهيئة Select2
+                    if (!$('#engineerId').hasClass("select2-hidden-accessible")) {
+                        $('#engineerId').select2({
+                            placeholder: 'ادخل اسم المستخدم أو رقم الجوال',
+                            minimumInputLength: 1,
+                            dropdownParent: $('#createContractModal'),
+                            language: {
+                                inputTooShort: () => 'الرجاء إدخال حرف واحد على الأقل',
+                                noResults: () => 'لم يتم العثور على نتائج',
+                                searching: () => 'جاري البحث...'
+                            },
+                            ajax: {
+                                url: '/TanjezOrder/GetUsers',
+                                dataType: 'json',
+                                delay: 250,
+                                data: params => ({ term: params.term }),
+                                processResults: data => ({
+                                    results: data.map(x => ({
+                                        id: x.id,
+                                        text: x.text + (x.phone ? ' - ' + x.phone : '')
+                                    }))
+                                }),
+                                cache: true
+                            }
+                        });
+                    }
+
+                    // عند اختيار المستخدم، تحميل العروض المرتبطة
+                    $('#engineerId').off('change').on('change', function () {
+                        const userId = $(this).val();
+                        $('#offerId').empty().append('<option value="">-- اختر العرض --</option>');
+
+                        if (userId) {
+                            $.getJSON(`/TanjezOrder/GetUserOffers/${userId}`, function (data) {
+                                if (data.workOffers && data.workOffers.length > 0) {
+                                    data.workOffers.forEach(offer => {
+                                        $('#offerId').append(`<option value="${offer.id}">${offer.id} - ${offer.offerName}</option>`);
+                                    });
+                                }
+                            });
+                        }
+                    });
+
+                    // إظهار المودال
+                    const modal = new bootstrap.Modal(document.getElementById("createContractModal"));
+                    modal.show();
+                });
+            });
+        });
+
+
+
+
+
+    </script>
+
+<script>
+        $('#viewContractModal').on('hidden.bs.modal', function () {
+        $('.modal-backdrop').remove();
+        $('body').removeClass('modal-open');
+    });
+
+    $(document).ready(function () {
+        $(document).on('click', '.view-contract-btn', function (e) {
+            e.preventDefault();
+            var contractId = $(this).data('contract-id');
+            var modalBody = $('#viewContractModal').find('.modal-body');
+            
+            modalBody.html('<div class="text-center p-3"><span class="spinner-border"></span></div>');
+            
+            var modal = new bootstrap.Modal(document.getElementById('viewContractModal'));
+            modal.show();
+            
+            $.get('/User/GetWorkContract', { contractId: contractId }, function (data) {
+                modalBody.html(data);
+            }).fail(function () {
+                modalBody.html('<div class="alert alert-danger m-3">فشل تحميل تفاصيل العقد.</div>');
+            });
+        });
+    });
+
+</script>
+  @*   <script>
+        // إظهار الرسالة
+        function showContractAlert() {
+            var alertEl = document.getElementById('contractAlert');
+            var bsAlert = new bootstrap.Alert(alertEl);
+            alertEl.classList.add("show");
+            // لو تحب يغلق بعد وقت محدد احذف الكومنت
+            // setTimeout(() => { bsAlert.close(); }, 5000);
+        }
+
+        // عند الضغط على الرسالة يفتح المودال
+        document.getElementById('contractAlert').addEventListener('click', function (e) {
+            if (!e.target.classList.contains('btn-close')) {
+                var modal = new bootstrap.Modal(document.getElementById('viewContractModal'));
+                modal.show();
+            }
+        });
+    </script> *@
+    <script>
+        // دالة عرض الرسالة
+        function showContractAlert() {
+            var alertEl = document.getElementById('contractAlert');
+            if (alertEl) {
+                var bsAlert = new bootstrap.Alert(alertEl);
+                alertEl.classList.add("show");   // يضيف الكلاس show لعرض التنبيه
+            }
+        }
+
+        // عند تحميل الصفحة مباشرة
+        document.addEventListener("DOMContentLoaded", function () {
+            showContractAlert();
+        });
+
+        // عند الضغط على الرسالة يفتح المودال
+        var contractAlertEl = document.getElementById('contractAlert');
+        if (contractAlertEl) {
+            contractAlertEl.addEventListener('click', function (e) {
+                if (!e.target.classList.contains('btn-close')) {
+                    var modalEl = document.getElementById('viewContractModal');
+                    if (modalEl) {
+                        var modal = new bootstrap.Modal(modalEl);
+                        modal.show();
+                    }
+                }
+            });
+        }
+    </script>
+
+
+}

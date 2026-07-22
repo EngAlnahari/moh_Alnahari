@@ -1,0 +1,136 @@
+@model Mntry_Awqaf.Models.WorkForm
+
+@{
+    ViewData["Title"] = "تفاصيل استمارة العمل";
+}
+
+<div class="container my-5" dir="rtl">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2 class="fw-bold">📋 تفاصيل استمارة العمل</h2>
+        <a asp-action="Index" class="btn btn-outline-secondary">
+            <i class="feather icon-arrow-right me-1"></i> العودة للقائمة
+        </a>
+    </div>
+
+    <!-- بطاقة البيانات الرئيسية -->
+    <div class="card shadow-sm border-0 mb-4">
+        <div class="card-header bg-primary text-white">
+            <h5 class="mb-0 text-white">البيانات الأساسية</h5>
+        </div>
+        <div class="card-body">
+            <div class="row g-3">
+                <div class="col-md-3">
+                    <strong>نوع الطلب:</strong>
+                    <p class="text-muted">@Model.RequestType</p>
+                </div>
+                <div class="col-md-3">
+                    <strong>رقم التقديم:</strong>
+                    <p class="text-muted">@Model.SubmissionNumber</p>
+                </div>
+                <div class="col-md-3">
+                    <strong>رقم الموضوع الكلي/الشامل:</strong>
+                    <p class="text-muted">@Model.GeneralSubjectNumber</p>
+                </div>
+                <div class="col-md-3">
+                    <strong>رقم التكليف:</strong>
+                    <p class="text-muted">@Model.AssignmentNumber</p>
+                </div>
+
+                <div class="col-md-3">
+                    <strong>وكلاء الأوقاف:</strong>
+                    <p class="text-muted">@Model.VillageEndowmentAgents</p>
+                </div>
+                <div class="col-md-3">
+                    <strong>عدول التروية:</strong>
+                    <p class="text-muted">@Model.AdoulAlTaruya</p>
+                </div>
+                <div class="col-md-3">
+                    <strong>الفئة:</strong>
+                    <p class="text-muted">@Model.Category</p>
+                </div>
+                <div class="col-md-3">
+                    <strong>تصنيف الفئة:</strong>
+                    <p class="text-muted">@Model.CategoryClassification</p>
+                </div>
+
+                <div class="col-md-3">
+                    <strong>المساحة:</strong>
+                    <p class="text-muted">@Model.Area</p>
+                </div>
+                <div class="col-md-3">
+                    <strong>رقم القطعة:</strong>
+                    <p class="text-muted">@Model.PieceNumber</p>
+                </div>
+                <div class="col-md-3">
+                    <strong>استخدام القطعة:</strong>
+                    <p class="text-muted">@Model.PieceUsage</p>
+                </div>
+                <div class="col-md-3">
+                    <strong>مساحة القطعة:</strong>
+                    <p class="text-muted">@Model.PieceArea</p>
+                </div>
+
+                <div class="col-md-3">
+                    <strong>رقم الهوية العقارية:</strong>
+                    <p class="text-muted">@Model.PropertyIdentityNumber</p>
+                </div>
+                <div class="col-md-3">
+                    <strong>الشماليات:</strong>
+                    <p class="text-muted">@Model.NorthBoundaries</p>
+                </div>
+                <div class="col-md-3">
+                    <strong>الشرقيات:</strong>
+                    <p class="text-muted">@Model.EastBoundaries</p>
+                </div>
+                
+                <div class="col-12">
+                    <strong>ملاحظات:</strong>
+                    <p class="text-muted">@Model.Notes</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- حدود الأرض -->
+    <div class="card shadow-sm border-0">
+        <div class="card-header bg-success text-white">
+            <h5 class="mb-0 text-white">🗺️ حدود الأرض</h5>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-striped table-hover text-center align-middle">
+                    <thead class="table-light">
+                        <tr>
+                            <th>الصفة</th>
+                            <th>الحد الشمالي</th>
+                            <th>الحد الجنوبي</th>
+                            <th>الحد الشرقي</th>
+                            <th>الحد الغربي</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @if (Model.landBoundaryModels != null && Model.landBoundaryModels.Any())
+                        {
+                            foreach (var boundary in Model.landBoundaryModels)
+                            {
+                                <tr>
+                                    <td>@boundary.AttributeName</td>
+                                    <td>@boundary.NorthBoundary</td>
+                                    <td>@boundary.SouthBoundary</td>
+                                    <td>@boundary.EastBoundary</td>
+                                    <td>@boundary.WestBoundary</td>
+                                </tr>
+                            }
+                        }
+                        else
+                        {
+                            <tr>
+                                <td colspan="5" class="text-muted">لا توجد حدود مسجلة لهذه الاستمارة</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,375 @@
+﻿@model Mntry_Awqaf.Models.WorkContract
+
+<style>
+    .amendments-columns {
+        display: flex;
+        gap: 20px; /* المسافة بين العمودين */
+        flex-wrap: wrap; /* للتجاوب مع الشاشات الصغيرة */
+    }
+
+    .amendments-column {
+        flex: 1; /* كل عمود يأخذ نصف المساحة */
+        min-width: 300px; /* عرض أدنى لكل عمود */
+    }
+
+    .amendment-box {
+        padding: 10px;
+        border-radius: 5px;
+        margin-bottom: 10px;
+        border-left: 5px solid;
+    }
+
+    .modification {
+        background-color: #d1ecf1; /* أزرق فاتح */
+        color: #0c5460;
+        border-color: #0c5460;
+    }
+
+    .objection {
+        background-color: #f8d7da; /* أحمر فاتح */
+        color: #721c24;
+        border-color: #721c24;
+    }
+
+    .amendment-date {
+        font-size: 0.85em;
+        color: #555;
+        margin-top: 5px;
+    }
+
+</style>
+<div class="modal fade" id="workContractModal" tabindex="-1" aria-labelledby="workContractModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="workContractModalLabel">بيانات العقد رقم @Model.Id</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+<div class="contracts-list" dir="rtl">
+    <!-- عقد 1 -->
+    <div class="contract-card">
+
+        <div class="contract-header">عقد عمل</div>
+
+        <!-- بيانات العقد -->
+        <div class="contract-section">
+            <strong>تاريخ العقد:</strong> <span>2024-06-07</span> &nbsp; <strong>الوقت:</strong> <span>10:30 صباحًا</span>
+        </div>
+
+        @if (Model != null)
+        {
+            <div class="contract-section">
+                <strong>الطرف الأول:</strong> <span> ...</span>
+            </div>
+            <div class="contract-section">
+                <strong> اسم المهندس:</strong> <span> @(Model.FirstParty ?? "...")</span> &nbsp;
+                <strong> اسم المهندس:</strong> <span> @(Model.Id )</span> &nbsp;
+                <strong> اسم المهندس:</strong> <span> @(Model.Id )</span> &nbsp;
+                <strong>رقم البطاقة الشخصية :</strong> <span></span>
+            </div>
+            <div class="contract-section">
+                <strong>الطرف الثاني:</strong> <span> ...</span>
+            </div>
+            <div class="contract-section">
+                <strong> اسم العميل:</strong> <span> @(Model.SecondParty ?? "...")</span> &nbsp;
+                <strong> رقم البطاقة:</strong> <span></span>
+            </div>
+            <div class="contract-section">
+                <strong> على التالي:</strong> <span> ...</span>
+            </div>
+
+            <!-- حاوية البنود -->
+            <div id="contractItemsContainer">
+                @if (Model.ContractItems != null && Model.ContractItems.Any())
+                {
+                    foreach (var item in Model.ContractItems.OrderBy(x => x.Count))
+                    {
+                        <div class="contract-section">
+                            <strong>@item.Count- @item.Title:</strong>
+                            @if (!string.IsNullOrEmpty(item.DescriptionTemplate))
+                            {
+                                @Html.Raw(item.DescriptionTemplate.Replace("<br/>", "<div></div>"))
+                            }
+                        </div>
+                    }
+                }
+            </div>
+                        <!-- حاوية الصفوف المرتبطة -->
+                        @if (Model.contractAmendments != null && Model.contractAmendments.Any())
+                        {
+                            <div class="amendments-columns">
+                                <!-- عمود تعديلات العميل -->
+                                <div class="amendments-column">
+                                    <h4>تعديلات العميل:</h4>
+                                    @foreach (var mod in Model.contractAmendments.Where(a => a.AmendmentType == "Modification").OrderBy(a => a.CreatedAt))
+                                    {
+                                        <div class="amendment-box modification">
+                                            <strong>البند: @mod.FieldName</strong>
+                                            <div>القيمة الجديدة: @mod.NewValue</div>
+                                            <div>التفاصيل: @mod.Description</div>
+                                            <div class="amendment-date">@mod.CreatedAt.ToString("yyyy-MM-dd")</div>
+                                        </div>
+                                    }
+                                </div>
+
+                                <!-- عمود اعتراضات العميل -->
+                                <div class="amendments-column">
+                                    <h4>اعتراضات العميل:</h4>
+                                    @foreach (var obj in Model.contractAmendments.Where(a => a.AmendmentType == "Objection").OrderBy(a => a.CreatedAt))
+                                    {
+                                        <div class="amendment-box objection">
+                                            <strong>البند: @obj.FieldName</strong>
+                                            <div>التفاصيل: @obj.Description</div>
+                                            <div class="amendment-date">@obj.CreatedAt.ToString("yyyy-MM-dd")</div>
+                                        </div>
+                                    }
+                                </div>
+                            </div>
+                        }
+
+
+
+
+
+
+
+
+
+        }
+        else
+        {
+            <p>لا توجد بيانات للطلب.</p>
+        }
+
+
+      
+        @if (TempData.ContainsKey("SuccessMessage"))
+        {
+            <div id="temp-message" class="alert alert-info" style="display:none;">
+                @TempData["SuccessMessage"]
+            </div>
+        }
+
+
+
+                    <div id="temp-message-additem" class="alert alert-info" style="display:none;"></div>
+
+                    <div id="temp-message-amendment" class="alert alert-info" style="display:none;"></div>
+
+                    <div class="contract-actions" id="contractActions">
+                        <button class="btn-reject">الاعتراض على احد البنود</button>
+                        <button class="btn-reject">تعديل بند</button>
+                        <button class="btn btn-danger" id="showAddItemModalBtn">اضافة بند</button>
+                        <button id="rejectContractBtn" class="btn btn-danger">رفض العقد</button>
+                        <button id="approveContractBtn" class="btn btn-success">الموافقة على العقد</button>
+
+                    </div>
+
+                    <!-- المودال لإضافة/تعديل الاعتراضات -->
+                    <div class="modal fade" id="amendmentModal" tabindex="-1">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title">إرسال اعتراض / تعديل بند</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                </div>
+                                <form id="amendmentForm">
+                                    <div class="modal-body">
+                                        <!-- حقل اختيار اسم البند -->
+                                        <div class="mb-3" id="fieldNameWrapper" style="display:none;">
+                                            <label>اسم البند</label>
+                                            <select id="FieldName" class="form-select text-end" style="direction: rtl;">
+                                                <option value="">-- اختر اسم البند --</option>
+                                                @if (Model.ContractItems != null && Model.ContractItems.Any())
+                                                {
+                                                    foreach (var item in Model.ContractItems.OrderBy(x => x.Count))
+                                                    {
+                                                        <option value="@item.Count- @item.Title">
+                                                            @item.Count- @(item.DescriptionTemplate != null && item.DescriptionTemplate.Length > 80 ? item.DescriptionTemplate.Substring(0, 60) + "......" : item.DescriptionTemplate)
+                                                        </option>
+                                                    }
+                                                }
+                                            </select>
+                                        </div>
+
+                                        <!-- حقل الوصف -->
+                                        <div class="mb-3" id="descriptionWrapper" style="display:none;">
+                                            <label>التفاصيل</label>
+                                            <textarea class="form-control" id="Description" rows="4"></textarea>
+                                        </div>
+
+                                        <!-- حقول التعديل -->
+                                        <div id="modificationFields" style="display:none;">
+                                            <div class="mb-3" id="newValueWrapper">
+                                                <label>القيمة الجديدة</label>
+                                                <input type="text" id="NewValue" class="form-control" />
+                                            </div>
+                                        </div>
+                                        <input type="hidden" id="EngineerIdHidden" value="@Model.EngineerId" />
+
+                                        <!-- حقل مخفي لتخزين نوع الإجراء -->
+                                        <input type="hidden" id="HiddenAmendmentType" name="HiddenAmendmentType" />
+                                        <input id="ClientID" type="hidden" name="ClientId" value="@(Context.Session.GetInt32("UserID") ?? Model.EngineerId ?? 0)" />
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">إلغاء</button>
+                                        <button type="submit" class="btn btn-primary">إضافة</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- مودال إضافة بند -->
+                    <!-- مودال إضافة بند -->
+                    <div class="modal fade" id="addItemModal" tabindex="-1" aria-labelledby="addItemModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="addItemModalLabel">إضافة بند جديد</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <!-- رسالة مؤقتة -->
+                                    <div id="temp-message-additem" class="alert alert-info" style="display:none;"></div>
+
+                                    <form id="addItemForm">
+
+                                        <input type="hidden" id="contractId" value="@Model.Id" />
+                                        <input type="hidden" id="UserID" value="@Context.Session.GetInt32("UserID")" />
+
+                                        <div class="mb-3">
+                                            <label for="newItemCount" class="form-label">ترتيب البند</label>
+                                            <input type="number" id="newItemCount" class="form-control" placeholder="أدخل رقم ترتيب البند" required>
+                                        </div>
+
+                                        <div class="mb-3">
+                                            <label for="newItemTitle" class="form-label">عنوان البند</label>
+                                            <input type="text" id="newItemTitle" class="form-control" placeholder="أدخل عنوان البند" required>
+                                        </div>
+
+                                        <div class="mb-3">
+                                            <label for="newItemDescription" class="form-label">وصف البند</label>
+                                            <textarea id="newItemDescription" class="form-control" rows="4" placeholder="أدخل وصف البند"></textarea>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">إلغاء</button>
+                                    <button type="button" class="btn btn-primary" id="saveNewItemBtn">حفظ</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="temp-message-additem" class="alert alert-info" style="display:none;"></div>
+
+                    <script>
+                        document.addEventListener("DOMContentLoaded", function() {
+                            const amendmentModalEl = document.getElementById('amendmentModal');
+                            const amendmentModal = new bootstrap.Modal(amendmentModalEl);
+
+                            const fieldNameWrapper = document.getElementById("fieldNameWrapper");
+                            const descriptionWrapper = document.getElementById("descriptionWrapper");
+                            const newValueWrapper = document.getElementById("newValueWrapper");
+                            const hiddenTypeInput = document.getElementById("HiddenAmendmentType");
+                            const tempMessage = document.getElementById("temp-message-amendment");
+
+                            let amendments = [];
+
+                            function showTempMessage(msg){
+                                if(tempMessage){
+                                    tempMessage.style.display = "block";
+                                    tempMessage.innerText = msg;
+                                    setTimeout(()=> tempMessage.style.display = "none", 3000);
+                                }
+                            }
+
+                            function showAmendmentFields(type){
+                                if(type === "Objection"){
+                                    fieldNameWrapper.style.display = "block";      // عرض قائمة البنود
+                                    descriptionWrapper.style.display = "block";    // عرض حقل الوصف
+                                    newValueWrapper.style.display = "none";        // إخفاء حقل القيمة الجديدة
+                                } else if(type === "Modification"){
+                                    fieldNameWrapper.style.display = "block";      // عرض قائمة البنود
+                                    descriptionWrapper.style.display = "none";     // إخفاء حقل الوصف
+                                    newValueWrapper.style.display = "block";       // عرض حقل القيمة الجديدة
+                                }
+                            }
+
+                            // فتح المودال عند الضغط على أي زر
+                            document.querySelectorAll(".contract-actions button").forEach(btn => {
+                                btn.addEventListener("click", () => {
+                                    const actionText = btn.textContent.trim();
+                                    const form = amendmentModalEl.querySelector("form");
+                                    form.reset();
+
+                                    if(actionText.includes("الاعتراض")){
+                                        hiddenTypeInput.value = "Objection";
+                                        showAmendmentFields("Objection");
+                                        amendmentModal.show();
+                                    } else if(actionText.includes("تعديل")){
+                                        hiddenTypeInput.value = "Modification";
+                                        showAmendmentFields("Modification");
+                                        amendmentModal.show();
+                                    } else if(btn.id === "showAddItemModalBtn"){
+                                        new bootstrap.Modal(document.getElementById("addItemModal")).show();
+                                    }
+                                });
+                            });
+
+                            // حفظ الاعتراض/التعديل مؤقتاً
+                            const amendmentForm = document.getElementById("amendmentForm");
+                            amendmentForm.addEventListener("submit", function(e){
+                                e.preventDefault();
+
+                                const type = hiddenTypeInput.value;
+                                const fieldName = document.getElementById("FieldName")?.value.trim() || null;
+                                const description = document.getElementById("Description")?.value.trim() || null;
+                                const newValue = document.getElementById("NewValue")?.value.trim() || null;
+                                const clientRaw = document.getElementById("ClientID")?.value || "";
+                                const clientId = clientRaw === "" ? null : parseInt(clientRaw, 10);
+
+                                if(type === "Objection" && (!fieldName || !description)){
+                                    showTempMessage("يرجى إدخال اسم البند والتفاصيل.");
+                                    return;
+                                }
+                                if(type === "Modification" && (!fieldName || !newValue)){
+                                    showTempMessage("يرجى تعبئة كل الحقول المطلوبة للتعديل.");
+                                    return;
+                                }
+
+                                amendments.push({
+                                    AmendmentType: type,
+                                    FieldName: fieldName,
+                                    Description: description,
+                                    NewValue: newValue,
+                                    ClientId: clientId,
+                                    EngineerId: @Model?.EngineerId ?? 0
+                                });
+
+                                amendmentModal.hide();
+                                amendmentForm.reset();
+                                fieldNameWrapper.style.display = "none";
+                                descriptionWrapper.style.display = "none";
+                                newValueWrapper.style.display = "none";
+                                hiddenTypeInput.value = "";
+
+                                showTempMessage("تم إضافة الاعتراض/التعديل مؤقتاً.");
+                            });
+                        });
+                    </script>
+
+
+
+
+
+
+
+    
+
+
+
+
+
+

@@ -1,0 +1,976 @@
+﻿<style>
+   
+
+    .section-header {
+        cursor: pointer;
+        padding: 15px 20px;
+        background-color: #0d6efd;
+        color: #fff;
+        border-radius: 8px;
+        margin-bottom: 5px;
+        transition: background-color 0.3s;
+        font-size: 1.3rem;
+        font-weight: bold;
+    }
+
+        .section-header:hover {
+            background-color: #0b5ed7;
+        }
+
+    .section-content {
+        display: none;
+        padding: 15px 20px;
+        background-color: #ffffff;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        margin-bottom: 15px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+
+    .add-btn {
+        margin-top: 10px;
+    }
+
+    .item-box {
+        background: #f8f9fa;
+        border-radius: 8px;
+        padding: 10px 15px;
+        margin-top: 10px;
+        border: 1px solid #ddd;
+        position: relative;
+    }
+
+    .action-btns {
+        position: absolute;
+        left: 10px;
+        top: 10px;
+    }
+
+        .action-btns button {
+            margin-left: 5px;
+        }
+
+    /* تصميم عرض السيرة الذاتية */
+    #cv-preview {
+        display: none;
+        background: #fff;
+        border-radius: 10px;
+        padding: 30px;
+        box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    }
+
+        #cv-preview h2 {
+            color: #0d6efd;
+            border-bottom: 2px solid #0d6efd;
+            padding-bottom: 8px;
+            margin-top: 25px;
+        }
+
+    .info p {
+        margin: 0;
+        line-height: 1.8;
+    }
+
+    .item-box-preview {
+        background: #f9f9f9;
+        padding: 10px 15px;
+        border-radius: 8px;
+        margin-bottom: 10px;
+        border: 1px solid #ddd;
+    }
+</style>
+<div class="row">
+
+    <div class="col-sm-12">
+        <div class="card">
+            <div class="card-header pb-0">
+                <ul class="nav nav-tabs profile-tabs" id="myTab" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="profile-tab-1" data-bs-toggle="tab" href="#profile-1" role="tab" aria-selected="true">
+                            <i class="material-icons-two-tone me-2">account_circle</i>البروفايل
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="profile-tab-2" data-bs-toggle="tab" href="#profile-2" role="tab" aria-selected="true">
+                            <i class="material-icons-two-tone me-2">description</i>المعلومات الشخصية 
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="profile-tab-3" data-bs-toggle="tab" href="#profile-3" role="tab" aria-selected="true">
+                            <i class="material-icons-two-tone me-2">library_books</i>حسابي 
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="profile-tab-4" data-bs-toggle="tab" href="#profile-4" role="tab" aria-selected="true">
+                            <i class="material-icons-two-tone me-2">lock</i>تغير كلمة المرور 
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="profile-tab-5" data-bs-toggle="tab" href="#profile-5" role="tab" aria-selected="true">
+                            <i class="material-icons-two-tone me-2">email</i>انشاء السيرة الذاتية
+                        </a>
+                       @*  <a class="nav-link" id="profile-tab-5" data-bs-toggle="tab" href="#profile-5" role="tab" aria-selected="true">
+                            <i class="material-icons-two-tone me-2">email</i>انشاء السيرة الذاتية
+                        </a> *@
+                    </li>
+                </ul>
+            </div>
+            <div class="card-body">
+                <div class="tab-content">
+                    <div class="tab-pane show active" id="profile-1" role="tabpanel" aria-labelledby="profile-tab-1">
+                        <div class="row">
+                            <div class="col-lg-4 col-xxl-3">
+                                <div class="card border">
+                                    <div class="card-header">
+                                        <div class="media align-items-center">
+                                            <img class="img-radius img-fluid wid-40" src="../assets/images/user/avatar-1.jpg" alt="User image">
+                                            <div class="media-body mx-3">
+                                                <h5 class="mb-1">John Doe</h5>
+                                                <h6 class="text-muted mb-0">UI/UX Designer</h6>
+                                            </div>
+                                            <div class="badge bg-primary rounded-pill text-base">Pro</div>
+                                        </div>
+                                    </div>
+                                    <div class="card-body px-2 pb-0">
+                                        <div class="list-group list-group-flush">
+                                            <a href="#" class="list-group-item list-group-item-action">
+                                                <div class="media align-items-center">
+                                                    <i class="material-icons-two-tone f-20">email</i>
+                                                    <div class="media-body mx-3">
+                                                        <h5 class="m-0">Email</h5>
+                                                    </div>
+                                                    <small><span class="__cf_email__" data-cfemail="86e2e3ebe9c6f5e7ebf6eae3a8e5e9eb">[email&#160;protected]</span></small>
+                                                </div>
+                                            </a>
+                                            <a href="#" class="list-group-item list-group-item-action">
+                                                <div class="media align-items-center">
+                                                    <i class="material-icons-two-tone f-20">phonelink_ring</i>
+                                                    <div class="media-body mx-3">
+                                                        <h5 class="m-0">Phone</h5>
+                                                    </div>
+                                                    <small>(+99) 9999 999 999</small>
+                                                </div>
+                                            </a>
+                                            <a href="#" class="list-group-item list-group-item-action">
+                                                <div class="media align-items-center">
+                                                    <i class="material-icons-two-tone f-20">pin_drop</i>
+                                                    <div class="media-body mx-3">
+                                                        <h5 class="m-0">Location</h5>
+                                                    </div>
+                                                    <small>Melbourne</small>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="row text-center">
+                                            <div class="col-4">
+                                                <h3 class="mb-0">37</h3>
+                                                <small class="text-muted">Mails</small>
+                                            </div>
+                                            <div class="col-4">
+                                                <h3 class="mb-0">2749</h3>
+                                                <small class="text-muted">Followers</small>
+                                            </div>
+                                            <div class="col-4">
+                                                <h3 class="mb-0">678</h3>
+                                                <small class="text-muted">Following</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-8 col-xxl-9">
+                                <div class="card border">
+                                    <div class="card-header">
+                                        <h5>About me</h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="mb-4">
+                                            Hello,I’m Anshan Handgun Creative Graphic Designer & User Experience Designer based in Website, I create
+                                            digital Products a more Beautiful and usable place. Morbid accusant ipsum. Nam nec tellus at.
+                                        </p>
+                                        <h5>Personal Details</h5>
+                                        <hr class="my-3">
+                                        <div class="table-responsive">
+                                            <table class="table table-borderless">
+                                                <tbody>
+                                                    <tr>
+                                                        <td><b class="text-header">Full Name</b></td>
+                                                        <td>:</td>
+                                                        <td>John Doe</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><b class="text-header">Fathers Name</b></td>
+                                                        <td>:</td>
+                                                        <td>Mr. Deepen Handgun</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><b class="text-header">Address</b></td>
+                                                        <td>:</td>
+                                                        <td>Street 110-B Kalians Bag, Dewan, M.P. INDIA</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><b class="text-header">Zip Code</b></td>
+                                                        <td>:</td>
+                                                        <td>12345</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><b class="text-header">Phone</b></td>
+                                                        <td>:</td>
+                                                        <td>+0 123456789 , +0 123456789</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><b class="text-header">Email</b></td>
+                                                        <td>:</td>
+                                                        <td><a href="https://berrydashboard.io/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="a3d0d6d3d3ccd1d7e3c6dbc2ced3cfc68dc0ccce">[email&#160;protected]</a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><b class="text-header">Website</b></td>
+                                                        <td>:</td>
+                                                        <td>http://example.com</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card border">
+                                    <div class="card-header">
+                                        <h5>Education</h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="row align-items-center mb-3">
+                                            <div class="col-sm-3"> <h5>2014-2017</h5><span>Master Degree</span> </div>
+                                            <div class="col-sm-9">
+                                                <h6>Master Degree in Computer Application</h6>
+                                                <p>University of Oxford, England</p>
+                                            </div>
+                                        </div>
+                                        <div class="row align-items-center mb-3">
+                                            <div class="col-sm-3"> <h5>2011-2013</h5><span>Bachelor</span> </div>
+                                            <div class="col-sm-9">
+                                                <h6>Bachelor Degree in Computer Engineering</h6>
+                                                <p>Imperial College London</p>
+                                            </div>
+                                        </div>
+                                        <div class="row align-items-center mb-3">
+                                            <div class="col-sm-3"> <h5>2009-2011</h5><span>School</span> </div>
+                                            <div class="col-sm-9">
+                                                <h6>Higher Secondary Education</h6>
+                                                <p>School of London, England</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card border">
+                                    <div class="card-header">
+                                        <h5>Employment</h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="row align-items-center mb-3">
+                                            <div class="col-sm-3"> <h5>Current</h5><span>Senior</span> </div>
+                                            <div class="col-sm-9">
+                                                <h6>Senior UI/UX designer</h6>
+                                                <p class="mb-1">
+                                                    Perform task related to project manager with the 100+ team under my observation. Team management is key
+                                                    role in this company.
+                                                </p>
+                                                <span class="text-muted">Microsoft, TX, USA</span>
+                                            </div>
+                                        </div>
+                                        <div class="row align-items-center mb-3">
+                                            <div class="col-sm-3"> <h5>2017-2019</h5><span>Junior</span> </div>
+                                            <div class="col-sm-9">
+                                                <h6>Trainee cum Project Manager</h6>
+                                                <span class="text-muted">Microsoft, TX, USA</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card border">
+                                    <div class="card-header">
+                                        <h5>Skills</h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="row align-items-center mt-3">
+                                            <div class="col-md-6 mb-3">
+                                                <h6 class="m-b-10 text-muted">Web Designer</h6>
+                                                <div class="row align-items-center">
+                                                    <div class="col">
+                                                        <div class="progress" style="height: 4px">
+                                                            <div class="progress-bar bg-primary" style="width: 70%"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-auto">
+                                                        <h6 class="m-b-0">70%</h6>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 mb-3">
+                                                <h6 class="m-b-10 text-muted">Graphic Designer</h6>
+                                                <div class="row align-items-center">
+                                                    <div class="col">
+                                                        <div class="progress" style="height: 4px">
+                                                            <div class="progress-bar bg-primary" style="width: 85%"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-auto">
+                                                        <h6 class="m-b-0">80%</h6>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 mb-3">
+                                                <h6 class="m-b-10 text-muted">UX Researcher</h6>
+                                                <div class="row align-items-center">
+                                                    <div class="col">
+                                                        <div class="progress" style="height: 4px">
+                                                            <div class="progress-bar bg-secondary" style="width: 85%"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-auto">
+                                                        <h6 class="m-b-0">3.2</h6>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 mb-3">
+                                                <h6 class="m-b-10 text-muted">HTML</h6>
+                                                <div class="row align-items-center">
+                                                    <div class="col">
+                                                        <div class="progress" style="height: 4px">
+                                                            <div class="progress-bar bg-primary" style="width: 45%"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-auto">
+                                                        <h6 class="m-b-0">45%</h6>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 mb-3">
+                                                <h6 class="m-b-10 text-muted">Wordpress</h6>
+                                                <div class="row align-items-center">
+                                                    <div class="col">
+                                                        <div class="progress" style="height: 4px">
+                                                            <div class="progress-bar bg-secondary" style="width: 25%"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-auto">
+                                                        <h6 class="m-b-0">25%</h6>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 mb-3">
+                                                <h6 class="m-b-10 text-muted">PHP</h6>
+                                                <div class="row align-items-center">
+                                                    <div class="col">
+                                                        <div class="progress" style="height: 4px">
+                                                            <div class="progress-bar bg-primary" style="width: 65%"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-auto">
+                                                        <h6 class="m-b-0">65%</h6>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="profile-2" role="tabpanel" aria-labelledby="profile-tab-2">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="card border">
+                                    <div class="card-header">
+                                        <h5>Personal Information</h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                <div class="form-group">
+                                                    <label class="form-label">Name <span class="text-danger">*</span></label>
+                                                    <input type="text" class="form-control" value="John Doe">
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <div class="form-group">
+                                                    <label class="form-label">Location</label>
+                                                    <select class="form-control">
+                                                        <option>Washington</option>
+                                                        <option>India</option>
+                                                        <option>Africa</option>
+                                                        <option>New York</option>
+                                                        <option>Malaysia</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-12">
+                                                <div class="form-group">
+                                                    <label class="form-label">Bio <span class="text-danger">*</span></label>
+<textarea class="form-control">
+I consider myself as a creative, professional and a flexible person. I can adapt with any kind of brief and design style</textarea>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <div class="form-group">
+                                                    <label class="form-label">Experience<span class="text-danger">*</span></label>
+                                                    <select class="form-control">
+                                                        <option>Startup</option>
+                                                        <option>2 year</option>
+                                                        <option>3 year</option>
+                                                        <option selected>4 year</option>
+                                                        <option>5 year</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="card border">
+                                    <div class="card-header">
+                                        <h5>Contact Information</h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                <div class="form-group">
+                                                    <label class="form-label">Contact Phone</label>
+                                                    <input type="text" class="form-control" value="(+99) 9999 999 999">
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <div class="form-group">
+                                                    <label class="form-label">Email <span class="text-danger">*</span></label>
+                                                    <input type="text" class="form-control" value="demo@sample.com">
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-12">
+                                                <div class="form-group">
+                                                    <label class="form-label">Portfolio Url</label>
+                                                    <input type="text" class="form-control" value="https://demo.com/">
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-12">
+                                                <div class="form-group">
+                                                    <label class="form-label">Address</label>
+<textarea class="form-control">3379  Monroe Avenue, Fort Myers, Florida(33912)</textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="card border">
+                                    <div class="card-header">
+                                        <h5>Social Information</h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="form-group">
+                                            <label class="form-label">Facebook</label>
+                                            <div class="input-group">
+                                                <span class="input-group-text">
+                                                    <i class="fab fa-facebook-f"></i>
+                                                </span>
+                                                <input type="text" class="form-control" placeholder="Profile Url">
+                                                <button class="btn text-white border-0 shadow-none bg-facebook" type="button">Connect</button>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-label">Twitter</label>
+                                            <div class="input-group">
+                                                <span class="input-group-text">
+                                                    <i class="fab fa-twitter"></i>
+                                                </span>
+                                                <input type="text" class="form-control" placeholder="Profile Url">
+                                                <button class="btn text-white border-0 shadow-none bg-twitter" type="button">Connect</button>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-label">Google Plus</label>
+                                            <div class="input-group">
+                                                <span class="input-group-text">
+                                                    <i class="fab fa-google-plus-g"></i>
+                                                </span>
+                                                <input type="text" class="form-control" placeholder="Profile Url">
+                                                <button class="btn text-white border-0 shadow-none bg-googleplus" type="button">Connect</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="profile-3" role="tabpanel" aria-labelledby="profile-tab-3">
+                        <div class="card border">
+                            <div class="card-header">
+                                <h5>General Settings</h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="form-label">Username <span class="text-danger">*</span></label>
+                                            <input type="text" class="form-control" value="Ashoka_Tano_16">
+                                            <small class="form-text text-muted">Your Profile URL: https://pc.com/Ashoka_Tano_16</small>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="form-label">Account Email <span class="text-danger">*</span></label>
+                                            <input type="text" class="form-control" value="demo@sample.com">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="form-label">Language</label>
+                                            <select class="form-control">
+                                                <option>Washington</option>
+                                                <option>India</option>
+                                                <option>Africa</option>
+                                                <option>New York</option>
+                                                <option>Malaysia</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="form-label">Sign in Using</label>
+                                            <select class="form-control">
+                                                <option>Password</option>
+                                                <option>Face Recognition</option>
+                                                <option>Thumb Impression</option>
+                                                <option>Key</option>
+                                                <option>Pin</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card border">
+                            <div class="card-header">
+                                <h5>Advance Settings</h5>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="mb-3 mt-4">Secure Browsing</h5>
+                                <div class="form-group">
+                                    <div class="form-check form-switch">
+                                        <input class="form-check-input" type="checkbox" id="customsecbrz1" checked>
+                                        <label class="form-check-label" for="customsecbrz1">Browsing Securely ( https ) when it's necessary</label>
+                                    </div>
+                                </div>
+                                <h5 class="mb-3 mt-4">Login Notifications</h5>
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" id="customsecbrz2" checked>
+                                    <label class="form-check-label" for="customsecbrz2">Notify when login attempted from other place</label>
+                                </div>
+                                <h5 class="mb-3 mt-4">Login Approvals</h5>
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" id="customsecbrz3" checked>
+                                    <label class="form-check-label" for="customsecbrz3">Approvals is not required when login from unrecognized devices.</label>
+                                </div>
+                                <hr>
+                                <h5 class="mb-4">Recognized Devices</h5>
+                                <div class="media mb-2">
+                                    <i class="feather icon-monitor f-20 h3 me-3 wid-30 text-center"></i>
+                                    <div class="media-body">
+                                        <div class="float-end">
+                                            <div class="text-success d-inline-block me-2">
+                                                <i class="fas fa-circle f-10 me-2"></i>
+                                                Current Active
+                                            </div>
+                                            <a href="#!" class="text-danger"><i class="feather icon-x-circle"></i></a>
+                                        </div>
+                                        <span class="text-dark font-weight-bold">Cent Desktop</span>
+                                        <small class="text-muted">| 4351 Deans Lane, Chelmsford</small>
+                                    </div>
+                                </div>
+                                <div class="media mb-2">
+                                    <i class="feather icon-tablet f-20 h3 me-3 wid-30 text-center"></i>
+                                    <div class="media-body">
+                                        <div class="float-end">
+                                            <div class="text-muted d-inline-block me-2">
+                                                <i class="fas fa-circle f-10 me-2"></i>
+                                                Active 5 days ago
+                                            </div>
+                                            <a href="#!" class="text-danger"><i class="feather icon-x-circle"></i></a>
+                                        </div>
+                                        <span class="text-dark font-weight-bold">Imho Tablet</span>
+                                        <small class="text-muted">| 4185 Michigan Avenue</small>
+                                    </div>
+                                </div>
+                                <div class="media mb-2">
+                                    <i class="feather icon-smartphone f-20 h3 me-3 wid-30 text-center"></i>
+                                    <div class="media-body">
+                                        <div class="float-end">
+                                            <div class="text-muted d-inline-block me-2">
+                                                <i class="fas fa-circle f-10 me-2"></i>
+                                                Active 1 month ago
+                                            </div>
+                                            <a href="#!" class="text-danger"><i class="feather icon-x-circle"></i></a>
+                                        </div>
+                                        <span class="text-dark font-weight-bold">Albs Mobile</span>
+                                        <small class="text-muted">| 3462 Fairfax Drive, Montcalm</small>
+                                    </div>
+                                </div>
+                                <hr>
+                                <h5 class="mb-3">Active Sessions</h5>
+                                <div class="media mb-2">
+                                    <i class="feather icon-monitor f-20 h3 me-3 wid-30 text-center text-success"></i>
+                                    <div class="media-body">
+                                        <div class="float-end">
+                                            <a href="#!" class="badge bg-light-danger">Logout</a>
+                                        </div>
+                                        <span class="text-dark font-weight-bold">Ceto Desktop</span>
+                                        <small class="text-muted">| 4351 Deans Lane, Chelmsford</small>
+                                    </div>
+                                </div>
+                                <div class="media mb-2">
+                                    <i class="feather icon-tablet f-20 h3 me-3 wid-30 text-center text-success"></i>
+                                    <div class="media-body">
+                                        <div class="float-end">
+                                            <a href="#!" class="badge bg-light-danger">Logout</a>
+                                        </div>
+                                        <span class="text-dark font-weight-bold">Moon Tablet</span>
+                                        <small class="text-muted">| 4185 Michigan Avenue</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer text-end">
+                                <button class="btn btn-success">Update Profile</button>
+                                <button class="btn btn-outline-dark ms-2">Clear</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="profile-4" role="tabpanel" aria-labelledby="profile-tab-4">
+                        <div class="alert alert-warning" role="alert">
+                            <h5 class="alert-heading"><i class="feather icon-alert-circle me-2"></i>Alert!</h5>
+                            <p>Your Password will expire in every 3 months. So change it periodically.</p>
+                            <hr>
+                            <p class="mb-0"><b>Do not share your password</b></p>
+                        </div>
+                        <div class="card border">
+                            <div class="card-header">
+                                <h5>Change Password</h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="form-label">Current Password <span class="text-danger">*</span></label>
+                                            <input type="password" class="form-control" placeholder="Enter Your current password">
+                                            <small class="form-text text-muted">Forgot password? <a href="#!">Click here</a></small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="form-label">New Password <span class="text-danger">*</span></label>
+                                            <input type="password" class="form-control" placeholder="Enter New password">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="form-label">Confirm Password <span class="text-danger">*</span></label>
+                                            <input type="password" class="form-control" placeholder="Enter your password again">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer text-end">
+                                <button class="btn btn-danger">Change Password</button>
+                                <button class="btn btn-outline-dark ms-2">Clear</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane" id="profile-5" role="tabpanel" aria-labelledby="profile-tab-5">
+                        <div class="container my-5">
+                            <h2 class="text-center mb-4">إنشاء السيرة الذاتية</h2>
+
+                            <div id="cv-form">
+                                <!-- الأقسام الأصلية -->
+                                <!-- المعلومات الشخصية -->
+                                <div class="section">
+                                    <div class="section-header" onclick="toggleSection('personal')">المعلومات الشخصية الأساسية</div>
+                                    <div class="section-content" id="personal">
+                                        <input type="text" class="form-control" placeholder="المهندس">
+                                        <input type="text" class="form-control" placeholder="الجنس">
+                                        <input type="text" class="form-control" placeholder="الجنسية">
+                                        <input type="text" class="form-control" placeholder="الحالة الاجتماعية">
+                                        <input type="date" class="form-control" placeholder="تاريخ الميلاد">
+                                        <h5 class="mt-3">بيانات التواصل</h5>
+                                        <input type="email" class="form-control" placeholder="البريد الإلكتروني">
+                                        <input type="text" class="form-control" placeholder="رقم الجوال">
+                                        <input type="text" class="form-control" placeholder="رقم جوال أحد الأقارب">
+                                    </div>
+                                </div>
+
+                                <!-- المهارات -->
+                                @* <div class="section">
+                                    <div class="section-header" onclick="toggleSection('skills')">المهارات التقنية</div>
+                                    <div class="section-content" id="skills">
+                                        <input type="text" id="skillName" class="form-control" placeholder="أدخل المهارة">
+                                        <input type="text" id="skillField" class="form-control" placeholder="المجال">
+                                        <input type="date" id="skillFrom" class="form-control">
+                                        <input type="date" id="skillTo" class="form-control">
+                                        <input type="text" id="skillDesc" class="form-control" placeholder="الوصف">
+                                        <button class="btn btn-outline-primary add-btn" onclick="addSkill()">إضافة مهارة</button>
+                                        <div id="skills-list"></div>
+                                    </div>
+                                </div> *@
+                                <div id="skills-section"></div>
+                                <!-- الخبرات -->
+                                <div class="section">
+                                    <div class="section-header" onclick="toggleSection('experience')">الخبرات العملية</div>
+                                    <div class="section-content" id="experience">
+                                        <input type="text" id="expCompany" class="form-control" placeholder="جهة العمل">
+                                        <input type="text" id="expTitle" class="form-control" placeholder="المسمى الوظيفي">
+                                        <input type="text" id="expField" class="form-control" placeholder="المجال">
+                                        <input type="date" id="expFrom" class="form-control">
+                                        <input type="date" id="expTo" class="form-control">
+                                        <input type="text" id="expTasks" class="form-control" placeholder="المهام الرئيسية">
+                                        <button class="btn btn-outline-primary add-btn" onclick="addExperience()">إضافة خبرة</button>
+                                        <div id="experience-list"></div>
+                                    </div>
+                                </div>
+
+                                <!-- المؤهلات -->
+                                <div class="section">
+                                    <div class="section-header" onclick="toggleSection('education')">المؤهلات العلمية</div>
+                                    <div class="section-content" id="education">
+                                        <input type="text" id="eduCountry" class="form-control" placeholder="البلد">
+                                        <input type="text" id="eduUniv" class="form-control" placeholder="الجامعة / المعهد">
+                                        <input type="text" id="eduMajor" class="form-control" placeholder="التخصص الرئيسي">
+                                        <input type="text" id="eduDept" class="form-control" placeholder="القسم">
+                                        <input type="text" id="eduYear" class="form-control" placeholder="سنة التخرج">
+                                        <input type="text" id="eduGrade" class="form-control" placeholder="المعدل / التقدير">
+                                        <button class="btn btn-outline-primary add-btn" onclick="addEducation()">إضافة مؤهل</button>
+                                        <div id="education-list"></div>
+                                    </div>
+                                </div>
+
+                                <!-- الشهادات -->
+                                <div class="section">
+                                    <div class="section-header" onclick="toggleSection('cert')">الشهادات المهنية والدورات</div>
+                                    <div class="section-content" id="cert">
+                                        <input type="text" id="certCountry" class="form-control" placeholder="البلد">
+                                        <input type="text" id="certName" class="form-control" placeholder="اسم الشهادة / الدورة">
+                                        <input type="text" id="certOrg" class="form-control" placeholder="الجهة المانحة">
+                                        <input type="text" id="certYear" class="form-control" placeholder="سنة الحصول">
+                                        <input type="text" id="certType" class="form-control" placeholder="التصنيف">
+                                        <button class="btn btn-outline-primary add-btn" onclick="addCert()">إضافة شهادة / دورة</button>
+                                        <div id="cert-list"></div>
+                                    </div>
+                                </div>
+
+                                <!-- المشاريع -->
+                                <div class="section">
+                                    <div class="section-header" onclick="toggleSection('project')">المشاريع السابقة والإنجازات</div>
+                                    <div class="section-content" id="project">
+                                        <input type="text" id="projName" class="form-control" placeholder="اسم المشروع">
+                                        <input type="text" id="projCompany" class="form-control" placeholder="جهة العمل">
+                                        <input type="text" id="projField" class="form-control" placeholder="المجال">
+                                        <input type="date" id="projFrom" class="form-control">
+                                        <input type="date" id="projTo" class="form-control">
+                                        <input type="text" id="projValue" class="form-control" placeholder="القيمة التقريبية">
+                                        <input type="text" id="projRole" class="form-control" placeholder="الدور">
+                                        <button class="btn btn-outline-primary add-btn" onclick="addProject()">إضافة مشروع</button>
+                                        <div id="project-list"></div>
+                                    </div>
+                                </div>
+
+                                <div class="text-center mt-4">
+                                    <button class="btn btn-success" onclick="generateCV()">حفظ السيرة الذاتية</button>
+                                </div>
+                            </div>
+
+                            <!-- عرض السيرة الذاتية -->
+                            <div id="cv-preview"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<!-- نافذة التأكيد قبل إنشاء PDF -->
+<div class="modal fade" id="confirmModal" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header bg-primary text-white">
+                <h5 class="modal-title">تأكيد إنشاء السيرة الذاتية PDF</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" id="cv-preview-modal">
+                <!-- سيتم عرض السيرة الذاتية هنا مؤقتًا -->
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">إلغاء</button>
+                <button type="button" class="btn btn-success" onclick="exportToPDF()">تأكيد وإنشاء PDF</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function toggleSection(id) {
+        const sections = document.querySelectorAll('.section-content');
+        sections.forEach(sec => {
+            if (sec.id === id) $(sec).slideToggle();
+            else $(sec).slideUp();
+        });
+    }
+
+    function createItemBox(content, editCallback) {
+        const box = $(`
+            <div class="item-box">
+                <div>${content}</div>
+                <div class="action-btns">
+                    <button class="btn btn-sm btn-outline-primary">تعديل</button>
+                    <button class="btn btn-sm btn-outline-danger">حذف</button>
+                </div>
+            </div>
+        `);
+        box.find('.btn-outline-primary').click(editCallback);
+        box.find('.btn-outline-danger').click(() => box.remove());
+        return box;
+    }
+
+    function addSkill() {
+        const name = $('#skillName').val(), field = $('#skillField').val(), from = $('#skillFrom').val(), to = $('#skillTo').val(), desc = $('#skillDesc').val();
+        if (!name) return alert("يرجى إدخال اسم المهارة.");
+        const content = `<strong>${name}</strong> (${field})<br><small>${from} - ${to}</small><br>${desc}`;
+        const box = createItemBox(content, () => {
+            $('#skillName').val(name); $('#skillField').val(field);
+            $('#skillFrom').val(from); $('#skillTo').val(to);
+            $('#skillDesc').val(desc); box.remove();
+        });
+        $('#skills-list').append(box); $('#skills input').val('');
+    }
+
+    function addExperience() {
+        const company = $('#expCompany').val(), title = $('#expTitle').val(), field = $('#expField').val(), from = $('#expFrom').val(), to = $('#expTo').val(), tasks = $('#expTasks').val();
+        if (!company) return alert("يرجى إدخال جهة العمل.");
+        const content = `<strong>${title}</strong> - ${company}<br><small>${field} (${from} - ${to})</small><br>${tasks}`;
+        const box = createItemBox(content, () => {
+            $('#expCompany').val(company); $('#expTitle').val(title);
+            $('#expField').val(field); $('#expFrom').val(from);
+            $('#expTo').val(to); $('#expTasks').val(tasks); box.remove();
+        });
+        $('#experience-list').append(box); $('#experience input').val('');
+    }
+
+    function addEducation() {
+        const country = $('#eduCountry').val(), univ = $('#eduUniv').val(), major = $('#eduMajor').val(), dept = $('#eduDept').val(), year = $('#eduYear').val(), grade = $('#eduGrade').val();
+        if (!univ) return alert("يرجى إدخال اسم الجامعة.");
+        const content = `<strong>${major}</strong> - ${univ}, ${country}<br><small>${dept} | سنة ${year}</small><br>التقدير: ${grade}`;
+        const box = createItemBox(content, () => {
+            $('#eduCountry').val(country); $('#eduUniv').val(univ);
+            $('#eduMajor').val(major); $('#eduDept').val(dept);
+            $('#eduYear').val(year); $('#eduGrade').val(grade); box.remove();
+        });
+        $('#education-list').append(box); $('#education input').val('');
+    }
+
+    function addCert() {
+        const country = $('#certCountry').val(), name = $('#certName').val(), org = $('#certOrg').val(), year = $('#certYear').val(), type = $('#certType').val();
+        if (!name) return alert("يرجى إدخال اسم الشهادة أو الدورة.");
+        const content = `<strong>${name}</strong> - ${org} (${country})<br><small>${year} | التصنيف: ${type}</small>`;
+        const box = createItemBox(content, () => {
+            $('#certCountry').val(country); $('#certName').val(name);
+            $('#certOrg').val(org); $('#certYear').val(year);
+            $('#certType').val(type); box.remove();
+        });
+        $('#cert-list').append(box); $('#cert input').val('');
+    }
+
+    function addProject() {
+        const name = $('#projName').val(), company = $('#projCompany').val(), field = $('#projField').val(), from = $('#projFrom').val(), to = $('#projTo').val(), value = $('#projValue').val(), role = $('#projRole').val();
+        if (!name) return alert("يرجى إدخال اسم المشروع.");
+        const content = `<strong>${name}</strong> - ${company}<br><small>${field} (${from} - ${to})</small><br>القيمة: ${value} | الدور: ${role}`;
+        const box = createItemBox(content, () => {
+            $('#projName').val(name); $('#projCompany').val(company);
+            $('#projField').val(field); $('#projFrom').val(from);
+            $('#projTo').val(to); $('#projValue').val(value);
+            $('#projRole').val(role); box.remove();
+        });
+        $('#project-list').append(box); $('#project input').val('');
+    }
+
+    /* إنشاء السيرة الذاتية داخل نفس الصفحة */
+            function generateCV() {
+        const cloneSkills = $('#skills-list').clone();
+        const cloneExperiences = $('#experience-list').clone();
+        const cloneEducations = $('#education-list').clone();
+        const cloneCerts = $('#cert-list').clone();
+        const cloneProjects = $('#project-list').clone();
+
+        // إزالة الأزرار من النسخة التي ستعرض في الـ Modal
+        cloneSkills.find('button').remove();
+        cloneExperiences.find('button').remove();
+        cloneEducations.find('button').remove();
+        cloneCerts.find('button').remove();
+        cloneProjects.find('button').remove();
+
+        const cvHtml = `
+            <div id="cv-content" class="p-3">
+                <h2 class="text-center text-primary mb-4">السيرة الذاتية</h2>
+                <h4>المعلومات الشخصية</h4>
+                <p><strong>الجنس:</strong> ${$('input[placeholder="الجنس"]').val() || '-'} </p>
+                <p><strong>الجنسية:</strong> ${$('input[placeholder="الجنسية"]').val() || '-'} </p>
+                <p><strong>الحالة الاجتماعية:</strong> ${$('input[placeholder="الحالة الاجتماعية"]').val() || '-'} </p>
+                <p><strong>تاريخ الميلاد:</strong> ${$('input[placeholder="تاريخ الميلاد"]').val() || '-'} </p>
+                <p><strong>البريد الإلكتروني:</strong> ${$('input[placeholder="البريد الإلكتروني"]').val() || '-'} </p>
+                <p><strong>رقم الجوال:</strong> ${$('input[placeholder="رقم الجوال"]').val() || '-'} </p>
+                <p><strong>رقم قريب:</strong> ${$('input[placeholder="رقم جوال أحد الأقارب"]').val() || '-'} </p>
+
+                ${cloneSkills.children().length ? `<h4>المهارات التقنية</h4>${cloneSkills.html()}` : ''}
+                ${cloneExperiences.children().length ? `<h4>الخبرات العملية</h4>${cloneExperiences.html()}` : ''}
+                ${cloneEducations.children().length ? `<h4>المؤهلات العلمية</h4>${cloneEducations.html()}` : ''}
+                ${cloneCerts.children().length ? `<h4>الشهادات والدورات</h4>${cloneCerts.html()}` : ''}
+                ${cloneProjects.children().length ? `<h4>المشاريع السابقة والإنجازات</h4>${cloneProjects.html()}` : ''}
+            </div>
+        `;
+
+        $('#cv-preview-modal').html(cvHtml);
+        $('#confirmModal').modal('show');
+    }
+
+
+</script>
+
+
+<script>
+    $(document).ready(function() {
+        loadAllSkills();
+    });
+
+    function loadAllSkills() {
+        $("#skills-section").load("/Skill/GetAllSkills");
+    }
+</script>
+
+<!-- مكتبة html2pdf.js من CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+<script>
+    function exportToPDF() {
+        const element = document.getElementById('cv-content');
+        const opt = {
+            margin: 0.5,
+            filename: 'السيرة_الذاتية.pdf',
+            image: { type: 'jpeg', quality: 0.98 },
+            html2canvas: { scale: 2 },
+            jsPDF: { unit: 'in', format: 'a4', orientation: 'portrait' }
+        };
+        html2pdf().set(opt).from(element).save();
+        $('#confirmModal').modal('hide');
+    }
+</script>

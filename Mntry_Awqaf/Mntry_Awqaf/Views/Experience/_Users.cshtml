@@ -1,0 +1,68 @@
+﻿@model Mntry_Awqaf.Models.User
+
+<div class="section">
+    <div class="section-header" onclick="toggleSection('personal')">المعلومات الشخصية الأساسية</div>
+    <div class="section-content" id="personal">
+
+        <div class="row g-2 mb-3">
+            <div class="col-md-4">
+                <input type="text" id="FullName" class="form-control" placeholder="الاسم الكامل"
+                       value="@($"{Model?.Frist_Name} {Model?.Second_Name} {Model?.Third_Name} {Model?.Fourth_Name} {Model?.Nickname}")">
+            </div>
+            <div class="col-md-4">
+                <input type="text" id="Gender" class="form-control" placeholder="الجنس" value="@Model?.Sex">
+            </div>
+            <div class="col-md-4">
+                <input type="text" id="Nationality" class="form-control" placeholder="الجنسية" value="@Model?.Nationality">
+            </div>
+        </div>
+
+        <div class="row g-2 mb-3">
+            <div class="col-md-4">
+                <input type="text" id="MaritalStatus" class="form-control" placeholder="الحالة الاجتماعية" value="@Model?.MaritalStatus">
+            </div>
+            <div class="col-md-4">
+                <input type="date" id="BirthDate" class="form-control" placeholder="تاريخ الميلاد" value="@Model?.BirthDate.ToString("yyyy-MM-dd")">
+            </div>
+        </div>
+
+        <h5 class="mt-3">بيانات التواصل</h5>
+        <div class="row g-2 mb-3">
+            <div class="col-md-4">
+                <input type="email" id="Email" class="form-control" placeholder="البريد الإلكتروني" value="@Model?.Email">
+            </div>
+            <div class="col-md-4">
+                <input type="text" id="Phone" class="form-control" placeholder="رقم الجوال" value="@Model?.Phone_number1">
+            </div>
+            <div class="col-md-4">
+                <input type="text" id="RelativePhone" class="form-control" placeholder="رقم جوال أحد الأقارب" value="@Model?.RelativePhone">
+            </div>
+        </div>
+
+        <div id="user-msg" class="mb-3"></div>
+    </div>
+</div>
+
+
+
+<script>
+    // اختياري: تحميل البيانات من السيرفر لو Partial لم يتم تمريرها
+    function loadUserData() {
+        $.getJSON('/Experience/GetUser', function(res) {
+            if(res) {
+                $('#FullName').val(res.fullName || '');
+                $('#Gender').val(res.gender || '');
+                $('#Nationality').val(res.nationality || '');
+                $('#MaritalStatus').val(res.maritalStatus || '');
+                $('#BirthDate').val(res.birthDate ? res.birthDate.split('T')[0] : '');
+                $('#Email').val(res.email || '');
+                $('#Phone').val(res.phone || '');
+                $('#RelativePhone').val(res.relativePhone || '');
+            }
+        });
+    }
+
+    $(document).ready(function() {
+        loadUserData();
+    });
+</script>

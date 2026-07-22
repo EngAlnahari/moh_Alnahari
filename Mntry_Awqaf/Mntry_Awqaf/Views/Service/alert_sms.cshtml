@@ -1,0 +1,17 @@
+@if (TempData.ContainsKey("SuccessMessage"))
+{
+    <div id="temp-message" class="alert alert-info">
+        @TempData["SuccessMessage"]
+    </div>
+}
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+        setTimeout(function () {
+            $("#temp-message").fadeOut("slow", function () {
+                $(this).remove(); // Remove the element after fading out
+            });
+        }, 9000); // 3000 milliseconds = 3 seconds
+    });
+</script>

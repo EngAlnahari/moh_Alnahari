@@ -1,0 +1,104 @@
+@model LandBoundaryWithWorkForm
+
+@{
+    Layout = null;
+}
+
+<table class="table table-bordered text-center align-middle">
+    <thead class="table-light">
+        <tr>
+            <th style="min-width:150px;">الصفة</th>
+            <th>الحد الشمالي</th>
+            <th>الحد الجنوبي</th>
+            <th>الحد الشرقي</th>
+            <th>الحد الغربي</th>
+        </tr>
+    </thead>
+    <tbody>
+        @for (int i = 0; i < Model.landBoundaryModels.Count; i++)
+        {
+            var boundary = Model.landBoundaryModels[i];
+            <tr>
+                <!-- Hidden inputs to track IDs -->
+                <input type="hidden" name="landBoundaryModels[@i].Id" value="@boundary.Id" />
+                <input type="hidden" name="landBoundaryModels[@i].WorkFormId" value="@boundary.WorkFormId" />
+                
+                <td>
+                    <input type="text" class="form-control form-control-sm" name="landBoundaryModels[@i].AttributeName" value="@boundary.AttributeName" readonly>
+                </td>
+                
+                @if (i == 2) // فئة الحد (Select dropdown)
+                {
+                    <td>
+                        <select name="landBoundaryModels[@i].NorthBoundary" class="form-select form-select-sm">
+                            <option value="نمتيسا" selected="@(boundary.NorthBoundary == "نمتيسا" ? "selected" : null)">1- لا يوجد</option>
+                            <option value="lands" selected="@(boundary.NorthBoundary == "lands" ? "selected" : null)">2- الاراضي</option>
+                            <option value="" selected="@(boundary.NorthBoundary == "المعمورات" || boundary.NorthBoundary == "" ? "selected" : null)">3- المعمورات</option>
+                            <option value="يال" selected="@(boundary.NorthBoundary == "يال" ? "selected" : null)">4- دور العبادة</option>
+                            <option value="ستنيا" selected="@(boundary.NorthBoundary == "ستنيا" ? "selected" : null)">5- المقابر</option>
+                            <option value="نتسيا" selected="@(boundary.NorthBoundary == "نتسيا" ? "selected" : null)">6- الاسواق</option>
+                            <option value="" selected="@(boundary.NorthBoundary == "الطرقات" ? "selected" : null)">7- الطرقات</option>
+                            <option value="" selected="@(boundary.NorthBoundary == "رهق\\مسقئ" ? "selected" : null)">8- رهق\\مسقئ</option>
+                            <option value="" selected="@(boundary.NorthBoundary == "اخرى تذكر" ? "selected" : null)">9- اخرى تذكر</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select name="landBoundaryModels[@i].SouthBoundary" class="form-select form-select-sm">
+                            <option value="نتاكن" selected="@(boundary.SouthBoundary == "نتاكن" ? "selected" : null)">1- لا يوجد</option>
+                            <option value="lands" selected="@(boundary.SouthBoundary == "lands" ? "selected" : null)">2- الاراضي</option>
+                            <option value="" selected="@(boundary.SouthBoundary == "" ? "selected" : null)">3- المعمورات</option>
+                            <option value="" selected="@(boundary.SouthBoundary == "دور العبادة" ? "selected" : null)">4- دور العبادة</option>
+                            <option value="" selected="@(boundary.SouthBoundary == "المقابر" ? "selected" : null)">5- المقابر</option>
+                            <option value="" selected="@(boundary.SouthBoundary == "الاسواق" ? "selected" : null)">6- الاسواق</option>
+                            <option value="" selected="@(boundary.SouthBoundary == "الطرقات" ? "selected" : null)">7- الطرقات</option>
+                            <option value="" selected="@(boundary.SouthBoundary == "رهق\\مسقئ" ? "selected" : null)">8- رهق\\مسقئ</option>
+                            <option value="" selected="@(boundary.SouthBoundary == "اخرى تذكر" ? "selected" : null)">9- اخرى تذكر</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select name="landBoundaryModels[@i].WestBoundary" class="form-select form-select-sm">
+                            <option value="نتك" selected="@(boundary.WestBoundary == "نتك" ? "selected" : null)">1- لا يوجد</option>
+                            <option value="lands" selected="@(boundary.WestBoundary == "lands" ? "selected" : null)">2- الاراضي</option>
+                            <option value="" selected="@(boundary.WestBoundary == "" ? "selected" : null)">3- المعمورات</option>
+                            <option value="" selected="@(boundary.WestBoundary == "دور العبادة" ? "selected" : null)">4- دور العبادة</option>
+                            <option value="" selected="@(boundary.WestBoundary == "المقابر" ? "selected" : null)">5- المقابر</option>
+                            <option value="" selected="@(boundary.WestBoundary == "الاسواق" ? "selected" : null)">6- الاسواق</option>
+                            <option value="" selected="@(boundary.WestBoundary == "الطرقات" ? "selected" : null)">7- الطرقات</option>
+                            <option value="" selected="@(boundary.WestBoundary == "رهق\\مسقئ" ? "selected" : null)">8- رهق\\مسقئ</option>
+                            <option value="" selected="@(boundary.WestBoundary == "اخرى تذكر" ? "selected" : null)">9- اخرى تذكر</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select name="landBoundaryModels[@i].EastBoundary" class="form-select form-select-sm">
+                            <option value="نتان" selected="@(boundary.EastBoundary == "نتان" ? "selected" : null)">1- لا يوجد</option>
+                            <option value="lands" selected="@(boundary.EastBoundary == "lands" ? "selected" : null)">2- الاراضي</option>
+                            <option value="" selected="@(boundary.EastBoundary == "" ? "selected" : null)">3- المعمورات</option>
+                            <option value="" selected="@(boundary.EastBoundary == "دور العبادة" ? "selected" : null)">4- دور العبادة</option>
+                            <option value="" selected="@(boundary.EastBoundary == "المقابر" ? "selected" : null)">5- المقابر</option>
+                            <option value="" selected="@(boundary.EastBoundary == "الاسواق" ? "selected" : null)">6- الاسواق</option>
+                            <option value="" selected="@(boundary.EastBoundary == "الطرقات" ? "selected" : null)">7- الطرقات</option>
+                            <option value="" selected="@(boundary.EastBoundary == "رهق\\مسقئ" ? "selected" : null)">8- رهق\\مسقئ</option>
+                            <option value="" selected="@(boundary.EastBoundary == "اخرى تذكر" ? "selected" : null)">9- اخرى تذكر</option>
+                        </select>
+                    </td>
+                }
+                else
+                {
+                    <td><input type="text" class="form-control form-control-sm" name="landBoundaryModels[@i].NorthBoundary" value="@boundary.NorthBoundary"></td>
+                    <td><input type="text" class="form-control form-control-sm" name="landBoundaryModels[@i].SouthBoundary" value="@boundary.SouthBoundary"></td>
+                    <td><input type="text" class="form-control form-control-sm" name="landBoundaryModels[@i].WestBoundary" value="@boundary.WestBoundary"></td>
+                    <td><input type="text" class="form-control form-control-sm" name="landBoundaryModels[@i].EastBoundary" value="@boundary.EastBoundary"></td>
+                }
+            </tr>
+        }
+    </tbody>
+</table>
+
+<!-- المودال -->
+<div class="modal fade" id="GovernorateModal" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content" id="GovernorateContent">
+            <!-- هنا يجي البارتشل -->
+        </div>
+    </div>
+</div>

@@ -1,0 +1,68 @@
+﻿@model TanjezOrderWithEarthBordersViewModel
+
+@{
+    Layout = null;
+    ViewData["Title"] = "تعديل حدود الأرض";
+    var borderTypes = new string[] { "شمال", "جنوب", "شرق", "غرب", "شمال شرقي", "شمال غربي", "جنوب شرقي", "جنوب غربي" };
+}
+
+<div class="section-divider"></div>
+<div class="form-title mb-2">حدود الأرض</div>
+<div class="input-label-en mb-1">الحدود المسجلة في النظام</div>
+
+<table class="table table-bordered mb-2" id="earthBordersTable">
+    <thead>
+        <tr>
+            <th style="width:40px">#</th>
+            <th style="width:150px">نوع الحد</th>
+            <th>الوصف في الوثيقة</th>
+            <th style="width:120px">مطابق / غير مطابق</th>
+            <th>الفرق</th>
+            <th style="width:50px">إجراءات</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model.earthBorders != null && Model.earthBorders.Any())
+        {
+            for (int index = 0; index < Model.earthBorders.Count; index++)
+            {
+                <tr>
+                    <td>@(index + 1)</td>
+                    <td>
+                        <select class="form-select" asp-for="earthBorders[index].BorderType">
+                            @foreach (var type in borderTypes)
+                            {
+                                <option value="@type" selected="@(Model.earthBorders[index].BorderType == type)">
+                                    @type
+                                </option>
+                            }
+                        </select>
+                    </td>
+                    <td>
+                        <input type="text" class="form-control" asp-for="earthBorders[index].BorderDescription" />
+                    </td>
+                    <td class="text-center">
+                        <input type="hidden" asp-for="earthBorders[@index].IdenticalOrDifferent" value="0" />
+                        <input type="checkbox" class="form-check-input"
+                               asp-for="earthBorders[index].IdenticalOrDifferent"
+                               value="1" />
+                    </td>
+                    <td>
+                        <input type="text" class="form-control" asp-for="earthBorders[index].Difference" />
+                    </td>
+                    <td>
+                        <button type="button" class="btn btn-danger btn-sm remove-border">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </td>
+                </tr>
+            }
+        }
+        else
+        {
+            <tr>
+                <td colspan="6" class="text-center text-muted">لا توجد حدود مضافة بعد.</td>
+            </tr>
+        }
+    </tbody>
+</table>

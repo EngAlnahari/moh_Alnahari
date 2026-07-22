@@ -1,0 +1,75 @@
+@model Mntry_Awqaf.Models.DynamicField
+@{
+    ViewData["Title"] = "إنشاء حقل جديد";
+}
+
+<div class="container mt-4">
+    <div class="card shadow">
+        <div class="card-header bg-primary text-white">
+            <h4 class="mb-0">إنشاء حقل ديناميكي جديد</h4>
+        </div>
+        <div class="card-body">
+            @if (TempData["SuccessMessage"] != null)
+            {
+                <div class="alert alert-success">@TempData["SuccessMessage"]</div>
+            }
+
+            <form asp-action="CreateField" method="post">
+                <div class="form-group mb-3">
+                    <label asp-for="Name"></label>
+                    <input asp-for="Name" class="form-control" placeholder="أدخل اسم الحقل" required />
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
+
+                <div class="form-group mb-3">
+                    <label asp-for="Type"></label>
+                    <select asp-for="Type" class="form-select" id="fieldTypeSelect" required>
+                        <option value="">-- اختر نوع الحقل --</option>
+                        <option value="text">نص قصير (Text)</option>
+                        <option value="textarea">نص طويل (Textarea)</option>
+                        <option value="number">رقم (Number)</option>
+                        <option value="date">تاريخ (Date)</option>
+                        <option value="time">وقت (Time)</option>
+                        <option value="email">بريد إلكتروني (Email)</option>
+                        <option value="password">كلمة مرور (Password)</option>
+                        <option value="dropdown">قائمة منسدلة (Dropdown)</option>
+                        <option value="checkbox">خيارات متعددة (Checkbox)</option>
+                        <option value="radio">اختيار فردي (Radio)</option>
+                        <option value="file">رفع ملف (File Upload)</option>
+                        <option value="table">جدول بيانات (Table)</option>
+                        <option value="coordinate">إحداثيات جغرافية (Coordinate)</option>
+                    </select>
+                    <span asp-validation-for="Type" class="text-danger"></span>
+                </div>
+
+                <div class="form-group mb-3" id="optionsGroup" style="display:none;">
+                    <label asp-for="Options"></label>
+                    <input asp-for="Options" class="form-control" placeholder="أدخل الخيارات مفصولة بفاصلة. مثال: خيار1,خيار2,خيار3" />
+                    <span class="text-muted small">هذا الحقل مطلوب فقط إذا اخترت قائمة منسدلة، أو خيارات متعددة، أو اختيار فردي.</span>
+                </div>
+
+                <div class="form-check mb-3">
+                    <input asp-for="IsRequired" class="form-check-input" />
+                    <label asp-for="IsRequired" class="form-check-label"></label>
+                </div>
+
+                <button type="submit" class="btn btn-success">حفظ الحقل</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            $('#fieldTypeSelect').change(function () {
+                var val = $(this).val();
+                if (val === 'dropdown' || val === 'checkbox' || val === 'radio') {
+                    $('#optionsGroup').slideDown();
+                } else {
+                    $('#optionsGroup').slideUp();
+                }
+            });
+        });
+    </script>
+}

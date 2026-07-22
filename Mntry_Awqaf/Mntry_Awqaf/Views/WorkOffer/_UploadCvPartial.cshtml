@@ -1,0 +1,108 @@
+﻿<style>
+    #customCvBtn:hover, #customCertBtn:hover {
+        background-color: #0d6efd;
+        color: white;
+        transition: 0.3s ease;
+    }
+
+    #customCertBtn:hover {
+        background-color: #198754; /* لون زر الشهادة */
+    }
+
+    #cvFileName, #certFileName {
+        font-size: 0.9rem;
+        color: #555;
+    }
+</style>
+
+
+<div class="modal fade show" id="uploadCvModal" style="display:block; background:rgba(0,0,0,0.5);">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content p-4 rounded-3">
+            <h4 class="mb-3 text-center text-primary">الرجاء رفع السيرة الذاتية قبل إنشاء العرض</h4>
+
+            <form asp-controller="User" asp-action="UploadCv" method="post" enctype="multipart/form-data">
+                <div class="mb-3 text-center">
+                    <label for="CvFile" class="form-label d-block mb-2 fw-bold text-primary">
+                        انشاء السيرة الذاتية <span class="text-danger">*</span>
+                    </label>
+
+                    <!-- الحقل المخفي -->
+                    <input type="file" id="CvFile" name="CvFile" class="d-none" accept=".pdf">
+
+                    <!-- الزر المخصص -->
+                   @*  <button type="button" class="btn btn-outline-primary rounded-pill px-4" id="customCvBtn">
+                        <i class="ti ti-upload me-1"></i> اختر ملف السيرة الذاتية
+                    </button> *@
+                    <a asp-controller="Account" asp-action="Index" class="btn btn-outline-primary rounded-pill px-4" id="customCvBn">
+                        <i class="ti ti-upload me-1"></i> انشاء السيرة الذاتية
+                    </a>
+
+                    <!-- عرض اسم الملف -->
+                    <div id="cvFileName" class="mt-2 text-secondary small fst-italic">بعد انشاء السيرة الذاتية سيتم مراجعتها من النظام وارسال الاشعار اليك</div>
+                </div>
+
+                <!-- 🔹 حقل رفع المؤهل أو الشهادة (اختياري) -->
+                <div class="mb-3 text-center">
+                    <label for="CertFile" class="form-label d-block mb-2 fw-bold text-primary">
+                        ارفع المؤهل أو الشهادة (اختياري)
+                    </label>
+
+                    <!-- الحقل المخفي -->
+                    <input type="file" id="CertFile" name="CertFile" class="d-none" accept=".pdf,.jpg,.jpeg,.png">
+
+                    <!-- الزر المخصص -->
+                    <button type="button" class="btn btn-outline-success rounded-pill px-4" id="customCertBtn">
+                        <i class="ti ti-file-plus me-1"></i> اختر ملف الشهادة
+                    </button>
+
+                    <!-- عرض اسم الملف -->
+                    <div id="certFileName" class="mt-2 text-secondary small fst-italic">لم يتم اختيار أي ملف بعد</div>
+                </div>
+
+
+
+                <div class="text-center">
+                    <button type="submit" class="btn btn-success px-4">إرسال</button>
+                    <button type="button" class="btn btn-secondary px-4" onclick="$('#uploadCvModal').remove()">إغلاق</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<script>
+    // 🔹 السيرة الذاتية
+    var customCvBtn = document.getElementById("customCvBtn");
+    if (customCvBtn) {
+        customCvBtn.addEventListener("click", function () {
+            document.getElementById("CvFile").click();
+        });
+    }
+
+    var cvFile = document.getElementById("CvFile");
+    if (cvFile) {
+        cvFile.addEventListener("change", function () {
+            var fileName = this.files.length > 0 ? this.files[0].name : "لم يتم اختيار أي ملف بعد";
+            var cvFileName = document.getElementById("cvFileName");
+            if (cvFileName) cvFileName.textContent = fileName;
+        });
+    }
+
+    // 🔹 المؤهل أو الشهادة
+    var customCertBtn = document.getElementById("customCertBtn");
+    if (customCertBtn) {
+        customCertBtn.addEventListener("click", function () {
+            document.getElementById("CertFile").click();
+        });
+    }
+
+    var certFile = document.getElementById("CertFile");
+    if (certFile) {
+        certFile.addEventListener("change", function () {
+            var fileName = this.files.length > 0 ? this.files[0].name : "لم يتم اختيار أي ملف بعد";
+            var certFileName = document.getElementById("certFileName");
+            if (certFileName) certFileName.textContent = fileName;
+        });
+    }
+</script>
+

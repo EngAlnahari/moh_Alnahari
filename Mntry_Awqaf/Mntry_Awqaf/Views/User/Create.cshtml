@@ -1,0 +1,153 @@
+﻿@model Mntry_Awqaf.Models.User
+
+@{
+    ViewData["Title"] = "انشاء حساب";
+    Layout = "_Login";
+}
+<div class="card-body">
+    <div class="row">
+        <div class="d-flex justify-content-between">
+            <div>
+                <h2 class="text-secondary"><b>انشاء حساب</b></h2>
+                <h4 class="text-muted"><b>ادخل بيانات الحساب للمتابعة</b></h4>
+            </div>
+            <a href="#">
+                <img src="../assets/images/logo-dark.svg" alt="image">
+            </a>
+        </div>
+    </div>
+
+    <div class="saprator mt-3">
+        <span>or</span>
+    </div>
+    <form  method="post" enctype="multipart/form-data">
+                     
+   
+    <h5 class="my-4 d-flex justify-content-center">تسجيل الاشتراك</h5>
+        <div class="row mb-3">
+            
+                            <div class="col-md">
+                                <div class="form-floating mb-3">
+                                    <input asp-for="Frist_Name" type="text" class="form-control" id="floatingInput1" placeholder="First Name">
+                                    <label asp-for="Frist_Name" for="floatingInput1">الاسم الأول ( اجباري ) </label>
+                                    <span asp-validation-for="Frist_Name" class="text-danger">   </span>
+                                </div>
+                            </div>
+            <div class="col-md">
+                <div class="form-floating mb-3">
+                    <input asp-for="Second_Name" type="text" class="form-control" id="floatingInput1" placeholder="First Name">
+                    <label asp-for="Second_Name" for="floatingInput1">الاسم الثاني ( الأب  ) </label>
+                    <span asp-validation-for="Email" class="text-danger">   </span>
+                </div>
+            </div>
+
+                            </div>
+        <div class="row mb-3">
+                            
+
+                            <div class="col-md">
+                                <div class="form-floating mb-3">
+                                    <input asp-for="Third_Name" type="text" class="form-control" id="floatingInput1" placeholder="First Name">
+                                    <label asp-for="Third_Name" for="floatingInput1">الاسم الثالث ( الجد  ) </label>
+                                    <span asp-validation-for="Third_Name" class="text-danger">   </span>
+                                </div>
+                            </div>
+            <div class="col-md">
+                <div class="form-floating mb-3">
+                    <input asp-for="Fourth_Name" type="text" class="form-control" id="floatingInput1" placeholder="First Name">
+                    <label asp-for="Fourth_Name" for="floatingInput1">الاسم الرابع ( حسب البطاقة ) </label>
+                    <span asp-validation-for="Fourth_Name" class="text-danger">   </span>
+                </div>
+            </div>
+                            </div>
+        <div class="row mb-3">
+
+            <div class="col-md">
+                <div class="form-floating mb-3">
+                    <input asp-for="Nickname" type="text" class="form-control" id="floatingInput1" placeholder="First Name">
+                    <label asp-for="Nickname" for="floatingInput1">اللقب ( حسب البطاقة ) </label>
+                    <span asp-validation-for="Nickname" class="text-danger">   </span>
+                </div>
+            </div>
+
+            <div class="col-md">
+                <div class="form-floating mb-3">
+                    <input asp-for="Number_card" type="text" class="form-control" id="floatingInput1" placeholder="First Name">
+                    <label asp-for="Number_card" for="floatingInput1">رقم البطاقة الشخصية ( اجباري ) </label>
+                    <span asp-validation-for="Number_card" class="text-danger">   </span>
+                </div>
+            </div>
+                           
+  </div>
+        <div class="row mb-3">
+            <div class="col-md">
+                <div class="form-floating mb-3">
+                    <input asp-for="Phone_number1" type="text" class="form-control" id="floatingInput1" placeholder="First Name">
+                    <label asp-for="Phone_number1" for="floatingInput1">رقم الموبايل 1  </label>
+                    <span asp-validation-for="Phone_number1" class="text-danger">   </span>
+                </div>
+            </div>
+
+
+                            <div class="col-md">
+                                <div class="form-floating mb-3">
+                                    <input asp-for="Phone_number2" type="text" class="form-control" id="floatingInput1" placeholder="First Name">
+                                    <label asp-for="Phone_number2" for="floatingInput1">رقم الموبايل 2  </label>
+                                    <span asp-validation-for="Phone_number2" class="text-danger">   </span>
+                                </div>
+                            </div>
+
+                            <div class="col-md">
+                                <div class="form-floating mb-3">
+                                    <input asp-for="Phone_number13" type="text" class="form-control" id="floatingInput1" placeholder="First Name">
+                                    <label asp-for="Phone_number13" for="floatingInput1">رقم الموبايل 3  </label>
+                                    <span asp-validation-for="Phone_number13" class="text-danger">   </span>
+                                </div>
+                            </div>
+</div>
+        <div class="row mb-3">
+                       <div class="col-md">
+                        <div class="form-floating mb-3">
+                            <input asp-for="Email" type="email" class="form-control" id="floatingInput3" placeholder="Email Address / Username">
+                            <label asp-for="Email" for="floatingInput3">الايميل</label>
+                            <span asp-validation-for="Email" class="text-danger">   </span>
+                        </div>
+                         </div>
+
+                           <div class="col-md">
+                            <div class="form-floating mb-3">
+                            <input asp-for="Pass" type="password" class="form-control" id="floatingInput4" placeholder="Password">
+                            <label asp-for="Pass" for="floatingInput4">كلمة المرور</label>
+                            <span asp-validation-for="Pass" class="text-danger">   </span>
+                        </div>
+                        </div>
+                        </div>
+        @* <div class="row mb-3">
+                            <div class="col-md">
+            <div class="form-floating mb-3">
+                <select class="form-select" asp-for="User_type">
+                                        
+                                    <option value="">-- نوع المستخدم --</option>
+                                    <option value="1">عميل</option>
+                                    <option value="2">مهندس</option>
+                                </select>
+                            </div>
+                            </div>
+                            </div> *@
+                          
+
+
+
+                        <div class="form-check mt-3s">
+                            <input class="form-check-input input-primary" type="checkbox" id="customCheckc1" checked>
+                            <label class="form-check-label" for="customCheckc1">
+                                <span class="h5 mb-0">اوافق على <span>الشروط & الخصوصيات</span></span>
+                            </label>
+                        </div>
+                        <div class="d-grid mt-4">
+
+                                <button type="submit" class="btn btn-secondary p-2">اشتراك</button>
+                        </div>
+    </form>
+
+</div>        

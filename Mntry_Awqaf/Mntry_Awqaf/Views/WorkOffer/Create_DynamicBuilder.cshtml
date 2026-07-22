@@ -1,0 +1,639 @@
+@model Mntry_Awqaf.Models.WorkOffer
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+    .form-builder-container {
+        background: #f8f9fa;
+        min-height: 100vh;
+        padding: 20px;
+    }
+    .field-palette {
+        background: white;
+        border-radius: 12px;
+        padding: 15px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        position: sticky;
+        top: 20px;
+    }
+    .draggable-field {
+        background: #fff;
+        border: 2px dashed #dee2e6;
+        border-radius: 8px;
+        padding: 12px;
+        margin-bottom: 10px;
+        cursor: grab;
+        transition: all 0.2s;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    .draggable-field:hover {
+        border-color: #0d6efd;
+        background: #f1f8ff;
+    }
+    .draggable-field i {
+        font-size: 1.2rem;
+        color: #6c757d;
+    }
+    .form-canvas {
+        background: white;
+        border-radius: 12px;
+        padding: 25px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        min-height: 600px;
+    }
+    .dropped-field {
+        background: #fff;
+        border: 1px solid #dee2e6;
+        border-radius: 8px;
+        padding: 15px;
+        margin-bottom: 15px;
+        position: relative;
+        transition: all 0.2s;
+    }
+    .dropped-field:hover {
+        border-color: #0d6efd;
+        box-shadow: 0 2px 8px rgba(13,110,253,0.15);
+    }
+    .field-actions {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        display: flex;
+        gap: 5px;
+        opacity: 0;
+        transition: opacity 0.2s;
+    }
+    .dropped-field:hover .field-actions {
+        opacity: 1;
+    }
+    .field-config {
+        background: #f8f9fa;
+        border-radius: 6px;
+        padding: 10px;
+        margin-top: 10px;
+        display: none;
+    }
+    .field-config.show {
+        display: block;
+    }
+    .preview-mode .field-actions,
+    .preview-mode .field-config,
+    .preview-mode .draggable-field {
+        display: none !important;
+    }
+    .section-header {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 15px 20px;
+        border-radius: 8px;
+        margin-bottom: 20px;
+        cursor: pointer;
+    }
+    .template-card {
+        background: white;
+        border-radius: 8px;
+        padding: 15px;
+        margin-bottom: 10px;
+        cursor: pointer;
+        border: 2px solid transparent;
+        transition: all 0.2s;
+    }
+    .template-card:hover {
+        border-color: #0d6efd;
+        transform: translateY(-2px);
+    }
+    .template-card.active {
+        border-color: #0d6efd;
+        background: #f1f8ff;
+    }
+    .quick-field-btn {
+        background: white;
+        border: 1px solid #dee2e6;
+        border-radius: 20px;
+        padding: 8px 16px;
+        margin: 5px;
+        cursor: pointer;
+        transition: all 0.2s;
+    }
+    .quick-field-btn:hover {
+        background: #0d6efd;
+        color: white;
+        border-color: #0d6efd;
+    }
+    .field-type-icon {
+        width: 40px;
+        height: 40px;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #e9ecef;
+    }
+</style>
+
+<div class="form-builder-container" dir="rtl">
+    <div class="container-fluid">
+        <!-- Header -->
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <div>
+                <h2 class="mb-0"><i class="bi bi-building"></i> منشئ نموذج العرض</h2>
+                <small class="text-muted">صمم نموذج العرض حسب احتياجات عملك</small>
+            </div>
+            <div class="btn-group">
+                <button class="btn btn-outline-secondary" onclick="togglePreview()">
+                    <i class="bi bi-eye"></i> معاينة
+                </button>
+                <button class="btn btn-outline-success" onclick="saveTemplate()">
+                    <i class="bi bi-save"></i> حفظ القالب
+                </button>
+                <button class="btn btn-primary" onclick="submitForm()">
+                    <i class="bi bi-check-lg"></i> حفظ العرض
+                </button>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- القائمة الجانبية - أدوات البناء -->
+            <div class="col-md-3">
+                <div class="field-palette">
+                    <h5 class="mb-3"><i class="bi bi-tools"></i> الأدوات</h5>
+                    
+                    <!-- القوالب الجاهزة -->
+                    <div class="mb-4">
+                        <h6 class="text-muted mb-2">القوالب الجاهزة</h6>
+                        <div class="template-card" onclick="loadTemplate('basic')">
+                            <i class="bi bi-file-text"></i> <strong>عرض أساسي</strong>
+                            <small class="d-block text-muted">اسم، تاريخ، أجور</small>
+                        </div>
+                        <div class="template-card" onclick="loadTemplate('engineering')">
+                            <i class="bi bi-building"></i> <strong>عرض هندسي</strong>
+                            <small class="d-block text-muted">مساحة، تنقلات، معدات</small>
+                        </div>
+                        <div class="template-card" onclick="loadTemplate('consulting')">
+                            <i class="bi bi-people"></i> <strong>عرض استشاري</strong>
+                            <small class="d-block text-muted">استشارات، تدريب، غرامات</small>
+                        </div>
+                    </div>
+
+                    <!-- حقول سريعة -->
+                    <div class="mb-4">
+                        <h6 class="text-muted mb-2">إضافة سريعة</h6>
+                        <div class="d-flex flex-wrap">
+                            <button class="quick-field-btn" onclick="quickAddField('text', 'اسم العرض')">
+                                <i class="bi bi-type"></i> نص
+                            </button>
+                            <button class="quick-field-btn" onclick="quickAddField('number', 'المبلغ')">
+                                <i class="bi bi-123"></i> رقم
+                            </button>
+                            <button class="quick-field-btn" onclick="quickAddField('date', 'التاريخ')">
+                                <i class="bi bi-calendar"></i> تاريخ
+                            </button>
+                            <button class="quick-field-btn" onclick="quickAddField('select', 'النوع')">
+                                <i class="bi bi-list"></i> قائمة
+                            </button>
+                            <button class="quick-field-btn" onclick="quickAddField('checkbox', 'موافقة')">
+                                <i class="bi bi-check-square"></i> صندوق
+                            </button>
+                            <button class="quick-field-btn" onclick="quickAddField('textarea', 'ملاحظات')">
+                                <i class="bi bi-textarea-t"></i> نص طويل
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- حقول متقدمة -->
+                    <div>
+                        <h6 class="text-muted mb-2">حقول متقدمة</h6>
+                        <div class="draggable-field" onclick="addField('section')">
+                            <div class="field-type-icon"><i class="bi bi-layout-text-window-reverse"></i></div>
+                            <span>قسم جديد</span>
+                        </div>
+                        <div class="draggable-field" onclick="addField('conditional')">
+                            <div class="field-type-icon"><i class="bi bi-diagram-2"></i></div>
+                            <span>حقل مشروط</span>
+                        </div>
+                        <div class="draggable-field" onclick="addField('calculated')">
+                            <div class="field-type-icon"><i class="bi bi-calculator"></i></div>
+                            <span>حقل محسوب</span>
+                        </div>
+                        <div class="draggable-field" onclick="addField('file')">
+                            <div class="field-type-icon"><i class="bi bi-paperclip"></i></div>
+                            <span>مرفق ملف</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- منطقة بناء النموذج -->
+            <div class="col-md-6">
+                <div class="form-canvas" id="formCanvas">
+                    <div class="text-center text-muted py-5" id="emptyState">
+                        <i class="bi bi-plus-circle" style="font-size: 3rem;"></i>
+                        <h4 class="mt-3">ابدأ ببناء نموذجك</h4>
+                        <p>اختر أداة من القائمة الجانبية أو انقر على قالب جاهز</p>
+                    </div>
+                    
+                    <!-- هنا تُضاف الحقول ديناميكياً -->
+                    <div id="fieldsContainer"></div>
+                </div>
+            </div>
+
+            <!-- إعدادات الحقل المحدد -->
+            <div class="col-md-3">
+                <div class="field-palette" id="fieldProperties" style="display: none;">
+                    <h5 class="mb-3"><i class="bi bi-gear"></i> إعدادات الحقل</h5>
+                    
+                    <div class="mb-3">
+                        <label>عنوان الحقل</label>
+                        <input type="text" class="form-control" id="propLabel" onchange="updateSelectedField()">
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label>الاسم التقني</label>
+                        <input type="text" class="form-control" id="propName" onchange="updateSelectedField()">
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label>نوع الحقل</label>
+                        <select class="form-select" id="propType" onchange="updateSelectedField()">
+                            <option value="text">نص</option>
+                            <option value="number">رقم</option>
+                            <option value="date">تاريخ</option>
+                            <option value="select">قائمة منسدلة</option>
+                            <option value="checkbox">صندوق اختيار</option>
+                            <option value="radio">أزرار اختيار</option>
+                            <option value="textarea">نص طويل</option>
+                            <option value="file">ملف</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-3" id="optionsSection" style="display: none;">
+                        <label>خيارات القائمة (كل خيار في سطر)</label>
+                        <textarea class="form-control" id="propOptions" rows="4" onchange="updateSelectedField()"></textarea>
+                    </div>
+
+                    <div class="form-check mb-2">
+                        <input class="form-check-input" type="checkbox" id="propRequired" onchange="updateSelectedField()">
+                        <label class="form-check-label">حقل مطلوب</label>
+                    </div>
+
+                    <div class="form-check mb-2">
+                        <input class="form-check-input" type="checkbox" id="propConditional" onchange="updateSelectedField()">
+                        <label class="form-check-label">حقل مشروط</label>
+                    </div>
+
+                    <div class="mb-3" id="conditionalSection" style="display: none;">
+                        <label>يظهر عند</label>
+                        <select class="form-select" id="propConditionField">
+                            <option>اختر حقل...</option>
+                        </select>
+                        <select class="form-select mt-2" id="propConditionOperator">
+                            <option value="equals">يساوي</option>
+                            <option value="notEquals">لا يساوي</option>
+                            <option value="contains">يحتوي</option>
+                            <option value="greaterThan">أكبر من</option>
+                        </select>
+                        <input type="text" class="form-control mt-2" id="propConditionValue" placeholder="القيمة">
+                    </div>
+
+                    <div class="mb-3">
+                        <label>تلميح المساعدة</label>
+                        <input type="text" class="form-control" id="propPlaceholder" onchange="updateSelectedField()">
+                    </div>
+
+                    <hr>
+                    
+                    <button class="btn btn-outline-danger w-100" onclick="deleteSelectedField()">
+                        <i class="bi bi-trash"></i> حذف الحقل
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    let fields = [];
+    let selectedFieldId = null;
+    let fieldCounter = 0;
+
+    // القوالب الجاهزة
+    const templates = {
+        basic: [
+            { type: 'text', label: 'اسم العرض', required: true },
+            { type: 'date', label: 'تاريخ الانتهاء' },
+            { type: 'number', label: 'السعر الإجمالي', required: true },
+            { type: 'textarea', label: 'ملاحظات' }
+        ],
+        engineering: [
+            { type: 'section', label: 'معلومات المشروع' },
+            { type: 'text', label: 'اسم المشروع', required: true },
+            { type: 'select', label: 'نوع المشروع', options: ['سكني', 'تجاري', 'صناعي', 'بنية تحتية'] },
+            { type: 'number', label: 'المساحة (م²)' },
+            { type: 'section', label: 'التكاليف' },
+            { type: 'number', label: 'تكلفة العمالة' },
+            { type: 'number', label: 'تكلفة المواد' },
+            { type: 'number', label: 'تكلفة المعدات' },
+            { type: 'calculated', label: 'الإجمالي', formula: 'تكلفة العمالة + تكلفة المواد + تكلفة المعدات' }
+        ],
+        consulting: [
+            { type: 'text', label: 'عنوان الاستشارة', required: true },
+            { type: 'select', label: 'نوع الاستشارة', options: ['قانونية', 'مالية', 'هندسية', 'إدارية'] },
+            { type: 'number', label: 'عدد الساعات المتوقعة' },
+            { type: 'number', label: 'السعر للساعة' },
+            { type: 'calculated', label: 'التكلفة الإجمالية', formula: 'عدد الساعات المتوقعة * السعر للساعة' },
+            { type: 'section', label: 'شروط العقد' },
+            { type: 'checkbox', label: 'يتضمن زيارات ميدانية' },
+            { type: 'checkbox', label: 'يتضمن تقرير مكتوب' },
+            { type: 'number', label: 'نسبة الغرامة على التأخير (%)' }
+        ]
+    };
+
+    function loadTemplate(templateName) {
+        // تحديد القالب النشط
+        document.querySelectorAll('.template-card').forEach(c => c.classList.remove('active'));
+        event.currentTarget.classList.add('active');
+
+        // مسح الحقول الحالية
+        fields = [];
+        fieldCounter = 0;
+        
+        // إضافة حقول القالب
+        templates[templateName].forEach(field => {
+            addField(field.type, field);
+        });
+
+        renderFields();
+        document.getElementById('emptyState').style.display = 'none';
+    }
+
+    function quickAddField(type, defaultLabel) {
+        addField(type, { label: defaultLabel });
+        renderFields();
+        document.getElementById('emptyState').style.display = 'none';
+    }
+
+    function addField(type, config = {}) {
+        fieldCounter++;
+        const field = {
+            id: `field_${fieldCounter}`,
+            type: type,
+            label: config.label || getDefaultLabel(type),
+            name: config.name || `field_${fieldCounter}`,
+            required: config.required || false,
+            placeholder: config.placeholder || '',
+            options: config.options || [],
+            conditional: config.conditional || false,
+            formula: config.formula || ''
+        };
+        
+        fields.push(field);
+        selectField(field.id);
+        return field;
+    }
+
+    function getDefaultLabel(type) {
+        const labels = {
+            text: 'حقل نصي',
+            number: 'حقل رقمي',
+            date: 'تاريخ',
+            select: 'قائمة منسدلة',
+            checkbox: 'صندوق اختيار',
+            radio: 'أزرار اختيار',
+            textarea: 'نص طويل',
+            file: 'مرفق ملف',
+            section: 'قسم جديد',
+            conditional: 'حقل مشروط',
+            calculated: 'حقل محسوب'
+        };
+        return labels[type] || 'حقل جديد';
+    }
+
+    function renderFields() {
+        const container = document.getElementById('fieldsContainer');
+        container.innerHTML = '';
+
+        fields.forEach(field => {
+            const fieldEl = createFieldElement(field);
+            container.appendChild(fieldEl);
+        });
+
+        updateConditionalFields();
+    }
+
+    function createFieldElement(field) {
+        const div = document.createElement('div');
+        div.className = `dropped-field ${selectedFieldId === field.id ? 'border-primary' : ''}`;
+        div.id = field.id;
+        div.onclick = () => selectField(field.id);
+
+        // أزرار التحكم
+        const actions = document.createElement('div');
+        actions.className = 'field-actions';
+        actions.innerHTML = `
+            <button class="btn btn-sm btn-outline-secondary" onclick="moveField('${field.id}', -1); event.stopPropagation();">
+                <i class="bi bi-arrow-up"></i>
+            </button>
+            <button class="btn btn-sm btn-outline-secondary" onclick="moveField('${field.id}', 1); event.stopPropagation();">
+                <i class="bi bi-arrow-down"></i>
+            </button>
+            <button class="btn btn-sm btn-outline-danger" onclick="deleteField('${field.id}'); event.stopPropagation();">
+                <i class="bi bi-trash"></i>
+            </button>
+        `;
+        div.appendChild(actions);
+
+        // محتوى الحقل
+        const content = document.createElement('div');
+        content.innerHTML = `
+            <label class="form-label ${field.required ? 'required' : ''}">
+                ${field.label} ${field.required ? '<span class="text-danger">*</span>' : ''}
+                ${field.conditional ? '<span class="badge bg-info">مشروط</span>' : ''}
+            </label>
+            ${createFieldInput(field)}
+        `;
+        div.appendChild(content);
+
+        return div;
+    }
+
+    function createFieldInput(field) {
+        switch(field.type) {
+            case 'text':
+                return `<input type="text" class="form-control" placeholder="${field.placeholder}" ${field.required ? 'required' : ''}>`;
+            case 'number':
+                return `<input type="number" class="form-control" placeholder="${field.placeholder}" ${field.required ? 'required' : ''}>`;
+            case 'date':
+                return `<input type="date" class="form-control" ${field.required ? 'required' : ''}>`;
+            case 'textarea':
+                return `<textarea class="form-control" rows="3" placeholder="${field.placeholder}" ${field.required ? 'required' : ''}></textarea>`;
+            case 'select':
+                return `<select class="form-select" ${field.required ? 'required' : ''}>
+                    <option value="">-- اختر --</option>
+                    ${field.options.map(opt => `<option value="${opt}">${opt}</option>`).join('')}
+                </select>`;
+            case 'checkbox':
+                return `<div class="form-check">
+                    <input class="form-check-input" type="checkbox">
+                    <label class="form-check-label">${field.label}</label>
+                </div>`;
+            case 'radio':
+                return `<div>${field.options.map(opt => `
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="${field.name}">
+                        <label class="form-check-label">${opt}</label>
+                    </div>
+                `).join('')}</div>`;
+            case 'file':
+                return `<input type="file" class="form-control" ${field.required ? 'required' : ''}>`;
+            case 'section':
+                return `<hr><h5 class="text-primary">${field.label}</h5>`;
+            case 'calculated':
+                return `<input type="text" class="form-control" readonly value="[حساب تلقائي: ${field.formula}]">`;
+            default:
+                return `<input type="text" class="form-control">`;
+        }
+    }
+
+    function selectField(id) {
+        selectedFieldId = id;
+        const field = fields.find(f => f.id === id);
+        
+        if (field) {
+            document.getElementById('fieldProperties').style.display = 'block';
+            document.getElementById('propLabel').value = field.label;
+            document.getElementById('propName').value = field.name;
+            document.getElementById('propType').value = field.type;
+            document.getElementById('propRequired').checked = field.required;
+            document.getElementById('propConditional').checked = field.conditional;
+            document.getElementById('propPlaceholder').value = field.placeholder || '';
+            document.getElementById('propOptions').value = field.options.join('\n');
+            
+            // عرض/إخفاء قسم الخيارات
+            document.getElementById('optionsSection').style.display = 
+                ['select', 'radio'].includes(field.type) ? 'block' : 'none';
+            
+            // عرض/إخفاء قسم الشروط
+            document.getElementById('conditionalSection').style.display = 
+                field.conditional ? 'block' : 'none';
+
+            // تحديث قائمة الحقول للشروط
+            updateConditionalFieldOptions();
+        }
+
+        renderFields();
+    }
+
+    function updateSelectedField() {
+        if (!selectedFieldId) return;
+        
+        const field = fields.find(f => f.id === selectedFieldId);
+        if (field) {
+            field.label = document.getElementById('propLabel').value;
+            field.name = document.getElementById('propName').value;
+            field.type = document.getElementById('propType').value;
+            field.required = document.getElementById('propRequired').checked;
+            field.conditional = document.getElementById('propConditional').checked;
+            field.placeholder = document.getElementById('propPlaceholder').value;
+            field.options = document.getElementById('propOptions').value.split('\n').filter(o => o.trim());
+
+            document.getElementById('optionsSection').style.display = 
+                ['select', 'radio'].includes(field.type) ? 'block' : 'none';
+            document.getElementById('conditionalSection').style.display = 
+                field.conditional ? 'block' : 'none';
+
+            renderFields();
+        }
+    }
+
+    function deleteSelectedField() {
+        if (selectedFieldId) {
+            deleteField(selectedFieldId);
+        }
+    }
+
+    function deleteField(id) {
+        fields = fields.filter(f => f.id !== id);
+        if (selectedFieldId === id) {
+            selectedFieldId = null;
+            document.getElementById('fieldProperties').style.display = 'none';
+        }
+        renderFields();
+        
+        if (fields.length === 0) {
+            document.getElementById('emptyState').style.display = 'block';
+        }
+    }
+
+    function moveField(id, direction) {
+        const index = fields.findIndex(f => f.id === id);
+        if (index === -1) return;
+        
+        const newIndex = index + direction;
+        if (newIndex < 0 || newIndex >= fields.length) return;
+        
+        [fields[index], fields[newIndex]] = [fields[newIndex], fields[index]];
+        renderFields();
+    }
+
+    function updateConditionalFields() {
+        // تحديث إظهار/إخفاء الحقول المشروطة
+        fields.forEach(field => {
+            if (field.conditional) {
+                // منطق إظهار/إخفاء الحقول المشروطة
+            }
+        });
+    }
+
+    function updateConditionalFieldOptions() {
+        const select = document.getElementById('propConditionField');
+        select.innerHTML = '<option>اختر حقل...</option>';
+        fields.forEach(field => {
+            if (field.id !== selectedFieldId) {
+                select.innerHTML += `<option value="${field.id}">${field.label}</option>`;
+            }
+        });
+    }
+
+    function togglePreview() {
+        document.body.classList.toggle('preview-mode');
+    }
+
+    function saveTemplate() {
+        const templateName = prompt('أدخل اسم القالب:');
+        if (templateName) {
+            templates[templateName] = fields;
+            alert(`تم حفظ القالب "${templateName}" بنجاح!`);
+        }
+    }
+
+    function submitForm() {
+        if (fields.length === 0) {
+            alert('الرجاء إضافة حقول للنموذج أولاً');
+            return;
+        }
+
+        // التحقق من الحقول المطلوبة
+        const requiredFields = fields.filter(f => f.required);
+        console.log('الحقول المطلوبة:', requiredFields);
+
+        // إرسال البيانات
+        const formData = {
+            fields: fields,
+            timestamp: new Date().toISOString()
+        };
+
+        console.log('بيانات النموذج:', formData);
+        alert('تم حفظ النموذج بنجاح! (تحقق من Console للتفاصيل)');
+    }
+
+    // تهيئة عند التحميل
+    document.addEventListener('DOMContentLoaded', function() {
+        // يمكن تحميل قالب افتراضي هنا
+    });
+</script>

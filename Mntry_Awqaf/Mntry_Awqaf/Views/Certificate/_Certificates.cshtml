@@ -1,0 +1,136 @@
+﻿@model List<Mntry_Awqaf.Models.Certificate>
+
+<div class="section">
+    <div class="section-header" onclick="toggleSection('certificates')">الشهادات</div>
+    <div class="section-content" id="certificates">
+
+        <div class="row g-2 mb-3">
+            <div class="col-md-3"><input type="text" id="Type" class="form-control" placeholder="النوع"></div>
+            <div class="col-md-3"><input type="text" id="Almgal" class="form-control" placeholder="المجال"></div>
+            <div class="col-md-3"><input type="text" id="Depart" class="form-control" placeholder="القسم"></div>
+            <div class="col-md-3"><input type="text" id="CertName" class="form-control" placeholder="اسم البرنامج/الدورة"></div>
+        </div>
+        <div class="row g-2 mb-3">
+            <div class="col-md-4"><input type="text" id="CertOrg" class="form-control" placeholder="الجهة المانحة"></div>
+            <div class="col-md-4"><input type="text" id="CertYear" class="form-control" placeholder="سنة الحصول"></div>
+            <div class="col-md-4"><input type="text" id="CertType" class="form-control" placeholder="التصنيف"></div>
+        </div>
+
+        <div id="cert-msg" style="display:none;" class="mb-3"></div>
+        <button class="btn btn-outline-primary w-100 mb-3" onclick="saveCertificate()">حفظ الشهادة</button>
+
+        <div id="certificates-list">
+            @foreach (var c in Model)
+            {
+                <div class="item-box" data-id="@c.Id">
+                    <div>
+                        <strong>@c.CertName</strong> - @c.Type (@c.CertOrg)<br />
+                        <small>@c.CertYear - @c.CertType - @c.Almgal - @c.Depart</small>
+                    </div>
+                    <div class="action-btns">
+                        <button class="btn btn-sm btn-outline-primary" onclick="editCertificate(@c.Id)">تعديل</button>
+                        <button class="btn btn-sm btn-outline-danger" onclick="deleteCertificate(@c.Id)">حذف</button>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+<script>
+    let editCertId = 0;
+
+    // 🔹 تحميل جميع الشهادات
+    function loadCertificates() {
+        $("#certificates-list").load("/Certificate/GetUserCertificates #certificates-list>*");
+    }
+
+    // 🔹 حفظ أو تحديث شهادة
+    function saveCertificate() {
+        const data = new FormData();
+        ["Type", "Almgal", "Depart", "CertName", "CertOrg", "CertYear", "CertType"].forEach(id => {
+            data.append(id, $(`#${id}`).val());
+        });
+
+        // عند التعديل نضيف المعرّف للطلب
+        if (editCertId > 0) data.append("id", editCertId);
+
+        const url = editCertId > 0 ? '/Certificate/UpdateCertificate' : '/Certificate/CreateCertificate';
+
+        $.ajax({
+            url: url,
+            type: 'POST',
+            data: data,
+            contentType: false,
+            processData: false,
+            headers: { 'Accept': 'application/json' },
+            success: function (res) {
+                console.log('server response:', res);
+
+                if (res && res.success) {
+                    loadCertificates();
+                    $('#cert-msg').text('✅ تم الحفظ بنجاح').css('color', 'green').show();
+
+                    // تفريغ الحقول بعد الحفظ
+                    ["Type", "Almgal", "Depart", "CertName", "CertOrg", "CertYear", "CertType"].forEach(id => {
+                        $(`#${id}`).val('');
+                    });
+                    editCertId = 0;
+                } else {
+                    const msg = (res && (res.message || res.error || JSON.stringify(res))) || '❌ حدث خطأ أثناء الحفظ';
+                    $('#cert-msg').text(msg).css('color', 'red').show();
+                }
+            },
+            error: function (xhr, status, err) {
+                console.error('AJAX error', status, err, xhr.responseText);
+                let text = '⚠️ فشل الاتصال بالخادم';
+                try {
+                    const json = JSON.parse(xhr.responseText);
+                    text = json.message || JSON.stringify(json);
+                } catch (e) {
+                    text = xhr.responseText || text;
+                }
+                $('#cert-msg').text(text).css('color', 'red').show();
+            }
+        });
+    }
+
+    // 🔹 جلب بيانات الشهادة لتعديلها
+    function editCertificate(id) {
+        $.get(`/Certificate/GetCertificateById?id=${id}`, function (res) {
+            if (res) {
+                $('#Type').val(res.type);
+                $('#Almgal').val(res.almgal);
+                $('#Depart').val(res.depart);
+                $('#CertName').val(res.certName);
+                $('#CertOrg').val(res.certOrg);
+                $('#CertYear').val(res.certYear);
+                $('#CertType').val(res.certType);
+                editCertId = res.id;
+
+                $('#cert-msg').text('✏️ الآن يمكنك تعديل الشهادة').css('color', 'blue').show();
+            }
+        }).fail(function () {
+            $('#cert-msg').text('⚠️ فشل في تحميل بيانات الشهادة').css('color', 'red').show();
+        });
+    }
+
+    // 🔹 حذف شهادة
+    function deleteCertificate(id) {
+        if (!confirm("هل تريد حذف هذه الشهادة؟")) return;
+
+        $.post('/Certificate/DeleteCertificate', { id: id }, function (res) {
+            if (res.success) {
+                loadCertificates();
+                $('#cert-msg').text('🗑️ تم الحذف بنجاح').css('color', 'green').show();
+            } else {
+                $('#cert-msg').text('❌ فشل الحذف').css('color', 'red').show();
+            }
+        }).fail(function () {
+            $('#cert-msg').text('⚠️ فشل الاتصال بالخادم أثناء الحذف').css('color', 'red').show();
+        });
+    }
+
+    // تحميل البيانات عند فتح الصفحة
+    $(document).ready(loadCertificates);
+</script>

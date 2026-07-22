@@ -1,0 +1,76 @@
+﻿@model UserLogin
+
+@{
+    ViewData["Title"] = "تسجيل الدخول";
+    Layout = "_Login";
+}
+
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="d-flex justify-content-between">
+                                <div>
+                                    <h2 class="text-secondary"><b>مرحبا بك, في منصتنا </b></h2>
+                                    <h4>تسجيل الدخول الى حسابك </h4>
+                                </div>
+                                <a href="#">
+                                    <img src="../assets/images/logo-dark.svg" alt="image">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="d-grid">
+                            <button type="button" class="btn mt-2 btn-light-primary bg-light text-muted">
+                                <img src="../assets/images/authentication/google-icon.svg" alt="image">Sign In With Google
+                            </button>
+                        </div>
+                        <div class="saprator mt-3">
+                            <span>or</span>
+                        </div>
+                        <h5 class="my-4 d-flex justify-content-center">تسجيل الدخول عبر الايميل او اسم المستخدم</h5>
+                        <form asp-action="Login" method="post">
+                            @* <h2 class="form-title">تسجيل الدخول</h2>
+
+                            <div class="from-group">
+                                <label asp-for="Email" class="control-label"></label>
+                                <input asp-for="Email" class="form-control" />
+                                <span asp-validation-for="Email" class="text-danger">   </span>
+                            </div>
+                            <div class="from-group">
+                                <label asp-for="Password" class="control-label"></label>
+                                <input asp-for="Password" type="Pass" class="form-control" />
+                                <span asp-validation-for="Password" class="text-danger">   </span>
+                            </div> *@
+                            <div class="form-floating mb-3">
+            <input asp-for="Name" class="form-control" id="floatingInput" placeholder="عنوان البريد / اسم المستخدم">
+                                <label asp-for="Name" for="floatingInput">عنوان البريد / اسم المستخدم</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input asp-for="Pass" type="password" class="form-control" id="floatingInput1" placeholder="كلمة المرور">
+                                <label asp-for="Pass" for="floatingInput1">كلمة المرور</label>
+                            </div>
+                            <div class="d-flex mt-1 justify-content-between">
+                                <div class="form-check">
+                                    <input class="form-check-input input-primary" type="checkbox" id="customCheckc1" checked>
+                                    <label class="form-check-label text-muted" for="customCheckc1"> تذكرني</label>
+                                </div>
+                                <h5 class="text-secondary">نسيت كلمة المرور?</h5>
+                            </div>
+                            <div class="d-grid mt-4">
+                                @*  <a  class="btn btn-secondary"> Sign In</a> *@
+                                <button type="submit" class="btn btn-secondary">دخول</button>
+                            </div>
+
+                        </form>
+
+                        @if (TempData["ErrorMessage"] != null)
+                        {
+                            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                @TempData["ErrorMessage"]
+                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                            </div>
+                        }
+
+                        <hr>
+                        <a asp-controller="User" asp-action="Create" class="d-flex justify-content-end">لا املك حساب?</a>
+                    </div>
+              
+         

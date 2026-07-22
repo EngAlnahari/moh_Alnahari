@@ -1,0 +1,30 @@
+Changed database context to 'Awqaf33'.
+
+(4 rows affected)
+
+(5 rows affected)
+
+(10 rows affected)
+Msg 515, Level 16, State 2, Server DESKTOP-JP00L7H, Line 32
+Cannot insert the value NULL into column 'CategoryId', table 'Awqaf33.dbo.sections'; column does not allow nulls. INSERT fails.
+The statement has been terminated.
+Msg 547, Level 16, State 1, Server DESKTOP-JP00L7H, Line 40
+The INSERT statement conflicted with the FOREIGN KEY constraint "FK_sectionTypes_sections_SectionId". The conflict occurred in database "Awqaf33", table "dbo.sections", column 'Id'.
+The statement has been terminated.
+
+(4 rows affected)
+
+(4 rows affected)
+
+(4 rows affected)
+
+(4 rows affected)
+
+(4 rows affected)
+
+(4 rows affected)
+Result                                                         
+---------------------------------------------------------------
+تم إدخال البيانات التجريبية بنجاح!
+
+(1 rows affected)
