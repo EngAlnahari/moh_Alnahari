@@ -1,0 +1,36 @@
+﻿
+hhh\AllTemplate.html:2032:                fetch(`@Url.Action("GetTemplateDetails", "WorkOffer")?id=${templateId}`)
+hhh\almjal.html:425:    window.location.href = `createform.html?path=${encodedPath}`;
+hhh\almjal.html:428:    window.location.href = `createform.html?path=${encodedPath}`;
+hhh\almjal.html:431:    window.location.href = `createdevided.html?path=${encodedPath}`;
+hhh\almjal.html:434:    window.location.href = `createdevided.html?path=${encodedPath}`;
+hhh\almjal.html:437:    window.location.href = `createorder.html?path=${encodedPath}`;
+hhh\almjal.html:440:    window.location.href = `createspece.html?path=${encodedPath}`;
+hhh\almjal.html:443:    window.location.href = `createspece.html?path=${encodedPath}`;
+hhh\almjal.html:446:    window.location.href = `createspece.html?path=${encodedPath}`;
+hhh\almjal.html:456:    window.location.href = `Work_Form.html?path=${encodedPath}`;
+hhh\almjal.html:459:    window.location.href = `Work_Form1.html?path=${encodedPath}`;
+hhh\almjal.html:469:    window.location.href = `ContractTemplate.html?path=${encodedPath}`;
+hhh\almjal.html:472:    window.location.href = `ContractTemplate1.html?path=${encodedPath}`;
+hhh\almjal.html:482:    window.location.href = `WorkOffer.html?path=${encodedPath}`;
+hhh\almjal.html:485:    window.location.href = `WorkOffer1.html?path=${encodedPath}`;
+hhh\almjal.html:491://$("#btn-work-wofer").click(() => window.location.href = "WorkOffer1.html");
+hhh\almjal1.html:43:  <a class="btn btn-success" href="create.html"> انشاء طلب</a>
+hhh\almjal1.html:44:  <a class="btn btn-success" href="Work_Form_base.html"> انشاء استمارة عمل</a>
+hhh\almjal1.html:45:  <a class="btn btn-success" href="WorkOffer.html"> انشاء عرض</a>
+hhh\almjal1.html:46:  <a class="btn btn-success" href="ContractTemplate.html"> انشاء عقد</a>
+hhh\almjal1.html:47:  <a class="btn btn-success" href="AllTemplate.html">جميع الحقول</a>
+hhh\index.html:362:        <a class="btn btn-success" href="almjal1.html"> المجالات</a>
+hhh\index.html:552:    const skills = $('#skills-list').html();
+hhh\index.html:553:    const experiences = $('#experience-list').html();
+hhh\index.html:554:    const educations = $('#education-list').html();
+hhh\index.html:555:    const certs = $('#cert-list').html();
+hhh\index.html:556:    const projects = $('#project-list').html();
+hhh\index.html:591:    $('#cv-preview').html(cvHtml).fadeIn();
+hhh\WorkOffer.html:208:            fetch(`@Url.Action("GetTemplateDetails", "WorkOffer")?id=${templateId}`)
+hhh\Work_Form.html:518:                fetch('/Work_Form/Create1')
+hhh\Work_Form.html:528:                fetch('/Buildings/Create')
+hhh\Work_Form_base.html:686:                fetch('/Work_Form/Create1')
+hhh\Work_Form_base.html:696:                fetch('/Buildings/Create')
+
+

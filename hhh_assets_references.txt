@@ -1,0 +1,66 @@
+﻿
+hhh\AllTemplate.html:7:<link href="libs/bootstrap.rtl.min.css" rel="stylesheet">
+hhh\AllTemplate.html:8:<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" 
+rel="stylesheet">
+hhh\almjal.html:7:  <link href="libs/bootstrap.rtl.min.css" rel="stylesheet">
+hhh\almjal.html:8:  <link rel="stylesheet" 
+href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+hhh\almjal.html:9:  <script src="libs/jquery.min.js"></script>
+hhh\almjal.html:10:  <script src="libs/bootstrap.bundle.min.js"></script>
+hhh\almjal1.html:8:  <link href="libs/bootstrap.rtl.min.css" rel="stylesheet">
+hhh\almjal1.html:9:  <script src="libs/jquery.min.js"></script>
+hhh\almjal1.html:10:  <script src="libs/bootstrap.bundle.min.js"></script>
+hhh\ContractTemplate.html:8:    <link rel="stylesheet" href="../assets/css/style.css">
+hhh\ContractTemplate1.html:8:    <link rel="stylesheet" href="../assets/css/style.css">
+hhh\create.html:7:<link href="libs/bootstrap.rtl.min.css" rel="stylesheet">
+hhh\create.html:8:<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" 
+rel="stylesheet">
+hhh\createdevided.html:7:<link href="libs/bootstrap.rtl.min.css" rel="stylesheet">
+hhh\createdevided.html:8:<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" 
+rel="stylesheet">
+hhh\createform.html:7:<link href="libs/bootstrap.rtl.min.css" rel="stylesheet">
+hhh\createform.html:8:<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" 
+rel="stylesheet">
+hhh\createorder.html:7:<link href="libs/bootstrap.rtl.min.css" rel="stylesheet">
+hhh\createorder.html:8:<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" 
+rel="stylesheet">
+hhh\createspece.html:7:<link href="libs/bootstrap.rtl.min.css" rel="stylesheet">
+hhh\createspece.html:8:<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" 
+rel="stylesheet">
+hhh\creatform.html:7:<link href="libs/bootstrap.rtl.min.css" rel="stylesheet">
+hhh\creatform.html:8:<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" 
+rel="stylesheet">
+hhh\index.html:7:<link href="libs/bootstrap.rtl.min.css" rel="stylesheet">
+hhh\index.html:8:<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" 
+rel="stylesheet">
+hhh\index.html:173:        <link rel="stylesheet" 
+href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+hhh\index.html:370:<script src="libs/jquery.min.js"></script>
+hhh\WorkOffer.html:7:  <link href="libs/bootstrap.rtl.min.css" rel="stylesheet">
+hhh\WorkOffer.html:8:<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" 
+rel="stylesheet">
+hhh\WorkOffer.html:10:  <link href="libs/bootstrap.rtl.min.css" rel="stylesheet">
+hhh\WorkOffer.html:11:  <script src="libs/jquery.min.js"></script>
+hhh\WorkOffer.html:12:  <script src="libs/bootstrap.bundle.min.js"></script>
+hhh\WorkOffer1.html:7:  <link href="libs/bootstrap.rtl.min.css" rel="stylesheet">
+hhh\WorkOffer1.html:8:<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" 
+rel="stylesheet">
+hhh\WorkOffer1.html:10:  <link href="libs/bootstrap.rtl.min.css" rel="stylesheet">
+hhh\WorkOffer1.html:11:  <script src="libs/jquery.min.js"></script>
+hhh\WorkOffer1.html:12:  <script src="libs/bootstrap.bundle.min.js"></script>
+hhh\Work_Form.html:7:  <link href="libs/bootstrap.rtl.min.css" rel="stylesheet">
+hhh\Work_Form.html:8:<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" 
+rel="stylesheet">
+hhh\Work_Form.html:10:  <link href="libs/bootstrap.rtl.min.css" rel="stylesheet">
+hhh\Work_Form.html:11:  <script src="libs/jquery.min.js"></script>
+hhh\Work_Form.html:12:  <script src="libs/bootstrap.bundle.min.js"></script>
+hhh\Work_Form.html:509:    <script src="~/assets/js/modalFormHandler.js"></script>
+hhh\Work_Form_base.html:7:  <link href="libs/bootstrap.rtl.min.css" rel="stylesheet">
+hhh\Work_Form_base.html:8:<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" 
+rel="stylesheet">
+hhh\Work_Form_base.html:10:  <link href="libs/bootstrap.rtl.min.css" rel="stylesheet">
+hhh\Work_Form_base.html:11:  <script src="libs/jquery.min.js"></script>
+hhh\Work_Form_base.html:12:  <script src="libs/bootstrap.bundle.min.js"></script>
+hhh\Work_Form_base.html:677:    <script src="~/assets/js/modalFormHandler.js"></script>
+
+
