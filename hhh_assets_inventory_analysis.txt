@@ -1,0 +1,27 @@
+﻿
+FullName                                        Extension
+--------                                        ---------
+D:\EngMohammed\hhh\libs\bootstrap.rtl.min.css   .css     
+D:\EngMohammed\hhh\devid.html                   .html    
+D:\EngMohammed\hhh\index.html                   .html    
+D:\EngMohammed\hhh\createspece.html             .html    
+D:\EngMohammed\hhh\creatform.html               .html    
+D:\EngMohammed\hhh\Work_Form.html               .html    
+D:\EngMohammed\hhh\Work_Form_base.html          .html    
+D:\EngMohammed\hhh\WorkOffer.html               .html    
+D:\EngMohammed\hhh\WorkOffer1.html              .html    
+D:\EngMohammed\hhh\ContractTemplate.html        .html    
+D:\EngMohammed\hhh\ContractTemplate1.html       .html    
+D:\EngMohammed\hhh\almjal1.html                 .html    
+D:\EngMohammed\hhh\AllTemplate.html             .html    
+D:\EngMohammed\hhh\almjal.html                  .html    
+D:\EngMohammed\hhh\createorder.html             .html    
+D:\EngMohammed\hhh\createform.html              .html    
+D:\EngMohammed\hhh\createdevided.html           .html    
+D:\EngMohammed\hhh\create.html                  .html    
+D:\EngMohammed\hhh\libs\bootstrap.bundle.min.js .js      
+D:\EngMohammed\hhh\libs\jquery.min.js           .js      
+D:\EngMohammed\hhh\localizer.py                 .py      
+D:\EngMohammed\hhh\hhh_inventory.txt            .txt     
+
+
