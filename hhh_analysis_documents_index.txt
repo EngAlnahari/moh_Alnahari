@@ -1,0 +1,38 @@
+﻿
+Name                                     Length
+----                                     ------
+hhh_all_file_names_analysis.txt             513
+hhh_analysis_documents_index.txt              0
+hhh_assets_inventory_analysis.txt          1425
+hhh_business_entities_analysis.txt       105584
+hhh_business_rules_analysis.txt           50554
+hhh_complete_inventory.txt                 1881
+hhh_components_structure_analysis.txt     85578
+hhh_controls_analysis.txt                136230
+hhh_css_analysis.txt                       5361
+hhh_data_model_candidates_analysis.txt   257218
+hhh_dependency_relationship_analysis.txt 280436
+hhh_entities_candidate_analysis.txt      154446
+hhh_forms_analysis.txt                    61072
+hhh_functional_titles_analysis.txt         4198
+hhh_ids_analysis.txt                      60981
+hhh_images_icons_analysis.txt              1472
+hhh_internal_links_analysis.txt            2475
+hhh_javascript_logic_analysis.txt        157808
+hhh_json_data_analysis.txt               154002
+hhh_js_events_analysis.txt                49582
+hhh_libs_inventory.txt                      289
+hhh_modules_discovery_analysis.txt        28980
+hhh_module_size_analysis.txt                712
+hhh_pages_functional_map.txt              99777
+hhh_pages_header_analysis.txt             28870
+hhh_pages_inventory.txt                     465
+hhh_page_labels_analysis.txt              78848
+hhh_page_navigation_map.txt                2475
+hhh_system_map_analysis.txt              112650
+hhh_tables_analysis.txt                   68911
+hhh_ui_structure_analysis.txt            286522
+hhh_user_journey_analysis.txt            250484
+hhh_workflows_analysis.txt                50451
+
+
