@@ -1,0 +1,1814 @@
+﻿
+hhh\AllTemplate.html:5:<meta name="viewport" content="width=device-width, initial-scale=1.0">
+hhh\AllTemplate.html:106:    .custom-input-container label {
+hhh\AllTemplate.html:117:    .custom-input-container input:focus + label,
+hhh\AllTemplate.html:118:    .custom-input-container input:not(:placeholder-shown) + label,
+hhh\AllTemplate.html:119:    .custom-input-container select:focus + label,
+hhh\AllTemplate.html:120:    .custom-input-container select:not([value=""]) + label {
+hhh\AllTemplate.html:137:    <p id="breadcrumb"></p>
+hhh\AllTemplate.html:146:    <form id="tanjezForm" method="post" enctype="multipart/form-data">
+hhh\AllTemplate.html:160:                    <div class="input-label-en">منشا الطلب </div>
+hhh\AllTemplate.html:161:                    <input asp-for="tanjezOrder.CreateOrderName" type="text" 
+class="form-control" placeholder="منشا الطلب">
+hhh\AllTemplate.html:167:                    <select asp-for="tanjezOrder.DescripPerson" id="descripSelect" 
+class="form-select">
+hhh\AllTemplate.html:182:                        <select id="typePieceSelect" class="form-select">
+hhh\AllTemplate.html:236:                    <input type="text" class="form-control" id="documentArea" 
+asp-for="tanjezOrder.Zone" placeholder="المديرية" />
+hhh\AllTemplate.html:241:                    <input type="text" class="form-control" id="documentArea" 
+asp-for="tanjezOrder.Directorate" placeholder="العزلة" />
+hhh\AllTemplate.html:246:                    <input type="text" class="form-control" id="documentArea" 
+name="tanjezOrder.Village" placeholder="القرية او الحي" />
+hhh\AllTemplate.html:257:                    <input name="tanjezOrder.CoordinatesY" type="number" 
+class="form-control" placeholder="احداثيات Y">
+hhh\AllTemplate.html:261:                    <input name="tanjezOrder.CoordinatesX" type="number" 
+class="form-control" placeholder="احداثيات X">
+hhh\AllTemplate.html:265:                    <label class="input-label"> اسم الموضع <span 
+class="required-star">*</span></label>
+hhh\AllTemplate.html:266:                    <input type="text" class="form-control" id="requestTitle" 
+name="tanjezOrder.PlaceName" placeholder="أدخل عنوان الطلب" required />
+hhh\AllTemplate.html:269:                    <label class="input-label">نوع الطلب  </label>
+hhh\AllTemplate.html:270:                    <select class="form-select" id="placeTypeId" 
+name="tanjezOrder.PlaceType">
+hhh\AllTemplate.html:290:                <label class="input-label">نوع الوثيقة</label>
+hhh\AllTemplate.html:301:                <div class="input-label-en">الحيازة</div>
+hhh\AllTemplate.html:313:                    <label class="input-label fw-bold">المساحة كما في الوثيقة</label>
+hhh\AllTemplate.html:318:                        <input type="number" class="form-control" id="documentArea" 
+name="tanjezOrder.Space" placeholder="0.00" step="0.01" />
+hhh\AllTemplate.html:324:                        <select class="form-select" id="unitSelect" 
+asp-for="tanjezOrder.Unit">
+hhh\AllTemplate.html:332:                    <div class="mb-2 d-none" id="unitCountDiv">
+hhh\AllTemplate.html:333:                        <input type="number" class="form-control" id="unitCount" 
+name="tanjezOrder.AcountPiese" placeholder="ادخل العدد" />
+hhh\AllTemplate.html:334:                        <small class="text-muted" id="unitLabel"></small>
+hhh\AllTemplate.html:343:                    var unitLabel = document.getElementById("unitLabel");
+hhh\AllTemplate.html:347:                        unitLabel.textContent = "عدد " + selectedUnit;
+hhh\AllTemplate.html:350:                        unitLabel.textContent = "";
+hhh\AllTemplate.html:357:                    <input type="hidden" id="hiddenAreaDifferent" 
+name="tanjezOrder.AreaDifferent" value="0" />
+hhh\AllTemplate.html:358:                    <input type="checkbox" class="form-check-input" 
+id="AreaDifferentCheckbox" />
+hhh\AllTemplate.html:359:                    <label class="form-check-label" for="AreaDifferentCheckbox">المساحة 
+مختلفة عن الواقع</label>
+hhh\AllTemplate.html:376:                <div class="input-label-en">صورة الوثيقة</div>
+hhh\AllTemplate.html:378:                    <button type="button" class="btn btn-outline-secondary" 
+id="attachBtn">إرفاق</button>
+hhh\AllTemplate.html:379:                    <input type="file" class="form-control" id="docImageInput" 
+name="tanjezOrder.DocumentImage" style="display:none;" accept="image/*">
+hhh\AllTemplate.html:390:<div id="earthBordersSection">
+hhh\AllTemplate.html:392:    <div class="input-label-en mb-1">حدود الأرض المذكورة في الوثيقة</div>
+hhh\AllTemplate.html:412:                            <select class="form-select border-type" 
+name="earthBorders[0].BorderType" style="display:none;">
+hhh\AllTemplate.html:425:                        <input type="text" class="form-control" 
+name="earthBorders[0].BorderDescription" />
+hhh\AllTemplate.html:428:                        <input type="hidden" name="earthBorders[3].IdenticalOrDifferent" 
+value="0" />
+hhh\AllTemplate.html:430:                            name="earthBorders[3].IdenticalOrDifferent" value="1" />
+hhh\AllTemplate.html:434:                        <input type="text" class="form-control" 
+name="earthBorders[0].Difference" />
+hhh\AllTemplate.html:447:                            <select class="form-select border-type" 
+name="earthBorders[1].BorderType" style="display:none;">
+hhh\AllTemplate.html:460:                        <input type="text" class="form-control" 
+name="earthBorders[1].BorderDescription" />
+hhh\AllTemplate.html:463:                        <input type="hidden" name="earthBorders[3].IdenticalOrDifferent" 
+value="0" />
+hhh\AllTemplate.html:465:                            name="earthBorders[3].IdenticalOrDifferent" value="1" />
+hhh\AllTemplate.html:470:                        <input type="text" class="form-control" 
+name="earthBorders[1].Difference" />
+hhh\AllTemplate.html:483:                            <select class="form-select border-type" 
+name="earthBorders[2].BorderType" style="display:none;">
+hhh\AllTemplate.html:495:                        <input type="text" class="form-control" 
+name="earthBorders[2].BorderDescription" />
+hhh\AllTemplate.html:498:                        <input type="hidden" name="earthBorders[3].IdenticalOrDifferent" 
+value="0" />
+hhh\AllTemplate.html:500:                            name="earthBorders[3].IdenticalOrDifferent" value="1" />
+hhh\AllTemplate.html:505:        <input type="text" class="form-control" name="earthBorders[0].Difference" readonly 
+/>
+hhh\AllTemplate.html:518:                            <select class="form-select border-type" 
+name="earthBorders[3].BorderType" style="display:none;">
+hhh\AllTemplate.html:529:                        <input type="text" class="form-control" 
+name="earthBorders[3].BorderDescription" />
+hhh\AllTemplate.html:532:                        <input type="hidden" name="earthBorders[3].IdenticalOrDifferent" 
+value="0" />
+hhh\AllTemplate.html:534:                            name="earthBorders[3].IdenticalOrDifferent" value="1" />
+hhh\AllTemplate.html:539:                        <input type="text" class="form-control" 
+name="earthBorders[3].Difference" />
+hhh\AllTemplate.html:550:    <button type="button" class="btn btn-outline-primary add-row-btn mb-3" 
+id="addBorderRow">
+hhh\AllTemplate.html:560:<div id="buildingTableSection" style="display:none; margin-top:20px;">
+hhh\AllTemplate.html:572:                <td><input type="number" class="form-control" placeholder="أدخل عدد 
+الطوابق" /></td>
+hhh\AllTemplate.html:573:                <td><input type="text" class="form-control" placeholder="أدخل الوصف" 
+/></td>
+hhh\AllTemplate.html:574:                <td><input type="text" class="form-control" placeholder="أدخل المكان" 
+/></td>
+hhh\AllTemplate.html:578:    <button type="button" class="btn btn-outline-primary add-row-btn mb-3" 
+id="addBuildingRow">
+hhh\AllTemplate.html:588:    <div id="rahaqTableSection" style="display:none; margin-top:20px;">
+hhh\AllTemplate.html:605:                        <input type="text" class="form-control" disabled placeholder="أدخل 
+الحد من الشمال" />
+hhh\AllTemplate.html:614:                        <input type="text" class="form-control" disabled placeholder="أدخل 
+الحد من الجنوب" />
+hhh\AllTemplate.html:623:                        <input type="text" class="form-control" disabled placeholder="أدخل 
+الحد من الغرب" />
+hhh\AllTemplate.html:632:                        <input type="text" class="form-control" disabled placeholder="أدخل 
+الحد من الجنوب" />
+hhh\AllTemplate.html:639:                    <div class="input-label-en">نوع الحيازة </div>
+hhh\AllTemplate.html:694:            <td><input type="number" class="form-control" placeholder="أدخل عدد الطوابق" 
+/></td>
+hhh\AllTemplate.html:695:            <td><input type="text" class="form-control" placeholder="أدخل الوصف" /></td>
+hhh\AllTemplate.html:696:            <td><input type="text" class="form-control" placeholder="أدخل المكان" /></td>
+hhh\AllTemplate.html:712:<div id="earthBordersSection">
+hhh\AllTemplate.html:715:<div class="form-title mb-2" id="earthBordersTitleUnique123">حدود الأرض</div>
+hhh\AllTemplate.html:717:    <div class="input-label-en mb-1">
+hhh\AllTemplate.html:721:    <table class="table table-bordered mb-2 text-center" id="earthBordersTitleUnique123">
+hhh\AllTemplate.html:729:                    <input type="checkbox" class="form-check-input border-primary border-2 
+larger-checkbox" id="chkUp" />
+hhh\AllTemplate.html:732:                    <input type="text" class="form-control" id="txtUp" name="fromup" 
+disabled placeholder="أدخل الحد من الأعلى" />
+hhh\AllTemplate.html:738:                    <input type="checkbox" class="form-check-input border-primary border-2 
+larger-checkbox" id="chkDown" />
+hhh\AllTemplate.html:741:                    <input type="text" class="form-control" id="txtDown" name="fromdown" 
+disabled placeholder="أدخل الحد من الأسفل" />
+hhh\AllTemplate.html:813:                <div class="input-label-en">نوع طريق الوصول</div>
+hhh\AllTemplate.html:827:                <div class="input-label-en">(فترة تسليم العمل)</div>
+hhh\AllTemplate.html:830:                <select class="form-select" id="periodType" name="tanjezOrder.PeriodType">
+hhh\AllTemplate.html:837:                <div class="input-label-en">أقصى مدة</div>
+hhh\AllTemplate.html:838:                <input type="text" class="form-control" id="maximumDuration" 
+name="tanjezOrder.MaximumDuration" placeholder="اختر التاريخ" />
+hhh\AllTemplate.html:847:                <div class="input-label-en">انتقال المهندس الى القطة المراد مسحها</div>
+hhh\AllTemplate.html:848:                <select class="form-select" id="Transportation" 
+name="tanjezOrder.Transportation">
+hhh\AllTemplate.html:861:                <div class="input-label-en">المبيت</div>
+hhh\AllTemplate.html:862:                <select class="form-select" id="OverNight" name="tanjezOrder.OverNight">
+hhh\AllTemplate.html:873:                <div class="input-label-en">النثريات (تغذية، قات، ..الخ)</div>
+hhh\AllTemplate.html:874:                <select class="form-select" id="Allowance" name="tanjezOrder.Allowance">
+hhh\AllTemplate.html:896:        <label for="txtNotes" class="form-label">الملاحظات</label>
+hhh\AllTemplate.html:897:        <textarea class="form-control" id="txtNotes" name="txtNotes" rows="4" 
+placeholder="أدخل ملاحظاتك"></textarea>
+hhh\AllTemplate.html:903:    <div class="col-12" id="attachmentsWrapper">
+hhh\AllTemplate.html:904:        <label class="form-label">المرفقات</label>
+hhh\AllTemplate.html:908:            <input type="file" class="form-control me-2" name="fileAttach[]" />
+hhh\AllTemplate.html:914:        <button type="button" class="btn btn-outline-primary" id="addAttachmentBtn">
+hhh\AllTemplate.html:930:            <input type="file" class="form-control me-2" name="fileAttach[]" />
+hhh\AllTemplate.html:968:            <input type="text" placeholder=" ">
+hhh\AllTemplate.html:969:            <label>رقم القضية</label>
+hhh\AllTemplate.html:974:            <input type="text" placeholder=" ">
+hhh\AllTemplate.html:975:            <label>رقم الشكوى</label>
+hhh\AllTemplate.html:980:            <input type="date" placeholder=" ">
+hhh\AllTemplate.html:981:            <label>تاريخ التقديم</label>
+hhh\AllTemplate.html:990:            <label>الجهة الشاكية</label>
+hhh\AllTemplate.html:1001:            <input type="text" id="nameCount1" placeholder=" " readonly>
+hhh\AllTemplate.html:1002:            <label>العدد</label>
+hhh\AllTemplate.html:1008:            <input type="text" id="txtName1" placeholder=" ">
+hhh\AllTemplate.html:1009:            <label>الأسماء</label>
+hhh\AllTemplate.html:1010:            <button type="button" class="btn btn-outline-primary" id="addNameBtn1">
+hhh\AllTemplate.html:1018:            <textarea id="nameList1" placeholder=" " readonly></textarea>
+hhh\AllTemplate.html:1019:            <label>الأسماء المضافة</label>
+hhh\AllTemplate.html:1030:            <input type="text" id="nameCount2" placeholder=" " readonly>
+hhh\AllTemplate.html:1031:            <label>العدد</label>
+hhh\AllTemplate.html:1037:            <input type="text" id="txtName2" placeholder=" ">
+hhh\AllTemplate.html:1038:            <label>الأسماء</label>
+hhh\AllTemplate.html:1039:            <button type="button" class="btn btn-outline-primary" id="addNameBtn2">
+hhh\AllTemplate.html:1047:            <textarea id="nameList2" placeholder=" " readonly></textarea>
+hhh\AllTemplate.html:1048:            <label>الأسماء المضافة</label>
+hhh\AllTemplate.html:1054:        <label for="txtNotes" class="form-label">موضوع الشوى</label>
+hhh\AllTemplate.html:1055:        <textarea class="form-control" id="txtNotes" name="txtNotes" rows="4" 
+placeholder=" موضوع الشكوى"></textarea>
+hhh\AllTemplate.html:1060:        <label for="txtNotes" class="form-label"> ملخص الشكوى</label>
+hhh\AllTemplate.html:1061:        <textarea class="form-control" id="txtNotes" name="txtNotes" rows="4" 
+placeholder=" ملخص الشكوى"></textarea>
+hhh\AllTemplate.html:1071:            <input type="text" id="" placeholder=" " readonly>
+hhh\AllTemplate.html:1072:            <label>موضع الخلاف </label>
+hhh\AllTemplate.html:1083:            <select id="typePieceSelect1" class="form-select">
+hhh\AllTemplate.html:1091:                <input type="text" id="" placeholder=" " readonly>
+hhh\AllTemplate.html:1092:                <label> الادعاءات (من وجهة نضر الطرف الاول) </label>
+hhh\AllTemplate.html:1100:                <input type="text" id="" placeholder=" " readonly>
+hhh\AllTemplate.html:1101:                <label>  رد المدعي عليه </label>
+hhh\AllTemplate.html:1114:<div id="">
+hhh\AllTemplate.html:1139:                            <select id="typePieceSelect1" class="form-select">
+hhh\AllTemplate.html:1151:                        <input type="text" class="form-control" name="" />
+hhh\AllTemplate.html:1167:                            <select id="typePieceSelect1" class="form-select">
+hhh\AllTemplate.html:1180:                        <input type="text" class="form-control" name="" />
+hhh\AllTemplate.html:1197:                            <select id="typePieceSelect1" class="form-select">
+hhh\AllTemplate.html:1208:                        <input type="text" class="form-control" name="" />
+hhh\AllTemplate.html:1221:                        <input type="date" class="form-control" name="datt" />
+hhh\AllTemplate.html:1224:                        <input type="text" class="form-control" name="" />
+hhh\AllTemplate.html:1241:                            <select id="typePieceSelect1" class="form-select">
+hhh\AllTemplate.html:1254:                        <input type="text" class="form-control" name="" />
+hhh\AllTemplate.html:1299:<div id="buildingTableSection" style=" margin-top:20px;">
+hhh\AllTemplate.html:1311:                <td><input type="text" class="form-control" placeholder="  المالكون 
+السابقون" /></td>
+hhh\AllTemplate.html:1312:                <td><input type="text" class="form-control" placeholder=" حصولهم على" 
+/></td>
+hhh\AllTemplate.html:1313:                <td><input type="text" class="form-control" placeholder=" الوثائق التي 
+يستند عليها" /></td>
+hhh\AllTemplate.html:1317:    <button type="button" class="btn btn-outline-primary add-row-btn mb-3" 
+id="addBuildingRow">
+hhh\AllTemplate.html:1334:            <button type="submit" id="saveRequestBtn" class="btn btn-success px-5">
+hhh\AllTemplate.html:1357:                    <label>نوع الطلب</label>
+hhh\AllTemplate.html:1364:                    <label>رقم التقديم</label>
+hhh\AllTemplate.html:1370:                    <input type="text" placeholder=" ">
+hhh\AllTemplate.html:1371:                    <label>الرقم المزيد لموضوع الكلي/الشامل</label>
+hhh\AllTemplate.html:1377:                    <input type="text" placeholder=" ">
+hhh\AllTemplate.html:1378:                    <label>رقم التكليف</label>
+hhh\AllTemplate.html:1388:                    <label>وكلاء أوقاف في القرى</label>
+hhh\AllTemplate.html:1394:                    <input type="text" class="form-control" id="eastBoundaryType" 
+readonly style="cursor:pointer; background:#fff;" data-bs-toggle="dropdown" placeholder=" ">
+hhh\AllTemplate.html:1395:                    <label>عدول التروية</label>
+hhh\AllTemplate.html:1428:                                <select name="Governorate" class="form-select 
+form-select-sm">
+hhh\AllTemplate.html:1444:                                <select name="Governorate" class="form-select 
+form-select-sm">
+hhh\AllTemplate.html:1460:                                <input  type="number" class="form-control 
+form-control-sm" placeholder="ملاحضة افتراضية" >
+hhh\AllTemplate.html:1463:                                <input  type="number" class="form-control 
+form-control-sm" placeholder="المساحة">
+hhh\AllTemplate.html:1510:                            <select name="Governorate" class="form-select form-select-sm">
+hhh\AllTemplate.html:1523:                            <select name="Governorate" class="form-select form-select-sm">
+hhh\AllTemplate.html:1536:                            <select id="GovernorateSelect" class="form-select 
+form-select-sm">
+hhh\AllTemplate.html:1549:                            <select id="GovernorateSelect" class="form-select 
+form-select-sm">
+hhh\AllTemplate.html:1565:                    <div class="modal fade" id="GovernorateModal" tabindex="-1">
+hhh\AllTemplate.html:1567:                            <div class="modal-content" id="GovernorateContent">
+hhh\AllTemplate.html:1653:                                           placeholder="" />
+hhh\AllTemplate.html:1689:                                 placeholder="" />
+hhh\AllTemplate.html:1708:            <input type="text" placeholder=" ">
+hhh\AllTemplate.html:1709:            <label> رقم القضية </label>
+hhh\AllTemplate.html:1714:            <input type="text" placeholder=" ">
+hhh\AllTemplate.html:1715:            <label>  طبيعة القضية</label>
+hhh\AllTemplate.html:1720:            <input type="text" placeholder=" ">
+hhh\AllTemplate.html:1721:            <label>  نوع القضية</label>
+hhh\AllTemplate.html:1730:            <input type="text" placeholder=" ">
+hhh\AllTemplate.html:1731:            <label> المساحة المدونة في الوثيقة</label>
+hhh\AllTemplate.html:1736:              <input type="text" placeholder=" ">
+hhh\AllTemplate.html:1737:              <label> ذكر اختلاف ان وجد</label>
+hhh\AllTemplate.html:1744:            <input type="text" class="form-control" id="eastBoundaryType" readonly 
+style="cursor:pointer; background:#fff;" data-bs-toggle="dropdown" placeholder=" ">
+hhh\AllTemplate.html:1745:            <label> الرهق</label>
+hhh\AllTemplate.html:1755:              <input type="text" class="form-control" id="eastBoundaryType" readonly 
+style="cursor:pointer; background:#fff;" data-bs-toggle="dropdown" placeholder=" ">
+hhh\AllTemplate.html:1756:              <label> تحليل ادعاء الطرف</label>
+hhh\AllTemplate.html:1768:              <input type="text" placeholder=" ">
+hhh\AllTemplate.html:1769:              <label> تصنيف الدعوى</label>
+hhh\AllTemplate.html:1794:              <label>نوع الدعوى</label>
+hhh\AllTemplate.html:1810:              <label>طلب الدعوى</label>
+hhh\AllTemplate.html:1824:              <label>اساس الادعاء بالحكم </label>
+hhh\AllTemplate.html:1892:        <form id="tanjezForm" method="post" enctype="multipart/form-data">
+hhh\AllTemplate.html:1895:                <span class="status-label">لم يتم الحفظ</span>
+hhh\AllTemplate.html:1897:        <input type="hidden" name="UserID" value="@Context.Session.GetInt32("UserID")" />
+hhh\AllTemplate.html:1902:                    <label asp-for="OfferName" class="form-label required">اسم العرض 
+<span class="text-danger">*</span></label>
+hhh\AllTemplate.html:1910:                <label class="form-label">تاريخ نهاية العرض</label>
+hhh\AllTemplate.html:1913:                <select id="endDateOption" class="form-select">
+hhh\AllTemplate.html:1919:                <input id="endDateInput" name="EndDate" type="date" class="form-control 
+mt-2" style="display:none;" />
+hhh\AllTemplate.html:1949:                <label asp-for="WorkWagesTemplateId" class="form-label"></label>
+hhh\AllTemplate.html:1950:                <select asp-for="WorkWagesTemplateId" id="transportTemplateSelect1" 
+class="form-select">
+hhh\AllTemplate.html:1960:            <div id="wagesTableContainer">
+hhh\AllTemplate.html:1984:                <label asp-for="TransportationScheduleTemplateId" class="form-label">قالب 
+التنقلات والمبيت</label>
+hhh\AllTemplate.html:1985:                <select asp-for="TransportationScheduleTemplateId" 
+id="transportTemplateSelect" class="form-select">
+hhh\AllTemplate.html:1992:                <div id="transportTableContainer">
+hhh\AllTemplate.html:2006:                    const statuse1 = 
+row.querySelector("input[name='StatuseType1']")?.value;
+hhh\AllTemplate.html:2007:                    const statuse2 = 
+row.querySelector("input[name='StatuseType2']")?.value;
+hhh\AllTemplate.html:2032:                fetch(`@Url.Action("GetTemplateDetails", "WorkOffer")?id=${templateId}`)
+hhh\AllTemplate.html:2053:                <label asp-for="AdditionalCostTypeId" class="form-label">قالب التكاليف 
+الاضافية </label>
+hhh\AllTemplate.html:2054:                <select asp-for="AdditionalCostTypeId" id="additionalCostSelect" 
+class="form-select">
+hhh\AllTemplate.html:2059:                <div id="additionalCostContainer">
+hhh\AllTemplate.html:2082:                    <label class="form-label">نسبة الدفع مقدماً (%)</label>
+hhh\AllTemplate.html:2088:                    <label class="form-label">نسبة الدفع عند النزول (%)</label>
+hhh\AllTemplate.html:2094:                    <label class="form-label">نسبة الدفع بعد تسليم العمل (%)</label>
+hhh\AllTemplate.html:2102:                    <label class="form-label">غرامات التأخر عن تسليم العمل عن المدة 
+المتفق عليها (%)</label>
+hhh\AllTemplate.html:2103:                <input asp-for="LatePenaltyPercentage" type="number" class="form-control" 
+placeholder="يخصم من المبلغ المتفق نسبة" />
+hhh\AllTemplate.html:2107:                    <label class="form-label">في حال الاعتذار عن العمل بعد استلام الدفعة 
+المقدمة (%)</label>
+hhh\AllTemplate.html:2108:                    <input asp-for="ResignationAfterAdvancePercentage" type="number" 
+class="form-control" placeholder="يخصم من المبلغ المتفق نسبة"
+hhh\AllTemplate.html:2113:                    <label class="form-label">في حال اعتذار العميل عن العمل بعد استلام 
+الدفعة المقدمة (%)</label>
+hhh\AllTemplate.html:2114:                <input asp-for="CamelResignationPenaltyPercentage" type="number" 
+class="form-control" placeholder="يخصم من المبلغ المتفق نسبة" />
+hhh\AllTemplate.html:2120:            <div class="accordion mt-4" id="notesAccordion">
+hhh\AllTemplate.html:2122:                    <h2 class="accordion-header" id="headingNotes">
+hhh\AllTemplate.html:2128:                    <div id="collapseNotes" class="accordion-collapse collapse" 
+aria-labelledby="headingNotes"
+hhh\AllTemplate.html:2131:                            <textarea class="form-control" rows="3" placeholder="ملاحظات"
+hhh\AllTemplate.html:2132:                                      name="Notes"></textarea>
+hhh\almjal.html:5:  <meta name="viewport" content="width=device-width, initial-scale=1" />
+hhh\almjal.html:39:  <div id="step-container">
+hhh\almjal.html:42:    <div id="breadcrumb" class="breadcrumb-path"></div>
+hhh\almjal.html:45:    <div id="step-main">
+hhh\almjal.html:47:      <div class="row g-3" id="main-icons"></div>
+hhh\almjal.html:51:    <div id="step-specialty" style="display:none;">
+hhh\almjal.html:53:      <div class="row g-3" id="specialty-icons"></div>
+hhh\almjal.html:54:      <button class="btn btn-secondary mt-3" id="back-to-main">العودة للمجالات</button>
+hhh\almjal.html:58:    <div id="step-branch" style="display:none;">
+hhh\almjal.html:60:      <div class="row g-3" id="branch-icons"></div>
+hhh\almjal.html:61:      <button class="btn btn-secondary mt-3" id="back-to-specialty">العودة للتخصصات</button>
+hhh\almjal.html:65:    <div id="step-detail" style="display:none;">
+hhh\almjal.html:67:      <div class="row g-3" id="detail-icons"></div>
+hhh\almjal.html:71:        <button class="btn btn-secondary" id="back-to-branch">العودة للفروع</button>
+hhh\almjal.html:72:        <button class="btn btn-primary" id="btn-requests">الطلبات</button>
+hhh\almjal.html:73:        <button class="btn btn-success" id="btn-work-form">استمارة العمل</button>
+hhh\almjal.html:74:        <button class="btn btn-warning" id="btn-work-contract">عقد العمل</button>
+hhh\almjal.html:75:        <button class="btn btn-warning" id="btn-work-wofer">العروض</button>
+hhh\almjal1.html:6:  <meta name="viewport" content="width=device-width, initial-scale=1" />
+hhh\almjal1.html:19:      <label>المجال الرئيسي</label>
+hhh\almjal1.html:20:      <select id="mainField" class="form-select">
+hhh\almjal1.html:25:      <label>التخصص</label>
+hhh\almjal1.html:26:      <select id="specialty" class="form-select">
+hhh\almjal1.html:31:      <label>الفرع الرئيسي</label>
+hhh\almjal1.html:32:      <select id="branch" class="form-select">
+hhh\almjal1.html:37:      <label>التفصيل</label>
+hhh\almjal1.html:38:      <select id="detail" class="form-select">
+hhh\almjal1.html:278:    function fillSelect(select, list, placeholder) {
+hhh\almjal1.html:279:      select.empty().append(`<option value="">${placeholder}</option>`);
+hhh\ContractTemplate.html:6:    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+hhh\ContractTemplate.html:146:            .form-group label {
+hhh\ContractTemplate.html:275:            <div class="contract-actions" id="contractActions">
+hhh\ContractTemplate.html:276:                <button class="btn btn-success" id="approveBtn">الموافقة على 
+العقد</button>
+hhh\ContractTemplate.html:280:                <button class="btn-reject" id="rejectBtn" 
+onclick="showRejectForm()">رفض العقد</button>
+hhh\ContractTemplate.html:284:            <div id="rejectFormContainer" style="display:none;">
+hhh\ContractTemplate.html:285:                <form id="rejectForm" class="reject-form" style="display:block; 
+margin-top:0;">
+hhh\ContractTemplate.html:287:                        <label>اختر سبب الرفض:</label>
+hhh\ContractTemplate.html:288:                        <select id="reason" name="reason">
+hhh\ContractTemplate.html:320:    <div id="paymentModal" style="display:none; position:fixed; top:0; right:0; 
+left:0; bottom:0; background:rgba(0,0,0,0.3); z-index:9999; align-items:center; justify-content:center;">
+hhh\ContractTemplate.html:321:        <div id="paymentModalContent" style="background:#fff; border-radius:10px; 
+padding:32px 24px; max-width:350px; margin:auto; box-shadow:0 2px 12px #0002; text-align:center;">
+hhh\ContractTemplate.html:323:            <div id="paymentMethodSection">
+hhh\ContractTemplate.html:331:            <form id="paymentForm" style="display:none; margin-top:10px; 
+text-align:right;" onsubmit="submitPayment(event)">
+hhh\ContractTemplate.html:332:                <h3 id="paymentFormTitle" style="text-align:center; 
+margin-bottom:18px;"></h3>
+hhh\ContractTemplate.html:335:                <div id="creditCardFields" style="display:none;">
+hhh\ContractTemplate.html:337:                        <label for="cardNumber">رقم البطاقة:</label>
+hhh\ContractTemplate.html:338:                        <input type="text" id="cardNumber" name="cardNumber" 
+style="width:100%; padding:8px; border:1px solid #ddd; border-radius:4px;" placeholder="أدخل رقم البطاقة" required>
+hhh\ContractTemplate.html:342:                            <label for="expiryDate">تاريخ الانتهاء:</label>
+hhh\ContractTemplate.html:343:                            <input type="text" id="expiryDate" name="expiryDate" 
+style="width:100%; padding:8px; border:1px solid #ddd; border-radius:4px;" placeholder="MM/YY" required>
+hhh\ContractTemplate.html:346:                            <label for="cvv">الرمز:</label>
+hhh\ContractTemplate.html:347:                            <input type="text" id="cvv" name="cvv" style="width:100%; 
+padding:8px; border:1px solid #ddd; border-radius:4px;" placeholder="CVV" required>
+hhh\ContractTemplate.html:353:                <div id="sentToClientField" style="display:none;">
+hhh\ContractTemplate.html:355:                        <label id="paymentLabel" for="paymentInput"></label>
+hhh\ContractTemplate.html:356:                        <input type="text" id="paymentInput" name="paymentInput" 
+style="width:100%; padding:8px; border:1px solid #ddd; border-radius:4px;" required>
+hhh\ContractTemplate.html:427:                document.getElementById('paymentLabel').innerText = 'رقم المرجع:';
+hhh\ContractTemplate.html:428:                document.getElementById('paymentInput').placeholder = 'أدخل رقم 
+المرجع أو المعرف';
+hhh\ContractTemplate1.html:6:    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+hhh\ContractTemplate1.html:146:            .form-group label {
+hhh\ContractTemplate1.html:220:            <div class="contract-actions" id="contractActions">
+hhh\ContractTemplate1.html:221:                <button class="btn btn-success" id="approveBtn">الموافقة على 
+العقد</button>
+hhh\ContractTemplate1.html:225:                <button class="btn-reject" id="rejectBtn" 
+onclick="showRejectForm()">رفض العقد</button>
+hhh\ContractTemplate1.html:229:            <div id="rejectFormContainer" style="display:none;">
+hhh\ContractTemplate1.html:230:                <form id="rejectForm" class="reject-form" style="display:block; 
+margin-top:0;">
+hhh\ContractTemplate1.html:232:                        <label>اختر سبب الرفض:</label>
+hhh\ContractTemplate1.html:233:                        <select id="reason" name="reason">
+hhh\ContractTemplate1.html:265:    <div id="paymentModal" style="display:none; position:fixed; top:0; right:0; 
+left:0; bottom:0; background:rgba(0,0,0,0.3); z-index:9999; align-items:center; justify-content:center;">
+hhh\ContractTemplate1.html:266:        <div id="paymentModalContent" style="background:#fff; border-radius:10px; 
+padding:32px 24px; max-width:350px; margin:auto; box-shadow:0 2px 12px #0002; text-align:center;">
+hhh\ContractTemplate1.html:268:            <div id="paymentMethodSection">
+hhh\ContractTemplate1.html:276:            <form id="paymentForm" style="display:none; margin-top:10px; 
+text-align:right;" onsubmit="submitPayment(event)">
+hhh\ContractTemplate1.html:277:                <h3 id="paymentFormTitle" style="text-align:center; 
+margin-bottom:18px;"></h3>
+hhh\ContractTemplate1.html:280:                <div id="creditCardFields" style="display:none;">
+hhh\ContractTemplate1.html:282:                        <label for="cardNumber">رقم البطاقة:</label>
+hhh\ContractTemplate1.html:283:                        <input type="text" id="cardNumber" name="cardNumber" 
+style="width:100%; padding:8px; border:1px solid #ddd; border-radius:4px;" placeholder="أدخل رقم البطاقة" required>
+hhh\ContractTemplate1.html:287:                            <label for="expiryDate">تاريخ الانتهاء:</label>
+hhh\ContractTemplate1.html:288:                            <input type="text" id="expiryDate" name="expiryDate" 
+style="width:100%; padding:8px; border:1px solid #ddd; border-radius:4px;" placeholder="MM/YY" required>
+hhh\ContractTemplate1.html:291:                            <label for="cvv">الرمز:</label>
+hhh\ContractTemplate1.html:292:                            <input type="text" id="cvv" name="cvv" 
+style="width:100%; padding:8px; border:1px solid #ddd; border-radius:4px;" placeholder="CVV" required>
+hhh\ContractTemplate1.html:298:                <div id="sentToClientField" style="display:none;">
+hhh\ContractTemplate1.html:300:                        <label id="paymentLabel" for="paymentInput"></label>
+hhh\ContractTemplate1.html:301:                        <input type="text" id="paymentInput" name="paymentInput" 
+style="width:100%; padding:8px; border:1px solid #ddd; border-radius:4px;" required>
+hhh\ContractTemplate1.html:372:                document.getElementById('paymentLabel').innerText = 'رقم المرجع:';
+hhh\ContractTemplate1.html:373:                document.getElementById('paymentInput').placeholder = 'أدخل رقم 
+المرجع أو المعرف';
+hhh\create.html:5:<meta name="viewport" content="width=device-width, initial-scale=1.0">
+hhh\create.html:82:    <form id="tanjezForm" method="post" enctype="multipart/form-data">
+hhh\create.html:96:                    <div class="input-label-en">منشا الطلب </div>
+hhh\create.html:97:                    <input asp-for="tanjezOrder.CreateOrderName" type="text" 
+class="form-control" placeholder="منشا الطلب">
+hhh\create.html:103:                    <select asp-for="tanjezOrder.DescripPerson" id="descripSelect" 
+class="form-select">
+hhh\create.html:127:                        <select id="typePieceSelect" class="form-select">
+hhh\create.html:181:                    <input type="text" class="form-control" id="documentArea" 
+asp-for="tanjezOrder.Zone" placeholder="المديرية" />
+hhh\create.html:186:                    <input type="text" class="form-control" id="documentArea" 
+asp-for="tanjezOrder.Directorate" placeholder="العزلة" />
+hhh\create.html:191:                    <input type="text" class="form-control" id="documentArea" 
+name="tanjezOrder.Village" placeholder="القرية او الحي" />
+hhh\create.html:202:                    <input name="tanjezOrder.CoordinatesY" type="number" class="form-control" 
+placeholder="احداثيات Y">
+hhh\create.html:206:                    <input name="tanjezOrder.CoordinatesX" type="number" class="form-control" 
+placeholder="احداثيات X">
+hhh\create.html:210:                    <label class="input-label"> اسم الموضع <span 
+class="required-star">*</span></label>
+hhh\create.html:211:                    <input type="text" class="form-control" id="requestTitle" 
+name="tanjezOrder.PlaceName" placeholder="أدخل عنوان الطلب" required />
+hhh\create.html:214:                    <label class="input-label">نوع الطلب  </label>
+hhh\create.html:215:                    <select class="form-select" id="placeTypeId" name="tanjezOrder.PlaceType">
+hhh\create.html:235:                <label class="input-label">نوع الوثيقة</label>
+hhh\create.html:246:                <div class="input-label-en">الحيازة</div>
+hhh\create.html:258:                    <label class="input-label fw-bold">المساحة كما في الوثيقة</label>
+hhh\create.html:263:                        <input type="number" class="form-control" id="documentArea" 
+name="tanjezOrder.Space" placeholder="0.00" step="0.01" />
+hhh\create.html:269:                        <select class="form-select" id="unitSelect" asp-for="tanjezOrder.Unit">
+hhh\create.html:277:                    <div class="mb-2 d-none" id="unitCountDiv">
+hhh\create.html:278:                        <input type="number" class="form-control" id="unitCount" 
+name="tanjezOrder.AcountPiese" placeholder="ادخل العدد" />
+hhh\create.html:279:                        <small class="text-muted" id="unitLabel"></small>
+hhh\create.html:288:                    var unitLabel = document.getElementById("unitLabel");
+hhh\create.html:292:                        unitLabel.textContent = "عدد " + selectedUnit;
+hhh\create.html:295:                        unitLabel.textContent = "";
+hhh\create.html:302:                    <input type="hidden" id="hiddenAreaDifferent" 
+name="tanjezOrder.AreaDifferent" value="0" />
+hhh\create.html:303:                    <input type="checkbox" class="form-check-input" id="AreaDifferentCheckbox" 
+/>
+hhh\create.html:304:                    <label class="form-check-label" for="AreaDifferentCheckbox">المساحة مختلفة 
+عن الواقع</label>
+hhh\create.html:321:                <div class="input-label-en">صورة الوثيقة</div>
+hhh\create.html:323:                    <button type="button" class="btn btn-outline-secondary" 
+id="attachBtn">إرفاق</button>
+hhh\create.html:324:                    <input type="file" class="form-control" id="docImageInput" 
+name="tanjezOrder.DocumentImage" style="display:none;" accept="image/*">
+hhh\create.html:335:<div id="earthBordersSection">
+hhh\create.html:337:    <div class="input-label-en mb-1">حدود الأرض المذكورة في الوثيقة</div>
+hhh\create.html:357:                            <select class="form-select border-type" 
+name="earthBorders[0].BorderType" style="display:none;">
+hhh\create.html:370:                        <input type="text" class="form-control" 
+name="earthBorders[0].BorderDescription" />
+hhh\create.html:373:                        <input type="hidden" name="earthBorders[3].IdenticalOrDifferent" 
+value="0" />
+hhh\create.html:375:                            name="earthBorders[3].IdenticalOrDifferent" value="1" />
+hhh\create.html:379:                        <input type="text" class="form-control" 
+name="earthBorders[0].Difference" />
+hhh\create.html:392:                            <select class="form-select border-type" 
+name="earthBorders[1].BorderType" style="display:none;">
+hhh\create.html:405:                        <input type="text" class="form-control" 
+name="earthBorders[1].BorderDescription" />
+hhh\create.html:408:                        <input type="hidden" name="earthBorders[3].IdenticalOrDifferent" 
+value="0" />
+hhh\create.html:410:                            name="earthBorders[3].IdenticalOrDifferent" value="1" />
+hhh\create.html:415:                        <input type="text" class="form-control" 
+name="earthBorders[1].Difference" />
+hhh\create.html:428:                            <select class="form-select border-type" 
+name="earthBorders[2].BorderType" style="display:none;">
+hhh\create.html:440:                        <input type="text" class="form-control" 
+name="earthBorders[2].BorderDescription" />
+hhh\create.html:443:                        <input type="hidden" name="earthBorders[3].IdenticalOrDifferent" 
+value="0" />
+hhh\create.html:445:                            name="earthBorders[3].IdenticalOrDifferent" value="1" />
+hhh\create.html:450:        <input type="text" class="form-control" name="earthBorders[0].Difference" readonly />
+hhh\create.html:463:                            <select class="form-select border-type" 
+name="earthBorders[3].BorderType" style="display:none;">
+hhh\create.html:474:                        <input type="text" class="form-control" 
+name="earthBorders[3].BorderDescription" />
+hhh\create.html:477:                        <input type="hidden" name="earthBorders[3].IdenticalOrDifferent" 
+value="0" />
+hhh\create.html:479:                            name="earthBorders[3].IdenticalOrDifferent" value="1" />
+hhh\create.html:484:                        <input type="text" class="form-control" 
+name="earthBorders[3].Difference" />
+hhh\create.html:495:    <button type="button" class="btn btn-outline-primary add-row-btn mb-3" id="addBorderRow">
+hhh\create.html:505:<div id="buildingTableSection" style="display:none; margin-top:20px;">
+hhh\create.html:517:                <td><input type="number" class="form-control" placeholder="أدخل عدد الطوابق" 
+/></td>
+hhh\create.html:518:                <td><input type="text" class="form-control" placeholder="أدخل الوصف" /></td>
+hhh\create.html:519:                <td><input type="text" class="form-control" placeholder="أدخل المكان" /></td>
+hhh\create.html:523:    <button type="button" class="btn btn-outline-primary add-row-btn mb-3" id="addBuildingRow">
+hhh\create.html:533:    <div id="rahaqTableSection" style="display:none; margin-top:20px;">
+hhh\create.html:550:                        <input type="text" class="form-control" disabled placeholder="أدخل الحد 
+من الشمال" />
+hhh\create.html:559:                        <input type="text" class="form-control" disabled placeholder="أدخل الحد 
+من الجنوب" />
+hhh\create.html:568:                        <input type="text" class="form-control" disabled placeholder="أدخل الحد 
+من الغرب" />
+hhh\create.html:577:                        <input type="text" class="form-control" disabled placeholder="أدخل الحد 
+من الجنوب" />
+hhh\create.html:584:                    <div class="input-label-en">نوع الحيازة </div>
+hhh\create.html:639:            <td><input type="number" class="form-control" placeholder="أدخل عدد الطوابق" /></td>
+hhh\create.html:640:            <td><input type="text" class="form-control" placeholder="أدخل الوصف" /></td>
+hhh\create.html:641:            <td><input type="text" class="form-control" placeholder="أدخل المكان" /></td>
+hhh\create.html:657:<div id="earthBordersSection">
+hhh\create.html:660:<div class="form-title mb-2" id="earthBordersTitleUnique123">حدود الأرض</div>
+hhh\create.html:662:    <div class="input-label-en mb-1">
+hhh\create.html:666:    <table class="table table-bordered mb-2 text-center" id="earthBordersTitleUnique123">
+hhh\create.html:674:                    <input type="checkbox" class="form-check-input border-primary border-2 
+larger-checkbox" id="chkUp" />
+hhh\create.html:677:                    <input type="text" class="form-control" id="txtUp" name="fromup" disabled 
+placeholder="أدخل الحد من الأعلى" />
+hhh\create.html:683:                    <input type="checkbox" class="form-check-input border-primary border-2 
+larger-checkbox" id="chkDown" />
+hhh\create.html:686:                    <input type="text" class="form-control" id="txtDown" name="fromdown" 
+disabled placeholder="أدخل الحد من الأسفل" />
+hhh\create.html:758:                <div class="input-label-en">نوع طريق الوصول</div>
+hhh\create.html:772:                <div class="input-label-en">(فترة تسليم العمل)</div>
+hhh\create.html:775:                <select class="form-select" id="periodType" name="tanjezOrder.PeriodType">
+hhh\create.html:782:                <div class="input-label-en">أقصى مدة</div>
+hhh\create.html:783:                <input type="text" class="form-control" id="maximumDuration" 
+name="tanjezOrder.MaximumDuration" placeholder="اختر التاريخ" />
+hhh\create.html:792:                <div class="input-label-en">انتقال المهندس الى القطة المراد مسحها</div>
+hhh\create.html:793:                <select class="form-select" id="Transportation" 
+name="tanjezOrder.Transportation">
+hhh\create.html:806:                <div class="input-label-en">المبيت</div>
+hhh\create.html:807:                <select class="form-select" id="OverNight" name="tanjezOrder.OverNight">
+hhh\create.html:818:                <div class="input-label-en">النثريات (تغذية، قات، ..الخ)</div>
+hhh\create.html:819:                <select class="form-select" id="Allowance" name="tanjezOrder.Allowance">
+hhh\create.html:841:        <label for="txtNotes" class="form-label">الملاحظات</label>
+hhh\create.html:842:        <textarea class="form-control" id="txtNotes" name="txtNotes" rows="4" placeholder="أدخل 
+ملاحظاتك"></textarea>
+hhh\create.html:848:    <div class="col-12" id="attachmentsWrapper">
+hhh\create.html:849:        <label class="form-label">المرفقات</label>
+hhh\create.html:853:            <input type="file" class="form-control me-2" name="fileAttach[]" />
+hhh\create.html:859:        <button type="button" class="btn btn-outline-primary" id="addAttachmentBtn">
+hhh\create.html:875:            <input type="file" class="form-control me-2" name="fileAttach[]" />
+hhh\create.html:913:            <input type="text" placeholder=" ">
+hhh\create.html:914:            <label>رقم القضية</label>
+hhh\create.html:919:            <input type="text" placeholder=" ">
+hhh\create.html:920:            <label>رقم الشكوى</label>
+hhh\create.html:925:            <input type="date" placeholder=" ">
+hhh\create.html:926:            <label>تاريخ التقديم</label>
+hhh\create.html:935:            <label>الجهة الشاكية</label>
+hhh\create.html:946:            <input type="text" id="nameCount1" placeholder=" " readonly>
+hhh\create.html:947:            <label>العدد</label>
+hhh\create.html:953:            <input type="text" id="txtName1" placeholder=" ">
+hhh\create.html:954:            <label>الأسماء</label>
+hhh\create.html:955:            <button type="button" class="btn btn-outline-primary" id="addNameBtn1">
+hhh\create.html:963:            <textarea id="nameList1" placeholder=" " readonly></textarea>
+hhh\create.html:964:            <label>الأسماء المضافة</label>
+hhh\create.html:975:            <input type="text" id="nameCount2" placeholder=" " readonly>
+hhh\create.html:976:            <label>العدد</label>
+hhh\create.html:982:            <input type="text" id="txtName2" placeholder=" ">
+hhh\create.html:983:            <label>الأسماء</label>
+hhh\create.html:984:            <button type="button" class="btn btn-outline-primary" id="addNameBtn2">
+hhh\create.html:992:            <textarea id="nameList2" placeholder=" " readonly></textarea>
+hhh\create.html:993:            <label>الأسماء المضافة</label>
+hhh\create.html:999:        <label for="txtNotes" class="form-label">موضوع الشوى</label>
+hhh\create.html:1000:        <textarea class="form-control" id="txtNotes" name="txtNotes" rows="4" placeholder=" 
+موضوع الشكوى"></textarea>
+hhh\create.html:1005:        <label for="txtNotes" class="form-label"> ملخص الشكوى</label>
+hhh\create.html:1006:        <textarea class="form-control" id="txtNotes" name="txtNotes" rows="4" placeholder=" 
+ملخص الشكوى"></textarea>
+hhh\create.html:1016:            <input type="text" id="" placeholder=" " readonly>
+hhh\create.html:1017:            <label>موضع الخلاف </label>
+hhh\create.html:1028:            <select id="typePieceSelect1" class="form-select">
+hhh\create.html:1036:                <input type="text" id="" placeholder=" " readonly>
+hhh\create.html:1037:                <label> الادعاءات (من وجهة نضر الطرف الاول) </label>
+hhh\create.html:1045:                <input type="text" id="" placeholder=" " readonly>
+hhh\create.html:1046:                <label>  رد المدعي عليه </label>
+hhh\create.html:1059:<div id="">
+hhh\create.html:1084:                            <select id="typePieceSelect1" class="form-select">
+hhh\create.html:1096:                        <input type="text" class="form-control" name="" />
+hhh\create.html:1112:                            <select id="typePieceSelect1" class="form-select">
+hhh\create.html:1125:                        <input type="text" class="form-control" name="" />
+hhh\create.html:1142:                            <select id="typePieceSelect1" class="form-select">
+hhh\create.html:1153:                        <input type="text" class="form-control" name="" />
+hhh\create.html:1166:                        <input type="date" class="form-control" name="datt" />
+hhh\create.html:1169:                        <input type="text" class="form-control" name="" />
+hhh\create.html:1186:                            <select id="typePieceSelect1" class="form-select">
+hhh\create.html:1199:                        <input type="text" class="form-control" name="" />
+hhh\create.html:1235:.custom-input-container label {
+hhh\create.html:1247:.custom-input-container input:focus + label,
+hhh\create.html:1248:.custom-input-container input:not(:placeholder-shown) + label,
+hhh\create.html:1249:.custom-input-container textarea:focus + label,
+hhh\create.html:1250:.custom-input-container textarea:not(:placeholder-shown) + label,
+hhh\create.html:1251:.custom-input-container select:focus + label,
+hhh\create.html:1252:.custom-input-container select:not([value=""]) + label {
+hhh\create.html:1306:<div id="buildingTableSection" style=" margin-top:20px;">
+hhh\create.html:1318:                <td><input type="text" class="form-control" placeholder="  المالكون السابقون" 
+/></td>
+hhh\create.html:1319:                <td><input type="text" class="form-control" placeholder=" حصولهم على" /></td>
+hhh\create.html:1320:                <td><input type="text" class="form-control" placeholder=" الوثائق التي يستند 
+عليها" /></td>
+hhh\create.html:1324:    <button type="button" class="btn btn-outline-primary add-row-btn mb-3" id="addBuildingRow">
+hhh\create.html:1341:            <input type="text" placeholder=" ">
+hhh\create.html:1342:            <label>اسم المحكمة</label>
+hhh\create.html:1347:            <input type="text" placeholder=" ">
+hhh\create.html:1348:            <label>رقم القضية</label>
+hhh\create.html:1353:            <input type="date" placeholder=" ">
+hhh\create.html:1354:            <label>تاريخ التقديم</label>
+hhh\create.html:1371:            <input type="text" placeholder=" ">
+hhh\create.html:1372:            <label>الاسم الكامل</label>
+hhh\create.html:1379:            <label>الجنسية</label>
+hhh\create.html:1385:            <input type="text" placeholder=" ">
+hhh\create.html:1386:            <label>رقم الهوية</label>
+hhh\create.html:1393:            <input type="date" placeholder=" ">
+hhh\create.html:1394:            <label>تاريخ الوفاة</label>
+hhh\create.html:1400:            <input type="text" placeholder=" ">
+hhh\create.html:1401:            <label>مكان الوفاة</label>
+hhh\create.html:1408:            <label>الديانة</label>
+hhh\create.html:1415:            <input type="text" placeholder=" ">
+hhh\create.html:1416:            <label>الحالة الاجتماعية</label>
+hhh\create.html:1431:            <input type="text" placeholder=" ">
+hhh\create.html:1432:            <label>الاسم الكامل</label>
+hhh\create.html:1438:            <input type="text" placeholder=" ">
+hhh\create.html:1439:            <label>صلة القرابة</label>
+hhh\create.html:1445:            <input type="text" placeholder=" ">
+hhh\create.html:1446:            <label>الجنس</label>
+hhh\create.html:1453:            <input type="date" placeholder=" ">
+hhh\create.html:1454:            <label>تاريخ الميلاد</label>
+hhh\create.html:1460:            <input type="text" placeholder=" ">
+hhh\create.html:1461:            <label>رقم الهوية</label>
+hhh\create.html:1467:            <input type="text" placeholder=" ">
+hhh\create.html:1468:            <label>الحالة الاجتماعية</label>
+hhh\create.html:1475:            <input type="text" placeholder=" ">
+hhh\create.html:1476:            <label>عدد الأسهم الشرعية</label>
+hhh\create.html:1496:            <input type="text" placeholder=" ">
+hhh\create.html:1497:            <label>الاسم</label>
+hhh\create.html:1503:            <input type="text" placeholder=" ">
+hhh\create.html:1504:            <label>الصفة (أحد الورثة / وكيل شرعي)</label>
+hhh\create.html:1510:            <input type="text" placeholder=" ">
+hhh\create.html:1511:            <label>رقم الهوية</label>
+hhh\create.html:1519:            <input class="form-check-input" type="checkbox" id="acknowledgement">
+hhh\create.html:1520:            <label class="form-check-label" for="acknowledgement">
+hhh\create.html:1522:            </label>
+hhh\create.html:1537:            <input type="text" placeholder=" ">
+hhh\create.html:1538:            <label>الاسم الكامل</label>
+hhh\create.html:1544:            <input type="text" placeholder=" ">
+hhh\create.html:1545:            <label>رقم الهوية</label>
+hhh\create.html:1551:            <input type="text" placeholder=" ">
+hhh\create.html:1552:            <label>التوقيع</label>
+hhh\create.html:1557:            <button type="submit" id="saveRequestBtn" class="btn btn-success px-5">
+hhh\createdevided.html:5:<meta name="viewport" content="width=device-width, initial-scale=1.0">
+hhh\createdevided.html:81:    <p id="breadcrumb"></p>
+hhh\createdevided.html:90:    <form id="tanjezForm" method="post" enctype="multipart/form-data">
+hhh\createdevided.html:104:                    <div class="input-label-en">منشا الطلب </div>
+hhh\createdevided.html:105:                    <input asp-for="tanjezOrder.CreateOrderName" type="text" 
+class="form-control" placeholder="منشا الطلب">
+hhh\createdevided.html:111:                    <select asp-for="tanjezOrder.DescripPerson" id="descripSelect" 
+class="form-select">
+hhh\createdevided.html:135:                        <select id="typePieceSelect" class="form-select">
+hhh\createdevided.html:189:                    <input type="text" class="form-control" id="documentArea" 
+asp-for="tanjezOrder.Zone" placeholder="المديرية" />
+hhh\createdevided.html:194:                    <input type="text" class="form-control" id="documentArea" 
+asp-for="tanjezOrder.Directorate" placeholder="العزلة" />
+hhh\createdevided.html:199:                    <input type="text" class="form-control" id="documentArea" 
+name="tanjezOrder.Village" placeholder="القرية او الحي" />
+hhh\createdevided.html:210:                    <input name="tanjezOrder.CoordinatesY" type="number" 
+class="form-control" placeholder="احداثيات Y">
+hhh\createdevided.html:214:                    <input name="tanjezOrder.CoordinatesX" type="number" 
+class="form-control" placeholder="احداثيات X">
+hhh\createdevided.html:218:                    <label class="input-label"> اسم الموضع <span 
+class="required-star">*</span></label>
+hhh\createdevided.html:219:                    <input type="text" class="form-control" id="requestTitle" 
+name="tanjezOrder.PlaceName" placeholder="أدخل عنوان الطلب" required />
+hhh\createdevided.html:222:                    <label class="input-label">نوع الطلب  </label>
+hhh\createdevided.html:223:                    <select class="form-select" id="placeTypeId" 
+name="tanjezOrder.PlaceType">
+hhh\createdevided.html:243:                <label class="input-label">نوع الوثيقة</label>
+hhh\createdevided.html:254:                <div class="input-label-en">الحيازة</div>
+hhh\createdevided.html:266:                    <label class="input-label fw-bold">المساحة كما في الوثيقة</label>
+hhh\createdevided.html:271:                        <input type="number" class="form-control" id="documentArea" 
+name="tanjezOrder.Space" placeholder="0.00" step="0.01" />
+hhh\createdevided.html:277:                        <select class="form-select" id="unitSelect" 
+asp-for="tanjezOrder.Unit">
+hhh\createdevided.html:285:                    <div class="mb-2 d-none" id="unitCountDiv">
+hhh\createdevided.html:286:                        <input type="number" class="form-control" id="unitCount" 
+name="tanjezOrder.AcountPiese" placeholder="ادخل العدد" />
+hhh\createdevided.html:287:                        <small class="text-muted" id="unitLabel"></small>
+hhh\createdevided.html:296:                    var unitLabel = document.getElementById("unitLabel");
+hhh\createdevided.html:300:                        unitLabel.textContent = "عدد " + selectedUnit;
+hhh\createdevided.html:303:                        unitLabel.textContent = "";
+hhh\createdevided.html:310:                    <input type="hidden" id="hiddenAreaDifferent" 
+name="tanjezOrder.AreaDifferent" value="0" />
+hhh\createdevided.html:311:                    <input type="checkbox" class="form-check-input" 
+id="AreaDifferentCheckbox" />
+hhh\createdevided.html:312:                    <label class="form-check-label" for="AreaDifferentCheckbox">المساحة 
+مختلفة عن الواقع</label>
+hhh\createdevided.html:329:                <div class="input-label-en">صورة الوثيقة</div>
+hhh\createdevided.html:331:                    <button type="button" class="btn btn-outline-secondary" 
+id="attachBtn">إرفاق</button>
+hhh\createdevided.html:332:                    <input type="file" class="form-control" id="docImageInput" 
+name="tanjezOrder.DocumentImage" style="display:none;" accept="image/*">
+hhh\createdevided.html:343:<div id="earthBordersSection">
+hhh\createdevided.html:345:    <div class="input-label-en mb-1">حدود الأرض المذكورة في الوثيقة</div>
+hhh\createdevided.html:365:                            <select class="form-select border-type" 
+name="earthBorders[0].BorderType" style="display:none;">
+hhh\createdevided.html:378:                        <input type="text" class="form-control" 
+name="earthBorders[0].BorderDescription" />
+hhh\createdevided.html:381:                        <input type="hidden" name="earthBorders[3].IdenticalOrDifferent" 
+value="0" />
+hhh\createdevided.html:383:                            name="earthBorders[3].IdenticalOrDifferent" value="1" />
+hhh\createdevided.html:387:                        <input type="text" class="form-control" 
+name="earthBorders[0].Difference" />
+hhh\createdevided.html:400:                            <select class="form-select border-type" 
+name="earthBorders[1].BorderType" style="display:none;">
+hhh\createdevided.html:413:                        <input type="text" class="form-control" 
+name="earthBorders[1].BorderDescription" />
+hhh\createdevided.html:416:                        <input type="hidden" name="earthBorders[3].IdenticalOrDifferent" 
+value="0" />
+hhh\createdevided.html:418:                            name="earthBorders[3].IdenticalOrDifferent" value="1" />
+hhh\createdevided.html:423:                        <input type="text" class="form-control" 
+name="earthBorders[1].Difference" />
+hhh\createdevided.html:436:                            <select class="form-select border-type" 
+name="earthBorders[2].BorderType" style="display:none;">
+hhh\createdevided.html:448:                        <input type="text" class="form-control" 
+name="earthBorders[2].BorderDescription" />
+hhh\createdevided.html:451:                        <input type="hidden" name="earthBorders[3].IdenticalOrDifferent" 
+value="0" />
+hhh\createdevided.html:453:                            name="earthBorders[3].IdenticalOrDifferent" value="1" />
+hhh\createdevided.html:458:        <input type="text" class="form-control" name="earthBorders[0].Difference" 
+readonly />
+hhh\createdevided.html:471:                            <select class="form-select border-type" 
+name="earthBorders[3].BorderType" style="display:none;">
+hhh\createdevided.html:482:                        <input type="text" class="form-control" 
+name="earthBorders[3].BorderDescription" />
+hhh\createdevided.html:485:                        <input type="hidden" name="earthBorders[3].IdenticalOrDifferent" 
+value="0" />
+hhh\createdevided.html:487:                            name="earthBorders[3].IdenticalOrDifferent" value="1" />
+hhh\createdevided.html:492:                        <input type="text" class="form-control" 
+name="earthBorders[3].Difference" />
+hhh\createdevided.html:503:    <button type="button" class="btn btn-outline-primary add-row-btn mb-3" 
+id="addBorderRow">
+hhh\createdevided.html:513:<div id="buildingTableSection" style="display:none; margin-top:20px;">
+hhh\createdevided.html:525:                <td><input type="number" class="form-control" placeholder="أدخل عدد 
+الطوابق" /></td>
+hhh\createdevided.html:526:                <td><input type="text" class="form-control" placeholder="أدخل الوصف" 
+/></td>
+hhh\createdevided.html:527:                <td><input type="text" class="form-control" placeholder="أدخل المكان" 
+/></td>
+hhh\createdevided.html:531:    <button type="button" class="btn btn-outline-primary add-row-btn mb-3" 
+id="addBuildingRow">
+hhh\createdevided.html:541:    <div id="rahaqTableSection" style="display:none; margin-top:20px;">
+hhh\createdevided.html:558:                        <input type="text" class="form-control" disabled 
+placeholder="أدخل الحد من الشمال" />
+hhh\createdevided.html:567:                        <input type="text" class="form-control" disabled 
+placeholder="أدخل الحد من الجنوب" />
+hhh\createdevided.html:576:                        <input type="text" class="form-control" disabled 
+placeholder="أدخل الحد من الغرب" />
+hhh\createdevided.html:585:                        <input type="text" class="form-control" disabled 
+placeholder="أدخل الحد من الجنوب" />
+hhh\createdevided.html:592:                    <div class="input-label-en">نوع الحيازة </div>
+hhh\createdevided.html:647:            <td><input type="number" class="form-control" placeholder="أدخل عدد الطوابق" 
+/></td>
+hhh\createdevided.html:648:            <td><input type="text" class="form-control" placeholder="أدخل الوصف" /></td>
+hhh\createdevided.html:649:            <td><input type="text" class="form-control" placeholder="أدخل المكان" /></td>
+hhh\createdevided.html:665:<div id="earthBordersSection">
+hhh\createdevided.html:668:<div class="form-title mb-2" id="earthBordersTitleUnique123">حدود الأرض</div>
+hhh\createdevided.html:670:    <div class="input-label-en mb-1">
+hhh\createdevided.html:674:    <table class="table table-bordered mb-2 text-center" id="earthBordersTitleUnique123">
+hhh\createdevided.html:682:                    <input type="checkbox" class="form-check-input border-primary 
+border-2 larger-checkbox" id="chkUp" />
+hhh\createdevided.html:685:                    <input type="text" class="form-control" id="txtUp" name="fromup" 
+disabled placeholder="أدخل الحد من الأعلى" />
+hhh\createdevided.html:691:                    <input type="checkbox" class="form-check-input border-primary 
+border-2 larger-checkbox" id="chkDown" />
+hhh\createdevided.html:694:                    <input type="text" class="form-control" id="txtDown" name="fromdown" 
+disabled placeholder="أدخل الحد من الأسفل" />
+hhh\createdevided.html:766:                <div class="input-label-en">نوع طريق الوصول</div>
+hhh\createdevided.html:780:                <div class="input-label-en">(فترة تسليم العمل)</div>
+hhh\createdevided.html:783:                <select class="form-select" id="periodType" 
+name="tanjezOrder.PeriodType">
+hhh\createdevided.html:790:                <div class="input-label-en">أقصى مدة</div>
+hhh\createdevided.html:791:                <input type="text" class="form-control" id="maximumDuration" 
+name="tanjezOrder.MaximumDuration" placeholder="اختر التاريخ" />
+hhh\createdevided.html:800:                <div class="input-label-en">انتقال المهندس الى القطة المراد مسحها</div>
+hhh\createdevided.html:801:                <select class="form-select" id="Transportation" 
+name="tanjezOrder.Transportation">
+hhh\createdevided.html:814:                <div class="input-label-en">المبيت</div>
+hhh\createdevided.html:815:                <select class="form-select" id="OverNight" name="tanjezOrder.OverNight">
+hhh\createdevided.html:826:                <div class="input-label-en">النثريات (تغذية، قات، ..الخ)</div>
+hhh\createdevided.html:827:                <select class="form-select" id="Allowance" name="tanjezOrder.Allowance">
+hhh\createdevided.html:849:        <label for="txtNotes" class="form-label">الملاحظات</label>
+hhh\createdevided.html:850:        <textarea class="form-control" id="txtNotes" name="txtNotes" rows="4" 
+placeholder="أدخل ملاحظاتك"></textarea>
+hhh\createdevided.html:856:    <div class="col-12" id="attachmentsWrapper">
+hhh\createdevided.html:857:        <label class="form-label">المرفقات</label>
+hhh\createdevided.html:861:            <input type="file" class="form-control me-2" name="fileAttach[]" />
+hhh\createdevided.html:867:        <button type="button" class="btn btn-outline-primary" id="addAttachmentBtn">
+hhh\createdevided.html:883:            <input type="file" class="form-control me-2" name="fileAttach[]" />
+hhh\createdevided.html:937:.custom-input-container label {
+hhh\createdevided.html:949:.custom-input-container input:focus + label,
+hhh\createdevided.html:950:.custom-input-container input:not(:placeholder-shown) + label,
+hhh\createdevided.html:951:.custom-input-container textarea:focus + label,
+hhh\createdevided.html:952:.custom-input-container textarea:not(:placeholder-shown) + label,
+hhh\createdevided.html:953:.custom-input-container select:focus + label,
+hhh\createdevided.html:954:.custom-input-container select:not([value=""]) + label {
+hhh\createdevided.html:1020:            <input type="text" placeholder=" ">
+hhh\createdevided.html:1021:            <label>اسم المحكمة</label>
+hhh\createdevided.html:1026:            <input type="text" placeholder=" ">
+hhh\createdevided.html:1027:            <label>رقم القضية</label>
+hhh\createdevided.html:1032:            <input type="date" placeholder=" ">
+hhh\createdevided.html:1033:            <label>تاريخ التقديم</label>
+hhh\createdevided.html:1050:            <input type="text" placeholder=" ">
+hhh\createdevided.html:1051:            <label>الاسم الكامل</label>
+hhh\createdevided.html:1058:            <label>الجنسية</label>
+hhh\createdevided.html:1064:            <input type="text" placeholder=" ">
+hhh\createdevided.html:1065:            <label>رقم الهوية</label>
+hhh\createdevided.html:1072:            <input type="date" placeholder=" ">
+hhh\createdevided.html:1073:            <label>تاريخ الوفاة</label>
+hhh\createdevided.html:1079:            <input type="text" placeholder=" ">
+hhh\createdevided.html:1080:            <label>مكان الوفاة</label>
+hhh\createdevided.html:1087:            <label>الديانة</label>
+hhh\createdevided.html:1094:            <input type="text" placeholder=" ">
+hhh\createdevided.html:1095:            <label>الحالة الاجتماعية</label>
+hhh\createdevided.html:1110:            <input type="text" placeholder=" ">
+hhh\createdevided.html:1111:            <label>الاسم الكامل</label>
+hhh\createdevided.html:1117:            <input type="text" placeholder=" ">
+hhh\createdevided.html:1118:            <label>صلة القرابة</label>
+hhh\createdevided.html:1124:            <input type="text" placeholder=" ">
+hhh\createdevided.html:1125:            <label>الجنس</label>
+hhh\createdevided.html:1132:            <input type="date" placeholder=" ">
+hhh\createdevided.html:1133:            <label>تاريخ الميلاد</label>
+hhh\createdevided.html:1139:            <input type="text" placeholder=" ">
+hhh\createdevided.html:1140:            <label>رقم الهوية</label>
+hhh\createdevided.html:1146:            <input type="text" placeholder=" ">
+hhh\createdevided.html:1147:            <label>الحالة الاجتماعية</label>
+hhh\createdevided.html:1154:            <input type="text" placeholder=" ">
+hhh\createdevided.html:1155:            <label>عدد الأسهم الشرعية</label>
+hhh\createdevided.html:1175:            <input type="text" placeholder=" ">
+hhh\createdevided.html:1176:            <label>الاسم</label>
+hhh\createdevided.html:1182:            <input type="text" placeholder=" ">
+hhh\createdevided.html:1183:            <label>الصفة (أحد الورثة / وكيل شرعي)</label>
+hhh\createdevided.html:1189:            <input type="text" placeholder=" ">
+hhh\createdevided.html:1190:            <label>رقم الهوية</label>
+hhh\createdevided.html:1198:            <input class="form-check-input" type="checkbox" id="acknowledgement">
+hhh\createdevided.html:1199:            <label class="form-check-label" for="acknowledgement">
+hhh\createdevided.html:1201:            </label>
+hhh\createdevided.html:1216:            <input type="text" placeholder=" ">
+hhh\createdevided.html:1217:            <label>الاسم الكامل</label>
+hhh\createdevided.html:1223:            <input type="text" placeholder=" ">
+hhh\createdevided.html:1224:            <label>رقم الهوية</label>
+hhh\createdevided.html:1230:            <input type="text" placeholder=" ">
+hhh\createdevided.html:1231:            <label>التوقيع</label>
+hhh\createdevided.html:1236:            <button type="submit" id="saveRequestBtn" class="btn btn-success px-5">
+hhh\createform.html:5:<meta name="viewport" content="width=device-width, initial-scale=1.0">
+hhh\createform.html:42:      .custom-input-container label {
+hhh\createform.html:53:      .custom-input-container input:focus + label,
+hhh\createform.html:54:      .custom-input-container input:not(:placeholder-shown) + label,
+hhh\createform.html:55:      .custom-input-container select:focus + label,
+hhh\createform.html:56:      .custom-input-container select:not([value=""]) + label {
+hhh\createform.html:113:    <p id="breadcrumb"></p>
+hhh\createform.html:122:    <form id="tanjezForm" method="post" enctype="multipart/form-data">
+hhh\createform.html:138:                    <input asp-for="tanjezOrder.CreateOrderName" type="text" placeholder=" 
+">
+hhh\createform.html:139:                    <label>منشأ الطلب</label>
+hhh\createform.html:146:                    <select asp-for="tanjezOrder.DescripPerson" id="descripSelect" 
+class="form-select">
+hhh\createform.html:153:                    <label>صفة منشأ الطلب</label>
+hhh\createform.html:160:                    <select id="typePieceSelect" class="form-select">
+hhh\createform.html:167:                    <label>طبيعة منطقة الخلاف</label>
+hhh\createform.html:177:                    <label>الدولة</label>
+hhh\createform.html:207:                    <label>المحافظة</label>
+hhh\createform.html:214:                    <input type="text" asp-for="tanjezOrder.Zone" placeholder=" ">
+hhh\createform.html:215:                    <label>المديرية</label>
+hhh\createform.html:222:                    <input type="text" asp-for="tanjezOrder.Directorate" placeholder=" ">
+hhh\createform.html:223:                    <label>العزلة</label>
+hhh\createform.html:230:                    <input type="text" name="tanjezOrder.Village" placeholder=" ">
+hhh\createform.html:231:                    <label>الحي / القرية</label>
+hhh\createform.html:238:                    <input name="tanjezOrder.CoordinatesY" type="number" placeholder=" ">
+hhh\createform.html:239:                    <label>إحداثيات Y</label>
+hhh\createform.html:246:                    <input name="tanjezOrder.CoordinatesX" type="number" placeholder=" ">
+hhh\createform.html:247:                    <label>إحداثيات X</label>
+hhh\createform.html:254:                    <input type="text" id="requestTitle" name="tanjezOrder.PlaceName" 
+placeholder=" " required>
+hhh\createform.html:255:                    <label>اسم الموضع</label>
+hhh\createform.html:262:                    <select id="placeTypeId" name="tanjezOrder.PlaceType" 
+class="form-select">
+hhh\createform.html:267:                    <label>نوع الطلب</label>
+hhh\createform.html:285:                <label class="input-label">نوع الوثيقة</label>
+hhh\createform.html:296:                <div class="input-label-en">الحيازة</div>
+hhh\createform.html:308:                    <label class="input-label fw-bold">المساحة كما في الوثيقة</label>
+hhh\createform.html:313:                        <input type="number" class="form-control" id="documentArea" 
+name="tanjezOrder.Space" placeholder="0.00" step="0.01" />
+hhh\createform.html:319:                        <select class="form-select" id="unitSelect" 
+asp-for="tanjezOrder.Unit">
+hhh\createform.html:327:                    <div class="mb-2 d-none" id="unitCountDiv">
+hhh\createform.html:328:                        <input type="number" class="form-control" id="unitCount" 
+name="tanjezOrder.AcountPiese" placeholder="ادخل العدد" />
+hhh\createform.html:329:                        <small class="text-muted" id="unitLabel"></small>
+hhh\createform.html:338:                    var unitLabel = document.getElementById("unitLabel");
+hhh\createform.html:342:                        unitLabel.textContent = "عدد " + selectedUnit;
+hhh\createform.html:345:                        unitLabel.textContent = "";
+hhh\createform.html:352:                    <input type="hidden" id="hiddenAreaDifferent" 
+name="tanjezOrder.AreaDifferent" value="0" />
+hhh\createform.html:353:                    <input type="checkbox" class="form-check-input" 
+id="AreaDifferentCheckbox" />
+hhh\createform.html:354:                    <label class="form-check-label" for="AreaDifferentCheckbox">المساحة 
+مختلفة عن الواقع</label>
+hhh\createform.html:371:                <div class="input-label-en">صورة الوثيقة</div>
+hhh\createform.html:373:                    <button type="button" class="btn btn-outline-secondary" 
+id="attachBtn">إرفاق</button>
+hhh\createform.html:374:                    <input type="file" class="form-control" id="docImageInput" 
+name="tanjezOrder.DocumentImage" style="display:none;" accept="image/*">
+hhh\createform.html:385:<div id="earthBordersSection">
+hhh\createform.html:387:    <div class="input-label-en mb-1">حدود الأرض المذكورة في الوثيقة</div>
+hhh\createform.html:407:                            <select class="form-select border-type" 
+name="earthBorders[0].BorderType" style="display:none;">
+hhh\createform.html:420:                        <input type="text" class="form-control" 
+name="earthBorders[0].BorderDescription" />
+hhh\createform.html:423:                        <input type="hidden" name="earthBorders[3].IdenticalOrDifferent" 
+value="0" />
+hhh\createform.html:425:                            name="earthBorders[3].IdenticalOrDifferent" value="1" />
+hhh\createform.html:429:                        <input type="text" class="form-control" 
+name="earthBorders[0].Difference" />
+hhh\createform.html:442:                            <select class="form-select border-type" 
+name="earthBorders[1].BorderType" style="display:none;">
+hhh\createform.html:455:                        <input type="text" class="form-control" 
+name="earthBorders[1].BorderDescription" />
+hhh\createform.html:458:                        <input type="hidden" name="earthBorders[3].IdenticalOrDifferent" 
+value="0" />
+hhh\createform.html:460:                            name="earthBorders[3].IdenticalOrDifferent" value="1" />
+hhh\createform.html:465:                        <input type="text" class="form-control" 
+name="earthBorders[1].Difference" />
+hhh\createform.html:478:                            <select class="form-select border-type" 
+name="earthBorders[2].BorderType" style="display:none;">
+hhh\createform.html:490:                        <input type="text" class="form-control" 
+name="earthBorders[2].BorderDescription" />
+hhh\createform.html:493:                        <input type="hidden" name="earthBorders[3].IdenticalOrDifferent" 
+value="0" />
+hhh\createform.html:495:                            name="earthBorders[3].IdenticalOrDifferent" value="1" />
+hhh\createform.html:500:        <input type="text" class="form-control" name="earthBorders[0].Difference" readonly 
+/>
+hhh\createform.html:513:                            <select class="form-select border-type" 
+name="earthBorders[3].BorderType" style="display:none;">
+hhh\createform.html:524:                        <input type="text" class="form-control" 
+name="earthBorders[3].BorderDescription" />
+hhh\createform.html:527:                        <input type="hidden" name="earthBorders[3].IdenticalOrDifferent" 
+value="0" />
+hhh\createform.html:529:                            name="earthBorders[3].IdenticalOrDifferent" value="1" />
+hhh\createform.html:534:                        <input type="text" class="form-control" 
+name="earthBorders[3].Difference" />
+hhh\createform.html:545:    <button type="button" class="btn btn-outline-primary add-row-btn mb-3" 
+id="addBorderRow">
+hhh\createform.html:555:<div id="buildingTableSection" style="display:none; margin-top:20px;">
+hhh\createform.html:567:                <td><input type="number" class="form-control" placeholder="أدخل عدد 
+الطوابق" /></td>
+hhh\createform.html:568:                <td><input type="text" class="form-control" placeholder="أدخل الوصف" /></td>
+hhh\createform.html:569:                <td><input type="text" class="form-control" placeholder="أدخل المكان" 
+/></td>
+hhh\createform.html:573:    <button type="button" class="btn btn-outline-primary add-row-btn mb-3" 
+id="addBuildingRow">
+hhh\createform.html:583:    <div id="rahaqTableSection" style="display:none; margin-top:20px;">
+hhh\createform.html:600:                        <input type="text" class="form-control" disabled placeholder="أدخل 
+الحد من الشمال" />
+hhh\createform.html:609:                        <input type="text" class="form-control" disabled placeholder="أدخل 
+الحد من الجنوب" />
+hhh\createform.html:618:                        <input type="text" class="form-control" disabled placeholder="أدخل 
+الحد من الغرب" />
+hhh\createform.html:627:                        <input type="text" class="form-control" disabled placeholder="أدخل 
+الحد من الجنوب" />
+hhh\createform.html:634:                    <div class="input-label-en">نوع الحيازة </div>
+hhh\createform.html:689:            <td><input type="number" class="form-control" placeholder="أدخل عدد الطوابق" 
+/></td>
+hhh\createform.html:690:            <td><input type="text" class="form-control" placeholder="أدخل الوصف" /></td>
+hhh\createform.html:691:            <td><input type="text" class="form-control" placeholder="أدخل المكان" /></td>
+hhh\createform.html:707:<div id="earthBordersSection">
+hhh\createform.html:710:<div class="form-title mb-2" id="earthBordersTitleUnique123">حدود الأرض</div>
+hhh\createform.html:712:    <div class="input-label-en mb-1">
+hhh\createform.html:716:    <table class="table table-bordered mb-2 text-center" id="earthBordersTitleUnique123">
+hhh\createform.html:724:                    <input type="checkbox" class="form-check-input border-primary border-2 
+larger-checkbox" id="chkUp" />
+hhh\createform.html:727:                    <input type="text" class="form-control" id="txtUp" name="fromup" 
+disabled placeholder="أدخل الحد من الأعلى" />
+hhh\createform.html:733:                    <input type="checkbox" class="form-check-input border-primary border-2 
+larger-checkbox" id="chkDown" />
+hhh\createform.html:736:                    <input type="text" class="form-control" id="txtDown" name="fromdown" 
+disabled placeholder="أدخل الحد من الأسفل" />
+hhh\createform.html:808:                <div class="input-label-en">نوع طريق الوصول</div>
+hhh\createform.html:822:                <div class="input-label-en">(فترة تسليم العمل)</div>
+hhh\createform.html:825:                <select class="form-select" id="periodType" name="tanjezOrder.PeriodType">
+hhh\createform.html:832:                <div class="input-label-en">أقصى مدة</div>
+hhh\createform.html:833:                <input type="text" class="form-control" id="maximumDuration" 
+name="tanjezOrder.MaximumDuration" placeholder="اختر التاريخ" />
+hhh\createform.html:842:                <div class="input-label-en">انتقال المهندس الى القطة المراد مسحها</div>
+hhh\createform.html:843:                <select class="form-select" id="Transportation" 
+name="tanjezOrder.Transportation">
+hhh\createform.html:856:                <div class="input-label-en">المبيت</div>
+hhh\createform.html:857:                <select class="form-select" id="OverNight" name="tanjezOrder.OverNight">
+hhh\createform.html:868:                <div class="input-label-en">النثريات (تغذية، قات، ..الخ)</div>
+hhh\createform.html:869:                <select class="form-select" id="Allowance" name="tanjezOrder.Allowance">
+hhh\createform.html:891:        <label for="txtNotes" class="form-label">الملاحظات</label>
+hhh\createform.html:892:        <textarea class="form-control" id="txtNotes" name="txtNotes" rows="4" 
+placeholder="أدخل ملاحظاتك"></textarea>
+hhh\createform.html:898:    <div class="col-12" id="attachmentsWrapper">
+hhh\createform.html:899:        <label class="form-label">المرفقات</label>
+hhh\createform.html:903:            <input type="file" class="form-control me-2" name="fileAttach[]" />
+hhh\createform.html:909:        <button type="button" class="btn btn-outline-primary" id="addAttachmentBtn">
+hhh\createform.html:925:            <input type="file" class="form-control me-2" name="fileAttach[]" />
+hhh\createform.html:963:            <input type="text" placeholder=" ">
+hhh\createform.html:964:            <label>رقم القضية</label>
+hhh\createform.html:969:            <input type="text" placeholder=" ">
+hhh\createform.html:970:            <label>رقم الشكوى</label>
+hhh\createform.html:975:            <input type="date" placeholder=" ">
+hhh\createform.html:976:            <label>تاريخ التقديم</label>
+hhh\createform.html:985:            <label>الجهة الشاكية</label>
+hhh\createform.html:996:            <input type="text" id="nameCount1" placeholder=" " readonly>
+hhh\createform.html:997:            <label>العدد</label>
+hhh\createform.html:1003:            <input type="text" id="txtName1" placeholder=" ">
+hhh\createform.html:1004:            <label>الأسماء</label>
+hhh\createform.html:1005:            <button type="button" class="btn btn-outline-primary" id="addNameBtn1">
+hhh\createform.html:1013:            <textarea id="nameList1" placeholder=" " readonly></textarea>
+hhh\createform.html:1014:            <label>الأسماء المضافة</label>
+hhh\createform.html:1025:            <input type="text" id="nameCount2" placeholder=" " readonly>
+hhh\createform.html:1026:            <label>العدد</label>
+hhh\createform.html:1032:            <input type="text" id="txtName2" placeholder=" ">
+hhh\createform.html:1033:            <label>الأسماء</label>
+hhh\createform.html:1034:            <button type="button" class="btn btn-outline-primary" id="addNameBtn2">
+hhh\createform.html:1042:            <textarea id="nameList2" placeholder=" " readonly></textarea>
+hhh\createform.html:1043:            <label>الأسماء المضافة</label>
+hhh\createform.html:1049:        <label for="txtNotes" class="form-label">موضوع الشوى</label>
+hhh\createform.html:1050:        <textarea class="form-control" id="txtNotes" name="txtNotes" rows="4" 
+placeholder=" موضوع الشكوى"></textarea>
+hhh\createform.html:1055:        <label for="txtNotes" class="form-label"> ملخص الشكوى</label>
+hhh\createform.html:1056:        <textarea class="form-control" id="txtNotes" name="txtNotes" rows="4" 
+placeholder=" ملخص الشكوى"></textarea>
+hhh\createform.html:1066:            <input type="text" id="" placeholder=" " readonly>
+hhh\createform.html:1067:            <label>موضع الخلاف </label>
+hhh\createform.html:1078:            <select id="typePieceSelect1" class="form-select">
+hhh\createform.html:1086:                <input type="text" id="" placeholder=" " readonly>
+hhh\createform.html:1087:                <label> الادعاءات (من وجهة نضر الطرف الاول) </label>
+hhh\createform.html:1095:                <input type="text" id="" placeholder=" " readonly>
+hhh\createform.html:1096:                <label>  رد المدعي عليه </label>
+hhh\createform.html:1109:<div id="">
+hhh\createform.html:1134:                            <select id="typePieceSelect1" class="form-select">
+hhh\createform.html:1146:                        <input type="text" class="form-control" name="" />
+hhh\createform.html:1162:                            <select id="typePieceSelect1" class="form-select">
+hhh\createform.html:1175:                        <input type="text" class="form-control" name="" />
+hhh\createform.html:1192:                            <select id="typePieceSelect1" class="form-select">
+hhh\createform.html:1203:                        <input type="text" class="form-control" name="" />
+hhh\createform.html:1216:                        <input type="date" class="form-control" name="datt" />
+hhh\createform.html:1219:                        <input type="text" class="form-control" name="" />
+hhh\createform.html:1236:                            <select id="typePieceSelect1" class="form-select">
+hhh\createform.html:1249:                        <input type="text" class="form-control" name="" />
+hhh\createform.html:1294:<div id="buildingTableSection" style=" margin-top:20px;">
+hhh\createform.html:1306:                <td><input type="text" class="form-control" placeholder="  المالكون 
+السابقون" /></td>
+hhh\createform.html:1307:                <td><input type="text" class="form-control" placeholder=" حصولهم على" 
+/></td>
+hhh\createform.html:1308:                <td><input type="text" class="form-control" placeholder=" الوثائق التي 
+يستند عليها" /></td>
+hhh\createform.html:1312:    <button type="button" class="btn btn-outline-primary add-row-btn mb-3" 
+id="addBuildingRow">
+hhh\createform.html:1329:            <button type="submit" id="saveRequestBtn" class="btn btn-success px-5">
+hhh\createorder.html:5:<meta name="viewport" content="width=device-width, initial-scale=1.0">
+hhh\createorder.html:80:    <h6 id="breadcrumb" class="text-center mb-4">إنشاء السيرة الذاتية</h6>
+hhh\createorder.html:81:    <p id="breadcrumb"></p>
+hhh\createorder.html:89:    <form id="tanjezForm" method="post" enctype="multipart/form-data">
+hhh\createorder.html:103:                    <div class="input-label-en">منشا الطلب </div>
+hhh\createorder.html:104:                    <input asp-for="tanjezOrder.CreateOrderName" type="text" 
+class="form-control" placeholder="منشا الطلب">
+hhh\createorder.html:110:                    <select asp-for="tanjezOrder.DescripPerson" id="descripSelect" 
+class="form-select">
+hhh\createorder.html:134:                        <select id="typePieceSelect" class="form-select">
+hhh\createorder.html:188:                    <input type="text" class="form-control" id="documentArea" 
+asp-for="tanjezOrder.Zone" placeholder="المديرية" />
+hhh\createorder.html:193:                    <input type="text" class="form-control" id="documentArea" 
+asp-for="tanjezOrder.Directorate" placeholder="العزلة" />
+hhh\createorder.html:198:                    <input type="text" class="form-control" id="documentArea" 
+name="tanjezOrder.Village" placeholder="القرية او الحي" />
+hhh\createorder.html:209:                    <input name="tanjezOrder.CoordinatesY" type="number" 
+class="form-control" placeholder="احداثيات Y">
+hhh\createorder.html:213:                    <input name="tanjezOrder.CoordinatesX" type="number" 
+class="form-control" placeholder="احداثيات X">
+hhh\createorder.html:217:                    <label class="input-label"> اسم الموضع <span 
+class="required-star">*</span></label>
+hhh\createorder.html:218:                    <input type="text" class="form-control" id="requestTitle" 
+name="tanjezOrder.PlaceName" placeholder="أدخل عنوان الطلب" required />
+hhh\createorder.html:221:                    <label class="input-label">نوع الطلب  </label>
+hhh\createorder.html:222:                    <select class="form-select" id="placeTypeId" 
+name="tanjezOrder.PlaceType">
+hhh\createorder.html:242:                <label class="input-label">نوع الوثيقة</label>
+hhh\createorder.html:253:                <div class="input-label-en">الحيازة</div>
+hhh\createorder.html:265:                    <label class="input-label fw-bold">المساحة كما في الوثيقة</label>
+hhh\createorder.html:270:                        <input type="number" class="form-control" id="documentArea" 
+name="tanjezOrder.Space" placeholder="0.00" step="0.01" />
+hhh\createorder.html:276:                        <select class="form-select" id="unitSelect" 
+asp-for="tanjezOrder.Unit">
+hhh\createorder.html:284:                    <div class="mb-2 d-none" id="unitCountDiv">
+hhh\createorder.html:285:                        <input type="number" class="form-control" id="unitCount" 
+name="tanjezOrder.AcountPiese" placeholder="ادخل العدد" />
+hhh\createorder.html:286:                        <small class="text-muted" id="unitLabel"></small>
+hhh\createorder.html:295:                    var unitLabel = document.getElementById("unitLabel");
+hhh\createorder.html:299:                        unitLabel.textContent = "عدد " + selectedUnit;
+hhh\createorder.html:302:                        unitLabel.textContent = "";
+hhh\createorder.html:309:                    <input type="hidden" id="hiddenAreaDifferent" 
+name="tanjezOrder.AreaDifferent" value="0" />
+hhh\createorder.html:310:                    <input type="checkbox" class="form-check-input" 
+id="AreaDifferentCheckbox" />
+hhh\createorder.html:311:                    <label class="form-check-label" for="AreaDifferentCheckbox">المساحة 
+مختلفة عن الواقع</label>
+hhh\createorder.html:328:                <div class="input-label-en">صورة الوثيقة</div>
+hhh\createorder.html:330:                    <button type="button" class="btn btn-outline-secondary" 
+id="attachBtn">إرفاق</button>
+hhh\createorder.html:331:                    <input type="file" class="form-control" id="docImageInput" 
+name="tanjezOrder.DocumentImage" style="display:none;" accept="image/*">
+hhh\createorder.html:342:<div id="earthBordersSection">
+hhh\createorder.html:344:    <div class="input-label-en mb-1">حدود الأرض المذكورة في الوثيقة</div>
+hhh\createorder.html:364:                            <select class="form-select border-type" 
+name="earthBorders[0].BorderType" style="display:none;">
+hhh\createorder.html:377:                        <input type="text" class="form-control" 
+name="earthBorders[0].BorderDescription" />
+hhh\createorder.html:380:                        <input type="hidden" name="earthBorders[3].IdenticalOrDifferent" 
+value="0" />
+hhh\createorder.html:382:                            name="earthBorders[3].IdenticalOrDifferent" value="1" />
+hhh\createorder.html:386:                        <input type="text" class="form-control" 
+name="earthBorders[0].Difference" />
+hhh\createorder.html:399:                            <select class="form-select border-type" 
+name="earthBorders[1].BorderType" style="display:none;">
+hhh\createorder.html:412:                        <input type="text" class="form-control" 
+name="earthBorders[1].BorderDescription" />
+hhh\createorder.html:415:                        <input type="hidden" name="earthBorders[3].IdenticalOrDifferent" 
+value="0" />
+hhh\createorder.html:417:                            name="earthBorders[3].IdenticalOrDifferent" value="1" />
+hhh\createorder.html:422:                        <input type="text" class="form-control" 
+name="earthBorders[1].Difference" />
+hhh\createorder.html:435:                            <select class="form-select border-type" 
+name="earthBorders[2].BorderType" style="display:none;">
+hhh\createorder.html:447:                        <input type="text" class="form-control" 
+name="earthBorders[2].BorderDescription" />
+hhh\createorder.html:450:                        <input type="hidden" name="earthBorders[3].IdenticalOrDifferent" 
+value="0" />
+hhh\createorder.html:452:                            name="earthBorders[3].IdenticalOrDifferent" value="1" />
+hhh\createorder.html:457:        <input type="text" class="form-control" name="earthBorders[0].Difference" readonly 
+/>
+hhh\createorder.html:470:                            <select class="form-select border-type" 
+name="earthBorders[3].BorderType" style="display:none;">
+hhh\createorder.html:481:                        <input type="text" class="form-control" 
+name="earthBorders[3].BorderDescription" />
+hhh\createorder.html:484:                        <input type="hidden" name="earthBorders[3].IdenticalOrDifferent" 
+value="0" />
+hhh\createorder.html:486:                            name="earthBorders[3].IdenticalOrDifferent" value="1" />
+hhh\createorder.html:491:                        <input type="text" class="form-control" 
+name="earthBorders[3].Difference" />
+hhh\createorder.html:502:    <button type="button" class="btn btn-outline-primary add-row-btn mb-3" 
+id="addBorderRow">
+hhh\createorder.html:512:<div id="buildingTableSection" style="display:none; margin-top:20px;">
+hhh\createorder.html:524:                <td><input type="number" class="form-control" placeholder="أدخل عدد 
+الطوابق" /></td>
+hhh\createorder.html:525:                <td><input type="text" class="form-control" placeholder="أدخل الوصف" 
+/></td>
+hhh\createorder.html:526:                <td><input type="text" class="form-control" placeholder="أدخل المكان" 
+/></td>
+hhh\createorder.html:530:    <button type="button" class="btn btn-outline-primary add-row-btn mb-3" 
+id="addBuildingRow">
+hhh\createorder.html:540:    <div id="rahaqTableSection" style="display:none; margin-top:20px;">
+hhh\createorder.html:557:                        <input type="text" class="form-control" disabled placeholder="أدخل 
+الحد من الشمال" />
+hhh\createorder.html:566:                        <input type="text" class="form-control" disabled placeholder="أدخل 
+الحد من الجنوب" />
+hhh\createorder.html:575:                        <input type="text" class="form-control" disabled placeholder="أدخل 
+الحد من الغرب" />
+hhh\createorder.html:584:                        <input type="text" class="form-control" disabled placeholder="أدخل 
+الحد من الجنوب" />
+hhh\createorder.html:591:                    <div class="input-label-en">نوع الحيازة </div>
+hhh\createorder.html:646:            <td><input type="number" class="form-control" placeholder="أدخل عدد الطوابق" 
+/></td>
+hhh\createorder.html:647:            <td><input type="text" class="form-control" placeholder="أدخل الوصف" /></td>
+hhh\createorder.html:648:            <td><input type="text" class="form-control" placeholder="أدخل المكان" /></td>
+hhh\createorder.html:664:<div id="earthBordersSection">
+hhh\createorder.html:667:<div class="form-title mb-2" id="earthBordersTitleUnique123">حدود الأرض</div>
+hhh\createorder.html:669:    <div class="input-label-en mb-1">
+hhh\createorder.html:673:    <table class="table table-bordered mb-2 text-center" id="earthBordersTitleUnique123">
+hhh\createorder.html:681:                    <input type="checkbox" class="form-check-input border-primary border-2 
+larger-checkbox" id="chkUp" />
+hhh\createorder.html:684:                    <input type="text" class="form-control" id="txtUp" name="fromup" 
+disabled placeholder="أدخل الحد من الأعلى" />
+hhh\createorder.html:690:                    <input type="checkbox" class="form-check-input border-primary border-2 
+larger-checkbox" id="chkDown" />
+hhh\createorder.html:693:                    <input type="text" class="form-control" id="txtDown" name="fromdown" 
+disabled placeholder="أدخل الحد من الأسفل" />
+hhh\createorder.html:765:                <div class="input-label-en">نوع طريق الوصول</div>
+hhh\createorder.html:779:                <div class="input-label-en">(فترة تسليم العمل)</div>
+hhh\createorder.html:782:                <select class="form-select" id="periodType" name="tanjezOrder.PeriodType">
+hhh\createorder.html:789:                <div class="input-label-en">أقصى مدة</div>
+hhh\createorder.html:790:                <input type="text" class="form-control" id="maximumDuration" 
+name="tanjezOrder.MaximumDuration" placeholder="اختر التاريخ" />
+hhh\createorder.html:799:                <div class="input-label-en">انتقال المهندس الى القطة المراد مسحها</div>
+hhh\createorder.html:800:                <select class="form-select" id="Transportation" 
+name="tanjezOrder.Transportation">
+hhh\createorder.html:813:                <div class="input-label-en">المبيت</div>
+hhh\createorder.html:814:                <select class="form-select" id="OverNight" name="tanjezOrder.OverNight">
+hhh\createorder.html:825:                <div class="input-label-en">النثريات (تغذية، قات، ..الخ)</div>
+hhh\createorder.html:826:                <select class="form-select" id="Allowance" name="tanjezOrder.Allowance">
+hhh\createorder.html:848:        <label for="txtNotes" class="form-label">الملاحظات</label>
+hhh\createorder.html:849:        <textarea class="form-control" id="txtNotes" name="txtNotes" rows="4" 
+placeholder="أدخل ملاحظاتك"></textarea>
+hhh\createorder.html:855:    <div class="col-12" id="attachmentsWrapper">
+hhh\createorder.html:856:        <label class="form-label">المرفقات</label>
+hhh\createorder.html:860:            <input type="file" class="form-control me-2" name="fileAttach[]" />
+hhh\createorder.html:866:        <button type="button" class="btn btn-outline-primary" id="addAttachmentBtn">
+hhh\createorder.html:882:            <input type="file" class="form-control me-2" name="fileAttach[]" />
+hhh\createorder.html:913:            <button type="submit" id="saveRequestBtn" class="btn btn-success px-5">
+hhh\createspece.html:5:<meta name="viewport" content="width=device-width, initial-scale=1.0">
+hhh\createspece.html:81:    <p id="breadcrumb"></p>
+hhh\createspece.html:90:    <form id="tanjezForm" method="post" enctype="multipart/form-data">
+hhh\createspece.html:153:            <td><input type="number" class="form-control" placeholder="أدخل عدد الطوابق" 
+/></td>
+hhh\createspece.html:154:            <td><input type="text" class="form-control" placeholder="أدخل الوصف" /></td>
+hhh\createspece.html:155:            <td><input type="text" class="form-control" placeholder="أدخل المكان" /></td>
+hhh\createspece.html:240:        <label for="txtNotes" class="form-label">الملاحظات</label>
+hhh\createspece.html:241:        <textarea class="form-control" id="txtNotes" name="txtNotes" rows="4" 
+placeholder="أدخل ملاحظاتك"></textarea>
+hhh\createspece.html:247:    <div class="col-12" id="attachmentsWrapper">
+hhh\createspece.html:248:        <label class="form-label">المرفقات</label>
+hhh\createspece.html:252:            <input type="file" class="form-control me-2" name="fileAttach[]" />
+hhh\createspece.html:258:        <button type="button" class="btn btn-outline-primary" id="addAttachmentBtn">
+hhh\createspece.html:294:.custom-input-container label {
+hhh\createspece.html:306:.custom-input-container input:focus + label,
+hhh\createspece.html:307:.custom-input-container input:not(:placeholder-shown) + label,
+hhh\createspece.html:308:.custom-input-container textarea:focus + label,
+hhh\createspece.html:309:.custom-input-container textarea:not(:placeholder-shown) + label,
+hhh\createspece.html:310:.custom-input-container select:focus + label,
+hhh\createspece.html:311:.custom-input-container select:not([value=""]) + label {
+hhh\createspece.html:372:            <button type="submit" id="saveRequestBtn" class="btn btn-success px-5">
+hhh\creatform.html:5:<meta name="viewport" content="width=device-width, initial-scale=1.0">
+hhh\creatform.html:81:    <p id="breadcrumb"></p>
+hhh\creatform.html:90:    <form id="tanjezForm" method="post" enctype="multipart/form-data">
+hhh\creatform.html:104:                    <div class="input-label-en">منشا الطلب </div>
+hhh\creatform.html:105:                    <input asp-for="tanjezOrder.CreateOrderName" type="text" 
+class="form-control" placeholder="منشا الطلب">
+hhh\creatform.html:111:                    <select asp-for="tanjezOrder.DescripPerson" id="descripSelect" 
+class="form-select">
+hhh\creatform.html:126:                        <select id="typePieceSelect" class="form-select">
+hhh\creatform.html:180:                    <input type="text" class="form-control" id="documentArea" 
+asp-for="tanjezOrder.Zone" placeholder="المديرية" />
+hhh\creatform.html:185:                    <input type="text" class="form-control" id="documentArea" 
+asp-for="tanjezOrder.Directorate" placeholder="العزلة" />
+hhh\creatform.html:190:                    <input type="text" class="form-control" id="documentArea" 
+name="tanjezOrder.Village" placeholder="القرية او الحي" />
+hhh\creatform.html:201:                    <input name="tanjezOrder.CoordinatesY" type="number" 
+class="form-control" placeholder="احداثيات Y">
+hhh\creatform.html:205:                    <input name="tanjezOrder.CoordinatesX" type="number" 
+class="form-control" placeholder="احداثيات X">
+hhh\creatform.html:209:                    <label class="input-label"> اسم الموضع <span 
+class="required-star">*</span></label>
+hhh\creatform.html:210:                    <input type="text" class="form-control" id="requestTitle" 
+name="tanjezOrder.PlaceName" placeholder="أدخل عنوان الطلب" required />
+hhh\creatform.html:213:                    <label class="input-label">نوع الطلب  </label>
+hhh\creatform.html:214:                    <select class="form-select" id="placeTypeId" 
+name="tanjezOrder.PlaceType">
+hhh\creatform.html:234:                <label class="input-label">نوع الوثيقة</label>
+hhh\creatform.html:245:                <div class="input-label-en">الحيازة</div>
+hhh\creatform.html:257:                    <label class="input-label fw-bold">المساحة كما في الوثيقة</label>
+hhh\creatform.html:262:                        <input type="number" class="form-control" id="documentArea" 
+name="tanjezOrder.Space" placeholder="0.00" step="0.01" />
+hhh\creatform.html:268:                        <select class="form-select" id="unitSelect" 
+asp-for="tanjezOrder.Unit">
+hhh\creatform.html:276:                    <div class="mb-2 d-none" id="unitCountDiv">
+hhh\creatform.html:277:                        <input type="number" class="form-control" id="unitCount" 
+name="tanjezOrder.AcountPiese" placeholder="ادخل العدد" />
+hhh\creatform.html:278:                        <small class="text-muted" id="unitLabel"></small>
+hhh\creatform.html:287:                    var unitLabel = document.getElementById("unitLabel");
+hhh\creatform.html:291:                        unitLabel.textContent = "عدد " + selectedUnit;
+hhh\creatform.html:294:                        unitLabel.textContent = "";
+hhh\creatform.html:301:                    <input type="hidden" id="hiddenAreaDifferent" 
+name="tanjezOrder.AreaDifferent" value="0" />
+hhh\creatform.html:302:                    <input type="checkbox" class="form-check-input" 
+id="AreaDifferentCheckbox" />
+hhh\creatform.html:303:                    <label class="form-check-label" for="AreaDifferentCheckbox">المساحة 
+مختلفة عن الواقع</label>
+hhh\creatform.html:320:                <div class="input-label-en">صورة الوثيقة</div>
+hhh\creatform.html:322:                    <button type="button" class="btn btn-outline-secondary" 
+id="attachBtn">إرفاق</button>
+hhh\creatform.html:323:                    <input type="file" class="form-control" id="docImageInput" 
+name="tanjezOrder.DocumentImage" style="display:none;" accept="image/*">
+hhh\creatform.html:334:<div id="earthBordersSection">
+hhh\creatform.html:336:    <div class="input-label-en mb-1">حدود الأرض المذكورة في الوثيقة</div>
+hhh\creatform.html:356:                            <select class="form-select border-type" 
+name="earthBorders[0].BorderType" style="display:none;">
+hhh\creatform.html:369:                        <input type="text" class="form-control" 
+name="earthBorders[0].BorderDescription" />
+hhh\creatform.html:372:                        <input type="hidden" name="earthBorders[3].IdenticalOrDifferent" 
+value="0" />
+hhh\creatform.html:374:                            name="earthBorders[3].IdenticalOrDifferent" value="1" />
+hhh\creatform.html:378:                        <input type="text" class="form-control" 
+name="earthBorders[0].Difference" />
+hhh\creatform.html:391:                            <select class="form-select border-type" 
+name="earthBorders[1].BorderType" style="display:none;">
+hhh\creatform.html:404:                        <input type="text" class="form-control" 
+name="earthBorders[1].BorderDescription" />
+hhh\creatform.html:407:                        <input type="hidden" name="earthBorders[3].IdenticalOrDifferent" 
+value="0" />
+hhh\creatform.html:409:                            name="earthBorders[3].IdenticalOrDifferent" value="1" />
+hhh\creatform.html:414:                        <input type="text" class="form-control" 
+name="earthBorders[1].Difference" />
+hhh\creatform.html:427:                            <select class="form-select border-type" 
+name="earthBorders[2].BorderType" style="display:none;">
+hhh\creatform.html:439:                        <input type="text" class="form-control" 
+name="earthBorders[2].BorderDescription" />
+hhh\creatform.html:442:                        <input type="hidden" name="earthBorders[3].IdenticalOrDifferent" 
+value="0" />
+hhh\creatform.html:444:                            name="earthBorders[3].IdenticalOrDifferent" value="1" />
+hhh\creatform.html:449:        <input type="text" class="form-control" name="earthBorders[0].Difference" readonly />
+hhh\creatform.html:462:                            <select class="form-select border-type" 
+name="earthBorders[3].BorderType" style="display:none;">
+hhh\creatform.html:473:                        <input type="text" class="form-control" 
+name="earthBorders[3].BorderDescription" />
+hhh\creatform.html:476:                        <input type="hidden" name="earthBorders[3].IdenticalOrDifferent" 
+value="0" />
+hhh\creatform.html:478:                            name="earthBorders[3].IdenticalOrDifferent" value="1" />
+hhh\creatform.html:483:                        <input type="text" class="form-control" 
+name="earthBorders[3].Difference" />
+hhh\creatform.html:494:    <button type="button" class="btn btn-outline-primary add-row-btn mb-3" id="addBorderRow">
+hhh\creatform.html:504:<div id="buildingTableSection" style="display:none; margin-top:20px;">
+hhh\creatform.html:516:                <td><input type="number" class="form-control" placeholder="أدخل عدد الطوابق" 
+/></td>
+hhh\creatform.html:517:                <td><input type="text" class="form-control" placeholder="أدخل الوصف" /></td>
+hhh\creatform.html:518:                <td><input type="text" class="form-control" placeholder="أدخل المكان" /></td>
+hhh\creatform.html:522:    <button type="button" class="btn btn-outline-primary add-row-btn mb-3" 
+id="addBuildingRow">
+hhh\creatform.html:532:    <div id="rahaqTableSection" style="display:none; margin-top:20px;">
+hhh\creatform.html:549:                        <input type="text" class="form-control" disabled placeholder="أدخل 
+الحد من الشمال" />
+hhh\creatform.html:558:                        <input type="text" class="form-control" disabled placeholder="أدخل 
+الحد من الجنوب" />
+hhh\creatform.html:567:                        <input type="text" class="form-control" disabled placeholder="أدخل 
+الحد من الغرب" />
+hhh\creatform.html:576:                        <input type="text" class="form-control" disabled placeholder="أدخل 
+الحد من الجنوب" />
+hhh\creatform.html:583:                    <div class="input-label-en">نوع الحيازة </div>
+hhh\creatform.html:638:            <td><input type="number" class="form-control" placeholder="أدخل عدد الطوابق" 
+/></td>
+hhh\creatform.html:639:            <td><input type="text" class="form-control" placeholder="أدخل الوصف" /></td>
+hhh\creatform.html:640:            <td><input type="text" class="form-control" placeholder="أدخل المكان" /></td>
+hhh\creatform.html:656:<div id="earthBordersSection">
+hhh\creatform.html:659:<div class="form-title mb-2" id="earthBordersTitleUnique123">حدود الأرض</div>
+hhh\creatform.html:661:    <div class="input-label-en mb-1">
+hhh\creatform.html:665:    <table class="table table-bordered mb-2 text-center" id="earthBordersTitleUnique123">
+hhh\creatform.html:673:                    <input type="checkbox" class="form-check-input border-primary border-2 
+larger-checkbox" id="chkUp" />
+hhh\creatform.html:676:                    <input type="text" class="form-control" id="txtUp" name="fromup" 
+disabled placeholder="أدخل الحد من الأعلى" />
+hhh\creatform.html:682:                    <input type="checkbox" class="form-check-input border-primary border-2 
+larger-checkbox" id="chkDown" />
+hhh\creatform.html:685:                    <input type="text" class="form-control" id="txtDown" name="fromdown" 
+disabled placeholder="أدخل الحد من الأسفل" />
+hhh\creatform.html:757:                <div class="input-label-en">نوع طريق الوصول</div>
+hhh\creatform.html:771:                <div class="input-label-en">(فترة تسليم العمل)</div>
+hhh\creatform.html:774:                <select class="form-select" id="periodType" name="tanjezOrder.PeriodType">
+hhh\creatform.html:781:                <div class="input-label-en">أقصى مدة</div>
+hhh\creatform.html:782:                <input type="text" class="form-control" id="maximumDuration" 
+name="tanjezOrder.MaximumDuration" placeholder="اختر التاريخ" />
+hhh\creatform.html:791:                <div class="input-label-en">انتقال المهندس الى القطة المراد مسحها</div>
+hhh\creatform.html:792:                <select class="form-select" id="Transportation" 
+name="tanjezOrder.Transportation">
+hhh\creatform.html:805:                <div class="input-label-en">المبيت</div>
+hhh\creatform.html:806:                <select class="form-select" id="OverNight" name="tanjezOrder.OverNight">
+hhh\creatform.html:817:                <div class="input-label-en">النثريات (تغذية، قات، ..الخ)</div>
+hhh\creatform.html:818:                <select class="form-select" id="Allowance" name="tanjezOrder.Allowance">
+hhh\creatform.html:840:        <label for="txtNotes" class="form-label">الملاحظات</label>
+hhh\creatform.html:841:        <textarea class="form-control" id="txtNotes" name="txtNotes" rows="4" 
+placeholder="أدخل ملاحظاتك"></textarea>
+hhh\creatform.html:847:    <div class="col-12" id="attachmentsWrapper">
+hhh\creatform.html:848:        <label class="form-label">المرفقات</label>
+hhh\creatform.html:852:            <input type="file" class="form-control me-2" name="fileAttach[]" />
+hhh\creatform.html:858:        <button type="button" class="btn btn-outline-primary" id="addAttachmentBtn">
+hhh\creatform.html:874:            <input type="file" class="form-control me-2" name="fileAttach[]" />
+hhh\creatform.html:912:            <input type="text" placeholder=" ">
+hhh\creatform.html:913:            <label>رقم القضية</label>
+hhh\creatform.html:918:            <input type="text" placeholder=" ">
+hhh\creatform.html:919:            <label>رقم الشكوى</label>
+hhh\creatform.html:924:            <input type="date" placeholder=" ">
+hhh\creatform.html:925:            <label>تاريخ التقديم</label>
+hhh\creatform.html:934:            <label>الجهة الشاكية</label>
+hhh\creatform.html:945:            <input type="text" id="nameCount1" placeholder=" " readonly>
+hhh\creatform.html:946:            <label>العدد</label>
+hhh\creatform.html:952:            <input type="text" id="txtName1" placeholder=" ">
+hhh\creatform.html:953:            <label>الأسماء</label>
+hhh\creatform.html:954:            <button type="button" class="btn btn-outline-primary" id="addNameBtn1">
+hhh\creatform.html:962:            <textarea id="nameList1" placeholder=" " readonly></textarea>
+hhh\creatform.html:963:            <label>الأسماء المضافة</label>
+hhh\creatform.html:974:            <input type="text" id="nameCount2" placeholder=" " readonly>
+hhh\creatform.html:975:            <label>العدد</label>
+hhh\creatform.html:981:            <input type="text" id="txtName2" placeholder=" ">
+hhh\creatform.html:982:            <label>الأسماء</label>
+hhh\creatform.html:983:            <button type="button" class="btn btn-outline-primary" id="addNameBtn2">
+hhh\creatform.html:991:            <textarea id="nameList2" placeholder=" " readonly></textarea>
+hhh\creatform.html:992:            <label>الأسماء المضافة</label>
+hhh\creatform.html:998:        <label for="txtNotes" class="form-label">موضوع الشوى</label>
+hhh\creatform.html:999:        <textarea class="form-control" id="txtNotes" name="txtNotes" rows="4" placeholder=" 
+موضوع الشكوى"></textarea>
+hhh\creatform.html:1004:        <label for="txtNotes" class="form-label"> ملخص الشكوى</label>
+hhh\creatform.html:1005:        <textarea class="form-control" id="txtNotes" name="txtNotes" rows="4" placeholder=" 
+ملخص الشكوى"></textarea>
+hhh\creatform.html:1015:            <input type="text" id="" placeholder=" " readonly>
+hhh\creatform.html:1016:            <label>موضع الخلاف </label>
+hhh\creatform.html:1027:            <select id="typePieceSelect1" class="form-select">
+hhh\creatform.html:1035:                <input type="text" id="" placeholder=" " readonly>
+hhh\creatform.html:1036:                <label> الادعاءات (من وجهة نضر الطرف الاول) </label>
+hhh\creatform.html:1044:                <input type="text" id="" placeholder=" " readonly>
+hhh\creatform.html:1045:                <label>  رد المدعي عليه </label>
+hhh\creatform.html:1058:<div id="">
+hhh\creatform.html:1083:                            <select id="typePieceSelect1" class="form-select">
+hhh\creatform.html:1095:                        <input type="text" class="form-control" name="" />
+hhh\creatform.html:1111:                            <select id="typePieceSelect1" class="form-select">
+hhh\creatform.html:1124:                        <input type="text" class="form-control" name="" />
+hhh\creatform.html:1141:                            <select id="typePieceSelect1" class="form-select">
+hhh\creatform.html:1152:                        <input type="text" class="form-control" name="" />
+hhh\creatform.html:1165:                        <input type="date" class="form-control" name="datt" />
+hhh\creatform.html:1168:                        <input type="text" class="form-control" name="" />
+hhh\creatform.html:1185:                            <select id="typePieceSelect1" class="form-select">
+hhh\creatform.html:1198:                        <input type="text" class="form-control" name="" />
+hhh\creatform.html:1234:.custom-input-container label {
+hhh\creatform.html:1246:.custom-input-container input:focus + label,
+hhh\creatform.html:1247:.custom-input-container input:not(:placeholder-shown) + label,
+hhh\creatform.html:1248:.custom-input-container textarea:focus + label,
+hhh\creatform.html:1249:.custom-input-container textarea:not(:placeholder-shown) + label,
+hhh\creatform.html:1250:.custom-input-container select:focus + label,
+hhh\creatform.html:1251:.custom-input-container select:not([value=""]) + label {
+hhh\creatform.html:1305:<div id="buildingTableSection" style=" margin-top:20px;">
+hhh\creatform.html:1317:                <td><input type="text" class="form-control" placeholder="  المالكون 
+السابقون" /></td>
+hhh\creatform.html:1318:                <td><input type="text" class="form-control" placeholder=" حصولهم على" 
+/></td>
+hhh\creatform.html:1319:                <td><input type="text" class="form-control" placeholder=" الوثائق التي 
+يستند عليها" /></td>
+hhh\creatform.html:1323:    <button type="button" class="btn btn-outline-primary add-row-btn mb-3" 
+id="addBuildingRow">
+hhh\creatform.html:1340:            <button type="submit" id="saveRequestBtn" class="btn btn-success px-5">
+hhh\devid.html:11:            <input type="text" placeholder=" ">
+hhh\devid.html:12:            <label>رقم القضية</label>
+hhh\devid.html:17:            <input type="text" placeholder=" ">
+hhh\devid.html:18:            <label>رقم الشكوى</label>
+hhh\devid.html:23:            <input type="date" placeholder=" ">
+hhh\devid.html:24:            <label>تاريخ التقديم</label>
+hhh\devid.html:33:            <label>الجهة الشاكية</label>
+hhh\devid.html:44:            <input type="text" id="nameCount1" placeholder=" " readonly>
+hhh\devid.html:45:            <label>العدد</label>
+hhh\devid.html:51:            <input type="text" id="txtName1" placeholder=" ">
+hhh\devid.html:52:            <label>الأسماء</label>
+hhh\devid.html:53:            <button type="button" class="btn btn-outline-primary" id="addNameBtn1">
+hhh\devid.html:61:            <textarea id="nameList1" placeholder=" " readonly></textarea>
+hhh\devid.html:62:            <label>الأسماء المضافة</label>
+hhh\devid.html:73:            <input type="text" id="nameCount2" placeholder=" " readonly>
+hhh\devid.html:74:            <label>العدد</label>
+hhh\devid.html:80:            <input type="text" id="txtName2" placeholder=" ">
+hhh\devid.html:81:            <label>الأسماء</label>
+hhh\devid.html:82:            <button type="button" class="btn btn-outline-primary" id="addNameBtn2">
+hhh\devid.html:90:            <textarea id="nameList2" placeholder=" " readonly></textarea>
+hhh\devid.html:91:            <label>الأسماء المضافة</label>
+hhh\devid.html:97:        <label for="txtNotes" class="form-label">موضوع الشوى</label>
+hhh\devid.html:98:        <textarea class="form-control" id="txtNotes" name="txtNotes" rows="4" placeholder=" موضوع 
+الشكوى"></textarea>
+hhh\devid.html:103:        <label for="txtNotes" class="form-label"> ملخص الشكوى</label>
+hhh\devid.html:104:        <textarea class="form-control" id="txtNotes" name="txtNotes" rows="4" placeholder=" ملخص 
+الشكوى"></textarea>
+hhh\devid.html:114:            <input type="text" id="" placeholder=" " readonly>
+hhh\devid.html:115:            <label>موضع الخلاف </label>
+hhh\devid.html:123:            <select id="typePieceSelect1" class="form-select">
+hhh\devid.html:137:            <input type="text" id="" placeholder=" " readonly>
+hhh\devid.html:138:            <label> الادعاءات (من وجهة نضر الطرف الاول) </label>
+hhh\devid.html:148:            <input type="text" id="" placeholder=" " readonly>
+hhh\devid.html:149:            <label>  رد المدعي عليه </label>
+hhh\devid.html:162:<div id="">
+hhh\devid.html:187:                            <select id="typePieceSelect1" class="form-select">
+hhh\devid.html:199:                        <input type="text" class="form-control" name="" />
+hhh\devid.html:215:                            <select id="typePieceSelect1" class="form-select">
+hhh\devid.html:228:                        <input type="text" class="form-control" name="" />
+hhh\devid.html:245:                            <select id="typePieceSelect1" class="form-select">
+hhh\devid.html:256:                        <input type="text" class="form-control" name="" />
+hhh\devid.html:269:                        <input type="date" class="form-control" name="datt" />
+hhh\devid.html:272:                        <input type="text" class="form-control" name="" />
+hhh\devid.html:289:                            <select id="typePieceSelect1" class="form-select">
+hhh\devid.html:302:                        <input type="text" class="form-control" name="" />
+hhh\devid.html:334:.custom-input-container label {
+hhh\devid.html:346:.custom-input-container input:focus + label,
+hhh\devid.html:347:.custom-input-container input:not(:placeholder-shown) + label,
+hhh\devid.html:348:.custom-input-container textarea:focus + label,
+hhh\devid.html:349:.custom-input-container textarea:not(:placeholder-shown) + label,
+hhh\devid.html:350:.custom-input-container select:focus + label,
+hhh\devid.html:351:.custom-input-container select:not([value=""]) + label {
+hhh\index.html:5:<meta name="viewport" content="width=device-width, initial-scale=1.0">
+hhh\index.html:82:    <div id="cv-form">
+hhh\index.html:87:            <div class="section-content" id="personal">
+hhh\index.html:88:                <input type="text" class="form-control" placeholder="الجنس">
+hhh\index.html:89:                <input type="text" class="form-control" placeholder="الجنسية">
+hhh\index.html:90:                <input type="text" class="form-control" placeholder="الحالة الاجتماعية">
+hhh\index.html:91:                <input type="date" class="form-control" placeholder="تاريخ الميلاد">
+hhh\index.html:93:                <input type="email" class="form-control" placeholder="البريد الإلكتروني">
+hhh\index.html:94:                <input type="text" class="form-control" placeholder="رقم الجوال">
+hhh\index.html:95:                <input type="text" class="form-control" placeholder="رقم جوال أحد الأقارب">
+hhh\index.html:96:                <input type="text" class="form-control" placeholder="   صلة القرابة">
+hhh\index.html:106:    <div class="section-content" id="experience">
+hhh\index.html:112:                <input type="text" id="expCompany" class="form-control" placeholder="جهة العمل">
+hhh\index.html:116:                <input type="text" id="expTitle" class="form-control" placeholder="المسمى 
+الوظيفي">
+hhh\index.html:120:                <input type="text" id="expField" class="form-control" placeholder="المجال">
+hhh\index.html:128:                <label for="expFrom" class="form-label">من</label>
+hhh\index.html:129:                <input type="date" id="expFrom" class="form-control">
+hhh\index.html:133:                <label for="expTo" class="form-label">إلى</label>
+hhh\index.html:134:                <input type="date" id="expTo" class="form-control">
+hhh\index.html:138:                <input type="checkbox" id="stillWorking" class="form-check-input me-2" 
+onchange="toggleExpTo()">
+hhh\index.html:139:                <label for="stillWorking" class="form-check-label">ما زلت أعمل حالياً</label>
+hhh\index.html:160:            <label class="form-label">المهام الرئيسية</label>
+hhh\index.html:161:            <div id="tasks-container">
+hhh\index.html:163:                    <input type="text" class="form-control" placeholder="أدخل مهمة">
+hhh\index.html:182:                    <input type="text" class="form-control" placeholder="أدخل مهمة">
+hhh\index.html:197:              <table class="table table-bordered align-middle text-center shadow-sm" 
+id="managers-table">
+hhh\index.html:213:          <div id="manager-msg" class="text-success fw-bold mt-2" style="display:none;"></div>
+hhh\index.html:216:        <div id="experience-list"></div>
+hhh\index.html:227:            <div class="section-content" id="education">
+hhh\index.html:228:                <select id="eduDegree" class="form-control">
+hhh\index.html:238:                <input type="text" id="eduCountry" class="form-control" placeholder="البلد">
+hhh\index.html:239:                <input type="text" id="eduUniv" class="form-control" placeholder="الجامعة / 
+المعهد">
+hhh\index.html:240:                <input type="text" id="eduMajor" class="form-control" placeholder="التخصص ">
+hhh\index.html:241:                <input type="text" id="eduDept" class="form-control" placeholder="القسم">
+hhh\index.html:242:                <input type="text" id="eduYear" class="form-control" placeholder="سنة التخرج">
+hhh\index.html:243:                <input type="text" id="eduGrade" class="form-control" placeholder="المعدل / 
+التقدير">
+hhh\index.html:245:                <div id="education-list"></div>
+hhh\index.html:252:            <div class="section-content" id="cert">
+hhh\index.html:255:                        <select id="type" class="form-control">
+hhh\index.html:264:                        <select id="almgal" class="form-control">
+hhh\index.html:278:                        <select id="depart" class="form-control">
+hhh\index.html:290:                <input type="text" id="certName" class="form-control" placeholder=" (اسم 
+البرنامج/الدورة/الجهاز)">
+hhh\index.html:291:                <input type="text" id="certOrg" class="form-control" placeholder="الجهة المانحة">
+hhh\index.html:294:                <div id="cert-list"></div>
+hhh\index.html:301:            <div class="section-content" id="project">
+hhh\index.html:302:                <input type="text" id="projName" class="form-control" placeholder="اسم المشروع">
+hhh\index.html:303:                <input type="text" id="projCompany" class="form-control" placeholder="جهة العمل">
+hhh\index.html:304:                <input type="text" id="projField" class="form-control" placeholder="المجال">
+hhh\index.html:305:                <input type="date" id="projFrom" class="form-control">
+hhh\index.html:306:                <input type="date" id="projTo" class="form-control">
+hhh\index.html:307:                <input type="text" id="projValue" class="form-control" placeholder="القيمة 
+التقريبية">
+hhh\index.html:308:                <input type="text" id="projRole" class="form-control" placeholder="الدور">
+hhh\index.html:310:                <div id="project-list"></div>
+hhh\index.html:318:            <div class="section-content" id="skills">
+hhh\index.html:319:                <input type="text" id="skillName" class="form-control" placeholder="أدخل 
+المهارة">
+hhh\index.html:320:                <input type="text" id="skillField" class="form-control" placeholder="المجال">
+hhh\index.html:321:                <input type="date" id="skillFrom" class="form-control">
+hhh\index.html:322:                <input type="date" id="skillTo" class="form-control">
+hhh\index.html:323:                <input type="text" id="skillDesc" class="form-control" placeholder="الوصف">
+hhh\index.html:325:                <div id="skills-list"></div>
+hhh\index.html:331:    <div class="section-content" id="languages">
+hhh\index.html:333:            <input class="form-check-input" type="checkbox" id="langArabic" 
+onchange="toggleMotherLanguage()">
+hhh\index.html:334:            <label class="form-check-label fw-bold" for="langArabic">العربية</label>
+hhh\index.html:335:            <div class="form-check ms-3 mt-1" id="motherLangOption" style="display:none;">
+hhh\index.html:336:                <input class="form-check-input" type="checkbox" id="langMother">
+hhh\index.html:337:                <label class="form-check-label text-muted" for="langMother">اللغة الأم</label>
+hhh\index.html:342:            <input class="form-check-input" type="checkbox" id="langEnglish">
+hhh\index.html:343:            <label class="form-check-label fw-bold" for="langEnglish">الإنجليزية</label>
+hhh\index.html:346:        <div id="extra-langs" class="mt-3"></div>
+hhh\index.html:349:            <input type="text" id="newLang" class="form-control" placeholder="أدخل لغة أخرى">
+hhh\index.html:366:    <div id="cv-preview"></div>
+hhh\index.html:409:        <input class="form-check-input" type="checkbox" id="${id}">
+hhh\index.html:410:        <label class="form-check-label fw-bold" for="${id}">${langName}</label>
+hhh\index.html:558:    const gender = $('input[placeholder="الجنس"]').val();
+hhh\index.html:559:    const nationality = $('input[placeholder="الجنسية"]').val();
+hhh\index.html:560:    const status = $('input[placeholder="الحالة الاجتماعية"]').val();
+hhh\index.html:561:    const birth = $('input[placeholder="تاريخ الميلاد"]').val();
+hhh\index.html:562:    const email = $('input[placeholder="البريد الإلكتروني"]').val();
+hhh\index.html:563:    const phone = $('input[placeholder="رقم الجوال"]').val();
+hhh\index.html:564:    const relative = $('input[placeholder="رقم جوال أحد الأقارب"]').val();
+hhh\WorkOffer.html:5:  <meta name="viewport" content="width=device-width, initial-scale=1" />
+hhh\WorkOffer.html:38:    .custom-input-container label {
+hhh\WorkOffer.html:49:    .custom-input-container input:focus + label,
+hhh\WorkOffer.html:50:    .custom-input-container input:not(:placeholder-shown) + label,
+hhh\WorkOffer.html:51:    .custom-input-container select:focus + label,
+hhh\WorkOffer.html:52:    .custom-input-container select:not([value=""]) + label {
+hhh\WorkOffer.html:68:    <form id="tanjezForm" method="post" enctype="multipart/form-data">
+hhh\WorkOffer.html:71:            <span class="status-label">لم يتم الحفظ</span>
+hhh\WorkOffer.html:73:    <input type="hidden" name="UserID" value="@Context.Session.GetInt32("UserID")" />
+hhh\WorkOffer.html:78:                <label asp-for="OfferName" class="form-label required">اسم العرض <span 
+class="text-danger">*</span></label>
+hhh\WorkOffer.html:86:            <label class="form-label">تاريخ نهاية العرض</label>
+hhh\WorkOffer.html:89:            <select id="endDateOption" class="form-select">
+hhh\WorkOffer.html:95:            <input id="endDateInput" name="EndDate" type="date" class="form-control mt-2" 
+style="display:none;" />
+hhh\WorkOffer.html:125:            <label asp-for="WorkWagesTemplateId" class="form-label"></label>
+hhh\WorkOffer.html:126:            <select asp-for="WorkWagesTemplateId" id="transportTemplateSelect1" 
+class="form-select">
+hhh\WorkOffer.html:136:        <div id="wagesTableContainer">
+hhh\WorkOffer.html:160:            <label asp-for="TransportationScheduleTemplateId" class="form-label">قالب 
+التنقلات والمبيت</label>
+hhh\WorkOffer.html:161:            <select asp-for="TransportationScheduleTemplateId" id="transportTemplateSelect" 
+class="form-select">
+hhh\WorkOffer.html:168:            <div id="transportTableContainer">
+hhh\WorkOffer.html:182:                const statuse1 = row.querySelector("input[name='StatuseType1']")?.value;
+hhh\WorkOffer.html:183:                const statuse2 = row.querySelector("input[name='StatuseType2']")?.value;
+hhh\WorkOffer.html:208:            fetch(`@Url.Action("GetTemplateDetails", "WorkOffer")?id=${templateId}`)
+hhh\WorkOffer.html:229:            <label asp-for="AdditionalCostTypeId" class="form-label">قالب التكاليف الاضافية 
+</label>
+hhh\WorkOffer.html:230:            <select asp-for="AdditionalCostTypeId" id="additionalCostSelect" 
+class="form-select">
+hhh\WorkOffer.html:235:            <div id="additionalCostContainer">
+hhh\WorkOffer.html:258:                <label class="form-label">نسبة الدفع مقدماً (%)</label>
+hhh\WorkOffer.html:264:                <label class="form-label">نسبة الدفع عند النزول (%)</label>
+hhh\WorkOffer.html:270:                <label class="form-label">نسبة الدفع بعد تسليم العمل (%)</label>
+hhh\WorkOffer.html:278:                <label class="form-label">غرامات التأخر عن تسليم العمل عن المدة المتفق عليها 
+(%)</label>
+hhh\WorkOffer.html:279:            <input asp-for="LatePenaltyPercentage" type="number" class="form-control" 
+placeholder="يخصم من المبلغ المتفق نسبة" />
+hhh\WorkOffer.html:283:                <label class="form-label">في حال الاعتذار عن العمل بعد استلام الدفعة المقدمة 
+(%)</label>
+hhh\WorkOffer.html:284:                <input asp-for="ResignationAfterAdvancePercentage" type="number" 
+class="form-control" placeholder="يخصم من المبلغ المتفق نسبة"
+hhh\WorkOffer.html:289:                <label class="form-label">في حال اعتذار العميل عن العمل بعد استلام الدفعة 
+المقدمة (%)</label>
+hhh\WorkOffer.html:290:            <input asp-for="CamelResignationPenaltyPercentage" type="number" 
+class="form-control" placeholder="يخصم من المبلغ المتفق نسبة" />
+hhh\WorkOffer.html:296:        <div class="accordion mt-4" id="notesAccordion">
+hhh\WorkOffer.html:298:                <h2 class="accordion-header" id="headingNotes">
+hhh\WorkOffer.html:304:                <div id="collapseNotes" class="accordion-collapse collapse" 
+aria-labelledby="headingNotes"
+hhh\WorkOffer.html:307:                        <textarea class="form-control" rows="3" placeholder="ملاحظات"
+hhh\WorkOffer.html:308:                                  name="Notes"></textarea>
+hhh\WorkOffer1.html:5:  <meta name="viewport" content="width=device-width, initial-scale=1" />
+hhh\WorkOffer1.html:38:    .custom-input-container label {
+hhh\WorkOffer1.html:49:    .custom-input-container input:focus + label,
+hhh\WorkOffer1.html:50:    .custom-input-container input:not(:placeholder-shown) + label,
+hhh\WorkOffer1.html:51:    .custom-input-container select:focus + label,
+hhh\WorkOffer1.html:52:    .custom-input-container select:not([value=""]) + label {
+hhh\WorkOffer1.html:68:    <form id="tanjezForm" method="post" enctype="multipart/form-data">
+hhh\WorkOffer1.html:71:            <span class="status-label">لم يتم الحفظ</span>
+hhh\WorkOffer1.html:73:    <input type="hidden" name="UserID" value="@Context.Session.GetInt32("UserID")" />
+hhh\WorkOffer1.html:90:            <label asp-for="AdditionalCostTypeId" class="form-label">قالب التكاليف الاضافية 
+</label>
+hhh\WorkOffer1.html:91:            <select asp-for="AdditionalCostTypeId" id="additionalCostSelect" 
+class="form-select">
+hhh\WorkOffer1.html:96:            <div id="additionalCostContainer">
+hhh\Work_Form.html:5:  <meta name="viewport" content="width=device-width, initial-scale=1" />
+hhh\Work_Form.html:38:    .custom-input-container label {
+hhh\Work_Form.html:49:    .custom-input-container input:focus + label,
+hhh\Work_Form.html:50:    .custom-input-container input:not(:placeholder-shown) + label,
+hhh\Work_Form.html:51:    .custom-input-container select:focus + label,
+hhh\Work_Form.html:52:    .custom-input-container select:not([value=""]) + label {
+hhh\Work_Form.html:80:                    <label>نوع الطلب</label>
+hhh\Work_Form.html:87:                    <label>رقم التقديم</label>
+hhh\Work_Form.html:93:                    <input type="text" placeholder=" ">
+hhh\Work_Form.html:94:                    <label>الرقم المزيد لموضوع الكلي/الشامل</label>
+hhh\Work_Form.html:100:                    <input type="text" placeholder=" ">
+hhh\Work_Form.html:101:                    <label>رقم التكليف</label>
+hhh\Work_Form.html:111:                    <label>وكلاء أوقاف في القرى</label>
+hhh\Work_Form.html:117:                    <input type="text" class="form-control" id="eastBoundaryType" readonly 
+style="cursor:pointer; background:#fff;" data-bs-toggle="dropdown" placeholder=" ">
+hhh\Work_Form.html:118:                    <label>عدول التروية</label>
+hhh\Work_Form.html:151:                                <select name="Governorate" class="form-select 
+form-select-sm">
+hhh\Work_Form.html:167:                                <select name="Governorate" class="form-select 
+form-select-sm">
+hhh\Work_Form.html:183:                                <input  type="number" class="form-control form-control-sm" 
+placeholder="ملاحضة افتراضية" >
+hhh\Work_Form.html:186:                                <input  type="number" class="form-control form-control-sm" 
+placeholder="المساحة">
+hhh\Work_Form.html:233:                            <select name="Governorate" class="form-select form-select-sm">
+hhh\Work_Form.html:246:                            <select name="Governorate" class="form-select form-select-sm">
+hhh\Work_Form.html:259:                            <select id="GovernorateSelect" class="form-select 
+form-select-sm">
+hhh\Work_Form.html:272:                            <select id="GovernorateSelect" class="form-select 
+form-select-sm">
+hhh\Work_Form.html:288:                    <div class="modal fade" id="GovernorateModal" tabindex="-1">
+hhh\Work_Form.html:290:                            <div class="modal-content" id="GovernorateContent">
+hhh\Work_Form.html:376:                                           placeholder="" />
+hhh\Work_Form.html:412:                                 placeholder="" />
+hhh\Work_Form.html:442:    <div class="modal fade" id="clientModal" tabindex="-1" 
+aria-labelledby="clientModalLabel" aria-hidden="true">
+hhh\Work_Form.html:446:                    <h5 class="modal-title" id="clientModalLabel">بيانات العميل</h5>
+hhh\Work_Form.html:447:                    <button type="button" class="btn-close" data-bs-dismiss="modal" 
+aria-label="Close"></button>
+hhh\Work_Form.html:450:                    <form id="clientForm">
+hhh\Work_Form.html:452:                            <label for="clientName" class="form-label">اسم العميل</label>
+hhh\Work_Form.html:453:                            <input type="text" class="form-control" id="clientName" required>
+hhh\Work_Form.html:456:                            <label for="clientEmail" class="form-label">البريد 
+الإلكتروني</label>
+hhh\Work_Form.html:457:                            <input type="email" class="form-control" id="clientEmail" 
+required>
+hhh\Work_Form.html:460:                            <label for="clientPhone" class="form-label">رقم الهاتف</label>
+hhh\Work_Form.html:461:                            <input type="tel" class="form-control" id="clientPhone">
+hhh\Work_Form.html:464:                            <label for="reportNotes" class="form-label">ملاحظات 
+إضافية</label>
+hhh\Work_Form.html:465:                            <textarea class="form-control" id="reportNotes" 
+rows="3"></textarea>
+hhh\Work_Form.html:478:    <div class="modal fade" id="adoulModal" tabindex="-1" aria-labelledby="adoulModalLabel" 
+aria-hidden="true">
+hhh\Work_Form.html:482:                    <h5 class="modal-title" id="adoulModalLabel">إدخال بيانات عدل 
+التروية</h5>
+hhh\Work_Form.html:483:                    <button type="button" class="btn-close" data-bs-dismiss="modal" 
+aria-label="إغلاق"></button>
+hhh\Work_Form.html:486:                    <form id="adoulForm">
+hhh\Work_Form.html:488:                            <label class="form-label">اسم العدل</label>
+hhh\Work_Form.html:489:                            <input type="text" class="form-control" name="adoulName" 
+required>
+hhh\Work_Form.html:492:                            <label class="form-label">رقم الجوال</label>
+hhh\Work_Form.html:493:                            <input type="text" class="form-control" name="adoulPhone" 
+required>
+hhh\Work_Form.html:496:                            <label class="form-label">ملاحظات</label>
+hhh\Work_Form.html:497:                            <textarea class="form-control" name="adoulNotes"></textarea>
+hhh\Work_Form_base.html:5:  <meta name="viewport" content="width=device-width, initial-scale=1" />
+hhh\Work_Form_base.html:38:    .custom-input-container label {
+hhh\Work_Form_base.html:49:    .custom-input-container input:focus + label,
+hhh\Work_Form_base.html:50:    .custom-input-container input:not(:placeholder-shown) + label,
+hhh\Work_Form_base.html:51:    .custom-input-container select:focus + label,
+hhh\Work_Form_base.html:52:    .custom-input-container select:not([value=""]) + label {
+hhh\Work_Form_base.html:80:                    <label>نوع الطلب</label>
+hhh\Work_Form_base.html:87:                    <label>رقم التقديم</label>
+hhh\Work_Form_base.html:93:                    <input type="text" placeholder=" ">
+hhh\Work_Form_base.html:94:                    <label>الرقم المزيد لموضوع الكلي/الشامل</label>
+hhh\Work_Form_base.html:100:                    <input type="text" placeholder=" ">
+hhh\Work_Form_base.html:101:                    <label>رقم التكليف</label>
+hhh\Work_Form_base.html:111:                    <label>وكلاء أوقاف في القرى</label>
+hhh\Work_Form_base.html:117:                    <input type="text" class="form-control" id="eastBoundaryType" 
+readonly style="cursor:pointer; background:#fff;" data-bs-toggle="dropdown" placeholder=" ">
+hhh\Work_Form_base.html:118:                    <label>عدول التروية</label>
+hhh\Work_Form_base.html:151:                                <select name="Governorate" class="form-select 
+form-select-sm">
+hhh\Work_Form_base.html:167:                                <select name="Governorate" class="form-select 
+form-select-sm">
+hhh\Work_Form_base.html:183:                                <input  type="number" class="form-control 
+form-control-sm" placeholder="ملاحضة افتراضية" >
+hhh\Work_Form_base.html:186:                                <input  type="number" class="form-control 
+form-control-sm" placeholder="المساحة">
+hhh\Work_Form_base.html:233:                            <select name="Governorate" class="form-select 
+form-select-sm">
+hhh\Work_Form_base.html:246:                            <select name="Governorate" class="form-select 
+form-select-sm">
+hhh\Work_Form_base.html:259:                            <select id="GovernorateSelect" class="form-select 
+form-select-sm">
+hhh\Work_Form_base.html:272:                            <select id="GovernorateSelect" class="form-select 
+form-select-sm">
+hhh\Work_Form_base.html:288:                    <div class="modal fade" id="GovernorateModal" tabindex="-1">
+hhh\Work_Form_base.html:290:                            <div class="modal-content" id="GovernorateContent">
+hhh\Work_Form_base.html:376:                                           placeholder="" />
+hhh\Work_Form_base.html:412:                                 placeholder="" />
+hhh\Work_Form_base.html:431:            <input type="text" placeholder=" ">
+hhh\Work_Form_base.html:432:            <label> رقم القضية </label>
+hhh\Work_Form_base.html:437:            <input type="text" placeholder=" ">
+hhh\Work_Form_base.html:438:            <label>  طبيعة القضية</label>
+hhh\Work_Form_base.html:443:            <input type="text" placeholder=" ">
+hhh\Work_Form_base.html:444:            <label>  نوع القضية</label>
+hhh\Work_Form_base.html:453:            <input type="text" placeholder=" ">
+hhh\Work_Form_base.html:454:            <label> المساحة المدونة في الوثيقة</label>
+hhh\Work_Form_base.html:459:              <input type="text" placeholder=" ">
+hhh\Work_Form_base.html:460:              <label> ذكر اختلاف ان وجد</label>
+hhh\Work_Form_base.html:467:            <input type="text" class="form-control" id="eastBoundaryType" readonly 
+style="cursor:pointer; background:#fff;" data-bs-toggle="dropdown" placeholder=" ">
+hhh\Work_Form_base.html:468:            <label> الرهق</label>
+hhh\Work_Form_base.html:478:              <input type="text" class="form-control" id="eastBoundaryType" readonly 
+style="cursor:pointer; background:#fff;" data-bs-toggle="dropdown" placeholder=" ">
+hhh\Work_Form_base.html:479:              <label> تحليل ادعاء الطرف</label>
+hhh\Work_Form_base.html:491:              <input type="text" placeholder=" ">
+hhh\Work_Form_base.html:492:              <label> تصنيف الدعوى</label>
+hhh\Work_Form_base.html:517:              <label>نوع الدعوى</label>
+hhh\Work_Form_base.html:533:              <label>طلب الدعوى</label>
+hhh\Work_Form_base.html:547:              <label>اساس الادعاء بالحكم </label>
+hhh\Work_Form_base.html:610:    <div class="modal fade" id="clientModal" tabindex="-1" 
+aria-labelledby="clientModalLabel" aria-hidden="true">
+hhh\Work_Form_base.html:614:                    <h5 class="modal-title" id="clientModalLabel">بيانات العميل</h5>
+hhh\Work_Form_base.html:615:                    <button type="button" class="btn-close" data-bs-dismiss="modal" 
+aria-label="Close"></button>
+hhh\Work_Form_base.html:618:                    <form id="clientForm">
+hhh\Work_Form_base.html:620:                            <label for="clientName" class="form-label">اسم 
+العميل</label>
+hhh\Work_Form_base.html:621:                            <input type="text" class="form-control" id="clientName" 
+required>
+hhh\Work_Form_base.html:624:                            <label for="clientEmail" class="form-label">البريد 
+الإلكتروني</label>
+hhh\Work_Form_base.html:625:                            <input type="email" class="form-control" id="clientEmail" 
+required>
+hhh\Work_Form_base.html:628:                            <label for="clientPhone" class="form-label">رقم 
+الهاتف</label>
+hhh\Work_Form_base.html:629:                            <input type="tel" class="form-control" id="clientPhone">
+hhh\Work_Form_base.html:632:                            <label for="reportNotes" class="form-label">ملاحظات 
+إضافية</label>
+hhh\Work_Form_base.html:633:                            <textarea class="form-control" id="reportNotes" 
+rows="3"></textarea>
+hhh\Work_Form_base.html:646:    <div class="modal fade" id="adoulModal" tabindex="-1" 
+aria-labelledby="adoulModalLabel" aria-hidden="true">
+hhh\Work_Form_base.html:650:                    <h5 class="modal-title" id="adoulModalLabel">إدخال بيانات عدل 
+التروية</h5>
+hhh\Work_Form_base.html:651:                    <button type="button" class="btn-close" data-bs-dismiss="modal" 
+aria-label="إغلاق"></button>
+hhh\Work_Form_base.html:654:                    <form id="adoulForm">
+hhh\Work_Form_base.html:656:                            <label class="form-label">اسم العدل</label>
+hhh\Work_Form_base.html:657:                            <input type="text" class="form-control" name="adoulName" 
+required>
+hhh\Work_Form_base.html:660:                            <label class="form-label">رقم الجوال</label>
+hhh\Work_Form_base.html:661:                            <input type="text" class="form-control" name="adoulPhone" 
+required>
+hhh\Work_Form_base.html:664:                            <label class="form-label">ملاحظات</label>
+hhh\Work_Form_base.html:665:                            <textarea class="form-control" name="adoulNotes"></textarea>
+
+
