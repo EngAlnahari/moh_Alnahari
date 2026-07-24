@@ -1,0 +1,311 @@
+﻿
+hhh\AllTemplate.html:265:                    <label class="input-label"> اسم الموضع <span 
+class="required-star">*</span></label>
+hhh\AllTemplate.html:269:                    <label class="input-label">نوع الطلب  </label>
+hhh\AllTemplate.html:290:                <label class="input-label">نوع الوثيقة</label>
+hhh\AllTemplate.html:313:                    <label class="input-label fw-bold">المساحة كما في الوثيقة</label>
+hhh\AllTemplate.html:359:                    <label class="form-check-label" for="AreaDifferentCheckbox">المساحة 
+مختلفة عن الواقع</label>
+hhh\AllTemplate.html:896:        <label for="txtNotes" class="form-label">الملاحظات</label>
+hhh\AllTemplate.html:904:        <label class="form-label">المرفقات</label>
+hhh\AllTemplate.html:969:            <label>رقم القضية</label>
+hhh\AllTemplate.html:975:            <label>رقم الشكوى</label>
+hhh\AllTemplate.html:981:            <label>تاريخ التقديم</label>
+hhh\AllTemplate.html:990:            <label>الجهة الشاكية</label>
+hhh\AllTemplate.html:1002:            <label>العدد</label>
+hhh\AllTemplate.html:1009:            <label>الأسماء</label>
+hhh\AllTemplate.html:1019:            <label>الأسماء المضافة</label>
+hhh\AllTemplate.html:1031:            <label>العدد</label>
+hhh\AllTemplate.html:1038:            <label>الأسماء</label>
+hhh\AllTemplate.html:1048:            <label>الأسماء المضافة</label>
+hhh\AllTemplate.html:1054:        <label for="txtNotes" class="form-label">موضوع الشوى</label>
+hhh\AllTemplate.html:1060:        <label for="txtNotes" class="form-label"> ملخص الشكوى</label>
+hhh\AllTemplate.html:1072:            <label>موضع الخلاف </label>
+hhh\AllTemplate.html:1092:                <label> الادعاءات (من وجهة نضر الطرف الاول) </label>
+hhh\AllTemplate.html:1101:                <label>  رد المدعي عليه </label>
+hhh\AllTemplate.html:1357:                    <label>نوع الطلب</label>
+hhh\AllTemplate.html:1364:                    <label>رقم التقديم</label>
+hhh\AllTemplate.html:1371:                    <label>الرقم المزيد لموضوع الكلي/الشامل</label>
+hhh\AllTemplate.html:1378:                    <label>رقم التكليف</label>
+hhh\AllTemplate.html:1388:                    <label>وكلاء أوقاف في القرى</label>
+hhh\AllTemplate.html:1395:                    <label>عدول التروية</label>
+hhh\AllTemplate.html:1709:            <label> رقم القضية </label>
+hhh\AllTemplate.html:1715:            <label>  طبيعة القضية</label>
+hhh\AllTemplate.html:1721:            <label>  نوع القضية</label>
+hhh\AllTemplate.html:1731:            <label> المساحة المدونة في الوثيقة</label>
+hhh\AllTemplate.html:1737:              <label> ذكر اختلاف ان وجد</label>
+hhh\AllTemplate.html:1745:            <label> الرهق</label>
+hhh\AllTemplate.html:1756:              <label> تحليل ادعاء الطرف</label>
+hhh\AllTemplate.html:1769:              <label> تصنيف الدعوى</label>
+hhh\AllTemplate.html:1794:              <label>نوع الدعوى</label>
+hhh\AllTemplate.html:1810:              <label>طلب الدعوى</label>
+hhh\AllTemplate.html:1824:              <label>اساس الادعاء بالحكم </label>
+hhh\AllTemplate.html:1902:                    <label asp-for="OfferName" class="form-label required">اسم العرض 
+<span class="text-danger">*</span></label>
+hhh\AllTemplate.html:1910:                <label class="form-label">تاريخ نهاية العرض</label>
+hhh\AllTemplate.html:1949:                <label asp-for="WorkWagesTemplateId" class="form-label"></label>
+hhh\AllTemplate.html:1984:                <label asp-for="TransportationScheduleTemplateId" class="form-label">قالب 
+التنقلات والمبيت</label>
+hhh\AllTemplate.html:2053:                <label asp-for="AdditionalCostTypeId" class="form-label">قالب التكاليف 
+الاضافية </label>
+hhh\AllTemplate.html:2082:                    <label class="form-label">نسبة الدفع مقدماً (%)</label>
+hhh\AllTemplate.html:2088:                    <label class="form-label">نسبة الدفع عند النزول (%)</label>
+hhh\AllTemplate.html:2094:                    <label class="form-label">نسبة الدفع بعد تسليم العمل (%)</label>
+hhh\AllTemplate.html:2102:                    <label class="form-label">غرامات التأخر عن تسليم العمل عن المدة 
+المتفق عليها (%)</label>
+hhh\AllTemplate.html:2107:                    <label class="form-label">في حال الاعتذار عن العمل بعد استلام الدفعة 
+المقدمة (%)</label>
+hhh\AllTemplate.html:2113:                    <label class="form-label">في حال اعتذار العميل عن العمل بعد استلام 
+الدفعة المقدمة (%)</label>
+hhh\almjal1.html:19:      <label>المجال الرئيسي</label>
+hhh\almjal1.html:25:      <label>التخصص</label>
+hhh\almjal1.html:31:      <label>الفرع الرئيسي</label>
+hhh\almjal1.html:37:      <label>التفصيل</label>
+hhh\ContractTemplate.html:287:                        <label>اختر سبب الرفض:</label>
+hhh\ContractTemplate.html:337:                        <label for="cardNumber">رقم البطاقة:</label>
+hhh\ContractTemplate.html:342:                            <label for="expiryDate">تاريخ الانتهاء:</label>
+hhh\ContractTemplate.html:346:                            <label for="cvv">الرمز:</label>
+hhh\ContractTemplate.html:355:                        <label id="paymentLabel" for="paymentInput"></label>
+hhh\ContractTemplate1.html:232:                        <label>اختر سبب الرفض:</label>
+hhh\ContractTemplate1.html:282:                        <label for="cardNumber">رقم البطاقة:</label>
+hhh\ContractTemplate1.html:287:                            <label for="expiryDate">تاريخ الانتهاء:</label>
+hhh\ContractTemplate1.html:291:                            <label for="cvv">الرمز:</label>
+hhh\ContractTemplate1.html:300:                        <label id="paymentLabel" for="paymentInput"></label>
+hhh\create.html:210:                    <label class="input-label"> اسم الموضع <span 
+class="required-star">*</span></label>
+hhh\create.html:214:                    <label class="input-label">نوع الطلب  </label>
+hhh\create.html:235:                <label class="input-label">نوع الوثيقة</label>
+hhh\create.html:258:                    <label class="input-label fw-bold">المساحة كما في الوثيقة</label>
+hhh\create.html:304:                    <label class="form-check-label" for="AreaDifferentCheckbox">المساحة مختلفة 
+عن الواقع</label>
+hhh\create.html:841:        <label for="txtNotes" class="form-label">الملاحظات</label>
+hhh\create.html:849:        <label class="form-label">المرفقات</label>
+hhh\create.html:914:            <label>رقم القضية</label>
+hhh\create.html:920:            <label>رقم الشكوى</label>
+hhh\create.html:926:            <label>تاريخ التقديم</label>
+hhh\create.html:935:            <label>الجهة الشاكية</label>
+hhh\create.html:947:            <label>العدد</label>
+hhh\create.html:954:            <label>الأسماء</label>
+hhh\create.html:964:            <label>الأسماء المضافة</label>
+hhh\create.html:976:            <label>العدد</label>
+hhh\create.html:983:            <label>الأسماء</label>
+hhh\create.html:993:            <label>الأسماء المضافة</label>
+hhh\create.html:999:        <label for="txtNotes" class="form-label">موضوع الشوى</label>
+hhh\create.html:1005:        <label for="txtNotes" class="form-label"> ملخص الشكوى</label>
+hhh\create.html:1017:            <label>موضع الخلاف </label>
+hhh\create.html:1037:                <label> الادعاءات (من وجهة نضر الطرف الاول) </label>
+hhh\create.html:1046:                <label>  رد المدعي عليه </label>
+hhh\create.html:1342:            <label>اسم المحكمة</label>
+hhh\create.html:1348:            <label>رقم القضية</label>
+hhh\create.html:1354:            <label>تاريخ التقديم</label>
+hhh\create.html:1372:            <label>الاسم الكامل</label>
+hhh\create.html:1379:            <label>الجنسية</label>
+hhh\create.html:1386:            <label>رقم الهوية</label>
+hhh\create.html:1394:            <label>تاريخ الوفاة</label>
+hhh\create.html:1401:            <label>مكان الوفاة</label>
+hhh\create.html:1408:            <label>الديانة</label>
+hhh\create.html:1416:            <label>الحالة الاجتماعية</label>
+hhh\create.html:1432:            <label>الاسم الكامل</label>
+hhh\create.html:1439:            <label>صلة القرابة</label>
+hhh\create.html:1446:            <label>الجنس</label>
+hhh\create.html:1454:            <label>تاريخ الميلاد</label>
+hhh\create.html:1461:            <label>رقم الهوية</label>
+hhh\create.html:1468:            <label>الحالة الاجتماعية</label>
+hhh\create.html:1476:            <label>عدد الأسهم الشرعية</label>
+hhh\create.html:1497:            <label>الاسم</label>
+hhh\create.html:1504:            <label>الصفة (أحد الورثة / وكيل شرعي)</label>
+hhh\create.html:1511:            <label>رقم الهوية</label>
+hhh\create.html:1520:            <label class="form-check-label" for="acknowledgement">
+hhh\create.html:1522:            </label>
+hhh\create.html:1538:            <label>الاسم الكامل</label>
+hhh\create.html:1545:            <label>رقم الهوية</label>
+hhh\create.html:1552:            <label>التوقيع</label>
+hhh\createdevided.html:218:                    <label class="input-label"> اسم الموضع <span 
+class="required-star">*</span></label>
+hhh\createdevided.html:222:                    <label class="input-label">نوع الطلب  </label>
+hhh\createdevided.html:243:                <label class="input-label">نوع الوثيقة</label>
+hhh\createdevided.html:266:                    <label class="input-label fw-bold">المساحة كما في الوثيقة</label>
+hhh\createdevided.html:312:                    <label class="form-check-label" for="AreaDifferentCheckbox">المساحة 
+مختلفة عن الواقع</label>
+hhh\createdevided.html:849:        <label for="txtNotes" class="form-label">الملاحظات</label>
+hhh\createdevided.html:857:        <label class="form-label">المرفقات</label>
+hhh\createdevided.html:1021:            <label>اسم المحكمة</label>
+hhh\createdevided.html:1027:            <label>رقم القضية</label>
+hhh\createdevided.html:1033:            <label>تاريخ التقديم</label>
+hhh\createdevided.html:1051:            <label>الاسم الكامل</label>
+hhh\createdevided.html:1058:            <label>الجنسية</label>
+hhh\createdevided.html:1065:            <label>رقم الهوية</label>
+hhh\createdevided.html:1073:            <label>تاريخ الوفاة</label>
+hhh\createdevided.html:1080:            <label>مكان الوفاة</label>
+hhh\createdevided.html:1087:            <label>الديانة</label>
+hhh\createdevided.html:1095:            <label>الحالة الاجتماعية</label>
+hhh\createdevided.html:1111:            <label>الاسم الكامل</label>
+hhh\createdevided.html:1118:            <label>صلة القرابة</label>
+hhh\createdevided.html:1125:            <label>الجنس</label>
+hhh\createdevided.html:1133:            <label>تاريخ الميلاد</label>
+hhh\createdevided.html:1140:            <label>رقم الهوية</label>
+hhh\createdevided.html:1147:            <label>الحالة الاجتماعية</label>
+hhh\createdevided.html:1155:            <label>عدد الأسهم الشرعية</label>
+hhh\createdevided.html:1176:            <label>الاسم</label>
+hhh\createdevided.html:1183:            <label>الصفة (أحد الورثة / وكيل شرعي)</label>
+hhh\createdevided.html:1190:            <label>رقم الهوية</label>
+hhh\createdevided.html:1199:            <label class="form-check-label" for="acknowledgement">
+hhh\createdevided.html:1201:            </label>
+hhh\createdevided.html:1217:            <label>الاسم الكامل</label>
+hhh\createdevided.html:1224:            <label>رقم الهوية</label>
+hhh\createdevided.html:1231:            <label>التوقيع</label>
+hhh\createform.html:139:                    <label>منشأ الطلب</label>
+hhh\createform.html:153:                    <label>صفة منشأ الطلب</label>
+hhh\createform.html:167:                    <label>طبيعة منطقة الخلاف</label>
+hhh\createform.html:177:                    <label>الدولة</label>
+hhh\createform.html:207:                    <label>المحافظة</label>
+hhh\createform.html:215:                    <label>المديرية</label>
+hhh\createform.html:223:                    <label>العزلة</label>
+hhh\createform.html:231:                    <label>الحي / القرية</label>
+hhh\createform.html:239:                    <label>إحداثيات Y</label>
+hhh\createform.html:247:                    <label>إحداثيات X</label>
+hhh\createform.html:255:                    <label>اسم الموضع</label>
+hhh\createform.html:267:                    <label>نوع الطلب</label>
+hhh\createform.html:285:                <label class="input-label">نوع الوثيقة</label>
+hhh\createform.html:308:                    <label class="input-label fw-bold">المساحة كما في الوثيقة</label>
+hhh\createform.html:354:                    <label class="form-check-label" for="AreaDifferentCheckbox">المساحة 
+مختلفة عن الواقع</label>
+hhh\createform.html:891:        <label for="txtNotes" class="form-label">الملاحظات</label>
+hhh\createform.html:899:        <label class="form-label">المرفقات</label>
+hhh\createform.html:964:            <label>رقم القضية</label>
+hhh\createform.html:970:            <label>رقم الشكوى</label>
+hhh\createform.html:976:            <label>تاريخ التقديم</label>
+hhh\createform.html:985:            <label>الجهة الشاكية</label>
+hhh\createform.html:997:            <label>العدد</label>
+hhh\createform.html:1004:            <label>الأسماء</label>
+hhh\createform.html:1014:            <label>الأسماء المضافة</label>
+hhh\createform.html:1026:            <label>العدد</label>
+hhh\createform.html:1033:            <label>الأسماء</label>
+hhh\createform.html:1043:            <label>الأسماء المضافة</label>
+hhh\createform.html:1049:        <label for="txtNotes" class="form-label">موضوع الشوى</label>
+hhh\createform.html:1055:        <label for="txtNotes" class="form-label"> ملخص الشكوى</label>
+hhh\createform.html:1067:            <label>موضع الخلاف </label>
+hhh\createform.html:1087:                <label> الادعاءات (من وجهة نضر الطرف الاول) </label>
+hhh\createform.html:1096:                <label>  رد المدعي عليه </label>
+hhh\createorder.html:217:                    <label class="input-label"> اسم الموضع <span 
+class="required-star">*</span></label>
+hhh\createorder.html:221:                    <label class="input-label">نوع الطلب  </label>
+hhh\createorder.html:242:                <label class="input-label">نوع الوثيقة</label>
+hhh\createorder.html:265:                    <label class="input-label fw-bold">المساحة كما في الوثيقة</label>
+hhh\createorder.html:311:                    <label class="form-check-label" for="AreaDifferentCheckbox">المساحة 
+مختلفة عن الواقع</label>
+hhh\createorder.html:848:        <label for="txtNotes" class="form-label">الملاحظات</label>
+hhh\createorder.html:856:        <label class="form-label">المرفقات</label>
+hhh\createspece.html:240:        <label for="txtNotes" class="form-label">الملاحظات</label>
+hhh\createspece.html:248:        <label class="form-label">المرفقات</label>
+hhh\creatform.html:209:                    <label class="input-label"> اسم الموضع <span 
+class="required-star">*</span></label>
+hhh\creatform.html:213:                    <label class="input-label">نوع الطلب  </label>
+hhh\creatform.html:234:                <label class="input-label">نوع الوثيقة</label>
+hhh\creatform.html:257:                    <label class="input-label fw-bold">المساحة كما في الوثيقة</label>
+hhh\creatform.html:303:                    <label class="form-check-label" for="AreaDifferentCheckbox">المساحة 
+مختلفة عن الواقع</label>
+hhh\creatform.html:840:        <label for="txtNotes" class="form-label">الملاحظات</label>
+hhh\creatform.html:848:        <label class="form-label">المرفقات</label>
+hhh\creatform.html:913:            <label>رقم القضية</label>
+hhh\creatform.html:919:            <label>رقم الشكوى</label>
+hhh\creatform.html:925:            <label>تاريخ التقديم</label>
+hhh\creatform.html:934:            <label>الجهة الشاكية</label>
+hhh\creatform.html:946:            <label>العدد</label>
+hhh\creatform.html:953:            <label>الأسماء</label>
+hhh\creatform.html:963:            <label>الأسماء المضافة</label>
+hhh\creatform.html:975:            <label>العدد</label>
+hhh\creatform.html:982:            <label>الأسماء</label>
+hhh\creatform.html:992:            <label>الأسماء المضافة</label>
+hhh\creatform.html:998:        <label for="txtNotes" class="form-label">موضوع الشوى</label>
+hhh\creatform.html:1004:        <label for="txtNotes" class="form-label"> ملخص الشكوى</label>
+hhh\creatform.html:1016:            <label>موضع الخلاف </label>
+hhh\creatform.html:1036:                <label> الادعاءات (من وجهة نضر الطرف الاول) </label>
+hhh\creatform.html:1045:                <label>  رد المدعي عليه </label>
+hhh\devid.html:12:            <label>رقم القضية</label>
+hhh\devid.html:18:            <label>رقم الشكوى</label>
+hhh\devid.html:24:            <label>تاريخ التقديم</label>
+hhh\devid.html:33:            <label>الجهة الشاكية</label>
+hhh\devid.html:45:            <label>العدد</label>
+hhh\devid.html:52:            <label>الأسماء</label>
+hhh\devid.html:62:            <label>الأسماء المضافة</label>
+hhh\devid.html:74:            <label>العدد</label>
+hhh\devid.html:81:            <label>الأسماء</label>
+hhh\devid.html:91:            <label>الأسماء المضافة</label>
+hhh\devid.html:97:        <label for="txtNotes" class="form-label">موضوع الشوى</label>
+hhh\devid.html:103:        <label for="txtNotes" class="form-label"> ملخص الشكوى</label>
+hhh\devid.html:115:            <label>موضع الخلاف </label>
+hhh\devid.html:138:            <label> الادعاءات (من وجهة نضر الطرف الاول) </label>
+hhh\devid.html:149:            <label>  رد المدعي عليه </label>
+hhh\index.html:128:                <label for="expFrom" class="form-label">من</label>
+hhh\index.html:133:                <label for="expTo" class="form-label">إلى</label>
+hhh\index.html:139:                <label for="stillWorking" class="form-check-label">ما زلت أعمل حالياً</label>
+hhh\index.html:160:            <label class="form-label">المهام الرئيسية</label>
+hhh\index.html:334:            <label class="form-check-label fw-bold" for="langArabic">العربية</label>
+hhh\index.html:337:                <label class="form-check-label text-muted" for="langMother">اللغة الأم</label>
+hhh\index.html:343:            <label class="form-check-label fw-bold" for="langEnglish">الإنجليزية</label>
+hhh\index.html:410:        <label class="form-check-label fw-bold" for="${id}">${langName}</label>
+hhh\WorkOffer.html:78:                <label asp-for="OfferName" class="form-label required">اسم العرض <span 
+class="text-danger">*</span></label>
+hhh\WorkOffer.html:86:            <label class="form-label">تاريخ نهاية العرض</label>
+hhh\WorkOffer.html:125:            <label asp-for="WorkWagesTemplateId" class="form-label"></label>
+hhh\WorkOffer.html:160:            <label asp-for="TransportationScheduleTemplateId" class="form-label">قالب 
+التنقلات والمبيت</label>
+hhh\WorkOffer.html:229:            <label asp-for="AdditionalCostTypeId" class="form-label">قالب التكاليف الاضافية 
+</label>
+hhh\WorkOffer.html:258:                <label class="form-label">نسبة الدفع مقدماً (%)</label>
+hhh\WorkOffer.html:264:                <label class="form-label">نسبة الدفع عند النزول (%)</label>
+hhh\WorkOffer.html:270:                <label class="form-label">نسبة الدفع بعد تسليم العمل (%)</label>
+hhh\WorkOffer.html:278:                <label class="form-label">غرامات التأخر عن تسليم العمل عن المدة المتفق عليها 
+(%)</label>
+hhh\WorkOffer.html:283:                <label class="form-label">في حال الاعتذار عن العمل بعد استلام الدفعة المقدمة 
+(%)</label>
+hhh\WorkOffer.html:289:                <label class="form-label">في حال اعتذار العميل عن العمل بعد استلام الدفعة 
+المقدمة (%)</label>
+hhh\WorkOffer1.html:90:            <label asp-for="AdditionalCostTypeId" class="form-label">قالب التكاليف الاضافية 
+</label>
+hhh\Work_Form.html:80:                    <label>نوع الطلب</label>
+hhh\Work_Form.html:87:                    <label>رقم التقديم</label>
+hhh\Work_Form.html:94:                    <label>الرقم المزيد لموضوع الكلي/الشامل</label>
+hhh\Work_Form.html:101:                    <label>رقم التكليف</label>
+hhh\Work_Form.html:111:                    <label>وكلاء أوقاف في القرى</label>
+hhh\Work_Form.html:118:                    <label>عدول التروية</label>
+hhh\Work_Form.html:452:                            <label for="clientName" class="form-label">اسم العميل</label>
+hhh\Work_Form.html:456:                            <label for="clientEmail" class="form-label">البريد 
+الإلكتروني</label>
+hhh\Work_Form.html:460:                            <label for="clientPhone" class="form-label">رقم الهاتف</label>
+hhh\Work_Form.html:464:                            <label for="reportNotes" class="form-label">ملاحظات 
+إضافية</label>
+hhh\Work_Form.html:488:                            <label class="form-label">اسم العدل</label>
+hhh\Work_Form.html:492:                            <label class="form-label">رقم الجوال</label>
+hhh\Work_Form.html:496:                            <label class="form-label">ملاحظات</label>
+hhh\Work_Form_base.html:80:                    <label>نوع الطلب</label>
+hhh\Work_Form_base.html:87:                    <label>رقم التقديم</label>
+hhh\Work_Form_base.html:94:                    <label>الرقم المزيد لموضوع الكلي/الشامل</label>
+hhh\Work_Form_base.html:101:                    <label>رقم التكليف</label>
+hhh\Work_Form_base.html:111:                    <label>وكلاء أوقاف في القرى</label>
+hhh\Work_Form_base.html:118:                    <label>عدول التروية</label>
+hhh\Work_Form_base.html:432:            <label> رقم القضية </label>
+hhh\Work_Form_base.html:438:            <label>  طبيعة القضية</label>
+hhh\Work_Form_base.html:444:            <label>  نوع القضية</label>
+hhh\Work_Form_base.html:454:            <label> المساحة المدونة في الوثيقة</label>
+hhh\Work_Form_base.html:460:              <label> ذكر اختلاف ان وجد</label>
+hhh\Work_Form_base.html:468:            <label> الرهق</label>
+hhh\Work_Form_base.html:479:              <label> تحليل ادعاء الطرف</label>
+hhh\Work_Form_base.html:492:              <label> تصنيف الدعوى</label>
+hhh\Work_Form_base.html:517:              <label>نوع الدعوى</label>
+hhh\Work_Form_base.html:533:              <label>طلب الدعوى</label>
+hhh\Work_Form_base.html:547:              <label>اساس الادعاء بالحكم </label>
+hhh\Work_Form_base.html:620:                            <label for="clientName" class="form-label">اسم 
+العميل</label>
+hhh\Work_Form_base.html:624:                            <label for="clientEmail" class="form-label">البريد 
+الإلكتروني</label>
+hhh\Work_Form_base.html:628:                            <label for="clientPhone" class="form-label">رقم 
+الهاتف</label>
+hhh\Work_Form_base.html:632:                            <label for="reportNotes" class="form-label">ملاحظات 
+إضافية</label>
+hhh\Work_Form_base.html:656:                            <label class="form-label">اسم العدل</label>
+hhh\Work_Form_base.html:660:                            <label class="form-label">رقم الجوال</label>
+hhh\Work_Form_base.html:664:                            <label class="form-label">ملاحظات</label>
+
+

@@ -1,0 +1,1197 @@
+﻿
+hhh\AllTemplate.html:167:                    <select asp-for="tanjezOrder.DescripPerson" id="descripSelect" 
+class="form-select">
+hhh\AllTemplate.html:168:                        <option value="">   الصفة  </option>
+hhh\AllTemplate.html:170:                        <option value="عن نفسة">  عن نفسة</option>
+hhh\AllTemplate.html:172:                        <option value="وكيل"> وكيل</option>
+hhh\AllTemplate.html:173:                        <option value="وصي"> وصي </option>
+hhh\AllTemplate.html:174:                        <option value=""> اضافة</option>
+hhh\AllTemplate.html:182:                        <select id="typePieceSelect" class="form-select">
+hhh\AllTemplate.html:183:                            <option value="">-- اختر نوع القطعة --</option>
+hhh\AllTemplate.html:184:                            <option value="ارض">أرض</option>
+hhh\AllTemplate.html:185:                            <option value="رهق">رهق</option>
+hhh\AllTemplate.html:186:                            <option value="ارض مع رهق">أرض مع رهق</option>
+hhh\AllTemplate.html:187:                            <option value="مبنى">مبنى</option>
+hhh\AllTemplate.html:204:                    <select class="form-select" asp-for="tanjezOrder.Country">
+hhh\AllTemplate.html:205:                        <option value="اليمن">اليمن</option>
+hhh\AllTemplate.html:210:                    <select asp-for="tanjezOrder.City" class="form-select">
+hhh\AllTemplate.html:211:                        <option value="">المحافظة</option>
+hhh\AllTemplate.html:212:                        <option value="صنعاء">صنعاء</option>
+hhh\AllTemplate.html:213:                        <option value="تعز">تعز</option>
+hhh\AllTemplate.html:214:                        <option value="المهرة">المهرة</option>
+hhh\AllTemplate.html:215:                        <option value="الجوف">الجوف</option>
+hhh\AllTemplate.html:216:                        <option value="المحويت">المحويت</option>
+hhh\AllTemplate.html:217:                        <option value="صعدة">صعدة</option>
+hhh\AllTemplate.html:218:                        <option value="الضالع">الضالع</option>
+hhh\AllTemplate.html:219:                        <option value="شبوة">شبوة</option>
+hhh\AllTemplate.html:220:                        <option value="لحج">لحج</option>
+hhh\AllTemplate.html:221:                        <option value="عدن">عدن</option>
+hhh\AllTemplate.html:222:                        <option value="عمران">عمران</option>
+hhh\AllTemplate.html:223:                        <option value="حجة">حجة</option>
+hhh\AllTemplate.html:224:                        <option value="ريمة">ريمة</option>
+hhh\AllTemplate.html:225:                        <option value="ذمار">ذمار</option>
+hhh\AllTemplate.html:226:                        <option value="اب">اب</option>
+hhh\AllTemplate.html:227:                        <option value="مارب">مارب</option>
+hhh\AllTemplate.html:228:                        <option value="حضرموت">حضرموت</option>
+hhh\AllTemplate.html:229:                        <option value="البيضاء">البيضاء</option>
+hhh\AllTemplate.html:230:                        <option value="ابين">ابين</option>
+hhh\AllTemplate.html:231:                        <option value="الحديدة">الحديدة</option>
+hhh\AllTemplate.html:270:                    <select class="form-select" id="placeTypeId" 
+name="tanjezOrder.PlaceType">
+hhh\AllTemplate.html:272:                        <option value="حر">حر</option>
+hhh\AllTemplate.html:273:                        <option value="وقف">وقف</option>
+hhh\AllTemplate.html:274:                        <option value="3">+ انشاء جديد</option>
+hhh\AllTemplate.html:291:                <select asp-for="tanjezOrder.DocumentType"
+hhh\AllTemplate.html:292:                        asp-items="ViewBag.DocumentTypes ?? new List<SelectListItem>()"
+hhh\AllTemplate.html:295:                    <option value="">-- اختر نوع الوثيقة --</option>
+hhh\AllTemplate.html:296:                    <option value="add">+ إضافة</option>
+hhh\AllTemplate.html:302:                <select asp-for="tanjezOrder.Alhiaza"
+hhh\AllTemplate.html:303:                        asp-items="ViewBag.Ownerships ?? new List<SelectListItem>()"
+hhh\AllTemplate.html:306:                    <option value="">-- اختر الحيازة --</option>
+hhh\AllTemplate.html:307:                    <option value="add">+ إضافة</option>
+hhh\AllTemplate.html:324:                        <select class="form-select" id="unitSelect" 
+asp-for="tanjezOrder.Unit">
+hhh\AllTemplate.html:325:                            <option value="">اختر وحدة القياس</option>
+hhh\AllTemplate.html:326:                            <option value="قصبة">قصبة</option>
+hhh\AllTemplate.html:327:                            <option value="لبنة">لبنة</option>
+hhh\AllTemplate.html:412:                            <select class="form-select border-type" 
+name="earthBorders[0].BorderType" style="display:none;">
+hhh\AllTemplate.html:413:                                <option value="شمال">شمال</option>
+hhh\AllTemplate.html:414:                                <option value="جنوب">جنوب</option>
+hhh\AllTemplate.html:415:                                <option value="شرق">شرق</option>
+hhh\AllTemplate.html:416:                                <option value="غرب">غرب</option>
+hhh\AllTemplate.html:417:                                <option value="شمال شرقي">شمال شرقي</option>
+hhh\AllTemplate.html:418:                                <option value="شمال غربي">شمال غربي</option>
+hhh\AllTemplate.html:419:                                <option value="جنوب شرقي">جنوب شرقي</option>
+hhh\AllTemplate.html:420:                                <option value="جنوب غربي">جنوب غربي</option>
+hhh\AllTemplate.html:447:                            <select class="form-select border-type" 
+name="earthBorders[1].BorderType" style="display:none;">
+hhh\AllTemplate.html:449:                                <option value="جنوب">جنوب</option>
+hhh\AllTemplate.html:450:                                <option value="شرق">شرق</option>
+hhh\AllTemplate.html:451:                                <option value="غرب">غرب</option>
+hhh\AllTemplate.html:452:                                <option value="شمال شرقي">شمال شرقي</option>
+hhh\AllTemplate.html:453:                                <option value="شمال غربي">شمال غربي</option>
+hhh\AllTemplate.html:454:                                <option value="جنوب شرقي">جنوب شرقي</option>
+hhh\AllTemplate.html:455:                                <option value="جنوب غربي">جنوب غربي</option>
+hhh\AllTemplate.html:483:                            <select class="form-select border-type" 
+name="earthBorders[2].BorderType" style="display:none;">
+hhh\AllTemplate.html:485:                                <option value="شرق">شرق</option>
+hhh\AllTemplate.html:486:                                <option value="غرب">غرب</option>
+hhh\AllTemplate.html:487:                                <option value="شمال شرقي">شمال شرقي</option>
+hhh\AllTemplate.html:488:                                <option value="شمال غربي">شمال غربي</option>
+hhh\AllTemplate.html:489:                                <option value="جنوب شرقي">جنوب شرقي</option>
+hhh\AllTemplate.html:490:                                <option value="جنوب غربي">جنوب غربي</option>
+hhh\AllTemplate.html:518:                            <select class="form-select border-type" 
+name="earthBorders[3].BorderType" style="display:none;">
+hhh\AllTemplate.html:520:                                <option value="غرب">غرب</option>
+hhh\AllTemplate.html:521:                                <option value="شمال شرقي">شمال شرقي</option>
+hhh\AllTemplate.html:522:                                <option value="شمال غربي">شمال غربي</option>
+hhh\AllTemplate.html:523:                                <option value="جنوب شرقي">جنوب شرقي</option>
+hhh\AllTemplate.html:524:                                <option value="جنوب غربي">جنوب غربي</option>
+hhh\AllTemplate.html:640:                    <select asp-for="tanjezOrder.AccessRoadType"
+hhh\AllTemplate.html:641:                            asp-items="ViewBag.AccessRoadTypes ?? new 
+List<SelectListItem>()"
+hhh\AllTemplate.html:644:                        <option value="">تحت حيازتي</option>
+hhh\AllTemplate.html:646:                        <option value="add">+ إضافة</option>
+hhh\AllTemplate.html:814:                <select asp-for="tanjezOrder.AccessRoadType"
+hhh\AllTemplate.html:815:                        asp-items="ViewBag.AccessRoadTypes ?? new List<SelectListItem>()"
+hhh\AllTemplate.html:818:                    <option value="">-- اختر طريق الوصول --</option>
+hhh\AllTemplate.html:819:                    <option value="add">+ إضافة</option>
+hhh\AllTemplate.html:828:                @* <select asp-for="tanjezOrder.PeriodType" 
+asp-items="ViewBag.accessRoadType" class="form-select"> *@
+hhh\AllTemplate.html:830:                <select class="form-select" id="periodType" name="tanjezOrder.PeriodType">
+hhh\AllTemplate.html:831:                    <option value="طارئ ومستعجل">طارئ ومستعجل</option>
+hhh\AllTemplate.html:832:                    <option value="حسب الاتفاق مع المهندس">حسب الاتفاق مع المهندس</option>
+hhh\AllTemplate.html:833:                    <option value="طويلة">طويلة</option>
+hhh\AllTemplate.html:848:                <select class="form-select" id="Transportation" 
+name="tanjezOrder.Transportation">
+hhh\AllTemplate.html:849:                    <option value=""></option>
+hhh\AllTemplate.html:850:                    <option value="3"> سأقوم (بنقله وارجاعه) بسيارتي الخاصة</option>
+hhh\AllTemplate.html:851:                    <option value="2">يتكفل المهندس بتنقلاته</option>
+hhh\AllTemplate.html:862:                <select class="form-select" id="OverNight" name="tanjezOrder.OverNight">
+hhh\AllTemplate.html:863:                    <option value=""></option>
+hhh\AllTemplate.html:864:                    <option value="3"> سوف أوفر مبيت ومكان اقامة للمهندس خلال ايام 
+العمل</option>
+hhh\AllTemplate.html:865:                    <option value="2">︎يتكفل المهندس بمبيته واقامته</option>
+hhh\AllTemplate.html:874:                <select class="form-select" id="Allowance" name="tanjezOrder.Allowance">
+hhh\AllTemplate.html:875:                    <option value=""></option>
+hhh\AllTemplate.html:876:                    <option value="3"> نثريات المهندس على حسابي الخاص</option>
+hhh\AllTemplate.html:877:                    <option value="2">يتكفل المهندس بجميع نثرياته</option>
+hhh\AllTemplate.html:986:            <select>
+hhh\AllTemplate.html:987:                <option value="">افراد</option>
+hhh\AllTemplate.html:988:                <option value="جهات">جهات</option>
+hhh\AllTemplate.html:1083:            <select id="typePieceSelect1" class="form-select">
+hhh\AllTemplate.html:1084:                <option value="">-- طبيعه منطقة الخلاف --</option>
+hhh\AllTemplate.html:1139:                            <select id="typePieceSelect1" class="form-select">
+hhh\AllTemplate.html:1141:                                <option value="جنوب">1- ملكية كامله\ جزئية</option>
+hhh\AllTemplate.html:1142:                                <option value="شرق">2- تصحيح حدود</option>
+hhh\AllTemplate.html:1143:                                <option value="غرب">3- اثبات</option>
+hhh\AllTemplate.html:1144:                                <option value="غرب">4- نزاع على جهه ماء</option>
+hhh\AllTemplate.html:1167:                            <select id="typePieceSelect1" class="form-select">
+hhh\AllTemplate.html:1169:                                <option value="جنوب">لا يمتلك وثيقه - عرف</option>
+hhh\AllTemplate.html:1170:                                <option value="شرق">2-بصيرة شراء</option>
+hhh\AllTemplate.html:1171:                                <option value="غرب">3- فص اقسام</option>
+hhh\AllTemplate.html:1172:                                <option value="غرب">4-عقد</option>
+hhh\AllTemplate.html:1197:                            <select id="typePieceSelect1" class="form-select">
+hhh\AllTemplate.html:1199:                                <option value="جنوب">تصرف شراء()</option>
+hhh\AllTemplate.html:1200:                                <option value="شرق">2- ورث وقسمتها</option>
+hhh\AllTemplate.html:1201:                                <option value="غرب">3- هبة نذر </option>
+hhh\AllTemplate.html:1241:                            <select id="typePieceSelect1" class="form-select">
+hhh\AllTemplate.html:1243:                                <option value="جنوب">تزوير وثائق</option>
+hhh\AllTemplate.html:1244:                                <option value="شرق">2-  عدم تقسيم الورث</option>
+hhh\AllTemplate.html:1245:                                <option value="غرب">3-  تداخل املاك </option>
+hhh\AllTemplate.html:1246:                                <option value="غرب">3-   تغير معالم </option>
+hhh\AllTemplate.html:1352:                    <select class="form-select">
+hhh\AllTemplate.html:1353:                      <option>-- اختر --</option>
+hhh\AllTemplate.html:1354:                      <option>طلب جديد</option>
+hhh\AllTemplate.html:1355:                      <option>تعديل</option>
+hhh\AllTemplate.html:1384:                    <select class="form-select">
+hhh\AllTemplate.html:1385:                      <option>عادل محمد صالح عايش-77088864</option>
+hhh\AllTemplate.html:1386:                      <option>+ إنشاء عدل الروية جديد</option>
+hhh\AllTemplate.html:1428:                                <select name="Governorate" class="form-select 
+form-select-sm">
+hhh\AllTemplate.html:1430:                                    <option value="">1- لا يوجد</option>
+hhh\AllTemplate.html:1432:                                    <option value="">    2-الاراضي      </option>
+hhh\AllTemplate.html:1433:                                    <option value="">     3- المعمورات    </option>
+hhh\AllTemplate.html:1434:                                    <option value="">        4- دور العبادة       
+</option>
+hhh\AllTemplate.html:1435:                                    <option value="">     5- المقابر    </option>
+hhh\AllTemplate.html:1436:                                    <option value="">      6- الاسواق    </option>
+hhh\AllTemplate.html:1437:                                    <option value="">    7- الطرقات      </option>
+hhh\AllTemplate.html:1438:                                    <option value="">     8- رهق\\مسقئ    </option>
+hhh\AllTemplate.html:1439:                                    <option value="">      9- اخرى تذكر   </option>
+hhh\AllTemplate.html:1444:                                <select name="Governorate" class="form-select 
+form-select-sm">
+hhh\AllTemplate.html:1446:                                    <option value=""> لا يوجد</option>
+hhh\AllTemplate.html:1448:                                    <option value="">    الاراضي      </option>
+hhh\AllTemplate.html:1449:                                    <option value="">      زراعية    </option>
+hhh\AllTemplate.html:1450:                                    <option value="">         بيضاء       </option>
+hhh\AllTemplate.html:1451:                                    <option value="">      صلب    </option>
+hhh\AllTemplate.html:1452:                                    <option value="">      متروكة    </option>
+hhh\AllTemplate.html:1453:                                    <option value="">     اخرى تذكر      </option>
+hhh\AllTemplate.html:1510:                            <select name="Governorate" class="form-select form-select-sm">
+hhh\AllTemplate.html:1511:                                <option value="">1- لا يوجد</option>
+hhh\AllTemplate.html:1512:                                <option value="lands">2- الاراضي</option>
+hhh\AllTemplate.html:1513:                                <option value="">     3- المعمورات    </option>
+hhh\AllTemplate.html:1514:                                <option value="">        4- دور العبادة       </option>
+hhh\AllTemplate.html:1515:                                <option value="">     5- المقابر    </option>
+hhh\AllTemplate.html:1516:                                <option value="">      6- الاسواق    </option>
+hhh\AllTemplate.html:1517:                                <option value="">    7- الطرقات      </option>
+hhh\AllTemplate.html:1518:                                <option value="">     8- رهق\\مسقئ    </option>
+hhh\AllTemplate.html:1519:                                <option value="">      9- اخرى تذكر   </option>
+hhh\AllTemplate.html:1523:                            <select name="Governorate" class="form-select form-select-sm">
+hhh\AllTemplate.html:1524:                                <option value="">1- لا يوجد</option>
+hhh\AllTemplate.html:1525:                                <option value="lands">2- الاراضي</option>
+hhh\AllTemplate.html:1526:                                <option value="">     3- المعمورات    </option>
+hhh\AllTemplate.html:1527:                                <option value="">        4- دور العبادة       </option>
+hhh\AllTemplate.html:1528:                                <option value="">     5- المقابر    </option>
+hhh\AllTemplate.html:1529:                                <option value="">      6- الاسواق    </option>
+hhh\AllTemplate.html:1530:                                <option value="">    7- الطرقات      </option>
+hhh\AllTemplate.html:1531:                                <option value="">     8- رهق\\مسقئ    </option>
+hhh\AllTemplate.html:1532:                                <option value="">      9- اخرى تذكر   </option>
+hhh\AllTemplate.html:1536:                            <select id="GovernorateSelect" class="form-select 
+form-select-sm">
+hhh\AllTemplate.html:1537:                                <option value="">1- لا يوجد</option>
+hhh\AllTemplate.html:1538:                                <option value="lands">2- الاراضي</option>
+hhh\AllTemplate.html:1539:                                <option value="">     3- المعمورات    </option>
+hhh\AllTemplate.html:1540:                                <option value="">        4- دور العبادة       </option>
+hhh\AllTemplate.html:1541:                                <option value="">     5- المقابر    </option>
+hhh\AllTemplate.html:1542:                                <option value="">      6- الاسواق    </option>
+hhh\AllTemplate.html:1543:                                <option value="">    7- الطرقات      </option>
+hhh\AllTemplate.html:1544:                                <option value="">     8- رهق\\مسقئ    </option>
+hhh\AllTemplate.html:1545:                                <option value="">      9- اخرى تذكر   </option>
+hhh\AllTemplate.html:1549:                            <select id="GovernorateSelect" class="form-select 
+form-select-sm">
+hhh\AllTemplate.html:1550:                                <option value="">1- لا يوجد</option>
+hhh\AllTemplate.html:1551:                                <option value="lands">2- الاراضي</option>
+hhh\AllTemplate.html:1552:                                <option value="">     3- المعمورات    </option>
+hhh\AllTemplate.html:1553:                                <option value="">        4- دور العبادة       </option>
+hhh\AllTemplate.html:1554:                                <option value="">     5- المقابر    </option>
+hhh\AllTemplate.html:1555:                                <option value="">      6- الاسواق    </option>
+hhh\AllTemplate.html:1556:                                <option value="">    7- الطرقات      </option>
+hhh\AllTemplate.html:1557:                                <option value="">     8- رهق\\مسقئ    </option>
+hhh\AllTemplate.html:1558:                                <option value="">      9- اخرى تذكر   </option>
+hhh\AllTemplate.html:1786:              <select class="form-select">
+hhh\AllTemplate.html:1787:                <option>-- اختر --</option>
+hhh\AllTemplate.html:1788:                <option> جنائية</option>
+hhh\AllTemplate.html:1789:                <option>مدنية</option>
+hhh\AllTemplate.html:1790:                <option>دعوة استحقاق</option>
+hhh\AllTemplate.html:1791:                <option>دعوى شخصية(قسمة اوراث)</option>
+hhh\AllTemplate.html:1792:                <option>مدنية</option>
+hhh\AllTemplate.html:1802:              <select class="form-select">
+hhh\AllTemplate.html:1803:                <option>-- اختر --</option>
+hhh\AllTemplate.html:1804:                <option> ضبط\ادانة المتهم</option>
+hhh\AllTemplate.html:1805:                <option>تعويض</option>
+hhh\AllTemplate.html:1806:                <option> الزام المتهم باعاده الحد كما كان</option>
+hhh\AllTemplate.html:1807:                <option>ازالة استحداث</option>
+hhh\AllTemplate.html:1808:                <option>فصل حدود</option>
+hhh\AllTemplate.html:1815:              <select class="form-select">
+hhh\AllTemplate.html:1816:                <option>-- اختر --</option>
+hhh\AllTemplate.html:1817:                <option>مسودة </option>
+hhh\AllTemplate.html:1818:                <option> وثيقة شراء(بصيرة)</option>
+hhh\AllTemplate.html:1819:                <option> وثيقة ميراث(فصل قسام)</option>
+hhh\AllTemplate.html:1820:                <option> احكام عرفية</option>
+hhh\AllTemplate.html:1821:                <option> حكم قضائي</option>
+hhh\AllTemplate.html:1822:                <option>  وضع اليد حيازة</option>
+hhh\AllTemplate.html:1853:                <select asp-for="tanjezOrder.Alhiaza"
+hhh\AllTemplate.html:1854:                        asp-items="ViewBag.Ownerships ?? new List<SelectListItem>()"
+hhh\AllTemplate.html:1857:                    <option value="">-- اختر الحيازة --</option>
+hhh\AllTemplate.html:1858:                    <option value="add">+ إضافة</option>
+hhh\AllTemplate.html:1913:                <select id="endDateOption" class="form-select">
+hhh\AllTemplate.html:1914:                    <option value="unspecified">غير محدد</option>
+hhh\AllTemplate.html:1915:                    <option value="specified">محدد</option>
+hhh\AllTemplate.html:1950:                <select asp-for="WorkWagesTemplateId" id="transportTemplateSelect1" 
+class="form-select">
+hhh\AllTemplate.html:1951:                    <option value="">-- اختر قالب --</option>
+hhh\AllTemplate.html:1953:                    <option value="create-new-template1">+ إنشاء جديد قالب أجور 
+العمل</option>
+hhh\AllTemplate.html:1954:                    <option value="advanced-search">🔍 البحث المتقدم</option>
+hhh\AllTemplate.html:1985:                <select asp-for="TransportationScheduleTemplateId" 
+id="transportTemplateSelect" class="form-select">
+hhh\AllTemplate.html:1986:                    <option value=""></option>
+hhh\AllTemplate.html:1988:                    <option value="create-new-template">+ إنشاء جديد قالب التنقلات 
+والمبيت</option>
+hhh\AllTemplate.html:2054:                <select asp-for="AdditionalCostTypeId" id="additionalCostSelect" 
+class="form-select">
+hhh\AllTemplate.html:2055:                    <option value="">-- اختر قالب --</option>
+hhh\almjal1.html:20:      <select id="mainField" class="form-select">
+hhh\almjal1.html:21:        <option value="">اختر المجال</option>
+hhh\almjal1.html:26:      <select id="specialty" class="form-select">
+hhh\almjal1.html:27:        <option value="">اختر التخصص</option>
+hhh\almjal1.html:32:      <select id="branch" class="form-select">
+hhh\almjal1.html:33:        <option value="">اختر الفرع</option>
+hhh\almjal1.html:38:      <select id="detail" class="form-select">
+hhh\almjal1.html:39:        <option value="">اختر التفصيل</option>
+hhh\almjal1.html:279:      select.empty().append(`<option value="">${placeholder}</option>`);
+hhh\almjal1.html:280:      list.forEach(i => select.append(`<option value="${i}">${i}</option>`));
+hhh\almjal1.html:284:      ids.forEach(id => $(id).empty().append(`<option value="">---</option>`));
+hhh\ContractTemplate.html:288:                        <select id="reason" name="reason">
+hhh\ContractTemplate.html:289:                            <option value="">اختر سبب الرفض</option>
+hhh\ContractTemplate.html:290:                            <option value="ضغط عمل">ضغط عمل</option>
+hhh\ContractTemplate.html:291:                            <option value="ظرف طارئ">ظرف طارئ</option>
+hhh\ContractTemplate.html:292:                            <option value="بعد مسافة">بعد مسافة</option>
+hhh\ContractTemplate.html:293:                            <option value="بعد مسافة">عدم الوصول الى اتفاق </option>
+hhh\ContractTemplate.html:294:                            <option value="بعد مسافة">الاختلاف على المبلغ </option>
+hhh\ContractTemplate.html:295:                            <option value="أخرى">أخرى</option>
+hhh\ContractTemplate1.html:233:                        <select id="reason" name="reason">
+hhh\ContractTemplate1.html:234:                            <option value="">اختر سبب الرفض</option>
+hhh\ContractTemplate1.html:235:                            <option value="ضغط عمل">ضغط عمل</option>
+hhh\ContractTemplate1.html:236:                            <option value="ظرف طارئ">ظرف طارئ</option>
+hhh\ContractTemplate1.html:237:                            <option value="بعد مسافة">بعد مسافة</option>
+hhh\ContractTemplate1.html:238:                            <option value="بعد مسافة">عدم الوصول الى اتفاق </option>
+hhh\ContractTemplate1.html:239:                            <option value="بعد مسافة">الاختلاف على المبلغ </option>
+hhh\ContractTemplate1.html:240:                            <option value="أخرى">أخرى</option>
+hhh\create.html:103:                    <select asp-for="tanjezOrder.DescripPerson" id="descripSelect" 
+class="form-select">
+hhh\create.html:104:                        <option value="">   الصفة  </option>
+hhh\create.html:106:                        <option value="عن نفسة">  عن نفسة</option>
+hhh\create.html:108:                        <option value="وكيل"> وكيل</option>
+hhh\create.html:109:                        <option value="وصي"> وصي </option>
+hhh\create.html:110:                        <option value=""> اضافة</option>
+hhh\create.html:116:                    <select asp-for="tanjezOrder.PurposeOrder"
+hhh\create.html:117:                            asp-items="ViewBag.Purposes ?? new List<SelectListItem>()"
+hhh\create.html:120:                        <option value="">-- اختر الغرض --</option>
+hhh\create.html:121:                        <option value="add">+ إضافة</option>
+hhh\create.html:127:                        <select id="typePieceSelect" class="form-select">
+hhh\create.html:128:                            <option value="">-- اختر نوع القطعة --</option>
+hhh\create.html:129:                            <option value="ارض">أرض</option>
+hhh\create.html:130:                            <option value="رهق">رهق</option>
+hhh\create.html:131:                            <option value="ارض مع رهق">أرض مع رهق</option>
+hhh\create.html:132:                            <option value="مبنى">مبنى</option>
+hhh\create.html:149:                    <select class="form-select" asp-for="tanjezOrder.Country">
+hhh\create.html:150:                        <option value="اليمن">اليمن</option>
+hhh\create.html:155:                    <select asp-for="tanjezOrder.City" class="form-select">
+hhh\create.html:156:                        <option value="">المحافظة</option>
+hhh\create.html:157:                        <option value="صنعاء">صنعاء</option>
+hhh\create.html:158:                        <option value="تعز">تعز</option>
+hhh\create.html:159:                        <option value="المهرة">المهرة</option>
+hhh\create.html:160:                        <option value="الجوف">الجوف</option>
+hhh\create.html:161:                        <option value="المحويت">المحويت</option>
+hhh\create.html:162:                        <option value="صعدة">صعدة</option>
+hhh\create.html:163:                        <option value="الضالع">الضالع</option>
+hhh\create.html:164:                        <option value="شبوة">شبوة</option>
+hhh\create.html:165:                        <option value="لحج">لحج</option>
+hhh\create.html:166:                        <option value="عدن">عدن</option>
+hhh\create.html:167:                        <option value="عمران">عمران</option>
+hhh\create.html:168:                        <option value="حجة">حجة</option>
+hhh\create.html:169:                        <option value="ريمة">ريمة</option>
+hhh\create.html:170:                        <option value="ذمار">ذمار</option>
+hhh\create.html:171:                        <option value="اب">اب</option>
+hhh\create.html:172:                        <option value="مارب">مارب</option>
+hhh\create.html:173:                        <option value="حضرموت">حضرموت</option>
+hhh\create.html:174:                        <option value="البيضاء">البيضاء</option>
+hhh\create.html:175:                        <option value="ابين">ابين</option>
+hhh\create.html:176:                        <option value="الحديدة">الحديدة</option>
+hhh\create.html:215:                    <select class="form-select" id="placeTypeId" name="tanjezOrder.PlaceType">
+hhh\create.html:217:                        <option value="حر">حر</option>
+hhh\create.html:218:                        <option value="وقف">وقف</option>
+hhh\create.html:219:                        <option value="3">+ انشاء جديد</option>
+hhh\create.html:236:                <select asp-for="tanjezOrder.DocumentType"
+hhh\create.html:237:                        asp-items="ViewBag.DocumentTypes ?? new List<SelectListItem>()"
+hhh\create.html:240:                    <option value="">-- اختر نوع الوثيقة --</option>
+hhh\create.html:241:                    <option value="add">+ إضافة</option>
+hhh\create.html:247:                <select asp-for="tanjezOrder.Alhiaza"
+hhh\create.html:248:                        asp-items="ViewBag.Ownerships ?? new List<SelectListItem>()"
+hhh\create.html:251:                    <option value="">-- اختر الحيازة --</option>
+hhh\create.html:252:                    <option value="add">+ إضافة</option>
+hhh\create.html:269:                        <select class="form-select" id="unitSelect" asp-for="tanjezOrder.Unit">
+hhh\create.html:270:                            <option value="">اختر وحدة القياس</option>
+hhh\create.html:271:                            <option value="قصبة">قصبة</option>
+hhh\create.html:272:                            <option value="لبنة">لبنة</option>
+hhh\create.html:357:                            <select class="form-select border-type" 
+name="earthBorders[0].BorderType" style="display:none;">
+hhh\create.html:358:                                <option value="شمال">شمال</option>
+hhh\create.html:359:                                <option value="جنوب">جنوب</option>
+hhh\create.html:360:                                <option value="شرق">شرق</option>
+hhh\create.html:361:                                <option value="غرب">غرب</option>
+hhh\create.html:362:                                <option value="شمال شرقي">شمال شرقي</option>
+hhh\create.html:363:                                <option value="شمال غربي">شمال غربي</option>
+hhh\create.html:364:                                <option value="جنوب شرقي">جنوب شرقي</option>
+hhh\create.html:365:                                <option value="جنوب غربي">جنوب غربي</option>
+hhh\create.html:392:                            <select class="form-select border-type" 
+name="earthBorders[1].BorderType" style="display:none;">
+hhh\create.html:394:                                <option value="جنوب">جنوب</option>
+hhh\create.html:395:                                <option value="شرق">شرق</option>
+hhh\create.html:396:                                <option value="غرب">غرب</option>
+hhh\create.html:397:                                <option value="شمال شرقي">شمال شرقي</option>
+hhh\create.html:398:                                <option value="شمال غربي">شمال غربي</option>
+hhh\create.html:399:                                <option value="جنوب شرقي">جنوب شرقي</option>
+hhh\create.html:400:                                <option value="جنوب غربي">جنوب غربي</option>
+hhh\create.html:428:                            <select class="form-select border-type" 
+name="earthBorders[2].BorderType" style="display:none;">
+hhh\create.html:430:                                <option value="شرق">شرق</option>
+hhh\create.html:431:                                <option value="غرب">غرب</option>
+hhh\create.html:432:                                <option value="شمال شرقي">شمال شرقي</option>
+hhh\create.html:433:                                <option value="شمال غربي">شمال غربي</option>
+hhh\create.html:434:                                <option value="جنوب شرقي">جنوب شرقي</option>
+hhh\create.html:435:                                <option value="جنوب غربي">جنوب غربي</option>
+hhh\create.html:463:                            <select class="form-select border-type" 
+name="earthBorders[3].BorderType" style="display:none;">
+hhh\create.html:465:                                <option value="غرب">غرب</option>
+hhh\create.html:466:                                <option value="شمال شرقي">شمال شرقي</option>
+hhh\create.html:467:                                <option value="شمال غربي">شمال غربي</option>
+hhh\create.html:468:                                <option value="جنوب شرقي">جنوب شرقي</option>
+hhh\create.html:469:                                <option value="جنوب غربي">جنوب غربي</option>
+hhh\create.html:585:                    <select asp-for="tanjezOrder.AccessRoadType"
+hhh\create.html:586:                            asp-items="ViewBag.AccessRoadTypes ?? new List<SelectListItem>()"
+hhh\create.html:589:                        <option value="">تحت حيازتي</option>
+hhh\create.html:591:                        <option value="add">+ إضافة</option>
+hhh\create.html:759:                <select asp-for="tanjezOrder.AccessRoadType"
+hhh\create.html:760:                        asp-items="ViewBag.AccessRoadTypes ?? new List<SelectListItem>()"
+hhh\create.html:763:                    <option value="">-- اختر طريق الوصول --</option>
+hhh\create.html:764:                    <option value="add">+ إضافة</option>
+hhh\create.html:773:                @* <select asp-for="tanjezOrder.PeriodType" asp-items="ViewBag.accessRoadType" 
+class="form-select"> *@
+hhh\create.html:775:                <select class="form-select" id="periodType" name="tanjezOrder.PeriodType">
+hhh\create.html:776:                    <option value="طارئ ومستعجل">طارئ ومستعجل</option>
+hhh\create.html:777:                    <option value="حسب الاتفاق مع المهندس">حسب الاتفاق مع المهندس</option>
+hhh\create.html:778:                    <option value="طويلة">طويلة</option>
+hhh\create.html:793:                <select class="form-select" id="Transportation" 
+name="tanjezOrder.Transportation">
+hhh\create.html:794:                    <option value=""></option>
+hhh\create.html:795:                    <option value="3"> سأقوم (بنقله وارجاعه) بسيارتي الخاصة</option>
+hhh\create.html:796:                    <option value="2">يتكفل المهندس بتنقلاته</option>
+hhh\create.html:807:                <select class="form-select" id="OverNight" name="tanjezOrder.OverNight">
+hhh\create.html:808:                    <option value=""></option>
+hhh\create.html:809:                    <option value="3"> سوف أوفر مبيت ومكان اقامة للمهندس خلال ايام 
+العمل</option>
+hhh\create.html:810:                    <option value="2">︎يتكفل المهندس بمبيته واقامته</option>
+hhh\create.html:819:                <select class="form-select" id="Allowance" name="tanjezOrder.Allowance">
+hhh\create.html:820:                    <option value=""></option>
+hhh\create.html:821:                    <option value="3"> نثريات المهندس على حسابي الخاص</option>
+hhh\create.html:822:                    <option value="2">يتكفل المهندس بجميع نثرياته</option>
+hhh\create.html:931:            <select>
+hhh\create.html:932:                <option value="">افراد</option>
+hhh\create.html:933:                <option value="جهات">جهات</option>
+hhh\create.html:1028:            <select id="typePieceSelect1" class="form-select">
+hhh\create.html:1029:                <option value="">-- طبيعه منطقة الخلاف --</option>
+hhh\create.html:1084:                            <select id="typePieceSelect1" class="form-select">
+hhh\create.html:1086:                                <option value="جنوب">1- ملكية كامله\ جزئية</option>
+hhh\create.html:1087:                                <option value="شرق">2- تصحيح حدود</option>
+hhh\create.html:1088:                                <option value="غرب">3- اثبات</option>
+hhh\create.html:1089:                                <option value="غرب">4- نزاع على جهه ماء</option>
+hhh\create.html:1112:                            <select id="typePieceSelect1" class="form-select">
+hhh\create.html:1114:                                <option value="جنوب">لا يمتلك وثيقه - عرف</option>
+hhh\create.html:1115:                                <option value="شرق">2-بصيرة شراء</option>
+hhh\create.html:1116:                                <option value="غرب">3- فص اقسام</option>
+hhh\create.html:1117:                                <option value="غرب">4-عقد</option>
+hhh\create.html:1142:                            <select id="typePieceSelect1" class="form-select">
+hhh\create.html:1144:                                <option value="جنوب">تصرف شراء()</option>
+hhh\create.html:1145:                                <option value="شرق">2- ورث وقسمتها</option>
+hhh\create.html:1146:                                <option value="غرب">3- هبة نذر </option>
+hhh\create.html:1186:                            <select id="typePieceSelect1" class="form-select">
+hhh\create.html:1188:                                <option value="جنوب">تزوير وثائق</option>
+hhh\create.html:1189:                                <option value="شرق">2-  عدم تقسيم الورث</option>
+hhh\create.html:1190:                                <option value="غرب">3-  تداخل املاك </option>
+hhh\create.html:1191:                                <option value="غرب">3-   تغير معالم </option>
+hhh\createdevided.html:111:                    <select asp-for="tanjezOrder.DescripPerson" id="descripSelect" 
+class="form-select">
+hhh\createdevided.html:112:                        <option value="">   الصفة  </option>
+hhh\createdevided.html:114:                        <option value="عن نفسة">  عن نفسة</option>
+hhh\createdevided.html:116:                        <option value="وكيل"> وكيل</option>
+hhh\createdevided.html:117:                        <option value="وصي"> وصي </option>
+hhh\createdevided.html:118:                        <option value=""> اضافة</option>
+hhh\createdevided.html:124:                    <select asp-for="tanjezOrder.PurposeOrder"
+hhh\createdevided.html:125:                            asp-items="ViewBag.Purposes ?? new List<SelectListItem>()"
+hhh\createdevided.html:128:                        <option value="">-- اختر الغرض --</option>
+hhh\createdevided.html:129:                        <option value="add">+ إضافة</option>
+hhh\createdevided.html:135:                        <select id="typePieceSelect" class="form-select">
+hhh\createdevided.html:136:                            <option value="">-- اختر نوع القطعة --</option>
+hhh\createdevided.html:137:                            <option value="ارض">أرض</option>
+hhh\createdevided.html:138:                            <option value="رهق">رهق</option>
+hhh\createdevided.html:139:                            <option value="ارض مع رهق">أرض مع رهق</option>
+hhh\createdevided.html:140:                            <option value="مبنى">مبنى</option>
+hhh\createdevided.html:157:                    <select class="form-select" asp-for="tanjezOrder.Country">
+hhh\createdevided.html:158:                        <option value="اليمن">اليمن</option>
+hhh\createdevided.html:163:                    <select asp-for="tanjezOrder.City" class="form-select">
+hhh\createdevided.html:164:                        <option value="">المحافظة</option>
+hhh\createdevided.html:165:                        <option value="صنعاء">صنعاء</option>
+hhh\createdevided.html:166:                        <option value="تعز">تعز</option>
+hhh\createdevided.html:167:                        <option value="المهرة">المهرة</option>
+hhh\createdevided.html:168:                        <option value="الجوف">الجوف</option>
+hhh\createdevided.html:169:                        <option value="المحويت">المحويت</option>
+hhh\createdevided.html:170:                        <option value="صعدة">صعدة</option>
+hhh\createdevided.html:171:                        <option value="الضالع">الضالع</option>
+hhh\createdevided.html:172:                        <option value="شبوة">شبوة</option>
+hhh\createdevided.html:173:                        <option value="لحج">لحج</option>
+hhh\createdevided.html:174:                        <option value="عدن">عدن</option>
+hhh\createdevided.html:175:                        <option value="عمران">عمران</option>
+hhh\createdevided.html:176:                        <option value="حجة">حجة</option>
+hhh\createdevided.html:177:                        <option value="ريمة">ريمة</option>
+hhh\createdevided.html:178:                        <option value="ذمار">ذمار</option>
+hhh\createdevided.html:179:                        <option value="اب">اب</option>
+hhh\createdevided.html:180:                        <option value="مارب">مارب</option>
+hhh\createdevided.html:181:                        <option value="حضرموت">حضرموت</option>
+hhh\createdevided.html:182:                        <option value="البيضاء">البيضاء</option>
+hhh\createdevided.html:183:                        <option value="ابين">ابين</option>
+hhh\createdevided.html:184:                        <option value="الحديدة">الحديدة</option>
+hhh\createdevided.html:223:                    <select class="form-select" id="placeTypeId" 
+name="tanjezOrder.PlaceType">
+hhh\createdevided.html:225:                        <option value="حر">حر</option>
+hhh\createdevided.html:226:                        <option value="وقف">وقف</option>
+hhh\createdevided.html:227:                        <option value="3">+ انشاء جديد</option>
+hhh\createdevided.html:244:                <select asp-for="tanjezOrder.DocumentType"
+hhh\createdevided.html:245:                        asp-items="ViewBag.DocumentTypes ?? new List<SelectListItem>()"
+hhh\createdevided.html:248:                    <option value="">-- اختر نوع الوثيقة --</option>
+hhh\createdevided.html:249:                    <option value="add">+ إضافة</option>
+hhh\createdevided.html:255:                <select asp-for="tanjezOrder.Alhiaza"
+hhh\createdevided.html:256:                        asp-items="ViewBag.Ownerships ?? new List<SelectListItem>()"
+hhh\createdevided.html:259:                    <option value="">-- اختر الحيازة --</option>
+hhh\createdevided.html:260:                    <option value="add">+ إضافة</option>
+hhh\createdevided.html:277:                        <select class="form-select" id="unitSelect" 
+asp-for="tanjezOrder.Unit">
+hhh\createdevided.html:278:                            <option value="">اختر وحدة القياس</option>
+hhh\createdevided.html:279:                            <option value="قصبة">قصبة</option>
+hhh\createdevided.html:280:                            <option value="لبنة">لبنة</option>
+hhh\createdevided.html:365:                            <select class="form-select border-type" 
+name="earthBorders[0].BorderType" style="display:none;">
+hhh\createdevided.html:366:                                <option value="شمال">شمال</option>
+hhh\createdevided.html:367:                                <option value="جنوب">جنوب</option>
+hhh\createdevided.html:368:                                <option value="شرق">شرق</option>
+hhh\createdevided.html:369:                                <option value="غرب">غرب</option>
+hhh\createdevided.html:370:                                <option value="شمال شرقي">شمال شرقي</option>
+hhh\createdevided.html:371:                                <option value="شمال غربي">شمال غربي</option>
+hhh\createdevided.html:372:                                <option value="جنوب شرقي">جنوب شرقي</option>
+hhh\createdevided.html:373:                                <option value="جنوب غربي">جنوب غربي</option>
+hhh\createdevided.html:400:                            <select class="form-select border-type" 
+name="earthBorders[1].BorderType" style="display:none;">
+hhh\createdevided.html:402:                                <option value="جنوب">جنوب</option>
+hhh\createdevided.html:403:                                <option value="شرق">شرق</option>
+hhh\createdevided.html:404:                                <option value="غرب">غرب</option>
+hhh\createdevided.html:405:                                <option value="شمال شرقي">شمال شرقي</option>
+hhh\createdevided.html:406:                                <option value="شمال غربي">شمال غربي</option>
+hhh\createdevided.html:407:                                <option value="جنوب شرقي">جنوب شرقي</option>
+hhh\createdevided.html:408:                                <option value="جنوب غربي">جنوب غربي</option>
+hhh\createdevided.html:436:                            <select class="form-select border-type" 
+name="earthBorders[2].BorderType" style="display:none;">
+hhh\createdevided.html:438:                                <option value="شرق">شرق</option>
+hhh\createdevided.html:439:                                <option value="غرب">غرب</option>
+hhh\createdevided.html:440:                                <option value="شمال شرقي">شمال شرقي</option>
+hhh\createdevided.html:441:                                <option value="شمال غربي">شمال غربي</option>
+hhh\createdevided.html:442:                                <option value="جنوب شرقي">جنوب شرقي</option>
+hhh\createdevided.html:443:                                <option value="جنوب غربي">جنوب غربي</option>
+hhh\createdevided.html:471:                            <select class="form-select border-type" 
+name="earthBorders[3].BorderType" style="display:none;">
+hhh\createdevided.html:473:                                <option value="غرب">غرب</option>
+hhh\createdevided.html:474:                                <option value="شمال شرقي">شمال شرقي</option>
+hhh\createdevided.html:475:                                <option value="شمال غربي">شمال غربي</option>
+hhh\createdevided.html:476:                                <option value="جنوب شرقي">جنوب شرقي</option>
+hhh\createdevided.html:477:                                <option value="جنوب غربي">جنوب غربي</option>
+hhh\createdevided.html:593:                    <select asp-for="tanjezOrder.AccessRoadType"
+hhh\createdevided.html:594:                            asp-items="ViewBag.AccessRoadTypes ?? new 
+List<SelectListItem>()"
+hhh\createdevided.html:597:                        <option value="">تحت حيازتي</option>
+hhh\createdevided.html:599:                        <option value="add">+ إضافة</option>
+hhh\createdevided.html:767:                <select asp-for="tanjezOrder.AccessRoadType"
+hhh\createdevided.html:768:                        asp-items="ViewBag.AccessRoadTypes ?? new List<SelectListItem>()"
+hhh\createdevided.html:771:                    <option value="">-- اختر طريق الوصول --</option>
+hhh\createdevided.html:772:                    <option value="add">+ إضافة</option>
+hhh\createdevided.html:781:                @* <select asp-for="tanjezOrder.PeriodType" 
+asp-items="ViewBag.accessRoadType" class="form-select"> *@
+hhh\createdevided.html:783:                <select class="form-select" id="periodType" 
+name="tanjezOrder.PeriodType">
+hhh\createdevided.html:784:                    <option value="طارئ ومستعجل">طارئ ومستعجل</option>
+hhh\createdevided.html:785:                    <option value="حسب الاتفاق مع المهندس">حسب الاتفاق مع 
+المهندس</option>
+hhh\createdevided.html:786:                    <option value="طويلة">طويلة</option>
+hhh\createdevided.html:801:                <select class="form-select" id="Transportation" 
+name="tanjezOrder.Transportation">
+hhh\createdevided.html:802:                    <option value=""></option>
+hhh\createdevided.html:803:                    <option value="3"> سأقوم (بنقله وارجاعه) بسيارتي الخاصة</option>
+hhh\createdevided.html:804:                    <option value="2">يتكفل المهندس بتنقلاته</option>
+hhh\createdevided.html:815:                <select class="form-select" id="OverNight" name="tanjezOrder.OverNight">
+hhh\createdevided.html:816:                    <option value=""></option>
+hhh\createdevided.html:817:                    <option value="3"> سوف أوفر مبيت ومكان اقامة للمهندس خلال ايام 
+العمل</option>
+hhh\createdevided.html:818:                    <option value="2">︎يتكفل المهندس بمبيته واقامته</option>
+hhh\createdevided.html:827:                <select class="form-select" id="Allowance" name="tanjezOrder.Allowance">
+hhh\createdevided.html:828:                    <option value=""></option>
+hhh\createdevided.html:829:                    <option value="3"> نثريات المهندس على حسابي الخاص</option>
+hhh\createdevided.html:830:                    <option value="2">يتكفل المهندس بجميع نثرياته</option>
+hhh\createform.html:146:                    <select asp-for="tanjezOrder.DescripPerson" id="descripSelect" 
+class="form-select">
+hhh\createform.html:147:                      <option value="">الصفة</option>
+hhh\createform.html:148:                      <option value="عن نفسة">عن نفسه</option>
+hhh\createform.html:149:                      <option value="وكيل">وكيل</option>
+hhh\createform.html:150:                      <option value="وصي">وصي</option>
+hhh\createform.html:151:                      <option value="">إضافة</option>
+hhh\createform.html:160:                    <select id="typePieceSelect" class="form-select">
+hhh\createform.html:161:                      <option value="">-- اختر نوع القطعة --</option>
+hhh\createform.html:162:                      <option value="ارض">أرض</option>
+hhh\createform.html:163:                      <option value="رهق">رهق</option>
+hhh\createform.html:164:                      <option value="ارض مع رهق">أرض مع رهق</option>
+hhh\createform.html:165:                      <option value="مبنى">مبنى</option>
+hhh\createform.html:174:                    <select asp-for="tanjezOrder.Country" class="form-select">
+hhh\createform.html:175:                      <option value="اليمن">اليمن</option>
+hhh\createform.html:184:                    <select asp-for="tanjezOrder.City" class="form-select">
+hhh\createform.html:185:                      <option value="">المحافظة</option>
+hhh\createform.html:186:                      <option value="صنعاء">صنعاء</option>
+hhh\createform.html:187:                      <option value="تعز">تعز</option>
+hhh\createform.html:188:                      <option value="المهرة">المهرة</option>
+hhh\createform.html:189:                      <option value="الجوف">الجوف</option>
+hhh\createform.html:190:                      <option value="المحويت">المحويت</option>
+hhh\createform.html:191:                      <option value="صعدة">صعدة</option>
+hhh\createform.html:192:                      <option value="الضالع">الضالع</option>
+hhh\createform.html:193:                      <option value="شبوة">شبوة</option>
+hhh\createform.html:194:                      <option value="لحج">لحج</option>
+hhh\createform.html:195:                      <option value="عدن">عدن</option>
+hhh\createform.html:196:                      <option value="عمران">عمران</option>
+hhh\createform.html:197:                      <option value="حجة">حجة</option>
+hhh\createform.html:198:                      <option value="ريمة">ريمة</option>
+hhh\createform.html:199:                      <option value="ذمار">ذمار</option>
+hhh\createform.html:200:                      <option value="اب">إب</option>
+hhh\createform.html:201:                      <option value="مارب">مأرب</option>
+hhh\createform.html:202:                      <option value="حضرموت">حضرموت</option>
+hhh\createform.html:203:                      <option value="البيضاء">البيضاء</option>
+hhh\createform.html:204:                      <option value="ابين">أبين</option>
+hhh\createform.html:205:                      <option value="الحديدة">الحديدة</option>
+hhh\createform.html:262:                    <select id="placeTypeId" name="tanjezOrder.PlaceType" 
+class="form-select">
+hhh\createform.html:263:                      <option value="حر">حر</option>
+hhh\createform.html:264:                      <option value="وقف">وقف</option>
+hhh\createform.html:265:                      <option value="3">+ إنشاء جديد</option>
+hhh\createform.html:286:                <select asp-for="tanjezOrder.DocumentType"
+hhh\createform.html:287:                        asp-items="ViewBag.DocumentTypes ?? new List<SelectListItem>()"
+hhh\createform.html:290:                    <option value="">-- اختر نوع الوثيقة --</option>
+hhh\createform.html:291:                    <option value="add">+ إضافة</option>
+hhh\createform.html:297:                <select asp-for="tanjezOrder.Alhiaza"
+hhh\createform.html:298:                        asp-items="ViewBag.Ownerships ?? new List<SelectListItem>()"
+hhh\createform.html:301:                    <option value="">-- اختر الحيازة --</option>
+hhh\createform.html:302:                    <option value="add">+ إضافة</option>
+hhh\createform.html:319:                        <select class="form-select" id="unitSelect" 
+asp-for="tanjezOrder.Unit">
+hhh\createform.html:320:                            <option value="">اختر وحدة القياس</option>
+hhh\createform.html:321:                            <option value="قصبة">قصبة</option>
+hhh\createform.html:322:                            <option value="لبنة">لبنة</option>
+hhh\createform.html:407:                            <select class="form-select border-type" 
+name="earthBorders[0].BorderType" style="display:none;">
+hhh\createform.html:408:                                <option value="شمال">شمال</option>
+hhh\createform.html:409:                                <option value="جنوب">جنوب</option>
+hhh\createform.html:410:                                <option value="شرق">شرق</option>
+hhh\createform.html:411:                                <option value="غرب">غرب</option>
+hhh\createform.html:412:                                <option value="شمال شرقي">شمال شرقي</option>
+hhh\createform.html:413:                                <option value="شمال غربي">شمال غربي</option>
+hhh\createform.html:414:                                <option value="جنوب شرقي">جنوب شرقي</option>
+hhh\createform.html:415:                                <option value="جنوب غربي">جنوب غربي</option>
+hhh\createform.html:442:                            <select class="form-select border-type" 
+name="earthBorders[1].BorderType" style="display:none;">
+hhh\createform.html:444:                                <option value="جنوب">جنوب</option>
+hhh\createform.html:445:                                <option value="شرق">شرق</option>
+hhh\createform.html:446:                                <option value="غرب">غرب</option>
+hhh\createform.html:447:                                <option value="شمال شرقي">شمال شرقي</option>
+hhh\createform.html:448:                                <option value="شمال غربي">شمال غربي</option>
+hhh\createform.html:449:                                <option value="جنوب شرقي">جنوب شرقي</option>
+hhh\createform.html:450:                                <option value="جنوب غربي">جنوب غربي</option>
+hhh\createform.html:478:                            <select class="form-select border-type" 
+name="earthBorders[2].BorderType" style="display:none;">
+hhh\createform.html:480:                                <option value="شرق">شرق</option>
+hhh\createform.html:481:                                <option value="غرب">غرب</option>
+hhh\createform.html:482:                                <option value="شمال شرقي">شمال شرقي</option>
+hhh\createform.html:483:                                <option value="شمال غربي">شمال غربي</option>
+hhh\createform.html:484:                                <option value="جنوب شرقي">جنوب شرقي</option>
+hhh\createform.html:485:                                <option value="جنوب غربي">جنوب غربي</option>
+hhh\createform.html:513:                            <select class="form-select border-type" 
+name="earthBorders[3].BorderType" style="display:none;">
+hhh\createform.html:515:                                <option value="غرب">غرب</option>
+hhh\createform.html:516:                                <option value="شمال شرقي">شمال شرقي</option>
+hhh\createform.html:517:                                <option value="شمال غربي">شمال غربي</option>
+hhh\createform.html:518:                                <option value="جنوب شرقي">جنوب شرقي</option>
+hhh\createform.html:519:                                <option value="جنوب غربي">جنوب غربي</option>
+hhh\createform.html:635:                    <select asp-for="tanjezOrder.AccessRoadType"
+hhh\createform.html:636:                            asp-items="ViewBag.AccessRoadTypes ?? new 
+List<SelectListItem>()"
+hhh\createform.html:639:                        <option value="">تحت حيازتي</option>
+hhh\createform.html:641:                        <option value="add">+ إضافة</option>
+hhh\createform.html:809:                <select asp-for="tanjezOrder.AccessRoadType"
+hhh\createform.html:810:                        asp-items="ViewBag.AccessRoadTypes ?? new List<SelectListItem>()"
+hhh\createform.html:813:                    <option value="">-- اختر طريق الوصول --</option>
+hhh\createform.html:814:                    <option value="add">+ إضافة</option>
+hhh\createform.html:823:                @* <select asp-for="tanjezOrder.PeriodType" 
+asp-items="ViewBag.accessRoadType" class="form-select"> *@
+hhh\createform.html:825:                <select class="form-select" id="periodType" name="tanjezOrder.PeriodType">
+hhh\createform.html:826:                    <option value="طارئ ومستعجل">طارئ ومستعجل</option>
+hhh\createform.html:827:                    <option value="حسب الاتفاق مع المهندس">حسب الاتفاق مع المهندس</option>
+hhh\createform.html:828:                    <option value="طويلة">طويلة</option>
+hhh\createform.html:843:                <select class="form-select" id="Transportation" 
+name="tanjezOrder.Transportation">
+hhh\createform.html:844:                    <option value=""></option>
+hhh\createform.html:845:                    <option value="3"> سأقوم (بنقله وارجاعه) بسيارتي الخاصة</option>
+hhh\createform.html:846:                    <option value="2">يتكفل المهندس بتنقلاته</option>
+hhh\createform.html:857:                <select class="form-select" id="OverNight" name="tanjezOrder.OverNight">
+hhh\createform.html:858:                    <option value=""></option>
+hhh\createform.html:859:                    <option value="3"> سوف أوفر مبيت ومكان اقامة للمهندس خلال ايام 
+العمل</option>
+hhh\createform.html:860:                    <option value="2">︎يتكفل المهندس بمبيته واقامته</option>
+hhh\createform.html:869:                <select class="form-select" id="Allowance" name="tanjezOrder.Allowance">
+hhh\createform.html:870:                    <option value=""></option>
+hhh\createform.html:871:                    <option value="3"> نثريات المهندس على حسابي الخاص</option>
+hhh\createform.html:872:                    <option value="2">يتكفل المهندس بجميع نثرياته</option>
+hhh\createform.html:981:            <select>
+hhh\createform.html:982:                <option value="">افراد</option>
+hhh\createform.html:983:                <option value="جهات">جهات</option>
+hhh\createform.html:1078:            <select id="typePieceSelect1" class="form-select">
+hhh\createform.html:1079:                <option value="">-- طبيعه منطقة الخلاف --</option>
+hhh\createform.html:1134:                            <select id="typePieceSelect1" class="form-select">
+hhh\createform.html:1136:                                <option value="جنوب">1- ملكية كامله\ جزئية</option>
+hhh\createform.html:1137:                                <option value="شرق">2- تصحيح حدود</option>
+hhh\createform.html:1138:                                <option value="غرب">3- اثبات</option>
+hhh\createform.html:1139:                                <option value="غرب">4- نزاع على جهه ماء</option>
+hhh\createform.html:1162:                            <select id="typePieceSelect1" class="form-select">
+hhh\createform.html:1164:                                <option value="جنوب">لا يمتلك وثيقه - عرف</option>
+hhh\createform.html:1165:                                <option value="شرق">2-بصيرة شراء</option>
+hhh\createform.html:1166:                                <option value="غرب">3- فص اقسام</option>
+hhh\createform.html:1167:                                <option value="غرب">4-عقد</option>
+hhh\createform.html:1192:                            <select id="typePieceSelect1" class="form-select">
+hhh\createform.html:1194:                                <option value="جنوب">تصرف شراء()</option>
+hhh\createform.html:1195:                                <option value="شرق">2- ورث وقسمتها</option>
+hhh\createform.html:1196:                                <option value="غرب">3- هبة نذر </option>
+hhh\createform.html:1236:                            <select id="typePieceSelect1" class="form-select">
+hhh\createform.html:1238:                                <option value="جنوب">تزوير وثائق</option>
+hhh\createform.html:1239:                                <option value="شرق">2-  عدم تقسيم الورث</option>
+hhh\createform.html:1240:                                <option value="غرب">3-  تداخل املاك </option>
+hhh\createform.html:1241:                                <option value="غرب">3-   تغير معالم </option>
+hhh\createorder.html:110:                    <select asp-for="tanjezOrder.DescripPerson" id="descripSelect" 
+class="form-select">
+hhh\createorder.html:111:                        <option value="">   الصفة  </option>
+hhh\createorder.html:113:                        <option value="عن نفسة">  عن نفسة</option>
+hhh\createorder.html:115:                        <option value="وكيل"> وكيل</option>
+hhh\createorder.html:116:                        <option value="وصي"> وصي </option>
+hhh\createorder.html:117:                        <option value=""> اضافة</option>
+hhh\createorder.html:123:                    <select asp-for="tanjezOrder.PurposeOrder"
+hhh\createorder.html:124:                            asp-items="ViewBag.Purposes ?? new List<SelectListItem>()"
+hhh\createorder.html:127:                        <option value="">-- اختر الغرض --</option>
+hhh\createorder.html:128:                        <option value="add">+ إضافة</option>
+hhh\createorder.html:134:                        <select id="typePieceSelect" class="form-select">
+hhh\createorder.html:135:                            <option value="">-- اختر نوع القطعة --</option>
+hhh\createorder.html:136:                            <option value="ارض">أرض</option>
+hhh\createorder.html:137:                            <option value="رهق">رهق</option>
+hhh\createorder.html:138:                            <option value="ارض مع رهق">أرض مع رهق</option>
+hhh\createorder.html:139:                            <option value="مبنى">مبنى</option>
+hhh\createorder.html:156:                    <select class="form-select" asp-for="tanjezOrder.Country">
+hhh\createorder.html:157:                        <option value="اليمن">اليمن</option>
+hhh\createorder.html:162:                    <select asp-for="tanjezOrder.City" class="form-select">
+hhh\createorder.html:163:                        <option value="">المحافظة</option>
+hhh\createorder.html:164:                        <option value="صنعاء">صنعاء</option>
+hhh\createorder.html:165:                        <option value="تعز">تعز</option>
+hhh\createorder.html:166:                        <option value="المهرة">المهرة</option>
+hhh\createorder.html:167:                        <option value="الجوف">الجوف</option>
+hhh\createorder.html:168:                        <option value="المحويت">المحويت</option>
+hhh\createorder.html:169:                        <option value="صعدة">صعدة</option>
+hhh\createorder.html:170:                        <option value="الضالع">الضالع</option>
+hhh\createorder.html:171:                        <option value="شبوة">شبوة</option>
+hhh\createorder.html:172:                        <option value="لحج">لحج</option>
+hhh\createorder.html:173:                        <option value="عدن">عدن</option>
+hhh\createorder.html:174:                        <option value="عمران">عمران</option>
+hhh\createorder.html:175:                        <option value="حجة">حجة</option>
+hhh\createorder.html:176:                        <option value="ريمة">ريمة</option>
+hhh\createorder.html:177:                        <option value="ذمار">ذمار</option>
+hhh\createorder.html:178:                        <option value="اب">اب</option>
+hhh\createorder.html:179:                        <option value="مارب">مارب</option>
+hhh\createorder.html:180:                        <option value="حضرموت">حضرموت</option>
+hhh\createorder.html:181:                        <option value="البيضاء">البيضاء</option>
+hhh\createorder.html:182:                        <option value="ابين">ابين</option>
+hhh\createorder.html:183:                        <option value="الحديدة">الحديدة</option>
+hhh\createorder.html:222:                    <select class="form-select" id="placeTypeId" 
+name="tanjezOrder.PlaceType">
+hhh\createorder.html:224:                        <option value="حر">حر</option>
+hhh\createorder.html:225:                        <option value="وقف">وقف</option>
+hhh\createorder.html:226:                        <option value="3">+ انشاء جديد</option>
+hhh\createorder.html:243:                <select asp-for="tanjezOrder.DocumentType"
+hhh\createorder.html:244:                        asp-items="ViewBag.DocumentTypes ?? new List<SelectListItem>()"
+hhh\createorder.html:247:                    <option value="">-- اختر نوع الوثيقة --</option>
+hhh\createorder.html:248:                    <option value="add">+ إضافة</option>
+hhh\createorder.html:254:                <select asp-for="tanjezOrder.Alhiaza"
+hhh\createorder.html:255:                        asp-items="ViewBag.Ownerships ?? new List<SelectListItem>()"
+hhh\createorder.html:258:                    <option value="">-- اختر الحيازة --</option>
+hhh\createorder.html:259:                    <option value="add">+ إضافة</option>
+hhh\createorder.html:276:                        <select class="form-select" id="unitSelect" 
+asp-for="tanjezOrder.Unit">
+hhh\createorder.html:277:                            <option value="">اختر وحدة القياس</option>
+hhh\createorder.html:278:                            <option value="قصبة">قصبة</option>
+hhh\createorder.html:279:                            <option value="لبنة">لبنة</option>
+hhh\createorder.html:364:                            <select class="form-select border-type" 
+name="earthBorders[0].BorderType" style="display:none;">
+hhh\createorder.html:365:                                <option value="شمال">شمال</option>
+hhh\createorder.html:366:                                <option value="جنوب">جنوب</option>
+hhh\createorder.html:367:                                <option value="شرق">شرق</option>
+hhh\createorder.html:368:                                <option value="غرب">غرب</option>
+hhh\createorder.html:369:                                <option value="شمال شرقي">شمال شرقي</option>
+hhh\createorder.html:370:                                <option value="شمال غربي">شمال غربي</option>
+hhh\createorder.html:371:                                <option value="جنوب شرقي">جنوب شرقي</option>
+hhh\createorder.html:372:                                <option value="جنوب غربي">جنوب غربي</option>
+hhh\createorder.html:399:                            <select class="form-select border-type" 
+name="earthBorders[1].BorderType" style="display:none;">
+hhh\createorder.html:401:                                <option value="جنوب">جنوب</option>
+hhh\createorder.html:402:                                <option value="شرق">شرق</option>
+hhh\createorder.html:403:                                <option value="غرب">غرب</option>
+hhh\createorder.html:404:                                <option value="شمال شرقي">شمال شرقي</option>
+hhh\createorder.html:405:                                <option value="شمال غربي">شمال غربي</option>
+hhh\createorder.html:406:                                <option value="جنوب شرقي">جنوب شرقي</option>
+hhh\createorder.html:407:                                <option value="جنوب غربي">جنوب غربي</option>
+hhh\createorder.html:435:                            <select class="form-select border-type" 
+name="earthBorders[2].BorderType" style="display:none;">
+hhh\createorder.html:437:                                <option value="شرق">شرق</option>
+hhh\createorder.html:438:                                <option value="غرب">غرب</option>
+hhh\createorder.html:439:                                <option value="شمال شرقي">شمال شرقي</option>
+hhh\createorder.html:440:                                <option value="شمال غربي">شمال غربي</option>
+hhh\createorder.html:441:                                <option value="جنوب شرقي">جنوب شرقي</option>
+hhh\createorder.html:442:                                <option value="جنوب غربي">جنوب غربي</option>
+hhh\createorder.html:470:                            <select class="form-select border-type" 
+name="earthBorders[3].BorderType" style="display:none;">
+hhh\createorder.html:472:                                <option value="غرب">غرب</option>
+hhh\createorder.html:473:                                <option value="شمال شرقي">شمال شرقي</option>
+hhh\createorder.html:474:                                <option value="شمال غربي">شمال غربي</option>
+hhh\createorder.html:475:                                <option value="جنوب شرقي">جنوب شرقي</option>
+hhh\createorder.html:476:                                <option value="جنوب غربي">جنوب غربي</option>
+hhh\createorder.html:592:                    <select asp-for="tanjezOrder.AccessRoadType"
+hhh\createorder.html:593:                            asp-items="ViewBag.AccessRoadTypes ?? new 
+List<SelectListItem>()"
+hhh\createorder.html:596:                        <option value="">تحت حيازتي</option>
+hhh\createorder.html:598:                        <option value="add">+ إضافة</option>
+hhh\createorder.html:766:                <select asp-for="tanjezOrder.AccessRoadType"
+hhh\createorder.html:767:                        asp-items="ViewBag.AccessRoadTypes ?? new List<SelectListItem>()"
+hhh\createorder.html:770:                    <option value="">-- اختر طريق الوصول --</option>
+hhh\createorder.html:771:                    <option value="add">+ إضافة</option>
+hhh\createorder.html:780:                @* <select asp-for="tanjezOrder.PeriodType" 
+asp-items="ViewBag.accessRoadType" class="form-select"> *@
+hhh\createorder.html:782:                <select class="form-select" id="periodType" name="tanjezOrder.PeriodType">
+hhh\createorder.html:783:                    <option value="طارئ ومستعجل">طارئ ومستعجل</option>
+hhh\createorder.html:784:                    <option value="حسب الاتفاق مع المهندس">حسب الاتفاق مع المهندس</option>
+hhh\createorder.html:785:                    <option value="طويلة">طويلة</option>
+hhh\createorder.html:800:                <select class="form-select" id="Transportation" 
+name="tanjezOrder.Transportation">
+hhh\createorder.html:801:                    <option value=""></option>
+hhh\createorder.html:802:                    <option value="3"> سأقوم (بنقله وارجاعه) بسيارتي الخاصة</option>
+hhh\createorder.html:803:                    <option value="2">يتكفل المهندس بتنقلاته</option>
+hhh\createorder.html:814:                <select class="form-select" id="OverNight" name="tanjezOrder.OverNight">
+hhh\createorder.html:815:                    <option value=""></option>
+hhh\createorder.html:816:                    <option value="3"> سوف أوفر مبيت ومكان اقامة للمهندس خلال ايام 
+العمل</option>
+hhh\createorder.html:817:                    <option value="2">︎يتكفل المهندس بمبيته واقامته</option>
+hhh\createorder.html:826:                <select class="form-select" id="Allowance" name="tanjezOrder.Allowance">
+hhh\createorder.html:827:                    <option value=""></option>
+hhh\createorder.html:828:                    <option value="3"> نثريات المهندس على حسابي الخاص</option>
+hhh\createorder.html:829:                    <option value="2">يتكفل المهندس بجميع نثرياته</option>
+hhh\creatform.html:111:                    <select asp-for="tanjezOrder.DescripPerson" id="descripSelect" 
+class="form-select">
+hhh\creatform.html:112:                        <option value="">   الصفة  </option>
+hhh\creatform.html:114:                        <option value="عن نفسة">  عن نفسة</option>
+hhh\creatform.html:116:                        <option value="وكيل"> وكيل</option>
+hhh\creatform.html:117:                        <option value="وصي"> وصي </option>
+hhh\creatform.html:118:                        <option value=""> اضافة</option>
+hhh\creatform.html:126:                        <select id="typePieceSelect" class="form-select">
+hhh\creatform.html:127:                            <option value="">-- اختر نوع طبيعه المنطقة --</option>
+hhh\creatform.html:128:                            <option value="ارض">أرض</option>
+hhh\creatform.html:129:                            <option value="رهق">رهق</option>
+hhh\creatform.html:130:                            <option value="ارض مع رهق">أرض مع رهق</option>
+hhh\creatform.html:131:                            <option value="مبنى">مبنى</option>
+hhh\creatform.html:148:                    <select class="form-select" asp-for="tanjezOrder.Country">
+hhh\creatform.html:149:                        <option value="اليمن">اليمن</option>
+hhh\creatform.html:154:                    <select asp-for="tanjezOrder.City" class="form-select">
+hhh\creatform.html:155:                        <option value="">المحافظة</option>
+hhh\creatform.html:156:                        <option value="صنعاء">صنعاء</option>
+hhh\creatform.html:157:                        <option value="تعز">تعز</option>
+hhh\creatform.html:158:                        <option value="المهرة">المهرة</option>
+hhh\creatform.html:159:                        <option value="الجوف">الجوف</option>
+hhh\creatform.html:160:                        <option value="المحويت">المحويت</option>
+hhh\creatform.html:161:                        <option value="صعدة">صعدة</option>
+hhh\creatform.html:162:                        <option value="الضالع">الضالع</option>
+hhh\creatform.html:163:                        <option value="شبوة">شبوة</option>
+hhh\creatform.html:164:                        <option value="لحج">لحج</option>
+hhh\creatform.html:165:                        <option value="عدن">عدن</option>
+hhh\creatform.html:166:                        <option value="عمران">عمران</option>
+hhh\creatform.html:167:                        <option value="حجة">حجة</option>
+hhh\creatform.html:168:                        <option value="ريمة">ريمة</option>
+hhh\creatform.html:169:                        <option value="ذمار">ذمار</option>
+hhh\creatform.html:170:                        <option value="اب">اب</option>
+hhh\creatform.html:171:                        <option value="مارب">مارب</option>
+hhh\creatform.html:172:                        <option value="حضرموت">حضرموت</option>
+hhh\creatform.html:173:                        <option value="البيضاء">البيضاء</option>
+hhh\creatform.html:174:                        <option value="ابين">ابين</option>
+hhh\creatform.html:175:                        <option value="الحديدة">الحديدة</option>
+hhh\creatform.html:214:                    <select class="form-select" id="placeTypeId" 
+name="tanjezOrder.PlaceType">
+hhh\creatform.html:216:                        <option value="حر">حر</option>
+hhh\creatform.html:217:                        <option value="وقف">وقف</option>
+hhh\creatform.html:218:                        <option value="3">+ انشاء جديد</option>
+hhh\creatform.html:235:                <select asp-for="tanjezOrder.DocumentType"
+hhh\creatform.html:236:                        asp-items="ViewBag.DocumentTypes ?? new List<SelectListItem>()"
+hhh\creatform.html:239:                    <option value="">-- اختر نوع الوثيقة --</option>
+hhh\creatform.html:240:                    <option value="add">+ إضافة</option>
+hhh\creatform.html:246:                <select asp-for="tanjezOrder.Alhiaza"
+hhh\creatform.html:247:                        asp-items="ViewBag.Ownerships ?? new List<SelectListItem>()"
+hhh\creatform.html:250:                    <option value="">-- اختر الحيازة --</option>
+hhh\creatform.html:251:                    <option value="add">+ إضافة</option>
+hhh\creatform.html:268:                        <select class="form-select" id="unitSelect" 
+asp-for="tanjezOrder.Unit">
+hhh\creatform.html:269:                            <option value="">اختر وحدة القياس</option>
+hhh\creatform.html:270:                            <option value="قصبة">قصبة</option>
+hhh\creatform.html:271:                            <option value="لبنة">لبنة</option>
+hhh\creatform.html:356:                            <select class="form-select border-type" 
+name="earthBorders[0].BorderType" style="display:none;">
+hhh\creatform.html:357:                                <option value="شمال">شمال</option>
+hhh\creatform.html:358:                                <option value="جنوب">جنوب</option>
+hhh\creatform.html:359:                                <option value="شرق">شرق</option>
+hhh\creatform.html:360:                                <option value="غرب">غرب</option>
+hhh\creatform.html:361:                                <option value="شمال شرقي">شمال شرقي</option>
+hhh\creatform.html:362:                                <option value="شمال غربي">شمال غربي</option>
+hhh\creatform.html:363:                                <option value="جنوب شرقي">جنوب شرقي</option>
+hhh\creatform.html:364:                                <option value="جنوب غربي">جنوب غربي</option>
+hhh\creatform.html:391:                            <select class="form-select border-type" 
+name="earthBorders[1].BorderType" style="display:none;">
+hhh\creatform.html:393:                                <option value="جنوب">جنوب</option>
+hhh\creatform.html:394:                                <option value="شرق">شرق</option>
+hhh\creatform.html:395:                                <option value="غرب">غرب</option>
+hhh\creatform.html:396:                                <option value="شمال شرقي">شمال شرقي</option>
+hhh\creatform.html:397:                                <option value="شمال غربي">شمال غربي</option>
+hhh\creatform.html:398:                                <option value="جنوب شرقي">جنوب شرقي</option>
+hhh\creatform.html:399:                                <option value="جنوب غربي">جنوب غربي</option>
+hhh\creatform.html:427:                            <select class="form-select border-type" 
+name="earthBorders[2].BorderType" style="display:none;">
+hhh\creatform.html:429:                                <option value="شرق">شرق</option>
+hhh\creatform.html:430:                                <option value="غرب">غرب</option>
+hhh\creatform.html:431:                                <option value="شمال شرقي">شمال شرقي</option>
+hhh\creatform.html:432:                                <option value="شمال غربي">شمال غربي</option>
+hhh\creatform.html:433:                                <option value="جنوب شرقي">جنوب شرقي</option>
+hhh\creatform.html:434:                                <option value="جنوب غربي">جنوب غربي</option>
+hhh\creatform.html:462:                            <select class="form-select border-type" 
+name="earthBorders[3].BorderType" style="display:none;">
+hhh\creatform.html:464:                                <option value="غرب">غرب</option>
+hhh\creatform.html:465:                                <option value="شمال شرقي">شمال شرقي</option>
+hhh\creatform.html:466:                                <option value="شمال غربي">شمال غربي</option>
+hhh\creatform.html:467:                                <option value="جنوب شرقي">جنوب شرقي</option>
+hhh\creatform.html:468:                                <option value="جنوب غربي">جنوب غربي</option>
+hhh\creatform.html:584:                    <select asp-for="tanjezOrder.AccessRoadType"
+hhh\creatform.html:585:                            asp-items="ViewBag.AccessRoadTypes ?? new List<SelectListItem>()"
+hhh\creatform.html:588:                        <option value="">تحت حيازتي</option>
+hhh\creatform.html:590:                        <option value="add">+ إضافة</option>
+hhh\creatform.html:758:                <select asp-for="tanjezOrder.AccessRoadType"
+hhh\creatform.html:759:                        asp-items="ViewBag.AccessRoadTypes ?? new List<SelectListItem>()"
+hhh\creatform.html:762:                    <option value="">-- اختر طريق الوصول --</option>
+hhh\creatform.html:763:                    <option value="add">+ إضافة</option>
+hhh\creatform.html:772:                @* <select asp-for="tanjezOrder.PeriodType" 
+asp-items="ViewBag.accessRoadType" class="form-select"> *@
+hhh\creatform.html:774:                <select class="form-select" id="periodType" name="tanjezOrder.PeriodType">
+hhh\creatform.html:775:                    <option value="طارئ ومستعجل">طارئ ومستعجل</option>
+hhh\creatform.html:776:                    <option value="حسب الاتفاق مع المهندس">حسب الاتفاق مع المهندس</option>
+hhh\creatform.html:777:                    <option value="طويلة">طويلة</option>
+hhh\creatform.html:792:                <select class="form-select" id="Transportation" 
+name="tanjezOrder.Transportation">
+hhh\creatform.html:793:                    <option value=""></option>
+hhh\creatform.html:794:                    <option value="3"> سأقوم (بنقله وارجاعه) بسيارتي الخاصة</option>
+hhh\creatform.html:795:                    <option value="2">يتكفل المهندس بتنقلاته</option>
+hhh\creatform.html:806:                <select class="form-select" id="OverNight" name="tanjezOrder.OverNight">
+hhh\creatform.html:807:                    <option value=""></option>
+hhh\creatform.html:808:                    <option value="3"> سوف أوفر مبيت ومكان اقامة للمهندس خلال ايام 
+العمل</option>
+hhh\creatform.html:809:                    <option value="2">︎يتكفل المهندس بمبيته واقامته</option>
+hhh\creatform.html:818:                <select class="form-select" id="Allowance" name="tanjezOrder.Allowance">
+hhh\creatform.html:819:                    <option value=""></option>
+hhh\creatform.html:820:                    <option value="3"> نثريات المهندس على حسابي الخاص</option>
+hhh\creatform.html:821:                    <option value="2">يتكفل المهندس بجميع نثرياته</option>
+hhh\creatform.html:930:            <select>
+hhh\creatform.html:931:                <option value="">افراد</option>
+hhh\creatform.html:932:                <option value="جهات">جهات</option>
+hhh\creatform.html:1027:            <select id="typePieceSelect1" class="form-select">
+hhh\creatform.html:1028:                <option value="">-- طبيعه منطقة الخلاف --</option>
+hhh\creatform.html:1083:                            <select id="typePieceSelect1" class="form-select">
+hhh\creatform.html:1085:                                <option value="جنوب">1- ملكية كامله\ جزئية</option>
+hhh\creatform.html:1086:                                <option value="شرق">2- تصحيح حدود</option>
+hhh\creatform.html:1087:                                <option value="غرب">3- اثبات</option>
+hhh\creatform.html:1088:                                <option value="غرب">4- نزاع على جهه ماء</option>
+hhh\creatform.html:1111:                            <select id="typePieceSelect1" class="form-select">
+hhh\creatform.html:1113:                                <option value="جنوب">لا يمتلك وثيقه - عرف</option>
+hhh\creatform.html:1114:                                <option value="شرق">2-بصيرة شراء</option>
+hhh\creatform.html:1115:                                <option value="غرب">3- فص اقسام</option>
+hhh\creatform.html:1116:                                <option value="غرب">4-عقد</option>
+hhh\creatform.html:1141:                            <select id="typePieceSelect1" class="form-select">
+hhh\creatform.html:1143:                                <option value="جنوب">تصرف شراء()</option>
+hhh\creatform.html:1144:                                <option value="شرق">2- ورث وقسمتها</option>
+hhh\creatform.html:1145:                                <option value="غرب">3- هبة نذر </option>
+hhh\creatform.html:1185:                            <select id="typePieceSelect1" class="form-select">
+hhh\creatform.html:1187:                                <option value="جنوب">تزوير وثائق</option>
+hhh\creatform.html:1188:                                <option value="شرق">2-  عدم تقسيم الورث</option>
+hhh\creatform.html:1189:                                <option value="غرب">3-  تداخل املاك </option>
+hhh\creatform.html:1190:                                <option value="غرب">3-   تغير معالم </option>
+hhh\devid.html:29:            <select>
+hhh\devid.html:30:                <option value="">افراد</option>
+hhh\devid.html:31:                <option value="جهات">جهات</option>
+hhh\devid.html:123:            <select id="typePieceSelect1" class="form-select">
+hhh\devid.html:124:                <option value="">-- طبيعه منطقة الخلاف --</option>
+hhh\devid.html:187:                            <select id="typePieceSelect1" class="form-select">
+hhh\devid.html:189:                                <option value="جنوب">1- ملكية كامله\ جزئية</option>
+hhh\devid.html:190:                                <option value="شرق">2- تصحيح حدود</option>
+hhh\devid.html:191:                                <option value="غرب">3- اثبات</option>
+hhh\devid.html:192:                                <option value="غرب">4- نزاع على جهه ماء</option>
+hhh\devid.html:215:                            <select id="typePieceSelect1" class="form-select">
+hhh\devid.html:217:                                <option value="جنوب">لا يمتلك وثيقه - عرف</option>
+hhh\devid.html:218:                                <option value="شرق">2-بصيرة شراء</option>
+hhh\devid.html:219:                                <option value="غرب">3- فص اقسام</option>
+hhh\devid.html:220:                                <option value="غرب">4-عقد</option>
+hhh\devid.html:245:                            <select id="typePieceSelect1" class="form-select">
+hhh\devid.html:247:                                <option value="جنوب">تصرف شراء()</option>
+hhh\devid.html:248:                                <option value="شرق">2- ورث وقسمتها</option>
+hhh\devid.html:249:                                <option value="غرب">3- هبة نذر </option>
+hhh\devid.html:289:                            <select id="typePieceSelect1" class="form-select">
+hhh\devid.html:291:                                <option value="جنوب">تزوير وثائق</option>
+hhh\devid.html:292:                                <option value="شرق">2-  عدم تقسيم الورث</option>
+hhh\devid.html:293:                                <option value="غرب">3-  تداخل املاك </option>
+hhh\devid.html:294:                                <option value="غرب">3-   تغير معالم </option>
+hhh\index.html:228:                <select id="eduDegree" class="form-control">
+hhh\index.html:229:                    <option value="">اختر المؤهل</option>
+hhh\index.html:230:                    <option>ثانوية عامة</option>
+hhh\index.html:231:                    <option>دبلوم</option>
+hhh\index.html:232:                    <option>بكالوريوس</option>
+hhh\index.html:233:                    <option>ماجستير</option>
+hhh\index.html:234:                    <option>دكتوراه</option>
+hhh\index.html:235:                    <option>بروفيسور</option>
+hhh\index.html:255:                        <select id="type" class="form-control">
+hhh\index.html:256:                            <option value="">اختر النوع</option>
+hhh\index.html:257:                            <option>برامج إلكترونية وأنظمة حاسوب</option>
+hhh\index.html:258:                            <option>أجهزة وأدوات ومعدات</option>
+hhh\index.html:259:                            <option>دورات تدريبية</option>
+hhh\index.html:264:                        <select id="almgal" class="form-control">
+hhh\index.html:265:                            <option value="">اختر المجال</option>
+hhh\index.html:266:                            <option>الهندسة المدنية</option>
+hhh\index.html:267:                            <option>نظم المعلومات</option>
+hhh\index.html:268:                            <option>الإعلام</option>
+hhh\index.html:269:                            <option>إدارة الأعمال</option>
+hhh\index.html:270:                            <option>المالية والمحاسبة</option>
+hhh\index.html:271:                            <option>البرمجة</option>
+hhh\index.html:272:                            <option>الشبكات</option>
+hhh\index.html:273:                            <option>التصميم الجرافيكي</option>
+hhh\index.html:278:                        <select id="depart" class="form-control">
+hhh\index.html:279:                            <option value="">اختر القسم</option>
+hhh\index.html:280:                            <option>قسم الإنشاء</option>
+hhh\index.html:281:                            <option>قسم الصحافة</option>
+hhh\index.html:282:                            <option>قسم الإنشاءات</option>
+hhh\index.html:283:                            <option>قسم التسويق</option>
+hhh\index.html:284:                            <option>قسم الموارد البشرية</option>
+hhh\WorkOffer.html:89:            <select id="endDateOption" class="form-select">
+hhh\WorkOffer.html:90:                <option value="unspecified">غير محدد</option>
+hhh\WorkOffer.html:91:                <option value="specified">محدد</option>
+hhh\WorkOffer.html:126:            <select asp-for="WorkWagesTemplateId" id="transportTemplateSelect1" 
+class="form-select">
+hhh\WorkOffer.html:127:                <option value="">-- اختر قالب --</option>
+hhh\WorkOffer.html:129:                <option value="create-new-template1">+ إنشاء جديد قالب أجور العمل</option>
+hhh\WorkOffer.html:130:                <option value="advanced-search">🔍 البحث المتقدم</option>
+hhh\WorkOffer.html:161:            <select asp-for="TransportationScheduleTemplateId" id="transportTemplateSelect" 
+class="form-select">
+hhh\WorkOffer.html:162:                <option value=""></option>
+hhh\WorkOffer.html:164:                <option value="create-new-template">+ إنشاء جديد قالب التنقلات 
+والمبيت</option>
+hhh\WorkOffer.html:230:            <select asp-for="AdditionalCostTypeId" id="additionalCostSelect" 
+class="form-select">
+hhh\WorkOffer.html:231:                <option value="">-- اختر قالب --</option>
+hhh\WorkOffer1.html:91:            <select asp-for="AdditionalCostTypeId" id="additionalCostSelect" 
+class="form-select">
+hhh\WorkOffer1.html:92:                <option value="">-- اختر قالب --</option>
+hhh\Work_Form.html:75:                    <select class="form-select">
+hhh\Work_Form.html:76:                      <option>-- اختر --</option>
+hhh\Work_Form.html:77:                      <option>طلب جديد</option>
+hhh\Work_Form.html:78:                      <option>تعديل</option>
+hhh\Work_Form.html:107:                    <select class="form-select">
+hhh\Work_Form.html:108:                      <option>عادل محمد صالح عايش-77088864</option>
+hhh\Work_Form.html:109:                      <option>+ إنشاء عدل الروية جديد</option>
+hhh\Work_Form.html:151:                                <select name="Governorate" class="form-select 
+form-select-sm">
+hhh\Work_Form.html:153:                                    <option value="">1- لا يوجد</option>
+hhh\Work_Form.html:155:                                    <option value="">    2-الاراضي      </option>
+hhh\Work_Form.html:156:                                    <option value="">     3- المعمورات    </option>
+hhh\Work_Form.html:157:                                    <option value="">        4- دور العبادة       </option>
+hhh\Work_Form.html:158:                                    <option value="">     5- المقابر    </option>
+hhh\Work_Form.html:159:                                    <option value="">      6- الاسواق    </option>
+hhh\Work_Form.html:160:                                    <option value="">    7- الطرقات      </option>
+hhh\Work_Form.html:161:                                    <option value="">     8- رهق\\مسقئ    </option>
+hhh\Work_Form.html:162:                                    <option value="">      9- اخرى تذكر   </option>
+hhh\Work_Form.html:167:                                <select name="Governorate" class="form-select 
+form-select-sm">
+hhh\Work_Form.html:169:                                    <option value=""> لا يوجد</option>
+hhh\Work_Form.html:171:                                    <option value="">    الاراضي      </option>
+hhh\Work_Form.html:172:                                    <option value="">      زراعية    </option>
+hhh\Work_Form.html:173:                                    <option value="">         بيضاء       </option>
+hhh\Work_Form.html:174:                                    <option value="">      صلب    </option>
+hhh\Work_Form.html:175:                                    <option value="">      متروكة    </option>
+hhh\Work_Form.html:176:                                    <option value="">     اخرى تذكر      </option>
+hhh\Work_Form.html:233:                            <select name="Governorate" class="form-select form-select-sm">
+hhh\Work_Form.html:234:                                <option value="">1- لا يوجد</option>
+hhh\Work_Form.html:235:                                <option value="lands">2- الاراضي</option>
+hhh\Work_Form.html:236:                                <option value="">     3- المعمورات    </option>
+hhh\Work_Form.html:237:                                <option value="">        4- دور العبادة       </option>
+hhh\Work_Form.html:238:                                <option value="">     5- المقابر    </option>
+hhh\Work_Form.html:239:                                <option value="">      6- الاسواق    </option>
+hhh\Work_Form.html:240:                                <option value="">    7- الطرقات      </option>
+hhh\Work_Form.html:241:                                <option value="">     8- رهق\\مسقئ    </option>
+hhh\Work_Form.html:242:                                <option value="">      9- اخرى تذكر   </option>
+hhh\Work_Form.html:246:                            <select name="Governorate" class="form-select form-select-sm">
+hhh\Work_Form.html:247:                                <option value="">1- لا يوجد</option>
+hhh\Work_Form.html:248:                                <option value="lands">2- الاراضي</option>
+hhh\Work_Form.html:249:                                <option value="">     3- المعمورات    </option>
+hhh\Work_Form.html:250:                                <option value="">        4- دور العبادة       </option>
+hhh\Work_Form.html:251:                                <option value="">     5- المقابر    </option>
+hhh\Work_Form.html:252:                                <option value="">      6- الاسواق    </option>
+hhh\Work_Form.html:253:                                <option value="">    7- الطرقات      </option>
+hhh\Work_Form.html:254:                                <option value="">     8- رهق\\مسقئ    </option>
+hhh\Work_Form.html:255:                                <option value="">      9- اخرى تذكر   </option>
+hhh\Work_Form.html:259:                            <select id="GovernorateSelect" class="form-select 
+form-select-sm">
+hhh\Work_Form.html:260:                                <option value="">1- لا يوجد</option>
+hhh\Work_Form.html:261:                                <option value="lands">2- الاراضي</option>
+hhh\Work_Form.html:262:                                <option value="">     3- المعمورات    </option>
+hhh\Work_Form.html:263:                                <option value="">        4- دور العبادة       </option>
+hhh\Work_Form.html:264:                                <option value="">     5- المقابر    </option>
+hhh\Work_Form.html:265:                                <option value="">      6- الاسواق    </option>
+hhh\Work_Form.html:266:                                <option value="">    7- الطرقات      </option>
+hhh\Work_Form.html:267:                                <option value="">     8- رهق\\مسقئ    </option>
+hhh\Work_Form.html:268:                                <option value="">      9- اخرى تذكر   </option>
+hhh\Work_Form.html:272:                            <select id="GovernorateSelect" class="form-select 
+form-select-sm">
+hhh\Work_Form.html:273:                                <option value="">1- لا يوجد</option>
+hhh\Work_Form.html:274:                                <option value="lands">2- الاراضي</option>
+hhh\Work_Form.html:275:                                <option value="">     3- المعمورات    </option>
+hhh\Work_Form.html:276:                                <option value="">        4- دور العبادة       </option>
+hhh\Work_Form.html:277:                                <option value="">     5- المقابر    </option>
+hhh\Work_Form.html:278:                                <option value="">      6- الاسواق    </option>
+hhh\Work_Form.html:279:                                <option value="">    7- الطرقات      </option>
+hhh\Work_Form.html:280:                                <option value="">     8- رهق\\مسقئ    </option>
+hhh\Work_Form.html:281:                                <option value="">      9- اخرى تذكر   </option>
+hhh\Work_Form_base.html:75:                    <select class="form-select">
+hhh\Work_Form_base.html:76:                      <option>-- اختر --</option>
+hhh\Work_Form_base.html:77:                      <option>طلب جديد</option>
+hhh\Work_Form_base.html:78:                      <option>تعديل</option>
+hhh\Work_Form_base.html:107:                    <select class="form-select">
+hhh\Work_Form_base.html:108:                      <option>عادل محمد صالح عايش-77088864</option>
+hhh\Work_Form_base.html:109:                      <option>+ إنشاء عدل الروية جديد</option>
+hhh\Work_Form_base.html:151:                                <select name="Governorate" class="form-select 
+form-select-sm">
+hhh\Work_Form_base.html:153:                                    <option value="">1- لا يوجد</option>
+hhh\Work_Form_base.html:155:                                    <option value="">    2-الاراضي      </option>
+hhh\Work_Form_base.html:156:                                    <option value="">     3- المعمورات    </option>
+hhh\Work_Form_base.html:157:                                    <option value="">        4- دور العبادة       
+</option>
+hhh\Work_Form_base.html:158:                                    <option value="">     5- المقابر    </option>
+hhh\Work_Form_base.html:159:                                    <option value="">      6- الاسواق    </option>
+hhh\Work_Form_base.html:160:                                    <option value="">    7- الطرقات      </option>
+hhh\Work_Form_base.html:161:                                    <option value="">     8- رهق\\مسقئ    </option>
+hhh\Work_Form_base.html:162:                                    <option value="">      9- اخرى تذكر   </option>
+hhh\Work_Form_base.html:167:                                <select name="Governorate" class="form-select 
+form-select-sm">
+hhh\Work_Form_base.html:169:                                    <option value=""> لا يوجد</option>
+hhh\Work_Form_base.html:171:                                    <option value="">    الاراضي      </option>
+hhh\Work_Form_base.html:172:                                    <option value="">      زراعية    </option>
+hhh\Work_Form_base.html:173:                                    <option value="">         بيضاء       </option>
+hhh\Work_Form_base.html:174:                                    <option value="">      صلب    </option>
+hhh\Work_Form_base.html:175:                                    <option value="">      متروكة    </option>
+hhh\Work_Form_base.html:176:                                    <option value="">     اخرى تذكر      </option>
+hhh\Work_Form_base.html:233:                            <select name="Governorate" class="form-select 
+form-select-sm">
+hhh\Work_Form_base.html:234:                                <option value="">1- لا يوجد</option>
+hhh\Work_Form_base.html:235:                                <option value="lands">2- الاراضي</option>
+hhh\Work_Form_base.html:236:                                <option value="">     3- المعمورات    </option>
+hhh\Work_Form_base.html:237:                                <option value="">        4- دور العبادة       </option>
+hhh\Work_Form_base.html:238:                                <option value="">     5- المقابر    </option>
+hhh\Work_Form_base.html:239:                                <option value="">      6- الاسواق    </option>
+hhh\Work_Form_base.html:240:                                <option value="">    7- الطرقات      </option>
+hhh\Work_Form_base.html:241:                                <option value="">     8- رهق\\مسقئ    </option>
+hhh\Work_Form_base.html:242:                                <option value="">      9- اخرى تذكر   </option>
+hhh\Work_Form_base.html:246:                            <select name="Governorate" class="form-select 
+form-select-sm">
+hhh\Work_Form_base.html:247:                                <option value="">1- لا يوجد</option>
+hhh\Work_Form_base.html:248:                                <option value="lands">2- الاراضي</option>
+hhh\Work_Form_base.html:249:                                <option value="">     3- المعمورات    </option>
+hhh\Work_Form_base.html:250:                                <option value="">        4- دور العبادة       </option>
+hhh\Work_Form_base.html:251:                                <option value="">     5- المقابر    </option>
+hhh\Work_Form_base.html:252:                                <option value="">      6- الاسواق    </option>
+hhh\Work_Form_base.html:253:                                <option value="">    7- الطرقات      </option>
+hhh\Work_Form_base.html:254:                                <option value="">     8- رهق\\مسقئ    </option>
+hhh\Work_Form_base.html:255:                                <option value="">      9- اخرى تذكر   </option>
+hhh\Work_Form_base.html:259:                            <select id="GovernorateSelect" class="form-select 
+form-select-sm">
+hhh\Work_Form_base.html:260:                                <option value="">1- لا يوجد</option>
+hhh\Work_Form_base.html:261:                                <option value="lands">2- الاراضي</option>
+hhh\Work_Form_base.html:262:                                <option value="">     3- المعمورات    </option>
+hhh\Work_Form_base.html:263:                                <option value="">        4- دور العبادة       </option>
+hhh\Work_Form_base.html:264:                                <option value="">     5- المقابر    </option>
+hhh\Work_Form_base.html:265:                                <option value="">      6- الاسواق    </option>
+hhh\Work_Form_base.html:266:                                <option value="">    7- الطرقات      </option>
+hhh\Work_Form_base.html:267:                                <option value="">     8- رهق\\مسقئ    </option>
+hhh\Work_Form_base.html:268:                                <option value="">      9- اخرى تذكر   </option>
+hhh\Work_Form_base.html:272:                            <select id="GovernorateSelect" class="form-select 
+form-select-sm">
+hhh\Work_Form_base.html:273:                                <option value="">1- لا يوجد</option>
+hhh\Work_Form_base.html:274:                                <option value="lands">2- الاراضي</option>
+hhh\Work_Form_base.html:275:                                <option value="">     3- المعمورات    </option>
+hhh\Work_Form_base.html:276:                                <option value="">        4- دور العبادة       </option>
+hhh\Work_Form_base.html:277:                                <option value="">     5- المقابر    </option>
+hhh\Work_Form_base.html:278:                                <option value="">      6- الاسواق    </option>
+hhh\Work_Form_base.html:279:                                <option value="">    7- الطرقات      </option>
+hhh\Work_Form_base.html:280:                                <option value="">     8- رهق\\مسقئ    </option>
+hhh\Work_Form_base.html:281:                                <option value="">      9- اخرى تذكر   </option>
+hhh\Work_Form_base.html:509:              <select class="form-select">
+hhh\Work_Form_base.html:510:                <option>-- اختر --</option>
+hhh\Work_Form_base.html:511:                <option> جنائية</option>
+hhh\Work_Form_base.html:512:                <option>مدنية</option>
+hhh\Work_Form_base.html:513:                <option>دعوة استحقاق</option>
+hhh\Work_Form_base.html:514:                <option>دعوى شخصية(قسمة اوراث)</option>
+hhh\Work_Form_base.html:515:                <option>مدنية</option>
+hhh\Work_Form_base.html:525:              <select class="form-select">
+hhh\Work_Form_base.html:526:                <option>-- اختر --</option>
+hhh\Work_Form_base.html:527:                <option> ضبط\ادانة المتهم</option>
+hhh\Work_Form_base.html:528:                <option>تعويض</option>
+hhh\Work_Form_base.html:529:                <option> الزام المتهم باعاده الحد كما كان</option>
+hhh\Work_Form_base.html:530:                <option>ازالة استحداث</option>
+hhh\Work_Form_base.html:531:                <option>فصل حدود</option>
+hhh\Work_Form_base.html:538:              <select class="form-select">
+hhh\Work_Form_base.html:539:                <option>-- اختر --</option>
+hhh\Work_Form_base.html:540:                <option>مسودة </option>
+hhh\Work_Form_base.html:541:                <option> وثيقة شراء(بصيرة)</option>
+hhh\Work_Form_base.html:542:                <option> وثيقة ميراث(فصل قسام)</option>
+hhh\Work_Form_base.html:543:                <option> احكام عرفية</option>
+hhh\Work_Form_base.html:544:                <option> حكم قضائي</option>
+hhh\Work_Form_base.html:545:                <option>  وضع اليد حيازة</option>
+hhh\Work_Form_base.html:576:                <select asp-for="tanjezOrder.Alhiaza"
+hhh\Work_Form_base.html:577:                        asp-items="ViewBag.Ownerships ?? new List<SelectListItem>()"
+hhh\Work_Form_base.html:580:                    <option value="">-- اختر الحيازة --</option>
+hhh\Work_Form_base.html:581:                    <option value="add">+ إضافة</option>
+
+

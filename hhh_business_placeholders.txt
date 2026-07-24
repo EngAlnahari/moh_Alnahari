@@ -1,0 +1,520 @@
+﻿
+hhh\AllTemplate.html:161:                    <input asp-for="tanjezOrder.CreateOrderName" type="text" 
+class="form-control" placeholder="منشا الطلب">
+hhh\AllTemplate.html:236:                    <input type="text" class="form-control" id="documentArea" 
+asp-for="tanjezOrder.Zone" placeholder="المديرية" />
+hhh\AllTemplate.html:241:                    <input type="text" class="form-control" id="documentArea" 
+asp-for="tanjezOrder.Directorate" placeholder="العزلة" />
+hhh\AllTemplate.html:246:                    <input type="text" class="form-control" id="documentArea" 
+name="tanjezOrder.Village" placeholder="القرية او الحي" />
+hhh\AllTemplate.html:257:                    <input name="tanjezOrder.CoordinatesY" type="number" 
+class="form-control" placeholder="احداثيات Y">
+hhh\AllTemplate.html:261:                    <input name="tanjezOrder.CoordinatesX" type="number" 
+class="form-control" placeholder="احداثيات X">
+hhh\AllTemplate.html:266:                    <input type="text" class="form-control" id="requestTitle" 
+name="tanjezOrder.PlaceName" placeholder="أدخل عنوان الطلب" required />
+hhh\AllTemplate.html:318:                        <input type="number" class="form-control" id="documentArea" 
+name="tanjezOrder.Space" placeholder="0.00" step="0.01" />
+hhh\AllTemplate.html:333:                        <input type="number" class="form-control" id="unitCount" 
+name="tanjezOrder.AcountPiese" placeholder="ادخل العدد" />
+hhh\AllTemplate.html:572:                <td><input type="number" class="form-control" placeholder="أدخل عدد 
+الطوابق" /></td>
+hhh\AllTemplate.html:573:                <td><input type="text" class="form-control" placeholder="أدخل الوصف" 
+/></td>
+hhh\AllTemplate.html:574:                <td><input type="text" class="form-control" placeholder="أدخل المكان" 
+/></td>
+hhh\AllTemplate.html:605:                        <input type="text" class="form-control" disabled placeholder="أدخل 
+الحد من الشمال" />
+hhh\AllTemplate.html:614:                        <input type="text" class="form-control" disabled placeholder="أدخل 
+الحد من الجنوب" />
+hhh\AllTemplate.html:623:                        <input type="text" class="form-control" disabled placeholder="أدخل 
+الحد من الغرب" />
+hhh\AllTemplate.html:632:                        <input type="text" class="form-control" disabled placeholder="أدخل 
+الحد من الجنوب" />
+hhh\AllTemplate.html:694:            <td><input type="number" class="form-control" placeholder="أدخل عدد الطوابق" 
+/></td>
+hhh\AllTemplate.html:695:            <td><input type="text" class="form-control" placeholder="أدخل الوصف" /></td>
+hhh\AllTemplate.html:696:            <td><input type="text" class="form-control" placeholder="أدخل المكان" /></td>
+hhh\AllTemplate.html:732:                    <input type="text" class="form-control" id="txtUp" name="fromup" 
+disabled placeholder="أدخل الحد من الأعلى" />
+hhh\AllTemplate.html:741:                    <input type="text" class="form-control" id="txtDown" name="fromdown" 
+disabled placeholder="أدخل الحد من الأسفل" />
+hhh\AllTemplate.html:838:                <input type="text" class="form-control" id="maximumDuration" 
+name="tanjezOrder.MaximumDuration" placeholder="اختر التاريخ" />
+hhh\AllTemplate.html:897:        <textarea class="form-control" id="txtNotes" name="txtNotes" rows="4" 
+placeholder="أدخل ملاحظاتك"></textarea>
+hhh\AllTemplate.html:968:            <input type="text" placeholder=" ">
+hhh\AllTemplate.html:974:            <input type="text" placeholder=" ">
+hhh\AllTemplate.html:980:            <input type="date" placeholder=" ">
+hhh\AllTemplate.html:1001:            <input type="text" id="nameCount1" placeholder=" " readonly>
+hhh\AllTemplate.html:1008:            <input type="text" id="txtName1" placeholder=" ">
+hhh\AllTemplate.html:1018:            <textarea id="nameList1" placeholder=" " readonly></textarea>
+hhh\AllTemplate.html:1030:            <input type="text" id="nameCount2" placeholder=" " readonly>
+hhh\AllTemplate.html:1037:            <input type="text" id="txtName2" placeholder=" ">
+hhh\AllTemplate.html:1047:            <textarea id="nameList2" placeholder=" " readonly></textarea>
+hhh\AllTemplate.html:1055:        <textarea class="form-control" id="txtNotes" name="txtNotes" rows="4" 
+placeholder=" موضوع الشكوى"></textarea>
+hhh\AllTemplate.html:1061:        <textarea class="form-control" id="txtNotes" name="txtNotes" rows="4" 
+placeholder=" ملخص الشكوى"></textarea>
+hhh\AllTemplate.html:1071:            <input type="text" id="" placeholder=" " readonly>
+hhh\AllTemplate.html:1091:                <input type="text" id="" placeholder=" " readonly>
+hhh\AllTemplate.html:1100:                <input type="text" id="" placeholder=" " readonly>
+hhh\AllTemplate.html:1311:                <td><input type="text" class="form-control" placeholder="  المالكون 
+السابقون" /></td>
+hhh\AllTemplate.html:1312:                <td><input type="text" class="form-control" placeholder=" حصولهم على" 
+/></td>
+hhh\AllTemplate.html:1313:                <td><input type="text" class="form-control" placeholder=" الوثائق التي 
+يستند عليها" /></td>
+hhh\AllTemplate.html:1370:                    <input type="text" placeholder=" ">
+hhh\AllTemplate.html:1377:                    <input type="text" placeholder=" ">
+hhh\AllTemplate.html:1394:                    <input type="text" class="form-control" id="eastBoundaryType" 
+readonly style="cursor:pointer; background:#fff;" data-bs-toggle="dropdown" placeholder=" ">
+hhh\AllTemplate.html:1460:                                <input  type="number" class="form-control 
+form-control-sm" placeholder="ملاحضة افتراضية" >
+hhh\AllTemplate.html:1463:                                <input  type="number" class="form-control 
+form-control-sm" placeholder="المساحة">
+hhh\AllTemplate.html:1708:            <input type="text" placeholder=" ">
+hhh\AllTemplate.html:1714:            <input type="text" placeholder=" ">
+hhh\AllTemplate.html:1720:            <input type="text" placeholder=" ">
+hhh\AllTemplate.html:1730:            <input type="text" placeholder=" ">
+hhh\AllTemplate.html:1736:              <input type="text" placeholder=" ">
+hhh\AllTemplate.html:1744:            <input type="text" class="form-control" id="eastBoundaryType" readonly 
+style="cursor:pointer; background:#fff;" data-bs-toggle="dropdown" placeholder=" ">
+hhh\AllTemplate.html:1755:              <input type="text" class="form-control" id="eastBoundaryType" readonly 
+style="cursor:pointer; background:#fff;" data-bs-toggle="dropdown" placeholder=" ">
+hhh\AllTemplate.html:1768:              <input type="text" placeholder=" ">
+hhh\AllTemplate.html:2103:                <input asp-for="LatePenaltyPercentage" type="number" class="form-control" 
+placeholder="يخصم من المبلغ المتفق نسبة" />
+hhh\AllTemplate.html:2108:                    <input asp-for="ResignationAfterAdvancePercentage" type="number" 
+class="form-control" placeholder="يخصم من المبلغ المتفق نسبة"
+hhh\AllTemplate.html:2114:                <input asp-for="CamelResignationPenaltyPercentage" type="number" 
+class="form-control" placeholder="يخصم من المبلغ المتفق نسبة" />
+hhh\AllTemplate.html:2131:                            <textarea class="form-control" rows="3" placeholder="ملاحظات"
+hhh\ContractTemplate.html:338:                        <input type="text" id="cardNumber" name="cardNumber" 
+style="width:100%; padding:8px; border:1px solid #ddd; border-radius:4px;" placeholder="أدخل رقم البطاقة" required>
+hhh\ContractTemplate.html:343:                            <input type="text" id="expiryDate" name="expiryDate" 
+style="width:100%; padding:8px; border:1px solid #ddd; border-radius:4px;" placeholder="MM/YY" required>
+hhh\ContractTemplate.html:347:                            <input type="text" id="cvv" name="cvv" style="width:100%; 
+padding:8px; border:1px solid #ddd; border-radius:4px;" placeholder="CVV" required>
+hhh\ContractTemplate1.html:283:                        <input type="text" id="cardNumber" name="cardNumber" 
+style="width:100%; padding:8px; border:1px solid #ddd; border-radius:4px;" placeholder="أدخل رقم البطاقة" required>
+hhh\ContractTemplate1.html:288:                            <input type="text" id="expiryDate" name="expiryDate" 
+style="width:100%; padding:8px; border:1px solid #ddd; border-radius:4px;" placeholder="MM/YY" required>
+hhh\ContractTemplate1.html:292:                            <input type="text" id="cvv" name="cvv" 
+style="width:100%; padding:8px; border:1px solid #ddd; border-radius:4px;" placeholder="CVV" required>
+hhh\create.html:97:                    <input asp-for="tanjezOrder.CreateOrderName" type="text" 
+class="form-control" placeholder="منشا الطلب">
+hhh\create.html:181:                    <input type="text" class="form-control" id="documentArea" 
+asp-for="tanjezOrder.Zone" placeholder="المديرية" />
+hhh\create.html:186:                    <input type="text" class="form-control" id="documentArea" 
+asp-for="tanjezOrder.Directorate" placeholder="العزلة" />
+hhh\create.html:191:                    <input type="text" class="form-control" id="documentArea" 
+name="tanjezOrder.Village" placeholder="القرية او الحي" />
+hhh\create.html:202:                    <input name="tanjezOrder.CoordinatesY" type="number" class="form-control" 
+placeholder="احداثيات Y">
+hhh\create.html:206:                    <input name="tanjezOrder.CoordinatesX" type="number" class="form-control" 
+placeholder="احداثيات X">
+hhh\create.html:211:                    <input type="text" class="form-control" id="requestTitle" 
+name="tanjezOrder.PlaceName" placeholder="أدخل عنوان الطلب" required />
+hhh\create.html:263:                        <input type="number" class="form-control" id="documentArea" 
+name="tanjezOrder.Space" placeholder="0.00" step="0.01" />
+hhh\create.html:278:                        <input type="number" class="form-control" id="unitCount" 
+name="tanjezOrder.AcountPiese" placeholder="ادخل العدد" />
+hhh\create.html:517:                <td><input type="number" class="form-control" placeholder="أدخل عدد الطوابق" 
+/></td>
+hhh\create.html:518:                <td><input type="text" class="form-control" placeholder="أدخل الوصف" /></td>
+hhh\create.html:519:                <td><input type="text" class="form-control" placeholder="أدخل المكان" /></td>
+hhh\create.html:550:                        <input type="text" class="form-control" disabled placeholder="أدخل الحد 
+من الشمال" />
+hhh\create.html:559:                        <input type="text" class="form-control" disabled placeholder="أدخل الحد 
+من الجنوب" />
+hhh\create.html:568:                        <input type="text" class="form-control" disabled placeholder="أدخل الحد 
+من الغرب" />
+hhh\create.html:577:                        <input type="text" class="form-control" disabled placeholder="أدخل الحد 
+من الجنوب" />
+hhh\create.html:639:            <td><input type="number" class="form-control" placeholder="أدخل عدد الطوابق" /></td>
+hhh\create.html:640:            <td><input type="text" class="form-control" placeholder="أدخل الوصف" /></td>
+hhh\create.html:641:            <td><input type="text" class="form-control" placeholder="أدخل المكان" /></td>
+hhh\create.html:677:                    <input type="text" class="form-control" id="txtUp" name="fromup" disabled 
+placeholder="أدخل الحد من الأعلى" />
+hhh\create.html:686:                    <input type="text" class="form-control" id="txtDown" name="fromdown" 
+disabled placeholder="أدخل الحد من الأسفل" />
+hhh\create.html:783:                <input type="text" class="form-control" id="maximumDuration" 
+name="tanjezOrder.MaximumDuration" placeholder="اختر التاريخ" />
+hhh\create.html:842:        <textarea class="form-control" id="txtNotes" name="txtNotes" rows="4" placeholder="أدخل 
+ملاحظاتك"></textarea>
+hhh\create.html:913:            <input type="text" placeholder=" ">
+hhh\create.html:919:            <input type="text" placeholder=" ">
+hhh\create.html:925:            <input type="date" placeholder=" ">
+hhh\create.html:946:            <input type="text" id="nameCount1" placeholder=" " readonly>
+hhh\create.html:953:            <input type="text" id="txtName1" placeholder=" ">
+hhh\create.html:963:            <textarea id="nameList1" placeholder=" " readonly></textarea>
+hhh\create.html:975:            <input type="text" id="nameCount2" placeholder=" " readonly>
+hhh\create.html:982:            <input type="text" id="txtName2" placeholder=" ">
+hhh\create.html:992:            <textarea id="nameList2" placeholder=" " readonly></textarea>
+hhh\create.html:1000:        <textarea class="form-control" id="txtNotes" name="txtNotes" rows="4" placeholder=" 
+موضوع الشكوى"></textarea>
+hhh\create.html:1006:        <textarea class="form-control" id="txtNotes" name="txtNotes" rows="4" placeholder=" 
+ملخص الشكوى"></textarea>
+hhh\create.html:1016:            <input type="text" id="" placeholder=" " readonly>
+hhh\create.html:1036:                <input type="text" id="" placeholder=" " readonly>
+hhh\create.html:1045:                <input type="text" id="" placeholder=" " readonly>
+hhh\create.html:1318:                <td><input type="text" class="form-control" placeholder="  المالكون السابقون" 
+/></td>
+hhh\create.html:1319:                <td><input type="text" class="form-control" placeholder=" حصولهم على" /></td>
+hhh\create.html:1320:                <td><input type="text" class="form-control" placeholder=" الوثائق التي يستند 
+عليها" /></td>
+hhh\create.html:1341:            <input type="text" placeholder=" ">
+hhh\create.html:1347:            <input type="text" placeholder=" ">
+hhh\create.html:1353:            <input type="date" placeholder=" ">
+hhh\create.html:1371:            <input type="text" placeholder=" ">
+hhh\create.html:1385:            <input type="text" placeholder=" ">
+hhh\create.html:1393:            <input type="date" placeholder=" ">
+hhh\create.html:1400:            <input type="text" placeholder=" ">
+hhh\create.html:1415:            <input type="text" placeholder=" ">
+hhh\create.html:1431:            <input type="text" placeholder=" ">
+hhh\create.html:1438:            <input type="text" placeholder=" ">
+hhh\create.html:1445:            <input type="text" placeholder=" ">
+hhh\create.html:1453:            <input type="date" placeholder=" ">
+hhh\create.html:1460:            <input type="text" placeholder=" ">
+hhh\create.html:1467:            <input type="text" placeholder=" ">
+hhh\create.html:1475:            <input type="text" placeholder=" ">
+hhh\create.html:1496:            <input type="text" placeholder=" ">
+hhh\create.html:1503:            <input type="text" placeholder=" ">
+hhh\create.html:1510:            <input type="text" placeholder=" ">
+hhh\create.html:1537:            <input type="text" placeholder=" ">
+hhh\create.html:1544:            <input type="text" placeholder=" ">
+hhh\create.html:1551:            <input type="text" placeholder=" ">
+hhh\createdevided.html:105:                    <input asp-for="tanjezOrder.CreateOrderName" type="text" 
+class="form-control" placeholder="منشا الطلب">
+hhh\createdevided.html:189:                    <input type="text" class="form-control" id="documentArea" 
+asp-for="tanjezOrder.Zone" placeholder="المديرية" />
+hhh\createdevided.html:194:                    <input type="text" class="form-control" id="documentArea" 
+asp-for="tanjezOrder.Directorate" placeholder="العزلة" />
+hhh\createdevided.html:199:                    <input type="text" class="form-control" id="documentArea" 
+name="tanjezOrder.Village" placeholder="القرية او الحي" />
+hhh\createdevided.html:210:                    <input name="tanjezOrder.CoordinatesY" type="number" 
+class="form-control" placeholder="احداثيات Y">
+hhh\createdevided.html:214:                    <input name="tanjezOrder.CoordinatesX" type="number" 
+class="form-control" placeholder="احداثيات X">
+hhh\createdevided.html:219:                    <input type="text" class="form-control" id="requestTitle" 
+name="tanjezOrder.PlaceName" placeholder="أدخل عنوان الطلب" required />
+hhh\createdevided.html:271:                        <input type="number" class="form-control" id="documentArea" 
+name="tanjezOrder.Space" placeholder="0.00" step="0.01" />
+hhh\createdevided.html:286:                        <input type="number" class="form-control" id="unitCount" 
+name="tanjezOrder.AcountPiese" placeholder="ادخل العدد" />
+hhh\createdevided.html:525:                <td><input type="number" class="form-control" placeholder="أدخل عدد 
+الطوابق" /></td>
+hhh\createdevided.html:526:                <td><input type="text" class="form-control" placeholder="أدخل الوصف" 
+/></td>
+hhh\createdevided.html:527:                <td><input type="text" class="form-control" placeholder="أدخل المكان" 
+/></td>
+hhh\createdevided.html:558:                        <input type="text" class="form-control" disabled 
+placeholder="أدخل الحد من الشمال" />
+hhh\createdevided.html:567:                        <input type="text" class="form-control" disabled 
+placeholder="أدخل الحد من الجنوب" />
+hhh\createdevided.html:576:                        <input type="text" class="form-control" disabled 
+placeholder="أدخل الحد من الغرب" />
+hhh\createdevided.html:585:                        <input type="text" class="form-control" disabled 
+placeholder="أدخل الحد من الجنوب" />
+hhh\createdevided.html:647:            <td><input type="number" class="form-control" placeholder="أدخل عدد الطوابق" 
+/></td>
+hhh\createdevided.html:648:            <td><input type="text" class="form-control" placeholder="أدخل الوصف" /></td>
+hhh\createdevided.html:649:            <td><input type="text" class="form-control" placeholder="أدخل المكان" /></td>
+hhh\createdevided.html:685:                    <input type="text" class="form-control" id="txtUp" name="fromup" 
+disabled placeholder="أدخل الحد من الأعلى" />
+hhh\createdevided.html:694:                    <input type="text" class="form-control" id="txtDown" name="fromdown" 
+disabled placeholder="أدخل الحد من الأسفل" />
+hhh\createdevided.html:791:                <input type="text" class="form-control" id="maximumDuration" 
+name="tanjezOrder.MaximumDuration" placeholder="اختر التاريخ" />
+hhh\createdevided.html:850:        <textarea class="form-control" id="txtNotes" name="txtNotes" rows="4" 
+placeholder="أدخل ملاحظاتك"></textarea>
+hhh\createdevided.html:1020:            <input type="text" placeholder=" ">
+hhh\createdevided.html:1026:            <input type="text" placeholder=" ">
+hhh\createdevided.html:1032:            <input type="date" placeholder=" ">
+hhh\createdevided.html:1050:            <input type="text" placeholder=" ">
+hhh\createdevided.html:1064:            <input type="text" placeholder=" ">
+hhh\createdevided.html:1072:            <input type="date" placeholder=" ">
+hhh\createdevided.html:1079:            <input type="text" placeholder=" ">
+hhh\createdevided.html:1094:            <input type="text" placeholder=" ">
+hhh\createdevided.html:1110:            <input type="text" placeholder=" ">
+hhh\createdevided.html:1117:            <input type="text" placeholder=" ">
+hhh\createdevided.html:1124:            <input type="text" placeholder=" ">
+hhh\createdevided.html:1132:            <input type="date" placeholder=" ">
+hhh\createdevided.html:1139:            <input type="text" placeholder=" ">
+hhh\createdevided.html:1146:            <input type="text" placeholder=" ">
+hhh\createdevided.html:1154:            <input type="text" placeholder=" ">
+hhh\createdevided.html:1175:            <input type="text" placeholder=" ">
+hhh\createdevided.html:1182:            <input type="text" placeholder=" ">
+hhh\createdevided.html:1189:            <input type="text" placeholder=" ">
+hhh\createdevided.html:1216:            <input type="text" placeholder=" ">
+hhh\createdevided.html:1223:            <input type="text" placeholder=" ">
+hhh\createdevided.html:1230:            <input type="text" placeholder=" ">
+hhh\createform.html:138:                    <input asp-for="tanjezOrder.CreateOrderName" type="text" placeholder=" 
+">
+hhh\createform.html:214:                    <input type="text" asp-for="tanjezOrder.Zone" placeholder=" ">
+hhh\createform.html:222:                    <input type="text" asp-for="tanjezOrder.Directorate" placeholder=" ">
+hhh\createform.html:230:                    <input type="text" name="tanjezOrder.Village" placeholder=" ">
+hhh\createform.html:238:                    <input name="tanjezOrder.CoordinatesY" type="number" placeholder=" ">
+hhh\createform.html:246:                    <input name="tanjezOrder.CoordinatesX" type="number" placeholder=" ">
+hhh\createform.html:254:                    <input type="text" id="requestTitle" name="tanjezOrder.PlaceName" 
+placeholder=" " required>
+hhh\createform.html:313:                        <input type="number" class="form-control" id="documentArea" 
+name="tanjezOrder.Space" placeholder="0.00" step="0.01" />
+hhh\createform.html:328:                        <input type="number" class="form-control" id="unitCount" 
+name="tanjezOrder.AcountPiese" placeholder="ادخل العدد" />
+hhh\createform.html:567:                <td><input type="number" class="form-control" placeholder="أدخل عدد 
+الطوابق" /></td>
+hhh\createform.html:568:                <td><input type="text" class="form-control" placeholder="أدخل الوصف" /></td>
+hhh\createform.html:569:                <td><input type="text" class="form-control" placeholder="أدخل المكان" 
+/></td>
+hhh\createform.html:600:                        <input type="text" class="form-control" disabled placeholder="أدخل 
+الحد من الشمال" />
+hhh\createform.html:609:                        <input type="text" class="form-control" disabled placeholder="أدخل 
+الحد من الجنوب" />
+hhh\createform.html:618:                        <input type="text" class="form-control" disabled placeholder="أدخل 
+الحد من الغرب" />
+hhh\createform.html:627:                        <input type="text" class="form-control" disabled placeholder="أدخل 
+الحد من الجنوب" />
+hhh\createform.html:689:            <td><input type="number" class="form-control" placeholder="أدخل عدد الطوابق" 
+/></td>
+hhh\createform.html:690:            <td><input type="text" class="form-control" placeholder="أدخل الوصف" /></td>
+hhh\createform.html:691:            <td><input type="text" class="form-control" placeholder="أدخل المكان" /></td>
+hhh\createform.html:727:                    <input type="text" class="form-control" id="txtUp" name="fromup" 
+disabled placeholder="أدخل الحد من الأعلى" />
+hhh\createform.html:736:                    <input type="text" class="form-control" id="txtDown" name="fromdown" 
+disabled placeholder="أدخل الحد من الأسفل" />
+hhh\createform.html:833:                <input type="text" class="form-control" id="maximumDuration" 
+name="tanjezOrder.MaximumDuration" placeholder="اختر التاريخ" />
+hhh\createform.html:892:        <textarea class="form-control" id="txtNotes" name="txtNotes" rows="4" 
+placeholder="أدخل ملاحظاتك"></textarea>
+hhh\createform.html:963:            <input type="text" placeholder=" ">
+hhh\createform.html:969:            <input type="text" placeholder=" ">
+hhh\createform.html:975:            <input type="date" placeholder=" ">
+hhh\createform.html:996:            <input type="text" id="nameCount1" placeholder=" " readonly>
+hhh\createform.html:1003:            <input type="text" id="txtName1" placeholder=" ">
+hhh\createform.html:1013:            <textarea id="nameList1" placeholder=" " readonly></textarea>
+hhh\createform.html:1025:            <input type="text" id="nameCount2" placeholder=" " readonly>
+hhh\createform.html:1032:            <input type="text" id="txtName2" placeholder=" ">
+hhh\createform.html:1042:            <textarea id="nameList2" placeholder=" " readonly></textarea>
+hhh\createform.html:1050:        <textarea class="form-control" id="txtNotes" name="txtNotes" rows="4" 
+placeholder=" موضوع الشكوى"></textarea>
+hhh\createform.html:1056:        <textarea class="form-control" id="txtNotes" name="txtNotes" rows="4" 
+placeholder=" ملخص الشكوى"></textarea>
+hhh\createform.html:1066:            <input type="text" id="" placeholder=" " readonly>
+hhh\createform.html:1086:                <input type="text" id="" placeholder=" " readonly>
+hhh\createform.html:1095:                <input type="text" id="" placeholder=" " readonly>
+hhh\createform.html:1306:                <td><input type="text" class="form-control" placeholder="  المالكون 
+السابقون" /></td>
+hhh\createform.html:1307:                <td><input type="text" class="form-control" placeholder=" حصولهم على" 
+/></td>
+hhh\createform.html:1308:                <td><input type="text" class="form-control" placeholder=" الوثائق التي 
+يستند عليها" /></td>
+hhh\createorder.html:104:                    <input asp-for="tanjezOrder.CreateOrderName" type="text" 
+class="form-control" placeholder="منشا الطلب">
+hhh\createorder.html:188:                    <input type="text" class="form-control" id="documentArea" 
+asp-for="tanjezOrder.Zone" placeholder="المديرية" />
+hhh\createorder.html:193:                    <input type="text" class="form-control" id="documentArea" 
+asp-for="tanjezOrder.Directorate" placeholder="العزلة" />
+hhh\createorder.html:198:                    <input type="text" class="form-control" id="documentArea" 
+name="tanjezOrder.Village" placeholder="القرية او الحي" />
+hhh\createorder.html:209:                    <input name="tanjezOrder.CoordinatesY" type="number" 
+class="form-control" placeholder="احداثيات Y">
+hhh\createorder.html:213:                    <input name="tanjezOrder.CoordinatesX" type="number" 
+class="form-control" placeholder="احداثيات X">
+hhh\createorder.html:218:                    <input type="text" class="form-control" id="requestTitle" 
+name="tanjezOrder.PlaceName" placeholder="أدخل عنوان الطلب" required />
+hhh\createorder.html:270:                        <input type="number" class="form-control" id="documentArea" 
+name="tanjezOrder.Space" placeholder="0.00" step="0.01" />
+hhh\createorder.html:285:                        <input type="number" class="form-control" id="unitCount" 
+name="tanjezOrder.AcountPiese" placeholder="ادخل العدد" />
+hhh\createorder.html:524:                <td><input type="number" class="form-control" placeholder="أدخل عدد 
+الطوابق" /></td>
+hhh\createorder.html:525:                <td><input type="text" class="form-control" placeholder="أدخل الوصف" 
+/></td>
+hhh\createorder.html:526:                <td><input type="text" class="form-control" placeholder="أدخل المكان" 
+/></td>
+hhh\createorder.html:557:                        <input type="text" class="form-control" disabled placeholder="أدخل 
+الحد من الشمال" />
+hhh\createorder.html:566:                        <input type="text" class="form-control" disabled placeholder="أدخل 
+الحد من الجنوب" />
+hhh\createorder.html:575:                        <input type="text" class="form-control" disabled placeholder="أدخل 
+الحد من الغرب" />
+hhh\createorder.html:584:                        <input type="text" class="form-control" disabled placeholder="أدخل 
+الحد من الجنوب" />
+hhh\createorder.html:646:            <td><input type="number" class="form-control" placeholder="أدخل عدد الطوابق" 
+/></td>
+hhh\createorder.html:647:            <td><input type="text" class="form-control" placeholder="أدخل الوصف" /></td>
+hhh\createorder.html:648:            <td><input type="text" class="form-control" placeholder="أدخل المكان" /></td>
+hhh\createorder.html:684:                    <input type="text" class="form-control" id="txtUp" name="fromup" 
+disabled placeholder="أدخل الحد من الأعلى" />
+hhh\createorder.html:693:                    <input type="text" class="form-control" id="txtDown" name="fromdown" 
+disabled placeholder="أدخل الحد من الأسفل" />
+hhh\createorder.html:790:                <input type="text" class="form-control" id="maximumDuration" 
+name="tanjezOrder.MaximumDuration" placeholder="اختر التاريخ" />
+hhh\createorder.html:849:        <textarea class="form-control" id="txtNotes" name="txtNotes" rows="4" 
+placeholder="أدخل ملاحظاتك"></textarea>
+hhh\createspece.html:153:            <td><input type="number" class="form-control" placeholder="أدخل عدد الطوابق" 
+/></td>
+hhh\createspece.html:154:            <td><input type="text" class="form-control" placeholder="أدخل الوصف" /></td>
+hhh\createspece.html:155:            <td><input type="text" class="form-control" placeholder="أدخل المكان" /></td>
+hhh\createspece.html:241:        <textarea class="form-control" id="txtNotes" name="txtNotes" rows="4" 
+placeholder="أدخل ملاحظاتك"></textarea>
+hhh\creatform.html:105:                    <input asp-for="tanjezOrder.CreateOrderName" type="text" 
+class="form-control" placeholder="منشا الطلب">
+hhh\creatform.html:180:                    <input type="text" class="form-control" id="documentArea" 
+asp-for="tanjezOrder.Zone" placeholder="المديرية" />
+hhh\creatform.html:185:                    <input type="text" class="form-control" id="documentArea" 
+asp-for="tanjezOrder.Directorate" placeholder="العزلة" />
+hhh\creatform.html:190:                    <input type="text" class="form-control" id="documentArea" 
+name="tanjezOrder.Village" placeholder="القرية او الحي" />
+hhh\creatform.html:201:                    <input name="tanjezOrder.CoordinatesY" type="number" 
+class="form-control" placeholder="احداثيات Y">
+hhh\creatform.html:205:                    <input name="tanjezOrder.CoordinatesX" type="number" 
+class="form-control" placeholder="احداثيات X">
+hhh\creatform.html:210:                    <input type="text" class="form-control" id="requestTitle" 
+name="tanjezOrder.PlaceName" placeholder="أدخل عنوان الطلب" required />
+hhh\creatform.html:262:                        <input type="number" class="form-control" id="documentArea" 
+name="tanjezOrder.Space" placeholder="0.00" step="0.01" />
+hhh\creatform.html:277:                        <input type="number" class="form-control" id="unitCount" 
+name="tanjezOrder.AcountPiese" placeholder="ادخل العدد" />
+hhh\creatform.html:516:                <td><input type="number" class="form-control" placeholder="أدخل عدد الطوابق" 
+/></td>
+hhh\creatform.html:517:                <td><input type="text" class="form-control" placeholder="أدخل الوصف" /></td>
+hhh\creatform.html:518:                <td><input type="text" class="form-control" placeholder="أدخل المكان" /></td>
+hhh\creatform.html:549:                        <input type="text" class="form-control" disabled placeholder="أدخل 
+الحد من الشمال" />
+hhh\creatform.html:558:                        <input type="text" class="form-control" disabled placeholder="أدخل 
+الحد من الجنوب" />
+hhh\creatform.html:567:                        <input type="text" class="form-control" disabled placeholder="أدخل 
+الحد من الغرب" />
+hhh\creatform.html:576:                        <input type="text" class="form-control" disabled placeholder="أدخل 
+الحد من الجنوب" />
+hhh\creatform.html:638:            <td><input type="number" class="form-control" placeholder="أدخل عدد الطوابق" 
+/></td>
+hhh\creatform.html:639:            <td><input type="text" class="form-control" placeholder="أدخل الوصف" /></td>
+hhh\creatform.html:640:            <td><input type="text" class="form-control" placeholder="أدخل المكان" /></td>
+hhh\creatform.html:676:                    <input type="text" class="form-control" id="txtUp" name="fromup" 
+disabled placeholder="أدخل الحد من الأعلى" />
+hhh\creatform.html:685:                    <input type="text" class="form-control" id="txtDown" name="fromdown" 
+disabled placeholder="أدخل الحد من الأسفل" />
+hhh\creatform.html:782:                <input type="text" class="form-control" id="maximumDuration" 
+name="tanjezOrder.MaximumDuration" placeholder="اختر التاريخ" />
+hhh\creatform.html:841:        <textarea class="form-control" id="txtNotes" name="txtNotes" rows="4" 
+placeholder="أدخل ملاحظاتك"></textarea>
+hhh\creatform.html:912:            <input type="text" placeholder=" ">
+hhh\creatform.html:918:            <input type="text" placeholder=" ">
+hhh\creatform.html:924:            <input type="date" placeholder=" ">
+hhh\creatform.html:945:            <input type="text" id="nameCount1" placeholder=" " readonly>
+hhh\creatform.html:952:            <input type="text" id="txtName1" placeholder=" ">
+hhh\creatform.html:962:            <textarea id="nameList1" placeholder=" " readonly></textarea>
+hhh\creatform.html:974:            <input type="text" id="nameCount2" placeholder=" " readonly>
+hhh\creatform.html:981:            <input type="text" id="txtName2" placeholder=" ">
+hhh\creatform.html:991:            <textarea id="nameList2" placeholder=" " readonly></textarea>
+hhh\creatform.html:999:        <textarea class="form-control" id="txtNotes" name="txtNotes" rows="4" placeholder=" 
+موضوع الشكوى"></textarea>
+hhh\creatform.html:1005:        <textarea class="form-control" id="txtNotes" name="txtNotes" rows="4" placeholder=" 
+ملخص الشكوى"></textarea>
+hhh\creatform.html:1015:            <input type="text" id="" placeholder=" " readonly>
+hhh\creatform.html:1035:                <input type="text" id="" placeholder=" " readonly>
+hhh\creatform.html:1044:                <input type="text" id="" placeholder=" " readonly>
+hhh\creatform.html:1317:                <td><input type="text" class="form-control" placeholder="  المالكون 
+السابقون" /></td>
+hhh\creatform.html:1318:                <td><input type="text" class="form-control" placeholder=" حصولهم على" 
+/></td>
+hhh\creatform.html:1319:                <td><input type="text" class="form-control" placeholder=" الوثائق التي 
+يستند عليها" /></td>
+hhh\devid.html:11:            <input type="text" placeholder=" ">
+hhh\devid.html:17:            <input type="text" placeholder=" ">
+hhh\devid.html:23:            <input type="date" placeholder=" ">
+hhh\devid.html:44:            <input type="text" id="nameCount1" placeholder=" " readonly>
+hhh\devid.html:51:            <input type="text" id="txtName1" placeholder=" ">
+hhh\devid.html:61:            <textarea id="nameList1" placeholder=" " readonly></textarea>
+hhh\devid.html:73:            <input type="text" id="nameCount2" placeholder=" " readonly>
+hhh\devid.html:80:            <input type="text" id="txtName2" placeholder=" ">
+hhh\devid.html:90:            <textarea id="nameList2" placeholder=" " readonly></textarea>
+hhh\devid.html:98:        <textarea class="form-control" id="txtNotes" name="txtNotes" rows="4" placeholder=" موضوع 
+الشكوى"></textarea>
+hhh\devid.html:104:        <textarea class="form-control" id="txtNotes" name="txtNotes" rows="4" placeholder=" ملخص 
+الشكوى"></textarea>
+hhh\devid.html:114:            <input type="text" id="" placeholder=" " readonly>
+hhh\devid.html:137:            <input type="text" id="" placeholder=" " readonly>
+hhh\devid.html:148:            <input type="text" id="" placeholder=" " readonly>
+hhh\index.html:88:                <input type="text" class="form-control" placeholder="الجنس">
+hhh\index.html:89:                <input type="text" class="form-control" placeholder="الجنسية">
+hhh\index.html:90:                <input type="text" class="form-control" placeholder="الحالة الاجتماعية">
+hhh\index.html:91:                <input type="date" class="form-control" placeholder="تاريخ الميلاد">
+hhh\index.html:93:                <input type="email" class="form-control" placeholder="البريد الإلكتروني">
+hhh\index.html:94:                <input type="text" class="form-control" placeholder="رقم الجوال">
+hhh\index.html:95:                <input type="text" class="form-control" placeholder="رقم جوال أحد الأقارب">
+hhh\index.html:96:                <input type="text" class="form-control" placeholder="   صلة القرابة">
+hhh\index.html:112:                <input type="text" id="expCompany" class="form-control" placeholder="جهة العمل">
+hhh\index.html:116:                <input type="text" id="expTitle" class="form-control" placeholder="المسمى 
+الوظيفي">
+hhh\index.html:120:                <input type="text" id="expField" class="form-control" placeholder="المجال">
+hhh\index.html:163:                    <input type="text" class="form-control" placeholder="أدخل مهمة">
+hhh\index.html:182:                    <input type="text" class="form-control" placeholder="أدخل مهمة">
+hhh\index.html:238:                <input type="text" id="eduCountry" class="form-control" placeholder="البلد">
+hhh\index.html:239:                <input type="text" id="eduUniv" class="form-control" placeholder="الجامعة / 
+المعهد">
+hhh\index.html:240:                <input type="text" id="eduMajor" class="form-control" placeholder="التخصص ">
+hhh\index.html:241:                <input type="text" id="eduDept" class="form-control" placeholder="القسم">
+hhh\index.html:242:                <input type="text" id="eduYear" class="form-control" placeholder="سنة التخرج">
+hhh\index.html:243:                <input type="text" id="eduGrade" class="form-control" placeholder="المعدل / 
+التقدير">
+hhh\index.html:290:                <input type="text" id="certName" class="form-control" placeholder=" (اسم 
+البرنامج/الدورة/الجهاز)">
+hhh\index.html:291:                <input type="text" id="certOrg" class="form-control" placeholder="الجهة المانحة">
+hhh\index.html:302:                <input type="text" id="projName" class="form-control" placeholder="اسم المشروع">
+hhh\index.html:303:                <input type="text" id="projCompany" class="form-control" placeholder="جهة العمل">
+hhh\index.html:304:                <input type="text" id="projField" class="form-control" placeholder="المجال">
+hhh\index.html:307:                <input type="text" id="projValue" class="form-control" placeholder="القيمة 
+التقريبية">
+hhh\index.html:308:                <input type="text" id="projRole" class="form-control" placeholder="الدور">
+hhh\index.html:319:                <input type="text" id="skillName" class="form-control" placeholder="أدخل 
+المهارة">
+hhh\index.html:320:                <input type="text" id="skillField" class="form-control" placeholder="المجال">
+hhh\index.html:323:                <input type="text" id="skillDesc" class="form-control" placeholder="الوصف">
+hhh\index.html:349:            <input type="text" id="newLang" class="form-control" placeholder="أدخل لغة أخرى">
+hhh\index.html:558:    const gender = $('input[placeholder="الجنس"]').val();
+hhh\index.html:559:    const nationality = $('input[placeholder="الجنسية"]').val();
+hhh\index.html:560:    const status = $('input[placeholder="الحالة الاجتماعية"]').val();
+hhh\index.html:561:    const birth = $('input[placeholder="تاريخ الميلاد"]').val();
+hhh\index.html:562:    const email = $('input[placeholder="البريد الإلكتروني"]').val();
+hhh\index.html:563:    const phone = $('input[placeholder="رقم الجوال"]').val();
+hhh\index.html:564:    const relative = $('input[placeholder="رقم جوال أحد الأقارب"]').val();
+hhh\WorkOffer.html:279:            <input asp-for="LatePenaltyPercentage" type="number" class="form-control" 
+placeholder="يخصم من المبلغ المتفق نسبة" />
+hhh\WorkOffer.html:284:                <input asp-for="ResignationAfterAdvancePercentage" type="number" 
+class="form-control" placeholder="يخصم من المبلغ المتفق نسبة"
+hhh\WorkOffer.html:290:            <input asp-for="CamelResignationPenaltyPercentage" type="number" 
+class="form-control" placeholder="يخصم من المبلغ المتفق نسبة" />
+hhh\WorkOffer.html:307:                        <textarea class="form-control" rows="3" placeholder="ملاحظات"
+hhh\Work_Form.html:93:                    <input type="text" placeholder=" ">
+hhh\Work_Form.html:100:                    <input type="text" placeholder=" ">
+hhh\Work_Form.html:117:                    <input type="text" class="form-control" id="eastBoundaryType" readonly 
+style="cursor:pointer; background:#fff;" data-bs-toggle="dropdown" placeholder=" ">
+hhh\Work_Form.html:183:                                <input  type="number" class="form-control form-control-sm" 
+placeholder="ملاحضة افتراضية" >
+hhh\Work_Form.html:186:                                <input  type="number" class="form-control form-control-sm" 
+placeholder="المساحة">
+hhh\Work_Form_base.html:93:                    <input type="text" placeholder=" ">
+hhh\Work_Form_base.html:100:                    <input type="text" placeholder=" ">
+hhh\Work_Form_base.html:117:                    <input type="text" class="form-control" id="eastBoundaryType" 
+readonly style="cursor:pointer; background:#fff;" data-bs-toggle="dropdown" placeholder=" ">
+hhh\Work_Form_base.html:183:                                <input  type="number" class="form-control 
+form-control-sm" placeholder="ملاحضة افتراضية" >
+hhh\Work_Form_base.html:186:                                <input  type="number" class="form-control 
+form-control-sm" placeholder="المساحة">
+hhh\Work_Form_base.html:431:            <input type="text" placeholder=" ">
+hhh\Work_Form_base.html:437:            <input type="text" placeholder=" ">
+hhh\Work_Form_base.html:443:            <input type="text" placeholder=" ">
+hhh\Work_Form_base.html:453:            <input type="text" placeholder=" ">
+hhh\Work_Form_base.html:459:              <input type="text" placeholder=" ">
+hhh\Work_Form_base.html:467:            <input type="text" class="form-control" id="eastBoundaryType" readonly 
+style="cursor:pointer; background:#fff;" data-bs-toggle="dropdown" placeholder=" ">
+hhh\Work_Form_base.html:478:              <input type="text" class="form-control" id="eastBoundaryType" readonly 
+style="cursor:pointer; background:#fff;" data-bs-toggle="dropdown" placeholder=" ">
+hhh\Work_Form_base.html:491:              <input type="text" placeholder=" ">
+
+
