@@ -1,0 +1,631 @@
+﻿
+hhh\AllTemplate.html:150:                <input type="hidden" asp-for="tanjezOrder.UserID" 
+value="@Context.Session.GetInt32("UserID")" />
+hhh\AllTemplate.html:265:                    <label class="input-label"> اسم الموضع <span 
+class="required-star">*</span></label>
+hhh\AllTemplate.html:266:                    <input type="text" class="form-control" id="requestTitle" 
+name="tanjezOrder.PlaceName" placeholder="أدخل عنوان الطلب" required />
+hhh\AllTemplate.html:341:                    var selectedUnit = this.value;
+hhh\AllTemplate.html:345:                    if (selectedUnit) {
+hhh\AllTemplate.html:347:                        unitLabel.textContent = "عدد " + selectedUnit;
+hhh\AllTemplate.html:348:                    } else {
+hhh\AllTemplate.html:357:                    <input type="hidden" id="hiddenAreaDifferent" 
+name="tanjezOrder.AreaDifferent" value="0" />
+hhh\AllTemplate.html:365:                const hiddenInput = document.getElementById('hiddenAreaDifferent');
+hhh\AllTemplate.html:368:                    hiddenInput.value = this.checked ? '1' : '0';
+hhh\AllTemplate.html:379:                    <input type="file" class="form-control" id="docImageInput" 
+name="tanjezOrder.DocumentImage" style="display:none;" accept="image/*">
+hhh\AllTemplate.html:411:                            <span class="selected-border">شمال</span>
+hhh\AllTemplate.html:412:                            <select class="form-select border-type" 
+name="earthBorders[0].BorderType" style="display:none;">
+hhh\AllTemplate.html:428:                        <input type="hidden" name="earthBorders[3].IdenticalOrDifferent" 
+value="0" />
+hhh\AllTemplate.html:446:                            <span class="selected-border">جنوب</span>
+hhh\AllTemplate.html:447:                            <select class="form-select border-type" 
+name="earthBorders[1].BorderType" style="display:none;">
+hhh\AllTemplate.html:463:                        <input type="hidden" name="earthBorders[3].IdenticalOrDifferent" 
+value="0" />
+hhh\AllTemplate.html:482:                            <span class="selected-border">شرق</span>
+hhh\AllTemplate.html:483:                            <select class="form-select border-type" 
+name="earthBorders[2].BorderType" style="display:none;">
+hhh\AllTemplate.html:498:                        <input type="hidden" name="earthBorders[3].IdenticalOrDifferent" 
+value="0" />
+hhh\AllTemplate.html:517:                            <span class="selected-border">غرب</span>
+hhh\AllTemplate.html:518:                            <select class="form-select border-type" 
+name="earthBorders[3].BorderType" style="display:none;">
+hhh\AllTemplate.html:532:                        <input type="hidden" name="earthBorders[3].IdenticalOrDifferent" 
+value="0" />
+hhh\AllTemplate.html:560:<div id="buildingTableSection" style="display:none; margin-top:20px;">
+hhh\AllTemplate.html:588:    <div id="rahaqTableSection" style="display:none; margin-top:20px;">
+hhh\AllTemplate.html:605:                        <input type="text" class="form-control" disabled placeholder="أدخل 
+الحد من الشمال" />
+hhh\AllTemplate.html:614:                        <input type="text" class="form-control" disabled placeholder="أدخل 
+الحد من الجنوب" />
+hhh\AllTemplate.html:623:                        <input type="text" class="form-control" disabled placeholder="أدخل 
+الحد من الغرب" />
+hhh\AllTemplate.html:632:                        <input type="text" class="form-control" disabled placeholder="أدخل 
+الحد من الجنوب" />
+hhh\AllTemplate.html:672:        rahaqSection.querySelectorAll('input[type="text"]').forEach(input => 
+input.disabled = false);
+hhh\AllTemplate.html:675:            inputField.disabled = checkbox.checked;
+hhh\AllTemplate.html:683:            inputField.disabled = this.checked;
+hhh\AllTemplate.html:684:            if(this.checked) inputField.value = "";
+hhh\AllTemplate.html:732:                    <input type="text" class="form-control" id="txtUp" name="fromup" 
+disabled placeholder="أدخل الحد من الأعلى" />
+hhh\AllTemplate.html:741:                    <input type="text" class="form-control" id="txtDown" name="fromdown" 
+disabled placeholder="أدخل الحد من الأسفل" />
+hhh\AllTemplate.html:765:    input[disabled] {
+hhh\AllTemplate.html:790:            txtUp.disabled = !this.checked;
+hhh\AllTemplate.html:791:            if (!this.checked) txtUp.value = '';
+hhh\AllTemplate.html:795:            txtDown.disabled = !this.checked;
+hhh\AllTemplate.html:796:            if (!this.checked) txtDown.value = '';
+hhh\AllTemplate.html:1133:                            <span class="selected-border">طبيعة الادعاء</span>
+hhh\AllTemplate.html:1161:                            <span class="selected-border"> الوثيقة التي يستند عليها 
+الادعاء</span>
+hhh\AllTemplate.html:1190:                            <span class="selected-border">     طريقه الحصول على 
+الحق</span>
+hhh\AllTemplate.html:1217:                            <span class="selected-border">  تاريخ الحيازة</span>
+hhh\AllTemplate.html:1235:                            <span class="selected-border">   اسباب النزاع</span>
+hhh\AllTemplate.html:1284:            if(name) {
+hhh\AllTemplate.html:1897:        <input type="hidden" name="UserID" value="@Context.Session.GetInt32("UserID")" />
+hhh\AllTemplate.html:1902:                    <label asp-for="OfferName" class="form-label required">اسم العرض 
+<span class="text-danger">*</span></label>
+hhh\AllTemplate.html:1903:                    <input asp-for="OfferName" type="text" class="form-control"  required
+hhh\AllTemplate.html:1904:                           data-val="true" data-val-required="اسم العرض مطلوب" />
+hhh\AllTemplate.html:1905:                    <span class="text-danger field-validation-valid" 
+data-valmsg-for="OfferName" data-valmsg-replace="true"></span>
+hhh\AllTemplate.html:1919:                <input id="endDateInput" name="EndDate" type="date" class="form-control 
+mt-2" style="display:none;" />
+hhh\AllTemplate.html:1927:                    if (this.value === "specified") {
+hhh\AllTemplate.html:1930:                    } else {
+hhh\AllTemplate.html:1956:                <span asp-validation-for="WagesTemplate" class="text-danger"></span>
+hhh\AllTemplate.html:2009:                    if (value === "myAccount" && statuse1 == "2") {
+hhh\AllTemplate.html:2011:                    } else if (value === "clientAccount" && statuse2 == "3") {
+hhh\AllTemplate.html:2013:                    } else if (value === "") {
+hhh\AllTemplate.html:2015:                    } else {
+hhh\AllTemplate.html:2027:                if (!templateId || templateId === "create-new-template") {
+hhh\AllTemplate.html:2036:                        console.error(err);
+hhh\almjal.html:51:    <div id="step-specialty" style="display:none;">
+hhh\almjal.html:58:    <div id="step-branch" style="display:none;">
+hhh\almjal.html:65:    <div id="step-detail" style="display:none;">
+hhh\almjal.html:74:        <button class="btn btn-warning" id="btn-work-contract">عقد العمل</button>
+hhh\almjal.html:75:        <button class="btn btn-warning" id="btn-work-wofer">العروض</button>
+hhh\almjal.html:279:    let selectedMain = getState("selectedMain") || "";
+hhh\almjal.html:280:    let selectedSpec = getState("selectedSpec") || "";
+hhh\almjal.html:281:    let selectedBranch = getState("selectedBranch") || "";
+hhh\almjal.html:282:    let selectedDetail = getState("selectedDetail") || "";
+hhh\almjal.html:285:      let path = selectedMain;
+hhh\almjal.html:286:      if (selectedSpec) path += " \\ " + selectedSpec;
+hhh\almjal.html:287:      if (selectedBranch) path += " \\ " + selectedBranch;
+hhh\almjal.html:288:      if (selectedDetail) path += " \\ " + selectedDetail;
+hhh\almjal.html:309:      selectedMain = $(this).data("main");
+hhh\almjal.html:310:      saveState("selectedMain", selectedMain);
+hhh\almjal.html:311:      selectedSpec = ""; selectedBranch = ""; selectedDetail = "";
+hhh\almjal.html:312:      saveState("selectedSpec",""); saveState("selectedBranch",""); 
+saveState("selectedDetail","");
+hhh\almjal.html:313:      renderSpecialtyIcons(selectedMain);
+hhh\almjal.html:335:      selectedSpec = $(this).data("spec");
+hhh\almjal.html:336:      saveState("selectedSpec", selectedSpec);
+hhh\almjal.html:337:      selectedBranch = ""; selectedDetail = "";
+hhh\almjal.html:338:      saveState("selectedBranch",""); saveState("selectedDetail","");
+hhh\almjal.html:339:      renderBranchIcons(selectedMain, selectedSpec);
+hhh\almjal.html:348:      selectedSpec = ""; selectedBranch = ""; selectedDetail = "";
+hhh\almjal.html:349:      saveState("selectedSpec",""); saveState("selectedBranch",""); 
+saveState("selectedDetail","");
+hhh\almjal.html:369:      selectedBranch = $(this).data("branch");
+hhh\almjal.html:370:      saveState("selectedBranch", selectedBranch);
+hhh\almjal.html:371:      selectedDetail = "";
+hhh\almjal.html:372:      saveState("selectedDetail","");
+hhh\almjal.html:373:      renderDetailIcons(selectedMain, selectedSpec, selectedBranch);
+hhh\almjal.html:382:      selectedBranch = ""; selectedDetail = "";
+hhh\almjal.html:383:      saveState("selectedBranch",""); saveState("selectedDetail","");
+hhh\almjal.html:405:      selectedDetail = $(this).data("detail");
+hhh\almjal.html:406:      saveState("selectedDetail", selectedDetail);
+hhh\almjal.html:413:      selectedDetail = "";
+hhh\almjal.html:414:      saveState("selectedDetail","");
+hhh\almjal.html:420:  let path = `${selectedMain}\\${selectedSpec}\\${selectedBranch}\\${selectedDetail}`;
+hhh\almjal.html:424:  if (selectedDetail === "قضايا النزاع") {
+hhh\almjal.html:427:  else if (selectedDetail === "قضايا النزاع العقاري") {
+hhh\almjal.html:430:  else if (selectedDetail === "تقسيم بين الورثة") {
+hhh\almjal.html:433:  else if (selectedDetail === "قسمة التركات بين الورثة") {
+hhh\almjal.html:436:  else if (selectedDetail === "مسح التصرفات (بيع، شراء، تأجير)") {
+hhh\almjal.html:439:  else if (selectedDetail === "شبكات التثليث") {
+hhh\almjal.html:442:  else if (selectedDetail === "رفع مساحي للمشاريع الهندسية") {
+hhh\almjal.html:445:  else {
+hhh\almjal.html:451:  let path = `${selectedMain}\\${selectedSpec}\\${selectedBranch}\\${selectedDetail}`;
+hhh\almjal.html:455:  if (selectedDetail === "مسح التصرفات (بيع، شراء، تأجير)") {
+hhh\almjal.html:458:  else {
+hhh\almjal.html:464:  let path = `${selectedMain}\\${selectedSpec}\\${selectedBranch}\\${selectedDetail}`;
+hhh\almjal.html:468:  if (selectedDetail === "مسح التصرفات (بيع، شراء، تأجير)") {
+hhh\almjal.html:471:  else {
+hhh\almjal.html:477:  let path = `${selectedMain}\\${selectedSpec}\\${selectedBranch}\\${selectedDetail}`;
+hhh\almjal.html:481:  if (selectedDetail === "مسح التصرفات (بيع، شراء، تأجير)") {
+hhh\almjal.html:484:  else {
+hhh\almjal.html:497:      if (selectedMain && !selectedSpec) {
+hhh\almjal.html:498:        renderSpecialtyIcons(selectedMain);
+hhh\almjal.html:501:      if (selectedMain && selectedSpec && !selectedBranch) {
+hhh\almjal.html:502:        renderSpecialtyIcons(selectedMain);
+hhh\almjal.html:503:        renderBranchIcons(selectedMain, selectedSpec);
+hhh\almjal.html:506:      if (selectedMain && selectedSpec && selectedBranch) {
+hhh\almjal.html:507:        renderSpecialtyIcons(selectedMain);
+hhh\almjal.html:508:        renderBranchIcons(selectedMain, selectedSpec);
+hhh\almjal.html:509:        renderDetailIcons(selectedMain, selectedSpec, selectedBranch);
+hhh\almjal1.html:254:      const selected = $(this).val();
+hhh\almjal1.html:255:      const specs = unique(data.filter(x => x.main === selected), "spec");
+hhh\almjal1.html:261:      const selectedMain = $("#mainField").val();
+hhh\almjal1.html:262:      const selectedSpec = $(this).val();
+hhh\almjal1.html:263:      const branches = unique(data.filter(x => x.main === selectedMain && x.spec === 
+selectedSpec), "branch");
+hhh\almjal1.html:269:      const selectedMain = $("#mainField").val();
+hhh\almjal1.html:270:      const selectedSpec = $("#specialty").val();
+hhh\almjal1.html:271:      const selectedBranch = $(this).val();
+hhh\almjal1.html:273:        x.main === selectedMain && x.spec === selectedSpec && x.branch === selectedBranch
+hhh\ContractTemplate.html:283:            <!-- Inline Form for Rejection Reason (hidden by default) -->
+hhh\ContractTemplate.html:284:            <div id="rejectFormContainer" style="display:none;">
+hhh\ContractTemplate.html:320:    <div id="paymentModal" style="display:none; position:fixed; top:0; right:0; 
+left:0; bottom:0; background:rgba(0,0,0,0.3); z-index:9999; align-items:center; justify-content:center;">
+hhh\ContractTemplate.html:331:            <form id="paymentForm" style="display:none; margin-top:10px; 
+text-align:right;" onsubmit="submitPayment(event)">
+hhh\ContractTemplate.html:335:                <div id="creditCardFields" style="display:none;">
+hhh\ContractTemplate.html:338:                        <input type="text" id="cardNumber" name="cardNumber" 
+style="width:100%; padding:8px; border:1px solid #ddd; border-radius:4px;" placeholder="أدخل رقم البطاقة" required>
+hhh\ContractTemplate.html:343:                            <input type="text" id="expiryDate" name="expiryDate" 
+style="width:100%; padding:8px; border:1px solid #ddd; border-radius:4px;" placeholder="MM/YY" required>
+hhh\ContractTemplate.html:347:                            <input type="text" id="cvv" name="cvv" style="width:100%; 
+padding:8px; border:1px solid #ddd; border-radius:4px;" placeholder="CVV" required>
+hhh\ContractTemplate.html:353:                <div id="sentToClientField" style="display:none;">
+hhh\ContractTemplate.html:356:                        <input type="text" id="paymentInput" name="paymentInput" 
+style="width:100%; padding:8px; border:1px solid #ddd; border-radius:4px;" required>
+hhh\ContractTemplate.html:382:            var selectedReason = document.getElementById('reason').value;
+hhh\ContractTemplate.html:384:            if (selectedReason === "") {
+hhh\ContractTemplate.html:385:                alert('الرجاء اختيار سبب الرفض');
+hhh\ContractTemplate.html:389:            console.log('سبب الرفض:', selectedReason);
+hhh\ContractTemplate.html:391:            alert('تم إرسال سبب الرفض بنجاح');
+hhh\ContractTemplate.html:415:            if (method === 'credit_card') {
+hhh\ContractTemplate.html:424:            } else if (method === 'sent_to_client') {
+hhh\ContractTemplate.html:457:            if (method === 'credit_card') {
+hhh\ContractTemplate.html:463:                if (!cardNumber || !expiryDate || !cvv) {
+hhh\ContractTemplate.html:464:                    alert('الرجاء إدخال جميع بيانات البطاقة');
+hhh\ContractTemplate.html:469:                alert('تم إرسال بيانات بطاقة الائتمان:\nرقم البطاقة: ' + cardNumber + 
+'\nتاريخ الانتهاء: ' + expiryDate + '\nالرمز: ' + cvv + '\nالمبلغ: ' + amount + ' ريال');
+hhh\ContractTemplate.html:470:            } else if (method === 'sent_to_client') {
+hhh\ContractTemplate.html:473:                if (!inputValue) {
+hhh\ContractTemplate.html:474:                    alert('الرجاء إدخال رقم المرجع');
+hhh\ContractTemplate.html:478:                alert('تم إرسال بيانات الدفع (إرسال للعميل): ' + inputValue + 
+'\nالمبلغ: ' + amount + ' ريال');
+hhh\ContractTemplate1.html:228:            <!-- Inline Form for Rejection Reason (hidden by default) -->
+hhh\ContractTemplate1.html:229:            <div id="rejectFormContainer" style="display:none;">
+hhh\ContractTemplate1.html:265:    <div id="paymentModal" style="display:none; position:fixed; top:0; right:0; 
+left:0; bottom:0; background:rgba(0,0,0,0.3); z-index:9999; align-items:center; justify-content:center;">
+hhh\ContractTemplate1.html:276:            <form id="paymentForm" style="display:none; margin-top:10px; 
+text-align:right;" onsubmit="submitPayment(event)">
+hhh\ContractTemplate1.html:280:                <div id="creditCardFields" style="display:none;">
+hhh\ContractTemplate1.html:283:                        <input type="text" id="cardNumber" name="cardNumber" 
+style="width:100%; padding:8px; border:1px solid #ddd; border-radius:4px;" placeholder="أدخل رقم البطاقة" required>
+hhh\ContractTemplate1.html:288:                            <input type="text" id="expiryDate" name="expiryDate" 
+style="width:100%; padding:8px; border:1px solid #ddd; border-radius:4px;" placeholder="MM/YY" required>
+hhh\ContractTemplate1.html:292:                            <input type="text" id="cvv" name="cvv" 
+style="width:100%; padding:8px; border:1px solid #ddd; border-radius:4px;" placeholder="CVV" required>
+hhh\ContractTemplate1.html:298:                <div id="sentToClientField" style="display:none;">
+hhh\ContractTemplate1.html:301:                        <input type="text" id="paymentInput" name="paymentInput" 
+style="width:100%; padding:8px; border:1px solid #ddd; border-radius:4px;" required>
+hhh\ContractTemplate1.html:327:            var selectedReason = document.getElementById('reason').value;
+hhh\ContractTemplate1.html:329:            if (selectedReason === "") {
+hhh\ContractTemplate1.html:330:                alert('الرجاء اختيار سبب الرفض');
+hhh\ContractTemplate1.html:334:            console.log('سبب الرفض:', selectedReason);
+hhh\ContractTemplate1.html:336:            alert('تم إرسال سبب الرفض بنجاح');
+hhh\ContractTemplate1.html:360:            if (method === 'credit_card') {
+hhh\ContractTemplate1.html:369:            } else if (method === 'sent_to_client') {
+hhh\ContractTemplate1.html:402:            if (method === 'credit_card') {
+hhh\ContractTemplate1.html:408:                if (!cardNumber || !expiryDate || !cvv) {
+hhh\ContractTemplate1.html:409:                    alert('الرجاء إدخال جميع بيانات البطاقة');
+hhh\ContractTemplate1.html:414:                alert('تم إرسال بيانات بطاقة الائتمان:\nرقم البطاقة: ' + cardNumber 
++ '\nتاريخ الانتهاء: ' + expiryDate + '\nالرمز: ' + cvv + '\nالمبلغ: ' + amount + ' ريال');
+hhh\ContractTemplate1.html:415:            } else if (method === 'sent_to_client') {
+hhh\ContractTemplate1.html:418:                if (!inputValue) {
+hhh\ContractTemplate1.html:419:                    alert('الرجاء إدخال رقم المرجع');
+hhh\ContractTemplate1.html:423:                alert('تم إرسال بيانات الدفع (إرسال للعميل): ' + inputValue + 
+'\nالمبلغ: ' + amount + ' ريال');
+hhh\create.html:86:                <input type="hidden" asp-for="tanjezOrder.UserID" 
+value="@Context.Session.GetInt32("UserID")" />
+hhh\create.html:210:                    <label class="input-label"> اسم الموضع <span 
+class="required-star">*</span></label>
+hhh\create.html:211:                    <input type="text" class="form-control" id="requestTitle" 
+name="tanjezOrder.PlaceName" placeholder="أدخل عنوان الطلب" required />
+hhh\create.html:286:                    var selectedUnit = this.value;
+hhh\create.html:290:                    if (selectedUnit) {
+hhh\create.html:292:                        unitLabel.textContent = "عدد " + selectedUnit;
+hhh\create.html:293:                    } else {
+hhh\create.html:302:                    <input type="hidden" id="hiddenAreaDifferent" 
+name="tanjezOrder.AreaDifferent" value="0" />
+hhh\create.html:310:                const hiddenInput = document.getElementById('hiddenAreaDifferent');
+hhh\create.html:313:                    hiddenInput.value = this.checked ? '1' : '0';
+hhh\create.html:324:                    <input type="file" class="form-control" id="docImageInput" 
+name="tanjezOrder.DocumentImage" style="display:none;" accept="image/*">
+hhh\create.html:356:                            <span class="selected-border">شمال</span>
+hhh\create.html:357:                            <select class="form-select border-type" 
+name="earthBorders[0].BorderType" style="display:none;">
+hhh\create.html:373:                        <input type="hidden" name="earthBorders[3].IdenticalOrDifferent" 
+value="0" />
+hhh\create.html:391:                            <span class="selected-border">جنوب</span>
+hhh\create.html:392:                            <select class="form-select border-type" 
+name="earthBorders[1].BorderType" style="display:none;">
+hhh\create.html:408:                        <input type="hidden" name="earthBorders[3].IdenticalOrDifferent" 
+value="0" />
+hhh\create.html:427:                            <span class="selected-border">شرق</span>
+hhh\create.html:428:                            <select class="form-select border-type" 
+name="earthBorders[2].BorderType" style="display:none;">
+hhh\create.html:443:                        <input type="hidden" name="earthBorders[3].IdenticalOrDifferent" 
+value="0" />
+hhh\create.html:462:                            <span class="selected-border">غرب</span>
+hhh\create.html:463:                            <select class="form-select border-type" 
+name="earthBorders[3].BorderType" style="display:none;">
+hhh\create.html:477:                        <input type="hidden" name="earthBorders[3].IdenticalOrDifferent" 
+value="0" />
+hhh\create.html:505:<div id="buildingTableSection" style="display:none; margin-top:20px;">
+hhh\create.html:533:    <div id="rahaqTableSection" style="display:none; margin-top:20px;">
+hhh\create.html:550:                        <input type="text" class="form-control" disabled placeholder="أدخل الحد 
+من الشمال" />
+hhh\create.html:559:                        <input type="text" class="form-control" disabled placeholder="أدخل الحد 
+من الجنوب" />
+hhh\create.html:568:                        <input type="text" class="form-control" disabled placeholder="أدخل الحد 
+من الغرب" />
+hhh\create.html:577:                        <input type="text" class="form-control" disabled placeholder="أدخل الحد 
+من الجنوب" />
+hhh\create.html:617:        rahaqSection.querySelectorAll('input[type="text"]').forEach(input => input.disabled = 
+false);
+hhh\create.html:620:            inputField.disabled = checkbox.checked;
+hhh\create.html:628:            inputField.disabled = this.checked;
+hhh\create.html:629:            if(this.checked) inputField.value = "";
+hhh\create.html:677:                    <input type="text" class="form-control" id="txtUp" name="fromup" disabled 
+placeholder="أدخل الحد من الأعلى" />
+hhh\create.html:686:                    <input type="text" class="form-control" id="txtDown" name="fromdown" 
+disabled placeholder="أدخل الحد من الأسفل" />
+hhh\create.html:710:    input[disabled] {
+hhh\create.html:735:            txtUp.disabled = !this.checked;
+hhh\create.html:736:            if (!this.checked) txtUp.value = '';
+hhh\create.html:740:            txtDown.disabled = !this.checked;
+hhh\create.html:741:            if (!this.checked) txtDown.value = '';
+hhh\create.html:1078:                            <span class="selected-border">طبيعة الادعاء</span>
+hhh\create.html:1106:                            <span class="selected-border"> الوثيقة التي يستند عليها 
+الادعاء</span>
+hhh\create.html:1135:                            <span class="selected-border">     طريقه الحصول على الحق</span>
+hhh\create.html:1162:                            <span class="selected-border">  تاريخ الحيازة</span>
+hhh\create.html:1180:                            <span class="selected-border">   اسباب النزاع</span>
+hhh\create.html:1291:            if(name) {
+hhh\createdevided.html:94:                <input type="hidden" asp-for="tanjezOrder.UserID" 
+value="@Context.Session.GetInt32("UserID")" />
+hhh\createdevided.html:218:                    <label class="input-label"> اسم الموضع <span 
+class="required-star">*</span></label>
+hhh\createdevided.html:219:                    <input type="text" class="form-control" id="requestTitle" 
+name="tanjezOrder.PlaceName" placeholder="أدخل عنوان الطلب" required />
+hhh\createdevided.html:294:                    var selectedUnit = this.value;
+hhh\createdevided.html:298:                    if (selectedUnit) {
+hhh\createdevided.html:300:                        unitLabel.textContent = "عدد " + selectedUnit;
+hhh\createdevided.html:301:                    } else {
+hhh\createdevided.html:310:                    <input type="hidden" id="hiddenAreaDifferent" 
+name="tanjezOrder.AreaDifferent" value="0" />
+hhh\createdevided.html:318:                const hiddenInput = document.getElementById('hiddenAreaDifferent');
+hhh\createdevided.html:321:                    hiddenInput.value = this.checked ? '1' : '0';
+hhh\createdevided.html:332:                    <input type="file" class="form-control" id="docImageInput" 
+name="tanjezOrder.DocumentImage" style="display:none;" accept="image/*">
+hhh\createdevided.html:364:                            <span class="selected-border">شمال</span>
+hhh\createdevided.html:365:                            <select class="form-select border-type" 
+name="earthBorders[0].BorderType" style="display:none;">
+hhh\createdevided.html:381:                        <input type="hidden" name="earthBorders[3].IdenticalOrDifferent" 
+value="0" />
+hhh\createdevided.html:399:                            <span class="selected-border">جنوب</span>
+hhh\createdevided.html:400:                            <select class="form-select border-type" 
+name="earthBorders[1].BorderType" style="display:none;">
+hhh\createdevided.html:416:                        <input type="hidden" name="earthBorders[3].IdenticalOrDifferent" 
+value="0" />
+hhh\createdevided.html:435:                            <span class="selected-border">شرق</span>
+hhh\createdevided.html:436:                            <select class="form-select border-type" 
+name="earthBorders[2].BorderType" style="display:none;">
+hhh\createdevided.html:451:                        <input type="hidden" name="earthBorders[3].IdenticalOrDifferent" 
+value="0" />
+hhh\createdevided.html:470:                            <span class="selected-border">غرب</span>
+hhh\createdevided.html:471:                            <select class="form-select border-type" 
+name="earthBorders[3].BorderType" style="display:none;">
+hhh\createdevided.html:485:                        <input type="hidden" name="earthBorders[3].IdenticalOrDifferent" 
+value="0" />
+hhh\createdevided.html:513:<div id="buildingTableSection" style="display:none; margin-top:20px;">
+hhh\createdevided.html:541:    <div id="rahaqTableSection" style="display:none; margin-top:20px;">
+hhh\createdevided.html:558:                        <input type="text" class="form-control" disabled 
+placeholder="أدخل الحد من الشمال" />
+hhh\createdevided.html:567:                        <input type="text" class="form-control" disabled 
+placeholder="أدخل الحد من الجنوب" />
+hhh\createdevided.html:576:                        <input type="text" class="form-control" disabled 
+placeholder="أدخل الحد من الغرب" />
+hhh\createdevided.html:585:                        <input type="text" class="form-control" disabled 
+placeholder="أدخل الحد من الجنوب" />
+hhh\createdevided.html:625:        rahaqSection.querySelectorAll('input[type="text"]').forEach(input => 
+input.disabled = false);
+hhh\createdevided.html:628:            inputField.disabled = checkbox.checked;
+hhh\createdevided.html:636:            inputField.disabled = this.checked;
+hhh\createdevided.html:637:            if(this.checked) inputField.value = "";
+hhh\createdevided.html:685:                    <input type="text" class="form-control" id="txtUp" name="fromup" 
+disabled placeholder="أدخل الحد من الأعلى" />
+hhh\createdevided.html:694:                    <input type="text" class="form-control" id="txtDown" name="fromdown" 
+disabled placeholder="أدخل الحد من الأسفل" />
+hhh\createdevided.html:718:    input[disabled] {
+hhh\createdevided.html:743:            txtUp.disabled = !this.checked;
+hhh\createdevided.html:744:            if (!this.checked) txtUp.value = '';
+hhh\createdevided.html:748:            txtDown.disabled = !this.checked;
+hhh\createdevided.html:749:            if (!this.checked) txtDown.value = '';
+hhh\createdevided.html:993:            if(name) {
+hhh\createform.html:126:                <input type="hidden" asp-for="tanjezOrder.UserID" 
+value="@Context.Session.GetInt32("UserID")" />
+hhh\createform.html:254:                    <input type="text" id="requestTitle" name="tanjezOrder.PlaceName" 
+placeholder=" " required>
+hhh\createform.html:336:                    var selectedUnit = this.value;
+hhh\createform.html:340:                    if (selectedUnit) {
+hhh\createform.html:342:                        unitLabel.textContent = "عدد " + selectedUnit;
+hhh\createform.html:343:                    } else {
+hhh\createform.html:352:                    <input type="hidden" id="hiddenAreaDifferent" 
+name="tanjezOrder.AreaDifferent" value="0" />
+hhh\createform.html:360:                const hiddenInput = document.getElementById('hiddenAreaDifferent');
+hhh\createform.html:363:                    hiddenInput.value = this.checked ? '1' : '0';
+hhh\createform.html:374:                    <input type="file" class="form-control" id="docImageInput" 
+name="tanjezOrder.DocumentImage" style="display:none;" accept="image/*">
+hhh\createform.html:406:                            <span class="selected-border">شمال</span>
+hhh\createform.html:407:                            <select class="form-select border-type" 
+name="earthBorders[0].BorderType" style="display:none;">
+hhh\createform.html:423:                        <input type="hidden" name="earthBorders[3].IdenticalOrDifferent" 
+value="0" />
+hhh\createform.html:441:                            <span class="selected-border">جنوب</span>
+hhh\createform.html:442:                            <select class="form-select border-type" 
+name="earthBorders[1].BorderType" style="display:none;">
+hhh\createform.html:458:                        <input type="hidden" name="earthBorders[3].IdenticalOrDifferent" 
+value="0" />
+hhh\createform.html:477:                            <span class="selected-border">شرق</span>
+hhh\createform.html:478:                            <select class="form-select border-type" 
+name="earthBorders[2].BorderType" style="display:none;">
+hhh\createform.html:493:                        <input type="hidden" name="earthBorders[3].IdenticalOrDifferent" 
+value="0" />
+hhh\createform.html:512:                            <span class="selected-border">غرب</span>
+hhh\createform.html:513:                            <select class="form-select border-type" 
+name="earthBorders[3].BorderType" style="display:none;">
+hhh\createform.html:527:                        <input type="hidden" name="earthBorders[3].IdenticalOrDifferent" 
+value="0" />
+hhh\createform.html:555:<div id="buildingTableSection" style="display:none; margin-top:20px;">
+hhh\createform.html:583:    <div id="rahaqTableSection" style="display:none; margin-top:20px;">
+hhh\createform.html:600:                        <input type="text" class="form-control" disabled placeholder="أدخل 
+الحد من الشمال" />
+hhh\createform.html:609:                        <input type="text" class="form-control" disabled placeholder="أدخل 
+الحد من الجنوب" />
+hhh\createform.html:618:                        <input type="text" class="form-control" disabled placeholder="أدخل 
+الحد من الغرب" />
+hhh\createform.html:627:                        <input type="text" class="form-control" disabled placeholder="أدخل 
+الحد من الجنوب" />
+hhh\createform.html:667:        rahaqSection.querySelectorAll('input[type="text"]').forEach(input => input.disabled 
+= false);
+hhh\createform.html:670:            inputField.disabled = checkbox.checked;
+hhh\createform.html:678:            inputField.disabled = this.checked;
+hhh\createform.html:679:            if(this.checked) inputField.value = "";
+hhh\createform.html:727:                    <input type="text" class="form-control" id="txtUp" name="fromup" 
+disabled placeholder="أدخل الحد من الأعلى" />
+hhh\createform.html:736:                    <input type="text" class="form-control" id="txtDown" name="fromdown" 
+disabled placeholder="أدخل الحد من الأسفل" />
+hhh\createform.html:760:    input[disabled] {
+hhh\createform.html:785:            txtUp.disabled = !this.checked;
+hhh\createform.html:786:            if (!this.checked) txtUp.value = '';
+hhh\createform.html:790:            txtDown.disabled = !this.checked;
+hhh\createform.html:791:            if (!this.checked) txtDown.value = '';
+hhh\createform.html:1128:                            <span class="selected-border">طبيعة الادعاء</span>
+hhh\createform.html:1156:                            <span class="selected-border"> الوثيقة التي يستند عليها 
+الادعاء</span>
+hhh\createform.html:1185:                            <span class="selected-border">     طريقه الحصول على الحق</span>
+hhh\createform.html:1212:                            <span class="selected-border">  تاريخ الحيازة</span>
+hhh\createform.html:1230:                            <span class="selected-border">   اسباب النزاع</span>
+hhh\createform.html:1279:            if(name) {
+hhh\createorder.html:93:                <input type="hidden" asp-for="tanjezOrder.UserID" 
+value="@Context.Session.GetInt32("UserID")" />
+hhh\createorder.html:217:                    <label class="input-label"> اسم الموضع <span 
+class="required-star">*</span></label>
+hhh\createorder.html:218:                    <input type="text" class="form-control" id="requestTitle" 
+name="tanjezOrder.PlaceName" placeholder="أدخل عنوان الطلب" required />
+hhh\createorder.html:293:                    var selectedUnit = this.value;
+hhh\createorder.html:297:                    if (selectedUnit) {
+hhh\createorder.html:299:                        unitLabel.textContent = "عدد " + selectedUnit;
+hhh\createorder.html:300:                    } else {
+hhh\createorder.html:309:                    <input type="hidden" id="hiddenAreaDifferent" 
+name="tanjezOrder.AreaDifferent" value="0" />
+hhh\createorder.html:317:                const hiddenInput = document.getElementById('hiddenAreaDifferent');
+hhh\createorder.html:320:                    hiddenInput.value = this.checked ? '1' : '0';
+hhh\createorder.html:331:                    <input type="file" class="form-control" id="docImageInput" 
+name="tanjezOrder.DocumentImage" style="display:none;" accept="image/*">
+hhh\createorder.html:363:                            <span class="selected-border">شمال</span>
+hhh\createorder.html:364:                            <select class="form-select border-type" 
+name="earthBorders[0].BorderType" style="display:none;">
+hhh\createorder.html:380:                        <input type="hidden" name="earthBorders[3].IdenticalOrDifferent" 
+value="0" />
+hhh\createorder.html:398:                            <span class="selected-border">جنوب</span>
+hhh\createorder.html:399:                            <select class="form-select border-type" 
+name="earthBorders[1].BorderType" style="display:none;">
+hhh\createorder.html:415:                        <input type="hidden" name="earthBorders[3].IdenticalOrDifferent" 
+value="0" />
+hhh\createorder.html:434:                            <span class="selected-border">شرق</span>
+hhh\createorder.html:435:                            <select class="form-select border-type" 
+name="earthBorders[2].BorderType" style="display:none;">
+hhh\createorder.html:450:                        <input type="hidden" name="earthBorders[3].IdenticalOrDifferent" 
+value="0" />
+hhh\createorder.html:469:                            <span class="selected-border">غرب</span>
+hhh\createorder.html:470:                            <select class="form-select border-type" 
+name="earthBorders[3].BorderType" style="display:none;">
+hhh\createorder.html:484:                        <input type="hidden" name="earthBorders[3].IdenticalOrDifferent" 
+value="0" />
+hhh\createorder.html:512:<div id="buildingTableSection" style="display:none; margin-top:20px;">
+hhh\createorder.html:540:    <div id="rahaqTableSection" style="display:none; margin-top:20px;">
+hhh\createorder.html:557:                        <input type="text" class="form-control" disabled placeholder="أدخل 
+الحد من الشمال" />
+hhh\createorder.html:566:                        <input type="text" class="form-control" disabled placeholder="أدخل 
+الحد من الجنوب" />
+hhh\createorder.html:575:                        <input type="text" class="form-control" disabled placeholder="أدخل 
+الحد من الغرب" />
+hhh\createorder.html:584:                        <input type="text" class="form-control" disabled placeholder="أدخل 
+الحد من الجنوب" />
+hhh\createorder.html:624:        rahaqSection.querySelectorAll('input[type="text"]').forEach(input => 
+input.disabled = false);
+hhh\createorder.html:627:            inputField.disabled = checkbox.checked;
+hhh\createorder.html:635:            inputField.disabled = this.checked;
+hhh\createorder.html:636:            if(this.checked) inputField.value = "";
+hhh\createorder.html:684:                    <input type="text" class="form-control" id="txtUp" name="fromup" 
+disabled placeholder="أدخل الحد من الأعلى" />
+hhh\createorder.html:693:                    <input type="text" class="form-control" id="txtDown" name="fromdown" 
+disabled placeholder="أدخل الحد من الأسفل" />
+hhh\createorder.html:717:    input[disabled] {
+hhh\createorder.html:742:            txtUp.disabled = !this.checked;
+hhh\createorder.html:743:            if (!this.checked) txtUp.value = '';
+hhh\createorder.html:747:            txtDown.disabled = !this.checked;
+hhh\createorder.html:748:            if (!this.checked) txtDown.value = '';
+hhh\createspece.html:131:        rahaqSection.querySelectorAll('input[type="text"]').forEach(input => 
+input.disabled = false);
+hhh\createspece.html:134:            inputField.disabled = checkbox.checked;
+hhh\createspece.html:142:            inputField.disabled = this.checked;
+hhh\createspece.html:143:            if(this.checked) inputField.value = "";
+hhh\createspece.html:188:    input[disabled] {
+hhh\createspece.html:213:            txtUp.disabled = !this.checked;
+hhh\createspece.html:214:            if (!this.checked) txtUp.value = '';
+hhh\createspece.html:218:            txtDown.disabled = !this.checked;
+hhh\createspece.html:219:            if (!this.checked) txtDown.value = '';
+hhh\createspece.html:350:            if(name) {
+hhh\creatform.html:94:                <input type="hidden" asp-for="tanjezOrder.UserID" 
+value="@Context.Session.GetInt32("UserID")" />
+hhh\creatform.html:209:                    <label class="input-label"> اسم الموضع <span 
+class="required-star">*</span></label>
+hhh\creatform.html:210:                    <input type="text" class="form-control" id="requestTitle" 
+name="tanjezOrder.PlaceName" placeholder="أدخل عنوان الطلب" required />
+hhh\creatform.html:285:                    var selectedUnit = this.value;
+hhh\creatform.html:289:                    if (selectedUnit) {
+hhh\creatform.html:291:                        unitLabel.textContent = "عدد " + selectedUnit;
+hhh\creatform.html:292:                    } else {
+hhh\creatform.html:301:                    <input type="hidden" id="hiddenAreaDifferent" 
+name="tanjezOrder.AreaDifferent" value="0" />
+hhh\creatform.html:309:                const hiddenInput = document.getElementById('hiddenAreaDifferent');
+hhh\creatform.html:312:                    hiddenInput.value = this.checked ? '1' : '0';
+hhh\creatform.html:323:                    <input type="file" class="form-control" id="docImageInput" 
+name="tanjezOrder.DocumentImage" style="display:none;" accept="image/*">
+hhh\creatform.html:355:                            <span class="selected-border">شمال</span>
+hhh\creatform.html:356:                            <select class="form-select border-type" 
+name="earthBorders[0].BorderType" style="display:none;">
+hhh\creatform.html:372:                        <input type="hidden" name="earthBorders[3].IdenticalOrDifferent" 
+value="0" />
+hhh\creatform.html:390:                            <span class="selected-border">جنوب</span>
+hhh\creatform.html:391:                            <select class="form-select border-type" 
+name="earthBorders[1].BorderType" style="display:none;">
+hhh\creatform.html:407:                        <input type="hidden" name="earthBorders[3].IdenticalOrDifferent" 
+value="0" />
+hhh\creatform.html:426:                            <span class="selected-border">شرق</span>
+hhh\creatform.html:427:                            <select class="form-select border-type" 
+name="earthBorders[2].BorderType" style="display:none;">
+hhh\creatform.html:442:                        <input type="hidden" name="earthBorders[3].IdenticalOrDifferent" 
+value="0" />
+hhh\creatform.html:461:                            <span class="selected-border">غرب</span>
+hhh\creatform.html:462:                            <select class="form-select border-type" 
+name="earthBorders[3].BorderType" style="display:none;">
+hhh\creatform.html:476:                        <input type="hidden" name="earthBorders[3].IdenticalOrDifferent" 
+value="0" />
+hhh\creatform.html:504:<div id="buildingTableSection" style="display:none; margin-top:20px;">
+hhh\creatform.html:532:    <div id="rahaqTableSection" style="display:none; margin-top:20px;">
+hhh\creatform.html:549:                        <input type="text" class="form-control" disabled placeholder="أدخل 
+الحد من الشمال" />
+hhh\creatform.html:558:                        <input type="text" class="form-control" disabled placeholder="أدخل 
+الحد من الجنوب" />
+hhh\creatform.html:567:                        <input type="text" class="form-control" disabled placeholder="أدخل 
+الحد من الغرب" />
+hhh\creatform.html:576:                        <input type="text" class="form-control" disabled placeholder="أدخل 
+الحد من الجنوب" />
+hhh\creatform.html:616:        rahaqSection.querySelectorAll('input[type="text"]').forEach(input => input.disabled 
+= false);
+hhh\creatform.html:619:            inputField.disabled = checkbox.checked;
+hhh\creatform.html:627:            inputField.disabled = this.checked;
+hhh\creatform.html:628:            if(this.checked) inputField.value = "";
+hhh\creatform.html:676:                    <input type="text" class="form-control" id="txtUp" name="fromup" 
+disabled placeholder="أدخل الحد من الأعلى" />
+hhh\creatform.html:685:                    <input type="text" class="form-control" id="txtDown" name="fromdown" 
+disabled placeholder="أدخل الحد من الأسفل" />
+hhh\creatform.html:709:    input[disabled] {
+hhh\creatform.html:734:            txtUp.disabled = !this.checked;
+hhh\creatform.html:735:            if (!this.checked) txtUp.value = '';
+hhh\creatform.html:739:            txtDown.disabled = !this.checked;
+hhh\creatform.html:740:            if (!this.checked) txtDown.value = '';
+hhh\creatform.html:1077:                            <span class="selected-border">طبيعة الادعاء</span>
+hhh\creatform.html:1105:                            <span class="selected-border"> الوثيقة التي يستند عليها 
+الادعاء</span>
+hhh\creatform.html:1134:                            <span class="selected-border">     طريقه الحصول على الحق</span>
+hhh\creatform.html:1161:                            <span class="selected-border">  تاريخ الحيازة</span>
+hhh\creatform.html:1179:                            <span class="selected-border">   اسباب النزاع</span>
+hhh\creatform.html:1290:            if(name) {
+hhh\devid.html:181:                            <span class="selected-border">طبيعة الادعاء</span>
+hhh\devid.html:209:                            <span class="selected-border"> الوثيقة التي يستند عليها 
+الادعاء</span>
+hhh\devid.html:238:                            <span class="selected-border">     طريقه الحصول على الحق</span>
+hhh\devid.html:265:                            <span class="selected-border">  تاريخ الحيازة</span>
+hhh\devid.html:283:                            <span class="selected-border">   اسباب النزاع</span>
+hhh\devid.html:390:            if(name) {
+hhh\index.html:149:                if (checkbox.checked) {
+hhh\index.html:150:                    expTo.disabled = true;
+hhh\index.html:152:                } else {
+hhh\index.html:153:                    expTo.disabled = false;
+hhh\index.html:213:          <div id="manager-msg" class="text-success fw-bold mt-2" style="display:none;"></div>
+hhh\index.html:335:            <div class="form-check ms-3 mt-1" id="motherLangOption" style="display:none;">
+hhh\index.html:396:    motherLangOption.style.display = arabicCheckbox.checked ? 'block' : 'none';
+hhh\index.html:401:    if (!langName) return alert("يرجى إدخال اسم اللغة.");
+hhh\index.html:425:    row.addClass("table-warning");
+hhh\index.html:430:        row.removeClass("table-warning");
+hhh\index.html:449:        if (sec.id === id) $(sec).slideToggle();
+hhh\index.html:450:        else $(sec).slideUp();
+hhh\index.html:471:    if (!name) return alert("يرجى إدخال اسم المهارة.");
+hhh\index.html:483:    if (!company) return alert("يرجى إدخال جهة العمل.");
+hhh\index.html:499:    if (!univ) return alert("يرجى إدخال اسم الجامعة.");
+hhh\index.html:517:    if (!name) return alert("يرجى إدخال اسم الشهادة أو الدورة.");
+hhh\index.html:539:    if (!name) return alert("يرجى إدخال اسم المشروع.");
+hhh\WorkOffer.html:73:    <input type="hidden" name="UserID" value="@Context.Session.GetInt32("UserID")" />
+hhh\WorkOffer.html:78:                <label asp-for="OfferName" class="form-label required">اسم العرض <span 
+class="text-danger">*</span></label>
+hhh\WorkOffer.html:79:                <input asp-for="OfferName" type="text" class="form-control"  required
+hhh\WorkOffer.html:80:                       data-val="true" data-val-required="اسم العرض مطلوب" />
+hhh\WorkOffer.html:81:                <span class="text-danger field-validation-valid" data-valmsg-for="OfferName" 
+data-valmsg-replace="true"></span>
+hhh\WorkOffer.html:95:            <input id="endDateInput" name="EndDate" type="date" class="form-control mt-2" 
+style="display:none;" />
+hhh\WorkOffer.html:103:                if (this.value === "specified") {
+hhh\WorkOffer.html:106:                } else {
+hhh\WorkOffer.html:132:            <span asp-validation-for="WagesTemplate" class="text-danger"></span>
+hhh\WorkOffer.html:185:                if (value === "myAccount" && statuse1 == "2") {
+hhh\WorkOffer.html:187:                } else if (value === "clientAccount" && statuse2 == "3") {
+hhh\WorkOffer.html:189:                } else if (value === "") {
+hhh\WorkOffer.html:191:                } else {
+hhh\WorkOffer.html:203:            if (!templateId || templateId === "create-new-template") {
+hhh\WorkOffer.html:212:                    console.error(err);
+hhh\WorkOffer1.html:73:    <input type="hidden" name="UserID" value="@Context.Session.GetInt32("UserID")" />
+hhh\Work_Form.html:442:    <div class="modal fade" id="clientModal" tabindex="-1" 
+aria-labelledby="clientModalLabel" aria-hidden="true">
+hhh\Work_Form.html:453:                            <input type="text" class="form-control" id="clientName" required>
+hhh\Work_Form.html:457:                            <input type="email" class="form-control" id="clientEmail" 
+required>
+hhh\Work_Form.html:478:    <div class="modal fade" id="adoulModal" tabindex="-1" aria-labelledby="adoulModalLabel" 
+aria-hidden="true">
+hhh\Work_Form.html:489:                            <input type="text" class="form-control" name="adoulName" 
+required>
+hhh\Work_Form.html:493:                            <input type="text" class="form-control" name="adoulPhone" 
+required>
+hhh\Work_Form.html:516:            if (this.value === "lands") {
+hhh\Work_Form.html:526:            else if (this.value === "buildings") {
+hhh\Work_Form_base.html:610:    <div class="modal fade" id="clientModal" tabindex="-1" 
+aria-labelledby="clientModalLabel" aria-hidden="true">
+hhh\Work_Form_base.html:621:                            <input type="text" class="form-control" id="clientName" 
+required>
+hhh\Work_Form_base.html:625:                            <input type="email" class="form-control" id="clientEmail" 
+required>
+hhh\Work_Form_base.html:646:    <div class="modal fade" id="adoulModal" tabindex="-1" 
+aria-labelledby="adoulModalLabel" aria-hidden="true">
+hhh\Work_Form_base.html:657:                            <input type="text" class="form-control" name="adoulName" 
+required>
+hhh\Work_Form_base.html:661:                            <input type="text" class="form-control" name="adoulPhone" 
+required>
+hhh\Work_Form_base.html:684:            if (this.value === "lands") {
+hhh\Work_Form_base.html:694:            else if (this.value === "buildings") {
+
+
