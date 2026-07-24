@@ -1,0 +1,340 @@
+﻿
+InputObject                                                                                                         
+-----------                                                                                                         
+    .section-header {                                                                                               
+        padding: 15px 20px;                                                                                         
+        background-color: #0d6efd;                                                                                  
+        color: #fff;                                                                                                
+        margin-bottom: 5px;                                                                                         
+        transition: background-color 0.3s;                                                                          
+        font-size: 1.3rem;                                                                                          
+        font-weight: bold;                                                                                          
+    .section-header:hover { background-color: #0b5ed7; }                                                            
+    .section-content {                                                                                              
+        padding: 15px 20px;                                                                                         
+        background-color: #ffffff;                                                                                  
+        border-radius: 8px;                                                                                         
+        margin-bottom: 15px;                                                                                        
+        box-shadow: 0 2px 4px rgba(0,0,0,0.05);                                                                     
+    .add-btn { margin-top: 10px; }                                                                                  
+    .item-box {                                                                                                     
+        background: #f8f9fa;                                                                                        
+        border-radius: 8px;                                                                                         
+        margin-top: 10px;                                                                                           
+        border: 1px solid #ddd;                                                                                     
+        position: relative;                                                                                         
+    .action-btns {                                                                                                  
+        position: absolute;                                                                                         
+        left: 10px;                                                                                                 
+        top: 10px;                                                                                                  
+    .action-btns button { margin-left: 5px; }                                                                       
+        display: none;                                                                                              
+        padding: 10px 15px;                                                                                         
+        border-radius: 8px;                                                                                         
+        border: 1px solid #ddd;                                                                                     
+            <div class="row mb-3">                                                                                  
+                    <div class="input-label-en">Ù…Ù†Ø´Ø§ Ø§Ù„Ø·Ù„Ø¨ </div>                                          
+                    <input asp-for="tanjezOrder.CreateOrderName" type="text" class="form-control" placeholder="Ù…...
+                    <h5>ØµÙØ© Ù…Ù†Ø´Ø§ Ø§Ù„Ø·Ù„Ø¨</h5>                                                             
+                        <option value="">   Ø§Ù„ØµÙØ©  </option>                                                   
+                        <option value="Ø¹Ù† Ù†ÙØ³Ø©">  Ø¹Ù† Ù†ÙØ³Ø©</option>                                      
+                        <option value="ÙˆÙƒÙŠÙ„"> ÙˆÙƒÙŠÙ„</option>                                                 
+                        <option value="ÙˆØµÙŠ"> ÙˆØµÙŠ </option>                                                    
+                        <option value=""> Ø§Ø¶Ø§ÙØ©</option>                                                       
+                    <div class="col-md">                                                                            
+                        <h5>   Ø·Ø¨ÙŠØ¹Ø© Ù…Ù†Ø·Ù‚Ø© Ø§Ù„Ø®Ù„Ø§Ù                        </h5>                      
+                        <select id="typePieceSelect" class="form-select">                                           
+                            <option value="">-- Ø§Ø®ØªØ± Ù†ÙˆØ¹ Ø·Ø¨ÙŠØ¹Ù‡ Ø§Ù„Ù…Ù†Ø·Ù‚Ø© --</option>               
+                            <option value="Ø§Ø±Ø¶">Ø£Ø±Ø¶</option>                                                  
+                            <option value="Ø±Ù‡Ù‚">Ø±Ù‡Ù‚</option>                                                  
+                            <option value="Ø§Ø±Ø¶ Ù…Ø¹ Ø±Ù‡Ù‚">Ø£Ø±Ø¶ Ù…Ø¹ Ø±Ù‡Ù‚</option>                          
+                            <option value="Ù…Ø¨Ù†Ù‰">Ù…Ø¨Ù†Ù‰</option>                                              
+                                                                                                                    
+                                                                                                                    
+            <!-- Ø§Ù„ØµÙ Ø§Ù„Ø£ÙˆÙ„: Ù…ÙˆÙ‚Ø¹ Ø§Ù„Ø£Ø±Ø¶ (4 Ø£Ø¹Ù…Ø¯Ø©) -->                                        
+            <div class="row mb-3">                                                                                  
+                <div class="col-md">                                                                                
+                    <h5>Ø§Ù„Ø¯ÙˆÙ„Ø©</h5>                                                                           
+                    <select class="form-select" asp-for="tanjezOrder.Country">                                      
+                        <option value="Ø§Ù„ÙŠÙ…Ù†">Ø§Ù„ÙŠÙ…Ù†</option>                                              
+                <div class="col-md">                                                                                
+                    <h5>Ø§Ù„Ù…Ø­Ø§ÙØ¸Ø©</h5>                                                                       
+                        <option value="">Ø§Ù„Ù…Ø­Ø§ÙØ¸Ø©</option>                                                  
+                        <option value="ØµÙ†Ø¹Ø§Ø¡">ØµÙ†Ø¹Ø§Ø¡</option>                                              
+                        <option value="ØªØ¹Ø²">ØªØ¹Ø²</option>                                                      
+                        <option value="Ø§Ù„Ù…Ù‡Ø±Ø©">Ø§Ù„Ù…Ù‡Ø±Ø©</option>                                          
+                        <option value="Ø§Ù„Ø¬ÙˆÙ">Ø§Ù„Ø¬ÙˆÙ</option>                                              
+                        <option value="Ø§Ù„Ù…Ø­ÙˆÙŠØª">Ø§Ù„Ù…Ø­ÙˆÙŠØª</option>                                      
+                        <option value="ØµØ¹Ø¯Ø©">ØµØ¹Ø¯Ø©</option>                                                  
+                        <option value="Ø§Ù„Ø¶Ø§Ù„Ø¹">Ø§Ù„Ø¶Ø§Ù„Ø¹</option>                                          
+                        <option value="Ø´Ø¨ÙˆØ©">Ø´Ø¨ÙˆØ©</option>                                                  
+                        <option value="Ù„Ø­Ø¬">Ù„Ø­Ø¬</option>                                                      
+                        <option value="Ø¹Ø¯Ù†">Ø¹Ø¯Ù†</option>                                                      
+                        <option value="Ø¹Ù…Ø±Ø§Ù†">Ø¹Ù…Ø±Ø§Ù†</option>                                              
+                        <option value="Ø­Ø¬Ø©">Ø­Ø¬Ø©</option>                                                      
+                        <option value="Ø±ÙŠÙ…Ø©">Ø±ÙŠÙ…Ø©</option>                                                  
+                        <option value="Ø°Ù…Ø§Ø±">Ø°Ù…Ø§Ø±</option>                                                  
+                        <option value="Ø§Ø¨">Ø§Ø¨</option>                                                          
+                        <option value="Ù…Ø§Ø±Ø¨">Ù…Ø§Ø±Ø¨</option>                                                  
+                        <option value="Ø­Ø¶Ø±Ù…ÙˆØª">Ø­Ø¶Ø±Ù…ÙˆØª</option>                                          
+                        <option value="Ø§Ù„Ø¨ÙŠØ¶Ø§Ø¡">Ø§Ù„Ø¨ÙŠØ¶Ø§Ø¡</option>                                      
+                        <option value="Ø§Ø¨ÙŠÙ†">Ø§Ø¨ÙŠÙ†</option>                                                  
+                        <option value="Ø§Ù„Ø­Ø¯ÙŠØ¯Ø©">Ø§Ù„Ø­Ø¯ÙŠØ¯Ø©</option>                                      
+                <div class="col-md">                                                                                
+                    <h5>Ø§Ù„Ù…Ø¯ÙŠØ±ÙŠØ©</h5>                                                                       
+                    <input type="text" class="form-control" id="documentArea" asp-for="tanjezOrder.Zone" placehol...
+                <div class="col-md">                                                                                
+                    <h5>Ø§Ù„Ø¹Ø²Ù„Ø©</h5>                                                                           
+                    <input type="text" class="form-control" id="documentArea" asp-for="tanjezOrder.Directorate" p...
+                <div class="col-md">                                                                                
+                    <h5>Ø§Ù„Ø­ÙŠ/Ø§Ù„Ù‚Ø±ÙŠØ©</h5>                                                                  
+                    <input type="text" class="form-control" id="documentArea" name="tanjezOrder.Village" placehol...
+            <!-- Ø§Ù„ØµÙ Ø§Ù„Ø«Ø§Ù†ÙŠ: Ø§Ù„Ø¥Ø­Ø¯Ø§Ø«ÙŠØ§Øª (4 Ø£Ø¹Ù…Ø¯Ø©ØŒ ÙŠÙ…ÙƒÙ† ØªØ±Ùƒ Ø¹Ù…ÙˆØ¯ ÙØ§Ø±Øº Ù„...
+            <div class="row mb-3">                                                                                  
+                    <h5>Ø§Ø­Ø¯Ø§Ø«ÙŠØ§Øª Y</h5>                                                                     
+                    <input name="tanjezOrder.CoordinatesY" type="number" class="form-control" placeholder="Ø§Ø­Ø¯...
+                    <h5>Ø§Ø­Ø¯Ø§Ø«ÙŠØ§Øª X</h5>                                                                     
+                    <input name="tanjezOrder.CoordinatesX" type="number" class="form-control" placeholder="Ø§Ø­Ø¯...
+                <!-- Ø¹Ù…ÙˆØ¯ ÙØ§Ø±Øº Ù„Ùˆ Ø£Ø±Ø¯Øª Ø­Ù‚Ù„ Ø¥Ø¶Ø§ÙÙŠ -->                                          
+                    <label class="input-label"> Ø§Ø³Ù… Ø§Ù„Ù…ÙˆØ¶Ø¹ <span class="required-star">*</span></label>    
+                    <input type="text" class="form-control" id="requestTitle" name="tanjezOrder.PlaceName" placeh...
+                    <label class="input-label">Ù†ÙˆØ¹ Ø§Ù„Ø·Ù„Ø¨  </label>                                          
+                    <select class="form-select" id="placeTypeId" name="tanjezOrder.PlaceType">                      
+                        <option value="Ø­Ø±">Ø­Ø±</option>                                                          
+                        <option value="ÙˆÙ‚Ù">ÙˆÙ‚Ù</option>                                                      
+                        <option value="3">+ Ø§Ù†Ø´Ø§Ø¡ Ø¬Ø¯ÙŠØ¯</option>                                            
+                <div class="col-md">                                                                                
+                        </select>                                                                                   
+                    </div>                                                                                          
+                <div class="col-md">                                                                                
+                                                                                                                    
+        cursor: pointer;                                                                                            
+    }                                                                                                               
+    }                                                                                                               
+    }                                                                                                               
+            </div>                                                                                                  
+                                                                                                                    
+                                                                                                                    
+                                                                                                                    
+                                                                                                                    
+                                                                                                                    
+                                                                                                                    
+                                                                                                                    
+            </div>                                                                                                  
+            </div>                                                                                                  
+                                                                                                                    
+                                                                                                                    
+                                                                                                                    
+                                                                                                                    
+                                                                                                                    
+                                                                                                                    
+<style>                                                                                                             
+.custom-input-container {                                                                                           
+    position: relative;                                                                                             
+    margin-bottom: 1rem;                                                                                            
+.custom-input-container input,                                                                                      
+.custom-input-container textarea,                                                                                   
+.custom-input-container select {                                                                                    
+    width: 100%;                                                                                                    
+    padding: 0.75rem 0.5rem 0.25rem 0.5rem;                                                                         
+    border: 1px solid #ced4da;                                                                                      
+    border-top: none; /* Ø¥Ø²Ø§Ù„Ø© Ø§Ù„Ø®Ø· Ø§Ù„Ø¹Ù„ÙˆÙŠ */                                                        
+    border-radius: 0.25rem;                                                                                         
+    box-sizing: border-box;                                                                                         
+    outline: none;                                                                                                  
+    font-size: 1rem;                                                                                                
+    background: #fff;                                                                                               
+.custom-input-container label {                                                                                     
+    position: absolute;                                                                                             
+    top: 0.5rem;                                                                                                    
+    left: 0.5rem;                                                                                                   
+    background: #fff;                                                                                               
+    padding: 0 0.25rem;                                                                                             
+    font-size: 1rem;                                                                                                
+    color: #6c757d;                                                                                                 
+    pointer-events: none;                                                                                           
+    transition: all 0.2s ease-in-out;                                                                               
+.custom-input-container input:focus + label,                                                                        
+.custom-input-container input:not(:placeholder-shown) + label,                                                      
+.custom-input-container textarea:focus + label,                                                                     
+.custom-input-container textarea:not(:placeholder-shown) + label,                                                   
+.custom-input-container select:focus + label,                                                                       
+.custom-input-container select:not([value=""]) + label {                                                            
+    top: -0.6rem;                                                                                                   
+    font-size: 0.85rem;                                                                                             
+    color: #495057;                                                                                                 
+}                                                                                                                   
+.custom-input-container textarea {                                                                                  
+    resize: vertical;                                                                                               
+    min-height: 60px;                                                                                               
+}                                                                                                                   
+}                                                                                                                   
+.input-with-button input {                                                                                          
+}                                                                                                                   
+}                                                                                                                   
+</style>                                                                                                            
+    }                                                                                                               
+    .custom-input-container {                                                                                       
+      position: relative;                                                                                           
+      margin-bottom: 1rem;                                                                                          
+  }                                                                                                                 
+      .custom-input-container input,                                                                                
+      .custom-input-container select {                                                                              
+          width: 100%;                                                                                              
+          padding: 12px 10px;                                                                                       
+          border: 1px solid #ccc;                                                                                   
+          border-radius: 8px;                                                                                       
+          background-color: #fff;                                                                                   
+          font-size: 15px;                                                                                          
+          transition: border-color 0.3s, box-shadow 0.3s;                                                           
+      }                                                                                                             
+          .custom-input-container input:focus,                                                                      
+          .custom-input-container select:focus {                                                                    
+              border-color: #007bff;                                                                                
+              box-shadow: 0 0 5px rgba(0,123,255,0.3);                                                              
+              outline: none;                                                                                        
+          }                                                                                                         
+      .custom-input-container label {                                                                               
+          position: absolute;                                                                                       
+          top: 12px;                                                                                                
+          right: 12px;                                                                                              
+          color: #777;                                                                                              
+          background: #fff;                                                                                         
+          padding: 0 5px;                                                                                           
+          transition: 0.2s ease all;                                                                                
+          pointer-events: none;                                                                                     
+      }                                                                                                             
+      .custom-input-container input:focus + label,                                                                  
+      .custom-input-container input:not(:placeholder-shown) + label,                                                
+      .custom-input-container select:focus + label,                                                                 
+      .custom-input-container select:not([value=""]) + label {                                                      
+          top: -10px;                                                                                               
+          right: 10px;                                                                                              
+          font-size: 13px;                                                                                          
+          color: #007bff;                                                                                           
+      }                                                                                                             
+  .dropdown-menu {                                                                                                  
+      width: 100%;                                                                                                  
+  }                                                                                                                 
+                                                                                                                    
+.input-with-button input {                                                                                          
+            <div class="row g-3 mb-4 mt-3">                                                                         
+                <!-- Ù…Ù†Ø´Ø£ Ø§Ù„Ø·Ù„Ø¨ -->                                                                        
+                  <div class="custom-input-container">                                                              
+                    <input asp-for="tanjezOrder.CreateOrderName" type="text" placeholder=" ">                       
+                    <label>Ù…Ù†Ø´Ø£ Ø§Ù„Ø·Ù„Ø¨</label>                                                              
+                  </div>                                                                                            
+                <!-- ØµÙØ© Ù…Ù†Ø´Ø£ Ø§Ù„Ø·Ù„Ø¨ -->                                                                 
+                  <div class="custom-input-container">                                                              
+                      <option value="">Ø§Ù„ØµÙØ©</option>                                                          
+                      <option value="Ø¹Ù† Ù†ÙØ³Ø©">Ø¹Ù† Ù†ÙØ³Ù‡</option>                                          
+                      <option value="ÙˆÙƒÙŠÙ„">ÙˆÙƒÙŠÙ„</option>                                                    
+                      <option value="ÙˆØµÙŠ">ÙˆØµÙŠ</option>                                                        
+                      <option value="">Ø¥Ø¶Ø§ÙØ©</option>                                                          
+                    <label>ØµÙØ© Ù…Ù†Ø´Ø£ Ø§Ù„Ø·Ù„Ø¨</label>                                                       
+                  </div>                                                                                            
+                <!-- Ø·Ø¨ÙŠØ¹Ø© Ù…Ù†Ø·Ù‚Ø© Ø§Ù„Ø®Ù„Ø§Ù -->                                                         
+                  <div class="custom-input-container">                                                              
+                    <select id="typePieceSelect" class="form-select">                                               
+                      <option value="">-- Ø§Ø®ØªØ± Ù†ÙˆØ¹ Ø§Ù„Ù‚Ø·Ø¹Ø© --</option>                                  
+                      <option value="Ø§Ø±Ø¶">Ø£Ø±Ø¶</option>                                                        
+                      <option value="Ø±Ù‡Ù‚">Ø±Ù‡Ù‚</option>                                                        
+                      <option value="Ø§Ø±Ø¶ Ù…Ø¹ Ø±Ù‡Ù‚">Ø£Ø±Ø¶ Ù…Ø¹ Ø±Ù‡Ù‚</option>                                
+                      <option value="Ù…Ø¨Ù†Ù‰">Ù…Ø¨Ù†Ù‰</option>                                                    
+                    <label>Ø·Ø¨ÙŠØ¹Ø© Ù…Ù†Ø·Ù‚Ø© Ø§Ù„Ø®Ù„Ø§Ù</label>                                               
+                  </div>                                                                                            
+                                                                                                                    
+                <!-- Ø§Ù„Ø¯ÙˆÙ„Ø© -->                                                                               
+                <div class="col-md-3">                                                                              
+                  <div class="custom-input-container">                                                              
+                    <select asp-for="tanjezOrder.Country" class="form-select">                                      
+                      <option value="Ø§Ù„ÙŠÙ…Ù†">Ø§Ù„ÙŠÙ…Ù†</option>                                                
+                    <label>Ø§Ù„Ø¯ÙˆÙ„Ø©</label>                                                                     
+                  </div>                                                                                            
+                                                                                                                    
+                <!-- Ø§Ù„Ù…Ø­Ø§ÙØ¸Ø© -->                                                                           
+                <div class="col-md-3">                                                                              
+                  <div class="custom-input-container">                                                              
+                      <option value="">Ø§Ù„Ù…Ø­Ø§ÙØ¸Ø©</option>                                                    
+                      <option value="ØµÙ†Ø¹Ø§Ø¡">ØµÙ†Ø¹Ø§Ø¡</option>                                                
+                      <option value="ØªØ¹Ø²">ØªØ¹Ø²</option>                                                        
+                      <option value="Ø§Ù„Ù…Ù‡Ø±Ø©">Ø§Ù„Ù…Ù‡Ø±Ø©</option>                                            
+                      <option value="Ø§Ù„Ø¬ÙˆÙ">Ø§Ù„Ø¬ÙˆÙ</option>                                                
+                      <option value="Ø§Ù„Ù…Ø­ÙˆÙŠØª">Ø§Ù„Ù…Ø­ÙˆÙŠØª</option>                                        
+                      <option value="ØµØ¹Ø¯Ø©">ØµØ¹Ø¯Ø©</option>                                                    
+                      <option value="Ø§Ù„Ø¶Ø§Ù„Ø¹">Ø§Ù„Ø¶Ø§Ù„Ø¹</option>                                            
+                      <option value="Ø´Ø¨ÙˆØ©">Ø´Ø¨ÙˆØ©</option>                                                    
+                      <option value="Ù„Ø­Ø¬">Ù„Ø­Ø¬</option>                                                        
+                      <option value="Ø¹Ø¯Ù†">Ø¹Ø¯Ù†</option>                                                        
+                      <option value="Ø¹Ù…Ø±Ø§Ù†">Ø¹Ù…Ø±Ø§Ù†</option>                                                
+                      <option value="Ø­Ø¬Ø©">Ø­Ø¬Ø©</option>                                                        
+                      <option value="Ø±ÙŠÙ…Ø©">Ø±ÙŠÙ…Ø©</option>                                                    
+                      <option value="Ø°Ù…Ø§Ø±">Ø°Ù…Ø§Ø±</option>                                                    
+                      <option value="Ø§Ø¨">Ø¥Ø¨</option>                                                            
+                      <option value="Ù…Ø§Ø±Ø¨">Ù…Ø£Ø±Ø¨</option>                                                    
+                      <option value="Ø­Ø¶Ø±Ù…ÙˆØª">Ø­Ø¶Ø±Ù…ÙˆØª</option>                                            
+                      <option value="Ø§Ù„Ø¨ÙŠØ¶Ø§Ø¡">Ø§Ù„Ø¨ÙŠØ¶Ø§Ø¡</option>                                        
+                      <option value="Ø§Ø¨ÙŠÙ†">Ø£Ø¨ÙŠÙ†</option>                                                    
+                      <option value="Ø§Ù„Ø­Ø¯ÙŠØ¯Ø©">Ø§Ù„Ø­Ø¯ÙŠØ¯Ø©</option>                                        
+                    <label>Ø§Ù„Ù…Ø­Ø§ÙØ¸Ø©</label>                                                                 
+                  </div>                                                                                            
+                                                                                                                    
+                <!-- Ø§Ù„Ù…Ø¯ÙŠØ±ÙŠØ© -->                                                                           
+                  <div class="custom-input-container">                                                              
+                    <input type="text" asp-for="tanjezOrder.Zone" placeholder=" ">                                  
+                    <label>Ø§Ù„Ù…Ø¯ÙŠØ±ÙŠØ©</label>                                                                 
+                  </div>                                                                                            
+                                                                                                                    
+                <!-- Ø§Ù„Ø¹Ø²Ù„Ø© -->                                                                               
+                <div class="col-md-3">                                                                              
+                  <div class="custom-input-container">                                                              
+                    <input type="text" asp-for="tanjezOrder.Directorate" placeholder=" ">                           
+                    <label>Ø§Ù„Ø¹Ø²Ù„Ø©</label>                                                                     
+                  </div>                                                                                            
+                                                                                                                    
+                <!-- Ø§Ù„Ø­ÙŠ / Ø§Ù„Ù‚Ø±ÙŠØ© -->                                                                    
+                <div class="col-md-3">                                                                              
+                  <div class="custom-input-container">                                                              
+                    <input type="text" name="tanjezOrder.Village" placeholder=" ">                                  
+                    <label>Ø§Ù„Ø­ÙŠ / Ø§Ù„Ù‚Ø±ÙŠØ©</label>                                                          
+                  </div>                                                                                            
+                                                                                                                    
+                <!-- Ø§Ø­Ø¯Ø§Ø«ÙŠØ§Øª Y -->                                                                         
+                <div class="col-md-3">                                                                              
+                  <div class="custom-input-container">                                                              
+                    <input name="tanjezOrder.CoordinatesY" type="number" placeholder=" ">                           
+                    <label>Ø¥Ø­Ø¯Ø§Ø«ÙŠØ§Øª Y</label>                                                               
+                  </div>                                                                                            
+                                                                                                                    
+                <!-- Ø§Ø­Ø¯Ø§Ø«ÙŠØ§Øª X -->                                                                         
+                <div class="col-md-3">                                                                              
+                  <div class="custom-input-container">                                                              
+                    <input name="tanjezOrder.CoordinatesX" type="number" placeholder=" ">                           
+                    <label>Ø¥Ø­Ø¯Ø§Ø«ÙŠØ§Øª X</label>                                                               
+                  </div>                                                                                            
+                                                                                                                    
+                <!-- Ø§Ø³Ù… Ø§Ù„Ù…ÙˆØ¶Ø¹ -->                                                                        
+                <div class="col-md-3">                                                                              
+                  <div class="custom-input-container">                                                              
+                    <input type="text" id="requestTitle" name="tanjezOrder.PlaceName" placeholder=" " required>     
+                    <label>Ø§Ø³Ù… Ø§Ù„Ù…ÙˆØ¶Ø¹</label>                                                              
+                  </div>                                                                                            
+                                                                                                                    
+                <!-- Ù†ÙˆØ¹ Ø§Ù„Ø·Ù„Ø¨ -->                                                                          
+                <div class="col-md-3">                                                                              
+                  <div class="custom-input-container">                                                              
+                    <select id="placeTypeId" name="tanjezOrder.PlaceType" class="form-select">                      
+                      <option value="Ø­Ø±">Ø­Ø±</option>                                                            
+                      <option value="ÙˆÙ‚Ù">ÙˆÙ‚Ù</option>                                                        
+                      <option value="3">+ Ø¥Ù†Ø´Ø§Ø¡ Ø¬Ø¯ÙŠØ¯</option>                                              
+                    <label>Ù†ÙˆØ¹ Ø§Ù„Ø·Ù„Ø¨</label>                                                                
+                  </div>                                                                                            
+                                                                                                                    
+              </div>                                                                                                
+                                                                                                                    
+                    </select>                                                                                       
+                </div>                                                                                              
+                                                                                                                    
+                                                                                                                    
+
+

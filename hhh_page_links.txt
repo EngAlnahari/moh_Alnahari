@@ -1,0 +1,9 @@
+﻿
+hhh\almjal1.html:43:  <a class="btn btn-success" href="create.html"> انشاء طلب</a>
+hhh\almjal1.html:44:  <a class="btn btn-success" href="Work_Form_base.html"> انشاء استمارة عمل</a>
+hhh\almjal1.html:45:  <a class="btn btn-success" href="WorkOffer.html"> انشاء عرض</a>
+hhh\almjal1.html:46:  <a class="btn btn-success" href="ContractTemplate.html"> انشاء عقد</a>
+hhh\almjal1.html:47:  <a class="btn btn-success" href="AllTemplate.html">جميع الحقول</a>
+hhh\index.html:362:        <a class="btn btn-success" href="almjal1.html"> المجالات</a>
+
+
