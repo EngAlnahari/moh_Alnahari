@@ -1,0 +1,1232 @@
+﻿
+hhh\AllTemplate.html:135:<div class="container my-5">
+hhh\AllTemplate.html:147:        <div class="container">
+hhh\AllTemplate.html:148:            <div class="row mb-3">
+hhh\AllTemplate.html:152:                <div class="col-12">
+hhh\AllTemplate.html:157:            <div class="row mb-3">
+hhh\AllTemplate.html:158:                <div class="col-md">
+hhh\AllTemplate.html:160:                    <div class="input-label-en">منشا الطلب </div>
+hhh\AllTemplate.html:163:                <div class="col-md">
+hhh\AllTemplate.html:180:                    <div class="col-md">
+hhh\AllTemplate.html:201:            <div class="row mb-3">
+hhh\AllTemplate.html:202:                <div class="col-md">
+hhh\AllTemplate.html:208:                <div class="col-md">
+hhh\AllTemplate.html:234:                <div class="col-md">
+hhh\AllTemplate.html:239:                <div class="col-md">
+hhh\AllTemplate.html:244:                <div class="col-md">
+hhh\AllTemplate.html:252:            <div class="row mb-3">
+hhh\AllTemplate.html:255:                <div class="col-md-3">
+hhh\AllTemplate.html:259:                <div class="col-md-3">
+hhh\AllTemplate.html:264:                <div class="col-md-3">
+hhh\AllTemplate.html:268:                <div class="col-md-3">
+hhh\AllTemplate.html:284:        <div class="form-title mb-2">بيانات الوثيقة</div>
+hhh\AllTemplate.html:287:        <div class="row mb-3">
+hhh\AllTemplate.html:289:            <div class="col-md">
+hhh\AllTemplate.html:300:                <div class="col-md">    
+hhh\AllTemplate.html:301:                <div class="input-label-en">الحيازة</div>
+hhh\AllTemplate.html:311:                <div class="col-md">
+hhh\AllTemplate.html:312:                <div class="mb-2">
+hhh\AllTemplate.html:316:                        <div class="col-md">
+hhh\AllTemplate.html:323:                        <div class="col-md">
+hhh\AllTemplate.html:332:                    <div class="mb-2 d-none" id="unitCountDiv">
+hhh\AllTemplate.html:355:            <div class="col-md">
+hhh\AllTemplate.html:356:                <div class="form-check">
+hhh\AllTemplate.html:375:            <div class="col-md">
+hhh\AllTemplate.html:376:                <div class="input-label-en">صورة الوثيقة</div>
+hhh\AllTemplate.html:377:                <div class="input-group">
+hhh\AllTemplate.html:388:<div class="section-divider"></div>
+hhh\AllTemplate.html:390:<div id="earthBordersSection">
+hhh\AllTemplate.html:391:    <div class="form-title mb-2">حدود الأرض</div>
+hhh\AllTemplate.html:392:    <div class="input-label-en mb-1">حدود الأرض المذكورة في الوثيقة</div>
+hhh\AllTemplate.html:410:                        <div class="border-type-cell" data-index="0">
+hhh\AllTemplate.html:445:                        <div class="border-type-cell" data-index="0">
+hhh\AllTemplate.html:481:                        <div class="border-type-cell" data-index="0">
+hhh\AllTemplate.html:516:                        <div class="border-type-cell" data-index="0">
+hhh\AllTemplate.html:560:<div id="buildingTableSection" style="display:none; margin-top:20px;">
+hhh\AllTemplate.html:561:    <div class="form-title mb-2">بيانات المبنى</div>
+hhh\AllTemplate.html:588:    <div id="rahaqTableSection" style="display:none; margin-top:20px;">
+hhh\AllTemplate.html:589:        <div class="form-title mb-2">حدود الرهق</div>
+hhh\AllTemplate.html:638:                <div class="col-md">
+hhh\AllTemplate.html:639:                    <div class="input-label-en">نوع الحيازة </div>
+hhh\AllTemplate.html:712:<div id="earthBordersSection">
+hhh\AllTemplate.html:713:    <div class="section-divider"></div>
+hhh\AllTemplate.html:715:<div class="form-title mb-2" id="earthBordersTitleUnique123">حدود الأرض</div>
+hhh\AllTemplate.html:717:    <div class="input-label-en mb-1">
+hhh\AllTemplate.html:807:        <div class="row mb-3">
+hhh\AllTemplate.html:808:            <div class="section-divider"></div>
+hhh\AllTemplate.html:809:            <div class="form-title mb-2">نوع الحيازة</div>
+hhh\AllTemplate.html:812:            <div class="col-md">
+hhh\AllTemplate.html:813:                <div class="input-label-en">نوع طريق الوصول</div>
+hhh\AllTemplate.html:826:            <div class="col-md">
+hhh\AllTemplate.html:827:                <div class="input-label-en">(فترة تسليم العمل)</div>
+hhh\AllTemplate.html:836:            <div class="col-md">
+hhh\AllTemplate.html:837:                <div class="input-label-en">أقصى مدة</div>
+hhh\AllTemplate.html:843:        <div class="row mb-3">
+hhh\AllTemplate.html:846:            <div class="col-md">
+hhh\AllTemplate.html:847:                <div class="input-label-en">انتقال المهندس الى القطة المراد مسحها</div>
+hhh\AllTemplate.html:860:            <div class="col-md">
+hhh\AllTemplate.html:861:                <div class="input-label-en">المبيت</div>
+hhh\AllTemplate.html:872:            <div class="col-md">
+hhh\AllTemplate.html:873:                <div class="input-label-en">النثريات (تغذية، قات، ..الخ)</div>
+hhh\AllTemplate.html:894:<div class="row mb-3">
+hhh\AllTemplate.html:895:    <div class="col-12">
+hhh\AllTemplate.html:902:<div class="row mb-3">
+hhh\AllTemplate.html:903:    <div class="col-12" id="attachmentsWrapper">
+hhh\AllTemplate.html:907:        <div class="attachment-row mb-2 d-flex align-items-center">
+hhh\AllTemplate.html:913:    <div class="col-12">
+hhh\AllTemplate.html:952:        <div class="section-divider"></div>
+hhh\AllTemplate.html:961:<div class="form-title mb-2">طلب تقديم شكوى نزاع</div>
+hhh\AllTemplate.html:965:<div class="row mb-3">
+hhh\AllTemplate.html:966:    <div class="col-md">
+hhh\AllTemplate.html:967:        <div class="custom-input-container">
+hhh\AllTemplate.html:972:    <div class="col-md">
+hhh\AllTemplate.html:973:        <div class="custom-input-container">
+hhh\AllTemplate.html:978:    <div class="col-md">
+hhh\AllTemplate.html:979:        <div class="custom-input-container">
+hhh\AllTemplate.html:984:    <div class="col-md">
+hhh\AllTemplate.html:985:        <div class="custom-input-container">
+hhh\AllTemplate.html:996:<div class="form-title mb-2">الجهة الشاكية</div>
+hhh\AllTemplate.html:998:<div class="row mb-3">
+hhh\AllTemplate.html:999:    <div class="col-md">
+hhh\AllTemplate.html:1000:        <div class="custom-input-container">
+hhh\AllTemplate.html:1006:    <div class="col-md">
+hhh\AllTemplate.html:1007:        <div class="custom-input-container input-with-button">
+hhh\AllTemplate.html:1016:    <div class="col-md">
+hhh\AllTemplate.html:1017:        <div class="custom-input-container">
+hhh\AllTemplate.html:1025:<div class="form-title mb-2">الجهة المشكو بها</div>
+hhh\AllTemplate.html:1027:<div class="row mb-3">
+hhh\AllTemplate.html:1028:    <div class="col-md">
+hhh\AllTemplate.html:1029:        <div class="custom-input-container">
+hhh\AllTemplate.html:1035:    <div class="col-md">
+hhh\AllTemplate.html:1036:        <div class="custom-input-container input-with-button">
+hhh\AllTemplate.html:1045:    <div class="col-md">
+hhh\AllTemplate.html:1046:        <div class="custom-input-container">
+hhh\AllTemplate.html:1052:<div class="row mb-3">
+hhh\AllTemplate.html:1053:    <div class="col-12">
+hhh\AllTemplate.html:1058:<div class="row mb-3">
+hhh\AllTemplate.html:1059:    <div class="col-12">
+hhh\AllTemplate.html:1067:<div class="row mb-3">
+hhh\AllTemplate.html:1069:    <div class="col-md">
+hhh\AllTemplate.html:1070:        <div class="custom-input-container">
+hhh\AllTemplate.html:1081:        <div class="col-md">
+hhh\AllTemplate.html:1089:        <div class="col-md">
+hhh\AllTemplate.html:1090:            <div class="custom-input-container">
+hhh\AllTemplate.html:1098:        <div class="col-md">
+hhh\AllTemplate.html:1099:            <div class="custom-input-container">
+hhh\AllTemplate.html:1112:<div class="section-divider"></div>
+hhh\AllTemplate.html:1114:<div id="">
+hhh\AllTemplate.html:1137:                        <div class="col-md">
+hhh\AllTemplate.html:1165:                        <div class="col-md">
+hhh\AllTemplate.html:1195:                        <div class="col-md">
+hhh\AllTemplate.html:1239:                        <div class="col-md">
+hhh\AllTemplate.html:1299:<div id="buildingTableSection" style=" margin-top:20px;">
+hhh\AllTemplate.html:1300:    <div class="form-title mb-2"> التحقق من ملكيه البائع</div>
+hhh\AllTemplate.html:1333:        <div class="text-center mt-4">
+hhh\AllTemplate.html:1344:    <div class="main-card">
+hhh\AllTemplate.html:1348:            <div class="row g-3 mb-4 mt-3">
+hhh\AllTemplate.html:1350:                <div class="col-md-4">
+hhh\AllTemplate.html:1351:                  <div class="custom-input-container">
+hhh\AllTemplate.html:1361:                <div class="col-md-4">
+hhh\AllTemplate.html:1362:                  <div class="custom-input-container">
+hhh\AllTemplate.html:1368:                <div class="col-md-4">
+hhh\AllTemplate.html:1369:                  <div class="custom-input-container">
+hhh\AllTemplate.html:1375:                <div class="col-md-4">
+hhh\AllTemplate.html:1376:                  <div class="custom-input-container">
+hhh\AllTemplate.html:1382:                <div class="col-md-4">
+hhh\AllTemplate.html:1383:                  <div class="custom-input-container">
+hhh\AllTemplate.html:1392:                <div class="col-md-4">
+hhh\AllTemplate.html:1393:                  <div class="custom-input-container dropdown">
+hhh\AllTemplate.html:1408:            <div class="section-title">الوضع القائم للموضع الكلي/الشامل</div>
+hhh\AllTemplate.html:1409:            <div class="card-table mb-4">
+hhh\AllTemplate.html:1565:                    <div class="modal fade" id="GovernorateModal" tabindex="-1">
+hhh\AllTemplate.html:1566:                        <div class="modal-dialog modal-lg">
+hhh\AllTemplate.html:1567:                            <div class="modal-content" id="GovernorateContent">
+hhh\AllTemplate.html:1636:                <div class="section-title">بيانات الاراضي</div>
+hhh\AllTemplate.html:1637:                <div class="table-responsive mb-3">
+hhh\AllTemplate.html:1673:      <div class="section-title">الاحداثيات</div>
+hhh\AllTemplate.html:1674:      <div class="table-responsive mb-3">
+hhh\AllTemplate.html:1704:      <div class="row g-3 mb-4 mt-3">
+hhh\AllTemplate.html:1706:        <div class="col-md-3">
+hhh\AllTemplate.html:1707:          <div class="custom-input-container">
+hhh\AllTemplate.html:1712:        <div class="col-md-3">
+hhh\AllTemplate.html:1713:          <div class="custom-input-container">
+hhh\AllTemplate.html:1718:        <div class="col-md-3">
+hhh\AllTemplate.html:1719:          <div class="custom-input-container">
+hhh\AllTemplate.html:1728:        <div class="col-md-3">
+hhh\AllTemplate.html:1729:          <div class="custom-input-container">
+hhh\AllTemplate.html:1734:        <div class="col-md-3">
+hhh\AllTemplate.html:1735:            <div class="custom-input-container">
+hhh\AllTemplate.html:1742:        <div class="col-md-3">
+hhh\AllTemplate.html:1743:          <div class="custom-input-container dropdown">
+hhh\AllTemplate.html:1753:        <div class="col-md-3">
+hhh\AllTemplate.html:1754:            <div class="custom-input-container dropdown">
+hhh\AllTemplate.html:1766:          <div class="col-md-3">
+hhh\AllTemplate.html:1767:            <div class="custom-input-container">
+hhh\AllTemplate.html:1784:          <div class="col-md-3">
+hhh\AllTemplate.html:1785:            <div class="custom-input-container">
+hhh\AllTemplate.html:1800:          <div class="col-md-3">
+hhh\AllTemplate.html:1801:            <div class="custom-input-container">
+hhh\AllTemplate.html:1813:          <div class="col-md-3">
+hhh\AllTemplate.html:1814:            <div class="custom-input-container">
+hhh\AllTemplate.html:1876:            <div class="row mt-4">
+hhh\AllTemplate.html:1877:                <div class="col-12 text-center">
+hhh\AllTemplate.html:1891:    <div dir="rtl">
+hhh\AllTemplate.html:1893:            <div class="d-flex justify-content-between align-items-center mb-3">
+hhh\AllTemplate.html:1900:            <div class="row g-3 mb-2">  
+hhh\AllTemplate.html:1901:                <div class="col-md-6">
+hhh\AllTemplate.html:1909:            <div class="col-md-6">
+hhh\AllTemplate.html:1941:        <div class="row g-3 mb-2">
+hhh\AllTemplate.html:1943:            <div class="col-md-6">
+hhh\AllTemplate.html:1944:        <div class="section-title">اجور العمل
+hhh\AllTemplate.html:1945:        <div class="table-responsive mb-3">
+hhh\AllTemplate.html:1960:            <div id="wagesTableContainer">
+hhh\AllTemplate.html:1980:            <div class="col-md-6">
+hhh\AllTemplate.html:1981:        <div class="section-title">التنقلات والمبيت</div>
+hhh\AllTemplate.html:1982:        <div class="table-responsive mb-3">
+hhh\AllTemplate.html:1992:                <div id="transportTableContainer">
+hhh\AllTemplate.html:2050:             <div class="section-title">تكلفة إضافية</div>
+hhh\AllTemplate.html:2051:            <div class="table-responsive mb-3">
+hhh\AllTemplate.html:2052:            <div class="col-md-6">
+hhh\AllTemplate.html:2059:                <div id="additionalCostContainer">
+hhh\AllTemplate.html:2078:            <div class="section-title">المدفوعات </div>
+hhh\AllTemplate.html:2079:        <div class="row mb-3">
+hhh\AllTemplate.html:2081:                <div class="col-md">
+hhh\AllTemplate.html:2087:                <div class="col-md">
+hhh\AllTemplate.html:2093:                <div class="col-md">
+hhh\AllTemplate.html:2099:            <div class="section-title"> الغرامات</div>
+hhh\AllTemplate.html:2100:        <div class="row mb-3">
+hhh\AllTemplate.html:2101:                <div class="col-md">
+hhh\AllTemplate.html:2106:                <div class="col-md">
+hhh\AllTemplate.html:2112:                <div class="col-md">
+hhh\AllTemplate.html:2120:            <div class="accordion mt-4" id="notesAccordion">
+hhh\AllTemplate.html:2121:                <div class="accordion-item">
+hhh\AllTemplate.html:2128:                    <div id="collapseNotes" class="accordion-collapse collapse" 
+aria-labelledby="headingNotes"
+hhh\AllTemplate.html:2130:                        <div class="accordion-body">
+hhh\almjal.html:39:  <div id="step-container">
+hhh\almjal.html:42:    <div id="breadcrumb" class="breadcrumb-path"></div>
+hhh\almjal.html:45:    <div id="step-main">
+hhh\almjal.html:47:      <div class="row g-3" id="main-icons"></div>
+hhh\almjal.html:51:    <div id="step-specialty" style="display:none;">
+hhh\almjal.html:53:      <div class="row g-3" id="specialty-icons"></div>
+hhh\almjal.html:58:    <div id="step-branch" style="display:none;">
+hhh\almjal.html:60:      <div class="row g-3" id="branch-icons"></div>
+hhh\almjal.html:65:    <div id="step-detail" style="display:none;">
+hhh\almjal.html:67:      <div class="row g-3" id="detail-icons"></div>
+hhh\almjal.html:70:      <div class="mt-3 d-flex gap-2 flex-wrap">
+hhh\almjal.html:298:          <div class="col-md-3">
+hhh\almjal.html:299:            <div class="icon-card" data-main="${m}">
+hhh\almjal.html:301:              <div>${m}</div>
+hhh\almjal.html:325:          <div class="col-md-3">
+hhh\almjal.html:326:            <div class="icon-card" data-spec="${s}" data-main="${main}">
+hhh\almjal.html:327:              <div>${s}</div>
+hhh\almjal.html:359:          <div class="col-md-3">
+hhh\almjal.html:360:            <div class="icon-card" data-branch="${b}" data-spec="${spec}" data-main="${main}">
+hhh\almjal.html:361:              <div>${b || "---"}</div>
+hhh\almjal.html:395:          <div class="col-md-3">
+hhh\almjal.html:396:            <div class="icon-card" data-detail="${d}">
+hhh\almjal.html:397:              <div>${d || "---"}</div>
+hhh\almjal1.html:17:  <div class="row mb-3">
+hhh\almjal1.html:18:    <div class="col-md-3">
+hhh\almjal1.html:24:    <div class="col-md-3">
+hhh\almjal1.html:30:    <div class="col-md-3">
+hhh\almjal1.html:36:    <div class="col-md-3">
+hhh\ContractTemplate.html:202:    <div class="contracts-list">
+hhh\ContractTemplate.html:204:        <div class="contract-card">
+hhh\ContractTemplate.html:205:            <div class="contract-header">عقد عمل</div>
+hhh\ContractTemplate.html:206:            <div class="contract-section">
+hhh\ContractTemplate.html:209:            <div class="contract-section">
+hhh\ContractTemplate.html:212:            <div class="contract-section">
+hhh\ContractTemplate.html:215:            <div class="contract-section">
+hhh\ContractTemplate.html:218:            <div class="contract-section">
+hhh\ContractTemplate.html:221:            <div class="contract-section">
+hhh\ContractTemplate.html:224:            <div class="contract-section">
+hhh\ContractTemplate.html:244:            <div class="contract-section">
+hhh\ContractTemplate.html:247:            <div class="contract-section">
+hhh\ContractTemplate.html:250:            <div class="contract-section">
+hhh\ContractTemplate.html:263:            <div class="signatures">
+hhh\ContractTemplate.html:264:                 <div class="signature-block">
+hhh\ContractTemplate.html:266:                     <div style="height:50px; border-bottom:1px solid #aaa; 
+margin:12px 0;"></div>
+hhh\ContractTemplate.html:269:                 <div class="signature-block">
+hhh\ContractTemplate.html:271:                     <div style="height:50px; border-bottom:1px solid #aaa; 
+margin:12px 0;"></div>
+hhh\ContractTemplate.html:275:            <div class="contract-actions" id="contractActions">
+hhh\ContractTemplate.html:284:            <div id="rejectFormContainer" style="display:none;">
+hhh\ContractTemplate.html:286:                    <div class="form-group">
+hhh\ContractTemplate.html:299:                    <div class="form-buttons">
+hhh\ContractTemplate.html:320:    <div id="paymentModal" style="display:none; position:fixed; top:0; right:0; 
+left:0; bottom:0; background:rgba(0,0,0,0.3); z-index:9999; align-items:center; justify-content:center;">
+hhh\ContractTemplate.html:321:        <div id="paymentModalContent" style="background:#fff; border-radius:10px; 
+padding:32px 24px; max-width:350px; margin:auto; box-shadow:0 2px 12px #0002; text-align:center;">
+hhh\ContractTemplate.html:323:            <div id="paymentMethodSection">
+hhh\ContractTemplate.html:335:                <div id="creditCardFields" style="display:none;">
+hhh\ContractTemplate.html:336:                    <div class="form-group">
+hhh\ContractTemplate.html:340:                    <div style="display:flex; gap:10px;">
+hhh\ContractTemplate.html:341:                        <div class="form-group" style="flex:1;">
+hhh\ContractTemplate.html:345:                        <div class="form-group" style="flex:1;">
+hhh\ContractTemplate.html:353:                <div id="sentToClientField" style="display:none;">
+hhh\ContractTemplate.html:354:                    <div class="form-group">
+hhh\ContractTemplate.html:360:                <div style="text-align:center; margin-top:18px;">
+hhh\ContractTemplate1.html:202:    <div class="contracts-list">
+hhh\ContractTemplate1.html:204:        <div class="contract-card">
+hhh\ContractTemplate1.html:205:            <div class="contract-header">عقد عمل</div>
+hhh\ContractTemplate1.html:208:            <div class="signatures">
+hhh\ContractTemplate1.html:209:                 <div class="signature-block">
+hhh\ContractTemplate1.html:211:                     <div style="height:50px; border-bottom:1px solid #aaa; 
+margin:12px 0;"></div>
+hhh\ContractTemplate1.html:214:                 <div class="signature-block">
+hhh\ContractTemplate1.html:216:                     <div style="height:50px; border-bottom:1px solid #aaa; 
+margin:12px 0;"></div>
+hhh\ContractTemplate1.html:220:            <div class="contract-actions" id="contractActions">
+hhh\ContractTemplate1.html:229:            <div id="rejectFormContainer" style="display:none;">
+hhh\ContractTemplate1.html:231:                    <div class="form-group">
+hhh\ContractTemplate1.html:244:                    <div class="form-buttons">
+hhh\ContractTemplate1.html:265:    <div id="paymentModal" style="display:none; position:fixed; top:0; right:0; 
+left:0; bottom:0; background:rgba(0,0,0,0.3); z-index:9999; align-items:center; justify-content:center;">
+hhh\ContractTemplate1.html:266:        <div id="paymentModalContent" style="background:#fff; border-radius:10px; 
+padding:32px 24px; max-width:350px; margin:auto; box-shadow:0 2px 12px #0002; text-align:center;">
+hhh\ContractTemplate1.html:268:            <div id="paymentMethodSection">
+hhh\ContractTemplate1.html:280:                <div id="creditCardFields" style="display:none;">
+hhh\ContractTemplate1.html:281:                    <div class="form-group">
+hhh\ContractTemplate1.html:285:                    <div style="display:flex; gap:10px;">
+hhh\ContractTemplate1.html:286:                        <div class="form-group" style="flex:1;">
+hhh\ContractTemplate1.html:290:                        <div class="form-group" style="flex:1;">
+hhh\ContractTemplate1.html:298:                <div id="sentToClientField" style="display:none;">
+hhh\ContractTemplate1.html:299:                    <div class="form-group">
+hhh\ContractTemplate1.html:305:                <div style="text-align:center; margin-top:18px;">
+hhh\create.html:79:<div class="container my-5">
+hhh\create.html:83:        <div class="container">
+hhh\create.html:84:            <div class="row mb-3">
+hhh\create.html:88:                <div class="col-12">
+hhh\create.html:93:            <div class="row mb-3">
+hhh\create.html:94:                <div class="col-md">
+hhh\create.html:96:                    <div class="input-label-en">منشا الطلب </div>
+hhh\create.html:99:                <div class="col-md">
+hhh\create.html:114:                <div class="col-md">
+hhh\create.html:125:                    <div class="col-md">
+hhh\create.html:146:            <div class="row mb-3">
+hhh\create.html:147:                <div class="col-md">
+hhh\create.html:153:                <div class="col-md">
+hhh\create.html:179:                <div class="col-md">
+hhh\create.html:184:                <div class="col-md">
+hhh\create.html:189:                <div class="col-md">
+hhh\create.html:197:            <div class="row mb-3">
+hhh\create.html:200:                <div class="col-md-3">
+hhh\create.html:204:                <div class="col-md-3">
+hhh\create.html:209:                <div class="col-md-3">
+hhh\create.html:213:                <div class="col-md-3">
+hhh\create.html:229:        <div class="form-title mb-2">بيانات الوثيقة</div>
+hhh\create.html:232:        <div class="row mb-3">
+hhh\create.html:234:            <div class="col-md">
+hhh\create.html:245:                <div class="col-md">    
+hhh\create.html:246:                <div class="input-label-en">الحيازة</div>
+hhh\create.html:256:                <div class="col-md">
+hhh\create.html:257:                <div class="mb-2">
+hhh\create.html:261:                        <div class="col-md">
+hhh\create.html:268:                        <div class="col-md">
+hhh\create.html:277:                    <div class="mb-2 d-none" id="unitCountDiv">
+hhh\create.html:300:            <div class="col-md">
+hhh\create.html:301:                <div class="form-check">
+hhh\create.html:320:            <div class="col-md">
+hhh\create.html:321:                <div class="input-label-en">صورة الوثيقة</div>
+hhh\create.html:322:                <div class="input-group">
+hhh\create.html:333:<div class="section-divider"></div>
+hhh\create.html:335:<div id="earthBordersSection">
+hhh\create.html:336:    <div class="form-title mb-2">حدود الأرض</div>
+hhh\create.html:337:    <div class="input-label-en mb-1">حدود الأرض المذكورة في الوثيقة</div>
+hhh\create.html:355:                        <div class="border-type-cell" data-index="0">
+hhh\create.html:390:                        <div class="border-type-cell" data-index="0">
+hhh\create.html:426:                        <div class="border-type-cell" data-index="0">
+hhh\create.html:461:                        <div class="border-type-cell" data-index="0">
+hhh\create.html:505:<div id="buildingTableSection" style="display:none; margin-top:20px;">
+hhh\create.html:506:    <div class="form-title mb-2">بيانات المبنى</div>
+hhh\create.html:533:    <div id="rahaqTableSection" style="display:none; margin-top:20px;">
+hhh\create.html:534:        <div class="form-title mb-2">حدود الرهق</div>
+hhh\create.html:583:                <div class="col-md">
+hhh\create.html:584:                    <div class="input-label-en">نوع الحيازة </div>
+hhh\create.html:657:<div id="earthBordersSection">
+hhh\create.html:658:    <div class="section-divider"></div>
+hhh\create.html:660:<div class="form-title mb-2" id="earthBordersTitleUnique123">حدود الأرض</div>
+hhh\create.html:662:    <div class="input-label-en mb-1">
+hhh\create.html:752:        <div class="row mb-3">
+hhh\create.html:753:            <div class="section-divider"></div>
+hhh\create.html:754:            <div class="form-title mb-2">نوع الحيازة</div>
+hhh\create.html:757:            <div class="col-md">
+hhh\create.html:758:                <div class="input-label-en">نوع طريق الوصول</div>
+hhh\create.html:771:            <div class="col-md">
+hhh\create.html:772:                <div class="input-label-en">(فترة تسليم العمل)</div>
+hhh\create.html:781:            <div class="col-md">
+hhh\create.html:782:                <div class="input-label-en">أقصى مدة</div>
+hhh\create.html:788:        <div class="row mb-3">
+hhh\create.html:791:            <div class="col-md">
+hhh\create.html:792:                <div class="input-label-en">انتقال المهندس الى القطة المراد مسحها</div>
+hhh\create.html:805:            <div class="col-md">
+hhh\create.html:806:                <div class="input-label-en">المبيت</div>
+hhh\create.html:817:            <div class="col-md">
+hhh\create.html:818:                <div class="input-label-en">النثريات (تغذية، قات، ..الخ)</div>
+hhh\create.html:839:<div class="row mb-3">
+hhh\create.html:840:    <div class="col-12">
+hhh\create.html:847:<div class="row mb-3">
+hhh\create.html:848:    <div class="col-12" id="attachmentsWrapper">
+hhh\create.html:852:        <div class="attachment-row mb-2 d-flex align-items-center">
+hhh\create.html:858:    <div class="col-12">
+hhh\create.html:897:        <div class="section-divider"></div>
+hhh\create.html:906:<div class="form-title mb-2">طلب تقديم شكوى نزاع</div>
+hhh\create.html:910:<div class="row mb-3">
+hhh\create.html:911:    <div class="col-md">
+hhh\create.html:912:        <div class="custom-input-container">
+hhh\create.html:917:    <div class="col-md">
+hhh\create.html:918:        <div class="custom-input-container">
+hhh\create.html:923:    <div class="col-md">
+hhh\create.html:924:        <div class="custom-input-container">
+hhh\create.html:929:    <div class="col-md">
+hhh\create.html:930:        <div class="custom-input-container">
+hhh\create.html:941:<div class="form-title mb-2">الجهة الشاكية</div>
+hhh\create.html:943:<div class="row mb-3">
+hhh\create.html:944:    <div class="col-md">
+hhh\create.html:945:        <div class="custom-input-container">
+hhh\create.html:951:    <div class="col-md">
+hhh\create.html:952:        <div class="custom-input-container input-with-button">
+hhh\create.html:961:    <div class="col-md">
+hhh\create.html:962:        <div class="custom-input-container">
+hhh\create.html:970:<div class="form-title mb-2">الجهة المشكو بها</div>
+hhh\create.html:972:<div class="row mb-3">
+hhh\create.html:973:    <div class="col-md">
+hhh\create.html:974:        <div class="custom-input-container">
+hhh\create.html:980:    <div class="col-md">
+hhh\create.html:981:        <div class="custom-input-container input-with-button">
+hhh\create.html:990:    <div class="col-md">
+hhh\create.html:991:        <div class="custom-input-container">
+hhh\create.html:997:<div class="row mb-3">
+hhh\create.html:998:    <div class="col-12">
+hhh\create.html:1003:<div class="row mb-3">
+hhh\create.html:1004:    <div class="col-12">
+hhh\create.html:1012:<div class="row mb-3">
+hhh\create.html:1014:    <div class="col-md">
+hhh\create.html:1015:        <div class="custom-input-container">
+hhh\create.html:1026:        <div class="col-md">
+hhh\create.html:1034:        <div class="col-md">
+hhh\create.html:1035:            <div class="custom-input-container">
+hhh\create.html:1043:        <div class="col-md">
+hhh\create.html:1044:            <div class="custom-input-container">
+hhh\create.html:1057:<div class="section-divider"></div>
+hhh\create.html:1059:<div id="">
+hhh\create.html:1082:                        <div class="col-md">
+hhh\create.html:1110:                        <div class="col-md">
+hhh\create.html:1140:                        <div class="col-md">
+hhh\create.html:1184:                        <div class="col-md">
+hhh\create.html:1306:<div id="buildingTableSection" style=" margin-top:20px;">
+hhh\create.html:1307:    <div class="form-title mb-2"> التحقق من ملكيه البائع</div>
+hhh\create.html:1335:<div class="form-title mb-2"> تقسيم بين ورثة   </div>
+hhh\create.html:1338:<div class="row mb-3">
+hhh\create.html:1339:    <div class="col-md">
+hhh\create.html:1340:        <div class="custom-input-container">
+hhh\create.html:1345:    <div class="col-md">
+hhh\create.html:1346:        <div class="custom-input-container">
+hhh\create.html:1351:    <div class="col-md">
+hhh\create.html:1352:        <div class="custom-input-container">
+hhh\create.html:1363:<div class="row mb-3">
+hhh\create.html:1365:    <div class="col-12">
+hhh\create.html:1369:    <div class="col-md-4">
+hhh\create.html:1370:        <div class="custom-input-container">
+hhh\create.html:1376:    <div class="col-md-4">
+hhh\create.html:1377:        <div class="custom-input-container">
+hhh\create.html:1383:    <div class="col-md-4">
+hhh\create.html:1384:        <div class="custom-input-container">
+hhh\create.html:1391:    <div class="col-md-4">
+hhh\create.html:1392:        <div class="custom-input-container">
+hhh\create.html:1398:    <div class="col-md-4">
+hhh\create.html:1399:        <div class="custom-input-container">
+hhh\create.html:1405:    <div class="col-md-4">
+hhh\create.html:1406:        <div class="custom-input-container">
+hhh\create.html:1413:    <div class="col-md-12">
+hhh\create.html:1414:        <div class="custom-input-container">
+hhh\create.html:1423:<div class="row mb-3">
+hhh\create.html:1424:    <div class="col-12">
+hhh\create.html:1429:    <div class="col-md-4">
+hhh\create.html:1430:        <div class="custom-input-container">
+hhh\create.html:1436:    <div class="col-md-4">
+hhh\create.html:1437:        <div class="custom-input-container">
+hhh\create.html:1443:    <div class="col-md-4">
+hhh\create.html:1444:        <div class="custom-input-container">
+hhh\create.html:1451:    <div class="col-md-4">
+hhh\create.html:1452:        <div class="custom-input-container">
+hhh\create.html:1458:    <div class="col-md-4">
+hhh\create.html:1459:        <div class="custom-input-container">
+hhh\create.html:1465:    <div class="col-md-4">
+hhh\create.html:1466:        <div class="custom-input-container">
+hhh\create.html:1473:    <div class="col-md-12">
+hhh\create.html:1474:        <div class="custom-input-container">
+hhh\create.html:1487:<div class="row mb-3 mt-4">
+hhh\create.html:1488:    <div class="col-12">
+hhh\create.html:1494:    <div class="col-md-4">
+hhh\create.html:1495:        <div class="custom-input-container">
+hhh\create.html:1501:    <div class="col-md-4">
+hhh\create.html:1502:        <div class="custom-input-container">
+hhh\create.html:1508:    <div class="col-md-4">
+hhh\create.html:1509:        <div class="custom-input-container">
+hhh\create.html:1517:    <div class="col-12">
+hhh\create.html:1518:        <div class="form-check mt-2">
+hhh\create.html:1529:<div class="row mb-3 mt-4">
+hhh\create.html:1530:    <div class="col-12">
+hhh\create.html:1535:    <div class="col-md-4">
+hhh\create.html:1536:        <div class="custom-input-container">
+hhh\create.html:1542:    <div class="col-md-4">
+hhh\create.html:1543:        <div class="custom-input-container">
+hhh\create.html:1549:    <div class="col-md-4">
+hhh\create.html:1550:        <div class="custom-input-container">
+hhh\create.html:1556:        <div class="text-center mt-4">
+hhh\createdevided.html:79:<div class="container my-5">
+hhh\createdevided.html:91:        <div class="container">
+hhh\createdevided.html:92:            <div class="row mb-3">
+hhh\createdevided.html:96:                <div class="col-12">
+hhh\createdevided.html:101:            <div class="row mb-3">
+hhh\createdevided.html:102:                <div class="col-md">
+hhh\createdevided.html:104:                    <div class="input-label-en">منشا الطلب </div>
+hhh\createdevided.html:107:                <div class="col-md">
+hhh\createdevided.html:122:                <div class="col-md">
+hhh\createdevided.html:133:                    <div class="col-md">
+hhh\createdevided.html:154:            <div class="row mb-3">
+hhh\createdevided.html:155:                <div class="col-md">
+hhh\createdevided.html:161:                <div class="col-md">
+hhh\createdevided.html:187:                <div class="col-md">
+hhh\createdevided.html:192:                <div class="col-md">
+hhh\createdevided.html:197:                <div class="col-md">
+hhh\createdevided.html:205:            <div class="row mb-3">
+hhh\createdevided.html:208:                <div class="col-md-3">
+hhh\createdevided.html:212:                <div class="col-md-3">
+hhh\createdevided.html:217:                <div class="col-md-3">
+hhh\createdevided.html:221:                <div class="col-md-3">
+hhh\createdevided.html:237:        <div class="form-title mb-2">بيانات الوثيقة</div>
+hhh\createdevided.html:240:        <div class="row mb-3">
+hhh\createdevided.html:242:            <div class="col-md">
+hhh\createdevided.html:253:                <div class="col-md">    
+hhh\createdevided.html:254:                <div class="input-label-en">الحيازة</div>
+hhh\createdevided.html:264:                <div class="col-md">
+hhh\createdevided.html:265:                <div class="mb-2">
+hhh\createdevided.html:269:                        <div class="col-md">
+hhh\createdevided.html:276:                        <div class="col-md">
+hhh\createdevided.html:285:                    <div class="mb-2 d-none" id="unitCountDiv">
+hhh\createdevided.html:308:            <div class="col-md">
+hhh\createdevided.html:309:                <div class="form-check">
+hhh\createdevided.html:328:            <div class="col-md">
+hhh\createdevided.html:329:                <div class="input-label-en">صورة الوثيقة</div>
+hhh\createdevided.html:330:                <div class="input-group">
+hhh\createdevided.html:341:<div class="section-divider"></div>
+hhh\createdevided.html:343:<div id="earthBordersSection">
+hhh\createdevided.html:344:    <div class="form-title mb-2">حدود الأرض</div>
+hhh\createdevided.html:345:    <div class="input-label-en mb-1">حدود الأرض المذكورة في الوثيقة</div>
+hhh\createdevided.html:363:                        <div class="border-type-cell" data-index="0">
+hhh\createdevided.html:398:                        <div class="border-type-cell" data-index="0">
+hhh\createdevided.html:434:                        <div class="border-type-cell" data-index="0">
+hhh\createdevided.html:469:                        <div class="border-type-cell" data-index="0">
+hhh\createdevided.html:513:<div id="buildingTableSection" style="display:none; margin-top:20px;">
+hhh\createdevided.html:514:    <div class="form-title mb-2">بيانات المبنى</div>
+hhh\createdevided.html:541:    <div id="rahaqTableSection" style="display:none; margin-top:20px;">
+hhh\createdevided.html:542:        <div class="form-title mb-2">حدود الرهق</div>
+hhh\createdevided.html:591:                <div class="col-md">
+hhh\createdevided.html:592:                    <div class="input-label-en">نوع الحيازة </div>
+hhh\createdevided.html:665:<div id="earthBordersSection">
+hhh\createdevided.html:666:    <div class="section-divider"></div>
+hhh\createdevided.html:668:<div class="form-title mb-2" id="earthBordersTitleUnique123">حدود الأرض</div>
+hhh\createdevided.html:670:    <div class="input-label-en mb-1">
+hhh\createdevided.html:760:        <div class="row mb-3">
+hhh\createdevided.html:761:            <div class="section-divider"></div>
+hhh\createdevided.html:762:            <div class="form-title mb-2">نوع الحيازة</div>
+hhh\createdevided.html:765:            <div class="col-md">
+hhh\createdevided.html:766:                <div class="input-label-en">نوع طريق الوصول</div>
+hhh\createdevided.html:779:            <div class="col-md">
+hhh\createdevided.html:780:                <div class="input-label-en">(فترة تسليم العمل)</div>
+hhh\createdevided.html:789:            <div class="col-md">
+hhh\createdevided.html:790:                <div class="input-label-en">أقصى مدة</div>
+hhh\createdevided.html:796:        <div class="row mb-3">
+hhh\createdevided.html:799:            <div class="col-md">
+hhh\createdevided.html:800:                <div class="input-label-en">انتقال المهندس الى القطة المراد مسحها</div>
+hhh\createdevided.html:813:            <div class="col-md">
+hhh\createdevided.html:814:                <div class="input-label-en">المبيت</div>
+hhh\createdevided.html:825:            <div class="col-md">
+hhh\createdevided.html:826:                <div class="input-label-en">النثريات (تغذية، قات، ..الخ)</div>
+hhh\createdevided.html:847:<div class="row mb-3">
+hhh\createdevided.html:848:    <div class="col-12">
+hhh\createdevided.html:855:<div class="row mb-3">
+hhh\createdevided.html:856:    <div class="col-12" id="attachmentsWrapper">
+hhh\createdevided.html:860:        <div class="attachment-row mb-2 d-flex align-items-center">
+hhh\createdevided.html:866:    <div class="col-12">
+hhh\createdevided.html:905:        <div class="section-divider"></div>
+hhh\createdevided.html:1014:<div class="form-title mb-2"> تقسيم بين ورثة   </div>
+hhh\createdevided.html:1017:<div class="row mb-3">
+hhh\createdevided.html:1018:    <div class="col-md">
+hhh\createdevided.html:1019:        <div class="custom-input-container">
+hhh\createdevided.html:1024:    <div class="col-md">
+hhh\createdevided.html:1025:        <div class="custom-input-container">
+hhh\createdevided.html:1030:    <div class="col-md">
+hhh\createdevided.html:1031:        <div class="custom-input-container">
+hhh\createdevided.html:1042:<div class="row mb-3">
+hhh\createdevided.html:1044:    <div class="col-12">
+hhh\createdevided.html:1048:    <div class="col-md-4">
+hhh\createdevided.html:1049:        <div class="custom-input-container">
+hhh\createdevided.html:1055:    <div class="col-md-4">
+hhh\createdevided.html:1056:        <div class="custom-input-container">
+hhh\createdevided.html:1062:    <div class="col-md-4">
+hhh\createdevided.html:1063:        <div class="custom-input-container">
+hhh\createdevided.html:1070:    <div class="col-md-4">
+hhh\createdevided.html:1071:        <div class="custom-input-container">
+hhh\createdevided.html:1077:    <div class="col-md-4">
+hhh\createdevided.html:1078:        <div class="custom-input-container">
+hhh\createdevided.html:1084:    <div class="col-md-4">
+hhh\createdevided.html:1085:        <div class="custom-input-container">
+hhh\createdevided.html:1092:    <div class="col-md-12">
+hhh\createdevided.html:1093:        <div class="custom-input-container">
+hhh\createdevided.html:1102:<div class="row mb-3">
+hhh\createdevided.html:1103:    <div class="col-12">
+hhh\createdevided.html:1108:    <div class="col-md-4">
+hhh\createdevided.html:1109:        <div class="custom-input-container">
+hhh\createdevided.html:1115:    <div class="col-md-4">
+hhh\createdevided.html:1116:        <div class="custom-input-container">
+hhh\createdevided.html:1122:    <div class="col-md-4">
+hhh\createdevided.html:1123:        <div class="custom-input-container">
+hhh\createdevided.html:1130:    <div class="col-md-4">
+hhh\createdevided.html:1131:        <div class="custom-input-container">
+hhh\createdevided.html:1137:    <div class="col-md-4">
+hhh\createdevided.html:1138:        <div class="custom-input-container">
+hhh\createdevided.html:1144:    <div class="col-md-4">
+hhh\createdevided.html:1145:        <div class="custom-input-container">
+hhh\createdevided.html:1152:    <div class="col-md-12">
+hhh\createdevided.html:1153:        <div class="custom-input-container">
+hhh\createdevided.html:1166:<div class="row mb-3 mt-4">
+hhh\createdevided.html:1167:    <div class="col-12">
+hhh\createdevided.html:1173:    <div class="col-md-4">
+hhh\createdevided.html:1174:        <div class="custom-input-container">
+hhh\createdevided.html:1180:    <div class="col-md-4">
+hhh\createdevided.html:1181:        <div class="custom-input-container">
+hhh\createdevided.html:1187:    <div class="col-md-4">
+hhh\createdevided.html:1188:        <div class="custom-input-container">
+hhh\createdevided.html:1196:    <div class="col-12">
+hhh\createdevided.html:1197:        <div class="form-check mt-2">
+hhh\createdevided.html:1208:<div class="row mb-3 mt-4">
+hhh\createdevided.html:1209:    <div class="col-12">
+hhh\createdevided.html:1214:    <div class="col-md-4">
+hhh\createdevided.html:1215:        <div class="custom-input-container">
+hhh\createdevided.html:1221:    <div class="col-md-4">
+hhh\createdevided.html:1222:        <div class="custom-input-container">
+hhh\createdevided.html:1228:    <div class="col-md-4">
+hhh\createdevided.html:1229:        <div class="custom-input-container">
+hhh\createdevided.html:1235:        <div class="text-center mt-4">
+hhh\createform.html:111:<div class="container my-5">
+hhh\createform.html:123:        <div class="container">
+hhh\createform.html:124:            <div class="row mb-3">
+hhh\createform.html:128:                <div class="col-12">
+hhh\createform.html:133:            <div class="row g-3 mb-4 mt-3">
+hhh\createform.html:136:                <div class="col-md-3">
+hhh\createform.html:137:                  <div class="custom-input-container">
+hhh\createform.html:144:                <div class="col-md-3">
+hhh\createform.html:145:                  <div class="custom-input-container">
+hhh\createform.html:158:                <div class="col-md-3">
+hhh\createform.html:159:                  <div class="custom-input-container">
+hhh\createform.html:172:                <div class="col-md-3">
+hhh\createform.html:173:                  <div class="custom-input-container">
+hhh\createform.html:182:                <div class="col-md-3">
+hhh\createform.html:183:                  <div class="custom-input-container">
+hhh\createform.html:212:                <div class="col-md-3">
+hhh\createform.html:213:                  <div class="custom-input-container">
+hhh\createform.html:220:                <div class="col-md-3">
+hhh\createform.html:221:                  <div class="custom-input-container">
+hhh\createform.html:228:                <div class="col-md-3">
+hhh\createform.html:229:                  <div class="custom-input-container">
+hhh\createform.html:236:                <div class="col-md-3">
+hhh\createform.html:237:                  <div class="custom-input-container">
+hhh\createform.html:244:                <div class="col-md-3">
+hhh\createform.html:245:                  <div class="custom-input-container">
+hhh\createform.html:252:                <div class="col-md-3">
+hhh\createform.html:253:                  <div class="custom-input-container">
+hhh\createform.html:260:                <div class="col-md-3">
+hhh\createform.html:261:                  <div class="custom-input-container">
+hhh\createform.html:279:        <div class="form-title mb-2">بيانات الوثيقة</div>
+hhh\createform.html:282:        <div class="row mb-3">
+hhh\createform.html:284:            <div class="col-md">
+hhh\createform.html:295:                <div class="col-md">    
+hhh\createform.html:296:                <div class="input-label-en">الحيازة</div>
+hhh\createform.html:306:                <div class="col-md">
+hhh\createform.html:307:                <div class="mb-2">
+hhh\createform.html:311:                        <div class="col-md">
+hhh\createform.html:318:                        <div class="col-md">
+hhh\createform.html:327:                    <div class="mb-2 d-none" id="unitCountDiv">
+hhh\createform.html:350:            <div class="col-md">
+hhh\createform.html:351:                <div class="form-check">
+hhh\createform.html:370:            <div class="col-md">
+hhh\createform.html:371:                <div class="input-label-en">صورة الوثيقة</div>
+hhh\createform.html:372:                <div class="input-group">
+hhh\createform.html:383:<div class="section-divider"></div>
+hhh\createform.html:385:<div id="earthBordersSection">
+hhh\createform.html:386:    <div class="form-title mb-2">حدود الأرض</div>
+hhh\createform.html:387:    <div class="input-label-en mb-1">حدود الأرض المذكورة في الوثيقة</div>
+hhh\createform.html:405:                        <div class="border-type-cell" data-index="0">
+hhh\createform.html:440:                        <div class="border-type-cell" data-index="0">
+hhh\createform.html:476:                        <div class="border-type-cell" data-index="0">
+hhh\createform.html:511:                        <div class="border-type-cell" data-index="0">
+hhh\createform.html:555:<div id="buildingTableSection" style="display:none; margin-top:20px;">
+hhh\createform.html:556:    <div class="form-title mb-2">بيانات المبنى</div>
+hhh\createform.html:583:    <div id="rahaqTableSection" style="display:none; margin-top:20px;">
+hhh\createform.html:584:        <div class="form-title mb-2">حدود الرهق</div>
+hhh\createform.html:633:                <div class="col-md">
+hhh\createform.html:634:                    <div class="input-label-en">نوع الحيازة </div>
+hhh\createform.html:707:<div id="earthBordersSection">
+hhh\createform.html:708:    <div class="section-divider"></div>
+hhh\createform.html:710:<div class="form-title mb-2" id="earthBordersTitleUnique123">حدود الأرض</div>
+hhh\createform.html:712:    <div class="input-label-en mb-1">
+hhh\createform.html:802:        <div class="row mb-3">
+hhh\createform.html:803:            <div class="section-divider"></div>
+hhh\createform.html:804:            <div class="form-title mb-2">نوع الحيازة</div>
+hhh\createform.html:807:            <div class="col-md">
+hhh\createform.html:808:                <div class="input-label-en">نوع طريق الوصول</div>
+hhh\createform.html:821:            <div class="col-md">
+hhh\createform.html:822:                <div class="input-label-en">(فترة تسليم العمل)</div>
+hhh\createform.html:831:            <div class="col-md">
+hhh\createform.html:832:                <div class="input-label-en">أقصى مدة</div>
+hhh\createform.html:838:        <div class="row mb-3">
+hhh\createform.html:841:            <div class="col-md">
+hhh\createform.html:842:                <div class="input-label-en">انتقال المهندس الى القطة المراد مسحها</div>
+hhh\createform.html:855:            <div class="col-md">
+hhh\createform.html:856:                <div class="input-label-en">المبيت</div>
+hhh\createform.html:867:            <div class="col-md">
+hhh\createform.html:868:                <div class="input-label-en">النثريات (تغذية، قات، ..الخ)</div>
+hhh\createform.html:889:<div class="row mb-3">
+hhh\createform.html:890:    <div class="col-12">
+hhh\createform.html:897:<div class="row mb-3">
+hhh\createform.html:898:    <div class="col-12" id="attachmentsWrapper">
+hhh\createform.html:902:        <div class="attachment-row mb-2 d-flex align-items-center">
+hhh\createform.html:908:    <div class="col-12">
+hhh\createform.html:947:        <div class="section-divider"></div>
+hhh\createform.html:956:<div class="form-title mb-2">طلب تقديم شكوى نزاع</div>
+hhh\createform.html:960:<div class="row mb-3">
+hhh\createform.html:961:    <div class="col-md">
+hhh\createform.html:962:        <div class="custom-input-container">
+hhh\createform.html:967:    <div class="col-md">
+hhh\createform.html:968:        <div class="custom-input-container">
+hhh\createform.html:973:    <div class="col-md">
+hhh\createform.html:974:        <div class="custom-input-container">
+hhh\createform.html:979:    <div class="col-md">
+hhh\createform.html:980:        <div class="custom-input-container">
+hhh\createform.html:991:<div class="form-title mb-2">الجهة الشاكية</div>
+hhh\createform.html:993:<div class="row mb-3">
+hhh\createform.html:994:    <div class="col-md">
+hhh\createform.html:995:        <div class="custom-input-container">
+hhh\createform.html:1001:    <div class="col-md">
+hhh\createform.html:1002:        <div class="custom-input-container input-with-button">
+hhh\createform.html:1011:    <div class="col-md">
+hhh\createform.html:1012:        <div class="custom-input-container">
+hhh\createform.html:1020:<div class="form-title mb-2">الجهة المشكو بها</div>
+hhh\createform.html:1022:<div class="row mb-3">
+hhh\createform.html:1023:    <div class="col-md">
+hhh\createform.html:1024:        <div class="custom-input-container">
+hhh\createform.html:1030:    <div class="col-md">
+hhh\createform.html:1031:        <div class="custom-input-container input-with-button">
+hhh\createform.html:1040:    <div class="col-md">
+hhh\createform.html:1041:        <div class="custom-input-container">
+hhh\createform.html:1047:<div class="row mb-3">
+hhh\createform.html:1048:    <div class="col-12">
+hhh\createform.html:1053:<div class="row mb-3">
+hhh\createform.html:1054:    <div class="col-12">
+hhh\createform.html:1062:<div class="row mb-3">
+hhh\createform.html:1064:    <div class="col-md">
+hhh\createform.html:1065:        <div class="custom-input-container">
+hhh\createform.html:1076:        <div class="col-md">
+hhh\createform.html:1084:        <div class="col-md">
+hhh\createform.html:1085:            <div class="custom-input-container">
+hhh\createform.html:1093:        <div class="col-md">
+hhh\createform.html:1094:            <div class="custom-input-container">
+hhh\createform.html:1107:<div class="section-divider"></div>
+hhh\createform.html:1109:<div id="">
+hhh\createform.html:1132:                        <div class="col-md">
+hhh\createform.html:1160:                        <div class="col-md">
+hhh\createform.html:1190:                        <div class="col-md">
+hhh\createform.html:1234:                        <div class="col-md">
+hhh\createform.html:1294:<div id="buildingTableSection" style=" margin-top:20px;">
+hhh\createform.html:1295:    <div class="form-title mb-2"> التحقق من ملكيه البائع</div>
+hhh\createform.html:1328:        <div class="text-center mt-4">
+hhh\createorder.html:79:<div class="container my-5">
+hhh\createorder.html:90:        <div class="container">
+hhh\createorder.html:91:            <div class="row mb-3">
+hhh\createorder.html:95:                <div class="col-12">
+hhh\createorder.html:100:            <div class="row mb-3">
+hhh\createorder.html:101:                <div class="col-md">
+hhh\createorder.html:103:                    <div class="input-label-en">منشا الطلب </div>
+hhh\createorder.html:106:                <div class="col-md">
+hhh\createorder.html:121:                <div class="col-md">
+hhh\createorder.html:132:                    <div class="col-md">
+hhh\createorder.html:153:            <div class="row mb-3">
+hhh\createorder.html:154:                <div class="col-md">
+hhh\createorder.html:160:                <div class="col-md">
+hhh\createorder.html:186:                <div class="col-md">
+hhh\createorder.html:191:                <div class="col-md">
+hhh\createorder.html:196:                <div class="col-md">
+hhh\createorder.html:204:            <div class="row mb-3">
+hhh\createorder.html:207:                <div class="col-md-3">
+hhh\createorder.html:211:                <div class="col-md-3">
+hhh\createorder.html:216:                <div class="col-md-3">
+hhh\createorder.html:220:                <div class="col-md-3">
+hhh\createorder.html:236:        <div class="form-title mb-2">بيانات الوثيقة</div>
+hhh\createorder.html:239:        <div class="row mb-3">
+hhh\createorder.html:241:            <div class="col-md">
+hhh\createorder.html:252:                <div class="col-md">    
+hhh\createorder.html:253:                <div class="input-label-en">الحيازة</div>
+hhh\createorder.html:263:                <div class="col-md">
+hhh\createorder.html:264:                <div class="mb-2">
+hhh\createorder.html:268:                        <div class="col-md">
+hhh\createorder.html:275:                        <div class="col-md">
+hhh\createorder.html:284:                    <div class="mb-2 d-none" id="unitCountDiv">
+hhh\createorder.html:307:            <div class="col-md">
+hhh\createorder.html:308:                <div class="form-check">
+hhh\createorder.html:327:            <div class="col-md">
+hhh\createorder.html:328:                <div class="input-label-en">صورة الوثيقة</div>
+hhh\createorder.html:329:                <div class="input-group">
+hhh\createorder.html:340:<div class="section-divider"></div>
+hhh\createorder.html:342:<div id="earthBordersSection">
+hhh\createorder.html:343:    <div class="form-title mb-2">حدود الأرض</div>
+hhh\createorder.html:344:    <div class="input-label-en mb-1">حدود الأرض المذكورة في الوثيقة</div>
+hhh\createorder.html:362:                        <div class="border-type-cell" data-index="0">
+hhh\createorder.html:397:                        <div class="border-type-cell" data-index="0">
+hhh\createorder.html:433:                        <div class="border-type-cell" data-index="0">
+hhh\createorder.html:468:                        <div class="border-type-cell" data-index="0">
+hhh\createorder.html:512:<div id="buildingTableSection" style="display:none; margin-top:20px;">
+hhh\createorder.html:513:    <div class="form-title mb-2">بيانات المبنى</div>
+hhh\createorder.html:540:    <div id="rahaqTableSection" style="display:none; margin-top:20px;">
+hhh\createorder.html:541:        <div class="form-title mb-2">حدود الرهق</div>
+hhh\createorder.html:590:                <div class="col-md">
+hhh\createorder.html:591:                    <div class="input-label-en">نوع الحيازة </div>
+hhh\createorder.html:664:<div id="earthBordersSection">
+hhh\createorder.html:665:    <div class="section-divider"></div>
+hhh\createorder.html:667:<div class="form-title mb-2" id="earthBordersTitleUnique123">حدود الأرض</div>
+hhh\createorder.html:669:    <div class="input-label-en mb-1">
+hhh\createorder.html:759:        <div class="row mb-3">
+hhh\createorder.html:760:            <div class="section-divider"></div>
+hhh\createorder.html:761:            <div class="form-title mb-2">نوع الحيازة</div>
+hhh\createorder.html:764:            <div class="col-md">
+hhh\createorder.html:765:                <div class="input-label-en">نوع طريق الوصول</div>
+hhh\createorder.html:778:            <div class="col-md">
+hhh\createorder.html:779:                <div class="input-label-en">(فترة تسليم العمل)</div>
+hhh\createorder.html:788:            <div class="col-md">
+hhh\createorder.html:789:                <div class="input-label-en">أقصى مدة</div>
+hhh\createorder.html:795:        <div class="row mb-3">
+hhh\createorder.html:798:            <div class="col-md">
+hhh\createorder.html:799:                <div class="input-label-en">انتقال المهندس الى القطة المراد مسحها</div>
+hhh\createorder.html:812:            <div class="col-md">
+hhh\createorder.html:813:                <div class="input-label-en">المبيت</div>
+hhh\createorder.html:824:            <div class="col-md">
+hhh\createorder.html:825:                <div class="input-label-en">النثريات (تغذية، قات، ..الخ)</div>
+hhh\createorder.html:846:<div class="row mb-3">
+hhh\createorder.html:847:    <div class="col-12">
+hhh\createorder.html:854:<div class="row mb-3">
+hhh\createorder.html:855:    <div class="col-12" id="attachmentsWrapper">
+hhh\createorder.html:859:        <div class="attachment-row mb-2 d-flex align-items-center">
+hhh\createorder.html:865:    <div class="col-12">
+hhh\createorder.html:904:        <div class="section-divider"></div>
+hhh\createorder.html:912:        <div class="text-center mt-4">
+hhh\createspece.html:79:<div class="container my-5">
+hhh\createspece.html:91:        <div class="container">
+hhh\createspece.html:92:            <div class="row mb-3">
+hhh\createspece.html:238:<div class="row mb-3">
+hhh\createspece.html:239:    <div class="col-12">
+hhh\createspece.html:246:<div class="row mb-3">
+hhh\createspece.html:247:    <div class="col-12" id="attachmentsWrapper">
+hhh\createspece.html:251:        <div class="attachment-row mb-2 d-flex align-items-center">
+hhh\createspece.html:257:    <div class="col-12">
+hhh\createspece.html:371:        <div class="text-center mt-4">
+hhh\creatform.html:79:<div class="container my-5">
+hhh\creatform.html:91:        <div class="container">
+hhh\creatform.html:92:            <div class="row mb-3">
+hhh\creatform.html:96:                <div class="col-12">
+hhh\creatform.html:101:            <div class="row mb-3">
+hhh\creatform.html:102:                <div class="col-md">
+hhh\creatform.html:104:                    <div class="input-label-en">منشا الطلب </div>
+hhh\creatform.html:107:                <div class="col-md">
+hhh\creatform.html:124:                    <div class="col-md">
+hhh\creatform.html:145:            <div class="row mb-3">
+hhh\creatform.html:146:                <div class="col-md">
+hhh\creatform.html:152:                <div class="col-md">
+hhh\creatform.html:178:                <div class="col-md">
+hhh\creatform.html:183:                <div class="col-md">
+hhh\creatform.html:188:                <div class="col-md">
+hhh\creatform.html:196:            <div class="row mb-3">
+hhh\creatform.html:199:                <div class="col-md-3">
+hhh\creatform.html:203:                <div class="col-md-3">
+hhh\creatform.html:208:                <div class="col-md-3">
+hhh\creatform.html:212:                <div class="col-md-3">
+hhh\creatform.html:228:        <div class="form-title mb-2">بيانات الوثيقة</div>
+hhh\creatform.html:231:        <div class="row mb-3">
+hhh\creatform.html:233:            <div class="col-md">
+hhh\creatform.html:244:                <div class="col-md">    
+hhh\creatform.html:245:                <div class="input-label-en">الحيازة</div>
+hhh\creatform.html:255:                <div class="col-md">
+hhh\creatform.html:256:                <div class="mb-2">
+hhh\creatform.html:260:                        <div class="col-md">
+hhh\creatform.html:267:                        <div class="col-md">
+hhh\creatform.html:276:                    <div class="mb-2 d-none" id="unitCountDiv">
+hhh\creatform.html:299:            <div class="col-md">
+hhh\creatform.html:300:                <div class="form-check">
+hhh\creatform.html:319:            <div class="col-md">
+hhh\creatform.html:320:                <div class="input-label-en">صورة الوثيقة</div>
+hhh\creatform.html:321:                <div class="input-group">
+hhh\creatform.html:332:<div class="section-divider"></div>
+hhh\creatform.html:334:<div id="earthBordersSection">
+hhh\creatform.html:335:    <div class="form-title mb-2">حدود الأرض</div>
+hhh\creatform.html:336:    <div class="input-label-en mb-1">حدود الأرض المذكورة في الوثيقة</div>
+hhh\creatform.html:354:                        <div class="border-type-cell" data-index="0">
+hhh\creatform.html:389:                        <div class="border-type-cell" data-index="0">
+hhh\creatform.html:425:                        <div class="border-type-cell" data-index="0">
+hhh\creatform.html:460:                        <div class="border-type-cell" data-index="0">
+hhh\creatform.html:504:<div id="buildingTableSection" style="display:none; margin-top:20px;">
+hhh\creatform.html:505:    <div class="form-title mb-2">بيانات المبنى</div>
+hhh\creatform.html:532:    <div id="rahaqTableSection" style="display:none; margin-top:20px;">
+hhh\creatform.html:533:        <div class="form-title mb-2">حدود الرهق</div>
+hhh\creatform.html:582:                <div class="col-md">
+hhh\creatform.html:583:                    <div class="input-label-en">نوع الحيازة </div>
+hhh\creatform.html:656:<div id="earthBordersSection">
+hhh\creatform.html:657:    <div class="section-divider"></div>
+hhh\creatform.html:659:<div class="form-title mb-2" id="earthBordersTitleUnique123">حدود الأرض</div>
+hhh\creatform.html:661:    <div class="input-label-en mb-1">
+hhh\creatform.html:751:        <div class="row mb-3">
+hhh\creatform.html:752:            <div class="section-divider"></div>
+hhh\creatform.html:753:            <div class="form-title mb-2">نوع الحيازة</div>
+hhh\creatform.html:756:            <div class="col-md">
+hhh\creatform.html:757:                <div class="input-label-en">نوع طريق الوصول</div>
+hhh\creatform.html:770:            <div class="col-md">
+hhh\creatform.html:771:                <div class="input-label-en">(فترة تسليم العمل)</div>
+hhh\creatform.html:780:            <div class="col-md">
+hhh\creatform.html:781:                <div class="input-label-en">أقصى مدة</div>
+hhh\creatform.html:787:        <div class="row mb-3">
+hhh\creatform.html:790:            <div class="col-md">
+hhh\creatform.html:791:                <div class="input-label-en">انتقال المهندس الى القطة المراد مسحها</div>
+hhh\creatform.html:804:            <div class="col-md">
+hhh\creatform.html:805:                <div class="input-label-en">المبيت</div>
+hhh\creatform.html:816:            <div class="col-md">
+hhh\creatform.html:817:                <div class="input-label-en">النثريات (تغذية، قات، ..الخ)</div>
+hhh\creatform.html:838:<div class="row mb-3">
+hhh\creatform.html:839:    <div class="col-12">
+hhh\creatform.html:846:<div class="row mb-3">
+hhh\creatform.html:847:    <div class="col-12" id="attachmentsWrapper">
+hhh\creatform.html:851:        <div class="attachment-row mb-2 d-flex align-items-center">
+hhh\creatform.html:857:    <div class="col-12">
+hhh\creatform.html:896:        <div class="section-divider"></div>
+hhh\creatform.html:905:<div class="form-title mb-2">طلب تقديم شكوى نزاع</div>
+hhh\creatform.html:909:<div class="row mb-3">
+hhh\creatform.html:910:    <div class="col-md">
+hhh\creatform.html:911:        <div class="custom-input-container">
+hhh\creatform.html:916:    <div class="col-md">
+hhh\creatform.html:917:        <div class="custom-input-container">
+hhh\creatform.html:922:    <div class="col-md">
+hhh\creatform.html:923:        <div class="custom-input-container">
+hhh\creatform.html:928:    <div class="col-md">
+hhh\creatform.html:929:        <div class="custom-input-container">
+hhh\creatform.html:940:<div class="form-title mb-2">الجهة الشاكية</div>
+hhh\creatform.html:942:<div class="row mb-3">
+hhh\creatform.html:943:    <div class="col-md">
+hhh\creatform.html:944:        <div class="custom-input-container">
+hhh\creatform.html:950:    <div class="col-md">
+hhh\creatform.html:951:        <div class="custom-input-container input-with-button">
+hhh\creatform.html:960:    <div class="col-md">
+hhh\creatform.html:961:        <div class="custom-input-container">
+hhh\creatform.html:969:<div class="form-title mb-2">الجهة المشكو بها</div>
+hhh\creatform.html:971:<div class="row mb-3">
+hhh\creatform.html:972:    <div class="col-md">
+hhh\creatform.html:973:        <div class="custom-input-container">
+hhh\creatform.html:979:    <div class="col-md">
+hhh\creatform.html:980:        <div class="custom-input-container input-with-button">
+hhh\creatform.html:989:    <div class="col-md">
+hhh\creatform.html:990:        <div class="custom-input-container">
+hhh\creatform.html:996:<div class="row mb-3">
+hhh\creatform.html:997:    <div class="col-12">
+hhh\creatform.html:1002:<div class="row mb-3">
+hhh\creatform.html:1003:    <div class="col-12">
+hhh\creatform.html:1011:<div class="row mb-3">
+hhh\creatform.html:1013:    <div class="col-md">
+hhh\creatform.html:1014:        <div class="custom-input-container">
+hhh\creatform.html:1025:        <div class="col-md">
+hhh\creatform.html:1033:        <div class="col-md">
+hhh\creatform.html:1034:            <div class="custom-input-container">
+hhh\creatform.html:1042:        <div class="col-md">
+hhh\creatform.html:1043:            <div class="custom-input-container">
+hhh\creatform.html:1056:<div class="section-divider"></div>
+hhh\creatform.html:1058:<div id="">
+hhh\creatform.html:1081:                        <div class="col-md">
+hhh\creatform.html:1109:                        <div class="col-md">
+hhh\creatform.html:1139:                        <div class="col-md">
+hhh\creatform.html:1183:                        <div class="col-md">
+hhh\creatform.html:1305:<div id="buildingTableSection" style=" margin-top:20px;">
+hhh\creatform.html:1306:    <div class="form-title mb-2"> التحقق من ملكيه البائع</div>
+hhh\creatform.html:1339:        <div class="text-center mt-4">
+hhh\devid.html:4:<div class="form-title mb-2">طلب تقديم شكوى نزاع</div>
+hhh\devid.html:8:<div class="row mb-3">
+hhh\devid.html:9:    <div class="col-md">
+hhh\devid.html:10:        <div class="custom-input-container">
+hhh\devid.html:15:    <div class="col-md">
+hhh\devid.html:16:        <div class="custom-input-container">
+hhh\devid.html:21:    <div class="col-md">
+hhh\devid.html:22:        <div class="custom-input-container">
+hhh\devid.html:27:    <div class="col-md">
+hhh\devid.html:28:        <div class="custom-input-container">
+hhh\devid.html:39:<div class="form-title mb-2">الجهة الشاكية</div>
+hhh\devid.html:41:<div class="row mb-3">
+hhh\devid.html:42:    <div class="col-md">
+hhh\devid.html:43:        <div class="custom-input-container">
+hhh\devid.html:49:    <div class="col-md">
+hhh\devid.html:50:        <div class="custom-input-container input-with-button">
+hhh\devid.html:59:    <div class="col-md">
+hhh\devid.html:60:        <div class="custom-input-container">
+hhh\devid.html:68:<div class="form-title mb-2">الجهة المشكو بها</div>
+hhh\devid.html:70:<div class="row mb-3">
+hhh\devid.html:71:    <div class="col-md">
+hhh\devid.html:72:        <div class="custom-input-container">
+hhh\devid.html:78:    <div class="col-md">
+hhh\devid.html:79:        <div class="custom-input-container input-with-button">
+hhh\devid.html:88:    <div class="col-md">
+hhh\devid.html:89:        <div class="custom-input-container">
+hhh\devid.html:95:<div class="row mb-3">
+hhh\devid.html:96:    <div class="col-12">
+hhh\devid.html:101:<div class="row mb-3">
+hhh\devid.html:102:    <div class="col-12">
+hhh\devid.html:110:<div class="row mb-3">
+hhh\devid.html:112:    <div class="col-md">
+hhh\devid.html:113:        <div class="custom-input-container">
+hhh\devid.html:121:        <div class="col-md">
+hhh\devid.html:133:<div class="row mb-3">
+hhh\devid.html:135:    <div class="col-md">
+hhh\devid.html:136:        <div class="custom-input-container">
+hhh\devid.html:144:<div class="row mb-3">
+hhh\devid.html:146:    <div class="col-md">
+hhh\devid.html:147:        <div class="custom-input-container">
+hhh\devid.html:160:<div class="section-divider"></div>
+hhh\devid.html:162:<div id="">
+hhh\devid.html:185:                        <div class="col-md">
+hhh\devid.html:213:                        <div class="col-md">
+hhh\devid.html:243:                        <div class="col-md">
+hhh\devid.html:287:                        <div class="col-md">
+hhh\index.html:79:<div class="container my-5">
+hhh\index.html:82:    <div id="cv-form">
+hhh\index.html:85:        <div class="section">
+hhh\index.html:86:            <div class="section-header" onclick="toggleSection('personal')">المعلومات الشخصية 
+الأساسية</div>
+hhh\index.html:87:            <div class="section-content" id="personal">
+hhh\index.html:104:<div class="section">
+hhh\index.html:105:    <div class="section-header" onclick="toggleSection('experience')">الخبرات العملية</div>
+hhh\index.html:106:    <div class="section-content" id="experience">
+hhh\index.html:110:        <div class="row mb-3 align-items-center">
+hhh\index.html:111:            <div class="col-md-4">
+hhh\index.html:115:            <div class="col-md-4">
+hhh\index.html:119:            <div class="col-md-4 d-flex align-items-center mt-3 mt-md-0">
+hhh\index.html:126:        <div class="row mb-3 align-items-center">
+hhh\index.html:127:            <div class="col-md-4">
+hhh\index.html:132:            <div class="col-md-4">
+hhh\index.html:137:            <div class="col-md-4 d-flex align-items-center mt-3 mt-md-0">
+hhh\index.html:159:        <div class="mb-3">
+hhh\index.html:161:            <div id="tasks-container">
+hhh\index.html:162:                <div class="input-group mb-2">
+hhh\index.html:196:          <div class="table-responsive">
+hhh\index.html:213:          <div id="manager-msg" class="text-success fw-bold mt-2" style="display:none;"></div>
+hhh\index.html:216:        <div id="experience-list"></div>
+hhh\index.html:225:        <div class="section">
+hhh\index.html:226:            <div class="section-header" onclick="toggleSection('education')">المؤهلات 
+العلمية</div>
+hhh\index.html:227:            <div class="section-content" id="education">
+hhh\index.html:245:                <div id="education-list"></div>
+hhh\index.html:250:        <div class="section">
+hhh\index.html:251:            <div class="section-header" onclick="toggleSection('cert')">الشهادات المهنية 
+والدورات</div>
+hhh\index.html:252:            <div class="section-content" id="cert">
+hhh\index.html:253:                <div class="row mb-3">
+hhh\index.html:254:                    <div class="col-md-4">
+hhh\index.html:263:                    <div class="col-md-4">
+hhh\index.html:277:                    <div class="col-md-4">
+hhh\index.html:294:                <div id="cert-list"></div>
+hhh\index.html:299:        <div class="section">
+hhh\index.html:300:            <div class="section-header" onclick="toggleSection('project')">المشاريع السابقة 
+والإنجازات</div>
+hhh\index.html:301:            <div class="section-content" id="project">
+hhh\index.html:310:                <div id="project-list"></div>
+hhh\index.html:316:        <div class="section">
+hhh\index.html:317:            <div class="section-header" onclick="toggleSection('skills')">المهارات التقنية</div>
+hhh\index.html:318:            <div class="section-content" id="skills">
+hhh\index.html:325:                <div id="skills-list"></div>
+hhh\index.html:329:<div class="section">
+hhh\index.html:330:    <div class="section-header" onclick="toggleSection('languages')">اللغات</div>
+hhh\index.html:331:    <div class="section-content" id="languages">
+hhh\index.html:332:        <div class="form-check mb-2">
+hhh\index.html:335:            <div class="form-check ms-3 mt-1" id="motherLangOption" style="display:none;">
+hhh\index.html:341:        <div class="form-check mb-2">
+hhh\index.html:346:        <div id="extra-langs" class="mt-3"></div>
+hhh\index.html:348:        <div class="input-group mt-2">
+hhh\index.html:359:        <div class="text-center mt-4">
+hhh\index.html:366:    <div id="cv-preview"></div>
+hhh\index.html:456:        <div class="item-box">
+hhh\index.html:457:            <div>${content}</div>
+hhh\index.html:458:            <div class="action-btns">
+hhh\index.html:568:        <div class="section">
+hhh\index.html:570:            <div class="info">
+hhh\index.html:580:        ${skills ? `<div class="section"><h2>المهارات 
+التقنية</h2>${skills.replaceAll('item-box','item-box-preview')}</div>` : ''}
+hhh\index.html:581:        ${experiences ? `<div class="section"><h2>الخبرات 
+العملية</h2>${experiences.replaceAll('item-box','item-box-preview')}</div>` : ''}
+hhh\index.html:582:        ${educations ? `<div class="section"><h2>المؤهلات 
+العلمية</h2>${educations.replaceAll('item-box','item-box-preview')}</div>` : ''}
+hhh\index.html:583:        ${certs ? `<div class="section"><h2>الشهادات 
+والدورات</h2>${certs.replaceAll('item-box','item-box-preview')}</div>` : ''}
+hhh\index.html:584:        ${projects ? `<div class="section"><h2>المشاريع السابقة 
+والإنجازات</h2>${projects.replaceAll('item-box','item-box-preview')}</div>` : ''}
+hhh\index.html:585:        <div class="text-center mt-4">
+hhh\WorkOffer.html:67:<div dir="rtl">
+hhh\WorkOffer.html:69:        <div class="d-flex justify-content-between align-items-center mb-3">
+hhh\WorkOffer.html:76:        <div class="row g-3 mb-2">  
+hhh\WorkOffer.html:77:            <div class="col-md-6">
+hhh\WorkOffer.html:85:        <div class="col-md-6">
+hhh\WorkOffer.html:117:    <div class="row g-3 mb-2">
+hhh\WorkOffer.html:119:        <div class="col-md-6">
+hhh\WorkOffer.html:120:    <div class="section-title">اجور العمل
+hhh\WorkOffer.html:121:    <div class="table-responsive mb-3">
+hhh\WorkOffer.html:136:        <div id="wagesTableContainer">
+hhh\WorkOffer.html:156:        <div class="col-md-6">
+hhh\WorkOffer.html:157:    <div class="section-title">التنقلات والمبيت</div>
+hhh\WorkOffer.html:158:    <div class="table-responsive mb-3">
+hhh\WorkOffer.html:168:            <div id="transportTableContainer">
+hhh\WorkOffer.html:226:         <div class="section-title">تكلفة إضافية</div>
+hhh\WorkOffer.html:227:        <div class="table-responsive mb-3">
+hhh\WorkOffer.html:228:        <div class="col-md-6">
+hhh\WorkOffer.html:235:            <div id="additionalCostContainer">
+hhh\WorkOffer.html:254:        <div class="section-title">المدفوعات </div>
+hhh\WorkOffer.html:255:    <div class="row mb-3">
+hhh\WorkOffer.html:257:            <div class="col-md">
+hhh\WorkOffer.html:263:            <div class="col-md">
+hhh\WorkOffer.html:269:            <div class="col-md">
+hhh\WorkOffer.html:275:        <div class="section-title"> الغرامات</div>
+hhh\WorkOffer.html:276:    <div class="row mb-3">
+hhh\WorkOffer.html:277:            <div class="col-md">
+hhh\WorkOffer.html:282:            <div class="col-md">
+hhh\WorkOffer.html:288:            <div class="col-md">
+hhh\WorkOffer.html:296:        <div class="accordion mt-4" id="notesAccordion">
+hhh\WorkOffer.html:297:            <div class="accordion-item">
+hhh\WorkOffer.html:304:                <div id="collapseNotes" class="accordion-collapse collapse" 
+aria-labelledby="headingNotes"
+hhh\WorkOffer.html:306:                    <div class="accordion-body">
+hhh\WorkOffer1.html:67:<div dir="rtl">
+hhh\WorkOffer1.html:69:        <div class="d-flex justify-content-between align-items-center mb-3">
+hhh\WorkOffer1.html:87:         <div class="section-title">تكلفة إضافية</div>
+hhh\WorkOffer1.html:88:        <div class="table-responsive mb-3">
+hhh\WorkOffer1.html:89:        <div class="col-md-6">
+hhh\WorkOffer1.html:96:            <div id="additionalCostContainer">
+hhh\Work_Form.html:67:    <div class="main-card">
+hhh\Work_Form.html:71:            <div class="row g-3 mb-4 mt-3">
+hhh\Work_Form.html:73:                <div class="col-md-4">
+hhh\Work_Form.html:74:                  <div class="custom-input-container">
+hhh\Work_Form.html:84:                <div class="col-md-4">
+hhh\Work_Form.html:85:                  <div class="custom-input-container">
+hhh\Work_Form.html:91:                <div class="col-md-4">
+hhh\Work_Form.html:92:                  <div class="custom-input-container">
+hhh\Work_Form.html:98:                <div class="col-md-4">
+hhh\Work_Form.html:99:                  <div class="custom-input-container">
+hhh\Work_Form.html:105:                <div class="col-md-4">
+hhh\Work_Form.html:106:                  <div class="custom-input-container">
+hhh\Work_Form.html:115:                <div class="col-md-4">
+hhh\Work_Form.html:116:                  <div class="custom-input-container dropdown">
+hhh\Work_Form.html:131:            <div class="section-title">الوضع القائم للموضع الكلي/الشامل</div>
+hhh\Work_Form.html:132:            <div class="card-table mb-4">
+hhh\Work_Form.html:288:                    <div class="modal fade" id="GovernorateModal" tabindex="-1">
+hhh\Work_Form.html:289:                        <div class="modal-dialog modal-lg">
+hhh\Work_Form.html:290:                            <div class="modal-content" id="GovernorateContent">
+hhh\Work_Form.html:359:                <div class="section-title">بيانات الاراضي</div>
+hhh\Work_Form.html:360:                <div class="table-responsive mb-3">
+hhh\Work_Form.html:396:      <div class="section-title">الاحداثيات</div>
+hhh\Work_Form.html:397:      <div class="table-responsive mb-3">
+hhh\Work_Form.html:431:            <div class="row mt-4">
+hhh\Work_Form.html:432:                <div class="col-12 text-center">
+hhh\Work_Form.html:442:    <div class="modal fade" id="clientModal" tabindex="-1" 
+aria-labelledby="clientModalLabel" aria-hidden="true">
+hhh\Work_Form.html:443:        <div class="modal-dialog">
+hhh\Work_Form.html:444:            <div class="modal-content">
+hhh\Work_Form.html:445:                <div class="modal-header">
+hhh\Work_Form.html:449:                <div class="modal-body">
+hhh\Work_Form.html:451:                        <div class="mb-3">
+hhh\Work_Form.html:455:                        <div class="mb-3">
+hhh\Work_Form.html:459:                        <div class="mb-3">
+hhh\Work_Form.html:463:                        <div class="mb-3">
+hhh\Work_Form.html:469:                <div class="modal-footer">
+hhh\Work_Form.html:478:    <div class="modal fade" id="adoulModal" tabindex="-1" aria-labelledby="adoulModalLabel" 
+aria-hidden="true">
+hhh\Work_Form.html:479:        <div class="modal-dialog">
+hhh\Work_Form.html:480:            <div class="modal-content">
+hhh\Work_Form.html:481:                <div class="modal-header">
+hhh\Work_Form.html:485:                <div class="modal-body">
+hhh\Work_Form.html:487:                        <div class="mb-3">
+hhh\Work_Form.html:491:                        <div class="mb-3">
+hhh\Work_Form.html:495:                        <div class="mb-3">
+hhh\Work_Form.html:501:                <div class="modal-footer">
+hhh\Work_Form_base.html:67:    <div class="main-card">
+hhh\Work_Form_base.html:71:            <div class="row g-3 mb-4 mt-3">
+hhh\Work_Form_base.html:73:                <div class="col-md-4">
+hhh\Work_Form_base.html:74:                  <div class="custom-input-container">
+hhh\Work_Form_base.html:84:                <div class="col-md-4">
+hhh\Work_Form_base.html:85:                  <div class="custom-input-container">
+hhh\Work_Form_base.html:91:                <div class="col-md-4">
+hhh\Work_Form_base.html:92:                  <div class="custom-input-container">
+hhh\Work_Form_base.html:98:                <div class="col-md-4">
+hhh\Work_Form_base.html:99:                  <div class="custom-input-container">
+hhh\Work_Form_base.html:105:                <div class="col-md-4">
+hhh\Work_Form_base.html:106:                  <div class="custom-input-container">
+hhh\Work_Form_base.html:115:                <div class="col-md-4">
+hhh\Work_Form_base.html:116:                  <div class="custom-input-container dropdown">
+hhh\Work_Form_base.html:131:            <div class="section-title">الوضع القائم للموضع الكلي/الشامل</div>
+hhh\Work_Form_base.html:132:            <div class="card-table mb-4">
+hhh\Work_Form_base.html:288:                    <div class="modal fade" id="GovernorateModal" tabindex="-1">
+hhh\Work_Form_base.html:289:                        <div class="modal-dialog modal-lg">
+hhh\Work_Form_base.html:290:                            <div class="modal-content" id="GovernorateContent">
+hhh\Work_Form_base.html:359:                <div class="section-title">بيانات الاراضي</div>
+hhh\Work_Form_base.html:360:                <div class="table-responsive mb-3">
+hhh\Work_Form_base.html:396:      <div class="section-title">الاحداثيات</div>
+hhh\Work_Form_base.html:397:      <div class="table-responsive mb-3">
+hhh\Work_Form_base.html:427:      <div class="row g-3 mb-4 mt-3">
+hhh\Work_Form_base.html:429:        <div class="col-md-3">
+hhh\Work_Form_base.html:430:          <div class="custom-input-container">
+hhh\Work_Form_base.html:435:        <div class="col-md-3">
+hhh\Work_Form_base.html:436:          <div class="custom-input-container">
+hhh\Work_Form_base.html:441:        <div class="col-md-3">
+hhh\Work_Form_base.html:442:          <div class="custom-input-container">
+hhh\Work_Form_base.html:451:        <div class="col-md-3">
+hhh\Work_Form_base.html:452:          <div class="custom-input-container">
+hhh\Work_Form_base.html:457:        <div class="col-md-3">
+hhh\Work_Form_base.html:458:            <div class="custom-input-container">
+hhh\Work_Form_base.html:465:        <div class="col-md-3">
+hhh\Work_Form_base.html:466:          <div class="custom-input-container dropdown">
+hhh\Work_Form_base.html:476:        <div class="col-md-3">
+hhh\Work_Form_base.html:477:            <div class="custom-input-container dropdown">
+hhh\Work_Form_base.html:489:          <div class="col-md-3">
+hhh\Work_Form_base.html:490:            <div class="custom-input-container">
+hhh\Work_Form_base.html:507:          <div class="col-md-3">
+hhh\Work_Form_base.html:508:            <div class="custom-input-container">
+hhh\Work_Form_base.html:523:          <div class="col-md-3">
+hhh\Work_Form_base.html:524:            <div class="custom-input-container">
+hhh\Work_Form_base.html:536:          <div class="col-md-3">
+hhh\Work_Form_base.html:537:            <div class="custom-input-container">
+hhh\Work_Form_base.html:599:            <div class="row mt-4">
+hhh\Work_Form_base.html:600:                <div class="col-12 text-center">
+hhh\Work_Form_base.html:610:    <div class="modal fade" id="clientModal" tabindex="-1" 
+aria-labelledby="clientModalLabel" aria-hidden="true">
+hhh\Work_Form_base.html:611:        <div class="modal-dialog">
+hhh\Work_Form_base.html:612:            <div class="modal-content">
+hhh\Work_Form_base.html:613:                <div class="modal-header">
+hhh\Work_Form_base.html:617:                <div class="modal-body">
+hhh\Work_Form_base.html:619:                        <div class="mb-3">
+hhh\Work_Form_base.html:623:                        <div class="mb-3">
+hhh\Work_Form_base.html:627:                        <div class="mb-3">
+hhh\Work_Form_base.html:631:                        <div class="mb-3">
+hhh\Work_Form_base.html:637:                <div class="modal-footer">
+hhh\Work_Form_base.html:646:    <div class="modal fade" id="adoulModal" tabindex="-1" 
+aria-labelledby="adoulModalLabel" aria-hidden="true">
+hhh\Work_Form_base.html:647:        <div class="modal-dialog">
+hhh\Work_Form_base.html:648:            <div class="modal-content">
+hhh\Work_Form_base.html:649:                <div class="modal-header">
+hhh\Work_Form_base.html:653:                <div class="modal-body">
+hhh\Work_Form_base.html:655:                        <div class="mb-3">
+hhh\Work_Form_base.html:659:                        <div class="mb-3">
+hhh\Work_Form_base.html:663:                        <div class="mb-3">
+hhh\Work_Form_base.html:669:                <div class="modal-footer">
+
+
