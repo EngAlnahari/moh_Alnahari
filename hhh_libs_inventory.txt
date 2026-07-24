@@ -1,0 +1,8 @@
+﻿
+FullName                                        Length
+--------                                        ------
+D:\EngMohammed\hhh\libs\bootstrap.bundle.min.js  80721
+D:\EngMohammed\hhh\libs\bootstrap.rtl.min.css   232911
+D:\EngMohammed\hhh\libs\jquery.min.js            89795
+
+
