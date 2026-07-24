@@ -1,0 +1,564 @@
+﻿
+hhh\AllTemplate.html:142:  document.getElementById("breadcrumb").textContent = path;
+hhh\AllTemplate.html:340:                document.getElementById("unitSelect").addEventListener("change", function 
+() {
+hhh\AllTemplate.html:342:                    var unitDiv = document.getElementById("unitCountDiv");
+hhh\AllTemplate.html:343:                    var unitLabel = document.getElementById("unitLabel");
+hhh\AllTemplate.html:364:                const checkbox = document.getElementById('AreaDifferentCheckbox');
+hhh\AllTemplate.html:365:                const hiddenInput = document.getElementById('hiddenAreaDifferent');
+hhh\AllTemplate.html:367:                checkbox.addEventListener('change', function() {
+hhh\AllTemplate.html:653:document.addEventListener('DOMContentLoaded', function() {
+hhh\AllTemplate.html:654:    const select = document.getElementById('typePieceSelect');
+hhh\AllTemplate.html:655:    const earthSection = document.getElementById('earthBordersSection');
+hhh\AllTemplate.html:656:    const rahaqSection = document.getElementById('rahaqTableSection');
+hhh\AllTemplate.html:657:    const buildingSection = document.getElementById('buildingTableSection');
+hhh\AllTemplate.html:659:    select.addEventListener('change', function() {
+hhh\AllTemplate.html:672:        rahaqSection.querySelectorAll('input[type="text"]').forEach(input => 
+input.disabled = false);
+hhh\AllTemplate.html:673:        rahaqSection.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
+hhh\AllTemplate.html:674:            const inputField = checkbox.closest('tr').querySelector('input[type="text"]');
+hhh\AllTemplate.html:680:    rahaqSection.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
+hhh\AllTemplate.html:681:        const inputField = checkbox.closest('tr').querySelector('input[type="text"]');
+hhh\AllTemplate.html:682:        checkbox.addEventListener('change', function() {
+hhh\AllTemplate.html:689:    const addBuildingBtn = document.getElementById('addBuildingRow');
+hhh\AllTemplate.html:690:    addBuildingBtn.addEventListener('click', function() {
+hhh\AllTemplate.html:691:        const tbody = buildingSection.querySelector('tbody');
+hhh\AllTemplate.html:771:    document.addEventListener('DOMContentLoaded', function() {
+hhh\AllTemplate.html:772:        const select = document.getElementById('typePieceSelect');
+hhh\AllTemplate.html:773:        const title = document.getElementById('earthBordersTitleUnique123');
+hhh\AllTemplate.html:775:        select.addEventListener('change', function() {
+hhh\AllTemplate.html:782:    document.addEventListener('DOMContentLoaded', function () {
+hhh\AllTemplate.html:783:        const chkUp = document.getElementById('chkUp');
+hhh\AllTemplate.html:784:        const chkDown = document.getElementById('chkDown');
+hhh\AllTemplate.html:785:        const txtUp = document.getElementById('txtUp');
+hhh\AllTemplate.html:786:        const txtDown = document.getElementById('txtDown');
+hhh\AllTemplate.html:789:        chkUp.addEventListener('change', function () {
+hhh\AllTemplate.html:794:        chkDown.addEventListener('change', function () {
+hhh\AllTemplate.html:922:    document.addEventListener('DOMContentLoaded', function() {
+hhh\AllTemplate.html:923:    const addBtn = document.getElementById('addAttachmentBtn');
+hhh\AllTemplate.html:924:    const wrapper = document.getElementById('attachmentsWrapper');
+hhh\AllTemplate.html:926:    addBtn.addEventListener('click', function() {
+hhh\AllTemplate.html:936:        newRow.querySelector('.remove-attachment').addEventListener('click', function() {
+hhh\AllTemplate.html:942:    wrapper.querySelectorAll('.remove-attachment').forEach(btn => {
+hhh\AllTemplate.html:943:        btn.addEventListener('click', function() {
+hhh\AllTemplate.html:1273:document.addEventListener('DOMContentLoaded', function() {
+hhh\AllTemplate.html:1275:        const addBtn = document.getElementById(btnId);
+hhh\AllTemplate.html:1276:        const txtName = document.getElementById(txtId);
+hhh\AllTemplate.html:1277:        const nameList = document.getElementById(listId);
+hhh\AllTemplate.html:1278:        const nameCount = document.getElementById(countId);
+hhh\AllTemplate.html:1282:        addBtn.addEventListener('click', function() {
+hhh\AllTemplate.html:1418:                                <button type="button" class="btn btn-sm 
+btn-outline-primary" onclick="addTableRow()">
+hhh\AllTemplate.html:1466:                                <button type="button" class="btn btn-sm 
+btn-outline-danger" onclick="removeTableRow(this)">
+hhh\AllTemplate.html:1878:                    <button type="submit" class="btn btn-primary me-2" 
+onclick="saveData(event)">حفظ استمارة العمل</button>
+hhh\AllTemplate.html:1879:                    <button type="button" class="btn btn-info me-2" 
+onclick="sendReportToClient()"> حفظ وإرسال التقرير للعميل</button>
+hhh\AllTemplate.html:1923:                const endDateOption = document.getElementById("endDateOption");
+hhh\AllTemplate.html:1924:                const endDateInput = document.getElementById("endDateInput");
+hhh\AllTemplate.html:1926:                endDateOption.addEventListener("change", function () {
+hhh\AllTemplate.html:2005:                document.querySelectorAll("#transportRows tr").forEach(row => {
+hhh\AllTemplate.html:2006:                    const statuse1 = 
+row.querySelector("input[name='StatuseType1']")?.value;
+hhh\AllTemplate.html:2007:                    const statuse2 = 
+row.querySelector("input[name='StatuseType2']")?.value;
+hhh\AllTemplate.html:2023:             
+document.getElementById("transportTemplateSelect").addEventListener("change", function() {
+hhh\AllTemplate.html:2025:                const container = document.getElementById("transportTableContainer");
+hhh\AllTemplate.html:2068:                    onclick="showFormDialog('AdditionalCostModel')">
+hhh\ContractTemplate.html:280:                <button class="btn-reject" id="rejectBtn" 
+onclick="showRejectForm()">رفض العقد</button>
+hhh\ContractTemplate.html:300:                        <button type="button" class="btn-cancel" 
+onclick="hideRejectForm()">إلغاء</button>
+hhh\ContractTemplate.html:325:                <button class="btn-approve" style="margin-bottom:10px; width:100%;" 
+onclick="showPaymentForm('credit_card')">دفع عبر بطاقة ائتمان</button>
+hhh\ContractTemplate.html:326:                <button class="btn-approve" style="background:#2980b9;" 
+onclick="showPaymentForm('sent_to_client')">تم إرسالها للعميل</button>
+hhh\ContractTemplate.html:328:                <button class="btn-cancel" style="margin-top:18px;" 
+onclick="closePaymentModal()">إلغاء</button>
+hhh\ContractTemplate.html:331:            <form id="paymentForm" style="display:none; margin-top:10px; 
+text-align:right;" onsubmit="submitPayment(event)">
+hhh\ContractTemplate.html:361:                    <button type="button" class="btn-cancel" 
+onclick="backToMethod()">رجوع</button>
+hhh\ContractTemplate.html:370:            document.getElementById('contractActions').style.display = 'none';
+hhh\ContractTemplate.html:371:            document.getElementById('rejectFormContainer').style.display = 'block';
+hhh\ContractTemplate.html:375:            document.getElementById('contractActions').style.display = 'flex';
+hhh\ContractTemplate.html:376:            document.getElementById('rejectFormContainer').style.display = 'none';
+hhh\ContractTemplate.html:377:            document.getElementById('rejectForm').reset();
+hhh\ContractTemplate.html:380:        document.getElementById('rejectForm').addEventListener('submit', function(e) {
+hhh\ContractTemplate.html:382:            var selectedReason = document.getElementById('reason').value;
+hhh\ContractTemplate.html:383:            var details = document.getElementById('details') ? 
+document.getElementById('details').value : '';
+hhh\ContractTemplate.html:395:        document.getElementById('approveBtn').addEventListener('click', function() {
+hhh\ContractTemplate.html:396:            document.getElementById('paymentModal').style.display = 'flex';
+hhh\ContractTemplate.html:397:            document.getElementById('paymentMethodSection').style.display = 'block';
+hhh\ContractTemplate.html:398:            document.getElementById('paymentForm').style.display = 'none';
+hhh\ContractTemplate.html:403:            document.getElementById('paymentModal').style.display = 'none';
+hhh\ContractTemplate.html:408:            document.getElementById('paymentMethodSection').style.display = 'none';
+hhh\ContractTemplate.html:409:            document.getElementById('paymentForm').style.display = 'block';
+hhh\ContractTemplate.html:412:            document.getElementById('creditCardFields').style.display = 'none';
+hhh\ContractTemplate.html:413:            document.getElementById('sentToClientField').style.display = 'none';
+hhh\ContractTemplate.html:416:                document.getElementById('paymentFormTitle').innerText = 'دفع عبر 
+بطاقة ائتمان';
+hhh\ContractTemplate.html:417:                document.getElementById('creditCardFields').style.display = 'block';
+hhh\ContractTemplate.html:418:                document.getElementById('paymentForm').dataset.method = 'credit_card';
+hhh\ContractTemplate.html:421:                document.getElementById('cardNumber').value = '';
+hhh\ContractTemplate.html:422:                document.getElementById('expiryDate').value = '';
+hhh\ContractTemplate.html:423:                document.getElementById('cvv').value = '';
+hhh\ContractTemplate.html:425:                document.getElementById('paymentFormTitle').innerText = 'تم إرسالها 
+للعميل';
+hhh\ContractTemplate.html:426:                document.getElementById('sentToClientField').style.display = 'block';
+hhh\ContractTemplate.html:427:                document.getElementById('paymentLabel').innerText = 'رقم المرجع:';
+hhh\ContractTemplate.html:428:                document.getElementById('paymentInput').placeholder = 'أدخل رقم 
+المرجع أو المعرف';
+hhh\ContractTemplate.html:429:                document.getElementById('paymentForm').dataset.method = 
+'sent_to_client';
+hhh\ContractTemplate.html:430:                document.getElementById('paymentInput').value = '';
+hhh\ContractTemplate.html:436:            document.getElementById('paymentForm').style.display = 'none';
+hhh\ContractTemplate.html:437:            document.getElementById('paymentMethodSection').style.display = 'block';
+hhh\ContractTemplate.html:440:            document.getElementById('creditCardFields').style.display = 'none';
+hhh\ContractTemplate.html:441:            document.getElementById('sentToClientField').style.display = 'none';
+hhh\ContractTemplate.html:444:            document.getElementById('cardNumber').value = '';
+hhh\ContractTemplate.html:445:            document.getElementById('expiryDate').value = '';
+hhh\ContractTemplate.html:446:            document.getElementById('cvv').value = '';
+hhh\ContractTemplate.html:447:            document.getElementById('paymentInput').value = '';
+hhh\ContractTemplate.html:453:            var method = document.getElementById('paymentForm').dataset.method;
+hhh\ContractTemplate.html:458:                var cardNumber = document.getElementById('cardNumber').value;
+hhh\ContractTemplate.html:459:                var expiryDate = document.getElementById('expiryDate').value;
+hhh\ContractTemplate.html:460:                var cvv = document.getElementById('cvv').value;
+hhh\ContractTemplate.html:471:                var inputValue = document.getElementById('paymentInput').value;
+hhh\ContractTemplate1.html:225:                <button class="btn-reject" id="rejectBtn" 
+onclick="showRejectForm()">رفض العقد</button>
+hhh\ContractTemplate1.html:245:                        <button type="button" class="btn-cancel" 
+onclick="hideRejectForm()">إلغاء</button>
+hhh\ContractTemplate1.html:270:                <button class="btn-approve" style="margin-bottom:10px; width:100%;" 
+onclick="showPaymentForm('credit_card')">دفع عبر بطاقة ائتمان</button>
+hhh\ContractTemplate1.html:271:                <button class="btn-approve" style="background:#2980b9;" 
+onclick="showPaymentForm('sent_to_client')">تم إرسالها للعميل</button>
+hhh\ContractTemplate1.html:273:                <button class="btn-cancel" style="margin-top:18px;" 
+onclick="closePaymentModal()">إلغاء</button>
+hhh\ContractTemplate1.html:276:            <form id="paymentForm" style="display:none; margin-top:10px; 
+text-align:right;" onsubmit="submitPayment(event)">
+hhh\ContractTemplate1.html:306:                    <button type="button" class="btn-cancel" 
+onclick="backToMethod()">رجوع</button>
+hhh\ContractTemplate1.html:315:            document.getElementById('contractActions').style.display = 'none';
+hhh\ContractTemplate1.html:316:            document.getElementById('rejectFormContainer').style.display = 'block';
+hhh\ContractTemplate1.html:320:            document.getElementById('contractActions').style.display = 'flex';
+hhh\ContractTemplate1.html:321:            document.getElementById('rejectFormContainer').style.display = 'none';
+hhh\ContractTemplate1.html:322:            document.getElementById('rejectForm').reset();
+hhh\ContractTemplate1.html:325:        document.getElementById('rejectForm').addEventListener('submit', function(e) 
+{
+hhh\ContractTemplate1.html:327:            var selectedReason = document.getElementById('reason').value;
+hhh\ContractTemplate1.html:328:            var details = document.getElementById('details') ? 
+document.getElementById('details').value : '';
+hhh\ContractTemplate1.html:340:        document.getElementById('approveBtn').addEventListener('click', function() {
+hhh\ContractTemplate1.html:341:            document.getElementById('paymentModal').style.display = 'flex';
+hhh\ContractTemplate1.html:342:            document.getElementById('paymentMethodSection').style.display = 'block';
+hhh\ContractTemplate1.html:343:            document.getElementById('paymentForm').style.display = 'none';
+hhh\ContractTemplate1.html:348:            document.getElementById('paymentModal').style.display = 'none';
+hhh\ContractTemplate1.html:353:            document.getElementById('paymentMethodSection').style.display = 'none';
+hhh\ContractTemplate1.html:354:            document.getElementById('paymentForm').style.display = 'block';
+hhh\ContractTemplate1.html:357:            document.getElementById('creditCardFields').style.display = 'none';
+hhh\ContractTemplate1.html:358:            document.getElementById('sentToClientField').style.display = 'none';
+hhh\ContractTemplate1.html:361:                document.getElementById('paymentFormTitle').innerText = 'دفع عبر 
+بطاقة ائتمان';
+hhh\ContractTemplate1.html:362:                document.getElementById('creditCardFields').style.display = 'block';
+hhh\ContractTemplate1.html:363:                document.getElementById('paymentForm').dataset.method = 
+'credit_card';
+hhh\ContractTemplate1.html:366:                document.getElementById('cardNumber').value = '';
+hhh\ContractTemplate1.html:367:                document.getElementById('expiryDate').value = '';
+hhh\ContractTemplate1.html:368:                document.getElementById('cvv').value = '';
+hhh\ContractTemplate1.html:370:                document.getElementById('paymentFormTitle').innerText = 'تم إرسالها 
+للعميل';
+hhh\ContractTemplate1.html:371:                document.getElementById('sentToClientField').style.display = 'block';
+hhh\ContractTemplate1.html:372:                document.getElementById('paymentLabel').innerText = 'رقم المرجع:';
+hhh\ContractTemplate1.html:373:                document.getElementById('paymentInput').placeholder = 'أدخل رقم 
+المرجع أو المعرف';
+hhh\ContractTemplate1.html:374:                document.getElementById('paymentForm').dataset.method = 
+'sent_to_client';
+hhh\ContractTemplate1.html:375:                document.getElementById('paymentInput').value = '';
+hhh\ContractTemplate1.html:381:            document.getElementById('paymentForm').style.display = 'none';
+hhh\ContractTemplate1.html:382:            document.getElementById('paymentMethodSection').style.display = 'block';
+hhh\ContractTemplate1.html:385:            document.getElementById('creditCardFields').style.display = 'none';
+hhh\ContractTemplate1.html:386:            document.getElementById('sentToClientField').style.display = 'none';
+hhh\ContractTemplate1.html:389:            document.getElementById('cardNumber').value = '';
+hhh\ContractTemplate1.html:390:            document.getElementById('expiryDate').value = '';
+hhh\ContractTemplate1.html:391:            document.getElementById('cvv').value = '';
+hhh\ContractTemplate1.html:392:            document.getElementById('paymentInput').value = '';
+hhh\ContractTemplate1.html:398:            var method = document.getElementById('paymentForm').dataset.method;
+hhh\ContractTemplate1.html:403:                var cardNumber = document.getElementById('cardNumber').value;
+hhh\ContractTemplate1.html:404:                var expiryDate = document.getElementById('expiryDate').value;
+hhh\ContractTemplate1.html:405:                var cvv = document.getElementById('cvv').value;
+hhh\ContractTemplate1.html:416:                var inputValue = document.getElementById('paymentInput').value;
+hhh\create.html:285:                document.getElementById("unitSelect").addEventListener("change", function () {
+hhh\create.html:287:                    var unitDiv = document.getElementById("unitCountDiv");
+hhh\create.html:288:                    var unitLabel = document.getElementById("unitLabel");
+hhh\create.html:309:                const checkbox = document.getElementById('AreaDifferentCheckbox');
+hhh\create.html:310:                const hiddenInput = document.getElementById('hiddenAreaDifferent');
+hhh\create.html:312:                checkbox.addEventListener('change', function() {
+hhh\create.html:598:document.addEventListener('DOMContentLoaded', function() {
+hhh\create.html:599:    const select = document.getElementById('typePieceSelect');
+hhh\create.html:600:    const earthSection = document.getElementById('earthBordersSection');
+hhh\create.html:601:    const rahaqSection = document.getElementById('rahaqTableSection');
+hhh\create.html:602:    const buildingSection = document.getElementById('buildingTableSection');
+hhh\create.html:604:    select.addEventListener('change', function() {
+hhh\create.html:617:        rahaqSection.querySelectorAll('input[type="text"]').forEach(input => input.disabled = 
+false);
+hhh\create.html:618:        rahaqSection.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
+hhh\create.html:619:            const inputField = checkbox.closest('tr').querySelector('input[type="text"]');
+hhh\create.html:625:    rahaqSection.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
+hhh\create.html:626:        const inputField = checkbox.closest('tr').querySelector('input[type="text"]');
+hhh\create.html:627:        checkbox.addEventListener('change', function() {
+hhh\create.html:634:    const addBuildingBtn = document.getElementById('addBuildingRow');
+hhh\create.html:635:    addBuildingBtn.addEventListener('click', function() {
+hhh\create.html:636:        const tbody = buildingSection.querySelector('tbody');
+hhh\create.html:716:    document.addEventListener('DOMContentLoaded', function() {
+hhh\create.html:717:        const select = document.getElementById('typePieceSelect');
+hhh\create.html:718:        const title = document.getElementById('earthBordersTitleUnique123');
+hhh\create.html:720:        select.addEventListener('change', function() {
+hhh\create.html:727:    document.addEventListener('DOMContentLoaded', function () {
+hhh\create.html:728:        const chkUp = document.getElementById('chkUp');
+hhh\create.html:729:        const chkDown = document.getElementById('chkDown');
+hhh\create.html:730:        const txtUp = document.getElementById('txtUp');
+hhh\create.html:731:        const txtDown = document.getElementById('txtDown');
+hhh\create.html:734:        chkUp.addEventListener('change', function () {
+hhh\create.html:739:        chkDown.addEventListener('change', function () {
+hhh\create.html:867:    document.addEventListener('DOMContentLoaded', function() {
+hhh\create.html:868:    const addBtn = document.getElementById('addAttachmentBtn');
+hhh\create.html:869:    const wrapper = document.getElementById('attachmentsWrapper');
+hhh\create.html:871:    addBtn.addEventListener('click', function() {
+hhh\create.html:881:        newRow.querySelector('.remove-attachment').addEventListener('click', function() {
+hhh\create.html:887:    wrapper.querySelectorAll('.remove-attachment').forEach(btn => {
+hhh\create.html:888:        btn.addEventListener('click', function() {
+hhh\create.html:1280:document.addEventListener('DOMContentLoaded', function() {
+hhh\create.html:1282:        const addBtn = document.getElementById(btnId);
+hhh\create.html:1283:        const txtName = document.getElementById(txtId);
+hhh\create.html:1284:        const nameList = document.getElementById(listId);
+hhh\create.html:1285:        const nameCount = document.getElementById(countId);
+hhh\create.html:1289:        addBtn.addEventListener('click', function() {
+hhh\createdevided.html:86:  document.getElementById("breadcrumb").textContent = path;
+hhh\createdevided.html:293:                document.getElementById("unitSelect").addEventListener("change", 
+function () {
+hhh\createdevided.html:295:                    var unitDiv = document.getElementById("unitCountDiv");
+hhh\createdevided.html:296:                    var unitLabel = document.getElementById("unitLabel");
+hhh\createdevided.html:317:                const checkbox = document.getElementById('AreaDifferentCheckbox');
+hhh\createdevided.html:318:                const hiddenInput = document.getElementById('hiddenAreaDifferent');
+hhh\createdevided.html:320:                checkbox.addEventListener('change', function() {
+hhh\createdevided.html:606:document.addEventListener('DOMContentLoaded', function() {
+hhh\createdevided.html:607:    const select = document.getElementById('typePieceSelect');
+hhh\createdevided.html:608:    const earthSection = document.getElementById('earthBordersSection');
+hhh\createdevided.html:609:    const rahaqSection = document.getElementById('rahaqTableSection');
+hhh\createdevided.html:610:    const buildingSection = document.getElementById('buildingTableSection');
+hhh\createdevided.html:612:    select.addEventListener('change', function() {
+hhh\createdevided.html:625:        rahaqSection.querySelectorAll('input[type="text"]').forEach(input => 
+input.disabled = false);
+hhh\createdevided.html:626:        rahaqSection.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
+hhh\createdevided.html:627:            const inputField = 
+checkbox.closest('tr').querySelector('input[type="text"]');
+hhh\createdevided.html:633:    rahaqSection.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
+hhh\createdevided.html:634:        const inputField = checkbox.closest('tr').querySelector('input[type="text"]');
+hhh\createdevided.html:635:        checkbox.addEventListener('change', function() {
+hhh\createdevided.html:642:    const addBuildingBtn = document.getElementById('addBuildingRow');
+hhh\createdevided.html:643:    addBuildingBtn.addEventListener('click', function() {
+hhh\createdevided.html:644:        const tbody = buildingSection.querySelector('tbody');
+hhh\createdevided.html:724:    document.addEventListener('DOMContentLoaded', function() {
+hhh\createdevided.html:725:        const select = document.getElementById('typePieceSelect');
+hhh\createdevided.html:726:        const title = document.getElementById('earthBordersTitleUnique123');
+hhh\createdevided.html:728:        select.addEventListener('change', function() {
+hhh\createdevided.html:735:    document.addEventListener('DOMContentLoaded', function () {
+hhh\createdevided.html:736:        const chkUp = document.getElementById('chkUp');
+hhh\createdevided.html:737:        const chkDown = document.getElementById('chkDown');
+hhh\createdevided.html:738:        const txtUp = document.getElementById('txtUp');
+hhh\createdevided.html:739:        const txtDown = document.getElementById('txtDown');
+hhh\createdevided.html:742:        chkUp.addEventListener('change', function () {
+hhh\createdevided.html:747:        chkDown.addEventListener('change', function () {
+hhh\createdevided.html:875:    document.addEventListener('DOMContentLoaded', function() {
+hhh\createdevided.html:876:    const addBtn = document.getElementById('addAttachmentBtn');
+hhh\createdevided.html:877:    const wrapper = document.getElementById('attachmentsWrapper');
+hhh\createdevided.html:879:    addBtn.addEventListener('click', function() {
+hhh\createdevided.html:889:        newRow.querySelector('.remove-attachment').addEventListener('click', function() {
+hhh\createdevided.html:895:    wrapper.querySelectorAll('.remove-attachment').forEach(btn => {
+hhh\createdevided.html:896:        btn.addEventListener('click', function() {
+hhh\createdevided.html:982:document.addEventListener('DOMContentLoaded', function() {
+hhh\createdevided.html:984:        const addBtn = document.getElementById(btnId);
+hhh\createdevided.html:985:        const txtName = document.getElementById(txtId);
+hhh\createdevided.html:986:        const nameList = document.getElementById(listId);
+hhh\createdevided.html:987:        const nameCount = document.getElementById(countId);
+hhh\createdevided.html:991:        addBtn.addEventListener('click', function() {
+hhh\createform.html:118:  document.getElementById("breadcrumb").textContent = path;
+hhh\createform.html:335:                document.getElementById("unitSelect").addEventListener("change", function 
+() {
+hhh\createform.html:337:                    var unitDiv = document.getElementById("unitCountDiv");
+hhh\createform.html:338:                    var unitLabel = document.getElementById("unitLabel");
+hhh\createform.html:359:                const checkbox = document.getElementById('AreaDifferentCheckbox');
+hhh\createform.html:360:                const hiddenInput = document.getElementById('hiddenAreaDifferent');
+hhh\createform.html:362:                checkbox.addEventListener('change', function() {
+hhh\createform.html:648:document.addEventListener('DOMContentLoaded', function() {
+hhh\createform.html:649:    const select = document.getElementById('typePieceSelect');
+hhh\createform.html:650:    const earthSection = document.getElementById('earthBordersSection');
+hhh\createform.html:651:    const rahaqSection = document.getElementById('rahaqTableSection');
+hhh\createform.html:652:    const buildingSection = document.getElementById('buildingTableSection');
+hhh\createform.html:654:    select.addEventListener('change', function() {
+hhh\createform.html:667:        rahaqSection.querySelectorAll('input[type="text"]').forEach(input => input.disabled 
+= false);
+hhh\createform.html:668:        rahaqSection.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
+hhh\createform.html:669:            const inputField = checkbox.closest('tr').querySelector('input[type="text"]');
+hhh\createform.html:675:    rahaqSection.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
+hhh\createform.html:676:        const inputField = checkbox.closest('tr').querySelector('input[type="text"]');
+hhh\createform.html:677:        checkbox.addEventListener('change', function() {
+hhh\createform.html:684:    const addBuildingBtn = document.getElementById('addBuildingRow');
+hhh\createform.html:685:    addBuildingBtn.addEventListener('click', function() {
+hhh\createform.html:686:        const tbody = buildingSection.querySelector('tbody');
+hhh\createform.html:766:    document.addEventListener('DOMContentLoaded', function() {
+hhh\createform.html:767:        const select = document.getElementById('typePieceSelect');
+hhh\createform.html:768:        const title = document.getElementById('earthBordersTitleUnique123');
+hhh\createform.html:770:        select.addEventListener('change', function() {
+hhh\createform.html:777:    document.addEventListener('DOMContentLoaded', function () {
+hhh\createform.html:778:        const chkUp = document.getElementById('chkUp');
+hhh\createform.html:779:        const chkDown = document.getElementById('chkDown');
+hhh\createform.html:780:        const txtUp = document.getElementById('txtUp');
+hhh\createform.html:781:        const txtDown = document.getElementById('txtDown');
+hhh\createform.html:784:        chkUp.addEventListener('change', function () {
+hhh\createform.html:789:        chkDown.addEventListener('change', function () {
+hhh\createform.html:917:    document.addEventListener('DOMContentLoaded', function() {
+hhh\createform.html:918:    const addBtn = document.getElementById('addAttachmentBtn');
+hhh\createform.html:919:    const wrapper = document.getElementById('attachmentsWrapper');
+hhh\createform.html:921:    addBtn.addEventListener('click', function() {
+hhh\createform.html:931:        newRow.querySelector('.remove-attachment').addEventListener('click', function() {
+hhh\createform.html:937:    wrapper.querySelectorAll('.remove-attachment').forEach(btn => {
+hhh\createform.html:938:        btn.addEventListener('click', function() {
+hhh\createform.html:1268:document.addEventListener('DOMContentLoaded', function() {
+hhh\createform.html:1270:        const addBtn = document.getElementById(btnId);
+hhh\createform.html:1271:        const txtName = document.getElementById(txtId);
+hhh\createform.html:1272:        const nameList = document.getElementById(listId);
+hhh\createform.html:1273:        const nameCount = document.getElementById(countId);
+hhh\createform.html:1277:        addBtn.addEventListener('click', function() {
+hhh\createorder.html:86:      document.getElementById("breadcrumb").textContent = path;
+hhh\createorder.html:292:                document.getElementById("unitSelect").addEventListener("change", function 
+() {
+hhh\createorder.html:294:                    var unitDiv = document.getElementById("unitCountDiv");
+hhh\createorder.html:295:                    var unitLabel = document.getElementById("unitLabel");
+hhh\createorder.html:316:                const checkbox = document.getElementById('AreaDifferentCheckbox');
+hhh\createorder.html:317:                const hiddenInput = document.getElementById('hiddenAreaDifferent');
+hhh\createorder.html:319:                checkbox.addEventListener('change', function() {
+hhh\createorder.html:605:document.addEventListener('DOMContentLoaded', function() {
+hhh\createorder.html:606:    const select = document.getElementById('typePieceSelect');
+hhh\createorder.html:607:    const earthSection = document.getElementById('earthBordersSection');
+hhh\createorder.html:608:    const rahaqSection = document.getElementById('rahaqTableSection');
+hhh\createorder.html:609:    const buildingSection = document.getElementById('buildingTableSection');
+hhh\createorder.html:611:    select.addEventListener('change', function() {
+hhh\createorder.html:624:        rahaqSection.querySelectorAll('input[type="text"]').forEach(input => 
+input.disabled = false);
+hhh\createorder.html:625:        rahaqSection.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
+hhh\createorder.html:626:            const inputField = checkbox.closest('tr').querySelector('input[type="text"]');
+hhh\createorder.html:632:    rahaqSection.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
+hhh\createorder.html:633:        const inputField = checkbox.closest('tr').querySelector('input[type="text"]');
+hhh\createorder.html:634:        checkbox.addEventListener('change', function() {
+hhh\createorder.html:641:    const addBuildingBtn = document.getElementById('addBuildingRow');
+hhh\createorder.html:642:    addBuildingBtn.addEventListener('click', function() {
+hhh\createorder.html:643:        const tbody = buildingSection.querySelector('tbody');
+hhh\createorder.html:723:    document.addEventListener('DOMContentLoaded', function() {
+hhh\createorder.html:724:        const select = document.getElementById('typePieceSelect');
+hhh\createorder.html:725:        const title = document.getElementById('earthBordersTitleUnique123');
+hhh\createorder.html:727:        select.addEventListener('change', function() {
+hhh\createorder.html:734:    document.addEventListener('DOMContentLoaded', function () {
+hhh\createorder.html:735:        const chkUp = document.getElementById('chkUp');
+hhh\createorder.html:736:        const chkDown = document.getElementById('chkDown');
+hhh\createorder.html:737:        const txtUp = document.getElementById('txtUp');
+hhh\createorder.html:738:        const txtDown = document.getElementById('txtDown');
+hhh\createorder.html:741:        chkUp.addEventListener('change', function () {
+hhh\createorder.html:746:        chkDown.addEventListener('change', function () {
+hhh\createorder.html:874:    document.addEventListener('DOMContentLoaded', function() {
+hhh\createorder.html:875:    const addBtn = document.getElementById('addAttachmentBtn');
+hhh\createorder.html:876:    const wrapper = document.getElementById('attachmentsWrapper');
+hhh\createorder.html:878:    addBtn.addEventListener('click', function() {
+hhh\createorder.html:888:        newRow.querySelector('.remove-attachment').addEventListener('click', function() {
+hhh\createorder.html:894:    wrapper.querySelectorAll('.remove-attachment').forEach(btn => {
+hhh\createorder.html:895:        btn.addEventListener('click', function() {
+hhh\createspece.html:86:  document.getElementById("breadcrumb").textContent = path;
+hhh\createspece.html:112:document.addEventListener('DOMContentLoaded', function() {
+hhh\createspece.html:113:    const select = document.getElementById('typePieceSelect');
+hhh\createspece.html:114:    const earthSection = document.getElementById('earthBordersSection');
+hhh\createspece.html:115:    const rahaqSection = document.getElementById('rahaqTableSection');
+hhh\createspece.html:116:    const buildingSection = document.getElementById('buildingTableSection');
+hhh\createspece.html:118:    select.addEventListener('change', function() {
+hhh\createspece.html:131:        rahaqSection.querySelectorAll('input[type="text"]').forEach(input => 
+input.disabled = false);
+hhh\createspece.html:132:        rahaqSection.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
+hhh\createspece.html:133:            const inputField = checkbox.closest('tr').querySelector('input[type="text"]');
+hhh\createspece.html:139:    rahaqSection.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
+hhh\createspece.html:140:        const inputField = checkbox.closest('tr').querySelector('input[type="text"]');
+hhh\createspece.html:141:        checkbox.addEventListener('change', function() {
+hhh\createspece.html:148:    const addBuildingBtn = document.getElementById('addBuildingRow');
+hhh\createspece.html:149:    addBuildingBtn.addEventListener('click', function() {
+hhh\createspece.html:150:        const tbody = buildingSection.querySelector('tbody');
+hhh\createspece.html:194:    document.addEventListener('DOMContentLoaded', function() {
+hhh\createspece.html:195:        const select = document.getElementById('typePieceSelect');
+hhh\createspece.html:196:        const title = document.getElementById('earthBordersTitleUnique123');
+hhh\createspece.html:198:        select.addEventListener('change', function() {
+hhh\createspece.html:205:    document.addEventListener('DOMContentLoaded', function () {
+hhh\createspece.html:206:        const chkUp = document.getElementById('chkUp');
+hhh\createspece.html:207:        const chkDown = document.getElementById('chkDown');
+hhh\createspece.html:208:        const txtUp = document.getElementById('txtUp');
+hhh\createspece.html:209:        const txtDown = document.getElementById('txtDown');
+hhh\createspece.html:212:        chkUp.addEventListener('change', function () {
+hhh\createspece.html:217:        chkDown.addEventListener('change', function () {
+hhh\createspece.html:339:document.addEventListener('DOMContentLoaded', function() {
+hhh\createspece.html:341:        const addBtn = document.getElementById(btnId);
+hhh\createspece.html:342:        const txtName = document.getElementById(txtId);
+hhh\createspece.html:343:        const nameList = document.getElementById(listId);
+hhh\createspece.html:344:        const nameCount = document.getElementById(countId);
+hhh\createspece.html:348:        addBtn.addEventListener('click', function() {
+hhh\creatform.html:86:  document.getElementById("breadcrumb").textContent = path;
+hhh\creatform.html:284:                document.getElementById("unitSelect").addEventListener("change", function () 
+{
+hhh\creatform.html:286:                    var unitDiv = document.getElementById("unitCountDiv");
+hhh\creatform.html:287:                    var unitLabel = document.getElementById("unitLabel");
+hhh\creatform.html:308:                const checkbox = document.getElementById('AreaDifferentCheckbox');
+hhh\creatform.html:309:                const hiddenInput = document.getElementById('hiddenAreaDifferent');
+hhh\creatform.html:311:                checkbox.addEventListener('change', function() {
+hhh\creatform.html:597:document.addEventListener('DOMContentLoaded', function() {
+hhh\creatform.html:598:    const select = document.getElementById('typePieceSelect');
+hhh\creatform.html:599:    const earthSection = document.getElementById('earthBordersSection');
+hhh\creatform.html:600:    const rahaqSection = document.getElementById('rahaqTableSection');
+hhh\creatform.html:601:    const buildingSection = document.getElementById('buildingTableSection');
+hhh\creatform.html:603:    select.addEventListener('change', function() {
+hhh\creatform.html:616:        rahaqSection.querySelectorAll('input[type="text"]').forEach(input => input.disabled 
+= false);
+hhh\creatform.html:617:        rahaqSection.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
+hhh\creatform.html:618:            const inputField = checkbox.closest('tr').querySelector('input[type="text"]');
+hhh\creatform.html:624:    rahaqSection.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
+hhh\creatform.html:625:        const inputField = checkbox.closest('tr').querySelector('input[type="text"]');
+hhh\creatform.html:626:        checkbox.addEventListener('change', function() {
+hhh\creatform.html:633:    const addBuildingBtn = document.getElementById('addBuildingRow');
+hhh\creatform.html:634:    addBuildingBtn.addEventListener('click', function() {
+hhh\creatform.html:635:        const tbody = buildingSection.querySelector('tbody');
+hhh\creatform.html:715:    document.addEventListener('DOMContentLoaded', function() {
+hhh\creatform.html:716:        const select = document.getElementById('typePieceSelect');
+hhh\creatform.html:717:        const title = document.getElementById('earthBordersTitleUnique123');
+hhh\creatform.html:719:        select.addEventListener('change', function() {
+hhh\creatform.html:726:    document.addEventListener('DOMContentLoaded', function () {
+hhh\creatform.html:727:        const chkUp = document.getElementById('chkUp');
+hhh\creatform.html:728:        const chkDown = document.getElementById('chkDown');
+hhh\creatform.html:729:        const txtUp = document.getElementById('txtUp');
+hhh\creatform.html:730:        const txtDown = document.getElementById('txtDown');
+hhh\creatform.html:733:        chkUp.addEventListener('change', function () {
+hhh\creatform.html:738:        chkDown.addEventListener('change', function () {
+hhh\creatform.html:866:    document.addEventListener('DOMContentLoaded', function() {
+hhh\creatform.html:867:    const addBtn = document.getElementById('addAttachmentBtn');
+hhh\creatform.html:868:    const wrapper = document.getElementById('attachmentsWrapper');
+hhh\creatform.html:870:    addBtn.addEventListener('click', function() {
+hhh\creatform.html:880:        newRow.querySelector('.remove-attachment').addEventListener('click', function() {
+hhh\creatform.html:886:    wrapper.querySelectorAll('.remove-attachment').forEach(btn => {
+hhh\creatform.html:887:        btn.addEventListener('click', function() {
+hhh\creatform.html:1279:document.addEventListener('DOMContentLoaded', function() {
+hhh\creatform.html:1281:        const addBtn = document.getElementById(btnId);
+hhh\creatform.html:1282:        const txtName = document.getElementById(txtId);
+hhh\creatform.html:1283:        const nameList = document.getElementById(listId);
+hhh\creatform.html:1284:        const nameCount = document.getElementById(countId);
+hhh\creatform.html:1288:        addBtn.addEventListener('click', function() {
+hhh\devid.html:379:document.addEventListener('DOMContentLoaded', function() {
+hhh\devid.html:381:        const addBtn = document.getElementById(btnId);
+hhh\devid.html:382:        const txtName = document.getElementById(txtId);
+hhh\devid.html:383:        const nameList = document.getElementById(listId);
+hhh\devid.html:384:        const nameCount = document.getElementById(countId);
+hhh\devid.html:388:        addBtn.addEventListener('click', function() {
+hhh\index.html:86:            <div class="section-header" onclick="toggleSection('personal')">المعلومات الشخصية 
+الأساسية</div>
+hhh\index.html:105:    <div class="section-header" onclick="toggleSection('experience')">الخبرات العملية</div>
+hhh\index.html:138:                <input type="checkbox" id="stillWorking" class="form-check-input me-2" 
+onchange="toggleExpTo()">
+hhh\index.html:145:                const checkbox = document.getElementById("stillWorking");
+hhh\index.html:146:                const expTo = document.getElementById("expTo");
+hhh\index.html:164:                    <button class="btn btn-outline-primary" type="button" 
+onclick="addTaskField()">
+hhh\index.html:177:                const container = document.getElementById('tasks-container');
+hhh\index.html:183:                    <button class="btn btn-outline-danger" type="button" 
+onclick="removeTaskField(this)">
+hhh\index.html:204:                              <button class="btn btn-sm btn-success" onclick="addManagerRow()" 
+title="إضافة مسؤول">
+hhh\index.html:215:                <button class="btn btn-outline-primary add-btn" onclick="addExperience()">إضافة 
+خبرة</button>
+hhh\index.html:226:            <div class="section-header" onclick="toggleSection('education')">المؤهلات 
+العلمية</div>
+hhh\index.html:244:                <button class="btn btn-outline-primary add-btn" onclick="addEducation()">إضافة 
+مؤهل</button>
+hhh\index.html:251:            <div class="section-header" onclick="toggleSection('cert')">الشهادات المهنية 
+والدورات</div>
+hhh\index.html:293:                <button class="btn btn-outline-primary add-btn" onclick="addCert()">إضافة شهادة 
+/ دورة</button>
+hhh\index.html:300:            <div class="section-header" onclick="toggleSection('project')">المشاريع السابقة 
+والإنجازات</div>
+hhh\index.html:309:                <button class="btn btn-outline-primary add-btn" onclick="addProject()">إضافة 
+مشروع</button>
+hhh\index.html:317:            <div class="section-header" onclick="toggleSection('skills')">المهارات التقنية</div>
+hhh\index.html:324:                <button class="btn btn-outline-primary add-btn" onclick="addSkill()">إضافة 
+مهارة</button>
+hhh\index.html:330:    <div class="section-header" onclick="toggleSection('languages')">اللغات</div>
+hhh\index.html:333:            <input class="form-check-input" type="checkbox" id="langArabic" 
+onchange="toggleMotherLanguage()">
+hhh\index.html:350:            <button class="btn btn-outline-primary" type="button" onclick="addLanguage()">
+hhh\index.html:360:            <button class="btn btn-success" onclick="generateCV()">حفظ السيرة الذاتية</button>
+hhh\index.html:381:                <button class="btn btn-sm btn-outline-primary me-1" 
+onclick="editManagerRow(this)" title="تعديل">
+hhh\index.html:384:                <button class="btn btn-sm btn-outline-danger" onclick="deleteManagerRow(this)" 
+title="حذف">
+hhh\index.html:394:    const arabicCheckbox = document.getElementById('langArabic');
+hhh\index.html:395:    const motherLangOption = document.getElementById('motherLangOption');
+hhh\index.html:400:    const langName = document.getElementById('newLang').value.trim();
+hhh\index.html:403:    const container = document.getElementById('extra-langs');
+hhh\index.html:411:        <button class="btn btn-sm btn-outline-danger ms-2" type="button" 
+onclick="this.parentElement.remove()">
+hhh\index.html:416:    document.getElementById('newLang').value = '';
+hhh\index.html:447:    const sections = document.querySelectorAll('.section-content');
+hhh\index.html:586:            <button class="btn btn-outline-primary" onclick="window.print()">طباعة</button>
+hhh\index.html:587:            <button class="btn btn-secondary" onclick="editCV()">تعديل السيرة الذاتية</button>
+hhh\WorkOffer.html:99:            const endDateOption = document.getElementById("endDateOption");
+hhh\WorkOffer.html:100:            const endDateInput = document.getElementById("endDateInput");
+hhh\WorkOffer.html:102:            endDateOption.addEventListener("change", function () {
+hhh\WorkOffer.html:181:            document.querySelectorAll("#transportRows tr").forEach(row => {
+hhh\WorkOffer.html:182:                const statuse1 = row.querySelector("input[name='StatuseType1']")?.value;
+hhh\WorkOffer.html:183:                const statuse2 = row.querySelector("input[name='StatuseType2']")?.value;
+hhh\WorkOffer.html:199:         document.getElementById("transportTemplateSelect").addEventListener("change", 
+function() {
+hhh\WorkOffer.html:201:            const container = document.getElementById("transportTableContainer");
+hhh\WorkOffer.html:244:                onclick="showFormDialog('AdditionalCostModel')">
+hhh\WorkOffer1.html:105:                onclick="showFormDialog('AdditionalCostModel')">
+hhh\Work_Form.html:141:                                <button type="button" class="btn btn-sm btn-outline-primary" 
+onclick="addTableRow()">
+hhh\Work_Form.html:189:                                <button type="button" class="btn btn-sm btn-outline-danger" 
+onclick="removeTableRow(this)">
+hhh\Work_Form.html:433:                    <button type="submit" class="btn btn-primary me-2" 
+onclick="saveData(event)">حفظ البيانات</button>
+hhh\Work_Form.html:434:                    <button type="button" class="btn btn-info me-2" 
+onclick="sendReportToClient()"> حفظ وإرسال التقرير للعميل</button>
+hhh\Work_Form.html:471:                    <button type="button" class="btn btn-primary" 
+onclick="sendReport()">إرسال التقرير</button>
+hhh\Work_Form.html:515:        document.getElementById("GovernorateSelect").addEventListener("change", function () {
+hhh\Work_Form.html:521:                        document.getElementById("GovernorateContent").innerHTML = html;
+hhh\Work_Form.html:522:                        var myModal = new 
+bootstrap.Modal(document.getElementById("GovernorateModal"));
+hhh\Work_Form.html:531:                        document.getElementById("GovernorateContent").innerHTML = html;
+hhh\Work_Form.html:532:                        var myModal = new 
+bootstrap.Modal(document.getElementById("GovernorateModal"));
+hhh\Work_Form_base.html:141:                                <button type="button" class="btn btn-sm 
+btn-outline-primary" onclick="addTableRow()">
+hhh\Work_Form_base.html:189:                                <button type="button" class="btn btn-sm 
+btn-outline-danger" onclick="removeTableRow(this)">
+hhh\Work_Form_base.html:601:                    <button type="submit" class="btn btn-primary me-2" 
+onclick="saveData(event)">حفظ البيانات</button>
+hhh\Work_Form_base.html:602:                    <button type="button" class="btn btn-info me-2" 
+onclick="sendReportToClient()"> حفظ وإرسال التقرير للعميل</button>
+hhh\Work_Form_base.html:639:                    <button type="button" class="btn btn-primary" 
+onclick="sendReport()">إرسال التقرير</button>
+hhh\Work_Form_base.html:683:        document.getElementById("GovernorateSelect").addEventListener("change", 
+function () {
+hhh\Work_Form_base.html:689:                        document.getElementById("GovernorateContent").innerHTML = html;
+hhh\Work_Form_base.html:690:                        var myModal = new 
+bootstrap.Modal(document.getElementById("GovernorateModal"));
+hhh\Work_Form_base.html:699:                        document.getElementById("GovernorateContent").innerHTML = html;
+hhh\Work_Form_base.html:700:                        var myModal = new 
+bootstrap.Modal(document.getElementById("GovernorateModal"));
+
+

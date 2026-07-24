@@ -1,0 +1,961 @@
+﻿==============================
+AllTemplate.html
+==============================
+
+hhh\AllTemplate.html:118:    .custom-input-container input:not(:placeholder-shown) + label,
+hhh\AllTemplate.html:136:    <h2 class="text-center mb-4">إنشاء السيرة الذاتية</h2>
+hhh\AllTemplate.html:161:                    <input asp-for="tanjezOrder.CreateOrderName" type="text" 
+class="form-control" placeholder="منشا الطلب">
+hhh\AllTemplate.html:236:                    <input type="text" class="form-control" id="documentArea" 
+asp-for="tanjezOrder.Zone" placeholder="المديرية" />
+hhh\AllTemplate.html:241:                    <input type="text" class="form-control" id="documentArea" 
+asp-for="tanjezOrder.Directorate" placeholder="العزلة" />
+hhh\AllTemplate.html:246:                    <input type="text" class="form-control" id="documentArea" 
+name="tanjezOrder.Village" placeholder="القرية او الحي" />
+hhh\AllTemplate.html:257:                    <input name="tanjezOrder.CoordinatesY" type="number" 
+class="form-control" placeholder="احداثيات Y">
+hhh\AllTemplate.html:261:                    <input name="tanjezOrder.CoordinatesX" type="number" 
+class="form-control" placeholder="احداثيات X">
+hhh\AllTemplate.html:265:                    <label class="input-label"> اسم الموضع <span 
+class="required-star">*</span></label>
+hhh\AllTemplate.html:266:                    <input type="text" class="form-control" id="requestTitle" 
+name="tanjezOrder.PlaceName" placeholder="أدخل عنوان الطلب" required />
+hhh\AllTemplate.html:269:                    <label class="input-label">نوع الطلب  </label>
+hhh\AllTemplate.html:290:                <label class="input-label">نوع الوثيقة</label>
+hhh\AllTemplate.html:313:                    <label class="input-label fw-bold">المساحة كما في الوثيقة</label>
+hhh\AllTemplate.html:318:                        <input type="number" class="form-control" id="documentArea" 
+name="tanjezOrder.Space" placeholder="0.00" step="0.01" />
+hhh\AllTemplate.html:333:                        <input type="number" class="form-control" id="unitCount" 
+name="tanjezOrder.AcountPiese" placeholder="ادخل العدد" />
+hhh\AllTemplate.html:359:                    <label class="form-check-label" for="AreaDifferentCheckbox">المساحة 
+مختلفة عن الواقع</label>
+hhh\AllTemplate.html:572:                <td><input type="number" class="form-control" placeholder="أدخل عدد 
+الطوابق" /></td>
+hhh\AllTemplate.html:573:                <td><input type="text" class="form-control" placeholder="أدخل الوصف" 
+/></td>
+hhh\AllTemplate.html:574:                <td><input type="text" class="form-control" placeholder="أدخل المكان" 
+/></td>
+hhh\AllTemplate.html:605:                        <input type="text" class="form-control" disabled placeholder="أدخل 
+الحد من الشمال" />
+hhh\AllTemplate.html:614:                        <input type="text" class="form-control" disabled placeholder="أدخل 
+الحد من الجنوب" />
+hhh\AllTemplate.html:623:                        <input type="text" class="form-control" disabled placeholder="أدخل 
+الحد من الغرب" />
+hhh\AllTemplate.html:632:                        <input type="text" class="form-control" disabled placeholder="أدخل 
+الحد من الجنوب" />
+hhh\AllTemplate.html:694:            <td><input type="number" class="form-control" placeholder="أدخل عدد الطوابق" 
+/></td>
+hhh\AllTemplate.html:695:            <td><input type="text" class="form-control" placeholder="أدخل الوصف" /></td>
+hhh\AllTemplate.html:696:            <td><input type="text" class="form-control" placeholder="أدخل المكان" /></td>
+hhh\AllTemplate.html:732:                    <input type="text" class="form-control" id="txtUp" name="fromup" 
+disabled placeholder="أدخل الحد من الأعلى" />
+hhh\AllTemplate.html:741:                    <input type="text" class="form-control" id="txtDown" name="fromdown" 
+disabled placeholder="أدخل الحد من الأسفل" />
+hhh\AllTemplate.html:838:                <input type="text" class="form-control" id="maximumDuration" 
+name="tanjezOrder.MaximumDuration" placeholder="اختر التاريخ" />
+hhh\AllTemplate.html:896:        <label for="txtNotes" class="form-label">الملاحظات</label>
+hhh\AllTemplate.html:897:        <textarea class="form-control" id="txtNotes" name="txtNotes" rows="4" 
+placeholder="أدخل ملاحظاتك"></textarea>
+hhh\AllTemplate.html:904:        <label class="form-label">المرفقات</label>
+hhh\AllTemplate.html:968:            <input type="text" placeholder=" ">
+hhh\AllTemplate.html:969:            <label>رقم القضية</label>
+hhh\AllTemplate.html:974:            <input type="text" placeholder=" ">
+hhh\AllTemplate.html:975:            <label>رقم الشكوى</label>
+hhh\AllTemplate.html:980:            <input type="date" placeholder=" ">
+hhh\AllTemplate.html:981:            <label>تاريخ التقديم</label>
+hhh\AllTemplate.html:990:            <label>الجهة الشاكية</label>
+hhh\AllTemplate.html:1001:            <input type="text" id="nameCount1" placeholder=" " readonly>
+hhh\AllTemplate.html:1002:            <label>العدد</label>
+hhh\AllTemplate.html:1008:            <input type="text" id="txtName1" placeholder=" ">
+hhh\AllTemplate.html:1009:            <label>الأسماء</label>
+hhh\AllTemplate.html:1018:            <textarea id="nameList1" placeholder=" " readonly></textarea>
+hhh\AllTemplate.html:1019:            <label>الأسماء المضافة</label>
+hhh\AllTemplate.html:1030:            <input type="text" id="nameCount2" placeholder=" " readonly>
+hhh\AllTemplate.html:1031:            <label>العدد</label>
+hhh\AllTemplate.html:1037:            <input type="text" id="txtName2" placeholder=" ">
+hhh\AllTemplate.html:1038:            <label>الأسماء</label>
+hhh\AllTemplate.html:1047:            <textarea id="nameList2" placeholder=" " readonly></textarea>
+hhh\AllTemplate.html:1048:            <label>الأسماء المضافة</label>
+hhh\AllTemplate.html:1054:        <label for="txtNotes" class="form-label">موضوع الشوى</label>
+hhh\AllTemplate.html:1055:        <textarea class="form-control" id="txtNotes" name="txtNotes" rows="4" 
+placeholder=" موضوع الشكوى"></textarea>
+hhh\AllTemplate.html:1060:        <label for="txtNotes" class="form-label"> ملخص الشكوى</label>
+hhh\AllTemplate.html:1061:        <textarea class="form-control" id="txtNotes" name="txtNotes" rows="4" 
+placeholder=" ملخص الشكوى"></textarea>
+hhh\AllTemplate.html:1071:            <input type="text" id="" placeholder=" " readonly>
+hhh\AllTemplate.html:1072:            <label>موضع الخلاف </label>
+hhh\AllTemplate.html:1091:                <input type="text" id="" placeholder=" " readonly>
+hhh\AllTemplate.html:1092:                <label> الادعاءات (من وجهة نضر الطرف الاول) </label>
+hhh\AllTemplate.html:1100:                <input type="text" id="" placeholder=" " readonly>
+hhh\AllTemplate.html:1101:                <label>  رد المدعي عليه </label>
+hhh\AllTemplate.html:1311:                <td><input type="text" class="form-control" placeholder="  المالكون 
+السابقون" /></td>
+hhh\AllTemplate.html:1312:                <td><input type="text" class="form-control" placeholder=" حصولهم على" 
+/></td>
+hhh\AllTemplate.html:1313:                <td><input type="text" class="form-control" placeholder=" الوثائق التي 
+يستند عليها" /></td>
+hhh\AllTemplate.html:1343:    <h2 class="text-center mb-4">  واجهة استمارة عمل</h2>
+hhh\AllTemplate.html:1357:                    <label>نوع الطلب</label>
+hhh\AllTemplate.html:1364:                    <label>رقم التقديم</label>
+hhh\AllTemplate.html:1370:                    <input type="text" placeholder=" ">
+hhh\AllTemplate.html:1371:                    <label>الرقم المزيد لموضوع الكلي/الشامل</label>
+hhh\AllTemplate.html:1377:                    <input type="text" placeholder=" ">
+hhh\AllTemplate.html:1378:                    <label>رقم التكليف</label>
+hhh\AllTemplate.html:1388:                    <label>وكلاء أوقاف في القرى</label>
+hhh\AllTemplate.html:1394:                    <input type="text" class="form-control" id="eastBoundaryType" 
+readonly style="cursor:pointer; background:#fff;" data-bs-toggle="dropdown" placeholder=" ">
+hhh\AllTemplate.html:1395:                    <label>عدول التروية</label>
+hhh\AllTemplate.html:1460:                                <input  type="number" class="form-control 
+form-control-sm" placeholder="ملاحضة افتراضية" >
+hhh\AllTemplate.html:1463:                                <input  type="number" class="form-control 
+form-control-sm" placeholder="المساحة">
+hhh\AllTemplate.html:1653:                                           placeholder="" />
+hhh\AllTemplate.html:1689:                                 placeholder="" />
+hhh\AllTemplate.html:1708:            <input type="text" placeholder=" ">
+hhh\AllTemplate.html:1709:            <label> رقم القضية </label>
+hhh\AllTemplate.html:1714:            <input type="text" placeholder=" ">
+hhh\AllTemplate.html:1715:            <label>  طبيعة القضية</label>
+hhh\AllTemplate.html:1720:            <input type="text" placeholder=" ">
+hhh\AllTemplate.html:1721:            <label>  نوع القضية</label>
+hhh\AllTemplate.html:1730:            <input type="text" placeholder=" ">
+hhh\AllTemplate.html:1731:            <label> المساحة المدونة في الوثيقة</label>
+hhh\AllTemplate.html:1736:              <input type="text" placeholder=" ">
+hhh\AllTemplate.html:1737:              <label> ذكر اختلاف ان وجد</label>
+hhh\AllTemplate.html:1744:            <input type="text" class="form-control" id="eastBoundaryType" readonly 
+style="cursor:pointer; background:#fff;" data-bs-toggle="dropdown" placeholder=" ">
+hhh\AllTemplate.html:1745:            <label> الرهق</label>
+hhh\AllTemplate.html:1755:              <input type="text" class="form-control" id="eastBoundaryType" readonly 
+style="cursor:pointer; background:#fff;" data-bs-toggle="dropdown" placeholder=" ">
+hhh\AllTemplate.html:1756:              <label> تحليل ادعاء الطرف</label>
+hhh\AllTemplate.html:1768:              <input type="text" placeholder=" ">
+hhh\AllTemplate.html:1769:              <label> تصنيف الدعوى</label>
+hhh\AllTemplate.html:1794:              <label>نوع الدعوى</label>
+hhh\AllTemplate.html:1810:              <label>طلب الدعوى</label>
+hhh\AllTemplate.html:1824:              <label>اساس الادعاء بالحكم </label>
+hhh\AllTemplate.html:1889:    <h2 class="text-center mb-4">  واجهة  العروض</h2>
+hhh\AllTemplate.html:1894:                <h2 class="page-title">عرض جديد</h2>
+hhh\AllTemplate.html:1902:                    <label asp-for="OfferName" class="form-label required">اسم العرض 
+<span class="text-danger">*</span></label>
+hhh\AllTemplate.html:1910:                <label class="form-label">تاريخ نهاية العرض</label>
+hhh\AllTemplate.html:1949:                <label asp-for="WorkWagesTemplateId" class="form-label"></label>
+hhh\AllTemplate.html:1984:                <label asp-for="TransportationScheduleTemplateId" class="form-label">قالب 
+التنقلات والمبيت</label>
+hhh\AllTemplate.html:2053:                <label asp-for="AdditionalCostTypeId" class="form-label">قالب التكاليف 
+الاضافية </label>
+hhh\AllTemplate.html:2082:                    <label class="form-label">نسبة الدفع مقدماً (%)</label>
+hhh\AllTemplate.html:2088:                    <label class="form-label">نسبة الدفع عند النزول (%)</label>
+hhh\AllTemplate.html:2094:                    <label class="form-label">نسبة الدفع بعد تسليم العمل (%)</label>
+hhh\AllTemplate.html:2102:                    <label class="form-label">غرامات التأخر عن تسليم العمل عن المدة 
+المتفق عليها (%)</label>
+hhh\AllTemplate.html:2103:                <input asp-for="LatePenaltyPercentage" type="number" class="form-control" 
+placeholder="يخصم من المبلغ المتفق نسبة" />
+hhh\AllTemplate.html:2107:                    <label class="form-label">في حال الاعتذار عن العمل بعد استلام الدفعة 
+المقدمة (%)</label>
+hhh\AllTemplate.html:2108:                    <input asp-for="ResignationAfterAdvancePercentage" type="number" 
+class="form-control" placeholder="يخصم من المبلغ المتفق نسبة"
+hhh\AllTemplate.html:2113:                    <label class="form-label">في حال اعتذار العميل عن العمل بعد استلام 
+الدفعة المقدمة (%)</label>
+hhh\AllTemplate.html:2114:                <input asp-for="CamelResignationPenaltyPercentage" type="number" 
+class="form-control" placeholder="يخصم من المبلغ المتفق نسبة" />
+hhh\AllTemplate.html:2122:                    <h2 class="accordion-header" id="headingNotes">
+hhh\AllTemplate.html:2128:                    <div id="collapseNotes" class="accordion-collapse collapse" 
+aria-labelledby="headingNotes"
+hhh\AllTemplate.html:2131:                            <textarea class="form-control" rows="3" placeholder="ملاحظات"
+==============================
+almjal.html
+==============================
+hhh\almjal.html:46:      <h2 class="text-center step-title">مرحبا بك في نظام التجميع<br>اختر المجال</h2>
+hhh\almjal.html:52:      <h2 class="text-center step-title">اختر التخصص</h2>
+hhh\almjal.html:59:      <h2 class="text-center step-title">اختر الفرع</h2>
+hhh\almjal.html:66:      <h2 class="text-center step-title">اختر التفصيل</h2>
+==============================
+almjal1.html
+==============================
+hhh\almjal1.html:15:  <h2 class="mb-3 text-primary text-center">شجرة المجالات الهندسية والقانونية والقضاء</h2>
+hhh\almjal1.html:19:      <label>المجال الرئيسي</label>
+hhh\almjal1.html:25:      <label>التخصص</label>
+hhh\almjal1.html:31:      <label>الفرع الرئيسي</label>
+hhh\almjal1.html:37:      <label>التفصيل</label>
+hhh\almjal1.html:278:    function fillSelect(select, list, placeholder) {
+hhh\almjal1.html:279:      select.empty().append(`<option value="">${placeholder}</option>`);
+==============================
+ContractTemplate.html
+==============================
+hhh\ContractTemplate.html:287:                        <label>اختر سبب الرفض:</label>
+hhh\ContractTemplate.html:324:                <h3 style="margin-bottom:18px;">اختر طريقة الدفع</h3>
+hhh\ContractTemplate.html:332:                <h3 id="paymentFormTitle" style="text-align:center; 
+margin-bottom:18px;"></h3>
+hhh\ContractTemplate.html:337:                        <label for="cardNumber">رقم البطاقة:</label>
+hhh\ContractTemplate.html:338:                        <input type="text" id="cardNumber" name="cardNumber" 
+style="width:100%; padding:8px; border:1px solid #ddd; border-radius:4px;" placeholder="أدخل رقم البطاقة" required>
+hhh\ContractTemplate.html:342:                            <label for="expiryDate">تاريخ الانتهاء:</label>
+hhh\ContractTemplate.html:343:                            <input type="text" id="expiryDate" name="expiryDate" 
+style="width:100%; padding:8px; border:1px solid #ddd; border-radius:4px;" placeholder="MM/YY" required>
+hhh\ContractTemplate.html:346:                            <label for="cvv">الرمز:</label>
+hhh\ContractTemplate.html:347:                            <input type="text" id="cvv" name="cvv" style="width:100%; 
+padding:8px; border:1px solid #ddd; border-radius:4px;" placeholder="CVV" required>
+hhh\ContractTemplate.html:355:                        <label id="paymentLabel" for="paymentInput"></label>
+hhh\ContractTemplate.html:428:                document.getElementById('paymentInput').placeholder = 'أدخل رقم 
+المرجع أو المعرف';
+==============================
+ContractTemplate1.html
+==============================
+hhh\ContractTemplate1.html:232:                        <label>اختر سبب الرفض:</label>
+hhh\ContractTemplate1.html:269:                <h3 style="margin-bottom:18px;">اختر طريقة الدفع</h3>
+hhh\ContractTemplate1.html:277:                <h3 id="paymentFormTitle" style="text-align:center; 
+margin-bottom:18px;"></h3>
+hhh\ContractTemplate1.html:282:                        <label for="cardNumber">رقم البطاقة:</label>
+hhh\ContractTemplate1.html:283:                        <input type="text" id="cardNumber" name="cardNumber" 
+style="width:100%; padding:8px; border:1px solid #ddd; border-radius:4px;" placeholder="أدخل رقم البطاقة" required>
+hhh\ContractTemplate1.html:287:                            <label for="expiryDate">تاريخ الانتهاء:</label>
+hhh\ContractTemplate1.html:288:                            <input type="text" id="expiryDate" name="expiryDate" 
+style="width:100%; padding:8px; border:1px solid #ddd; border-radius:4px;" placeholder="MM/YY" required>
+hhh\ContractTemplate1.html:291:                            <label for="cvv">الرمز:</label>
+hhh\ContractTemplate1.html:292:                            <input type="text" id="cvv" name="cvv" 
+style="width:100%; padding:8px; border:1px solid #ddd; border-radius:4px;" placeholder="CVV" required>
+hhh\ContractTemplate1.html:300:                        <label id="paymentLabel" for="paymentInput"></label>
+hhh\ContractTemplate1.html:373:                document.getElementById('paymentInput').placeholder = 'أدخل رقم 
+المرجع أو المعرف';
+==============================
+create.html
+==============================
+hhh\create.html:80:    <h2 class="text-center mb-4">إنشاء السيرة الذاتية</h2>
+hhh\create.html:97:                    <input asp-for="tanjezOrder.CreateOrderName" type="text" 
+class="form-control" placeholder="منشا الطلب">
+hhh\create.html:181:                    <input type="text" class="form-control" id="documentArea" 
+asp-for="tanjezOrder.Zone" placeholder="المديرية" />
+hhh\create.html:186:                    <input type="text" class="form-control" id="documentArea" 
+asp-for="tanjezOrder.Directorate" placeholder="العزلة" />
+hhh\create.html:191:                    <input type="text" class="form-control" id="documentArea" 
+name="tanjezOrder.Village" placeholder="القرية او الحي" />
+hhh\create.html:202:                    <input name="tanjezOrder.CoordinatesY" type="number" class="form-control" 
+placeholder="احداثيات Y">
+hhh\create.html:206:                    <input name="tanjezOrder.CoordinatesX" type="number" class="form-control" 
+placeholder="احداثيات X">
+hhh\create.html:210:                    <label class="input-label"> اسم الموضع <span 
+class="required-star">*</span></label>
+hhh\create.html:211:                    <input type="text" class="form-control" id="requestTitle" 
+name="tanjezOrder.PlaceName" placeholder="أدخل عنوان الطلب" required />
+hhh\create.html:214:                    <label class="input-label">نوع الطلب  </label>
+hhh\create.html:235:                <label class="input-label">نوع الوثيقة</label>
+hhh\create.html:258:                    <label class="input-label fw-bold">المساحة كما في الوثيقة</label>
+hhh\create.html:263:                        <input type="number" class="form-control" id="documentArea" 
+name="tanjezOrder.Space" placeholder="0.00" step="0.01" />
+hhh\create.html:278:                        <input type="number" class="form-control" id="unitCount" 
+name="tanjezOrder.AcountPiese" placeholder="ادخل العدد" />
+hhh\create.html:304:                    <label class="form-check-label" for="AreaDifferentCheckbox">المساحة مختلفة 
+عن الواقع</label>
+hhh\create.html:517:                <td><input type="number" class="form-control" placeholder="أدخل عدد الطوابق" 
+/></td>
+hhh\create.html:518:                <td><input type="text" class="form-control" placeholder="أدخل الوصف" /></td>
+hhh\create.html:519:                <td><input type="text" class="form-control" placeholder="أدخل المكان" /></td>
+hhh\create.html:550:                        <input type="text" class="form-control" disabled placeholder="أدخل الحد 
+من الشمال" />
+hhh\create.html:559:                        <input type="text" class="form-control" disabled placeholder="أدخل الحد 
+من الجنوب" />
+hhh\create.html:568:                        <input type="text" class="form-control" disabled placeholder="أدخل الحد 
+من الغرب" />
+hhh\create.html:577:                        <input type="text" class="form-control" disabled placeholder="أدخل الحد 
+من الجنوب" />
+hhh\create.html:639:            <td><input type="number" class="form-control" placeholder="أدخل عدد الطوابق" /></td>
+hhh\create.html:640:            <td><input type="text" class="form-control" placeholder="أدخل الوصف" /></td>
+hhh\create.html:641:            <td><input type="text" class="form-control" placeholder="أدخل المكان" /></td>
+hhh\create.html:677:                    <input type="text" class="form-control" id="txtUp" name="fromup" disabled 
+placeholder="أدخل الحد من الأعلى" />
+hhh\create.html:686:                    <input type="text" class="form-control" id="txtDown" name="fromdown" 
+disabled placeholder="أدخل الحد من الأسفل" />
+hhh\create.html:783:                <input type="text" class="form-control" id="maximumDuration" 
+name="tanjezOrder.MaximumDuration" placeholder="اختر التاريخ" />
+hhh\create.html:841:        <label for="txtNotes" class="form-label">الملاحظات</label>
+hhh\create.html:842:        <textarea class="form-control" id="txtNotes" name="txtNotes" rows="4" placeholder="أدخل 
+ملاحظاتك"></textarea>
+hhh\create.html:849:        <label class="form-label">المرفقات</label>
+hhh\create.html:913:            <input type="text" placeholder=" ">
+hhh\create.html:914:            <label>رقم القضية</label>
+hhh\create.html:919:            <input type="text" placeholder=" ">
+hhh\create.html:920:            <label>رقم الشكوى</label>
+hhh\create.html:925:            <input type="date" placeholder=" ">
+hhh\create.html:926:            <label>تاريخ التقديم</label>
+hhh\create.html:935:            <label>الجهة الشاكية</label>
+hhh\create.html:946:            <input type="text" id="nameCount1" placeholder=" " readonly>
+hhh\create.html:947:            <label>العدد</label>
+hhh\create.html:953:            <input type="text" id="txtName1" placeholder=" ">
+hhh\create.html:954:            <label>الأسماء</label>
+hhh\create.html:963:            <textarea id="nameList1" placeholder=" " readonly></textarea>
+hhh\create.html:964:            <label>الأسماء المضافة</label>
+hhh\create.html:975:            <input type="text" id="nameCount2" placeholder=" " readonly>
+hhh\create.html:976:            <label>العدد</label>
+hhh\create.html:982:            <input type="text" id="txtName2" placeholder=" ">
+hhh\create.html:983:            <label>الأسماء</label>
+hhh\create.html:992:            <textarea id="nameList2" placeholder=" " readonly></textarea>
+hhh\create.html:993:            <label>الأسماء المضافة</label>
+hhh\create.html:999:        <label for="txtNotes" class="form-label">موضوع الشوى</label>
+hhh\create.html:1000:        <textarea class="form-control" id="txtNotes" name="txtNotes" rows="4" placeholder=" 
+موضوع الشكوى"></textarea>
+hhh\create.html:1005:        <label for="txtNotes" class="form-label"> ملخص الشكوى</label>
+hhh\create.html:1006:        <textarea class="form-control" id="txtNotes" name="txtNotes" rows="4" placeholder=" 
+ملخص الشكوى"></textarea>
+hhh\create.html:1016:            <input type="text" id="" placeholder=" " readonly>
+hhh\create.html:1017:            <label>موضع الخلاف </label>
+hhh\create.html:1036:                <input type="text" id="" placeholder=" " readonly>
+hhh\create.html:1037:                <label> الادعاءات (من وجهة نضر الطرف الاول) </label>
+hhh\create.html:1045:                <input type="text" id="" placeholder=" " readonly>
+hhh\create.html:1046:                <label>  رد المدعي عليه </label>
+hhh\create.html:1248:.custom-input-container input:not(:placeholder-shown) + label,
+hhh\create.html:1250:.custom-input-container textarea:not(:placeholder-shown) + label,
+hhh\create.html:1318:                <td><input type="text" class="form-control" placeholder="  المالكون السابقون" 
+/></td>
+hhh\create.html:1319:                <td><input type="text" class="form-control" placeholder=" حصولهم على" /></td>
+hhh\create.html:1320:                <td><input type="text" class="form-control" placeholder=" الوثائق التي يستند 
+عليها" /></td>
+hhh\create.html:1341:            <input type="text" placeholder=" ">
+hhh\create.html:1342:            <label>اسم المحكمة</label>
+hhh\create.html:1347:            <input type="text" placeholder=" ">
+hhh\create.html:1348:            <label>رقم القضية</label>
+hhh\create.html:1353:            <input type="date" placeholder=" ">
+hhh\create.html:1354:            <label>تاريخ التقديم</label>
+hhh\create.html:1371:            <input type="text" placeholder=" ">
+hhh\create.html:1372:            <label>الاسم الكامل</label>
+hhh\create.html:1379:            <label>الجنسية</label>
+hhh\create.html:1385:            <input type="text" placeholder=" ">
+hhh\create.html:1386:            <label>رقم الهوية</label>
+hhh\create.html:1393:            <input type="date" placeholder=" ">
+hhh\create.html:1394:            <label>تاريخ الوفاة</label>
+hhh\create.html:1400:            <input type="text" placeholder=" ">
+hhh\create.html:1401:            <label>مكان الوفاة</label>
+hhh\create.html:1408:            <label>الديانة</label>
+hhh\create.html:1415:            <input type="text" placeholder=" ">
+hhh\create.html:1416:            <label>الحالة الاجتماعية</label>
+hhh\create.html:1431:            <input type="text" placeholder=" ">
+hhh\create.html:1432:            <label>الاسم الكامل</label>
+hhh\create.html:1438:            <input type="text" placeholder=" ">
+hhh\create.html:1439:            <label>صلة القرابة</label>
+hhh\create.html:1445:            <input type="text" placeholder=" ">
+hhh\create.html:1446:            <label>الجنس</label>
+hhh\create.html:1453:            <input type="date" placeholder=" ">
+hhh\create.html:1454:            <label>تاريخ الميلاد</label>
+hhh\create.html:1460:            <input type="text" placeholder=" ">
+hhh\create.html:1461:            <label>رقم الهوية</label>
+hhh\create.html:1467:            <input type="text" placeholder=" ">
+hhh\create.html:1468:            <label>الحالة الاجتماعية</label>
+hhh\create.html:1475:            <input type="text" placeholder=" ">
+hhh\create.html:1476:            <label>عدد الأسهم الشرعية</label>
+hhh\create.html:1496:            <input type="text" placeholder=" ">
+hhh\create.html:1497:            <label>الاسم</label>
+hhh\create.html:1503:            <input type="text" placeholder=" ">
+hhh\create.html:1504:            <label>الصفة (أحد الورثة / وكيل شرعي)</label>
+hhh\create.html:1510:            <input type="text" placeholder=" ">
+hhh\create.html:1511:            <label>رقم الهوية</label>
+hhh\create.html:1520:            <label class="form-check-label" for="acknowledgement">
+hhh\create.html:1537:            <input type="text" placeholder=" ">
+hhh\create.html:1538:            <label>الاسم الكامل</label>
+hhh\create.html:1544:            <input type="text" placeholder=" ">
+hhh\create.html:1545:            <label>رقم الهوية</label>
+hhh\create.html:1551:            <input type="text" placeholder=" ">
+hhh\create.html:1552:            <label>التوقيع</label>
+==============================
+createdevided.html
+==============================
+hhh\createdevided.html:105:                    <input asp-for="tanjezOrder.CreateOrderName" type="text" 
+class="form-control" placeholder="منشا الطلب">
+hhh\createdevided.html:189:                    <input type="text" class="form-control" id="documentArea" 
+asp-for="tanjezOrder.Zone" placeholder="المديرية" />
+hhh\createdevided.html:194:                    <input type="text" class="form-control" id="documentArea" 
+asp-for="tanjezOrder.Directorate" placeholder="العزلة" />
+hhh\createdevided.html:199:                    <input type="text" class="form-control" id="documentArea" 
+name="tanjezOrder.Village" placeholder="القرية او الحي" />
+hhh\createdevided.html:210:                    <input name="tanjezOrder.CoordinatesY" type="number" 
+class="form-control" placeholder="احداثيات Y">
+hhh\createdevided.html:214:                    <input name="tanjezOrder.CoordinatesX" type="number" 
+class="form-control" placeholder="احداثيات X">
+hhh\createdevided.html:218:                    <label class="input-label"> اسم الموضع <span 
+class="required-star">*</span></label>
+hhh\createdevided.html:219:                    <input type="text" class="form-control" id="requestTitle" 
+name="tanjezOrder.PlaceName" placeholder="أدخل عنوان الطلب" required />
+hhh\createdevided.html:222:                    <label class="input-label">نوع الطلب  </label>
+hhh\createdevided.html:243:                <label class="input-label">نوع الوثيقة</label>
+hhh\createdevided.html:266:                    <label class="input-label fw-bold">المساحة كما في الوثيقة</label>
+hhh\createdevided.html:271:                        <input type="number" class="form-control" id="documentArea" 
+name="tanjezOrder.Space" placeholder="0.00" step="0.01" />
+hhh\createdevided.html:286:                        <input type="number" class="form-control" id="unitCount" 
+name="tanjezOrder.AcountPiese" placeholder="ادخل العدد" />
+hhh\createdevided.html:312:                    <label class="form-check-label" for="AreaDifferentCheckbox">المساحة 
+مختلفة عن الواقع</label>
+hhh\createdevided.html:525:                <td><input type="number" class="form-control" placeholder="أدخل عدد 
+الطوابق" /></td>
+hhh\createdevided.html:526:                <td><input type="text" class="form-control" placeholder="أدخل الوصف" 
+/></td>
+hhh\createdevided.html:527:                <td><input type="text" class="form-control" placeholder="أدخل المكان" 
+/></td>
+hhh\createdevided.html:558:                        <input type="text" class="form-control" disabled 
+placeholder="أدخل الحد من الشمال" />
+hhh\createdevided.html:567:                        <input type="text" class="form-control" disabled 
+placeholder="أدخل الحد من الجنوب" />
+hhh\createdevided.html:576:                        <input type="text" class="form-control" disabled 
+placeholder="أدخل الحد من الغرب" />
+hhh\createdevided.html:585:                        <input type="text" class="form-control" disabled 
+placeholder="أدخل الحد من الجنوب" />
+hhh\createdevided.html:647:            <td><input type="number" class="form-control" placeholder="أدخل عدد الطوابق" 
+/></td>
+hhh\createdevided.html:648:            <td><input type="text" class="form-control" placeholder="أدخل الوصف" /></td>
+hhh\createdevided.html:649:            <td><input type="text" class="form-control" placeholder="أدخل المكان" /></td>
+hhh\createdevided.html:685:                    <input type="text" class="form-control" id="txtUp" name="fromup" 
+disabled placeholder="أدخل الحد من الأعلى" />
+hhh\createdevided.html:694:                    <input type="text" class="form-control" id="txtDown" name="fromdown" 
+disabled placeholder="أدخل الحد من الأسفل" />
+hhh\createdevided.html:791:                <input type="text" class="form-control" id="maximumDuration" 
+name="tanjezOrder.MaximumDuration" placeholder="اختر التاريخ" />
+hhh\createdevided.html:849:        <label for="txtNotes" class="form-label">الملاحظات</label>
+hhh\createdevided.html:850:        <textarea class="form-control" id="txtNotes" name="txtNotes" rows="4" 
+placeholder="أدخل ملاحظاتك"></textarea>
+hhh\createdevided.html:857:        <label class="form-label">المرفقات</label>
+hhh\createdevided.html:950:.custom-input-container input:not(:placeholder-shown) + label,
+hhh\createdevided.html:952:.custom-input-container textarea:not(:placeholder-shown) + label,
+hhh\createdevided.html:1020:            <input type="text" placeholder=" ">
+hhh\createdevided.html:1021:            <label>اسم المحكمة</label>
+hhh\createdevided.html:1026:            <input type="text" placeholder=" ">
+hhh\createdevided.html:1027:            <label>رقم القضية</label>
+hhh\createdevided.html:1032:            <input type="date" placeholder=" ">
+hhh\createdevided.html:1033:            <label>تاريخ التقديم</label>
+hhh\createdevided.html:1050:            <input type="text" placeholder=" ">
+hhh\createdevided.html:1051:            <label>الاسم الكامل</label>
+hhh\createdevided.html:1058:            <label>الجنسية</label>
+hhh\createdevided.html:1064:            <input type="text" placeholder=" ">
+hhh\createdevided.html:1065:            <label>رقم الهوية</label>
+hhh\createdevided.html:1072:            <input type="date" placeholder=" ">
+hhh\createdevided.html:1073:            <label>تاريخ الوفاة</label>
+hhh\createdevided.html:1079:            <input type="text" placeholder=" ">
+hhh\createdevided.html:1080:            <label>مكان الوفاة</label>
+hhh\createdevided.html:1087:            <label>الديانة</label>
+hhh\createdevided.html:1094:            <input type="text" placeholder=" ">
+hhh\createdevided.html:1095:            <label>الحالة الاجتماعية</label>
+hhh\createdevided.html:1110:            <input type="text" placeholder=" ">
+hhh\createdevided.html:1111:            <label>الاسم الكامل</label>
+hhh\createdevided.html:1117:            <input type="text" placeholder=" ">
+hhh\createdevided.html:1118:            <label>صلة القرابة</label>
+hhh\createdevided.html:1124:            <input type="text" placeholder=" ">
+hhh\createdevided.html:1125:            <label>الجنس</label>
+hhh\createdevided.html:1132:            <input type="date" placeholder=" ">
+hhh\createdevided.html:1133:            <label>تاريخ الميلاد</label>
+hhh\createdevided.html:1139:            <input type="text" placeholder=" ">
+hhh\createdevided.html:1140:            <label>رقم الهوية</label>
+hhh\createdevided.html:1146:            <input type="text" placeholder=" ">
+hhh\createdevided.html:1147:            <label>الحالة الاجتماعية</label>
+hhh\createdevided.html:1154:            <input type="text" placeholder=" ">
+hhh\createdevided.html:1155:            <label>عدد الأسهم الشرعية</label>
+hhh\createdevided.html:1175:            <input type="text" placeholder=" ">
+hhh\createdevided.html:1176:            <label>الاسم</label>
+hhh\createdevided.html:1182:            <input type="text" placeholder=" ">
+hhh\createdevided.html:1183:            <label>الصفة (أحد الورثة / وكيل شرعي)</label>
+hhh\createdevided.html:1189:            <input type="text" placeholder=" ">
+hhh\createdevided.html:1190:            <label>رقم الهوية</label>
+hhh\createdevided.html:1199:            <label class="form-check-label" for="acknowledgement">
+hhh\createdevided.html:1216:            <input type="text" placeholder=" ">
+hhh\createdevided.html:1217:            <label>الاسم الكامل</label>
+hhh\createdevided.html:1223:            <input type="text" placeholder=" ">
+hhh\createdevided.html:1224:            <label>رقم الهوية</label>
+hhh\createdevided.html:1230:            <input type="text" placeholder=" ">
+hhh\createdevided.html:1231:            <label>التوقيع</label>
+==============================
+createform.html
+==============================
+hhh\createform.html:54:      .custom-input-container input:not(:placeholder-shown) + label,
+hhh\createform.html:112:    <h2 class="text-center mb-4">إنشاء السيرة الذاتية</h2>
+hhh\createform.html:138:                    <input asp-for="tanjezOrder.CreateOrderName" type="text" placeholder=" 
+">
+hhh\createform.html:139:                    <label>منشأ الطلب</label>
+hhh\createform.html:153:                    <label>صفة منشأ الطلب</label>
+hhh\createform.html:167:                    <label>طبيعة منطقة الخلاف</label>
+hhh\createform.html:177:                    <label>الدولة</label>
+hhh\createform.html:207:                    <label>المحافظة</label>
+hhh\createform.html:214:                    <input type="text" asp-for="tanjezOrder.Zone" placeholder=" ">
+hhh\createform.html:215:                    <label>المديرية</label>
+hhh\createform.html:222:                    <input type="text" asp-for="tanjezOrder.Directorate" placeholder=" ">
+hhh\createform.html:223:                    <label>العزلة</label>
+hhh\createform.html:230:                    <input type="text" name="tanjezOrder.Village" placeholder=" ">
+hhh\createform.html:231:                    <label>الحي / القرية</label>
+hhh\createform.html:238:                    <input name="tanjezOrder.CoordinatesY" type="number" placeholder=" ">
+hhh\createform.html:239:                    <label>إحداثيات Y</label>
+hhh\createform.html:246:                    <input name="tanjezOrder.CoordinatesX" type="number" placeholder=" ">
+hhh\createform.html:247:                    <label>إحداثيات X</label>
+hhh\createform.html:254:                    <input type="text" id="requestTitle" name="tanjezOrder.PlaceName" 
+placeholder=" " required>
+hhh\createform.html:255:                    <label>اسم الموضع</label>
+hhh\createform.html:267:                    <label>نوع الطلب</label>
+hhh\createform.html:285:                <label class="input-label">نوع الوثيقة</label>
+hhh\createform.html:308:                    <label class="input-label fw-bold">المساحة كما في الوثيقة</label>
+hhh\createform.html:313:                        <input type="number" class="form-control" id="documentArea" 
+name="tanjezOrder.Space" placeholder="0.00" step="0.01" />
+hhh\createform.html:328:                        <input type="number" class="form-control" id="unitCount" 
+name="tanjezOrder.AcountPiese" placeholder="ادخل العدد" />
+hhh\createform.html:354:                    <label class="form-check-label" for="AreaDifferentCheckbox">المساحة 
+مختلفة عن الواقع</label>
+hhh\createform.html:567:                <td><input type="number" class="form-control" placeholder="أدخل عدد 
+الطوابق" /></td>
+hhh\createform.html:568:                <td><input type="text" class="form-control" placeholder="أدخل الوصف" /></td>
+hhh\createform.html:569:                <td><input type="text" class="form-control" placeholder="أدخل المكان" 
+/></td>
+hhh\createform.html:600:                        <input type="text" class="form-control" disabled placeholder="أدخل 
+الحد من الشمال" />
+hhh\createform.html:609:                        <input type="text" class="form-control" disabled placeholder="أدخل 
+الحد من الجنوب" />
+hhh\createform.html:618:                        <input type="text" class="form-control" disabled placeholder="أدخل 
+الحد من الغرب" />
+hhh\createform.html:627:                        <input type="text" class="form-control" disabled placeholder="أدخل 
+الحد من الجنوب" />
+hhh\createform.html:689:            <td><input type="number" class="form-control" placeholder="أدخل عدد الطوابق" 
+/></td>
+hhh\createform.html:690:            <td><input type="text" class="form-control" placeholder="أدخل الوصف" /></td>
+hhh\createform.html:691:            <td><input type="text" class="form-control" placeholder="أدخل المكان" /></td>
+hhh\createform.html:727:                    <input type="text" class="form-control" id="txtUp" name="fromup" 
+disabled placeholder="أدخل الحد من الأعلى" />
+hhh\createform.html:736:                    <input type="text" class="form-control" id="txtDown" name="fromdown" 
+disabled placeholder="أدخل الحد من الأسفل" />
+hhh\createform.html:833:                <input type="text" class="form-control" id="maximumDuration" 
+name="tanjezOrder.MaximumDuration" placeholder="اختر التاريخ" />
+hhh\createform.html:891:        <label for="txtNotes" class="form-label">الملاحظات</label>
+hhh\createform.html:892:        <textarea class="form-control" id="txtNotes" name="txtNotes" rows="4" 
+placeholder="أدخل ملاحظاتك"></textarea>
+hhh\createform.html:899:        <label class="form-label">المرفقات</label>
+hhh\createform.html:963:            <input type="text" placeholder=" ">
+hhh\createform.html:964:            <label>رقم القضية</label>
+hhh\createform.html:969:            <input type="text" placeholder=" ">
+hhh\createform.html:970:            <label>رقم الشكوى</label>
+hhh\createform.html:975:            <input type="date" placeholder=" ">
+hhh\createform.html:976:            <label>تاريخ التقديم</label>
+hhh\createform.html:985:            <label>الجهة الشاكية</label>
+hhh\createform.html:996:            <input type="text" id="nameCount1" placeholder=" " readonly>
+hhh\createform.html:997:            <label>العدد</label>
+hhh\createform.html:1003:            <input type="text" id="txtName1" placeholder=" ">
+hhh\createform.html:1004:            <label>الأسماء</label>
+hhh\createform.html:1013:            <textarea id="nameList1" placeholder=" " readonly></textarea>
+hhh\createform.html:1014:            <label>الأسماء المضافة</label>
+hhh\createform.html:1025:            <input type="text" id="nameCount2" placeholder=" " readonly>
+hhh\createform.html:1026:            <label>العدد</label>
+hhh\createform.html:1032:            <input type="text" id="txtName2" placeholder=" ">
+hhh\createform.html:1033:            <label>الأسماء</label>
+hhh\createform.html:1042:            <textarea id="nameList2" placeholder=" " readonly></textarea>
+hhh\createform.html:1043:            <label>الأسماء المضافة</label>
+hhh\createform.html:1049:        <label for="txtNotes" class="form-label">موضوع الشوى</label>
+hhh\createform.html:1050:        <textarea class="form-control" id="txtNotes" name="txtNotes" rows="4" 
+placeholder=" موضوع الشكوى"></textarea>
+hhh\createform.html:1055:        <label for="txtNotes" class="form-label"> ملخص الشكوى</label>
+hhh\createform.html:1056:        <textarea class="form-control" id="txtNotes" name="txtNotes" rows="4" 
+placeholder=" ملخص الشكوى"></textarea>
+hhh\createform.html:1066:            <input type="text" id="" placeholder=" " readonly>
+hhh\createform.html:1067:            <label>موضع الخلاف </label>
+hhh\createform.html:1086:                <input type="text" id="" placeholder=" " readonly>
+hhh\createform.html:1087:                <label> الادعاءات (من وجهة نضر الطرف الاول) </label>
+hhh\createform.html:1095:                <input type="text" id="" placeholder=" " readonly>
+hhh\createform.html:1096:                <label>  رد المدعي عليه </label>
+hhh\createform.html:1306:                <td><input type="text" class="form-control" placeholder="  المالكون 
+السابقون" /></td>
+hhh\createform.html:1307:                <td><input type="text" class="form-control" placeholder=" حصولهم على" 
+/></td>
+hhh\createform.html:1308:                <td><input type="text" class="form-control" placeholder=" الوثائق التي 
+يستند عليها" /></td>
+==============================
+createorder.html
+==============================
+hhh\createorder.html:104:                    <input asp-for="tanjezOrder.CreateOrderName" type="text" 
+class="form-control" placeholder="منشا الطلب">
+hhh\createorder.html:188:                    <input type="text" class="form-control" id="documentArea" 
+asp-for="tanjezOrder.Zone" placeholder="المديرية" />
+hhh\createorder.html:193:                    <input type="text" class="form-control" id="documentArea" 
+asp-for="tanjezOrder.Directorate" placeholder="العزلة" />
+hhh\createorder.html:198:                    <input type="text" class="form-control" id="documentArea" 
+name="tanjezOrder.Village" placeholder="القرية او الحي" />
+hhh\createorder.html:209:                    <input name="tanjezOrder.CoordinatesY" type="number" 
+class="form-control" placeholder="احداثيات Y">
+hhh\createorder.html:213:                    <input name="tanjezOrder.CoordinatesX" type="number" 
+class="form-control" placeholder="احداثيات X">
+hhh\createorder.html:217:                    <label class="input-label"> اسم الموضع <span 
+class="required-star">*</span></label>
+hhh\createorder.html:218:                    <input type="text" class="form-control" id="requestTitle" 
+name="tanjezOrder.PlaceName" placeholder="أدخل عنوان الطلب" required />
+hhh\createorder.html:221:                    <label class="input-label">نوع الطلب  </label>
+hhh\createorder.html:242:                <label class="input-label">نوع الوثيقة</label>
+hhh\createorder.html:265:                    <label class="input-label fw-bold">المساحة كما في الوثيقة</label>
+hhh\createorder.html:270:                        <input type="number" class="form-control" id="documentArea" 
+name="tanjezOrder.Space" placeholder="0.00" step="0.01" />
+hhh\createorder.html:285:                        <input type="number" class="form-control" id="unitCount" 
+name="tanjezOrder.AcountPiese" placeholder="ادخل العدد" />
+hhh\createorder.html:311:                    <label class="form-check-label" for="AreaDifferentCheckbox">المساحة 
+مختلفة عن الواقع</label>
+hhh\createorder.html:524:                <td><input type="number" class="form-control" placeholder="أدخل عدد 
+الطوابق" /></td>
+hhh\createorder.html:525:                <td><input type="text" class="form-control" placeholder="أدخل الوصف" 
+/></td>
+hhh\createorder.html:526:                <td><input type="text" class="form-control" placeholder="أدخل المكان" 
+/></td>
+hhh\createorder.html:557:                        <input type="text" class="form-control" disabled placeholder="أدخل 
+الحد من الشمال" />
+hhh\createorder.html:566:                        <input type="text" class="form-control" disabled placeholder="أدخل 
+الحد من الجنوب" />
+hhh\createorder.html:575:                        <input type="text" class="form-control" disabled placeholder="أدخل 
+الحد من الغرب" />
+hhh\createorder.html:584:                        <input type="text" class="form-control" disabled placeholder="أدخل 
+الحد من الجنوب" />
+hhh\createorder.html:646:            <td><input type="number" class="form-control" placeholder="أدخل عدد الطوابق" 
+/></td>
+hhh\createorder.html:647:            <td><input type="text" class="form-control" placeholder="أدخل الوصف" /></td>
+hhh\createorder.html:648:            <td><input type="text" class="form-control" placeholder="أدخل المكان" /></td>
+hhh\createorder.html:684:                    <input type="text" class="form-control" id="txtUp" name="fromup" 
+disabled placeholder="أدخل الحد من الأعلى" />
+hhh\createorder.html:693:                    <input type="text" class="form-control" id="txtDown" name="fromdown" 
+disabled placeholder="أدخل الحد من الأسفل" />
+hhh\createorder.html:790:                <input type="text" class="form-control" id="maximumDuration" 
+name="tanjezOrder.MaximumDuration" placeholder="اختر التاريخ" />
+hhh\createorder.html:848:        <label for="txtNotes" class="form-label">الملاحظات</label>
+hhh\createorder.html:849:        <textarea class="form-control" id="txtNotes" name="txtNotes" rows="4" 
+placeholder="أدخل ملاحظاتك"></textarea>
+hhh\createorder.html:856:        <label class="form-label">المرفقات</label>
+==============================
+createspece.html
+==============================
+hhh\createspece.html:80:    <h2 class="text-center mb-4">إنشاء السيرة الذاتية</h2>
+hhh\createspece.html:153:            <td><input type="number" class="form-control" placeholder="أدخل عدد الطوابق" 
+/></td>
+hhh\createspece.html:154:            <td><input type="text" class="form-control" placeholder="أدخل الوصف" /></td>
+hhh\createspece.html:155:            <td><input type="text" class="form-control" placeholder="أدخل المكان" /></td>
+hhh\createspece.html:240:        <label for="txtNotes" class="form-label">الملاحظات</label>
+hhh\createspece.html:241:        <textarea class="form-control" id="txtNotes" name="txtNotes" rows="4" 
+placeholder="أدخل ملاحظاتك"></textarea>
+hhh\createspece.html:248:        <label class="form-label">المرفقات</label>
+hhh\createspece.html:307:.custom-input-container input:not(:placeholder-shown) + label,
+hhh\createspece.html:309:.custom-input-container textarea:not(:placeholder-shown) + label,
+==============================
+creatform.html
+==============================
+hhh\creatform.html:80:    <h2 class="text-center mb-4">إنشاء السيرة الذاتية</h2>
+hhh\creatform.html:105:                    <input asp-for="tanjezOrder.CreateOrderName" type="text" 
+class="form-control" placeholder="منشا الطلب">
+hhh\creatform.html:180:                    <input type="text" class="form-control" id="documentArea" 
+asp-for="tanjezOrder.Zone" placeholder="المديرية" />
+hhh\creatform.html:185:                    <input type="text" class="form-control" id="documentArea" 
+asp-for="tanjezOrder.Directorate" placeholder="العزلة" />
+hhh\creatform.html:190:                    <input type="text" class="form-control" id="documentArea" 
+name="tanjezOrder.Village" placeholder="القرية او الحي" />
+hhh\creatform.html:201:                    <input name="tanjezOrder.CoordinatesY" type="number" 
+class="form-control" placeholder="احداثيات Y">
+hhh\creatform.html:205:                    <input name="tanjezOrder.CoordinatesX" type="number" 
+class="form-control" placeholder="احداثيات X">
+hhh\creatform.html:209:                    <label class="input-label"> اسم الموضع <span 
+class="required-star">*</span></label>
+hhh\creatform.html:210:                    <input type="text" class="form-control" id="requestTitle" 
+name="tanjezOrder.PlaceName" placeholder="أدخل عنوان الطلب" required />
+hhh\creatform.html:213:                    <label class="input-label">نوع الطلب  </label>
+hhh\creatform.html:234:                <label class="input-label">نوع الوثيقة</label>
+hhh\creatform.html:257:                    <label class="input-label fw-bold">المساحة كما في الوثيقة</label>
+hhh\creatform.html:262:                        <input type="number" class="form-control" id="documentArea" 
+name="tanjezOrder.Space" placeholder="0.00" step="0.01" />
+hhh\creatform.html:277:                        <input type="number" class="form-control" id="unitCount" 
+name="tanjezOrder.AcountPiese" placeholder="ادخل العدد" />
+hhh\creatform.html:303:                    <label class="form-check-label" for="AreaDifferentCheckbox">المساحة 
+مختلفة عن الواقع</label>
+hhh\creatform.html:516:                <td><input type="number" class="form-control" placeholder="أدخل عدد الطوابق" 
+/></td>
+hhh\creatform.html:517:                <td><input type="text" class="form-control" placeholder="أدخل الوصف" /></td>
+hhh\creatform.html:518:                <td><input type="text" class="form-control" placeholder="أدخل المكان" /></td>
+hhh\creatform.html:549:                        <input type="text" class="form-control" disabled placeholder="أدخل 
+الحد من الشمال" />
+hhh\creatform.html:558:                        <input type="text" class="form-control" disabled placeholder="أدخل 
+الحد من الجنوب" />
+hhh\creatform.html:567:                        <input type="text" class="form-control" disabled placeholder="أدخل 
+الحد من الغرب" />
+hhh\creatform.html:576:                        <input type="text" class="form-control" disabled placeholder="أدخل 
+الحد من الجنوب" />
+hhh\creatform.html:638:            <td><input type="number" class="form-control" placeholder="أدخل عدد الطوابق" 
+/></td>
+hhh\creatform.html:639:            <td><input type="text" class="form-control" placeholder="أدخل الوصف" /></td>
+hhh\creatform.html:640:            <td><input type="text" class="form-control" placeholder="أدخل المكان" /></td>
+hhh\creatform.html:676:                    <input type="text" class="form-control" id="txtUp" name="fromup" 
+disabled placeholder="أدخل الحد من الأعلى" />
+hhh\creatform.html:685:                    <input type="text" class="form-control" id="txtDown" name="fromdown" 
+disabled placeholder="أدخل الحد من الأسفل" />
+hhh\creatform.html:782:                <input type="text" class="form-control" id="maximumDuration" 
+name="tanjezOrder.MaximumDuration" placeholder="اختر التاريخ" />
+hhh\creatform.html:840:        <label for="txtNotes" class="form-label">الملاحظات</label>
+hhh\creatform.html:841:        <textarea class="form-control" id="txtNotes" name="txtNotes" rows="4" 
+placeholder="أدخل ملاحظاتك"></textarea>
+hhh\creatform.html:848:        <label class="form-label">المرفقات</label>
+hhh\creatform.html:912:            <input type="text" placeholder=" ">
+hhh\creatform.html:913:            <label>رقم القضية</label>
+hhh\creatform.html:918:            <input type="text" placeholder=" ">
+hhh\creatform.html:919:            <label>رقم الشكوى</label>
+hhh\creatform.html:924:            <input type="date" placeholder=" ">
+hhh\creatform.html:925:            <label>تاريخ التقديم</label>
+hhh\creatform.html:934:            <label>الجهة الشاكية</label>
+hhh\creatform.html:945:            <input type="text" id="nameCount1" placeholder=" " readonly>
+hhh\creatform.html:946:            <label>العدد</label>
+hhh\creatform.html:952:            <input type="text" id="txtName1" placeholder=" ">
+hhh\creatform.html:953:            <label>الأسماء</label>
+hhh\creatform.html:962:            <textarea id="nameList1" placeholder=" " readonly></textarea>
+hhh\creatform.html:963:            <label>الأسماء المضافة</label>
+hhh\creatform.html:974:            <input type="text" id="nameCount2" placeholder=" " readonly>
+hhh\creatform.html:975:            <label>العدد</label>
+hhh\creatform.html:981:            <input type="text" id="txtName2" placeholder=" ">
+hhh\creatform.html:982:            <label>الأسماء</label>
+hhh\creatform.html:991:            <textarea id="nameList2" placeholder=" " readonly></textarea>
+hhh\creatform.html:992:            <label>الأسماء المضافة</label>
+hhh\creatform.html:998:        <label for="txtNotes" class="form-label">موضوع الشوى</label>
+hhh\creatform.html:999:        <textarea class="form-control" id="txtNotes" name="txtNotes" rows="4" placeholder=" 
+موضوع الشكوى"></textarea>
+hhh\creatform.html:1004:        <label for="txtNotes" class="form-label"> ملخص الشكوى</label>
+hhh\creatform.html:1005:        <textarea class="form-control" id="txtNotes" name="txtNotes" rows="4" placeholder=" 
+ملخص الشكوى"></textarea>
+hhh\creatform.html:1015:            <input type="text" id="" placeholder=" " readonly>
+hhh\creatform.html:1016:            <label>موضع الخلاف </label>
+hhh\creatform.html:1035:                <input type="text" id="" placeholder=" " readonly>
+hhh\creatform.html:1036:                <label> الادعاءات (من وجهة نضر الطرف الاول) </label>
+hhh\creatform.html:1044:                <input type="text" id="" placeholder=" " readonly>
+hhh\creatform.html:1045:                <label>  رد المدعي عليه </label>
+hhh\creatform.html:1247:.custom-input-container input:not(:placeholder-shown) + label,
+hhh\creatform.html:1249:.custom-input-container textarea:not(:placeholder-shown) + label,
+hhh\creatform.html:1317:                <td><input type="text" class="form-control" placeholder="  المالكون 
+السابقون" /></td>
+hhh\creatform.html:1318:                <td><input type="text" class="form-control" placeholder=" حصولهم على" 
+/></td>
+hhh\creatform.html:1319:                <td><input type="text" class="form-control" placeholder=" الوثائق التي 
+يستند عليها" /></td>
+==============================
+devid.html
+==============================
+hhh\devid.html:11:            <input type="text" placeholder=" ">
+hhh\devid.html:12:            <label>رقم القضية</label>
+hhh\devid.html:17:            <input type="text" placeholder=" ">
+hhh\devid.html:18:            <label>رقم الشكوى</label>
+hhh\devid.html:23:            <input type="date" placeholder=" ">
+hhh\devid.html:24:            <label>تاريخ التقديم</label>
+hhh\devid.html:33:            <label>الجهة الشاكية</label>
+hhh\devid.html:44:            <input type="text" id="nameCount1" placeholder=" " readonly>
+hhh\devid.html:45:            <label>العدد</label>
+hhh\devid.html:51:            <input type="text" id="txtName1" placeholder=" ">
+hhh\devid.html:52:            <label>الأسماء</label>
+hhh\devid.html:61:            <textarea id="nameList1" placeholder=" " readonly></textarea>
+hhh\devid.html:62:            <label>الأسماء المضافة</label>
+hhh\devid.html:73:            <input type="text" id="nameCount2" placeholder=" " readonly>
+hhh\devid.html:74:            <label>العدد</label>
+hhh\devid.html:80:            <input type="text" id="txtName2" placeholder=" ">
+hhh\devid.html:81:            <label>الأسماء</label>
+hhh\devid.html:90:            <textarea id="nameList2" placeholder=" " readonly></textarea>
+hhh\devid.html:91:            <label>الأسماء المضافة</label>
+hhh\devid.html:97:        <label for="txtNotes" class="form-label">موضوع الشوى</label>
+hhh\devid.html:98:        <textarea class="form-control" id="txtNotes" name="txtNotes" rows="4" placeholder=" موضوع 
+الشكوى"></textarea>
+hhh\devid.html:103:        <label for="txtNotes" class="form-label"> ملخص الشكوى</label>
+hhh\devid.html:104:        <textarea class="form-control" id="txtNotes" name="txtNotes" rows="4" placeholder=" ملخص 
+الشكوى"></textarea>
+hhh\devid.html:114:            <input type="text" id="" placeholder=" " readonly>
+hhh\devid.html:115:            <label>موضع الخلاف </label>
+hhh\devid.html:137:            <input type="text" id="" placeholder=" " readonly>
+hhh\devid.html:138:            <label> الادعاءات (من وجهة نضر الطرف الاول) </label>
+hhh\devid.html:148:            <input type="text" id="" placeholder=" " readonly>
+hhh\devid.html:149:            <label>  رد المدعي عليه </label>
+hhh\devid.html:347:.custom-input-container input:not(:placeholder-shown) + label,
+hhh\devid.html:349:.custom-input-container textarea:not(:placeholder-shown) + label,
+==============================
+index.html
+==============================
+hhh\index.html:80:    <h2 class="text-center mb-4">إنشاء السيرة الذاتية</h2>
+hhh\index.html:88:                <input type="text" class="form-control" placeholder="الجنس">
+hhh\index.html:89:                <input type="text" class="form-control" placeholder="الجنسية">
+hhh\index.html:90:                <input type="text" class="form-control" placeholder="الحالة الاجتماعية">
+hhh\index.html:91:                <input type="date" class="form-control" placeholder="تاريخ الميلاد">
+hhh\index.html:93:                <input type="email" class="form-control" placeholder="البريد الإلكتروني">
+hhh\index.html:94:                <input type="text" class="form-control" placeholder="رقم الجوال">
+hhh\index.html:95:                <input type="text" class="form-control" placeholder="رقم جوال أحد الأقارب">
+hhh\index.html:96:                <input type="text" class="form-control" placeholder="   صلة القرابة">
+hhh\index.html:112:                <input type="text" id="expCompany" class="form-control" placeholder="جهة العمل">
+hhh\index.html:116:                <input type="text" id="expTitle" class="form-control" placeholder="المسمى 
+الوظيفي">
+hhh\index.html:120:                <input type="text" id="expField" class="form-control" placeholder="المجال">
+hhh\index.html:128:                <label for="expFrom" class="form-label">من</label>
+hhh\index.html:133:                <label for="expTo" class="form-label">إلى</label>
+hhh\index.html:139:                <label for="stillWorking" class="form-check-label">ما زلت أعمل حالياً</label>
+hhh\index.html:160:            <label class="form-label">المهام الرئيسية</label>
+hhh\index.html:163:                    <input type="text" class="form-control" placeholder="أدخل مهمة">
+hhh\index.html:182:                    <input type="text" class="form-control" placeholder="أدخل مهمة">
+hhh\index.html:238:                <input type="text" id="eduCountry" class="form-control" placeholder="البلد">
+hhh\index.html:239:                <input type="text" id="eduUniv" class="form-control" placeholder="الجامعة / 
+المعهد">
+hhh\index.html:240:                <input type="text" id="eduMajor" class="form-control" placeholder="التخصص ">
+hhh\index.html:241:                <input type="text" id="eduDept" class="form-control" placeholder="القسم">
+hhh\index.html:242:                <input type="text" id="eduYear" class="form-control" placeholder="سنة التخرج">
+hhh\index.html:243:                <input type="text" id="eduGrade" class="form-control" placeholder="المعدل / 
+التقدير">
+hhh\index.html:290:                <input type="text" id="certName" class="form-control" placeholder=" (اسم 
+البرنامج/الدورة/الجهاز)">
+hhh\index.html:291:                <input type="text" id="certOrg" class="form-control" placeholder="الجهة المانحة">
+hhh\index.html:302:                <input type="text" id="projName" class="form-control" placeholder="اسم المشروع">
+hhh\index.html:303:                <input type="text" id="projCompany" class="form-control" placeholder="جهة العمل">
+hhh\index.html:304:                <input type="text" id="projField" class="form-control" placeholder="المجال">
+hhh\index.html:307:                <input type="text" id="projValue" class="form-control" placeholder="القيمة 
+التقريبية">
+hhh\index.html:308:                <input type="text" id="projRole" class="form-control" placeholder="الدور">
+hhh\index.html:319:                <input type="text" id="skillName" class="form-control" placeholder="أدخل 
+المهارة">
+hhh\index.html:320:                <input type="text" id="skillField" class="form-control" placeholder="المجال">
+hhh\index.html:323:                <input type="text" id="skillDesc" class="form-control" placeholder="الوصف">
+hhh\index.html:334:            <label class="form-check-label fw-bold" for="langArabic">العربية</label>
+hhh\index.html:337:                <label class="form-check-label text-muted" for="langMother">اللغة الأم</label>
+hhh\index.html:343:            <label class="form-check-label fw-bold" for="langEnglish">الإنجليزية</label>
+hhh\index.html:349:            <input type="text" id="newLang" class="form-control" placeholder="أدخل لغة أخرى">
+hhh\index.html:410:        <label class="form-check-label fw-bold" for="${id}">${langName}</label>
+hhh\index.html:558:    const gender = $('input[placeholder="الجنس"]').val();
+hhh\index.html:559:    const nationality = $('input[placeholder="الجنسية"]').val();
+hhh\index.html:560:    const status = $('input[placeholder="الحالة الاجتماعية"]').val();
+hhh\index.html:561:    const birth = $('input[placeholder="تاريخ الميلاد"]').val();
+hhh\index.html:562:    const email = $('input[placeholder="البريد الإلكتروني"]').val();
+hhh\index.html:563:    const phone = $('input[placeholder="رقم الجوال"]').val();
+hhh\index.html:564:    const relative = $('input[placeholder="رقم جوال أحد الأقارب"]').val();
+hhh\index.html:567:        <h1 class="text-center text-primary mb-4">السيرة الذاتية</h1>
+hhh\index.html:569:            <h2>المعلومات الشخصية</h2>
+hhh\index.html:580:        ${skills ? `<div class="section"><h2>المهارات 
+التقنية</h2>${skills.replaceAll('item-box','item-box-preview')}</div>` : ''}
+hhh\index.html:581:        ${experiences ? `<div class="section"><h2>الخبرات 
+العملية</h2>${experiences.replaceAll('item-box','item-box-preview')}</div>` : ''}
+hhh\index.html:582:        ${educations ? `<div class="section"><h2>المؤهلات 
+العلمية</h2>${educations.replaceAll('item-box','item-box-preview')}</div>` : ''}
+hhh\index.html:583:        ${certs ? `<div class="section"><h2>الشهادات 
+والدورات</h2>${certs.replaceAll('item-box','item-box-preview')}</div>` : ''}
+hhh\index.html:584:        ${projects ? `<div class="section"><h2>المشاريع السابقة 
+والإنجازات</h2>${projects.replaceAll('item-box','item-box-preview')}</div>` : ''}
+==============================
+WorkOffer.html
+==============================
+hhh\WorkOffer.html:50:    .custom-input-container input:not(:placeholder-shown) + label,
+hhh\WorkOffer.html:70:            <h2 class="page-title">عرض جديد</h2>
+hhh\WorkOffer.html:78:                <label asp-for="OfferName" class="form-label required">اسم العرض <span 
+class="text-danger">*</span></label>
+hhh\WorkOffer.html:86:            <label class="form-label">تاريخ نهاية العرض</label>
+hhh\WorkOffer.html:125:            <label asp-for="WorkWagesTemplateId" class="form-label"></label>
+hhh\WorkOffer.html:160:            <label asp-for="TransportationScheduleTemplateId" class="form-label">قالب 
+التنقلات والمبيت</label>
+hhh\WorkOffer.html:229:            <label asp-for="AdditionalCostTypeId" class="form-label">قالب التكاليف الاضافية 
+</label>
+hhh\WorkOffer.html:258:                <label class="form-label">نسبة الدفع مقدماً (%)</label>
+hhh\WorkOffer.html:264:                <label class="form-label">نسبة الدفع عند النزول (%)</label>
+hhh\WorkOffer.html:270:                <label class="form-label">نسبة الدفع بعد تسليم العمل (%)</label>
+hhh\WorkOffer.html:278:                <label class="form-label">غرامات التأخر عن تسليم العمل عن المدة المتفق عليها 
+(%)</label>
+hhh\WorkOffer.html:279:            <input asp-for="LatePenaltyPercentage" type="number" class="form-control" 
+placeholder="يخصم من المبلغ المتفق نسبة" />
+hhh\WorkOffer.html:283:                <label class="form-label">في حال الاعتذار عن العمل بعد استلام الدفعة المقدمة 
+(%)</label>
+hhh\WorkOffer.html:284:                <input asp-for="ResignationAfterAdvancePercentage" type="number" 
+class="form-control" placeholder="يخصم من المبلغ المتفق نسبة"
+hhh\WorkOffer.html:289:                <label class="form-label">في حال اعتذار العميل عن العمل بعد استلام الدفعة 
+المقدمة (%)</label>
+hhh\WorkOffer.html:290:            <input asp-for="CamelResignationPenaltyPercentage" type="number" 
+class="form-control" placeholder="يخصم من المبلغ المتفق نسبة" />
+hhh\WorkOffer.html:298:                <h2 class="accordion-header" id="headingNotes">
+hhh\WorkOffer.html:304:                <div id="collapseNotes" class="accordion-collapse collapse" 
+aria-labelledby="headingNotes"
+hhh\WorkOffer.html:307:                        <textarea class="form-control" rows="3" placeholder="ملاحظات"
+==============================
+WorkOffer1.html
+==============================
+hhh\WorkOffer1.html:50:    .custom-input-container input:not(:placeholder-shown) + label,
+hhh\WorkOffer1.html:70:            <h2 class="page-title">عرض جديد</h2>
+hhh\WorkOffer1.html:90:            <label asp-for="AdditionalCostTypeId" class="form-label">قالب التكاليف الاضافية 
+</label>
+==============================
+Work_Form.html
+==============================
+hhh\Work_Form.html:50:    .custom-input-container input:not(:placeholder-shown) + label,
+hhh\Work_Form.html:80:                    <label>نوع الطلب</label>
+hhh\Work_Form.html:87:                    <label>رقم التقديم</label>
+hhh\Work_Form.html:93:                    <input type="text" placeholder=" ">
+hhh\Work_Form.html:94:                    <label>الرقم المزيد لموضوع الكلي/الشامل</label>
+hhh\Work_Form.html:100:                    <input type="text" placeholder=" ">
+hhh\Work_Form.html:101:                    <label>رقم التكليف</label>
+hhh\Work_Form.html:111:                    <label>وكلاء أوقاف في القرى</label>
+hhh\Work_Form.html:117:                    <input type="text" class="form-control" id="eastBoundaryType" readonly 
+style="cursor:pointer; background:#fff;" data-bs-toggle="dropdown" placeholder=" ">
+hhh\Work_Form.html:118:                    <label>عدول التروية</label>
+hhh\Work_Form.html:183:                                <input  type="number" class="form-control form-control-sm" 
+placeholder="ملاحضة افتراضية" >
+hhh\Work_Form.html:186:                                <input  type="number" class="form-control form-control-sm" 
+placeholder="المساحة">
+hhh\Work_Form.html:376:                                           placeholder="" />
+hhh\Work_Form.html:412:                                 placeholder="" />
+hhh\Work_Form.html:442:    <div class="modal fade" id="clientModal" tabindex="-1" 
+aria-labelledby="clientModalLabel" aria-hidden="true">
+hhh\Work_Form.html:447:                    <button type="button" class="btn-close" data-bs-dismiss="modal" 
+aria-label="Close"></button>
+hhh\Work_Form.html:452:                            <label for="clientName" class="form-label">اسم العميل</label>
+hhh\Work_Form.html:456:                            <label for="clientEmail" class="form-label">البريد 
+الإلكتروني</label>
+hhh\Work_Form.html:460:                            <label for="clientPhone" class="form-label">رقم الهاتف</label>
+hhh\Work_Form.html:464:                            <label for="reportNotes" class="form-label">ملاحظات 
+إضافية</label>
+hhh\Work_Form.html:478:    <div class="modal fade" id="adoulModal" tabindex="-1" aria-labelledby="adoulModalLabel" 
+aria-hidden="true">
+hhh\Work_Form.html:483:                    <button type="button" class="btn-close" data-bs-dismiss="modal" 
+aria-label="إغلاق"></button>
+hhh\Work_Form.html:488:                            <label class="form-label">اسم العدل</label>
+hhh\Work_Form.html:492:                            <label class="form-label">رقم الجوال</label>
+hhh\Work_Form.html:496:                            <label class="form-label">ملاحظات</label>
+==============================
+Work_Form_base.html
+==============================
+hhh\Work_Form_base.html:50:    .custom-input-container input:not(:placeholder-shown) + label,
+hhh\Work_Form_base.html:80:                    <label>نوع الطلب</label>
+hhh\Work_Form_base.html:87:                    <label>رقم التقديم</label>
+hhh\Work_Form_base.html:93:                    <input type="text" placeholder=" ">
+hhh\Work_Form_base.html:94:                    <label>الرقم المزيد لموضوع الكلي/الشامل</label>
+hhh\Work_Form_base.html:100:                    <input type="text" placeholder=" ">
+hhh\Work_Form_base.html:101:                    <label>رقم التكليف</label>
+hhh\Work_Form_base.html:111:                    <label>وكلاء أوقاف في القرى</label>
+hhh\Work_Form_base.html:117:                    <input type="text" class="form-control" id="eastBoundaryType" 
+readonly style="cursor:pointer; background:#fff;" data-bs-toggle="dropdown" placeholder=" ">
+hhh\Work_Form_base.html:118:                    <label>عدول التروية</label>
+hhh\Work_Form_base.html:183:                                <input  type="number" class="form-control 
+form-control-sm" placeholder="ملاحضة افتراضية" >
+hhh\Work_Form_base.html:186:                                <input  type="number" class="form-control 
+form-control-sm" placeholder="المساحة">
+hhh\Work_Form_base.html:376:                                           placeholder="" />
+hhh\Work_Form_base.html:412:                                 placeholder="" />
+hhh\Work_Form_base.html:431:            <input type="text" placeholder=" ">
+hhh\Work_Form_base.html:432:            <label> رقم القضية </label>
+hhh\Work_Form_base.html:437:            <input type="text" placeholder=" ">
+hhh\Work_Form_base.html:438:            <label>  طبيعة القضية</label>
+hhh\Work_Form_base.html:443:            <input type="text" placeholder=" ">
+hhh\Work_Form_base.html:444:            <label>  نوع القضية</label>
+hhh\Work_Form_base.html:453:            <input type="text" placeholder=" ">
+hhh\Work_Form_base.html:454:            <label> المساحة المدونة في الوثيقة</label>
+hhh\Work_Form_base.html:459:              <input type="text" placeholder=" ">
+hhh\Work_Form_base.html:460:              <label> ذكر اختلاف ان وجد</label>
+hhh\Work_Form_base.html:467:            <input type="text" class="form-control" id="eastBoundaryType" readonly 
+style="cursor:pointer; background:#fff;" data-bs-toggle="dropdown" placeholder=" ">
+hhh\Work_Form_base.html:468:            <label> الرهق</label>
+hhh\Work_Form_base.html:478:              <input type="text" class="form-control" id="eastBoundaryType" readonly 
+style="cursor:pointer; background:#fff;" data-bs-toggle="dropdown" placeholder=" ">
+hhh\Work_Form_base.html:479:              <label> تحليل ادعاء الطرف</label>
+hhh\Work_Form_base.html:491:              <input type="text" placeholder=" ">
+hhh\Work_Form_base.html:492:              <label> تصنيف الدعوى</label>
+hhh\Work_Form_base.html:517:              <label>نوع الدعوى</label>
+hhh\Work_Form_base.html:533:              <label>طلب الدعوى</label>
+hhh\Work_Form_base.html:547:              <label>اساس الادعاء بالحكم </label>
+hhh\Work_Form_base.html:610:    <div class="modal fade" id="clientModal" tabindex="-1" 
+aria-labelledby="clientModalLabel" aria-hidden="true">
+hhh\Work_Form_base.html:615:                    <button type="button" class="btn-close" data-bs-dismiss="modal" 
+aria-label="Close"></button>
+hhh\Work_Form_base.html:620:                            <label for="clientName" class="form-label">اسم 
+العميل</label>
+hhh\Work_Form_base.html:624:                            <label for="clientEmail" class="form-label">البريد 
+الإلكتروني</label>
+hhh\Work_Form_base.html:628:                            <label for="clientPhone" class="form-label">رقم 
+الهاتف</label>
+hhh\Work_Form_base.html:632:                            <label for="reportNotes" class="form-label">ملاحظات 
+إضافية</label>
+hhh\Work_Form_base.html:646:    <div class="modal fade" id="adoulModal" tabindex="-1" 
+aria-labelledby="adoulModalLabel" aria-hidden="true">
+hhh\Work_Form_base.html:651:                    <button type="button" class="btn-close" data-bs-dismiss="modal" 
+aria-label="إغلاق"></button>
+hhh\Work_Form_base.html:656:                            <label class="form-label">اسم العدل</label>
+hhh\Work_Form_base.html:660:                            <label class="form-label">رقم الجوال</label>
+hhh\Work_Form_base.html:664:                            <label class="form-label">ملاحظات</label>
+
+
