@@ -1,0 +1,49 @@
+﻿
+hhh\AllTemplate.html:146:    <form id="tanjezForm" method="post" enctype="multipart/form-data">
+hhh\AllTemplate.html:1339:    </form>
+hhh\AllTemplate.html:1345:        <form>
+hhh\AllTemplate.html:1883:        </form>
+hhh\AllTemplate.html:1892:        <form id="tanjezForm" method="post" enctype="multipart/form-data">
+hhh\AllTemplate.html:2140:        </form>
+hhh\ContractTemplate.html:285:                <form id="rejectForm" class="reject-form" style="display:block; 
+margin-top:0;">
+hhh\ContractTemplate.html:303:                </form>
+hhh\ContractTemplate.html:331:            <form id="paymentForm" style="display:none; margin-top:10px; 
+text-align:right;" onsubmit="submitPayment(event)">
+hhh\ContractTemplate.html:364:            </form>
+hhh\ContractTemplate1.html:230:                <form id="rejectForm" class="reject-form" style="display:block; 
+margin-top:0;">
+hhh\ContractTemplate1.html:248:                </form>
+hhh\ContractTemplate1.html:276:            <form id="paymentForm" style="display:none; margin-top:10px; 
+text-align:right;" onsubmit="submitPayment(event)">
+hhh\ContractTemplate1.html:309:            </form>
+hhh\create.html:82:    <form id="tanjezForm" method="post" enctype="multipart/form-data">
+hhh\create.html:1562:    </form>
+hhh\createdevided.html:90:    <form id="tanjezForm" method="post" enctype="multipart/form-data">
+hhh\createdevided.html:1241:    </form>
+hhh\createform.html:122:    <form id="tanjezForm" method="post" enctype="multipart/form-data">
+hhh\createform.html:1334:    </form>
+hhh\createorder.html:89:    <form id="tanjezForm" method="post" enctype="multipart/form-data">
+hhh\createorder.html:918:    </form>
+hhh\createspece.html:90:    <form id="tanjezForm" method="post" enctype="multipart/form-data">
+hhh\createspece.html:377:    </form>
+hhh\creatform.html:90:    <form id="tanjezForm" method="post" enctype="multipart/form-data">
+hhh\creatform.html:1345:    </form>
+hhh\WorkOffer.html:68:    <form id="tanjezForm" method="post" enctype="multipart/form-data">
+hhh\WorkOffer.html:316:    </form>
+hhh\WorkOffer1.html:68:    <form id="tanjezForm" method="post" enctype="multipart/form-data">
+hhh\WorkOffer1.html:116:    </form>
+hhh\Work_Form.html:68:        <form>
+hhh\Work_Form.html:438:        </form>
+hhh\Work_Form.html:450:                    <form id="clientForm">
+hhh\Work_Form.html:467:                    </form>
+hhh\Work_Form.html:486:                    <form id="adoulForm">
+hhh\Work_Form.html:499:                    </form>
+hhh\Work_Form_base.html:68:        <form>
+hhh\Work_Form_base.html:606:        </form>
+hhh\Work_Form_base.html:618:                    <form id="clientForm">
+hhh\Work_Form_base.html:635:                    </form>
+hhh\Work_Form_base.html:654:                    <form id="adoulForm">
+hhh\Work_Form_base.html:667:                    </form>
+
+

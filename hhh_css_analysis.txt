@@ -1,0 +1,105 @@
+﻿
+hhh\AllTemplate.html:7:<link href="libs/bootstrap.rtl.min.css" rel="stylesheet">
+hhh\AllTemplate.html:8:<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" 
+rel="stylesheet">
+hhh\AllTemplate.html:10:<style>
+hhh\AllTemplate.html:132:</style>
+hhh\AllTemplate.html:748:<style>
+hhh\AllTemplate.html:769:</style>
+hhh\almjal.html:7:  <link href="libs/bootstrap.rtl.min.css" rel="stylesheet">
+hhh\almjal.html:8:  <link rel="stylesheet" 
+href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+hhh\almjal.html:11:  <style>
+hhh\almjal.html:35:  </style>
+hhh\almjal1.html:8:  <link href="libs/bootstrap.rtl.min.css" rel="stylesheet">
+hhh\ContractTemplate.html:8:    <link rel="stylesheet" href="../assets/css/style.css">
+hhh\ContractTemplate.html:9:    <style>
+hhh\ContractTemplate.html:199:    </style>
+hhh\ContractTemplate1.html:8:    <link rel="stylesheet" href="../assets/css/style.css">
+hhh\ContractTemplate1.html:9:    <style>
+hhh\ContractTemplate1.html:199:    </style>
+hhh\create.html:7:<link href="libs/bootstrap.rtl.min.css" rel="stylesheet">
+hhh\create.html:8:<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" 
+rel="stylesheet">
+hhh\create.html:10:<style>
+hhh\create.html:76:</style>
+hhh\create.html:693:<style>
+hhh\create.html:714:</style>
+hhh\create.html:1215:<style>
+hhh\create.html:1277:</style>
+hhh\createdevided.html:7:<link href="libs/bootstrap.rtl.min.css" rel="stylesheet">
+hhh\createdevided.html:8:<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" 
+rel="stylesheet">
+hhh\createdevided.html:10:<style>
+hhh\createdevided.html:76:</style>
+hhh\createdevided.html:701:<style>
+hhh\createdevided.html:722:</style>
+hhh\createdevided.html:917:<style>
+hhh\createdevided.html:979:</style>
+hhh\createform.html:7:<link href="libs/bootstrap.rtl.min.css" rel="stylesheet">
+hhh\createform.html:8:<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" 
+rel="stylesheet">
+hhh\createform.html:10:<style>
+hhh\createform.html:108:</style>
+hhh\createform.html:743:<style>
+hhh\createform.html:764:</style>
+hhh\createorder.html:7:<link href="libs/bootstrap.rtl.min.css" rel="stylesheet">
+hhh\createorder.html:8:<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" 
+rel="stylesheet">
+hhh\createorder.html:10:<style>
+hhh\createorder.html:76:</style>
+hhh\createorder.html:700:<style>
+hhh\createorder.html:721:</style>
+hhh\createspece.html:7:<link href="libs/bootstrap.rtl.min.css" rel="stylesheet">
+hhh\createspece.html:8:<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" 
+rel="stylesheet">
+hhh\createspece.html:10:<style>
+hhh\createspece.html:76:</style>
+hhh\createspece.html:171:<style>
+hhh\createspece.html:192:</style>
+hhh\createspece.html:274:<style>
+hhh\createspece.html:336:</style>
+hhh\creatform.html:7:<link href="libs/bootstrap.rtl.min.css" rel="stylesheet">
+hhh\creatform.html:8:<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" 
+rel="stylesheet">
+hhh\creatform.html:10:<style>
+hhh\creatform.html:76:</style>
+hhh\creatform.html:692:<style>
+hhh\creatform.html:713:</style>
+hhh\creatform.html:1214:<style>
+hhh\creatform.html:1276:</style>
+hhh\devid.html:314:<style>
+hhh\devid.html:376:</style>
+hhh\index.html:7:<link href="libs/bootstrap.rtl.min.css" rel="stylesheet">
+hhh\index.html:8:<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" 
+rel="stylesheet">
+hhh\index.html:10:<style>
+hhh\index.html:76:</style>
+hhh\index.html:173:        <link rel="stylesheet" 
+href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+hhh\WorkOffer.html:7:  <link href="libs/bootstrap.rtl.min.css" rel="stylesheet">
+hhh\WorkOffer.html:8:<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" 
+rel="stylesheet">
+hhh\WorkOffer.html:10:  <link href="libs/bootstrap.rtl.min.css" rel="stylesheet">
+hhh\WorkOffer.html:14:  <style>
+hhh\WorkOffer.html:62:    </style>
+hhh\WorkOffer1.html:7:  <link href="libs/bootstrap.rtl.min.css" rel="stylesheet">
+hhh\WorkOffer1.html:8:<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" 
+rel="stylesheet">
+hhh\WorkOffer1.html:10:  <link href="libs/bootstrap.rtl.min.css" rel="stylesheet">
+hhh\WorkOffer1.html:14:  <style>
+hhh\WorkOffer1.html:62:    </style>
+hhh\Work_Form.html:7:  <link href="libs/bootstrap.rtl.min.css" rel="stylesheet">
+hhh\Work_Form.html:8:<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" 
+rel="stylesheet">
+hhh\Work_Form.html:10:  <link href="libs/bootstrap.rtl.min.css" rel="stylesheet">
+hhh\Work_Form.html:14:  <style>
+hhh\Work_Form.html:62:    </style>
+hhh\Work_Form_base.html:7:  <link href="libs/bootstrap.rtl.min.css" rel="stylesheet">
+hhh\Work_Form_base.html:8:<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" 
+rel="stylesheet">
+hhh\Work_Form_base.html:10:  <link href="libs/bootstrap.rtl.min.css" rel="stylesheet">
+hhh\Work_Form_base.html:14:  <style>
+hhh\Work_Form_base.html:62:    </style>
+
+

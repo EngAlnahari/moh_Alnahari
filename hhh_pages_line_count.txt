@@ -1,0 +1,22 @@
+﻿
+Name                   Lines
+----                   -----
+AllTemplate.html        2148
+create.html             1569
+creatform.html          1352
+createform.html         1341
+createdevided.html      1248
+createorder.html         925
+Work_Form_base.html      710
+index.html               601
+Work_Form.html           542
+almjal.html              518
+ContractTemplate.html    485
+ContractTemplate1.html   430
+devid.html               416
+createspece.html         384
+WorkOffer.html           321
+almjal1.html             292
+WorkOffer1.html          121
+
+

@@ -1,0 +1,340 @@
+﻿
+InputObject                                                                                                         
+-----------                                                                                                         
+                                                                                                                    
+  const params = new URLSearchParams(window.location.search);                                                       
+  const path = decodeURIComponent(params.get("path") || "");                                                        
+  document.getElementById("breadcrumb").textContent = path;                                                         
+<script>                                                                                                            
+</script>                                                                                                           
+                                                                                                                    
+                                                                                                                    
+                                                                                                                    
+<style>                                                                                                             
+.custom-input-container {                                                                                           
+    position: relative;                                                                                             
+    margin-bottom: 1rem;                                                                                            
+}                                                                                                                   
+.custom-input-container input,                                                                                      
+.custom-input-container textarea,                                                                                   
+.custom-input-container select {                                                                                    
+    width: 100%;                                                                                                    
+    padding: 0.75rem 0.5rem 0.25rem 0.5rem;                                                                         
+    border: 1px solid #ced4da;                                                                                      
+    border-top: none; /* Ø¥Ø²Ø§Ù„Ø© Ø§Ù„Ø®Ø· Ø§Ù„Ø¹Ù„ÙˆÙŠ */                                                        
+    border-radius: 0.25rem;                                                                                         
+    box-sizing: border-box;                                                                                         
+    outline: none;                                                                                                  
+    font-size: 1rem;                                                                                                
+    background: #fff;                                                                                               
+}                                                                                                                   
+                                                                                                                    
+.custom-input-container label {                                                                                     
+    position: absolute;                                                                                             
+    top: 0.5rem;                                                                                                    
+    left: 0.5rem;                                                                                                   
+    background: #fff;                                                                                               
+    padding: 0 0.25rem;                                                                                             
+    font-size: 1rem;                                                                                                
+    color: #6c757d;                                                                                                 
+    pointer-events: none;                                                                                           
+    transition: all 0.2s ease-in-out;                                                                               
+}                                                                                                                   
+                                                                                                                    
+.custom-input-container input:focus + label,                                                                        
+.custom-input-container input:not(:placeholder-shown) + label,                                                      
+.custom-input-container textarea:focus + label,                                                                     
+.custom-input-container textarea:not(:placeholder-shown) + label,                                                   
+.custom-input-container select:focus + label,                                                                       
+.custom-input-container select:not([value=""]) + label {                                                            
+    top: -0.6rem;                                                                                                   
+    font-size: 0.85rem;                                                                                             
+    color: #495057;                                                                                                 
+}                                                                                                                   
+                                                                                                                    
+.custom-input-container textarea {                                                                                  
+    resize: vertical;                                                                                               
+    min-height: 60px;                                                                                               
+}                                                                                                                   
+                                                                                                                    
+/* ÙˆØ¶Ø¹ Ø²Ø± Ø§Ù„Ø¥Ø¶Ø§ÙØ© Ø¯Ø§Ø®Ù„ Ù†ÙØ³ Ø­Ù‚Ù„ Ø§Ù„Ø¥Ø¯Ø®Ø§Ù„ */                                              
+.input-with-button {                                                                                                
+    display: flex;                                                                                                  
+    align-items: center;                                                                                            
+}                                                                                                                   
+                                                                                                                    
+.input-with-button input {                                                                                          
+    flex: 1;                                                                                                        
+    margin-right: 0.5rem;                                                                                           
+}                                                                                                                   
+                                                                                                                    
+.input-with-button button {                                                                                         
+    flex-shrink: 0;                                                                                                 
+}                                                                                                                   
+</style>                                                                                                            
+                                                                                                                    
+<script>                                                                                                            
+document.addEventListener('DOMContentLoaded', function() {                                                          
+    function setupNameAdder(txtId, listId, countId, btnId) {                                                        
+        const addBtn = document.getElementById(btnId);                                                              
+        const txtName = document.getElementById(txtId);                                                             
+        const nameList = document.getElementById(listId);                                                           
+        const nameCount = document.getElementById(countId);                                                         
+                                                                                                                    
+        let names = [];                                                                                             
+                                                                                                                    
+        addBtn.addEventListener('click', function() {                                                               
+            const name = txtName.value.trim();                                                                      
+            if(name) {                                                                                              
+                names.push(name);                                                                                   
+                nameList.value = names.join('\n');                                                                  
+                nameCount.value = names.length;                                                                     
+                txtName.value = '';                                                                                 
+            }                                                                                                       
+        });                                                                                                         
+    }                                                                                                               
+                                                                                                                    
+    setupNameAdder('txtName1', 'nameList1', 'nameCount1', 'addNameBtn1');                                           
+    setupNameAdder('txtName2', 'nameList2', 'nameCount2', 'addNameBtn2');                                           
+});                                                                                                                 
+</script>                                                                                                           
+                                                                                                                    
+                                                                                                                    
+                                                                                                                    
+                                                                                                                    
+<!--  Ø¨ÙŠØ§Ù†Ø§Øª ÙˆØ§Ø¬Ù‡Ø© Ø§Ù„Ø·Ù„Ø¨                                                                            
+ØªÙ‚Ø³ÙŠÙ… Ø¨ÙŠÙ† ÙˆØ±Ø«Ø© -->                                                                                      
+                                                                                                                    
+                                                                                                                    
+<div class="form-title mb-2"> ØªÙ‚Ø³ÙŠÙ… Ø¨ÙŠÙ† ÙˆØ±Ø«Ø©   </div>                                                   
+<hr>                                                                                                                
+                                                                                                                    
+<div class="row mb-3">                                                                                              
+    <div class="col-md">                                                                                            
+        <div class="custom-input-container">                                                                        
+            <input type="text" placeholder=" ">                                                                     
+            <label>Ø§Ø³Ù… Ø§Ù„Ù…Ø­ÙƒÙ…Ø©</label>                                                                    
+    </div>                                                                                                          
+    <div class="col-md">                                                                                            
+        <div class="custom-input-container">                                                                        
+            <input type="text" placeholder=" ">                                                                     
+            <label>Ø±Ù‚Ù… Ø§Ù„Ù‚Ø¶ÙŠØ©</label>                                                                      
+        </div>                                                                                                      
+    </div>                                                                                                          
+    <div class="col-md">                                                                                            
+        <div class="custom-input-container">                                                                        
+            <input type="date" placeholder=" ">                                                                     
+            <label>ØªØ§Ø±ÙŠØ® Ø§Ù„ØªÙ‚Ø¯ÙŠÙ…</label>                                                                
+        </div>                                                                                                      
+    </div>                                                                                                          
+                                                                                                                    
+<!-- ØµÙ Ø¬Ø¯ÙŠØ¯ Ù„Ù„Ø­Ù‚ÙˆÙ„ Ø§Ù„Ù…Ø·Ù„ÙˆØ¨Ø© -->                                                                
+                                                                                                                    
+                                                                                                                    
+                                                                                                                    
+<div class="row mb-3">                                                                                              
+    <!-- Ø§Ù„ØµÙ Ø§Ù„Ø£ÙˆÙ„: 3 Ø­Ù‚ÙˆÙ„ -->                                                                        
+    <div class="col-12">                                                                                            
+        <h5 class="mb-3">  Ø¨ÙŠØ§Ù†Ø§Øª Ø§Ù„Ù…ØªÙˆÙÙ‰</h5>                                                         
+    </div>                                                                                                          
+    <div class="col-md-4">                                                                                          
+        <div class="custom-input-container">                                                                        
+            <input type="text" placeholder=" ">                                                                     
+            <label>Ø§Ù„Ø§Ø³Ù… Ø§Ù„ÙƒØ§Ù…Ù„</label>                                                                  
+        </div>                                                                                                      
+    </div>                                                                                                          
+                                                                                                                    
+    <div class="col-md-4">                                                                                          
+        <div class="custom-input-container">                                                                        
+            <input type="text" value="ÙŠÙ…Ù†ÙŠ" readonly>                                                           
+            <label>Ø§Ù„Ø¬Ù†Ø³ÙŠØ©</label>                                                                           
+        </div>                                                                                                      
+    </div>                                                                                                          
+                                                                                                                    
+    <div class="col-md-4">                                                                                          
+        <div class="custom-input-container">                                                                        
+            <input type="text" placeholder=" ">                                                                     
+            <label>Ø±Ù‚Ù… Ø§Ù„Ù‡ÙˆÙŠØ©</label>                                                                      
+        </div>                                                                                                      
+    </div>                                                                                                          
+                                                                                                                    
+    <!-- Ø§Ù„ØµÙ Ø§Ù„Ø«Ø§Ù†ÙŠ: 3 Ø­Ù‚ÙˆÙ„ -->                                                                      
+    <div class="col-md-4">                                                                                          
+        <div class="custom-input-container">                                                                        
+            <input type="date" placeholder=" ">                                                                     
+            <label>ØªØ§Ø±ÙŠØ® Ø§Ù„ÙˆÙØ§Ø©</label>                                                                  
+        </div>                                                                                                      
+    </div>                                                                                                          
+                                                                                                                    
+    <div class="col-md-4">                                                                                          
+        <div class="custom-input-container">                                                                        
+            <input type="text" placeholder=" ">                                                                     
+            <label>Ù…ÙƒØ§Ù† Ø§Ù„ÙˆÙØ§Ø©</label>                                                                    
+        </div>                                                                                                      
+    </div>                                                                                                          
+                                                                                                                    
+    <div class="col-md-4">                                                                                          
+        <div class="custom-input-container">                                                                        
+            <input type="text" value="Ø§Ù„Ø¥Ø³Ù„Ø§Ù…" readonly>                                                     
+            <label>Ø§Ù„Ø¯ÙŠØ§Ù†Ø©</label>                                                                           
+        </div>                                                                                                      
+    </div>                                                                                                          
+                                                                                                                    
+    <!-- Ø§Ù„ØµÙ Ø§Ù„Ø«Ø§Ù„Ø«: Ø­Ù‚Ù„ ÙˆØ§Ø­Ø¯ Ø¨Ø¹Ø±Ø¶ ÙƒØ§Ù…Ù„ -->                                               
+    <div class="col-md-12">                                                                                         
+        <div class="custom-input-container">                                                                        
+            <input type="text" placeholder=" ">                                                                     
+            <label>Ø§Ù„Ø­Ø§Ù„Ø© Ø§Ù„Ø§Ø¬ØªÙ…Ø§Ø¹ÙŠØ©</label>                                                        
+        </div>                                                                                                      
+    </div>                                                                                                          
+</div>                                                                                                              
+                                                                                                                    
+<!-- Ø¨ÙŠØ§Ù†Ø§Øª Ø§Ù„ÙˆØ±Ø«Ø© Ø§Ù„Ø´Ø±Ø¹ÙŠÙŠÙ† -->                                                                 
+<!-- Ø¨ÙŠØ§Ù†Ø§Øª Ø§Ù„ÙˆØ±Ø«Ø© Ø§Ù„Ø´Ø±Ø¹ÙŠÙŠÙ† -->                                                                 
+<div class="row mb-3">                                                                                              
+    <div class="col-12">                                                                                            
+        <h5 class="mb-3">Ø¨ÙŠØ§Ù†Ø§Øª Ø§Ù„ÙˆØ±Ø«Ø© Ø§Ù„Ø´Ø±Ø¹ÙŠÙŠÙ†</h5>                                            
+    </div>                                                                                                          
+                                                                                                                    
+    <!-- Ø§Ù„ØµÙ Ø§Ù„Ø£ÙˆÙ„: 3 Ø­Ù‚ÙˆÙ„ -->                                                                        
+    <div class="col-md-4">                                                                                          
+        <div class="custom-input-container">                                                                        
+            <input type="text" placeholder=" ">                                                                     
+            <label>Ø§Ù„Ø§Ø³Ù… Ø§Ù„ÙƒØ§Ù…Ù„</label>                                                                  
+        </div>                                                                                                      
+    </div>                                                                                                          
+                                                                                                                    
+    <div class="col-md-4">                                                                                          
+        <div class="custom-input-container">                                                                        
+            <input type="text" placeholder=" ">                                                                     
+            <label>ØµÙ„Ø© Ø§Ù„Ù‚Ø±Ø§Ø¨Ø©</label>                                                                    
+        </div>                                                                                                      
+    </div>                                                                                                          
+                                                                                                                    
+    <div class="col-md-4">                                                                                          
+        <div class="custom-input-container">                                                                        
+            <input type="text" placeholder=" ">                                                                     
+            <label>Ø§Ù„Ø¬Ù†Ø³</label>                                                                               
+        </div>                                                                                                      
+    </div>                                                                                                          
+                                                                                                                    
+    <!-- Ø§Ù„ØµÙ Ø§Ù„Ø«Ø§Ù†ÙŠ: 3 Ø­Ù‚ÙˆÙ„ -->                                                                      
+    <div class="col-md-4">                                                                                          
+        <div class="custom-input-container">                                                                        
+            <input type="date" placeholder=" ">                                                                     
+            <label>ØªØ§Ø±ÙŠØ® Ø§Ù„Ù…ÙŠÙ„Ø§Ø¯</label>                                                                
+        </div>                                                                                                      
+    </div>                                                                                                          
+                                                                                                                    
+    <div class="col-md-4">                                                                                          
+        <div class="custom-input-container">                                                                        
+            <input type="text" placeholder=" ">                                                                     
+            <label>Ø±Ù‚Ù… Ø§Ù„Ù‡ÙˆÙŠØ©</label>                                                                      
+        </div>                                                                                                      
+    </div>                                                                                                          
+                                                                                                                    
+    <div class="col-md-4">                                                                                          
+        <div class="custom-input-container">                                                                        
+            <input type="text" placeholder=" ">                                                                     
+            <label>Ø§Ù„Ø­Ø§Ù„Ø© Ø§Ù„Ø§Ø¬ØªÙ…Ø§Ø¹ÙŠØ©</label>                                                        
+        </div>                                                                                                      
+    </div>                                                                                                          
+                                                                                                                    
+    <!-- Ø§Ù„ØµÙ Ø§Ù„Ø«Ø§Ù„Ø«: Ø­Ù‚Ù„ ÙˆØ§Ø­Ø¯ Ø¨Ø¹Ø±Ø¶ ÙƒØ§Ù…Ù„ -->                                               
+    <div class="col-md-12">                                                                                         
+        <div class="custom-input-container">                                                                        
+            <input type="text" placeholder=" ">                                                                     
+            <label>Ø¹Ø¯Ø¯ Ø§Ù„Ø£Ø³Ù‡Ù… Ø§Ù„Ø´Ø±Ø¹ÙŠØ©</label>                                                       
+        </div>                                                                                                      
+    </div>                                                                                                          
+</div>                                                                                                              
+                                                                                                                    
+                                                                                                                    
+                                                                                                                    
+                                                                                                                    
+                                                                                                                    
+        <!-- Ø¥Ù‚Ø±Ø§Ø± Ù…Ù‚Ø¯Ù… Ø§Ù„Ø·Ù„Ø¨ -->                                                                     
+<!-- Ø«Ø§Ù„Ø«Ø§Ù‹: Ø¥Ù‚Ø±Ø§Ø± Ù…Ù‚Ø¯Ù… Ø§Ù„Ø·Ù„Ø¨ -->                                                               
+<div class="row mb-3 mt-4">                                                                                         
+    <div class="col-12">                                                                                            
+        <h5 class="mb-3">Ø¥Ù‚Ø±Ø§Ø± Ù…Ù‚Ø¯Ù… Ø§Ù„Ø·Ù„Ø¨</h5>                                                        
+        <p>Ø£Ù†Ø§ Ø§Ù„Ù…ÙˆÙ‚Ø¹ Ø£Ø¯Ù†Ø§Ù‡:</p>                                                                      
+    </div>                                                                                                          
+                                                                                                                    
+    <!-- Ø§Ù„ØµÙ Ø§Ù„Ø£ÙˆÙ„: 3 Ø­Ù‚ÙˆÙ„ -->                                                                        
+    <div class="col-md-4">                                                                                          
+        <div class="custom-input-container">                                                                        
+            <input type="text" placeholder=" ">                                                                     
+            <label>Ø§Ù„Ø§Ø³Ù…</label>                                                                               
+        </div>                                                                                                      
+    </div>                                                                                                          
+                                                                                                                    
+    <div class="col-md-4">                                                                                          
+        <div class="custom-input-container">                                                                        
+            <input type="text" placeholder=" ">                                                                     
+            <label>Ø§Ù„ØµÙØ© (Ø£Ø­Ø¯ Ø§Ù„ÙˆØ±Ø«Ø© / ÙˆÙƒÙŠÙ„ Ø´Ø±Ø¹ÙŠ)</label>                                     
+        </div>                                                                                                      
+    </div>                                                                                                          
+                                                                                                                    
+    <div class="col-md-4">                                                                                          
+        <div class="custom-input-container">                                                                        
+            <input type="text" placeholder=" ">                                                                     
+            <label>Ø±Ù‚Ù… Ø§Ù„Ù‡ÙˆÙŠØ©</label>                                                                      
+        </div>                                                                                                      
+    </div>                                                                                                          
+                                                                                                                    
+    <!-- Ø§Ù„Ø­Ù‚Ù„ Ø§Ù„Ø£Ø®ÙŠØ±: Ù†Øµ Ø·ÙˆÙŠÙ„ -->                                                                 
+    <!-- Ø§Ù„Ø­Ù‚Ù„ Ø§Ù„Ø£Ø®ÙŠØ±: Ù…Ø±Ø¨Ø¹ Ø§Ø®ØªÙŠØ§Ø± -->                                                         
+    <div class="col-12">                                                                                            
+        <div class="form-check mt-2">                                                                               
+            <input class="form-check-input" type="checkbox" id="acknowledgement">                                   
+            <label class="form-check-label" for="acknowledgement">                                                  
+                Ø£Ù‚Ø± Ø¨Ø£Ù† Ø§Ù„Ù…Ø¹Ù„ÙˆÙ…Ø§Øª Ø§Ù„ÙˆØ§Ø±Ø¯Ø© Ø£Ø¹Ù„Ø§Ù‡ ØµØ­ÙŠØ­Ø©ØŒ ÙˆØ£Ø·Ù„Ø¨ Ø¥ØµØ¯Ø§Ø± Ø­Ù...
+            </label>                                                                                                
+        </div>                                                                                                      
+    </div>                                                                                                          
+</div>                                                                                                              
+                                                                                                                    
+                                                                                                                    
+<!-- Ø±Ø§Ø¨Ø¹Ø§Ù‹: Ø´Ù‡Ø§Ø¯Ø© Ø§Ù„Ø´Ù‡ÙˆØ¯ -->                                                                      
+<div class="row mb-3 mt-4">                                                                                         
+    <div class="col-12">                                                                                            
+        <h5 class="mb-3">Ø´Ù‡Ø§Ø¯Ø© Ø§Ù„Ø´Ù‡ÙˆØ¯</h5>                                                               
+    </div>                                                                                                          
+                                                                                                                    
+    <!-- ØµÙ Ø§Ù„Ø´Ù‡ÙˆØ¯: 3 Ø­Ù‚ÙˆÙ„ -->                                                                          
+    <div class="col-md-4">                                                                                          
+        <div class="custom-input-container">                                                                        
+            <input type="text" placeholder=" ">                                                                     
+            <label>Ø§Ù„Ø§Ø³Ù… Ø§Ù„ÙƒØ§Ù…Ù„</label>                                                                  
+        </div>                                                                                                      
+    </div>                                                                                                          
+                                                                                                                    
+    <div class="col-md-4">                                                                                          
+        <div class="custom-input-container">                                                                        
+            <input type="text" placeholder=" ">                                                                     
+            <label>Ø±Ù‚Ù… Ø§Ù„Ù‡ÙˆÙŠØ©</label>                                                                      
+        </div>                                                                                                      
+    </div>                                                                                                          
+                                                                                                                    
+    <div class="col-md-4">                                                                                          
+        <div class="custom-input-container">                                                                        
+            <input type="text" placeholder=" ">                                                                     
+            <label>Ø§Ù„ØªÙˆÙ‚ÙŠØ¹</label>                                                                           
+        </div>                                                                                                      
+    </div>                                                                                                          
+</div>                                                                                                              
+        </div>                                                                                                      
+                                                                                                                    
+</div>                                                                                                              
+                                                                                                                    
+                                                                                                                    
+                                                                                                                    
+    <h6 id="breadcrumb" class="text-center mb-4">Ø¥Ù†Ø´Ø§Ø¡ Ø§Ù„Ø³ÙŠØ±Ø© Ø§Ù„Ø°Ø§ØªÙŠØ©</h6>                        
+      const params = new URLSearchParams(window.location.search);                                                   
+      const path = decodeURIComponent(params.get("path") || "");                                                    
+      document.getElementById("breadcrumb").textContent = path;                                                     
+    <script>                                                                                                        
+    </script>                                                                                                       
+
+

@@ -1,0 +1,766 @@
+﻿
+hhh\AllTemplate.html:5:<meta name="viewport" content="width=device-width, initial-scale=1.0">
+hhh\AllTemplate.html:146:    <form id="tanjezForm" method="post" enctype="multipart/form-data">
+hhh\AllTemplate.html:150:                <input type="hidden" asp-for="tanjezOrder.UserID" 
+value="@Context.Session.GetInt32("UserID")" />
+hhh\AllTemplate.html:161:                    <input asp-for="tanjezOrder.CreateOrderName" type="text" 
+class="form-control" placeholder="منشا الطلب">
+hhh\AllTemplate.html:167:                    <select asp-for="tanjezOrder.DescripPerson" id="descripSelect" 
+class="form-select">
+hhh\AllTemplate.html:204:                    <select class="form-select" asp-for="tanjezOrder.Country">
+hhh\AllTemplate.html:210:                    <select asp-for="tanjezOrder.City" class="form-select">
+hhh\AllTemplate.html:236:                    <input type="text" class="form-control" id="documentArea" 
+asp-for="tanjezOrder.Zone" placeholder="المديرية" />
+hhh\AllTemplate.html:241:                    <input type="text" class="form-control" id="documentArea" 
+asp-for="tanjezOrder.Directorate" placeholder="العزلة" />
+hhh\AllTemplate.html:246:                    <input type="text" class="form-control" id="documentArea" 
+name="tanjezOrder.Village" placeholder="القرية او الحي" />
+hhh\AllTemplate.html:257:                    <input name="tanjezOrder.CoordinatesY" type="number" 
+class="form-control" placeholder="احداثيات Y">
+hhh\AllTemplate.html:261:                    <input name="tanjezOrder.CoordinatesX" type="number" 
+class="form-control" placeholder="احداثيات X">
+hhh\AllTemplate.html:266:                    <input type="text" class="form-control" id="requestTitle" 
+name="tanjezOrder.PlaceName" placeholder="أدخل عنوان الطلب" required />
+hhh\AllTemplate.html:270:                    <select class="form-select" id="placeTypeId" 
+name="tanjezOrder.PlaceType">
+hhh\AllTemplate.html:291:                <select asp-for="tanjezOrder.DocumentType"
+hhh\AllTemplate.html:302:                <select asp-for="tanjezOrder.Alhiaza"
+hhh\AllTemplate.html:318:                        <input type="number" class="form-control" id="documentArea" 
+name="tanjezOrder.Space" placeholder="0.00" step="0.01" />
+hhh\AllTemplate.html:324:                        <select class="form-select" id="unitSelect" 
+asp-for="tanjezOrder.Unit">
+hhh\AllTemplate.html:333:                        <input type="number" class="form-control" id="unitCount" 
+name="tanjezOrder.AcountPiese" placeholder="ادخل العدد" />
+hhh\AllTemplate.html:357:                    <input type="hidden" id="hiddenAreaDifferent" 
+name="tanjezOrder.AreaDifferent" value="0" />
+hhh\AllTemplate.html:379:                    <input type="file" class="form-control" id="docImageInput" 
+name="tanjezOrder.DocumentImage" style="display:none;" accept="image/*">
+hhh\AllTemplate.html:412:                            <select class="form-select border-type" 
+name="earthBorders[0].BorderType" style="display:none;">
+hhh\AllTemplate.html:425:                        <input type="text" class="form-control" 
+name="earthBorders[0].BorderDescription" />
+hhh\AllTemplate.html:428:                        <input type="hidden" name="earthBorders[3].IdenticalOrDifferent" 
+value="0" />
+hhh\AllTemplate.html:430:                            name="earthBorders[3].IdenticalOrDifferent" value="1" />
+hhh\AllTemplate.html:434:                        <input type="text" class="form-control" 
+name="earthBorders[0].Difference" />
+hhh\AllTemplate.html:447:                            <select class="form-select border-type" 
+name="earthBorders[1].BorderType" style="display:none;">
+hhh\AllTemplate.html:460:                        <input type="text" class="form-control" 
+name="earthBorders[1].BorderDescription" />
+hhh\AllTemplate.html:463:                        <input type="hidden" name="earthBorders[3].IdenticalOrDifferent" 
+value="0" />
+hhh\AllTemplate.html:465:                            name="earthBorders[3].IdenticalOrDifferent" value="1" />
+hhh\AllTemplate.html:470:                        <input type="text" class="form-control" 
+name="earthBorders[1].Difference" />
+hhh\AllTemplate.html:483:                            <select class="form-select border-type" 
+name="earthBorders[2].BorderType" style="display:none;">
+hhh\AllTemplate.html:495:                        <input type="text" class="form-control" 
+name="earthBorders[2].BorderDescription" />
+hhh\AllTemplate.html:498:                        <input type="hidden" name="earthBorders[3].IdenticalOrDifferent" 
+value="0" />
+hhh\AllTemplate.html:500:                            name="earthBorders[3].IdenticalOrDifferent" value="1" />
+hhh\AllTemplate.html:505:        <input type="text" class="form-control" name="earthBorders[0].Difference" readonly 
+/>
+hhh\AllTemplate.html:518:                            <select class="form-select border-type" 
+name="earthBorders[3].BorderType" style="display:none;">
+hhh\AllTemplate.html:529:                        <input type="text" class="form-control" 
+name="earthBorders[3].BorderDescription" />
+hhh\AllTemplate.html:532:                        <input type="hidden" name="earthBorders[3].IdenticalOrDifferent" 
+value="0" />
+hhh\AllTemplate.html:534:                            name="earthBorders[3].IdenticalOrDifferent" value="1" />
+hhh\AllTemplate.html:539:                        <input type="text" class="form-control" 
+name="earthBorders[3].Difference" />
+hhh\AllTemplate.html:640:                    <select asp-for="tanjezOrder.AccessRoadType"
+hhh\AllTemplate.html:732:                    <input type="text" class="form-control" id="txtUp" name="fromup" 
+disabled placeholder="أدخل الحد من الأعلى" />
+hhh\AllTemplate.html:741:                    <input type="text" class="form-control" id="txtDown" name="fromdown" 
+disabled placeholder="أدخل الحد من الأسفل" />
+hhh\AllTemplate.html:814:                <select asp-for="tanjezOrder.AccessRoadType"
+hhh\AllTemplate.html:828:                @* <select asp-for="tanjezOrder.PeriodType" 
+asp-items="ViewBag.accessRoadType" class="form-select"> *@
+hhh\AllTemplate.html:830:                <select class="form-select" id="periodType" name="tanjezOrder.PeriodType">
+hhh\AllTemplate.html:838:                <input type="text" class="form-control" id="maximumDuration" 
+name="tanjezOrder.MaximumDuration" placeholder="اختر التاريخ" />
+hhh\AllTemplate.html:848:                <select class="form-select" id="Transportation" 
+name="tanjezOrder.Transportation">
+hhh\AllTemplate.html:862:                <select class="form-select" id="OverNight" name="tanjezOrder.OverNight">
+hhh\AllTemplate.html:874:                <select class="form-select" id="Allowance" name="tanjezOrder.Allowance">
+hhh\AllTemplate.html:897:        <textarea class="form-control" id="txtNotes" name="txtNotes" rows="4" 
+placeholder="أدخل ملاحظاتك"></textarea>
+hhh\AllTemplate.html:908:            <input type="file" class="form-control me-2" name="fileAttach[]" />
+hhh\AllTemplate.html:930:            <input type="file" class="form-control me-2" name="fileAttach[]" />
+hhh\AllTemplate.html:1055:        <textarea class="form-control" id="txtNotes" name="txtNotes" rows="4" 
+placeholder=" موضوع الشكوى"></textarea>
+hhh\AllTemplate.html:1061:        <textarea class="form-control" id="txtNotes" name="txtNotes" rows="4" 
+placeholder=" ملخص الشكوى"></textarea>
+hhh\AllTemplate.html:1151:                        <input type="text" class="form-control" name="" />
+hhh\AllTemplate.html:1180:                        <input type="text" class="form-control" name="" />
+hhh\AllTemplate.html:1208:                        <input type="text" class="form-control" name="" />
+hhh\AllTemplate.html:1221:                        <input type="date" class="form-control" name="datt" />
+hhh\AllTemplate.html:1224:                        <input type="text" class="form-control" name="" />
+hhh\AllTemplate.html:1254:                        <input type="text" class="form-control" name="" />
+hhh\AllTemplate.html:1339:    </form>
+hhh\AllTemplate.html:1345:        <form>
+hhh\AllTemplate.html:1428:                                <select name="Governorate" class="form-select 
+form-select-sm">
+hhh\AllTemplate.html:1444:                                <select name="Governorate" class="form-select 
+form-select-sm">
+hhh\AllTemplate.html:1510:                            <select name="Governorate" class="form-select form-select-sm">
+hhh\AllTemplate.html:1523:                            <select name="Governorate" class="form-select form-select-sm">
+hhh\AllTemplate.html:1853:                <select asp-for="tanjezOrder.Alhiaza"
+hhh\AllTemplate.html:1883:        </form>
+hhh\AllTemplate.html:1892:        <form id="tanjezForm" method="post" enctype="multipart/form-data">
+hhh\AllTemplate.html:1897:        <input type="hidden" name="UserID" value="@Context.Session.GetInt32("UserID")" />
+hhh\AllTemplate.html:1902:                    <label asp-for="OfferName" class="form-label required">اسم العرض 
+<span class="text-danger">*</span></label>
+hhh\AllTemplate.html:1903:                    <input asp-for="OfferName" type="text" class="form-control"  required
+hhh\AllTemplate.html:1919:                <input id="endDateInput" name="EndDate" type="date" class="form-control 
+mt-2" style="display:none;" />
+hhh\AllTemplate.html:1949:                <label asp-for="WorkWagesTemplateId" class="form-label"></label>
+hhh\AllTemplate.html:1950:                <select asp-for="WorkWagesTemplateId" id="transportTemplateSelect1" 
+class="form-select">
+hhh\AllTemplate.html:1984:                <label asp-for="TransportationScheduleTemplateId" class="form-label">قالب 
+التنقلات والمبيت</label>
+hhh\AllTemplate.html:1985:                <select asp-for="TransportationScheduleTemplateId" 
+id="transportTemplateSelect" class="form-select">
+hhh\AllTemplate.html:2006:                    const statuse1 = 
+row.querySelector("input[name='StatuseType1']")?.value;
+hhh\AllTemplate.html:2007:                    const statuse2 = 
+row.querySelector("input[name='StatuseType2']")?.value;
+hhh\AllTemplate.html:2053:                <label asp-for="AdditionalCostTypeId" class="form-label">قالب التكاليف 
+الاضافية </label>
+hhh\AllTemplate.html:2054:                <select asp-for="AdditionalCostTypeId" id="additionalCostSelect" 
+class="form-select">
+hhh\AllTemplate.html:2083:                    <input asp-for="AdvancePaymentPercentage" type="number" 
+class="form-control"
+hhh\AllTemplate.html:2089:                    <input asp-for="OnSitePaymentPercentage" type="number" 
+class="form-control"
+hhh\AllTemplate.html:2095:                    <input asp-for="AfterDeliveryPaymentPercentage" type="number" 
+class="form-control"
+hhh\AllTemplate.html:2103:                <input asp-for="LatePenaltyPercentage" type="number" class="form-control" 
+placeholder="يخصم من المبلغ المتفق نسبة" />
+hhh\AllTemplate.html:2108:                    <input asp-for="ResignationAfterAdvancePercentage" type="number" 
+class="form-control" placeholder="يخصم من المبلغ المتفق نسبة"
+hhh\AllTemplate.html:2114:                <input asp-for="CamelResignationPenaltyPercentage" type="number" 
+class="form-control" placeholder="يخصم من المبلغ المتفق نسبة" />
+hhh\AllTemplate.html:2132:                                      name="Notes"></textarea>
+hhh\AllTemplate.html:2140:        </form>
+hhh\almjal.html:5:  <meta name="viewport" content="width=device-width, initial-scale=1" />
+hhh\almjal1.html:6:  <meta name="viewport" content="width=device-width, initial-scale=1" />
+hhh\ContractTemplate.html:6:    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+hhh\ContractTemplate.html:285:                <form id="rejectForm" class="reject-form" style="display:block; 
+margin-top:0;">
+hhh\ContractTemplate.html:288:                        <select id="reason" name="reason">
+hhh\ContractTemplate.html:303:                </form>
+hhh\ContractTemplate.html:331:            <form id="paymentForm" style="display:none; margin-top:10px; 
+text-align:right;" onsubmit="submitPayment(event)">
+hhh\ContractTemplate.html:338:                        <input type="text" id="cardNumber" name="cardNumber" 
+style="width:100%; padding:8px; border:1px solid #ddd; border-radius:4px;" placeholder="أدخل رقم البطاقة" required>
+hhh\ContractTemplate.html:343:                            <input type="text" id="expiryDate" name="expiryDate" 
+style="width:100%; padding:8px; border:1px solid #ddd; border-radius:4px;" placeholder="MM/YY" required>
+hhh\ContractTemplate.html:347:                            <input type="text" id="cvv" name="cvv" style="width:100%; 
+padding:8px; border:1px solid #ddd; border-radius:4px;" placeholder="CVV" required>
+hhh\ContractTemplate.html:356:                        <input type="text" id="paymentInput" name="paymentInput" 
+style="width:100%; padding:8px; border:1px solid #ddd; border-radius:4px;" required>
+hhh\ContractTemplate.html:364:            </form>
+hhh\ContractTemplate1.html:6:    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+hhh\ContractTemplate1.html:230:                <form id="rejectForm" class="reject-form" style="display:block; 
+margin-top:0;">
+hhh\ContractTemplate1.html:233:                        <select id="reason" name="reason">
+hhh\ContractTemplate1.html:248:                </form>
+hhh\ContractTemplate1.html:276:            <form id="paymentForm" style="display:none; margin-top:10px; 
+text-align:right;" onsubmit="submitPayment(event)">
+hhh\ContractTemplate1.html:283:                        <input type="text" id="cardNumber" name="cardNumber" 
+style="width:100%; padding:8px; border:1px solid #ddd; border-radius:4px;" placeholder="أدخل رقم البطاقة" required>
+hhh\ContractTemplate1.html:288:                            <input type="text" id="expiryDate" name="expiryDate" 
+style="width:100%; padding:8px; border:1px solid #ddd; border-radius:4px;" placeholder="MM/YY" required>
+hhh\ContractTemplate1.html:292:                            <input type="text" id="cvv" name="cvv" 
+style="width:100%; padding:8px; border:1px solid #ddd; border-radius:4px;" placeholder="CVV" required>
+hhh\ContractTemplate1.html:301:                        <input type="text" id="paymentInput" name="paymentInput" 
+style="width:100%; padding:8px; border:1px solid #ddd; border-radius:4px;" required>
+hhh\ContractTemplate1.html:309:            </form>
+hhh\create.html:5:<meta name="viewport" content="width=device-width, initial-scale=1.0">
+hhh\create.html:82:    <form id="tanjezForm" method="post" enctype="multipart/form-data">
+hhh\create.html:86:                <input type="hidden" asp-for="tanjezOrder.UserID" 
+value="@Context.Session.GetInt32("UserID")" />
+hhh\create.html:97:                    <input asp-for="tanjezOrder.CreateOrderName" type="text" 
+class="form-control" placeholder="منشا الطلب">
+hhh\create.html:103:                    <select asp-for="tanjezOrder.DescripPerson" id="descripSelect" 
+class="form-select">
+hhh\create.html:116:                    <select asp-for="tanjezOrder.PurposeOrder"
+hhh\create.html:149:                    <select class="form-select" asp-for="tanjezOrder.Country">
+hhh\create.html:155:                    <select asp-for="tanjezOrder.City" class="form-select">
+hhh\create.html:181:                    <input type="text" class="form-control" id="documentArea" 
+asp-for="tanjezOrder.Zone" placeholder="المديرية" />
+hhh\create.html:186:                    <input type="text" class="form-control" id="documentArea" 
+asp-for="tanjezOrder.Directorate" placeholder="العزلة" />
+hhh\create.html:191:                    <input type="text" class="form-control" id="documentArea" 
+name="tanjezOrder.Village" placeholder="القرية او الحي" />
+hhh\create.html:202:                    <input name="tanjezOrder.CoordinatesY" type="number" class="form-control" 
+placeholder="احداثيات Y">
+hhh\create.html:206:                    <input name="tanjezOrder.CoordinatesX" type="number" class="form-control" 
+placeholder="احداثيات X">
+hhh\create.html:211:                    <input type="text" class="form-control" id="requestTitle" 
+name="tanjezOrder.PlaceName" placeholder="أدخل عنوان الطلب" required />
+hhh\create.html:215:                    <select class="form-select" id="placeTypeId" name="tanjezOrder.PlaceType">
+hhh\create.html:236:                <select asp-for="tanjezOrder.DocumentType"
+hhh\create.html:247:                <select asp-for="tanjezOrder.Alhiaza"
+hhh\create.html:263:                        <input type="number" class="form-control" id="documentArea" 
+name="tanjezOrder.Space" placeholder="0.00" step="0.01" />
+hhh\create.html:269:                        <select class="form-select" id="unitSelect" asp-for="tanjezOrder.Unit">
+hhh\create.html:278:                        <input type="number" class="form-control" id="unitCount" 
+name="tanjezOrder.AcountPiese" placeholder="ادخل العدد" />
+hhh\create.html:302:                    <input type="hidden" id="hiddenAreaDifferent" 
+name="tanjezOrder.AreaDifferent" value="0" />
+hhh\create.html:324:                    <input type="file" class="form-control" id="docImageInput" 
+name="tanjezOrder.DocumentImage" style="display:none;" accept="image/*">
+hhh\create.html:357:                            <select class="form-select border-type" 
+name="earthBorders[0].BorderType" style="display:none;">
+hhh\create.html:370:                        <input type="text" class="form-control" 
+name="earthBorders[0].BorderDescription" />
+hhh\create.html:373:                        <input type="hidden" name="earthBorders[3].IdenticalOrDifferent" 
+value="0" />
+hhh\create.html:375:                            name="earthBorders[3].IdenticalOrDifferent" value="1" />
+hhh\create.html:379:                        <input type="text" class="form-control" 
+name="earthBorders[0].Difference" />
+hhh\create.html:392:                            <select class="form-select border-type" 
+name="earthBorders[1].BorderType" style="display:none;">
+hhh\create.html:405:                        <input type="text" class="form-control" 
+name="earthBorders[1].BorderDescription" />
+hhh\create.html:408:                        <input type="hidden" name="earthBorders[3].IdenticalOrDifferent" 
+value="0" />
+hhh\create.html:410:                            name="earthBorders[3].IdenticalOrDifferent" value="1" />
+hhh\create.html:415:                        <input type="text" class="form-control" 
+name="earthBorders[1].Difference" />
+hhh\create.html:428:                            <select class="form-select border-type" 
+name="earthBorders[2].BorderType" style="display:none;">
+hhh\create.html:440:                        <input type="text" class="form-control" 
+name="earthBorders[2].BorderDescription" />
+hhh\create.html:443:                        <input type="hidden" name="earthBorders[3].IdenticalOrDifferent" 
+value="0" />
+hhh\create.html:445:                            name="earthBorders[3].IdenticalOrDifferent" value="1" />
+hhh\create.html:450:        <input type="text" class="form-control" name="earthBorders[0].Difference" readonly />
+hhh\create.html:463:                            <select class="form-select border-type" 
+name="earthBorders[3].BorderType" style="display:none;">
+hhh\create.html:474:                        <input type="text" class="form-control" 
+name="earthBorders[3].BorderDescription" />
+hhh\create.html:477:                        <input type="hidden" name="earthBorders[3].IdenticalOrDifferent" 
+value="0" />
+hhh\create.html:479:                            name="earthBorders[3].IdenticalOrDifferent" value="1" />
+hhh\create.html:484:                        <input type="text" class="form-control" 
+name="earthBorders[3].Difference" />
+hhh\create.html:585:                    <select asp-for="tanjezOrder.AccessRoadType"
+hhh\create.html:677:                    <input type="text" class="form-control" id="txtUp" name="fromup" disabled 
+placeholder="أدخل الحد من الأعلى" />
+hhh\create.html:686:                    <input type="text" class="form-control" id="txtDown" name="fromdown" 
+disabled placeholder="أدخل الحد من الأسفل" />
+hhh\create.html:759:                <select asp-for="tanjezOrder.AccessRoadType"
+hhh\create.html:773:                @* <select asp-for="tanjezOrder.PeriodType" asp-items="ViewBag.accessRoadType" 
+class="form-select"> *@
+hhh\create.html:775:                <select class="form-select" id="periodType" name="tanjezOrder.PeriodType">
+hhh\create.html:783:                <input type="text" class="form-control" id="maximumDuration" 
+name="tanjezOrder.MaximumDuration" placeholder="اختر التاريخ" />
+hhh\create.html:793:                <select class="form-select" id="Transportation" 
+name="tanjezOrder.Transportation">
+hhh\create.html:807:                <select class="form-select" id="OverNight" name="tanjezOrder.OverNight">
+hhh\create.html:819:                <select class="form-select" id="Allowance" name="tanjezOrder.Allowance">
+hhh\create.html:842:        <textarea class="form-control" id="txtNotes" name="txtNotes" rows="4" placeholder="أدخل 
+ملاحظاتك"></textarea>
+hhh\create.html:853:            <input type="file" class="form-control me-2" name="fileAttach[]" />
+hhh\create.html:875:            <input type="file" class="form-control me-2" name="fileAttach[]" />
+hhh\create.html:1000:        <textarea class="form-control" id="txtNotes" name="txtNotes" rows="4" placeholder=" 
+موضوع الشكوى"></textarea>
+hhh\create.html:1006:        <textarea class="form-control" id="txtNotes" name="txtNotes" rows="4" placeholder=" 
+ملخص الشكوى"></textarea>
+hhh\create.html:1096:                        <input type="text" class="form-control" name="" />
+hhh\create.html:1125:                        <input type="text" class="form-control" name="" />
+hhh\create.html:1153:                        <input type="text" class="form-control" name="" />
+hhh\create.html:1166:                        <input type="date" class="form-control" name="datt" />
+hhh\create.html:1169:                        <input type="text" class="form-control" name="" />
+hhh\create.html:1199:                        <input type="text" class="form-control" name="" />
+hhh\create.html:1562:    </form>
+hhh\createdevided.html:5:<meta name="viewport" content="width=device-width, initial-scale=1.0">
+hhh\createdevided.html:90:    <form id="tanjezForm" method="post" enctype="multipart/form-data">
+hhh\createdevided.html:94:                <input type="hidden" asp-for="tanjezOrder.UserID" 
+value="@Context.Session.GetInt32("UserID")" />
+hhh\createdevided.html:105:                    <input asp-for="tanjezOrder.CreateOrderName" type="text" 
+class="form-control" placeholder="منشا الطلب">
+hhh\createdevided.html:111:                    <select asp-for="tanjezOrder.DescripPerson" id="descripSelect" 
+class="form-select">
+hhh\createdevided.html:124:                    <select asp-for="tanjezOrder.PurposeOrder"
+hhh\createdevided.html:157:                    <select class="form-select" asp-for="tanjezOrder.Country">
+hhh\createdevided.html:163:                    <select asp-for="tanjezOrder.City" class="form-select">
+hhh\createdevided.html:189:                    <input type="text" class="form-control" id="documentArea" 
+asp-for="tanjezOrder.Zone" placeholder="المديرية" />
+hhh\createdevided.html:194:                    <input type="text" class="form-control" id="documentArea" 
+asp-for="tanjezOrder.Directorate" placeholder="العزلة" />
+hhh\createdevided.html:199:                    <input type="text" class="form-control" id="documentArea" 
+name="tanjezOrder.Village" placeholder="القرية او الحي" />
+hhh\createdevided.html:210:                    <input name="tanjezOrder.CoordinatesY" type="number" 
+class="form-control" placeholder="احداثيات Y">
+hhh\createdevided.html:214:                    <input name="tanjezOrder.CoordinatesX" type="number" 
+class="form-control" placeholder="احداثيات X">
+hhh\createdevided.html:219:                    <input type="text" class="form-control" id="requestTitle" 
+name="tanjezOrder.PlaceName" placeholder="أدخل عنوان الطلب" required />
+hhh\createdevided.html:223:                    <select class="form-select" id="placeTypeId" 
+name="tanjezOrder.PlaceType">
+hhh\createdevided.html:244:                <select asp-for="tanjezOrder.DocumentType"
+hhh\createdevided.html:255:                <select asp-for="tanjezOrder.Alhiaza"
+hhh\createdevided.html:271:                        <input type="number" class="form-control" id="documentArea" 
+name="tanjezOrder.Space" placeholder="0.00" step="0.01" />
+hhh\createdevided.html:277:                        <select class="form-select" id="unitSelect" 
+asp-for="tanjezOrder.Unit">
+hhh\createdevided.html:286:                        <input type="number" class="form-control" id="unitCount" 
+name="tanjezOrder.AcountPiese" placeholder="ادخل العدد" />
+hhh\createdevided.html:310:                    <input type="hidden" id="hiddenAreaDifferent" 
+name="tanjezOrder.AreaDifferent" value="0" />
+hhh\createdevided.html:332:                    <input type="file" class="form-control" id="docImageInput" 
+name="tanjezOrder.DocumentImage" style="display:none;" accept="image/*">
+hhh\createdevided.html:365:                            <select class="form-select border-type" 
+name="earthBorders[0].BorderType" style="display:none;">
+hhh\createdevided.html:378:                        <input type="text" class="form-control" 
+name="earthBorders[0].BorderDescription" />
+hhh\createdevided.html:381:                        <input type="hidden" name="earthBorders[3].IdenticalOrDifferent" 
+value="0" />
+hhh\createdevided.html:383:                            name="earthBorders[3].IdenticalOrDifferent" value="1" />
+hhh\createdevided.html:387:                        <input type="text" class="form-control" 
+name="earthBorders[0].Difference" />
+hhh\createdevided.html:400:                            <select class="form-select border-type" 
+name="earthBorders[1].BorderType" style="display:none;">
+hhh\createdevided.html:413:                        <input type="text" class="form-control" 
+name="earthBorders[1].BorderDescription" />
+hhh\createdevided.html:416:                        <input type="hidden" name="earthBorders[3].IdenticalOrDifferent" 
+value="0" />
+hhh\createdevided.html:418:                            name="earthBorders[3].IdenticalOrDifferent" value="1" />
+hhh\createdevided.html:423:                        <input type="text" class="form-control" 
+name="earthBorders[1].Difference" />
+hhh\createdevided.html:436:                            <select class="form-select border-type" 
+name="earthBorders[2].BorderType" style="display:none;">
+hhh\createdevided.html:448:                        <input type="text" class="form-control" 
+name="earthBorders[2].BorderDescription" />
+hhh\createdevided.html:451:                        <input type="hidden" name="earthBorders[3].IdenticalOrDifferent" 
+value="0" />
+hhh\createdevided.html:453:                            name="earthBorders[3].IdenticalOrDifferent" value="1" />
+hhh\createdevided.html:458:        <input type="text" class="form-control" name="earthBorders[0].Difference" 
+readonly />
+hhh\createdevided.html:471:                            <select class="form-select border-type" 
+name="earthBorders[3].BorderType" style="display:none;">
+hhh\createdevided.html:482:                        <input type="text" class="form-control" 
+name="earthBorders[3].BorderDescription" />
+hhh\createdevided.html:485:                        <input type="hidden" name="earthBorders[3].IdenticalOrDifferent" 
+value="0" />
+hhh\createdevided.html:487:                            name="earthBorders[3].IdenticalOrDifferent" value="1" />
+hhh\createdevided.html:492:                        <input type="text" class="form-control" 
+name="earthBorders[3].Difference" />
+hhh\createdevided.html:593:                    <select asp-for="tanjezOrder.AccessRoadType"
+hhh\createdevided.html:685:                    <input type="text" class="form-control" id="txtUp" name="fromup" 
+disabled placeholder="أدخل الحد من الأعلى" />
+hhh\createdevided.html:694:                    <input type="text" class="form-control" id="txtDown" name="fromdown" 
+disabled placeholder="أدخل الحد من الأسفل" />
+hhh\createdevided.html:767:                <select asp-for="tanjezOrder.AccessRoadType"
+hhh\createdevided.html:781:                @* <select asp-for="tanjezOrder.PeriodType" 
+asp-items="ViewBag.accessRoadType" class="form-select"> *@
+hhh\createdevided.html:783:                <select class="form-select" id="periodType" 
+name="tanjezOrder.PeriodType">
+hhh\createdevided.html:791:                <input type="text" class="form-control" id="maximumDuration" 
+name="tanjezOrder.MaximumDuration" placeholder="اختر التاريخ" />
+hhh\createdevided.html:801:                <select class="form-select" id="Transportation" 
+name="tanjezOrder.Transportation">
+hhh\createdevided.html:815:                <select class="form-select" id="OverNight" name="tanjezOrder.OverNight">
+hhh\createdevided.html:827:                <select class="form-select" id="Allowance" name="tanjezOrder.Allowance">
+hhh\createdevided.html:850:        <textarea class="form-control" id="txtNotes" name="txtNotes" rows="4" 
+placeholder="أدخل ملاحظاتك"></textarea>
+hhh\createdevided.html:861:            <input type="file" class="form-control me-2" name="fileAttach[]" />
+hhh\createdevided.html:883:            <input type="file" class="form-control me-2" name="fileAttach[]" />
+hhh\createdevided.html:1241:    </form>
+hhh\createform.html:5:<meta name="viewport" content="width=device-width, initial-scale=1.0">
+hhh\createform.html:122:    <form id="tanjezForm" method="post" enctype="multipart/form-data">
+hhh\createform.html:126:                <input type="hidden" asp-for="tanjezOrder.UserID" 
+value="@Context.Session.GetInt32("UserID")" />
+hhh\createform.html:138:                    <input asp-for="tanjezOrder.CreateOrderName" type="text" placeholder=" 
+">
+hhh\createform.html:146:                    <select asp-for="tanjezOrder.DescripPerson" id="descripSelect" 
+class="form-select">
+hhh\createform.html:174:                    <select asp-for="tanjezOrder.Country" class="form-select">
+hhh\createform.html:184:                    <select asp-for="tanjezOrder.City" class="form-select">
+hhh\createform.html:214:                    <input type="text" asp-for="tanjezOrder.Zone" placeholder=" ">
+hhh\createform.html:222:                    <input type="text" asp-for="tanjezOrder.Directorate" placeholder=" ">
+hhh\createform.html:230:                    <input type="text" name="tanjezOrder.Village" placeholder=" ">
+hhh\createform.html:238:                    <input name="tanjezOrder.CoordinatesY" type="number" placeholder=" ">
+hhh\createform.html:246:                    <input name="tanjezOrder.CoordinatesX" type="number" placeholder=" ">
+hhh\createform.html:254:                    <input type="text" id="requestTitle" name="tanjezOrder.PlaceName" 
+placeholder=" " required>
+hhh\createform.html:262:                    <select id="placeTypeId" name="tanjezOrder.PlaceType" 
+class="form-select">
+hhh\createform.html:286:                <select asp-for="tanjezOrder.DocumentType"
+hhh\createform.html:297:                <select asp-for="tanjezOrder.Alhiaza"
+hhh\createform.html:313:                        <input type="number" class="form-control" id="documentArea" 
+name="tanjezOrder.Space" placeholder="0.00" step="0.01" />
+hhh\createform.html:319:                        <select class="form-select" id="unitSelect" 
+asp-for="tanjezOrder.Unit">
+hhh\createform.html:328:                        <input type="number" class="form-control" id="unitCount" 
+name="tanjezOrder.AcountPiese" placeholder="ادخل العدد" />
+hhh\createform.html:352:                    <input type="hidden" id="hiddenAreaDifferent" 
+name="tanjezOrder.AreaDifferent" value="0" />
+hhh\createform.html:374:                    <input type="file" class="form-control" id="docImageInput" 
+name="tanjezOrder.DocumentImage" style="display:none;" accept="image/*">
+hhh\createform.html:407:                            <select class="form-select border-type" 
+name="earthBorders[0].BorderType" style="display:none;">
+hhh\createform.html:420:                        <input type="text" class="form-control" 
+name="earthBorders[0].BorderDescription" />
+hhh\createform.html:423:                        <input type="hidden" name="earthBorders[3].IdenticalOrDifferent" 
+value="0" />
+hhh\createform.html:425:                            name="earthBorders[3].IdenticalOrDifferent" value="1" />
+hhh\createform.html:429:                        <input type="text" class="form-control" 
+name="earthBorders[0].Difference" />
+hhh\createform.html:442:                            <select class="form-select border-type" 
+name="earthBorders[1].BorderType" style="display:none;">
+hhh\createform.html:455:                        <input type="text" class="form-control" 
+name="earthBorders[1].BorderDescription" />
+hhh\createform.html:458:                        <input type="hidden" name="earthBorders[3].IdenticalOrDifferent" 
+value="0" />
+hhh\createform.html:460:                            name="earthBorders[3].IdenticalOrDifferent" value="1" />
+hhh\createform.html:465:                        <input type="text" class="form-control" 
+name="earthBorders[1].Difference" />
+hhh\createform.html:478:                            <select class="form-select border-type" 
+name="earthBorders[2].BorderType" style="display:none;">
+hhh\createform.html:490:                        <input type="text" class="form-control" 
+name="earthBorders[2].BorderDescription" />
+hhh\createform.html:493:                        <input type="hidden" name="earthBorders[3].IdenticalOrDifferent" 
+value="0" />
+hhh\createform.html:495:                            name="earthBorders[3].IdenticalOrDifferent" value="1" />
+hhh\createform.html:500:        <input type="text" class="form-control" name="earthBorders[0].Difference" readonly 
+/>
+hhh\createform.html:513:                            <select class="form-select border-type" 
+name="earthBorders[3].BorderType" style="display:none;">
+hhh\createform.html:524:                        <input type="text" class="form-control" 
+name="earthBorders[3].BorderDescription" />
+hhh\createform.html:527:                        <input type="hidden" name="earthBorders[3].IdenticalOrDifferent" 
+value="0" />
+hhh\createform.html:529:                            name="earthBorders[3].IdenticalOrDifferent" value="1" />
+hhh\createform.html:534:                        <input type="text" class="form-control" 
+name="earthBorders[3].Difference" />
+hhh\createform.html:635:                    <select asp-for="tanjezOrder.AccessRoadType"
+hhh\createform.html:727:                    <input type="text" class="form-control" id="txtUp" name="fromup" 
+disabled placeholder="أدخل الحد من الأعلى" />
+hhh\createform.html:736:                    <input type="text" class="form-control" id="txtDown" name="fromdown" 
+disabled placeholder="أدخل الحد من الأسفل" />
+hhh\createform.html:809:                <select asp-for="tanjezOrder.AccessRoadType"
+hhh\createform.html:823:                @* <select asp-for="tanjezOrder.PeriodType" 
+asp-items="ViewBag.accessRoadType" class="form-select"> *@
+hhh\createform.html:825:                <select class="form-select" id="periodType" name="tanjezOrder.PeriodType">
+hhh\createform.html:833:                <input type="text" class="form-control" id="maximumDuration" 
+name="tanjezOrder.MaximumDuration" placeholder="اختر التاريخ" />
+hhh\createform.html:843:                <select class="form-select" id="Transportation" 
+name="tanjezOrder.Transportation">
+hhh\createform.html:857:                <select class="form-select" id="OverNight" name="tanjezOrder.OverNight">
+hhh\createform.html:869:                <select class="form-select" id="Allowance" name="tanjezOrder.Allowance">
+hhh\createform.html:892:        <textarea class="form-control" id="txtNotes" name="txtNotes" rows="4" 
+placeholder="أدخل ملاحظاتك"></textarea>
+hhh\createform.html:903:            <input type="file" class="form-control me-2" name="fileAttach[]" />
+hhh\createform.html:925:            <input type="file" class="form-control me-2" name="fileAttach[]" />
+hhh\createform.html:1050:        <textarea class="form-control" id="txtNotes" name="txtNotes" rows="4" 
+placeholder=" موضوع الشكوى"></textarea>
+hhh\createform.html:1056:        <textarea class="form-control" id="txtNotes" name="txtNotes" rows="4" 
+placeholder=" ملخص الشكوى"></textarea>
+hhh\createform.html:1146:                        <input type="text" class="form-control" name="" />
+hhh\createform.html:1175:                        <input type="text" class="form-control" name="" />
+hhh\createform.html:1203:                        <input type="text" class="form-control" name="" />
+hhh\createform.html:1216:                        <input type="date" class="form-control" name="datt" />
+hhh\createform.html:1219:                        <input type="text" class="form-control" name="" />
+hhh\createform.html:1249:                        <input type="text" class="form-control" name="" />
+hhh\createform.html:1334:    </form>
+hhh\createorder.html:5:<meta name="viewport" content="width=device-width, initial-scale=1.0">
+hhh\createorder.html:89:    <form id="tanjezForm" method="post" enctype="multipart/form-data">
+hhh\createorder.html:93:                <input type="hidden" asp-for="tanjezOrder.UserID" 
+value="@Context.Session.GetInt32("UserID")" />
+hhh\createorder.html:104:                    <input asp-for="tanjezOrder.CreateOrderName" type="text" 
+class="form-control" placeholder="منشا الطلب">
+hhh\createorder.html:110:                    <select asp-for="tanjezOrder.DescripPerson" id="descripSelect" 
+class="form-select">
+hhh\createorder.html:123:                    <select asp-for="tanjezOrder.PurposeOrder"
+hhh\createorder.html:156:                    <select class="form-select" asp-for="tanjezOrder.Country">
+hhh\createorder.html:162:                    <select asp-for="tanjezOrder.City" class="form-select">
+hhh\createorder.html:188:                    <input type="text" class="form-control" id="documentArea" 
+asp-for="tanjezOrder.Zone" placeholder="المديرية" />
+hhh\createorder.html:193:                    <input type="text" class="form-control" id="documentArea" 
+asp-for="tanjezOrder.Directorate" placeholder="العزلة" />
+hhh\createorder.html:198:                    <input type="text" class="form-control" id="documentArea" 
+name="tanjezOrder.Village" placeholder="القرية او الحي" />
+hhh\createorder.html:209:                    <input name="tanjezOrder.CoordinatesY" type="number" 
+class="form-control" placeholder="احداثيات Y">
+hhh\createorder.html:213:                    <input name="tanjezOrder.CoordinatesX" type="number" 
+class="form-control" placeholder="احداثيات X">
+hhh\createorder.html:218:                    <input type="text" class="form-control" id="requestTitle" 
+name="tanjezOrder.PlaceName" placeholder="أدخل عنوان الطلب" required />
+hhh\createorder.html:222:                    <select class="form-select" id="placeTypeId" 
+name="tanjezOrder.PlaceType">
+hhh\createorder.html:243:                <select asp-for="tanjezOrder.DocumentType"
+hhh\createorder.html:254:                <select asp-for="tanjezOrder.Alhiaza"
+hhh\createorder.html:270:                        <input type="number" class="form-control" id="documentArea" 
+name="tanjezOrder.Space" placeholder="0.00" step="0.01" />
+hhh\createorder.html:276:                        <select class="form-select" id="unitSelect" 
+asp-for="tanjezOrder.Unit">
+hhh\createorder.html:285:                        <input type="number" class="form-control" id="unitCount" 
+name="tanjezOrder.AcountPiese" placeholder="ادخل العدد" />
+hhh\createorder.html:309:                    <input type="hidden" id="hiddenAreaDifferent" 
+name="tanjezOrder.AreaDifferent" value="0" />
+hhh\createorder.html:331:                    <input type="file" class="form-control" id="docImageInput" 
+name="tanjezOrder.DocumentImage" style="display:none;" accept="image/*">
+hhh\createorder.html:364:                            <select class="form-select border-type" 
+name="earthBorders[0].BorderType" style="display:none;">
+hhh\createorder.html:377:                        <input type="text" class="form-control" 
+name="earthBorders[0].BorderDescription" />
+hhh\createorder.html:380:                        <input type="hidden" name="earthBorders[3].IdenticalOrDifferent" 
+value="0" />
+hhh\createorder.html:382:                            name="earthBorders[3].IdenticalOrDifferent" value="1" />
+hhh\createorder.html:386:                        <input type="text" class="form-control" 
+name="earthBorders[0].Difference" />
+hhh\createorder.html:399:                            <select class="form-select border-type" 
+name="earthBorders[1].BorderType" style="display:none;">
+hhh\createorder.html:412:                        <input type="text" class="form-control" 
+name="earthBorders[1].BorderDescription" />
+hhh\createorder.html:415:                        <input type="hidden" name="earthBorders[3].IdenticalOrDifferent" 
+value="0" />
+hhh\createorder.html:417:                            name="earthBorders[3].IdenticalOrDifferent" value="1" />
+hhh\createorder.html:422:                        <input type="text" class="form-control" 
+name="earthBorders[1].Difference" />
+hhh\createorder.html:435:                            <select class="form-select border-type" 
+name="earthBorders[2].BorderType" style="display:none;">
+hhh\createorder.html:447:                        <input type="text" class="form-control" 
+name="earthBorders[2].BorderDescription" />
+hhh\createorder.html:450:                        <input type="hidden" name="earthBorders[3].IdenticalOrDifferent" 
+value="0" />
+hhh\createorder.html:452:                            name="earthBorders[3].IdenticalOrDifferent" value="1" />
+hhh\createorder.html:457:        <input type="text" class="form-control" name="earthBorders[0].Difference" readonly 
+/>
+hhh\createorder.html:470:                            <select class="form-select border-type" 
+name="earthBorders[3].BorderType" style="display:none;">
+hhh\createorder.html:481:                        <input type="text" class="form-control" 
+name="earthBorders[3].BorderDescription" />
+hhh\createorder.html:484:                        <input type="hidden" name="earthBorders[3].IdenticalOrDifferent" 
+value="0" />
+hhh\createorder.html:486:                            name="earthBorders[3].IdenticalOrDifferent" value="1" />
+hhh\createorder.html:491:                        <input type="text" class="form-control" 
+name="earthBorders[3].Difference" />
+hhh\createorder.html:592:                    <select asp-for="tanjezOrder.AccessRoadType"
+hhh\createorder.html:684:                    <input type="text" class="form-control" id="txtUp" name="fromup" 
+disabled placeholder="أدخل الحد من الأعلى" />
+hhh\createorder.html:693:                    <input type="text" class="form-control" id="txtDown" name="fromdown" 
+disabled placeholder="أدخل الحد من الأسفل" />
+hhh\createorder.html:766:                <select asp-for="tanjezOrder.AccessRoadType"
+hhh\createorder.html:780:                @* <select asp-for="tanjezOrder.PeriodType" 
+asp-items="ViewBag.accessRoadType" class="form-select"> *@
+hhh\createorder.html:782:                <select class="form-select" id="periodType" name="tanjezOrder.PeriodType">
+hhh\createorder.html:790:                <input type="text" class="form-control" id="maximumDuration" 
+name="tanjezOrder.MaximumDuration" placeholder="اختر التاريخ" />
+hhh\createorder.html:800:                <select class="form-select" id="Transportation" 
+name="tanjezOrder.Transportation">
+hhh\createorder.html:814:                <select class="form-select" id="OverNight" name="tanjezOrder.OverNight">
+hhh\createorder.html:826:                <select class="form-select" id="Allowance" name="tanjezOrder.Allowance">
+hhh\createorder.html:849:        <textarea class="form-control" id="txtNotes" name="txtNotes" rows="4" 
+placeholder="أدخل ملاحظاتك"></textarea>
+hhh\createorder.html:860:            <input type="file" class="form-control me-2" name="fileAttach[]" />
+hhh\createorder.html:882:            <input type="file" class="form-control me-2" name="fileAttach[]" />
+hhh\createorder.html:918:    </form>
+hhh\createspece.html:5:<meta name="viewport" content="width=device-width, initial-scale=1.0">
+hhh\createspece.html:90:    <form id="tanjezForm" method="post" enctype="multipart/form-data">
+hhh\createspece.html:241:        <textarea class="form-control" id="txtNotes" name="txtNotes" rows="4" 
+placeholder="أدخل ملاحظاتك"></textarea>
+hhh\createspece.html:252:            <input type="file" class="form-control me-2" name="fileAttach[]" />
+hhh\createspece.html:377:    </form>
+hhh\creatform.html:5:<meta name="viewport" content="width=device-width, initial-scale=1.0">
+hhh\creatform.html:90:    <form id="tanjezForm" method="post" enctype="multipart/form-data">
+hhh\creatform.html:94:                <input type="hidden" asp-for="tanjezOrder.UserID" 
+value="@Context.Session.GetInt32("UserID")" />
+hhh\creatform.html:105:                    <input asp-for="tanjezOrder.CreateOrderName" type="text" 
+class="form-control" placeholder="منشا الطلب">
+hhh\creatform.html:111:                    <select asp-for="tanjezOrder.DescripPerson" id="descripSelect" 
+class="form-select">
+hhh\creatform.html:148:                    <select class="form-select" asp-for="tanjezOrder.Country">
+hhh\creatform.html:154:                    <select asp-for="tanjezOrder.City" class="form-select">
+hhh\creatform.html:180:                    <input type="text" class="form-control" id="documentArea" 
+asp-for="tanjezOrder.Zone" placeholder="المديرية" />
+hhh\creatform.html:185:                    <input type="text" class="form-control" id="documentArea" 
+asp-for="tanjezOrder.Directorate" placeholder="العزلة" />
+hhh\creatform.html:190:                    <input type="text" class="form-control" id="documentArea" 
+name="tanjezOrder.Village" placeholder="القرية او الحي" />
+hhh\creatform.html:201:                    <input name="tanjezOrder.CoordinatesY" type="number" 
+class="form-control" placeholder="احداثيات Y">
+hhh\creatform.html:205:                    <input name="tanjezOrder.CoordinatesX" type="number" 
+class="form-control" placeholder="احداثيات X">
+hhh\creatform.html:210:                    <input type="text" class="form-control" id="requestTitle" 
+name="tanjezOrder.PlaceName" placeholder="أدخل عنوان الطلب" required />
+hhh\creatform.html:214:                    <select class="form-select" id="placeTypeId" 
+name="tanjezOrder.PlaceType">
+hhh\creatform.html:235:                <select asp-for="tanjezOrder.DocumentType"
+hhh\creatform.html:246:                <select asp-for="tanjezOrder.Alhiaza"
+hhh\creatform.html:262:                        <input type="number" class="form-control" id="documentArea" 
+name="tanjezOrder.Space" placeholder="0.00" step="0.01" />
+hhh\creatform.html:268:                        <select class="form-select" id="unitSelect" 
+asp-for="tanjezOrder.Unit">
+hhh\creatform.html:277:                        <input type="number" class="form-control" id="unitCount" 
+name="tanjezOrder.AcountPiese" placeholder="ادخل العدد" />
+hhh\creatform.html:301:                    <input type="hidden" id="hiddenAreaDifferent" 
+name="tanjezOrder.AreaDifferent" value="0" />
+hhh\creatform.html:323:                    <input type="file" class="form-control" id="docImageInput" 
+name="tanjezOrder.DocumentImage" style="display:none;" accept="image/*">
+hhh\creatform.html:356:                            <select class="form-select border-type" 
+name="earthBorders[0].BorderType" style="display:none;">
+hhh\creatform.html:369:                        <input type="text" class="form-control" 
+name="earthBorders[0].BorderDescription" />
+hhh\creatform.html:372:                        <input type="hidden" name="earthBorders[3].IdenticalOrDifferent" 
+value="0" />
+hhh\creatform.html:374:                            name="earthBorders[3].IdenticalOrDifferent" value="1" />
+hhh\creatform.html:378:                        <input type="text" class="form-control" 
+name="earthBorders[0].Difference" />
+hhh\creatform.html:391:                            <select class="form-select border-type" 
+name="earthBorders[1].BorderType" style="display:none;">
+hhh\creatform.html:404:                        <input type="text" class="form-control" 
+name="earthBorders[1].BorderDescription" />
+hhh\creatform.html:407:                        <input type="hidden" name="earthBorders[3].IdenticalOrDifferent" 
+value="0" />
+hhh\creatform.html:409:                            name="earthBorders[3].IdenticalOrDifferent" value="1" />
+hhh\creatform.html:414:                        <input type="text" class="form-control" 
+name="earthBorders[1].Difference" />
+hhh\creatform.html:427:                            <select class="form-select border-type" 
+name="earthBorders[2].BorderType" style="display:none;">
+hhh\creatform.html:439:                        <input type="text" class="form-control" 
+name="earthBorders[2].BorderDescription" />
+hhh\creatform.html:442:                        <input type="hidden" name="earthBorders[3].IdenticalOrDifferent" 
+value="0" />
+hhh\creatform.html:444:                            name="earthBorders[3].IdenticalOrDifferent" value="1" />
+hhh\creatform.html:449:        <input type="text" class="form-control" name="earthBorders[0].Difference" readonly />
+hhh\creatform.html:462:                            <select class="form-select border-type" 
+name="earthBorders[3].BorderType" style="display:none;">
+hhh\creatform.html:473:                        <input type="text" class="form-control" 
+name="earthBorders[3].BorderDescription" />
+hhh\creatform.html:476:                        <input type="hidden" name="earthBorders[3].IdenticalOrDifferent" 
+value="0" />
+hhh\creatform.html:478:                            name="earthBorders[3].IdenticalOrDifferent" value="1" />
+hhh\creatform.html:483:                        <input type="text" class="form-control" 
+name="earthBorders[3].Difference" />
+hhh\creatform.html:584:                    <select asp-for="tanjezOrder.AccessRoadType"
+hhh\creatform.html:676:                    <input type="text" class="form-control" id="txtUp" name="fromup" 
+disabled placeholder="أدخل الحد من الأعلى" />
+hhh\creatform.html:685:                    <input type="text" class="form-control" id="txtDown" name="fromdown" 
+disabled placeholder="أدخل الحد من الأسفل" />
+hhh\creatform.html:758:                <select asp-for="tanjezOrder.AccessRoadType"
+hhh\creatform.html:772:                @* <select asp-for="tanjezOrder.PeriodType" 
+asp-items="ViewBag.accessRoadType" class="form-select"> *@
+hhh\creatform.html:774:                <select class="form-select" id="periodType" name="tanjezOrder.PeriodType">
+hhh\creatform.html:782:                <input type="text" class="form-control" id="maximumDuration" 
+name="tanjezOrder.MaximumDuration" placeholder="اختر التاريخ" />
+hhh\creatform.html:792:                <select class="form-select" id="Transportation" 
+name="tanjezOrder.Transportation">
+hhh\creatform.html:806:                <select class="form-select" id="OverNight" name="tanjezOrder.OverNight">
+hhh\creatform.html:818:                <select class="form-select" id="Allowance" name="tanjezOrder.Allowance">
+hhh\creatform.html:841:        <textarea class="form-control" id="txtNotes" name="txtNotes" rows="4" 
+placeholder="أدخل ملاحظاتك"></textarea>
+hhh\creatform.html:852:            <input type="file" class="form-control me-2" name="fileAttach[]" />
+hhh\creatform.html:874:            <input type="file" class="form-control me-2" name="fileAttach[]" />
+hhh\creatform.html:999:        <textarea class="form-control" id="txtNotes" name="txtNotes" rows="4" placeholder=" 
+موضوع الشكوى"></textarea>
+hhh\creatform.html:1005:        <textarea class="form-control" id="txtNotes" name="txtNotes" rows="4" placeholder=" 
+ملخص الشكوى"></textarea>
+hhh\creatform.html:1095:                        <input type="text" class="form-control" name="" />
+hhh\creatform.html:1124:                        <input type="text" class="form-control" name="" />
+hhh\creatform.html:1152:                        <input type="text" class="form-control" name="" />
+hhh\creatform.html:1165:                        <input type="date" class="form-control" name="datt" />
+hhh\creatform.html:1168:                        <input type="text" class="form-control" name="" />
+hhh\creatform.html:1198:                        <input type="text" class="form-control" name="" />
+hhh\creatform.html:1345:    </form>
+hhh\devid.html:98:        <textarea class="form-control" id="txtNotes" name="txtNotes" rows="4" placeholder=" موضوع 
+الشكوى"></textarea>
+hhh\devid.html:104:        <textarea class="form-control" id="txtNotes" name="txtNotes" rows="4" placeholder=" ملخص 
+الشكوى"></textarea>
+hhh\devid.html:199:                        <input type="text" class="form-control" name="" />
+hhh\devid.html:228:                        <input type="text" class="form-control" name="" />
+hhh\devid.html:256:                        <input type="text" class="form-control" name="" />
+hhh\devid.html:269:                        <input type="date" class="form-control" name="datt" />
+hhh\devid.html:272:                        <input type="text" class="form-control" name="" />
+hhh\devid.html:302:                        <input type="text" class="form-control" name="" />
+hhh\index.html:5:<meta name="viewport" content="width=device-width, initial-scale=1.0">
+hhh\WorkOffer.html:5:  <meta name="viewport" content="width=device-width, initial-scale=1" />
+hhh\WorkOffer.html:68:    <form id="tanjezForm" method="post" enctype="multipart/form-data">
+hhh\WorkOffer.html:73:    <input type="hidden" name="UserID" value="@Context.Session.GetInt32("UserID")" />
+hhh\WorkOffer.html:78:                <label asp-for="OfferName" class="form-label required">اسم العرض <span 
+class="text-danger">*</span></label>
+hhh\WorkOffer.html:79:                <input asp-for="OfferName" type="text" class="form-control"  required
+hhh\WorkOffer.html:95:            <input id="endDateInput" name="EndDate" type="date" class="form-control mt-2" 
+style="display:none;" />
+hhh\WorkOffer.html:125:            <label asp-for="WorkWagesTemplateId" class="form-label"></label>
+hhh\WorkOffer.html:126:            <select asp-for="WorkWagesTemplateId" id="transportTemplateSelect1" 
+class="form-select">
+hhh\WorkOffer.html:160:            <label asp-for="TransportationScheduleTemplateId" class="form-label">قالب 
+التنقلات والمبيت</label>
+hhh\WorkOffer.html:161:            <select asp-for="TransportationScheduleTemplateId" id="transportTemplateSelect" 
+class="form-select">
+hhh\WorkOffer.html:182:                const statuse1 = row.querySelector("input[name='StatuseType1']")?.value;
+hhh\WorkOffer.html:183:                const statuse2 = row.querySelector("input[name='StatuseType2']")?.value;
+hhh\WorkOffer.html:229:            <label asp-for="AdditionalCostTypeId" class="form-label">قالب التكاليف الاضافية 
+</label>
+hhh\WorkOffer.html:230:            <select asp-for="AdditionalCostTypeId" id="additionalCostSelect" 
+class="form-select">
+hhh\WorkOffer.html:259:                <input asp-for="AdvancePaymentPercentage" type="number" class="form-control"
+hhh\WorkOffer.html:265:                <input asp-for="OnSitePaymentPercentage" type="number" class="form-control"
+hhh\WorkOffer.html:271:                <input asp-for="AfterDeliveryPaymentPercentage" type="number" 
+class="form-control"
+hhh\WorkOffer.html:279:            <input asp-for="LatePenaltyPercentage" type="number" class="form-control" 
+placeholder="يخصم من المبلغ المتفق نسبة" />
+hhh\WorkOffer.html:284:                <input asp-for="ResignationAfterAdvancePercentage" type="number" 
+class="form-control" placeholder="يخصم من المبلغ المتفق نسبة"
+hhh\WorkOffer.html:290:            <input asp-for="CamelResignationPenaltyPercentage" type="number" 
+class="form-control" placeholder="يخصم من المبلغ المتفق نسبة" />
+hhh\WorkOffer.html:308:                                  name="Notes"></textarea>
+hhh\WorkOffer.html:316:    </form>
+hhh\WorkOffer1.html:5:  <meta name="viewport" content="width=device-width, initial-scale=1" />
+hhh\WorkOffer1.html:68:    <form id="tanjezForm" method="post" enctype="multipart/form-data">
+hhh\WorkOffer1.html:73:    <input type="hidden" name="UserID" value="@Context.Session.GetInt32("UserID")" />
+hhh\WorkOffer1.html:90:            <label asp-for="AdditionalCostTypeId" class="form-label">قالب التكاليف الاضافية 
+</label>
+hhh\WorkOffer1.html:91:            <select asp-for="AdditionalCostTypeId" id="additionalCostSelect" 
+class="form-select">
+hhh\WorkOffer1.html:116:    </form>
+hhh\Work_Form.html:5:  <meta name="viewport" content="width=device-width, initial-scale=1" />
+hhh\Work_Form.html:68:        <form>
+hhh\Work_Form.html:151:                                <select name="Governorate" class="form-select 
+form-select-sm">
+hhh\Work_Form.html:167:                                <select name="Governorate" class="form-select 
+form-select-sm">
+hhh\Work_Form.html:233:                            <select name="Governorate" class="form-select form-select-sm">
+hhh\Work_Form.html:246:                            <select name="Governorate" class="form-select form-select-sm">
+hhh\Work_Form.html:438:        </form>
+hhh\Work_Form.html:450:                    <form id="clientForm">
+hhh\Work_Form.html:467:                    </form>
+hhh\Work_Form.html:486:                    <form id="adoulForm">
+hhh\Work_Form.html:489:                            <input type="text" class="form-control" name="adoulName" 
+required>
+hhh\Work_Form.html:493:                            <input type="text" class="form-control" name="adoulPhone" 
+required>
+hhh\Work_Form.html:497:                            <textarea class="form-control" name="adoulNotes"></textarea>
+hhh\Work_Form.html:499:                    </form>
+hhh\Work_Form_base.html:5:  <meta name="viewport" content="width=device-width, initial-scale=1" />
+hhh\Work_Form_base.html:68:        <form>
+hhh\Work_Form_base.html:151:                                <select name="Governorate" class="form-select 
+form-select-sm">
+hhh\Work_Form_base.html:167:                                <select name="Governorate" class="form-select 
+form-select-sm">
+hhh\Work_Form_base.html:233:                            <select name="Governorate" class="form-select 
+form-select-sm">
+hhh\Work_Form_base.html:246:                            <select name="Governorate" class="form-select 
+form-select-sm">
+hhh\Work_Form_base.html:576:                <select asp-for="tanjezOrder.Alhiaza"
+hhh\Work_Form_base.html:606:        </form>
+hhh\Work_Form_base.html:618:                    <form id="clientForm">
+hhh\Work_Form_base.html:635:                    </form>
+hhh\Work_Form_base.html:654:                    <form id="adoulForm">
+hhh\Work_Form_base.html:657:                            <input type="text" class="form-control" name="adoulName" 
+required>
+hhh\Work_Form_base.html:661:                            <input type="text" class="form-control" name="adoulPhone" 
+required>
+hhh\Work_Form_base.html:665:                            <textarea class="form-control" name="adoulNotes"></textarea>
+hhh\Work_Form_base.html:667:                    </form>
+
+
