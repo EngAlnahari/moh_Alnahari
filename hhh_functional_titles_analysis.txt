@@ -1,0 +1,49 @@
+﻿
+hhh\AllTemplate.html:6:<title>السيرة الذاتية</title>
+hhh\AllTemplate.html:136:    <h2 class="text-center mb-4">إنشاء السيرة الذاتية</h2>
+hhh\AllTemplate.html:1343:    <h2 class="text-center mb-4">  واجهة استمارة عمل</h2>
+hhh\AllTemplate.html:1889:    <h2 class="text-center mb-4">  واجهة  العروض</h2>
+hhh\AllTemplate.html:1894:                <h2 class="page-title">عرض جديد</h2>
+hhh\AllTemplate.html:2122:                    <h2 class="accordion-header" id="headingNotes">
+hhh\almjal.html:6:  <title>نظام شجرة المجالات</title>
+hhh\almjal.html:46:      <h2 class="text-center step-title">مرحبا بك في نظام التجميع<br>اختر المجال</h2>
+hhh\almjal.html:52:      <h2 class="text-center step-title">اختر التخصص</h2>
+hhh\almjal.html:59:      <h2 class="text-center step-title">اختر الفرع</h2>
+hhh\almjal.html:66:      <h2 class="text-center step-title">اختر التفصيل</h2>
+hhh\almjal1.html:7:  <title>شجرة المجالات الهندسية والقانونية والقضاء</title>
+hhh\almjal1.html:15:  <h2 class="mb-3 text-primary text-center">شجرة المجالات الهندسية والقانونية والقضاء</h2>
+hhh\ContractTemplate.html:7:    <title>لوحة العقود للمهندس</title>
+hhh\ContractTemplate1.html:7:    <title>لوحة العقود للمهندس</title>
+hhh\create.html:6:<title>السيرة الذاتية</title>
+hhh\create.html:80:    <h2 class="text-center mb-4">إنشاء السيرة الذاتية</h2>
+hhh\createdevided.html:6:<title>السيرة الذاتية</title>
+hhh\createform.html:6:<title>السيرة الذاتية</title>
+hhh\createform.html:112:    <h2 class="text-center mb-4">إنشاء السيرة الذاتية</h2>
+hhh\createorder.html:6:<title>السيرة الذاتية</title>
+hhh\createspece.html:6:<title>السيرة الذاتية</title>
+hhh\createspece.html:80:    <h2 class="text-center mb-4">إنشاء السيرة الذاتية</h2>
+hhh\creatform.html:6:<title>السيرة الذاتية</title>
+hhh\creatform.html:80:    <h2 class="text-center mb-4">إنشاء السيرة الذاتية</h2>
+hhh\index.html:6:<title>السيرة الذاتية</title>
+hhh\index.html:80:    <h2 class="text-center mb-4">إنشاء السيرة الذاتية</h2>
+hhh\index.html:567:        <h1 class="text-center text-primary mb-4">السيرة الذاتية</h1>
+hhh\index.html:569:            <h2>المعلومات الشخصية</h2>
+hhh\index.html:580:        ${skills ? `<div class="section"><h2>المهارات 
+التقنية</h2>${skills.replaceAll('item-box','item-box-preview')}</div>` : ''}
+hhh\index.html:581:        ${experiences ? `<div class="section"><h2>الخبرات 
+العملية</h2>${experiences.replaceAll('item-box','item-box-preview')}</div>` : ''}
+hhh\index.html:582:        ${educations ? `<div class="section"><h2>المؤهلات 
+العلمية</h2>${educations.replaceAll('item-box','item-box-preview')}</div>` : ''}
+hhh\index.html:583:        ${certs ? `<div class="section"><h2>الشهادات 
+والدورات</h2>${certs.replaceAll('item-box','item-box-preview')}</div>` : ''}
+hhh\index.html:584:        ${projects ? `<div class="section"><h2>المشاريع السابقة 
+والإنجازات</h2>${projects.replaceAll('item-box','item-box-preview')}</div>` : ''}
+hhh\WorkOffer.html:6:  <title>شجرة المجالات الهندسية والقانونية والقضاء</title>
+hhh\WorkOffer.html:70:            <h2 class="page-title">عرض جديد</h2>
+hhh\WorkOffer.html:298:                <h2 class="accordion-header" id="headingNotes">
+hhh\WorkOffer1.html:6:  <title>شجرة المجالات الهندسية والقانونية والقضاء</title>
+hhh\WorkOffer1.html:70:            <h2 class="page-title">عرض جديد</h2>
+hhh\Work_Form.html:6:  <title>شجرة المجالات الهندسية والقانونية والقضاء</title>
+hhh\Work_Form_base.html:6:  <title>شجرة المجالات الهندسية والقانونية والقضاء</title>
+
+

@@ -1,0 +1,22 @@
+﻿
+Page                   SizeKB Lines
+----                   ------ -----
+AllTemplate.html        89.92  2148
+create.html             59.39  1569
+creatform.html          52.51  1352
+createform.html         52.29  1341
+createdevided.html      47.92  1248
+createorder.html        38.97   925
+Work_Form_base.html     32.55   710
+index.html              26.96   601
+Work_Form.html          26.03   542
+almjal.html             44.72   518
+ContractTemplate.html   20.75   485
+ContractTemplate1.html  17.05   430
+devid.html              12.56   416
+createspece.html        10.69   384
+WorkOffer.html          12.82   321
+almjal1.html            36.24   292
+WorkOffer1.html          3.61   121
+
+
