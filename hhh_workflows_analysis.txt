@@ -1,0 +1,649 @@
+﻿
+hhh\AllTemplate.html:7:<link href="libs/bootstrap.rtl.min.css" rel="stylesheet">
+hhh\AllTemplate.html:8:<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" 
+rel="stylesheet">
+hhh\AllTemplate.html:52:    .action-btns button { margin-left: 5px; }
+hhh\AllTemplate.html:140:  const params = new URLSearchParams(window.location.search);
+hhh\AllTemplate.html:340:                document.getElementById("unitSelect").addEventListener("change", function 
+() {
+hhh\AllTemplate.html:367:                checkbox.addEventListener('change', function() {
+hhh\AllTemplate.html:378:                    <button type="button" class="btn btn-outline-secondary" 
+id="attachBtn">إرفاق</button>
+hhh\AllTemplate.html:437:                        <button type="button" class="btn btn-danger btn-sm remove-border">
+hhh\AllTemplate.html:439:                        </button>
+hhh\AllTemplate.html:473:                        <button type="button" class="btn btn-danger btn-sm remove-border">
+hhh\AllTemplate.html:475:                        </button>
+hhh\AllTemplate.html:508:                        <button type="button" class="btn btn-danger btn-sm remove-border">
+hhh\AllTemplate.html:510:                        </button>
+hhh\AllTemplate.html:542:                        <button type="button" class="btn btn-danger btn-sm remove-border">
+hhh\AllTemplate.html:544:                        </button>
+hhh\AllTemplate.html:550:    <button type="button" class="btn btn-outline-primary add-row-btn mb-3" 
+id="addBorderRow">
+hhh\AllTemplate.html:552:    </button>
+hhh\AllTemplate.html:578:    <button type="button" class="btn btn-outline-primary add-row-btn mb-3" 
+id="addBuildingRow">
+hhh\AllTemplate.html:580:    </button>
+hhh\AllTemplate.html:653:document.addEventListener('DOMContentLoaded', function() {
+hhh\AllTemplate.html:659:    select.addEventListener('change', function() {
+hhh\AllTemplate.html:682:        checkbox.addEventListener('change', function() {
+hhh\AllTemplate.html:690:    addBuildingBtn.addEventListener('click', function() {
+hhh\AllTemplate.html:771:    document.addEventListener('DOMContentLoaded', function() {
+hhh\AllTemplate.html:775:        select.addEventListener('change', function() {
+hhh\AllTemplate.html:782:    document.addEventListener('DOMContentLoaded', function () {
+hhh\AllTemplate.html:789:        chkUp.addEventListener('change', function () {
+hhh\AllTemplate.html:794:        chkDown.addEventListener('change', function () {
+hhh\AllTemplate.html:909:            <button type="button" class="btn btn-outline-danger 
+remove-attachment">&times;</button>
+hhh\AllTemplate.html:914:        <button type="button" class="btn btn-outline-primary" id="addAttachmentBtn">
+hhh\AllTemplate.html:916:        </button>
+hhh\AllTemplate.html:922:    document.addEventListener('DOMContentLoaded', function() {
+hhh\AllTemplate.html:926:    addBtn.addEventListener('click', function() {
+hhh\AllTemplate.html:931:            <button type="button" class="btn btn-outline-danger 
+remove-attachment">&times;</button>
+hhh\AllTemplate.html:936:        newRow.querySelector('.remove-attachment').addEventListener('click', function() {
+hhh\AllTemplate.html:943:        btn.addEventListener('click', function() {
+hhh\AllTemplate.html:1007:        <div class="custom-input-container input-with-button">
+hhh\AllTemplate.html:1010:            <button type="button" class="btn btn-outline-primary" id="addNameBtn1">
+hhh\AllTemplate.html:1012:            </button>
+hhh\AllTemplate.html:1036:        <div class="custom-input-container input-with-button">
+hhh\AllTemplate.html:1039:            <button type="button" class="btn btn-outline-primary" id="addNameBtn2">
+hhh\AllTemplate.html:1041:            </button>
+hhh\AllTemplate.html:1273:document.addEventListener('DOMContentLoaded', function() {
+hhh\AllTemplate.html:1282:        addBtn.addEventListener('click', function() {
+hhh\AllTemplate.html:1317:    <button type="button" class="btn btn-outline-primary add-row-btn mb-3" 
+id="addBuildingRow">
+hhh\AllTemplate.html:1319:    </button>
+hhh\AllTemplate.html:1334:            <button type="submit" id="saveRequestBtn" class="btn btn-success px-5">
+hhh\AllTemplate.html:1336:            </button>
+hhh\AllTemplate.html:1397:                      <li><a class="dropdown-item" href="#">وكلاء أوقاف في القرى = عادل 
+محمد صالح عايش-77088864</a></li>
+hhh\AllTemplate.html:1398:                      <li><a class="dropdown-item" href="#">+ إنشاء عدل الروية 
+جديد</a></li>
+hhh\AllTemplate.html:1399:                      <li><a class="dropdown-item" href="#">🔍 البحث المتقدم</a></li>
+hhh\AllTemplate.html:1418:                                <button type="button" class="btn btn-sm 
+btn-outline-primary" onclick="addTableRow()">
+hhh\AllTemplate.html:1420:                                </button>
+hhh\AllTemplate.html:1466:                                <button type="button" class="btn btn-sm 
+btn-outline-danger" onclick="removeTableRow(this)">
+hhh\AllTemplate.html:1468:                                </button>
+hhh\AllTemplate.html:1473:                <button type="button" class="add-row-btn mt-2">+ أضف سطر</button>
+hhh\AllTemplate.html:1747:              <li><a class="dropdown-item" href="#">لم يتم ذكرة في الوثيقة</a></li>
+hhh\AllTemplate.html:1748:              <li><a class="dropdown-item" href="#">تذكره بشكل صريح</a></li>
+hhh\AllTemplate.html:1749:              <li><a class="dropdown-item" href="#">تم الاشارة الية</a></li>
+hhh\AllTemplate.html:1758:                <li><a class="dropdown-item" href="#">ملكية الرهق</a></li>
+hhh\AllTemplate.html:1759:                <li><a class="dropdown-item" href="#"> طلبعة الانتفاع فية </a></li>
+hhh\AllTemplate.html:1760:                <li><a class="dropdown-item" href="#">  هل تم استخدام اي حواجز او 
+عوائق</a></li>
+hhh\AllTemplate.html:1761:                <li><a class="dropdown-item" href="#">هل يتفق الطرفان على المسار التاريخي 
+للماء</a></li>
+hhh\AllTemplate.html:1878:                    <button type="submit" class="btn btn-primary me-2" 
+onclick="saveData(event)">حفظ استمارة العمل</button>
+hhh\AllTemplate.html:1879:                    <button type="button" class="btn btn-info me-2" 
+onclick="sendReportToClient()"> حفظ وإرسال التقرير للعميل</button>
+hhh\AllTemplate.html:1926:                endDateOption.addEventListener("change", function () {
+hhh\AllTemplate.html:2023:             
+document.getElementById("transportTemplateSelect").addEventListener("change", function() {
+hhh\AllTemplate.html:2067:            <button type="button" class="btn btn-outline-primary"
+hhh\AllTemplate.html:2068:                    onclick="showFormDialog('AdditionalCostModel')">
+hhh\AllTemplate.html:2070:            </button>
+hhh\AllTemplate.html:2123:                        <button class="accordion-button collapsed" type="button" 
+data-bs-toggle="collapse"
+hhh\AllTemplate.html:2126:                        </button>
+hhh\AllTemplate.html:2139:            <button type="submit" class="btn btn-dark save-btn mt-4" >حفظ</button>
+hhh\almjal.html:7:  <link href="libs/bootstrap.rtl.min.css" rel="stylesheet">
+hhh\almjal.html:8:  <link rel="stylesheet" 
+href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+hhh\almjal.html:54:      <button class="btn btn-secondary mt-3" id="back-to-main">العودة للمجالات</button>
+hhh\almjal.html:61:      <button class="btn btn-secondary mt-3" id="back-to-specialty">العودة للتخصصات</button>
+hhh\almjal.html:71:        <button class="btn btn-secondary" id="back-to-branch">العودة للفروع</button>
+hhh\almjal.html:72:        <button class="btn btn-primary" id="btn-requests">الطلبات</button>
+hhh\almjal.html:73:        <button class="btn btn-success" id="btn-work-form">استمارة العمل</button>
+hhh\almjal.html:74:        <button class="btn btn-warning" id="btn-work-contract">عقد العمل</button>
+hhh\almjal.html:75:        <button class="btn btn-warning" id="btn-work-wofer">العروض</button>
+hhh\almjal.html:425:    window.location.href = `createform.html?path=${encodedPath}`;
+hhh\almjal.html:428:    window.location.href = `createform.html?path=${encodedPath}`;
+hhh\almjal.html:431:    window.location.href = `createdevided.html?path=${encodedPath}`;
+hhh\almjal.html:434:    window.location.href = `createdevided.html?path=${encodedPath}`;
+hhh\almjal.html:437:    window.location.href = `createorder.html?path=${encodedPath}`;
+hhh\almjal.html:440:    window.location.href = `createspece.html?path=${encodedPath}`;
+hhh\almjal.html:443:    window.location.href = `createspece.html?path=${encodedPath}`;
+hhh\almjal.html:446:    window.location.href = `createspece.html?path=${encodedPath}`;
+hhh\almjal.html:456:    window.location.href = `Work_Form.html?path=${encodedPath}`;
+hhh\almjal.html:459:    window.location.href = `Work_Form1.html?path=${encodedPath}`;
+hhh\almjal.html:469:    window.location.href = `ContractTemplate.html?path=${encodedPath}`;
+hhh\almjal.html:472:    window.location.href = `ContractTemplate1.html?path=${encodedPath}`;
+hhh\almjal.html:482:    window.location.href = `WorkOffer.html?path=${encodedPath}`;
+hhh\almjal.html:485:    window.location.href = `WorkOffer1.html?path=${encodedPath}`;
+hhh\almjal.html:491://$("#btn-work-wofer").click(() => window.location.href = "WorkOffer1.html");
+hhh\almjal1.html:8:  <link href="libs/bootstrap.rtl.min.css" rel="stylesheet">
+hhh\almjal1.html:43:  <a class="btn btn-success" href="create.html"> انشاء طلب</a>
+hhh\almjal1.html:44:  <a class="btn btn-success" href="Work_Form_base.html"> انشاء استمارة عمل</a>
+hhh\almjal1.html:45:  <a class="btn btn-success" href="WorkOffer.html"> انشاء عرض</a>
+hhh\almjal1.html:46:  <a class="btn btn-success" href="ContractTemplate.html"> انشاء عقد</a>
+hhh\almjal1.html:47:  <a class="btn btn-success" href="AllTemplate.html">جميع الحقول</a>
+hhh\ContractTemplate.html:8:    <link rel="stylesheet" href="../assets/css/style.css">
+hhh\ContractTemplate.html:169:        .form-buttons {
+hhh\ContractTemplate.html:174:            .form-buttons button {
+hhh\ContractTemplate.html:187:        .btn-submit {
+hhh\ContractTemplate.html:196:        .btn-submit:hover {
+hhh\ContractTemplate.html:276:                <button class="btn btn-success" id="approveBtn">الموافقة على 
+العقد</button>
+hhh\ContractTemplate.html:278:                <button class="btn-reject">الاعتراض على احد البنود</button>
+hhh\ContractTemplate.html:279:                <button class="btn-reject">اضافة او تعديل بند</button>
+hhh\ContractTemplate.html:280:                <button class="btn-reject" id="rejectBtn" 
+onclick="showRejectForm()">رفض العقد</button>
+hhh\ContractTemplate.html:299:                    <div class="form-buttons">
+hhh\ContractTemplate.html:300:                        <button type="button" class="btn-cancel" 
+onclick="hideRejectForm()">إلغاء</button>
+hhh\ContractTemplate.html:301:                        <button type="submit" class="btn-submit">إرسال</button>
+hhh\ContractTemplate.html:325:                <button class="btn-approve" style="margin-bottom:10px; width:100%;" 
+onclick="showPaymentForm('credit_card')">دفع عبر بطاقة ائتمان</button>
+hhh\ContractTemplate.html:326:                <button class="btn-approve" style="background:#2980b9;" 
+onclick="showPaymentForm('sent_to_client')">تم إرسالها للعميل</button>
+hhh\ContractTemplate.html:328:                <button class="btn-cancel" style="margin-top:18px;" 
+onclick="closePaymentModal()">إلغاء</button>
+hhh\ContractTemplate.html:331:            <form id="paymentForm" style="display:none; margin-top:10px; 
+text-align:right;" onsubmit="submitPayment(event)">
+hhh\ContractTemplate.html:361:                    <button type="button" class="btn-cancel" 
+onclick="backToMethod()">رجوع</button>
+hhh\ContractTemplate.html:362:                    <button type="submit" class="btn-approve">تأكيد الدفع</button>
+hhh\ContractTemplate.html:368:        // Show the reject form and hide the action buttons
+hhh\ContractTemplate.html:373:        // Hide the reject form and show the action buttons
+hhh\ContractTemplate.html:380:        document.getElementById('rejectForm').addEventListener('submit', function(e) {
+hhh\ContractTemplate.html:395:        document.getElementById('approveBtn').addEventListener('click', function() {
+hhh\ContractTemplate.html:451:        function submitPayment(event) {
+hhh\ContractTemplate1.html:8:    <link rel="stylesheet" href="../assets/css/style.css">
+hhh\ContractTemplate1.html:169:        .form-buttons {
+hhh\ContractTemplate1.html:174:            .form-buttons button {
+hhh\ContractTemplate1.html:187:        .btn-submit {
+hhh\ContractTemplate1.html:196:        .btn-submit:hover {
+hhh\ContractTemplate1.html:221:                <button class="btn btn-success" id="approveBtn">الموافقة على 
+العقد</button>
+hhh\ContractTemplate1.html:223:                <button class="btn-reject">الاعتراض على احد البنود</button>
+hhh\ContractTemplate1.html:224:                <button class="btn-reject">اضافة او تعديل بند</button>
+hhh\ContractTemplate1.html:225:                <button class="btn-reject" id="rejectBtn" 
+onclick="showRejectForm()">رفض العقد</button>
+hhh\ContractTemplate1.html:244:                    <div class="form-buttons">
+hhh\ContractTemplate1.html:245:                        <button type="button" class="btn-cancel" 
+onclick="hideRejectForm()">إلغاء</button>
+hhh\ContractTemplate1.html:246:                        <button type="submit" class="btn-submit">إرسال</button>
+hhh\ContractTemplate1.html:270:                <button class="btn-approve" style="margin-bottom:10px; width:100%;" 
+onclick="showPaymentForm('credit_card')">دفع عبر بطاقة ائتمان</button>
+hhh\ContractTemplate1.html:271:                <button class="btn-approve" style="background:#2980b9;" 
+onclick="showPaymentForm('sent_to_client')">تم إرسالها للعميل</button>
+hhh\ContractTemplate1.html:273:                <button class="btn-cancel" style="margin-top:18px;" 
+onclick="closePaymentModal()">إلغاء</button>
+hhh\ContractTemplate1.html:276:            <form id="paymentForm" style="display:none; margin-top:10px; 
+text-align:right;" onsubmit="submitPayment(event)">
+hhh\ContractTemplate1.html:306:                    <button type="button" class="btn-cancel" 
+onclick="backToMethod()">رجوع</button>
+hhh\ContractTemplate1.html:307:                    <button type="submit" class="btn-approve">تأكيد الدفع</button>
+hhh\ContractTemplate1.html:313:        // Show the reject form and hide the action buttons
+hhh\ContractTemplate1.html:318:        // Hide the reject form and show the action buttons
+hhh\ContractTemplate1.html:325:        document.getElementById('rejectForm').addEventListener('submit', function(e) 
+{
+hhh\ContractTemplate1.html:340:        document.getElementById('approveBtn').addEventListener('click', function() {
+hhh\ContractTemplate1.html:396:        function submitPayment(event) {
+hhh\create.html:7:<link href="libs/bootstrap.rtl.min.css" rel="stylesheet">
+hhh\create.html:8:<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" 
+rel="stylesheet">
+hhh\create.html:52:    .action-btns button { margin-left: 5px; }
+hhh\create.html:285:                document.getElementById("unitSelect").addEventListener("change", function () {
+hhh\create.html:312:                checkbox.addEventListener('change', function() {
+hhh\create.html:323:                    <button type="button" class="btn btn-outline-secondary" 
+id="attachBtn">إرفاق</button>
+hhh\create.html:382:                        <button type="button" class="btn btn-danger btn-sm remove-border">
+hhh\create.html:384:                        </button>
+hhh\create.html:418:                        <button type="button" class="btn btn-danger btn-sm remove-border">
+hhh\create.html:420:                        </button>
+hhh\create.html:453:                        <button type="button" class="btn btn-danger btn-sm remove-border">
+hhh\create.html:455:                        </button>
+hhh\create.html:487:                        <button type="button" class="btn btn-danger btn-sm remove-border">
+hhh\create.html:489:                        </button>
+hhh\create.html:495:    <button type="button" class="btn btn-outline-primary add-row-btn mb-3" id="addBorderRow">
+hhh\create.html:497:    </button>
+hhh\create.html:523:    <button type="button" class="btn btn-outline-primary add-row-btn mb-3" id="addBuildingRow">
+hhh\create.html:525:    </button>
+hhh\create.html:598:document.addEventListener('DOMContentLoaded', function() {
+hhh\create.html:604:    select.addEventListener('change', function() {
+hhh\create.html:627:        checkbox.addEventListener('change', function() {
+hhh\create.html:635:    addBuildingBtn.addEventListener('click', function() {
+hhh\create.html:716:    document.addEventListener('DOMContentLoaded', function() {
+hhh\create.html:720:        select.addEventListener('change', function() {
+hhh\create.html:727:    document.addEventListener('DOMContentLoaded', function () {
+hhh\create.html:734:        chkUp.addEventListener('change', function () {
+hhh\create.html:739:        chkDown.addEventListener('change', function () {
+hhh\create.html:854:            <button type="button" class="btn btn-outline-danger 
+remove-attachment">&times;</button>
+hhh\create.html:859:        <button type="button" class="btn btn-outline-primary" id="addAttachmentBtn">
+hhh\create.html:861:        </button>
+hhh\create.html:867:    document.addEventListener('DOMContentLoaded', function() {
+hhh\create.html:871:    addBtn.addEventListener('click', function() {
+hhh\create.html:876:            <button type="button" class="btn btn-outline-danger 
+remove-attachment">&times;</button>
+hhh\create.html:881:        newRow.querySelector('.remove-attachment').addEventListener('click', function() {
+hhh\create.html:888:        btn.addEventListener('click', function() {
+hhh\create.html:952:        <div class="custom-input-container input-with-button">
+hhh\create.html:955:            <button type="button" class="btn btn-outline-primary" id="addNameBtn1">
+hhh\create.html:957:            </button>
+hhh\create.html:981:        <div class="custom-input-container input-with-button">
+hhh\create.html:984:            <button type="button" class="btn btn-outline-primary" id="addNameBtn2">
+hhh\create.html:986:            </button>
+hhh\create.html:1264:.input-with-button {
+hhh\create.html:1269:.input-with-button input {
+hhh\create.html:1274:.input-with-button button {
+hhh\create.html:1280:document.addEventListener('DOMContentLoaded', function() {
+hhh\create.html:1289:        addBtn.addEventListener('click', function() {
+hhh\create.html:1324:    <button type="button" class="btn btn-outline-primary add-row-btn mb-3" id="addBuildingRow">
+hhh\create.html:1326:    </button>
+hhh\create.html:1557:            <button type="submit" id="saveRequestBtn" class="btn btn-success px-5">
+hhh\create.html:1559:            </button>
+hhh\createdevided.html:7:<link href="libs/bootstrap.rtl.min.css" rel="stylesheet">
+hhh\createdevided.html:8:<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" 
+rel="stylesheet">
+hhh\createdevided.html:52:    .action-btns button { margin-left: 5px; }
+hhh\createdevided.html:84:  const params = new URLSearchParams(window.location.search);
+hhh\createdevided.html:293:                document.getElementById("unitSelect").addEventListener("change", 
+function () {
+hhh\createdevided.html:320:                checkbox.addEventListener('change', function() {
+hhh\createdevided.html:331:                    <button type="button" class="btn btn-outline-secondary" 
+id="attachBtn">إرفاق</button>
+hhh\createdevided.html:390:                        <button type="button" class="btn btn-danger btn-sm 
+remove-border">
+hhh\createdevided.html:392:                        </button>
+hhh\createdevided.html:426:                        <button type="button" class="btn btn-danger btn-sm 
+remove-border">
+hhh\createdevided.html:428:                        </button>
+hhh\createdevided.html:461:                        <button type="button" class="btn btn-danger btn-sm 
+remove-border">
+hhh\createdevided.html:463:                        </button>
+hhh\createdevided.html:495:                        <button type="button" class="btn btn-danger btn-sm 
+remove-border">
+hhh\createdevided.html:497:                        </button>
+hhh\createdevided.html:503:    <button type="button" class="btn btn-outline-primary add-row-btn mb-3" 
+id="addBorderRow">
+hhh\createdevided.html:505:    </button>
+hhh\createdevided.html:531:    <button type="button" class="btn btn-outline-primary add-row-btn mb-3" 
+id="addBuildingRow">
+hhh\createdevided.html:533:    </button>
+hhh\createdevided.html:606:document.addEventListener('DOMContentLoaded', function() {
+hhh\createdevided.html:612:    select.addEventListener('change', function() {
+hhh\createdevided.html:635:        checkbox.addEventListener('change', function() {
+hhh\createdevided.html:643:    addBuildingBtn.addEventListener('click', function() {
+hhh\createdevided.html:724:    document.addEventListener('DOMContentLoaded', function() {
+hhh\createdevided.html:728:        select.addEventListener('change', function() {
+hhh\createdevided.html:735:    document.addEventListener('DOMContentLoaded', function () {
+hhh\createdevided.html:742:        chkUp.addEventListener('change', function () {
+hhh\createdevided.html:747:        chkDown.addEventListener('change', function () {
+hhh\createdevided.html:862:            <button type="button" class="btn btn-outline-danger 
+remove-attachment">&times;</button>
+hhh\createdevided.html:867:        <button type="button" class="btn btn-outline-primary" id="addAttachmentBtn">
+hhh\createdevided.html:869:        </button>
+hhh\createdevided.html:875:    document.addEventListener('DOMContentLoaded', function() {
+hhh\createdevided.html:879:    addBtn.addEventListener('click', function() {
+hhh\createdevided.html:884:            <button type="button" class="btn btn-outline-danger 
+remove-attachment">&times;</button>
+hhh\createdevided.html:889:        newRow.querySelector('.remove-attachment').addEventListener('click', function() {
+hhh\createdevided.html:896:        btn.addEventListener('click', function() {
+hhh\createdevided.html:966:.input-with-button {
+hhh\createdevided.html:971:.input-with-button input {
+hhh\createdevided.html:976:.input-with-button button {
+hhh\createdevided.html:982:document.addEventListener('DOMContentLoaded', function() {
+hhh\createdevided.html:991:        addBtn.addEventListener('click', function() {
+hhh\createdevided.html:1236:            <button type="submit" id="saveRequestBtn" class="btn btn-success px-5">
+hhh\createdevided.html:1238:            </button>
+hhh\createform.html:7:<link href="libs/bootstrap.rtl.min.css" rel="stylesheet">
+hhh\createform.html:8:<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" 
+rel="stylesheet">
+hhh\createform.html:72:.input-with-button {
+hhh\createform.html:77:.input-with-button input {  
+hhh\createform.html:82:.input-with-button button {
+hhh\createform.html:116:  const params = new URLSearchParams(window.location.search);
+hhh\createform.html:335:                document.getElementById("unitSelect").addEventListener("change", function 
+() {
+hhh\createform.html:362:                checkbox.addEventListener('change', function() {
+hhh\createform.html:373:                    <button type="button" class="btn btn-outline-secondary" 
+id="attachBtn">إرفاق</button>
+hhh\createform.html:432:                        <button type="button" class="btn btn-danger btn-sm remove-border">
+hhh\createform.html:434:                        </button>
+hhh\createform.html:468:                        <button type="button" class="btn btn-danger btn-sm remove-border">
+hhh\createform.html:470:                        </button>
+hhh\createform.html:503:                        <button type="button" class="btn btn-danger btn-sm remove-border">
+hhh\createform.html:505:                        </button>
+hhh\createform.html:537:                        <button type="button" class="btn btn-danger btn-sm remove-border">
+hhh\createform.html:539:                        </button>
+hhh\createform.html:545:    <button type="button" class="btn btn-outline-primary add-row-btn mb-3" 
+id="addBorderRow">
+hhh\createform.html:547:    </button>
+hhh\createform.html:573:    <button type="button" class="btn btn-outline-primary add-row-btn mb-3" 
+id="addBuildingRow">
+hhh\createform.html:575:    </button>
+hhh\createform.html:648:document.addEventListener('DOMContentLoaded', function() {
+hhh\createform.html:654:    select.addEventListener('change', function() {
+hhh\createform.html:677:        checkbox.addEventListener('change', function() {
+hhh\createform.html:685:    addBuildingBtn.addEventListener('click', function() {
+hhh\createform.html:766:    document.addEventListener('DOMContentLoaded', function() {
+hhh\createform.html:770:        select.addEventListener('change', function() {
+hhh\createform.html:777:    document.addEventListener('DOMContentLoaded', function () {
+hhh\createform.html:784:        chkUp.addEventListener('change', function () {
+hhh\createform.html:789:        chkDown.addEventListener('change', function () {
+hhh\createform.html:904:            <button type="button" class="btn btn-outline-danger 
+remove-attachment">&times;</button>
+hhh\createform.html:909:        <button type="button" class="btn btn-outline-primary" id="addAttachmentBtn">
+hhh\createform.html:911:        </button>
+hhh\createform.html:917:    document.addEventListener('DOMContentLoaded', function() {
+hhh\createform.html:921:    addBtn.addEventListener('click', function() {
+hhh\createform.html:926:            <button type="button" class="btn btn-outline-danger 
+remove-attachment">&times;</button>
+hhh\createform.html:931:        newRow.querySelector('.remove-attachment').addEventListener('click', function() {
+hhh\createform.html:938:        btn.addEventListener('click', function() {
+hhh\createform.html:1002:        <div class="custom-input-container input-with-button">
+hhh\createform.html:1005:            <button type="button" class="btn btn-outline-primary" id="addNameBtn1">
+hhh\createform.html:1007:            </button>
+hhh\createform.html:1031:        <div class="custom-input-container input-with-button">
+hhh\createform.html:1034:            <button type="button" class="btn btn-outline-primary" id="addNameBtn2">
+hhh\createform.html:1036:            </button>
+hhh\createform.html:1268:document.addEventListener('DOMContentLoaded', function() {
+hhh\createform.html:1277:        addBtn.addEventListener('click', function() {
+hhh\createform.html:1312:    <button type="button" class="btn btn-outline-primary add-row-btn mb-3" 
+id="addBuildingRow">
+hhh\createform.html:1314:    </button>
+hhh\createform.html:1329:            <button type="submit" id="saveRequestBtn" class="btn btn-success px-5">
+hhh\createform.html:1331:            </button>
+hhh\createorder.html:7:<link href="libs/bootstrap.rtl.min.css" rel="stylesheet">
+hhh\createorder.html:8:<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" 
+rel="stylesheet">
+hhh\createorder.html:52:    .action-btns button { margin-left: 5px; }
+hhh\createorder.html:84:      const params = new URLSearchParams(window.location.search);
+hhh\createorder.html:292:                document.getElementById("unitSelect").addEventListener("change", function 
+() {
+hhh\createorder.html:319:                checkbox.addEventListener('change', function() {
+hhh\createorder.html:330:                    <button type="button" class="btn btn-outline-secondary" 
+id="attachBtn">إرفاق</button>
+hhh\createorder.html:389:                        <button type="button" class="btn btn-danger btn-sm remove-border">
+hhh\createorder.html:391:                        </button>
+hhh\createorder.html:425:                        <button type="button" class="btn btn-danger btn-sm remove-border">
+hhh\createorder.html:427:                        </button>
+hhh\createorder.html:460:                        <button type="button" class="btn btn-danger btn-sm remove-border">
+hhh\createorder.html:462:                        </button>
+hhh\createorder.html:494:                        <button type="button" class="btn btn-danger btn-sm remove-border">
+hhh\createorder.html:496:                        </button>
+hhh\createorder.html:502:    <button type="button" class="btn btn-outline-primary add-row-btn mb-3" 
+id="addBorderRow">
+hhh\createorder.html:504:    </button>
+hhh\createorder.html:530:    <button type="button" class="btn btn-outline-primary add-row-btn mb-3" 
+id="addBuildingRow">
+hhh\createorder.html:532:    </button>
+hhh\createorder.html:605:document.addEventListener('DOMContentLoaded', function() {
+hhh\createorder.html:611:    select.addEventListener('change', function() {
+hhh\createorder.html:634:        checkbox.addEventListener('change', function() {
+hhh\createorder.html:642:    addBuildingBtn.addEventListener('click', function() {
+hhh\createorder.html:723:    document.addEventListener('DOMContentLoaded', function() {
+hhh\createorder.html:727:        select.addEventListener('change', function() {
+hhh\createorder.html:734:    document.addEventListener('DOMContentLoaded', function () {
+hhh\createorder.html:741:        chkUp.addEventListener('change', function () {
+hhh\createorder.html:746:        chkDown.addEventListener('change', function () {
+hhh\createorder.html:861:            <button type="button" class="btn btn-outline-danger 
+remove-attachment">&times;</button>
+hhh\createorder.html:866:        <button type="button" class="btn btn-outline-primary" id="addAttachmentBtn">
+hhh\createorder.html:868:        </button>
+hhh\createorder.html:874:    document.addEventListener('DOMContentLoaded', function() {
+hhh\createorder.html:878:    addBtn.addEventListener('click', function() {
+hhh\createorder.html:883:            <button type="button" class="btn btn-outline-danger 
+remove-attachment">&times;</button>
+hhh\createorder.html:888:        newRow.querySelector('.remove-attachment').addEventListener('click', function() {
+hhh\createorder.html:895:        btn.addEventListener('click', function() {
+hhh\createorder.html:913:            <button type="submit" id="saveRequestBtn" class="btn btn-success px-5">
+hhh\createorder.html:915:            </button>
+hhh\createspece.html:7:<link href="libs/bootstrap.rtl.min.css" rel="stylesheet">
+hhh\createspece.html:8:<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" 
+rel="stylesheet">
+hhh\createspece.html:52:    .action-btns button { margin-left: 5px; }
+hhh\createspece.html:84:  const params = new URLSearchParams(window.location.search);
+hhh\createspece.html:112:document.addEventListener('DOMContentLoaded', function() {
+hhh\createspece.html:118:    select.addEventListener('change', function() {
+hhh\createspece.html:141:        checkbox.addEventListener('change', function() {
+hhh\createspece.html:149:    addBuildingBtn.addEventListener('click', function() {
+hhh\createspece.html:194:    document.addEventListener('DOMContentLoaded', function() {
+hhh\createspece.html:198:        select.addEventListener('change', function() {
+hhh\createspece.html:205:    document.addEventListener('DOMContentLoaded', function () {
+hhh\createspece.html:212:        chkUp.addEventListener('change', function () {
+hhh\createspece.html:217:        chkDown.addEventListener('change', function () {
+hhh\createspece.html:253:            <button type="button" class="btn btn-outline-danger 
+remove-attachment">&times;</button>
+hhh\createspece.html:258:        <button type="button" class="btn btn-outline-primary" id="addAttachmentBtn">
+hhh\createspece.html:260:        </button>
+hhh\createspece.html:323:.input-with-button {
+hhh\createspece.html:328:.input-with-button input {
+hhh\createspece.html:333:.input-with-button button {
+hhh\createspece.html:339:document.addEventListener('DOMContentLoaded', function() {
+hhh\createspece.html:348:        addBtn.addEventListener('click', function() {
+hhh\createspece.html:372:            <button type="submit" id="saveRequestBtn" class="btn btn-success px-5">
+hhh\createspece.html:374:            </button>
+hhh\creatform.html:7:<link href="libs/bootstrap.rtl.min.css" rel="stylesheet">
+hhh\creatform.html:8:<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" 
+rel="stylesheet">
+hhh\creatform.html:52:    .action-btns button { margin-left: 5px; }
+hhh\creatform.html:84:  const params = new URLSearchParams(window.location.search);
+hhh\creatform.html:284:                document.getElementById("unitSelect").addEventListener("change", function () 
+{
+hhh\creatform.html:311:                checkbox.addEventListener('change', function() {
+hhh\creatform.html:322:                    <button type="button" class="btn btn-outline-secondary" 
+id="attachBtn">إرفاق</button>
+hhh\creatform.html:381:                        <button type="button" class="btn btn-danger btn-sm remove-border">
+hhh\creatform.html:383:                        </button>
+hhh\creatform.html:417:                        <button type="button" class="btn btn-danger btn-sm remove-border">
+hhh\creatform.html:419:                        </button>
+hhh\creatform.html:452:                        <button type="button" class="btn btn-danger btn-sm remove-border">
+hhh\creatform.html:454:                        </button>
+hhh\creatform.html:486:                        <button type="button" class="btn btn-danger btn-sm remove-border">
+hhh\creatform.html:488:                        </button>
+hhh\creatform.html:494:    <button type="button" class="btn btn-outline-primary add-row-btn mb-3" id="addBorderRow">
+hhh\creatform.html:496:    </button>
+hhh\creatform.html:522:    <button type="button" class="btn btn-outline-primary add-row-btn mb-3" 
+id="addBuildingRow">
+hhh\creatform.html:524:    </button>
+hhh\creatform.html:597:document.addEventListener('DOMContentLoaded', function() {
+hhh\creatform.html:603:    select.addEventListener('change', function() {
+hhh\creatform.html:626:        checkbox.addEventListener('change', function() {
+hhh\creatform.html:634:    addBuildingBtn.addEventListener('click', function() {
+hhh\creatform.html:715:    document.addEventListener('DOMContentLoaded', function() {
+hhh\creatform.html:719:        select.addEventListener('change', function() {
+hhh\creatform.html:726:    document.addEventListener('DOMContentLoaded', function () {
+hhh\creatform.html:733:        chkUp.addEventListener('change', function () {
+hhh\creatform.html:738:        chkDown.addEventListener('change', function () {
+hhh\creatform.html:853:            <button type="button" class="btn btn-outline-danger 
+remove-attachment">&times;</button>
+hhh\creatform.html:858:        <button type="button" class="btn btn-outline-primary" id="addAttachmentBtn">
+hhh\creatform.html:860:        </button>
+hhh\creatform.html:866:    document.addEventListener('DOMContentLoaded', function() {
+hhh\creatform.html:870:    addBtn.addEventListener('click', function() {
+hhh\creatform.html:875:            <button type="button" class="btn btn-outline-danger 
+remove-attachment">&times;</button>
+hhh\creatform.html:880:        newRow.querySelector('.remove-attachment').addEventListener('click', function() {
+hhh\creatform.html:887:        btn.addEventListener('click', function() {
+hhh\creatform.html:951:        <div class="custom-input-container input-with-button">
+hhh\creatform.html:954:            <button type="button" class="btn btn-outline-primary" id="addNameBtn1">
+hhh\creatform.html:956:            </button>
+hhh\creatform.html:980:        <div class="custom-input-container input-with-button">
+hhh\creatform.html:983:            <button type="button" class="btn btn-outline-primary" id="addNameBtn2">
+hhh\creatform.html:985:            </button>
+hhh\creatform.html:1263:.input-with-button {
+hhh\creatform.html:1268:.input-with-button input {
+hhh\creatform.html:1273:.input-with-button button {
+hhh\creatform.html:1279:document.addEventListener('DOMContentLoaded', function() {
+hhh\creatform.html:1288:        addBtn.addEventListener('click', function() {
+hhh\creatform.html:1323:    <button type="button" class="btn btn-outline-primary add-row-btn mb-3" 
+id="addBuildingRow">
+hhh\creatform.html:1325:    </button>
+hhh\creatform.html:1340:            <button type="submit" id="saveRequestBtn" class="btn btn-success px-5">
+hhh\creatform.html:1342:            </button>
+hhh\devid.html:50:        <div class="custom-input-container input-with-button">
+hhh\devid.html:53:            <button type="button" class="btn btn-outline-primary" id="addNameBtn1">
+hhh\devid.html:55:            </button>
+hhh\devid.html:79:        <div class="custom-input-container input-with-button">
+hhh\devid.html:82:            <button type="button" class="btn btn-outline-primary" id="addNameBtn2">
+hhh\devid.html:84:            </button>
+hhh\devid.html:363:.input-with-button {
+hhh\devid.html:368:.input-with-button input {
+hhh\devid.html:373:.input-with-button button {
+hhh\devid.html:379:document.addEventListener('DOMContentLoaded', function() {
+hhh\devid.html:388:        addBtn.addEventListener('click', function() {
+hhh\index.html:7:<link href="libs/bootstrap.rtl.min.css" rel="stylesheet">
+hhh\index.html:8:<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" 
+rel="stylesheet">
+hhh\index.html:52:    .action-btns button { margin-left: 5px; }
+hhh\index.html:86:            <div class="section-header" onclick="toggleSection('personal')">المعلومات الشخصية 
+الأساسية</div>
+hhh\index.html:105:    <div class="section-header" onclick="toggleSection('experience')">الخبرات العملية</div>
+hhh\index.html:138:                <input type="checkbox" id="stillWorking" class="form-check-input me-2" 
+onchange="toggleExpTo()">
+hhh\index.html:164:                    <button class="btn btn-outline-primary" type="button" 
+onclick="addTaskField()">
+hhh\index.html:166:                    </button>
+hhh\index.html:173:        <link rel="stylesheet" 
+href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+hhh\index.html:183:                    <button class="btn btn-outline-danger" type="button" 
+onclick="removeTaskField(this)">
+hhh\index.html:185:                    </button>
+hhh\index.html:191:            function removeTaskField(button) {
+hhh\index.html:192:                button.parentElement.remove();
+hhh\index.html:204:                              <button class="btn btn-sm btn-success" onclick="addManagerRow()" 
+title="إضافة مسؤول">
+hhh\index.html:206:                              </button>
+hhh\index.html:215:                <button class="btn btn-outline-primary add-btn" onclick="addExperience()">إضافة 
+خبرة</button>
+hhh\index.html:226:            <div class="section-header" onclick="toggleSection('education')">المؤهلات 
+العلمية</div>
+hhh\index.html:244:                <button class="btn btn-outline-primary add-btn" onclick="addEducation()">إضافة 
+مؤهل</button>
+hhh\index.html:251:            <div class="section-header" onclick="toggleSection('cert')">الشهادات المهنية 
+والدورات</div>
+hhh\index.html:293:                <button class="btn btn-outline-primary add-btn" onclick="addCert()">إضافة شهادة 
+/ دورة</button>
+hhh\index.html:300:            <div class="section-header" onclick="toggleSection('project')">المشاريع السابقة 
+والإنجازات</div>
+hhh\index.html:309:                <button class="btn btn-outline-primary add-btn" onclick="addProject()">إضافة 
+مشروع</button>
+hhh\index.html:317:            <div class="section-header" onclick="toggleSection('skills')">المهارات التقنية</div>
+hhh\index.html:324:                <button class="btn btn-outline-primary add-btn" onclick="addSkill()">إضافة 
+مهارة</button>
+hhh\index.html:330:    <div class="section-header" onclick="toggleSection('languages')">اللغات</div>
+hhh\index.html:333:            <input class="form-check-input" type="checkbox" id="langArabic" 
+onchange="toggleMotherLanguage()">
+hhh\index.html:350:            <button class="btn btn-outline-primary" type="button" onclick="addLanguage()">
+hhh\index.html:352:            </button>
+hhh\index.html:360:            <button class="btn btn-success" onclick="generateCV()">حفظ السيرة الذاتية</button>
+hhh\index.html:362:        <a class="btn btn-success" href="almjal1.html"> المجالات</a>
+hhh\index.html:381:                <button class="btn btn-sm btn-outline-primary me-1" 
+onclick="editManagerRow(this)" title="تعديل">
+hhh\index.html:383:                </button>
+hhh\index.html:384:                <button class="btn btn-sm btn-outline-danger" onclick="deleteManagerRow(this)" 
+title="حذف">
+hhh\index.html:386:                </button>
+hhh\index.html:411:        <button class="btn btn-sm btn-outline-danger ms-2" type="button" 
+onclick="this.parentElement.remove()">
+hhh\index.html:413:        </button>
+hhh\index.html:459:                <button class="btn btn-sm btn-outline-primary">تعديل</button>
+hhh\index.html:460:                <button class="btn btn-sm btn-outline-danger">حذف</button>
+hhh\index.html:586:            <button class="btn btn-outline-primary" onclick="window.print()">طباعة</button>
+hhh\index.html:587:            <button class="btn btn-secondary" onclick="editCV()">تعديل السيرة الذاتية</button>
+hhh\WorkOffer.html:7:  <link href="libs/bootstrap.rtl.min.css" rel="stylesheet">
+hhh\WorkOffer.html:8:<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" 
+rel="stylesheet">
+hhh\WorkOffer.html:10:  <link href="libs/bootstrap.rtl.min.css" rel="stylesheet">
+hhh\WorkOffer.html:102:            endDateOption.addEventListener("change", function () {
+hhh\WorkOffer.html:199:         document.getElementById("transportTemplateSelect").addEventListener("change", 
+function() {
+hhh\WorkOffer.html:243:        <button type="button" class="btn btn-outline-primary"
+hhh\WorkOffer.html:244:                onclick="showFormDialog('AdditionalCostModel')">
+hhh\WorkOffer.html:246:        </button>
+hhh\WorkOffer.html:299:                    <button class="accordion-button collapsed" type="button" 
+data-bs-toggle="collapse"
+hhh\WorkOffer.html:302:                    </button>
+hhh\WorkOffer.html:315:        <button type="submit" class="btn btn-dark save-btn mt-4" >حفظ</button>
+hhh\WorkOffer1.html:7:  <link href="libs/bootstrap.rtl.min.css" rel="stylesheet">
+hhh\WorkOffer1.html:8:<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" 
+rel="stylesheet">
+hhh\WorkOffer1.html:10:  <link href="libs/bootstrap.rtl.min.css" rel="stylesheet">
+hhh\WorkOffer1.html:104:        <button type="button" class="btn btn-outline-primary"
+hhh\WorkOffer1.html:105:                onclick="showFormDialog('AdditionalCostModel')">
+hhh\WorkOffer1.html:107:        </button>
+hhh\WorkOffer1.html:115:        <button type="submit" class="btn btn-dark save-btn mt-4" >حفظ</button>
+hhh\Work_Form.html:7:  <link href="libs/bootstrap.rtl.min.css" rel="stylesheet">
+hhh\Work_Form.html:8:<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" 
+rel="stylesheet">
+hhh\Work_Form.html:10:  <link href="libs/bootstrap.rtl.min.css" rel="stylesheet">
+hhh\Work_Form.html:120:                      <li><a class="dropdown-item" href="#">وكلاء أوقاف في القرى = عادل محمد 
+صالح عايش-77088864</a></li>
+hhh\Work_Form.html:121:                      <li><a class="dropdown-item" href="#">+ إنشاء عدل الروية جديد</a></li>
+hhh\Work_Form.html:122:                      <li><a class="dropdown-item" href="#">🔍 البحث المتقدم</a></li>
+hhh\Work_Form.html:141:                                <button type="button" class="btn btn-sm btn-outline-primary" 
+onclick="addTableRow()">
+hhh\Work_Form.html:143:                                </button>
+hhh\Work_Form.html:189:                                <button type="button" class="btn btn-sm btn-outline-danger" 
+onclick="removeTableRow(this)">
+hhh\Work_Form.html:191:                                </button>
+hhh\Work_Form.html:196:                <button type="button" class="add-row-btn mt-2">+ أضف سطر</button>
+hhh\Work_Form.html:433:                    <button type="submit" class="btn btn-primary me-2" 
+onclick="saveData(event)">حفظ البيانات</button>
+hhh\Work_Form.html:434:                    <button type="button" class="btn btn-info me-2" 
+onclick="sendReportToClient()"> حفظ وإرسال التقرير للعميل</button>
+hhh\Work_Form.html:447:                    <button type="button" class="btn-close" data-bs-dismiss="modal" 
+aria-label="Close"></button>
+hhh\Work_Form.html:470:                    <button type="button" class="btn btn-secondary" 
+data-bs-dismiss="modal">إلغاء</button>
+hhh\Work_Form.html:471:                    <button type="button" class="btn btn-primary" 
+onclick="sendReport()">إرسال التقرير</button>
+hhh\Work_Form.html:483:                    <button type="button" class="btn-close" data-bs-dismiss="modal" 
+aria-label="إغلاق"></button>
+hhh\Work_Form.html:502:                    <button type="button" class="btn btn-secondary" 
+data-bs-dismiss="modal">إلغاء</button>
+hhh\Work_Form.html:503:                    <button type="submit" class="btn btn-primary" 
+form="adoulForm">حفظ</button>
+hhh\Work_Form.html:515:        document.getElementById("GovernorateSelect").addEventListener("change", function () {
+hhh\Work_Form_base.html:7:  <link href="libs/bootstrap.rtl.min.css" rel="stylesheet">
+hhh\Work_Form_base.html:8:<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" 
+rel="stylesheet">
+hhh\Work_Form_base.html:10:  <link href="libs/bootstrap.rtl.min.css" rel="stylesheet">
+hhh\Work_Form_base.html:120:                      <li><a class="dropdown-item" href="#">وكلاء أوقاف في القرى = عادل 
+محمد صالح عايش-77088864</a></li>
+hhh\Work_Form_base.html:121:                      <li><a class="dropdown-item" href="#">+ إنشاء عدل الروية 
+جديد</a></li>
+hhh\Work_Form_base.html:122:                      <li><a class="dropdown-item" href="#">🔍 البحث المتقدم</a></li>
+hhh\Work_Form_base.html:141:                                <button type="button" class="btn btn-sm 
+btn-outline-primary" onclick="addTableRow()">
+hhh\Work_Form_base.html:143:                                </button>
+hhh\Work_Form_base.html:189:                                <button type="button" class="btn btn-sm 
+btn-outline-danger" onclick="removeTableRow(this)">
+hhh\Work_Form_base.html:191:                                </button>
+hhh\Work_Form_base.html:196:                <button type="button" class="add-row-btn mt-2">+ أضف سطر</button>
+hhh\Work_Form_base.html:470:              <li><a class="dropdown-item" href="#">لم يتم ذكرة في الوثيقة</a></li>
+hhh\Work_Form_base.html:471:              <li><a class="dropdown-item" href="#">تذكره بشكل صريح</a></li>
+hhh\Work_Form_base.html:472:              <li><a class="dropdown-item" href="#">تم الاشارة الية</a></li>
+hhh\Work_Form_base.html:481:                <li><a class="dropdown-item" href="#">ملكية الرهق</a></li>
+hhh\Work_Form_base.html:482:                <li><a class="dropdown-item" href="#"> طلبعة الانتفاع فية </a></li>
+hhh\Work_Form_base.html:483:                <li><a class="dropdown-item" href="#">  هل تم استخدام اي حواجز او 
+عوائق</a></li>
+hhh\Work_Form_base.html:484:                <li><a class="dropdown-item" href="#">هل يتفق الطرفان على المسار 
+التاريخي للماء</a></li>
+hhh\Work_Form_base.html:601:                    <button type="submit" class="btn btn-primary me-2" 
+onclick="saveData(event)">حفظ البيانات</button>
+hhh\Work_Form_base.html:602:                    <button type="button" class="btn btn-info me-2" 
+onclick="sendReportToClient()"> حفظ وإرسال التقرير للعميل</button>
+hhh\Work_Form_base.html:615:                    <button type="button" class="btn-close" data-bs-dismiss="modal" 
+aria-label="Close"></button>
+hhh\Work_Form_base.html:638:                    <button type="button" class="btn btn-secondary" 
+data-bs-dismiss="modal">إلغاء</button>
+hhh\Work_Form_base.html:639:                    <button type="button" class="btn btn-primary" 
+onclick="sendReport()">إرسال التقرير</button>
+hhh\Work_Form_base.html:651:                    <button type="button" class="btn-close" data-bs-dismiss="modal" 
+aria-label="إغلاق"></button>
+hhh\Work_Form_base.html:670:                    <button type="button" class="btn btn-secondary" 
+data-bs-dismiss="modal">إلغاء</button>
+hhh\Work_Form_base.html:671:                    <button type="submit" class="btn btn-primary" 
+form="adoulForm">حفظ</button>
+hhh\Work_Form_base.html:683:        document.getElementById("GovernorateSelect").addEventListener("change", 
+function () {
+
+
