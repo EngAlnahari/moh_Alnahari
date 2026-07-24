@@ -1,0 +1,27 @@
+﻿
+FullName                                        Length LastWriteTime        
+--------                                        ------ -------------        
+D:\EngMohammed\hhh\AllTemplate.html              92082 6/17/2026 8:24:27 PM 
+D:\EngMohammed\hhh\almjal.html                   45789 6/17/2026 8:24:27 PM 
+D:\EngMohammed\hhh\almjal1.html                  37109 6/17/2026 8:25:35 PM 
+D:\EngMohammed\hhh\ContractTemplate.html         21251 11/1/2025 12:08:00 AM
+D:\EngMohammed\hhh\ContractTemplate1.html        17462 11/1/2025 12:53:34 AM
+D:\EngMohammed\hhh\create.html                   60820 6/17/2026 8:24:27 PM 
+D:\EngMohammed\hhh\createdevided.html            49067 6/17/2026 8:24:27 PM 
+D:\EngMohammed\hhh\createform.html               53544 6/17/2026 8:24:27 PM 
+D:\EngMohammed\hhh\createorder.html              39902 6/17/2026 8:24:27 PM 
+D:\EngMohammed\hhh\createspece.html              10944 6/17/2026 8:24:27 PM 
+D:\EngMohammed\hhh\creatform.html                53767 6/17/2026 8:24:27 PM 
+D:\EngMohammed\hhh\devid.html                    12864 10/31/2025 5:06:35 PM
+D:\EngMohammed\hhh\hhh_inventory.txt              1353 7/24/2026 7:14:19 AM 
+D:\EngMohammed\hhh\index.html                    27604 6/17/2026 8:24:27 PM 
+D:\EngMohammed\hhh\localizer.py                   2132 6/17/2026 8:24:31 PM 
+D:\EngMohammed\hhh\WorkOffer.html                13128 6/17/2026 8:24:27 PM 
+D:\EngMohammed\hhh\WorkOffer1.html                3699 6/17/2026 8:24:27 PM 
+D:\EngMohammed\hhh\Work_Form.html                26654 6/17/2026 8:24:27 PM 
+D:\EngMohammed\hhh\Work_Form_base.html           33328 6/17/2026 8:24:27 PM 
+D:\EngMohammed\hhh\libs\bootstrap.bundle.min.js  80721 6/17/2026 8:24:44 PM 
+D:\EngMohammed\hhh\libs\bootstrap.rtl.min.css   232911 6/17/2026 8:24:42 PM 
+D:\EngMohammed\hhh\libs\jquery.min.js            89795 6/17/2026 8:24:41 PM 
+
+

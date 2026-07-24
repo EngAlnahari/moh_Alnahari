@@ -1,0 +1,19 @@
+﻿
+hhh\AllTemplate.html:6:<title>السيرة الذاتية</title>
+hhh\almjal.html:6:  <title>نظام شجرة المجالات</title>
+hhh\almjal1.html:7:  <title>شجرة المجالات الهندسية والقانونية والقضاء</title>
+hhh\ContractTemplate.html:7:    <title>لوحة العقود للمهندس</title>
+hhh\ContractTemplate1.html:7:    <title>لوحة العقود للمهندس</title>
+hhh\create.html:6:<title>السيرة الذاتية</title>
+hhh\createdevided.html:6:<title>السيرة الذاتية</title>
+hhh\createform.html:6:<title>السيرة الذاتية</title>
+hhh\createorder.html:6:<title>السيرة الذاتية</title>
+hhh\createspece.html:6:<title>السيرة الذاتية</title>
+hhh\creatform.html:6:<title>السيرة الذاتية</title>
+hhh\index.html:6:<title>السيرة الذاتية</title>
+hhh\WorkOffer.html:6:  <title>شجرة المجالات الهندسية والقانونية والقضاء</title>
+hhh\WorkOffer1.html:6:  <title>شجرة المجالات الهندسية والقانونية والقضاء</title>
+hhh\Work_Form.html:6:  <title>شجرة المجالات الهندسية والقانونية والقضاء</title>
+hhh\Work_Form_base.html:6:  <title>شجرة المجالات الهندسية والقانونية والقضاء</title>
+
+
