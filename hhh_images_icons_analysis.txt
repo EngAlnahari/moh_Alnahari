@@ -1,0 +1,20 @@
+﻿
+hhh\AllTemplate.html:1419:                                    <i class="bi bi-plus"></i>
+hhh\AllTemplate.html:1467:                                    <i class="bi bi-trash"></i>
+hhh\AllTemplate.html:2069:                <i class="bi bi-plus-lg me-1"></i> إضافة تكلفة
+hhh\almjal.html:300:              <i class="bi bi-grid-1x2" style="font-size:2rem"></i>
+hhh\index.html:165:                        <i class="bi bi-plus-lg"></i> <!-- أيقونة الإضافة -->
+hhh\index.html:184:                        <i class="bi bi-x-lg"></i>
+hhh\index.html:205:                                  <i class="bi bi-plus-lg"></i>
+hhh\index.html:351:                <i class="bi bi-plus-lg"></i> إضافة
+hhh\index.html:382:                    <i class="bi bi-pencil-square"></i>
+hhh\index.html:385:                    <i class="bi bi-trash"></i>
+hhh\index.html:412:            <i class="bi bi-x-lg"></i>
+hhh\WorkOffer.html:245:            <i class="bi bi-plus-lg me-1"></i> إضافة تكلفة
+hhh\WorkOffer1.html:106:            <i class="bi bi-plus-lg me-1"></i> إضافة تكلفة
+hhh\Work_Form.html:142:                                    <i class="bi bi-plus"></i>
+hhh\Work_Form.html:190:                                    <i class="bi bi-trash"></i>
+hhh\Work_Form_base.html:142:                                    <i class="bi bi-plus"></i>
+hhh\Work_Form_base.html:190:                                    <i class="bi bi-trash"></i>
+
+

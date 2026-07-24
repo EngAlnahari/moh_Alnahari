@@ -1,0 +1,1050 @@
+﻿
+hhh\AllTemplate.html:393:    <table class="table table-bordered mb-2">
+hhh\AllTemplate.html:394:        <thead>
+hhh\AllTemplate.html:395:            <tr>
+hhh\AllTemplate.html:404:        <tbody>
+hhh\AllTemplate.html:406:            <tbody>
+hhh\AllTemplate.html:407:                <tr>
+hhh\AllTemplate.html:408:                    <td>1</td>
+hhh\AllTemplate.html:409:                    <td>
+hhh\AllTemplate.html:424:                    <td>
+hhh\AllTemplate.html:427:                    <td class="text-center">
+hhh\AllTemplate.html:433:                    <td>
+hhh\AllTemplate.html:436:                    <td>
+hhh\AllTemplate.html:442:                <tr>
+hhh\AllTemplate.html:443:                    <td>2</td>
+hhh\AllTemplate.html:444:                    <td>
+hhh\AllTemplate.html:459:                    <td>
+hhh\AllTemplate.html:462:                    <td class="text-center">
+hhh\AllTemplate.html:469:                    <td>
+hhh\AllTemplate.html:472:                    <td>
+hhh\AllTemplate.html:478:                <tr>
+hhh\AllTemplate.html:479:                    <td>3</td>
+hhh\AllTemplate.html:480:                    <td>
+hhh\AllTemplate.html:494:                    <td>
+hhh\AllTemplate.html:497:                    <td class="text-center">
+hhh\AllTemplate.html:504:                    <td>
+hhh\AllTemplate.html:507:                    <td>
+hhh\AllTemplate.html:513:                <tr>
+hhh\AllTemplate.html:514:                    <td>4</td>
+hhh\AllTemplate.html:515:                    <td>
+hhh\AllTemplate.html:528:                    <td>
+hhh\AllTemplate.html:531:                    <td class="text-center">
+hhh\AllTemplate.html:538:                    <td>
+hhh\AllTemplate.html:541:                    <td>
+hhh\AllTemplate.html:562:    <table class="table table-bordered">
+hhh\AllTemplate.html:563:        <thead>
+hhh\AllTemplate.html:564:            <tr>
+hhh\AllTemplate.html:570:        <tbody>
+hhh\AllTemplate.html:571:            <tr>
+hhh\AllTemplate.html:572:                <td><input type="number" class="form-control" placeholder="أدخل عدد 
+الطوابق" /></td>
+hhh\AllTemplate.html:573:                <td><input type="text" class="form-control" placeholder="أدخل الوصف" 
+/></td>
+hhh\AllTemplate.html:574:                <td><input type="text" class="form-control" placeholder="أدخل المكان" 
+/></td>
+hhh\AllTemplate.html:590:        <table class="table table-bordered">
+hhh\AllTemplate.html:591:            <thead>
+hhh\AllTemplate.html:592:                <tr>
+hhh\AllTemplate.html:598:            <tbody>
+hhh\AllTemplate.html:599:                <tr>
+hhh\AllTemplate.html:600:                    <td> شمال</td>
+hhh\AllTemplate.html:601:                    <td class="align-middle text-center">
+hhh\AllTemplate.html:604:                    <td>
+hhh\AllTemplate.html:608:                <tr>
+hhh\AllTemplate.html:609:                    <td> شرق</td>
+hhh\AllTemplate.html:610:                    <td class="align-middle text-center">
+hhh\AllTemplate.html:613:                    <td>
+hhh\AllTemplate.html:617:                <tr>
+hhh\AllTemplate.html:618:                    <td> غرب</td>
+hhh\AllTemplate.html:619:                    <td class="align-middle text-center">
+hhh\AllTemplate.html:622:                    <td>
+hhh\AllTemplate.html:626:                <tr>
+hhh\AllTemplate.html:627:                    <td> جنوب</td>
+hhh\AllTemplate.html:628:                    <td class="align-middle text-center">
+hhh\AllTemplate.html:631:                    <td>
+hhh\AllTemplate.html:694:            <td><input type="number" class="form-control" placeholder="أدخل عدد الطوابق" 
+/></td>
+hhh\AllTemplate.html:695:            <td><input type="text" class="form-control" placeholder="أدخل الوصف" /></td>
+hhh\AllTemplate.html:696:            <td><input type="text" class="form-control" placeholder="أدخل المكان" /></td>
+hhh\AllTemplate.html:721:    <table class="table table-bordered mb-2 text-center" id="earthBordersTitleUnique123">
+hhh\AllTemplate.html:722:        <thead>
+hhh\AllTemplate.html:725:        <tbody>
+hhh\AllTemplate.html:726:            <tr>
+hhh\AllTemplate.html:727:                <td>من أعلى</td>
+hhh\AllTemplate.html:728:                <td class="align-middle">
+hhh\AllTemplate.html:731:                <td>
+hhh\AllTemplate.html:735:            <tr>
+hhh\AllTemplate.html:736:                <td>من أسفل</td>
+hhh\AllTemplate.html:737:                <td class="align-middle">
+hhh\AllTemplate.html:740:                <td>
+hhh\AllTemplate.html:1116:    <table class="table table-bordered mb-2">
+hhh\AllTemplate.html:1117:        <thead>
+hhh\AllTemplate.html:1118:            <tr>
+hhh\AllTemplate.html:1126:        <tbody>
+hhh\AllTemplate.html:1128:            <tbody>
+hhh\AllTemplate.html:1129:                <tr>
+hhh\AllTemplate.html:1130:                    <td>1</td>
+hhh\AllTemplate.html:1131:                    <td>
+hhh\AllTemplate.html:1136:                    <td>
+hhh\AllTemplate.html:1150:                    <td class="text-center">
+hhh\AllTemplate.html:1157:                <tr>
+hhh\AllTemplate.html:1158:                    <td>2</td>
+hhh\AllTemplate.html:1159:                    <td>
+hhh\AllTemplate.html:1164:                    <td>
+hhh\AllTemplate.html:1179:                    <td class="text-center">
+hhh\AllTemplate.html:1186:                <tr>
+hhh\AllTemplate.html:1187:                    <td>3</td>
+hhh\AllTemplate.html:1188:                    <td>
+hhh\AllTemplate.html:1193:                    <td>
+hhh\AllTemplate.html:1207:                    <td class="text-center">
+hhh\AllTemplate.html:1213:                <tr>
+hhh\AllTemplate.html:1214:                    <td>4</td>
+hhh\AllTemplate.html:1215:                    <td>
+hhh\AllTemplate.html:1220:                    <td>
+hhh\AllTemplate.html:1223:                    <td class="text-center">
+hhh\AllTemplate.html:1231:                <tr>
+hhh\AllTemplate.html:1232:                    <td>5</td>
+hhh\AllTemplate.html:1233:                    <td>
+hhh\AllTemplate.html:1238:                    <td>
+hhh\AllTemplate.html:1253:                    <td class="text-center">
+hhh\AllTemplate.html:1301:    <table class="table table-bordered">
+hhh\AllTemplate.html:1302:        <thead>
+hhh\AllTemplate.html:1303:            <tr>
+hhh\AllTemplate.html:1309:        <tbody>
+hhh\AllTemplate.html:1310:            <tr>
+hhh\AllTemplate.html:1311:                <td><input type="text" class="form-control" placeholder="  المالكون 
+السابقون" /></td>
+hhh\AllTemplate.html:1312:                <td><input type="text" class="form-control" placeholder=" حصولهم على" 
+/></td>
+hhh\AllTemplate.html:1313:                <td><input type="text" class="form-control" placeholder=" الوثائق التي 
+يستند عليها" /></td>
+hhh\AllTemplate.html:1410:                <table class="table table-bordered mb-0">
+hhh\AllTemplate.html:1411:                    <thead>
+hhh\AllTemplate.html:1412:                        <tr>
+hhh\AllTemplate.html:1424:                    <tbody>
+hhh\AllTemplate.html:1425:                        <tr>
+hhh\AllTemplate.html:1427:                            <td>
+hhh\AllTemplate.html:1443:                            <td>
+hhh\AllTemplate.html:1459:                            <td>
+hhh\AllTemplate.html:1462:                            <td>
+hhh\AllTemplate.html:1465:                            <td>
+hhh\AllTemplate.html:1482:            <table class="table table-bordered text-center align-middle">
+hhh\AllTemplate.html:1483:        <thead class="table-light">
+hhh\AllTemplate.html:1484:            <tr>
+hhh\AllTemplate.html:1492:        <tbody>
+hhh\AllTemplate.html:1493:            <tr>
+hhh\AllTemplate.html:1494:                <td>وصف الحد حسب الطبيعه </td>
+hhh\AllTemplate.html:1495:                <td><input type="text" class="form-control form-control-sm"></td>
+hhh\AllTemplate.html:1496:                <td><input type="text" class="form-control form-control-sm"></td>
+hhh\AllTemplate.html:1497:                <td><input type="text" class="form-control form-control-sm"></td>
+hhh\AllTemplate.html:1498:                <td><input type="text" class="form-control form-control-sm"></td>
+hhh\AllTemplate.html:1500:            <tr>
+hhh\AllTemplate.html:1501:                <td> طول الحد</td>
+hhh\AllTemplate.html:1502:                <td><input type="text" class="form-control form-control-sm"></td>
+hhh\AllTemplate.html:1503:                <td><input type="text" class="form-control form-control-sm"></td>
+hhh\AllTemplate.html:1504:                <td><input type="text" class="form-control form-control-sm"></td>
+hhh\AllTemplate.html:1505:                <td><input type="text" class="form-control form-control-sm"></td>
+hhh\AllTemplate.html:1507:            <tr>
+hhh\AllTemplate.html:1508:                <td>فئة الحد</td>
+hhh\AllTemplate.html:1509:                        <td>
+hhh\AllTemplate.html:1522:                        <td>
+hhh\AllTemplate.html:1535:                        <td>
+hhh\AllTemplate.html:1548:                        <td>
+hhh\AllTemplate.html:1572:             <tr>
+hhh\AllTemplate.html:1573:                <td>تصنيف الفئة </td>
+hhh\AllTemplate.html:1574:                <td><input type="number" class="form-control form-control-sm"></td>
+hhh\AllTemplate.html:1575:                <td><input type="number" class="form-control form-control-sm"></td>
+hhh\AllTemplate.html:1576:                <td><input type="number" class="form-control form-control-sm"></td>
+hhh\AllTemplate.html:1577:                <td><input type="number" class="form-control form-control-sm"></td>
+hhh\AllTemplate.html:1579:             <tr>
+hhh\AllTemplate.html:1580:                <td>جار الحد</td>
+hhh\AllTemplate.html:1581:                <td><input type="number" class="form-control form-control-sm"></td>
+hhh\AllTemplate.html:1582:                <td><input type="number" class="form-control form-control-sm"></td>
+hhh\AllTemplate.html:1583:                <td><input type="number" class="form-control form-control-sm"></td>
+hhh\AllTemplate.html:1584:                <td><input type="number" class="form-control form-control-sm"></td>
+hhh\AllTemplate.html:1586:             <tr>
+hhh\AllTemplate.html:1587:                <td>نوع الفاصل مع الجار</td>
+hhh\AllTemplate.html:1588:                <td><input type="number" class="form-control form-control-sm"></td>
+hhh\AllTemplate.html:1589:                <td><input type="number" class="form-control form-control-sm"></td>
+hhh\AllTemplate.html:1590:                <td><input type="number" class="form-control form-control-sm"></td>
+hhh\AllTemplate.html:1591:                <td><input type="number" class="form-control form-control-sm"></td>
+hhh\AllTemplate.html:1593:             <tr>
+hhh\AllTemplate.html:1594:                <td>عدد الانكسارات </td>
+hhh\AllTemplate.html:1595:                <td><input type="number" class="form-control form-control-sm"></td>
+hhh\AllTemplate.html:1596:                <td><input type="number" class="form-control form-control-sm"></td>
+hhh\AllTemplate.html:1597:                <td><input type="number" class="form-control form-control-sm"></td>
+hhh\AllTemplate.html:1598:                <td><input type="number" class="form-control form-control-sm"></td>
+hhh\AllTemplate.html:1600:             <tr>
+hhh\AllTemplate.html:1601:                <td>طول الانكسارات </td>
+hhh\AllTemplate.html:1602:                <td><input type="number" class="form-control form-control-sm"></td>
+hhh\AllTemplate.html:1603:                <td><input type="number" class="form-control form-control-sm"></td>
+hhh\AllTemplate.html:1604:                <td><input type="number" class="form-control form-control-sm"></td>
+hhh\AllTemplate.html:1605:                <td><input type="number" class="form-control form-control-sm"></td>
+hhh\AllTemplate.html:1607:             <tr>
+hhh\AllTemplate.html:1608:                <td>الشطفة </td>
+hhh\AllTemplate.html:1609:                <td><input type="number" class="form-control form-control-sm"></td>
+hhh\AllTemplate.html:1610:                <td><input type="number" class="form-control form-control-sm"></td>
+hhh\AllTemplate.html:1611:                <td><input type="number" class="form-control form-control-sm"></td>
+hhh\AllTemplate.html:1612:                <td><input type="number" class="form-control form-control-sm"></td>
+hhh\AllTemplate.html:1614:             <tr>
+hhh\AllTemplate.html:1615:                <td>اقل ارتداد </td>
+hhh\AllTemplate.html:1616:                <td><input type="number" class="form-control form-control-sm"></td>
+hhh\AllTemplate.html:1617:                <td><input type="number" class="form-control form-control-sm"></td>
+hhh\AllTemplate.html:1618:                <td><input type="number" class="form-control form-control-sm"></td>
+hhh\AllTemplate.html:1619:                <td><input type="number" class="form-control form-control-sm"></td>
+hhh\AllTemplate.html:1621:             <tr>
+hhh\AllTemplate.html:1622:                <td>اقصئ بروز</td>
+hhh\AllTemplate.html:1623:                <td><input type="number" class="form-control form-control-sm"></td>
+hhh\AllTemplate.html:1624:                <td><input type="number" class="form-control form-control-sm"></td>
+hhh\AllTemplate.html:1625:                <td><input type="number" class="form-control form-control-sm"></td>
+hhh\AllTemplate.html:1626:                <td><input type="number" class="form-control form-control-sm"></td>
+hhh\AllTemplate.html:1638:                    <table class="table table-bordered align-middle text-center 
+offer-table">
+hhh\AllTemplate.html:1639:                        <thead>
+hhh\AllTemplate.html:1640:                            <tr>
+hhh\AllTemplate.html:1648:                        <tbody >
+hhh\AllTemplate.html:1649:                            <tr>
+hhh\AllTemplate.html:1650:                                <td>1</td>
+hhh\AllTemplate.html:1651:                                <td>
+hhh\AllTemplate.html:1655:                                <td>
+hhh\AllTemplate.html:1658:                                <td>
+hhh\AllTemplate.html:1661:                                <td>
+hhh\AllTemplate.html:1675:          <table class="table table-bordered align-middle text-center offer-table">
+hhh\AllTemplate.html:1676:              <thead>
+hhh\AllTemplate.html:1677:                  <tr>
+hhh\AllTemplate.html:1684:              <tbody >
+hhh\AllTemplate.html:1685:                  <tr>
+hhh\AllTemplate.html:1686:                      <td>1</td>
+hhh\AllTemplate.html:1687:                      <td>
+hhh\AllTemplate.html:1691:                      <td>
+hhh\AllTemplate.html:1836:      <table class="table table-bordered text-center align-middle">
+hhh\AllTemplate.html:1837:        <thead class="table-light">
+hhh\AllTemplate.html:1838:            <tr>
+hhh\AllTemplate.html:1850:        <tbody>
+hhh\AllTemplate.html:1851:            <tr>
+hhh\AllTemplate.html:1852:              <td>
+hhh\AllTemplate.html:1861:                <td><input type="text" class="form-control form-control-sm"></td>
+hhh\AllTemplate.html:1862:                <td><input type="text" class="form-control form-control-sm"></td>
+hhh\AllTemplate.html:1863:                <td><input type="text" class="form-control form-control-sm"></td>
+hhh\AllTemplate.html:1864:                <td><input type="text" class="form-control form-control-sm"></td>
+hhh\AllTemplate.html:1865:                <td><input type="text" class="form-control form-control-sm"></td>
+hhh\AllTemplate.html:1866:                <td><input type="text" class="form-control form-control-sm"></td>
+hhh\AllTemplate.html:1867:                <td><input type="text" class="form-control form-control-sm"></td>
+hhh\AllTemplate.html:1961:                <table class="table table-bordered align-middle text-center offer-table">
+hhh\AllTemplate.html:1962:                    <tbody>
+hhh\AllTemplate.html:1963:                        <tr><td colspan="6" class="text-center">اختر قالب لعرض 
+البيانات</td></tr>
+hhh\AllTemplate.html:1993:                    <table class="table table-bordered align-middle text-center 
+offer-table">
+hhh\AllTemplate.html:1994:                        <tbody>
+hhh\AllTemplate.html:1995:                            <tr><td colspan="6" class="text-center">اختر قالب لعرض 
+البيانات</td></tr>
+hhh\AllTemplate.html:2028:                    container.innerHTML = `<table class="table table-bordered text-center 
+offer-table"><tbody><tr><td colspan="6" class="text-center">لا توجد بيانات</td></tr></tbody></table>`;
+hhh\AllTemplate.html:2037:                        container.innerHTML = `<table class="table table-bordered 
+text-center offer-table"><tbody><tr><td colspan="6" class="text-center 
+text-danger">${err.message}</td></tr></tbody></table>`;
+hhh\AllTemplate.html:2060:                    <table class="table table-bordered align-middle text-center 
+offer-table">
+hhh\AllTemplate.html:2061:                        <tbody>
+hhh\AllTemplate.html:2062:                            <tr><td colspan="6" class="text-center">اختر قالب لعرض 
+البيانات</td></tr>
+hhh\ContractTemplate.html:226:                <table class="contract-table">
+hhh\ContractTemplate.html:227:                    <thead>
+hhh\ContractTemplate.html:228:                        <tr>
+hhh\ContractTemplate.html:236:                    <tbody>
+hhh\ContractTemplate.html:237:                        <tr><td>1</td><td>شمال</td><td>لا</td><td>شارع 
+10م</td><td>0م</td></tr>
+hhh\ContractTemplate.html:238:                        <tr><td>2</td><td>جنوب</td><td>نعم</td><td>أرض 
+فاضية</td><td>2م</td></tr>
+hhh\ContractTemplate.html:239:                        
+<tr><td>3</td><td>شرق</td><td>لا</td><td>منزل</td><td>0م</td></tr>
+hhh\ContractTemplate.html:240:                        <tr><td>4</td><td>غرب</td><td>لا</td><td>أرض 
+زراعية</td><td>0م</td></tr>
+hhh\create.html:338:    <table class="table table-bordered mb-2">
+hhh\create.html:339:        <thead>
+hhh\create.html:340:            <tr>
+hhh\create.html:349:        <tbody>
+hhh\create.html:351:            <tbody>
+hhh\create.html:352:                <tr>
+hhh\create.html:353:                    <td>1</td>
+hhh\create.html:354:                    <td>
+hhh\create.html:369:                    <td>
+hhh\create.html:372:                    <td class="text-center">
+hhh\create.html:378:                    <td>
+hhh\create.html:381:                    <td>
+hhh\create.html:387:                <tr>
+hhh\create.html:388:                    <td>2</td>
+hhh\create.html:389:                    <td>
+hhh\create.html:404:                    <td>
+hhh\create.html:407:                    <td class="text-center">
+hhh\create.html:414:                    <td>
+hhh\create.html:417:                    <td>
+hhh\create.html:423:                <tr>
+hhh\create.html:424:                    <td>3</td>
+hhh\create.html:425:                    <td>
+hhh\create.html:439:                    <td>
+hhh\create.html:442:                    <td class="text-center">
+hhh\create.html:449:                    <td>
+hhh\create.html:452:                    <td>
+hhh\create.html:458:                <tr>
+hhh\create.html:459:                    <td>4</td>
+hhh\create.html:460:                    <td>
+hhh\create.html:473:                    <td>
+hhh\create.html:476:                    <td class="text-center">
+hhh\create.html:483:                    <td>
+hhh\create.html:486:                    <td>
+hhh\create.html:507:    <table class="table table-bordered">
+hhh\create.html:508:        <thead>
+hhh\create.html:509:            <tr>
+hhh\create.html:515:        <tbody>
+hhh\create.html:516:            <tr>
+hhh\create.html:517:                <td><input type="number" class="form-control" placeholder="أدخل عدد الطوابق" 
+/></td>
+hhh\create.html:518:                <td><input type="text" class="form-control" placeholder="أدخل الوصف" /></td>
+hhh\create.html:519:                <td><input type="text" class="form-control" placeholder="أدخل المكان" /></td>
+hhh\create.html:535:        <table class="table table-bordered">
+hhh\create.html:536:            <thead>
+hhh\create.html:537:                <tr>
+hhh\create.html:543:            <tbody>
+hhh\create.html:544:                <tr>
+hhh\create.html:545:                    <td> شمال</td>
+hhh\create.html:546:                    <td class="align-middle text-center">
+hhh\create.html:549:                    <td>
+hhh\create.html:553:                <tr>
+hhh\create.html:554:                    <td> شرق</td>
+hhh\create.html:555:                    <td class="align-middle text-center">
+hhh\create.html:558:                    <td>
+hhh\create.html:562:                <tr>
+hhh\create.html:563:                    <td> غرب</td>
+hhh\create.html:564:                    <td class="align-middle text-center">
+hhh\create.html:567:                    <td>
+hhh\create.html:571:                <tr>
+hhh\create.html:572:                    <td> جنوب</td>
+hhh\create.html:573:                    <td class="align-middle text-center">
+hhh\create.html:576:                    <td>
+hhh\create.html:639:            <td><input type="number" class="form-control" placeholder="أدخل عدد الطوابق" /></td>
+hhh\create.html:640:            <td><input type="text" class="form-control" placeholder="أدخل الوصف" /></td>
+hhh\create.html:641:            <td><input type="text" class="form-control" placeholder="أدخل المكان" /></td>
+hhh\create.html:666:    <table class="table table-bordered mb-2 text-center" id="earthBordersTitleUnique123">
+hhh\create.html:667:        <thead>
+hhh\create.html:670:        <tbody>
+hhh\create.html:671:            <tr>
+hhh\create.html:672:                <td>من أعلى</td>
+hhh\create.html:673:                <td class="align-middle">
+hhh\create.html:676:                <td>
+hhh\create.html:680:            <tr>
+hhh\create.html:681:                <td>من أسفل</td>
+hhh\create.html:682:                <td class="align-middle">
+hhh\create.html:685:                <td>
+hhh\create.html:1061:    <table class="table table-bordered mb-2">
+hhh\create.html:1062:        <thead>
+hhh\create.html:1063:            <tr>
+hhh\create.html:1071:        <tbody>
+hhh\create.html:1073:            <tbody>
+hhh\create.html:1074:                <tr>
+hhh\create.html:1075:                    <td>1</td>
+hhh\create.html:1076:                    <td>
+hhh\create.html:1081:                    <td>
+hhh\create.html:1095:                    <td class="text-center">
+hhh\create.html:1102:                <tr>
+hhh\create.html:1103:                    <td>2</td>
+hhh\create.html:1104:                    <td>
+hhh\create.html:1109:                    <td>
+hhh\create.html:1124:                    <td class="text-center">
+hhh\create.html:1131:                <tr>
+hhh\create.html:1132:                    <td>3</td>
+hhh\create.html:1133:                    <td>
+hhh\create.html:1138:                    <td>
+hhh\create.html:1152:                    <td class="text-center">
+hhh\create.html:1158:                <tr>
+hhh\create.html:1159:                    <td>4</td>
+hhh\create.html:1160:                    <td>
+hhh\create.html:1165:                    <td>
+hhh\create.html:1168:                    <td class="text-center">
+hhh\create.html:1176:                <tr>
+hhh\create.html:1177:                    <td>5</td>
+hhh\create.html:1178:                    <td>
+hhh\create.html:1183:                    <td>
+hhh\create.html:1198:                    <td class="text-center">
+hhh\create.html:1308:    <table class="table table-bordered">
+hhh\create.html:1309:        <thead>
+hhh\create.html:1310:            <tr>
+hhh\create.html:1316:        <tbody>
+hhh\create.html:1317:            <tr>
+hhh\create.html:1318:                <td><input type="text" class="form-control" placeholder="  المالكون السابقون" 
+/></td>
+hhh\create.html:1319:                <td><input type="text" class="form-control" placeholder=" حصولهم على" /></td>
+hhh\create.html:1320:                <td><input type="text" class="form-control" placeholder=" الوثائق التي يستند 
+عليها" /></td>
+hhh\createdevided.html:346:    <table class="table table-bordered mb-2">
+hhh\createdevided.html:347:        <thead>
+hhh\createdevided.html:348:            <tr>
+hhh\createdevided.html:357:        <tbody>
+hhh\createdevided.html:359:            <tbody>
+hhh\createdevided.html:360:                <tr>
+hhh\createdevided.html:361:                    <td>1</td>
+hhh\createdevided.html:362:                    <td>
+hhh\createdevided.html:377:                    <td>
+hhh\createdevided.html:380:                    <td class="text-center">
+hhh\createdevided.html:386:                    <td>
+hhh\createdevided.html:389:                    <td>
+hhh\createdevided.html:395:                <tr>
+hhh\createdevided.html:396:                    <td>2</td>
+hhh\createdevided.html:397:                    <td>
+hhh\createdevided.html:412:                    <td>
+hhh\createdevided.html:415:                    <td class="text-center">
+hhh\createdevided.html:422:                    <td>
+hhh\createdevided.html:425:                    <td>
+hhh\createdevided.html:431:                <tr>
+hhh\createdevided.html:432:                    <td>3</td>
+hhh\createdevided.html:433:                    <td>
+hhh\createdevided.html:447:                    <td>
+hhh\createdevided.html:450:                    <td class="text-center">
+hhh\createdevided.html:457:                    <td>
+hhh\createdevided.html:460:                    <td>
+hhh\createdevided.html:466:                <tr>
+hhh\createdevided.html:467:                    <td>4</td>
+hhh\createdevided.html:468:                    <td>
+hhh\createdevided.html:481:                    <td>
+hhh\createdevided.html:484:                    <td class="text-center">
+hhh\createdevided.html:491:                    <td>
+hhh\createdevided.html:494:                    <td>
+hhh\createdevided.html:515:    <table class="table table-bordered">
+hhh\createdevided.html:516:        <thead>
+hhh\createdevided.html:517:            <tr>
+hhh\createdevided.html:523:        <tbody>
+hhh\createdevided.html:524:            <tr>
+hhh\createdevided.html:525:                <td><input type="number" class="form-control" placeholder="أدخل عدد 
+الطوابق" /></td>
+hhh\createdevided.html:526:                <td><input type="text" class="form-control" placeholder="أدخل الوصف" 
+/></td>
+hhh\createdevided.html:527:                <td><input type="text" class="form-control" placeholder="أدخل المكان" 
+/></td>
+hhh\createdevided.html:543:        <table class="table table-bordered">
+hhh\createdevided.html:544:            <thead>
+hhh\createdevided.html:545:                <tr>
+hhh\createdevided.html:551:            <tbody>
+hhh\createdevided.html:552:                <tr>
+hhh\createdevided.html:553:                    <td> شمال</td>
+hhh\createdevided.html:554:                    <td class="align-middle text-center">
+hhh\createdevided.html:557:                    <td>
+hhh\createdevided.html:561:                <tr>
+hhh\createdevided.html:562:                    <td> شرق</td>
+hhh\createdevided.html:563:                    <td class="align-middle text-center">
+hhh\createdevided.html:566:                    <td>
+hhh\createdevided.html:570:                <tr>
+hhh\createdevided.html:571:                    <td> غرب</td>
+hhh\createdevided.html:572:                    <td class="align-middle text-center">
+hhh\createdevided.html:575:                    <td>
+hhh\createdevided.html:579:                <tr>
+hhh\createdevided.html:580:                    <td> جنوب</td>
+hhh\createdevided.html:581:                    <td class="align-middle text-center">
+hhh\createdevided.html:584:                    <td>
+hhh\createdevided.html:647:            <td><input type="number" class="form-control" placeholder="أدخل عدد الطوابق" 
+/></td>
+hhh\createdevided.html:648:            <td><input type="text" class="form-control" placeholder="أدخل الوصف" /></td>
+hhh\createdevided.html:649:            <td><input type="text" class="form-control" placeholder="أدخل المكان" /></td>
+hhh\createdevided.html:674:    <table class="table table-bordered mb-2 text-center" id="earthBordersTitleUnique123">
+hhh\createdevided.html:675:        <thead>
+hhh\createdevided.html:678:        <tbody>
+hhh\createdevided.html:679:            <tr>
+hhh\createdevided.html:680:                <td>من أعلى</td>
+hhh\createdevided.html:681:                <td class="align-middle">
+hhh\createdevided.html:684:                <td>
+hhh\createdevided.html:688:            <tr>
+hhh\createdevided.html:689:                <td>من أسفل</td>
+hhh\createdevided.html:690:                <td class="align-middle">
+hhh\createdevided.html:693:                <td>
+hhh\createform.html:388:    <table class="table table-bordered mb-2">
+hhh\createform.html:389:        <thead>
+hhh\createform.html:390:            <tr>
+hhh\createform.html:399:        <tbody>
+hhh\createform.html:401:            <tbody>
+hhh\createform.html:402:                <tr>
+hhh\createform.html:403:                    <td>1</td>
+hhh\createform.html:404:                    <td>
+hhh\createform.html:419:                    <td>
+hhh\createform.html:422:                    <td class="text-center">
+hhh\createform.html:428:                    <td>
+hhh\createform.html:431:                    <td>
+hhh\createform.html:437:                <tr>
+hhh\createform.html:438:                    <td>2</td>
+hhh\createform.html:439:                    <td>
+hhh\createform.html:454:                    <td>
+hhh\createform.html:457:                    <td class="text-center">
+hhh\createform.html:464:                    <td>
+hhh\createform.html:467:                    <td>
+hhh\createform.html:473:                <tr>
+hhh\createform.html:474:                    <td>3</td>
+hhh\createform.html:475:                    <td>
+hhh\createform.html:489:                    <td>
+hhh\createform.html:492:                    <td class="text-center">
+hhh\createform.html:499:                    <td>
+hhh\createform.html:502:                    <td>
+hhh\createform.html:508:                <tr>
+hhh\createform.html:509:                    <td>4</td>
+hhh\createform.html:510:                    <td>
+hhh\createform.html:523:                    <td>
+hhh\createform.html:526:                    <td class="text-center">
+hhh\createform.html:533:                    <td>
+hhh\createform.html:536:                    <td>
+hhh\createform.html:557:    <table class="table table-bordered">
+hhh\createform.html:558:        <thead>
+hhh\createform.html:559:            <tr>
+hhh\createform.html:565:        <tbody>
+hhh\createform.html:566:            <tr>
+hhh\createform.html:567:                <td><input type="number" class="form-control" placeholder="أدخل عدد 
+الطوابق" /></td>
+hhh\createform.html:568:                <td><input type="text" class="form-control" placeholder="أدخل الوصف" /></td>
+hhh\createform.html:569:                <td><input type="text" class="form-control" placeholder="أدخل المكان" 
+/></td>
+hhh\createform.html:585:        <table class="table table-bordered">
+hhh\createform.html:586:            <thead>
+hhh\createform.html:587:                <tr>
+hhh\createform.html:593:            <tbody>
+hhh\createform.html:594:                <tr>
+hhh\createform.html:595:                    <td> شمال</td>
+hhh\createform.html:596:                    <td class="align-middle text-center">
+hhh\createform.html:599:                    <td>
+hhh\createform.html:603:                <tr>
+hhh\createform.html:604:                    <td> شرق</td>
+hhh\createform.html:605:                    <td class="align-middle text-center">
+hhh\createform.html:608:                    <td>
+hhh\createform.html:612:                <tr>
+hhh\createform.html:613:                    <td> غرب</td>
+hhh\createform.html:614:                    <td class="align-middle text-center">
+hhh\createform.html:617:                    <td>
+hhh\createform.html:621:                <tr>
+hhh\createform.html:622:                    <td> جنوب</td>
+hhh\createform.html:623:                    <td class="align-middle text-center">
+hhh\createform.html:626:                    <td>
+hhh\createform.html:689:            <td><input type="number" class="form-control" placeholder="أدخل عدد الطوابق" 
+/></td>
+hhh\createform.html:690:            <td><input type="text" class="form-control" placeholder="أدخل الوصف" /></td>
+hhh\createform.html:691:            <td><input type="text" class="form-control" placeholder="أدخل المكان" /></td>
+hhh\createform.html:716:    <table class="table table-bordered mb-2 text-center" id="earthBordersTitleUnique123">
+hhh\createform.html:717:        <thead>
+hhh\createform.html:720:        <tbody>
+hhh\createform.html:721:            <tr>
+hhh\createform.html:722:                <td>من أعلى</td>
+hhh\createform.html:723:                <td class="align-middle">
+hhh\createform.html:726:                <td>
+hhh\createform.html:730:            <tr>
+hhh\createform.html:731:                <td>من أسفل</td>
+hhh\createform.html:732:                <td class="align-middle">
+hhh\createform.html:735:                <td>
+hhh\createform.html:1111:    <table class="table table-bordered mb-2">
+hhh\createform.html:1112:        <thead>
+hhh\createform.html:1113:            <tr>
+hhh\createform.html:1121:        <tbody>
+hhh\createform.html:1123:            <tbody>
+hhh\createform.html:1124:                <tr>
+hhh\createform.html:1125:                    <td>1</td>
+hhh\createform.html:1126:                    <td>
+hhh\createform.html:1131:                    <td>
+hhh\createform.html:1145:                    <td class="text-center">
+hhh\createform.html:1152:                <tr>
+hhh\createform.html:1153:                    <td>2</td>
+hhh\createform.html:1154:                    <td>
+hhh\createform.html:1159:                    <td>
+hhh\createform.html:1174:                    <td class="text-center">
+hhh\createform.html:1181:                <tr>
+hhh\createform.html:1182:                    <td>3</td>
+hhh\createform.html:1183:                    <td>
+hhh\createform.html:1188:                    <td>
+hhh\createform.html:1202:                    <td class="text-center">
+hhh\createform.html:1208:                <tr>
+hhh\createform.html:1209:                    <td>4</td>
+hhh\createform.html:1210:                    <td>
+hhh\createform.html:1215:                    <td>
+hhh\createform.html:1218:                    <td class="text-center">
+hhh\createform.html:1226:                <tr>
+hhh\createform.html:1227:                    <td>5</td>
+hhh\createform.html:1228:                    <td>
+hhh\createform.html:1233:                    <td>
+hhh\createform.html:1248:                    <td class="text-center">
+hhh\createform.html:1296:    <table class="table table-bordered">
+hhh\createform.html:1297:        <thead>
+hhh\createform.html:1298:            <tr>
+hhh\createform.html:1304:        <tbody>
+hhh\createform.html:1305:            <tr>
+hhh\createform.html:1306:                <td><input type="text" class="form-control" placeholder="  المالكون 
+السابقون" /></td>
+hhh\createform.html:1307:                <td><input type="text" class="form-control" placeholder=" حصولهم على" 
+/></td>
+hhh\createform.html:1308:                <td><input type="text" class="form-control" placeholder=" الوثائق التي 
+يستند عليها" /></td>
+hhh\createorder.html:345:    <table class="table table-bordered mb-2">
+hhh\createorder.html:346:        <thead>
+hhh\createorder.html:347:            <tr>
+hhh\createorder.html:356:        <tbody>
+hhh\createorder.html:358:            <tbody>
+hhh\createorder.html:359:                <tr>
+hhh\createorder.html:360:                    <td>1</td>
+hhh\createorder.html:361:                    <td>
+hhh\createorder.html:376:                    <td>
+hhh\createorder.html:379:                    <td class="text-center">
+hhh\createorder.html:385:                    <td>
+hhh\createorder.html:388:                    <td>
+hhh\createorder.html:394:                <tr>
+hhh\createorder.html:395:                    <td>2</td>
+hhh\createorder.html:396:                    <td>
+hhh\createorder.html:411:                    <td>
+hhh\createorder.html:414:                    <td class="text-center">
+hhh\createorder.html:421:                    <td>
+hhh\createorder.html:424:                    <td>
+hhh\createorder.html:430:                <tr>
+hhh\createorder.html:431:                    <td>3</td>
+hhh\createorder.html:432:                    <td>
+hhh\createorder.html:446:                    <td>
+hhh\createorder.html:449:                    <td class="text-center">
+hhh\createorder.html:456:                    <td>
+hhh\createorder.html:459:                    <td>
+hhh\createorder.html:465:                <tr>
+hhh\createorder.html:466:                    <td>4</td>
+hhh\createorder.html:467:                    <td>
+hhh\createorder.html:480:                    <td>
+hhh\createorder.html:483:                    <td class="text-center">
+hhh\createorder.html:490:                    <td>
+hhh\createorder.html:493:                    <td>
+hhh\createorder.html:514:    <table class="table table-bordered">
+hhh\createorder.html:515:        <thead>
+hhh\createorder.html:516:            <tr>
+hhh\createorder.html:522:        <tbody>
+hhh\createorder.html:523:            <tr>
+hhh\createorder.html:524:                <td><input type="number" class="form-control" placeholder="أدخل عدد 
+الطوابق" /></td>
+hhh\createorder.html:525:                <td><input type="text" class="form-control" placeholder="أدخل الوصف" 
+/></td>
+hhh\createorder.html:526:                <td><input type="text" class="form-control" placeholder="أدخل المكان" 
+/></td>
+hhh\createorder.html:542:        <table class="table table-bordered">
+hhh\createorder.html:543:            <thead>
+hhh\createorder.html:544:                <tr>
+hhh\createorder.html:550:            <tbody>
+hhh\createorder.html:551:                <tr>
+hhh\createorder.html:552:                    <td> شمال</td>
+hhh\createorder.html:553:                    <td class="align-middle text-center">
+hhh\createorder.html:556:                    <td>
+hhh\createorder.html:560:                <tr>
+hhh\createorder.html:561:                    <td> شرق</td>
+hhh\createorder.html:562:                    <td class="align-middle text-center">
+hhh\createorder.html:565:                    <td>
+hhh\createorder.html:569:                <tr>
+hhh\createorder.html:570:                    <td> غرب</td>
+hhh\createorder.html:571:                    <td class="align-middle text-center">
+hhh\createorder.html:574:                    <td>
+hhh\createorder.html:578:                <tr>
+hhh\createorder.html:579:                    <td> جنوب</td>
+hhh\createorder.html:580:                    <td class="align-middle text-center">
+hhh\createorder.html:583:                    <td>
+hhh\createorder.html:646:            <td><input type="number" class="form-control" placeholder="أدخل عدد الطوابق" 
+/></td>
+hhh\createorder.html:647:            <td><input type="text" class="form-control" placeholder="أدخل الوصف" /></td>
+hhh\createorder.html:648:            <td><input type="text" class="form-control" placeholder="أدخل المكان" /></td>
+hhh\createorder.html:673:    <table class="table table-bordered mb-2 text-center" id="earthBordersTitleUnique123">
+hhh\createorder.html:674:        <thead>
+hhh\createorder.html:677:        <tbody>
+hhh\createorder.html:678:            <tr>
+hhh\createorder.html:679:                <td>من أعلى</td>
+hhh\createorder.html:680:                <td class="align-middle">
+hhh\createorder.html:683:                <td>
+hhh\createorder.html:687:            <tr>
+hhh\createorder.html:688:                <td>من أسفل</td>
+hhh\createorder.html:689:                <td class="align-middle">
+hhh\createorder.html:692:                <td>
+hhh\createspece.html:153:            <td><input type="number" class="form-control" placeholder="أدخل عدد الطوابق" 
+/></td>
+hhh\createspece.html:154:            <td><input type="text" class="form-control" placeholder="أدخل الوصف" /></td>
+hhh\createspece.html:155:            <td><input type="text" class="form-control" placeholder="أدخل المكان" /></td>
+hhh\creatform.html:337:    <table class="table table-bordered mb-2">
+hhh\creatform.html:338:        <thead>
+hhh\creatform.html:339:            <tr>
+hhh\creatform.html:348:        <tbody>
+hhh\creatform.html:350:            <tbody>
+hhh\creatform.html:351:                <tr>
+hhh\creatform.html:352:                    <td>1</td>
+hhh\creatform.html:353:                    <td>
+hhh\creatform.html:368:                    <td>
+hhh\creatform.html:371:                    <td class="text-center">
+hhh\creatform.html:377:                    <td>
+hhh\creatform.html:380:                    <td>
+hhh\creatform.html:386:                <tr>
+hhh\creatform.html:387:                    <td>2</td>
+hhh\creatform.html:388:                    <td>
+hhh\creatform.html:403:                    <td>
+hhh\creatform.html:406:                    <td class="text-center">
+hhh\creatform.html:413:                    <td>
+hhh\creatform.html:416:                    <td>
+hhh\creatform.html:422:                <tr>
+hhh\creatform.html:423:                    <td>3</td>
+hhh\creatform.html:424:                    <td>
+hhh\creatform.html:438:                    <td>
+hhh\creatform.html:441:                    <td class="text-center">
+hhh\creatform.html:448:                    <td>
+hhh\creatform.html:451:                    <td>
+hhh\creatform.html:457:                <tr>
+hhh\creatform.html:458:                    <td>4</td>
+hhh\creatform.html:459:                    <td>
+hhh\creatform.html:472:                    <td>
+hhh\creatform.html:475:                    <td class="text-center">
+hhh\creatform.html:482:                    <td>
+hhh\creatform.html:485:                    <td>
+hhh\creatform.html:506:    <table class="table table-bordered">
+hhh\creatform.html:507:        <thead>
+hhh\creatform.html:508:            <tr>
+hhh\creatform.html:514:        <tbody>
+hhh\creatform.html:515:            <tr>
+hhh\creatform.html:516:                <td><input type="number" class="form-control" placeholder="أدخل عدد الطوابق" 
+/></td>
+hhh\creatform.html:517:                <td><input type="text" class="form-control" placeholder="أدخل الوصف" /></td>
+hhh\creatform.html:518:                <td><input type="text" class="form-control" placeholder="أدخل المكان" /></td>
+hhh\creatform.html:534:        <table class="table table-bordered">
+hhh\creatform.html:535:            <thead>
+hhh\creatform.html:536:                <tr>
+hhh\creatform.html:542:            <tbody>
+hhh\creatform.html:543:                <tr>
+hhh\creatform.html:544:                    <td> شمال</td>
+hhh\creatform.html:545:                    <td class="align-middle text-center">
+hhh\creatform.html:548:                    <td>
+hhh\creatform.html:552:                <tr>
+hhh\creatform.html:553:                    <td> شرق</td>
+hhh\creatform.html:554:                    <td class="align-middle text-center">
+hhh\creatform.html:557:                    <td>
+hhh\creatform.html:561:                <tr>
+hhh\creatform.html:562:                    <td> غرب</td>
+hhh\creatform.html:563:                    <td class="align-middle text-center">
+hhh\creatform.html:566:                    <td>
+hhh\creatform.html:570:                <tr>
+hhh\creatform.html:571:                    <td> جنوب</td>
+hhh\creatform.html:572:                    <td class="align-middle text-center">
+hhh\creatform.html:575:                    <td>
+hhh\creatform.html:638:            <td><input type="number" class="form-control" placeholder="أدخل عدد الطوابق" 
+/></td>
+hhh\creatform.html:639:            <td><input type="text" class="form-control" placeholder="أدخل الوصف" /></td>
+hhh\creatform.html:640:            <td><input type="text" class="form-control" placeholder="أدخل المكان" /></td>
+hhh\creatform.html:665:    <table class="table table-bordered mb-2 text-center" id="earthBordersTitleUnique123">
+hhh\creatform.html:666:        <thead>
+hhh\creatform.html:669:        <tbody>
+hhh\creatform.html:670:            <tr>
+hhh\creatform.html:671:                <td>من أعلى</td>
+hhh\creatform.html:672:                <td class="align-middle">
+hhh\creatform.html:675:                <td>
+hhh\creatform.html:679:            <tr>
+hhh\creatform.html:680:                <td>من أسفل</td>
+hhh\creatform.html:681:                <td class="align-middle">
+hhh\creatform.html:684:                <td>
+hhh\creatform.html:1060:    <table class="table table-bordered mb-2">
+hhh\creatform.html:1061:        <thead>
+hhh\creatform.html:1062:            <tr>
+hhh\creatform.html:1070:        <tbody>
+hhh\creatform.html:1072:            <tbody>
+hhh\creatform.html:1073:                <tr>
+hhh\creatform.html:1074:                    <td>1</td>
+hhh\creatform.html:1075:                    <td>
+hhh\creatform.html:1080:                    <td>
+hhh\creatform.html:1094:                    <td class="text-center">
+hhh\creatform.html:1101:                <tr>
+hhh\creatform.html:1102:                    <td>2</td>
+hhh\creatform.html:1103:                    <td>
+hhh\creatform.html:1108:                    <td>
+hhh\creatform.html:1123:                    <td class="text-center">
+hhh\creatform.html:1130:                <tr>
+hhh\creatform.html:1131:                    <td>3</td>
+hhh\creatform.html:1132:                    <td>
+hhh\creatform.html:1137:                    <td>
+hhh\creatform.html:1151:                    <td class="text-center">
+hhh\creatform.html:1157:                <tr>
+hhh\creatform.html:1158:                    <td>4</td>
+hhh\creatform.html:1159:                    <td>
+hhh\creatform.html:1164:                    <td>
+hhh\creatform.html:1167:                    <td class="text-center">
+hhh\creatform.html:1175:                <tr>
+hhh\creatform.html:1176:                    <td>5</td>
+hhh\creatform.html:1177:                    <td>
+hhh\creatform.html:1182:                    <td>
+hhh\creatform.html:1197:                    <td class="text-center">
+hhh\creatform.html:1307:    <table class="table table-bordered">
+hhh\creatform.html:1308:        <thead>
+hhh\creatform.html:1309:            <tr>
+hhh\creatform.html:1315:        <tbody>
+hhh\creatform.html:1316:            <tr>
+hhh\creatform.html:1317:                <td><input type="text" class="form-control" placeholder="  المالكون 
+السابقون" /></td>
+hhh\creatform.html:1318:                <td><input type="text" class="form-control" placeholder=" حصولهم على" 
+/></td>
+hhh\creatform.html:1319:                <td><input type="text" class="form-control" placeholder=" الوثائق التي 
+يستند عليها" /></td>
+hhh\devid.html:164:    <table class="table table-bordered mb-2">
+hhh\devid.html:165:        <thead>
+hhh\devid.html:166:            <tr>
+hhh\devid.html:174:        <tbody>
+hhh\devid.html:176:            <tbody>
+hhh\devid.html:177:                <tr>
+hhh\devid.html:178:                    <td>1</td>
+hhh\devid.html:179:                    <td>
+hhh\devid.html:184:                    <td>
+hhh\devid.html:198:                    <td class="text-center">
+hhh\devid.html:205:                <tr>
+hhh\devid.html:206:                    <td>2</td>
+hhh\devid.html:207:                    <td>
+hhh\devid.html:212:                    <td>
+hhh\devid.html:227:                    <td class="text-center">
+hhh\devid.html:234:                <tr>
+hhh\devid.html:235:                    <td>3</td>
+hhh\devid.html:236:                    <td>
+hhh\devid.html:241:                    <td>
+hhh\devid.html:255:                    <td class="text-center">
+hhh\devid.html:261:                <tr>
+hhh\devid.html:262:                    <td>4</td>
+hhh\devid.html:263:                    <td>
+hhh\devid.html:268:                    <td>
+hhh\devid.html:271:                    <td class="text-center">
+hhh\devid.html:279:                <tr>
+hhh\devid.html:280:                    <td>5</td>
+hhh\devid.html:281:                    <td>
+hhh\devid.html:286:                    <td>
+hhh\devid.html:301:                    <td class="text-center">
+hhh\index.html:197:              <table class="table table-bordered align-middle text-center shadow-sm" 
+id="managers-table">
+hhh\index.html:198:                  <thead class="table-primary">
+hhh\index.html:199:                      <tr>
+hhh\index.html:210:                  <tbody></tbody>
+hhh\index.html:376:        <tr>
+hhh\index.html:377:            <td contenteditable="true" class="editable"></td>
+hhh\index.html:378:            <td contenteditable="true" class="editable"></td>
+hhh\index.html:379:            <td contenteditable="true" class="editable"></td>
+hhh\index.html:380:            <td>
+hhh\WorkOffer.html:137:            <table class="table table-bordered align-middle text-center offer-table">
+hhh\WorkOffer.html:138:                <tbody>
+hhh\WorkOffer.html:139:                    <tr><td colspan="6" class="text-center">اختر قالب لعرض البيانات</td></tr>
+hhh\WorkOffer.html:169:                <table class="table table-bordered align-middle text-center offer-table">
+hhh\WorkOffer.html:170:                    <tbody>
+hhh\WorkOffer.html:171:                        <tr><td colspan="6" class="text-center">اختر قالب لعرض 
+البيانات</td></tr>
+hhh\WorkOffer.html:204:                container.innerHTML = `<table class="table table-bordered text-center 
+offer-table"><tbody><tr><td colspan="6" class="text-center">لا توجد بيانات</td></tr></tbody></table>`;
+hhh\WorkOffer.html:213:                    container.innerHTML = `<table class="table table-bordered text-center 
+offer-table"><tbody><tr><td colspan="6" class="text-center text-danger">${err.message}</td></tr></tbody></table>`;
+hhh\WorkOffer.html:236:                <table class="table table-bordered align-middle text-center offer-table">
+hhh\WorkOffer.html:237:                    <tbody>
+hhh\WorkOffer.html:238:                        <tr><td colspan="6" class="text-center">اختر قالب لعرض 
+البيانات</td></tr>
+hhh\WorkOffer1.html:97:                <table class="table table-bordered align-middle text-center offer-table">
+hhh\WorkOffer1.html:98:                    <tbody>
+hhh\WorkOffer1.html:99:                        <tr><td colspan="6" class="text-center">اختر قالب لعرض 
+البيانات</td></tr>
+hhh\Work_Form.html:133:                <table class="table table-bordered mb-0">
+hhh\Work_Form.html:134:                    <thead>
+hhh\Work_Form.html:135:                        <tr>
+hhh\Work_Form.html:147:                    <tbody>
+hhh\Work_Form.html:148:                        <tr>
+hhh\Work_Form.html:150:                            <td>
+hhh\Work_Form.html:166:                            <td>
+hhh\Work_Form.html:182:                            <td>
+hhh\Work_Form.html:185:                            <td>
+hhh\Work_Form.html:188:                            <td>
+hhh\Work_Form.html:205:            <table class="table table-bordered text-center align-middle">
+hhh\Work_Form.html:206:        <thead class="table-light">
+hhh\Work_Form.html:207:            <tr>
+hhh\Work_Form.html:215:        <tbody>
+hhh\Work_Form.html:216:            <tr>
+hhh\Work_Form.html:217:                <td>وصف الحد حسب الطبيعه </td>
+hhh\Work_Form.html:218:                <td><input type="text" class="form-control form-control-sm"></td>
+hhh\Work_Form.html:219:                <td><input type="text" class="form-control form-control-sm"></td>
+hhh\Work_Form.html:220:                <td><input type="text" class="form-control form-control-sm"></td>
+hhh\Work_Form.html:221:                <td><input type="text" class="form-control form-control-sm"></td>
+hhh\Work_Form.html:223:            <tr>
+hhh\Work_Form.html:224:                <td> طول الحد</td>
+hhh\Work_Form.html:225:                <td><input type="text" class="form-control form-control-sm"></td>
+hhh\Work_Form.html:226:                <td><input type="text" class="form-control form-control-sm"></td>
+hhh\Work_Form.html:227:                <td><input type="text" class="form-control form-control-sm"></td>
+hhh\Work_Form.html:228:                <td><input type="text" class="form-control form-control-sm"></td>
+hhh\Work_Form.html:230:            <tr>
+hhh\Work_Form.html:231:                <td>فئة الحد</td>
+hhh\Work_Form.html:232:                        <td>
+hhh\Work_Form.html:245:                        <td>
+hhh\Work_Form.html:258:                        <td>
+hhh\Work_Form.html:271:                        <td>
+hhh\Work_Form.html:295:             <tr>
+hhh\Work_Form.html:296:                <td>تصنيف الفئة </td>
+hhh\Work_Form.html:297:                <td><input type="number" class="form-control form-control-sm"></td>
+hhh\Work_Form.html:298:                <td><input type="number" class="form-control form-control-sm"></td>
+hhh\Work_Form.html:299:                <td><input type="number" class="form-control form-control-sm"></td>
+hhh\Work_Form.html:300:                <td><input type="number" class="form-control form-control-sm"></td>
+hhh\Work_Form.html:302:             <tr>
+hhh\Work_Form.html:303:                <td>جار الحد</td>
+hhh\Work_Form.html:304:                <td><input type="number" class="form-control form-control-sm"></td>
+hhh\Work_Form.html:305:                <td><input type="number" class="form-control form-control-sm"></td>
+hhh\Work_Form.html:306:                <td><input type="number" class="form-control form-control-sm"></td>
+hhh\Work_Form.html:307:                <td><input type="number" class="form-control form-control-sm"></td>
+hhh\Work_Form.html:309:             <tr>
+hhh\Work_Form.html:310:                <td>نوع الفاصل مع الجار</td>
+hhh\Work_Form.html:311:                <td><input type="number" class="form-control form-control-sm"></td>
+hhh\Work_Form.html:312:                <td><input type="number" class="form-control form-control-sm"></td>
+hhh\Work_Form.html:313:                <td><input type="number" class="form-control form-control-sm"></td>
+hhh\Work_Form.html:314:                <td><input type="number" class="form-control form-control-sm"></td>
+hhh\Work_Form.html:316:             <tr>
+hhh\Work_Form.html:317:                <td>عدد الانكسارات </td>
+hhh\Work_Form.html:318:                <td><input type="number" class="form-control form-control-sm"></td>
+hhh\Work_Form.html:319:                <td><input type="number" class="form-control form-control-sm"></td>
+hhh\Work_Form.html:320:                <td><input type="number" class="form-control form-control-sm"></td>
+hhh\Work_Form.html:321:                <td><input type="number" class="form-control form-control-sm"></td>
+hhh\Work_Form.html:323:             <tr>
+hhh\Work_Form.html:324:                <td>طول الانكسارات </td>
+hhh\Work_Form.html:325:                <td><input type="number" class="form-control form-control-sm"></td>
+hhh\Work_Form.html:326:                <td><input type="number" class="form-control form-control-sm"></td>
+hhh\Work_Form.html:327:                <td><input type="number" class="form-control form-control-sm"></td>
+hhh\Work_Form.html:328:                <td><input type="number" class="form-control form-control-sm"></td>
+hhh\Work_Form.html:330:             <tr>
+hhh\Work_Form.html:331:                <td>الشطفة </td>
+hhh\Work_Form.html:332:                <td><input type="number" class="form-control form-control-sm"></td>
+hhh\Work_Form.html:333:                <td><input type="number" class="form-control form-control-sm"></td>
+hhh\Work_Form.html:334:                <td><input type="number" class="form-control form-control-sm"></td>
+hhh\Work_Form.html:335:                <td><input type="number" class="form-control form-control-sm"></td>
+hhh\Work_Form.html:337:             <tr>
+hhh\Work_Form.html:338:                <td>اقل ارتداد </td>
+hhh\Work_Form.html:339:                <td><input type="number" class="form-control form-control-sm"></td>
+hhh\Work_Form.html:340:                <td><input type="number" class="form-control form-control-sm"></td>
+hhh\Work_Form.html:341:                <td><input type="number" class="form-control form-control-sm"></td>
+hhh\Work_Form.html:342:                <td><input type="number" class="form-control form-control-sm"></td>
+hhh\Work_Form.html:344:             <tr>
+hhh\Work_Form.html:345:                <td>اقصئ بروز</td>
+hhh\Work_Form.html:346:                <td><input type="number" class="form-control form-control-sm"></td>
+hhh\Work_Form.html:347:                <td><input type="number" class="form-control form-control-sm"></td>
+hhh\Work_Form.html:348:                <td><input type="number" class="form-control form-control-sm"></td>
+hhh\Work_Form.html:349:                <td><input type="number" class="form-control form-control-sm"></td>
+hhh\Work_Form.html:361:                    <table class="table table-bordered align-middle text-center offer-table">
+hhh\Work_Form.html:362:                        <thead>
+hhh\Work_Form.html:363:                            <tr>
+hhh\Work_Form.html:371:                        <tbody >
+hhh\Work_Form.html:372:                            <tr>
+hhh\Work_Form.html:373:                                <td>1</td>
+hhh\Work_Form.html:374:                                <td>
+hhh\Work_Form.html:378:                                <td>
+hhh\Work_Form.html:381:                                <td>
+hhh\Work_Form.html:384:                                <td>
+hhh\Work_Form.html:398:          <table class="table table-bordered align-middle text-center offer-table">
+hhh\Work_Form.html:399:              <thead>
+hhh\Work_Form.html:400:                  <tr>
+hhh\Work_Form.html:407:              <tbody >
+hhh\Work_Form.html:408:                  <tr>
+hhh\Work_Form.html:409:                      <td>1</td>
+hhh\Work_Form.html:410:                      <td>
+hhh\Work_Form.html:414:                      <td>
+hhh\Work_Form_base.html:133:                <table class="table table-bordered mb-0">
+hhh\Work_Form_base.html:134:                    <thead>
+hhh\Work_Form_base.html:135:                        <tr>
+hhh\Work_Form_base.html:147:                    <tbody>
+hhh\Work_Form_base.html:148:                        <tr>
+hhh\Work_Form_base.html:150:                            <td>
+hhh\Work_Form_base.html:166:                            <td>
+hhh\Work_Form_base.html:182:                            <td>
+hhh\Work_Form_base.html:185:                            <td>
+hhh\Work_Form_base.html:188:                            <td>
+hhh\Work_Form_base.html:205:            <table class="table table-bordered text-center align-middle">
+hhh\Work_Form_base.html:206:        <thead class="table-light">
+hhh\Work_Form_base.html:207:            <tr>
+hhh\Work_Form_base.html:215:        <tbody>
+hhh\Work_Form_base.html:216:            <tr>
+hhh\Work_Form_base.html:217:                <td>وصف الحد حسب الطبيعه </td>
+hhh\Work_Form_base.html:218:                <td><input type="text" class="form-control form-control-sm"></td>
+hhh\Work_Form_base.html:219:                <td><input type="text" class="form-control form-control-sm"></td>
+hhh\Work_Form_base.html:220:                <td><input type="text" class="form-control form-control-sm"></td>
+hhh\Work_Form_base.html:221:                <td><input type="text" class="form-control form-control-sm"></td>
+hhh\Work_Form_base.html:223:            <tr>
+hhh\Work_Form_base.html:224:                <td> طول الحد</td>
+hhh\Work_Form_base.html:225:                <td><input type="text" class="form-control form-control-sm"></td>
+hhh\Work_Form_base.html:226:                <td><input type="text" class="form-control form-control-sm"></td>
+hhh\Work_Form_base.html:227:                <td><input type="text" class="form-control form-control-sm"></td>
+hhh\Work_Form_base.html:228:                <td><input type="text" class="form-control form-control-sm"></td>
+hhh\Work_Form_base.html:230:            <tr>
+hhh\Work_Form_base.html:231:                <td>فئة الحد</td>
+hhh\Work_Form_base.html:232:                        <td>
+hhh\Work_Form_base.html:245:                        <td>
+hhh\Work_Form_base.html:258:                        <td>
+hhh\Work_Form_base.html:271:                        <td>
+hhh\Work_Form_base.html:295:             <tr>
+hhh\Work_Form_base.html:296:                <td>تصنيف الفئة </td>
+hhh\Work_Form_base.html:297:                <td><input type="number" class="form-control form-control-sm"></td>
+hhh\Work_Form_base.html:298:                <td><input type="number" class="form-control form-control-sm"></td>
+hhh\Work_Form_base.html:299:                <td><input type="number" class="form-control form-control-sm"></td>
+hhh\Work_Form_base.html:300:                <td><input type="number" class="form-control form-control-sm"></td>
+hhh\Work_Form_base.html:302:             <tr>
+hhh\Work_Form_base.html:303:                <td>جار الحد</td>
+hhh\Work_Form_base.html:304:                <td><input type="number" class="form-control form-control-sm"></td>
+hhh\Work_Form_base.html:305:                <td><input type="number" class="form-control form-control-sm"></td>
+hhh\Work_Form_base.html:306:                <td><input type="number" class="form-control form-control-sm"></td>
+hhh\Work_Form_base.html:307:                <td><input type="number" class="form-control form-control-sm"></td>
+hhh\Work_Form_base.html:309:             <tr>
+hhh\Work_Form_base.html:310:                <td>نوع الفاصل مع الجار</td>
+hhh\Work_Form_base.html:311:                <td><input type="number" class="form-control form-control-sm"></td>
+hhh\Work_Form_base.html:312:                <td><input type="number" class="form-control form-control-sm"></td>
+hhh\Work_Form_base.html:313:                <td><input type="number" class="form-control form-control-sm"></td>
+hhh\Work_Form_base.html:314:                <td><input type="number" class="form-control form-control-sm"></td>
+hhh\Work_Form_base.html:316:             <tr>
+hhh\Work_Form_base.html:317:                <td>عدد الانكسارات </td>
+hhh\Work_Form_base.html:318:                <td><input type="number" class="form-control form-control-sm"></td>
+hhh\Work_Form_base.html:319:                <td><input type="number" class="form-control form-control-sm"></td>
+hhh\Work_Form_base.html:320:                <td><input type="number" class="form-control form-control-sm"></td>
+hhh\Work_Form_base.html:321:                <td><input type="number" class="form-control form-control-sm"></td>
+hhh\Work_Form_base.html:323:             <tr>
+hhh\Work_Form_base.html:324:                <td>طول الانكسارات </td>
+hhh\Work_Form_base.html:325:                <td><input type="number" class="form-control form-control-sm"></td>
+hhh\Work_Form_base.html:326:                <td><input type="number" class="form-control form-control-sm"></td>
+hhh\Work_Form_base.html:327:                <td><input type="number" class="form-control form-control-sm"></td>
+hhh\Work_Form_base.html:328:                <td><input type="number" class="form-control form-control-sm"></td>
+hhh\Work_Form_base.html:330:             <tr>
+hhh\Work_Form_base.html:331:                <td>الشطفة </td>
+hhh\Work_Form_base.html:332:                <td><input type="number" class="form-control form-control-sm"></td>
+hhh\Work_Form_base.html:333:                <td><input type="number" class="form-control form-control-sm"></td>
+hhh\Work_Form_base.html:334:                <td><input type="number" class="form-control form-control-sm"></td>
+hhh\Work_Form_base.html:335:                <td><input type="number" class="form-control form-control-sm"></td>
+hhh\Work_Form_base.html:337:             <tr>
+hhh\Work_Form_base.html:338:                <td>اقل ارتداد </td>
+hhh\Work_Form_base.html:339:                <td><input type="number" class="form-control form-control-sm"></td>
+hhh\Work_Form_base.html:340:                <td><input type="number" class="form-control form-control-sm"></td>
+hhh\Work_Form_base.html:341:                <td><input type="number" class="form-control form-control-sm"></td>
+hhh\Work_Form_base.html:342:                <td><input type="number" class="form-control form-control-sm"></td>
+hhh\Work_Form_base.html:344:             <tr>
+hhh\Work_Form_base.html:345:                <td>اقصئ بروز</td>
+hhh\Work_Form_base.html:346:                <td><input type="number" class="form-control form-control-sm"></td>
+hhh\Work_Form_base.html:347:                <td><input type="number" class="form-control form-control-sm"></td>
+hhh\Work_Form_base.html:348:                <td><input type="number" class="form-control form-control-sm"></td>
+hhh\Work_Form_base.html:349:                <td><input type="number" class="form-control form-control-sm"></td>
+hhh\Work_Form_base.html:361:                    <table class="table table-bordered align-middle text-center 
+offer-table">
+hhh\Work_Form_base.html:362:                        <thead>
+hhh\Work_Form_base.html:363:                            <tr>
+hhh\Work_Form_base.html:371:                        <tbody >
+hhh\Work_Form_base.html:372:                            <tr>
+hhh\Work_Form_base.html:373:                                <td>1</td>
+hhh\Work_Form_base.html:374:                                <td>
+hhh\Work_Form_base.html:378:                                <td>
+hhh\Work_Form_base.html:381:                                <td>
+hhh\Work_Form_base.html:384:                                <td>
+hhh\Work_Form_base.html:398:          <table class="table table-bordered align-middle text-center offer-table">
+hhh\Work_Form_base.html:399:              <thead>
+hhh\Work_Form_base.html:400:                  <tr>
+hhh\Work_Form_base.html:407:              <tbody >
+hhh\Work_Form_base.html:408:                  <tr>
+hhh\Work_Form_base.html:409:                      <td>1</td>
+hhh\Work_Form_base.html:410:                      <td>
+hhh\Work_Form_base.html:414:                      <td>
+hhh\Work_Form_base.html:559:      <table class="table table-bordered text-center align-middle">
+hhh\Work_Form_base.html:560:        <thead class="table-light">
+hhh\Work_Form_base.html:561:            <tr>
+hhh\Work_Form_base.html:573:        <tbody>
+hhh\Work_Form_base.html:574:            <tr>
+hhh\Work_Form_base.html:575:              <td>
+hhh\Work_Form_base.html:584:                <td><input type="text" class="form-control form-control-sm"></td>
+hhh\Work_Form_base.html:585:                <td><input type="text" class="form-control form-control-sm"></td>
+hhh\Work_Form_base.html:586:                <td><input type="text" class="form-control form-control-sm"></td>
+hhh\Work_Form_base.html:587:                <td><input type="text" class="form-control form-control-sm"></td>
+hhh\Work_Form_base.html:588:                <td><input type="text" class="form-control form-control-sm"></td>
+hhh\Work_Form_base.html:589:                <td><input type="text" class="form-control form-control-sm"></td>
+hhh\Work_Form_base.html:590:                <td><input type="text" class="form-control form-control-sm"></td>
+
+

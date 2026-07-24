@@ -1,0 +1,52 @@
+﻿
+hhh\AllTemplate.html:1274:    function setupNameAdder(txtId, listId, countId, btnId) {
+hhh\AllTemplate.html:2004:                function filterTransportRows(value) {
+hhh\almjal.html:276:    function saveState(key, value) { localStorage.setItem(key, value); }
+hhh\almjal.html:277:    function getState(key) { return localStorage.getItem(key); }
+hhh\almjal.html:284:    function updateBreadcrumb() {
+hhh\almjal.html:293:    function renderMainIcons() {
+hhh\almjal.html:320:    function renderSpecialtyIcons(main) {
+hhh\almjal.html:354:    function renderBranchIcons(main, spec) {
+hhh\almjal.html:388:    function renderDetailIcons(main, spec, branch) {
+hhh\almjal1.html:248:    function fillMain() {
+hhh\almjal1.html:278:    function fillSelect(select, list, placeholder) {
+hhh\almjal1.html:283:    function clearNext(ids) {
+hhh\ContractTemplate.html:369:        function showRejectForm() {
+hhh\ContractTemplate.html:374:        function hideRejectForm() {
+hhh\ContractTemplate.html:402:        function closePaymentModal() {
+hhh\ContractTemplate.html:407:        function showPaymentForm(method) {
+hhh\ContractTemplate.html:435:        function backToMethod() {
+hhh\ContractTemplate.html:451:        function submitPayment(event) {
+hhh\ContractTemplate1.html:314:        function showRejectForm() {
+hhh\ContractTemplate1.html:319:        function hideRejectForm() {
+hhh\ContractTemplate1.html:347:        function closePaymentModal() {
+hhh\ContractTemplate1.html:352:        function showPaymentForm(method) {
+hhh\ContractTemplate1.html:380:        function backToMethod() {
+hhh\ContractTemplate1.html:396:        function submitPayment(event) {
+hhh\create.html:1281:    function setupNameAdder(txtId, listId, countId, btnId) {
+hhh\createdevided.html:983:    function setupNameAdder(txtId, listId, countId, btnId) {
+hhh\createform.html:1269:    function setupNameAdder(txtId, listId, countId, btnId) {
+hhh\createspece.html:340:    function setupNameAdder(txtId, listId, countId, btnId) {
+hhh\creatform.html:1280:    function setupNameAdder(txtId, listId, countId, btnId) {
+hhh\devid.html:380:    function setupNameAdder(txtId, listId, countId, btnId) {
+hhh\index.html:144:            function toggleExpTo() {
+hhh\index.html:176:            function addTaskField() {
+hhh\index.html:191:            function removeTaskField(button) {
+hhh\index.html:373:function addManagerRow() {
+hhh\index.html:393:function toggleMotherLanguage() {
+hhh\index.html:399:function addLanguage() {
+hhh\index.html:423:function editManagerRow(btn) {
+hhh\index.html:435:function deleteManagerRow(btn) {
+hhh\index.html:440:function showMessage(msg) {
+hhh\index.html:446:function toggleSection(id) {
+hhh\index.html:454:function createItemBox(content, editCallback) {
+hhh\index.html:469:function addSkill() {
+hhh\index.html:481:function addExperience() {
+hhh\index.html:493:function addEducation() {
+hhh\index.html:510:function addCert() {
+hhh\index.html:537:function addProject() {
+hhh\index.html:551:function generateCV() {
+hhh\index.html:595:function editCV() {
+hhh\WorkOffer.html:180:            function filterTransportRows(value) {
+
+

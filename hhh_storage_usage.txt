@@ -1,0 +1,6 @@
+﻿
+hhh\almjal.html:275:    // استرجاع وحفظ الحالة في localStorage
+hhh\almjal.html:276:    function saveState(key, value) { localStorage.setItem(key, value); }
+hhh\almjal.html:277:    function getState(key) { return localStorage.getItem(key); }
+
+

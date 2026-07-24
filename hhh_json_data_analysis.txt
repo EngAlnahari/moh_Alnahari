@@ -1,0 +1,2016 @@
+﻿
+hhh\AllTemplate.html:11:    body {
+hhh\AllTemplate.html:16:    }
+hhh\AllTemplate.html:17:    .section-header {
+hhh\AllTemplate.html:27:    }
+hhh\AllTemplate.html:28:    .section-header:hover { background-color: #0b5ed7; }
+hhh\AllTemplate.html:29:    .section-content {
+hhh\AllTemplate.html:37:    }
+hhh\AllTemplate.html:38:    .add-btn { margin-top: 10px; }
+hhh\AllTemplate.html:39:    .item-box {
+hhh\AllTemplate.html:46:    }
+hhh\AllTemplate.html:47:    .action-btns {
+hhh\AllTemplate.html:51:    }
+hhh\AllTemplate.html:52:    .action-btns button { margin-left: 5px; }
+hhh\AllTemplate.html:55:    #cv-preview {
+hhh\AllTemplate.html:61:    }
+hhh\AllTemplate.html:62:    #cv-preview h2 {
+hhh\AllTemplate.html:67:    }
+hhh\AllTemplate.html:68:    .info p { margin: 0; line-height: 1.8; }
+hhh\AllTemplate.html:69:    .item-box-preview {
+hhh\AllTemplate.html:75:    }
+hhh\AllTemplate.html:83:    .custom-input-container {
+hhh\AllTemplate.html:86:    }
+hhh\AllTemplate.html:89:    .custom-input-container select {
+hhh\AllTemplate.html:97:    }
+hhh\AllTemplate.html:100:    .custom-input-container select:focus {
+hhh\AllTemplate.html:104:    }
+hhh\AllTemplate.html:106:    .custom-input-container label {
+hhh\AllTemplate.html:115:    }
+hhh\AllTemplate.html:120:    .custom-input-container select:not([value=""]) + label {
+hhh\AllTemplate.html:125:    }
+hhh\AllTemplate.html:127:    .dropdown-menu {
+hhh\AllTemplate.html:129:    }
+hhh\AllTemplate.html:340:                document.getElementById("unitSelect").addEventListener("change", function 
+() {
+hhh\AllTemplate.html:345:                    if (selectedUnit) {
+hhh\AllTemplate.html:348:                    } else {
+hhh\AllTemplate.html:351:                    }
+hhh\AllTemplate.html:352:                });
+hhh\AllTemplate.html:367:                checkbox.addEventListener('change', function() {
+hhh\AllTemplate.html:369:                });
+hhh\AllTemplate.html:412:                            <select class="form-select border-type" 
+name="earthBorders[0].BorderType" style="display:none;">
+hhh\AllTemplate.html:425:                        <input type="text" class="form-control" 
+name="earthBorders[0].BorderDescription" />
+hhh\AllTemplate.html:428:                        <input type="hidden" name="earthBorders[3].IdenticalOrDifferent" 
+value="0" />
+hhh\AllTemplate.html:430:                            name="earthBorders[3].IdenticalOrDifferent" value="1" />
+hhh\AllTemplate.html:434:                        <input type="text" class="form-control" 
+name="earthBorders[0].Difference" />
+hhh\AllTemplate.html:447:                            <select class="form-select border-type" 
+name="earthBorders[1].BorderType" style="display:none;">
+hhh\AllTemplate.html:460:                        <input type="text" class="form-control" 
+name="earthBorders[1].BorderDescription" />
+hhh\AllTemplate.html:463:                        <input type="hidden" name="earthBorders[3].IdenticalOrDifferent" 
+value="0" />
+hhh\AllTemplate.html:465:                            name="earthBorders[3].IdenticalOrDifferent" value="1" />
+hhh\AllTemplate.html:470:                        <input type="text" class="form-control" 
+name="earthBorders[1].Difference" />
+hhh\AllTemplate.html:483:                            <select class="form-select border-type" 
+name="earthBorders[2].BorderType" style="display:none;">
+hhh\AllTemplate.html:495:                        <input type="text" class="form-control" 
+name="earthBorders[2].BorderDescription" />
+hhh\AllTemplate.html:498:                        <input type="hidden" name="earthBorders[3].IdenticalOrDifferent" 
+value="0" />
+hhh\AllTemplate.html:500:                            name="earthBorders[3].IdenticalOrDifferent" value="1" />
+hhh\AllTemplate.html:505:        <input type="text" class="form-control" name="earthBorders[0].Difference" readonly 
+/>
+hhh\AllTemplate.html:518:                            <select class="form-select border-type" 
+name="earthBorders[3].BorderType" style="display:none;">
+hhh\AllTemplate.html:529:                        <input type="text" class="form-control" 
+name="earthBorders[3].BorderDescription" />
+hhh\AllTemplate.html:532:                        <input type="hidden" name="earthBorders[3].IdenticalOrDifferent" 
+value="0" />
+hhh\AllTemplate.html:534:                            name="earthBorders[3].IdenticalOrDifferent" value="1" />
+hhh\AllTemplate.html:539:                        <input type="text" class="form-control" 
+name="earthBorders[3].Difference" />
+hhh\AllTemplate.html:653:document.addEventListener('DOMContentLoaded', function() {
+hhh\AllTemplate.html:659:    select.addEventListener('change', function() {
+hhh\AllTemplate.html:672:        rahaqSection.querySelectorAll('input[type="text"]').forEach(input => 
+input.disabled = false);
+hhh\AllTemplate.html:673:        rahaqSection.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
+hhh\AllTemplate.html:674:            const inputField = checkbox.closest('tr').querySelector('input[type="text"]');
+hhh\AllTemplate.html:676:        });
+hhh\AllTemplate.html:677:    });
+hhh\AllTemplate.html:680:    rahaqSection.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
+hhh\AllTemplate.html:681:        const inputField = checkbox.closest('tr').querySelector('input[type="text"]');
+hhh\AllTemplate.html:682:        checkbox.addEventListener('change', function() {
+hhh\AllTemplate.html:685:        });
+hhh\AllTemplate.html:686:    });
+hhh\AllTemplate.html:690:    addBuildingBtn.addEventListener('click', function() {
+hhh\AllTemplate.html:699:    });
+hhh\AllTemplate.html:700:});
+hhh\AllTemplate.html:718:        في حال ذكرت الوثيقة [من اعلى - من اسفل] قم بالضغط على المربع والكتابة في الخانة 
+المخصصة
+hhh\AllTemplate.html:750:    .larger-checkbox {
+hhh\AllTemplate.html:755:    }
+hhh\AllTemplate.html:759:    #earthBordersTable2 th {
+hhh\AllTemplate.html:762:    }
+hhh\AllTemplate.html:765:    input[disabled] {
+hhh\AllTemplate.html:768:    }
+hhh\AllTemplate.html:771:    document.addEventListener('DOMContentLoaded', function() {
+hhh\AllTemplate.html:775:        select.addEventListener('change', function() {
+hhh\AllTemplate.html:778:        });
+hhh\AllTemplate.html:779:    });
+hhh\AllTemplate.html:782:    document.addEventListener('DOMContentLoaded', function () {
+hhh\AllTemplate.html:789:        chkUp.addEventListener('change', function () {
+hhh\AllTemplate.html:792:        });
+hhh\AllTemplate.html:794:        chkDown.addEventListener('change', function () {
+hhh\AllTemplate.html:797:        });
+hhh\AllTemplate.html:798:    });
+hhh\AllTemplate.html:908:            <input type="file" class="form-control me-2" name="fileAttach[]" />
+hhh\AllTemplate.html:922:    document.addEventListener('DOMContentLoaded', function() {
+hhh\AllTemplate.html:926:    addBtn.addEventListener('click', function() {
+hhh\AllTemplate.html:930:            <input type="file" class="form-control me-2" name="fileAttach[]" />
+hhh\AllTemplate.html:936:        newRow.querySelector('.remove-attachment').addEventListener('click', function() {
+hhh\AllTemplate.html:938:        });
+hhh\AllTemplate.html:939:    });
+hhh\AllTemplate.html:942:    wrapper.querySelectorAll('.remove-attachment').forEach(btn => {
+hhh\AllTemplate.html:943:        btn.addEventListener('click', function() {
+hhh\AllTemplate.html:945:        });
+hhh\AllTemplate.html:946:    });
+hhh\AllTemplate.html:947:});
+hhh\AllTemplate.html:1273:document.addEventListener('DOMContentLoaded', function() {
+hhh\AllTemplate.html:1274:    function setupNameAdder(txtId, listId, countId, btnId) {
+hhh\AllTemplate.html:1280:        let names = [];
+hhh\AllTemplate.html:1282:        addBtn.addEventListener('click', function() {
+hhh\AllTemplate.html:1284:            if(name) {
+hhh\AllTemplate.html:1289:            }
+hhh\AllTemplate.html:1290:        });
+hhh\AllTemplate.html:1291:    }
+hhh\AllTemplate.html:1295:});
+hhh\AllTemplate.html:1926:                endDateOption.addEventListener("change", function () {
+hhh\AllTemplate.html:1927:                    if (this.value === "specified") {
+hhh\AllTemplate.html:1930:                    } else {
+hhh\AllTemplate.html:1933:                    }
+hhh\AllTemplate.html:1934:                });
+hhh\AllTemplate.html:2004:                function filterTransportRows(value) {
+hhh\AllTemplate.html:2005:                document.querySelectorAll("#transportRows tr").forEach(row => {
+hhh\AllTemplate.html:2006:                    const statuse1 = 
+row.querySelector("input[name='StatuseType1']")?.value;
+hhh\AllTemplate.html:2007:                    const statuse2 = 
+row.querySelector("input[name='StatuseType2']")?.value;
+hhh\AllTemplate.html:2009:                    if (value === "myAccount" && statuse1 == "2") {
+hhh\AllTemplate.html:2011:                    } else if (value === "clientAccount" && statuse2 == "3") {
+hhh\AllTemplate.html:2013:                    } else if (value === "") {
+hhh\AllTemplate.html:2015:                    } else {
+hhh\AllTemplate.html:2017:                    }
+hhh\AllTemplate.html:2018:                });
+hhh\AllTemplate.html:2019:            }
+hhh\AllTemplate.html:2023:             
+document.getElementById("transportTemplateSelect").addEventListener("change", function() {
+hhh\AllTemplate.html:2027:                if (!templateId || templateId === "create-new-template") {
+hhh\AllTemplate.html:2030:                }
+hhh\AllTemplate.html:2032:                fetch(`@Url.Action("GetTemplateDetails", "WorkOffer")?id=${templateId}`)
+hhh\AllTemplate.html:2035:                    .catch(err => {
+hhh\AllTemplate.html:2037:                        container.innerHTML = `<table class="table table-bordered 
+text-center offer-table"><tbody><tr><td colspan="6" class="text-center 
+text-danger">${err.message}</td></tr></tbody></table>`;
+hhh\AllTemplate.html:2038:                    });
+hhh\AllTemplate.html:2039:            });
+hhh\almjal.html:12:    .icon-card {
+hhh\almjal.html:19:    }
+hhh\almjal.html:20:    .icon-card:hover {
+hhh\almjal.html:23:    }
+hhh\almjal.html:24:    .step-title {
+hhh\almjal.html:29:    }
+hhh\almjal.html:30:    .breadcrumb-path {
+hhh\almjal.html:34:    }
+hhh\almjal.html:81:    const data = [
+hhh\almjal.html:83:     { main: "المجال الهندسي", spec: "الهندسة المدنية", branch: "المساحة", detail: "رفع مساحي 
+للمشاريع الهندسية" },
+hhh\almjal.html:84:      { main: "المجال الهندسي", spec: "الهندسة المدنية", branch: "المساحة", detail: "مسح 
+التصرفات (بيع، شراء، تأجير)" },
+hhh\almjal.html:85:      { main: "المجال الهندسي", spec: "الهندسة المدنية", branch: "المساحة", detail: "قضايا 
+النزاع" },
+hhh\almjal.html:86:      { main: "المجال الهندسي", spec: "الهندسة المدنية", branch: "المساحة", detail: "تقسيم بين 
+الورثة" },
+hhh\almjal.html:87:      { main: "المجال الهندسي", spec: "الهندسة المدنية", branch: "المساحة", detail: "شبكات 
+التثليث" },
+hhh\almjal.html:88:      { main: "المجال الهندسي", spec: "الهندسة المدنية", branch: "الإنشاءات", detail: "التصميم 
+الإنشائي" },
+hhh\almjal.html:89:      { main: "المجال الهندسي", spec: "الهندسة المدنية", branch: "الإنشاءات", detail: "الإشراف" 
+},
+hhh\almjal.html:90:      { main: "المجال الهندسي", spec: "الهندسة المدنية", branch: "الإنشاءات", detail: "التنفيذ" 
+},
+hhh\almjal.html:91:      { main: "المجال الهندسي", spec: "الهندسة المدنية", branch: "الإنشاءات", detail: "فحص 
+واختبار المواد" },
+hhh\almjal.html:92:      { main: "المجال الهندسي", spec: "الهندسة المدنية", branch: "الإنشاءات", detail: "الصيانة 
+والترميم" },
+hhh\almjal.html:93:      { main: "المجال الهندسي", spec: "الهندسة المدنية", branch: "الإنشاءات", detail: "تثمين 
+العقارات" },
+hhh\almjal.html:94:      { main: "المجال الهندسي", spec: "الهندسة المدنية", branch: "الطرق والمواصلات", detail: 
+"تخطيط النقل وهندسة المرور" },
+hhh\almjal.html:95:      { main: "المجال الهندسي", spec: "الهندسة المدنية", branch: "الطرق والمواصلات", detail: 
+"إنشاء وتنفيذ الطرق" },
+hhh\almjal.html:96:      { main: "المجال الهندسي", spec: "الهندسة المدنية", branch: "الطرق والمواصلات", detail: 
+"صيانة الرصف" },
+hhh\almjal.html:97:      { main: "المجال الهندسي", spec: "الهندسة المدنية", branch: "ميكانيكا التربة", detail: 
+"استكشاف الموقع واختبارات التربة" },
+hhh\almjal.html:98:      { main: "المجال الهندسي", spec: "الهندسة المدنية", branch: "ميكانيكا التربة", detail: 
+"تحليل استقرار المنحدرات" },
+hhh\almjal.html:99:      { main: "المجال الهندسي", spec: "الهندسة المدنية", branch: "ميكانيكا التربة", detail: 
+"تحسين خواص التربة" },
+hhh\almjal.html:100:      { main: "المجال الهندسي", spec: "الهندسة المدنية", branch: "هندسة الموارد المائية", 
+detail: "تصميم وتشييد السدود" },
+hhh\almjal.html:101:      { main: "المجال الهندسي", spec: "الهندسة المدنية", branch: "هندسة الموارد المائية", 
+detail: "تصميم شبكات المياه والصرف الصحي" },
+hhh\almjal.html:102:      { main: "المجال الهندسي", spec: "الهندسة المدنية", branch: "هندسة الموارد المائية", 
+detail: "تحلية المياه" },
+hhh\almjal.html:103:      { main: "المجال الهندسي", spec: "الهندسة المدنية", branch: "هندسة الموارد المائية", 
+detail: "الهيدرولوجيا (دراسة دورات المياه)" },
+hhh\almjal.html:104:      { main: "المجال الهندسي", spec: "الهندسة المدنية", branch: "هندسة الموارد المائية", 
+detail: "معالجة المياه والصرف الصحي" },
+hhh\almjal.html:105:      { main: "المجال الهندسي", spec: "الهندسة المدنية", branch: "هندسة الموارد المائية", 
+detail: "التقييم البيئي للمشاريع" },
+hhh\almjal.html:106:      { main: "المجال الهندسي", spec: "الهندسة المدنية", branch: "هندسة وإدارة التشييد", 
+detail: "تخطيط وجدولة المشاريع" },
+hhh\almjal.html:107:      { main: "المجال الهندسي", spec: "الهندسة المدنية", branch: "هندسة وإدارة التشييد", 
+detail: "تقدير التكاليف وضبط الميزانية" },
+hhh\almjal.html:108:      { main: "المجال الهندسي", spec: "الهندسة المدنية", branch: "هندسة وإدارة التشييد", 
+detail: "إدارة العقود والمشتريات" },
+hhh\almjal.html:109:      { main: "المجال الهندسي", spec: "الهندسة المدنية", branch: "هندسة وإدارة التشييد", 
+detail: "إدارة السلامة والصحة المهنية" },
+hhh\almjal.html:110:      { main: "المجال الهندسي", spec: "الهندسة المدنية", branch: "هندسة وإدارة التشييد", 
+detail: "إدارة الجودة في التشييد" },
+hhh\almjal.html:111:      { main: "المجال الهندسي", spec: "الهندسة المعمارية", branch: "تصميم المباني", detail: 
+"تصميم مباني سكنية" },
+hhh\almjal.html:112:      { main: "المجال الهندسي", spec: "الهندسة المعمارية", branch: "تصميم المباني", detail: 
+"تصميم مباني مؤسسية (مستشفيات، مدارس)" },
+hhh\almjal.html:113:      { main: "المجال الهندسي", spec: "الهندسة المعمارية", branch: "تصميم المباني", detail: 
+"تصميم مباني ثقافية وتجارية" },
+hhh\almjal.html:114:      { main: "المجال الهندسي", spec: "الهندسة المعمارية", branch: "التصميم الداخلي والديكور", 
+detail: "" },
+hhh\almjal.html:117:      { main: "المجال القانوني", spec: "القضايا والمعاملات المدنية", branch: " الملكية 
+العقارية", detail: " توثيق عقود التصرفات (البيع، الشراء، التأجير)" },
+hhh\almjal.html:118:      { main: "المجال القانوني", spec: "القضايا والمعاملات المدنية", branch: " الملكية 
+العقارية", detail: "قضايا النزاع العقاري" },
+hhh\almjal.html:119:      { main: "المجال القانوني", spec: "القضايا والمعاملات المدنية", branch: " الملكية 
+العقارية", detail: "قسمة التركات بين الورثة" },
+hhh\almjal.html:120:      { main: "المجال القانوني", spec: "القضايا والمعاملات المدنية", branch: "صياغة العقود 
+المدنية", detail: "مراجعة العقود والاتفاقيات" },
+hhh\almjal.html:121:      { main: "المجال القانوني", spec: "القضايا والمعاملات المدنية", branch: "صياغة العقود 
+المدنية", detail: "التوثيق والتسجيل القانوني" },
+hhh\almjal.html:122:      { main: "المجال القانوني", spec: "القضايا والمعاملات المدنية", branch: "المسؤولية المدنية 
+والتعويضات", detail: "دعاوى الأضرار والحوادث" },
+hhh\almjal.html:123:      { main: "المجال القانوني", spec: "القضايا والمعاملات المدنية", branch: "المسؤولية المدنية 
+والتعويضات", detail: "التعويض عن الإخلال بالعقد" },
+hhh\almjal.html:125:      { main: "المجال القانوني", spec: "القضايا الجنائية", branch: "الجرائم الجسيمة", detail: 
+"جرائم القتل والاعتداءات الخطيرة" },
+hhh\almjal.html:126:      { main: "المجال القانوني", spec: "القضايا الجنائية", branch: "الجرائم الجسيمة", detail: 
+"التحقيقات الجنائية والمحاكمات" },
+hhh\almjal.html:127:      { main: "المجال القانوني", spec: "القضايا الجنائية", branch: "الجرائم المالية 
+والاقتصادية", detail: "جرائم التزوير والاحتيال" },
+hhh\almjal.html:128:      { main: "المجال القانوني", spec: "القضايا الجنائية", branch: "الجرائم المالية 
+والاقتصادية", detail: "غسل الأموال والرشوة" },
+hhh\almjal.html:129:      { main: "المجال القانوني", spec: "القضايا الجنائية", branch: "الجرائم الإلكترونية", 
+detail: "اختراق الأنظمة وسرقة البيانات" },
+hhh\almjal.html:130:      { main: "المجال القانوني", spec: "القضايا الجنائية", branch: "الجرائم الإلكترونية", 
+detail: "الابتزاز الإلكتروني والتشهير" },
+hhh\almjal.html:132:      { main: "المجال القانوني", spec: "قضايا الأحوال الشخصية", branch: "الزواج والطلاق", 
+detail: "عقود الزواج والاتفاقات السابقة" },
+hhh\almjal.html:133:      { main: "المجال القانوني", spec: "قضايا الأحوال الشخصية", branch: "الزواج والطلاق", 
+detail: "إجراءات الطلاق والتفريق القضائي" },
+hhh\almjal.html:134:      { main: "المجال القانوني", spec: "قضايا الأحوال الشخصية", branch: "النفقة والحضانة", 
+detail: "تحديد النفقة الزوجية ونفقة الأبناء" },
+hhh\almjal.html:135:      { main: "المجال القانوني", spec: "قضايا الأحوال الشخصية", branch: "النفقة والحضانة", 
+detail: "قضايا الحضانة والزيارة" },
+hhh\almjal.html:136:      { main: "المجال القانوني", spec: "قضايا الأحوال الشخصية", branch: "الميراث والوصايا", 
+detail: "تقسيم التركات وفق الشريعة أو القانون" },
+hhh\almjal.html:137:      { main: "المجال القانوني", spec: "قضايا الأحوال الشخصية", branch: "الميراث والوصايا", 
+detail: "الطعون في الوصايا والنزاعات بين الورثة" },
+hhh\almjal.html:139:      { main: "المجال القانوني", spec: "القضايا والمعاملات التجارية", branch: "تأسيس الشركات", 
+detail: "تسجيل الشركات وتوثيق الأنظمة الأساسية" },
+hhh\almjal.html:140:      { main: "المجال القانوني", spec: "القضايا والمعاملات التجارية", branch: "تأسيس الشركات", 
+detail: "عقود الشراكة والاندماج" },
+hhh\almjal.html:141:      { main: "المجال القانوني", spec: "القضايا والمعاملات التجارية", branch: "المعاملات 
+التجارية", detail: "عقود البيع والشراء التجارية" },
+hhh\almjal.html:142:      { main: "المجال القانوني", spec: "القضايا والمعاملات التجارية", branch: "المعاملات 
+التجارية", detail: "الأوراق التجارية (الشيكات، الكمبيالات)" },
+hhh\almjal.html:143:      { main: "المجال القانوني", spec: "القضايا والمعاملات التجارية", branch: "الإفلاس 
+والتصفية", detail: "إجراءات الإفلاس وإعادة الهيكلة" },
+hhh\almjal.html:144:      { main: "المجال القانوني", spec: "القضايا والمعاملات التجارية", branch: "الإفلاس 
+والتصفية", detail: "تصفية الشركات وتوزيع الأصول" },
+hhh\almjal.html:146:      { main: "المجال القانوني", spec: "القضايا والمعاملات الإدارية", branch: "القرارات 
+الإدارية", detail: "الطعن في القرارات الحكومية" },
+hhh\almjal.html:147:      { main: "المجال القانوني", spec: "القضايا والمعاملات الإدارية", branch: "القرارات 
+الإدارية", detail: "الرقابة القضائية على الإدارة" },
+hhh\almjal.html:148:      { main: "المجال القانوني", spec: "القضايا والمعاملات الإدارية", branch: "العقود 
+الإدارية", detail: "صياغة وتنفيذ العقود الحكومية" },
+hhh\almjal.html:149:      { main: "المجال القانوني", spec: "القضايا والمعاملات الإدارية", branch: "العقود 
+الإدارية", detail: "فض النزاعات في العقود الإدارية" },
+hhh\almjal.html:150:      { main: "المجال القانوني", spec: "القضايا والمعاملات الإدارية", branch: "الوظيفة العامة", 
+detail: "التعيين والترقية والانضباط" },
+hhh\almjal.html:151:      { main: "المجال القانوني", spec: "القضايا والمعاملات الإدارية", branch: "الوظيفة العامة", 
+detail: "قضايا الفصل والتظلمات الوظيفية" },
+hhh\almjal.html:153:      { main: "المجال القانوني", spec: "الملكية الفكرية", branch: "حقوق المؤلف والنشر", detail: 
+"حماية الكتب والمحتوى الرقمي" },
+hhh\almjal.html:154:      { main: "المجال القانوني", spec: "الملكية الفكرية", branch: "حقوق المؤلف والنشر", detail: 
+"قضايا النسخ والانتحال" },
+hhh\almjal.html:155:      { main: "المجال القانوني", spec: "الملكية الفكرية", branch: "براءات الاختراع", detail: 
+"تسجيل الابتكارات والاختراعات" },
+hhh\almjal.html:156:      { main: "المجال القانوني", spec: "الملكية الفكرية", branch: "براءات الاختراع", detail: 
+"الطعون في صلاحية البراءة" },
+hhh\almjal.html:157:      { main: "المجال القانوني", spec: "الملكية الفكرية", branch: "العلامات التجارية", detail: 
+"تسجيل العلامات والشعارات" },
+hhh\almjal.html:158:      { main: "المجال القانوني", spec: "الملكية الفكرية", branch: "العلامات التجارية", detail: 
+"النزاعات حول التقليد والتشابه" },
+hhh\almjal.html:160:      { main: "المجال القانوني", spec: "القانون الدولي", branch: "القانون الدولي العام", 
+detail: "المعاهدات والاتفاقيات الدولية" },
+hhh\almjal.html:161:      { main: "المجال القانوني", spec: "القانون الدولي", branch: "القانون الدولي العام", 
+detail: "قضايا حقوق الإنسان والنزاعات بين الدول" },
+hhh\almjal.html:162:      { main: "المجال القانوني", spec: "القانون الدولي", branch: "القانون الدولي الخاص", 
+detail: "النزاعات بين الأفراد من جنسيات مختلفة" },
+hhh\almjal.html:163:      { main: "المجال القانوني", spec: "القانون الدولي", branch: "القانون الدولي الخاص", 
+detail: "تنفيذ الأحكام الأجنبية والتحكيم الدولي" },
+hhh\almjal.html:164:      { main: "المجال القانوني", spec: "القانون الدولي", branch: "القانون الإنساني الدولي", 
+detail: "حماية المدنيين أثناء النزاعات المسلحة" },
+hhh\almjal.html:165:      { main: "المجال القانوني", spec: "القانون الدولي", branch: "القانون الإنساني الدولي", 
+detail: "جرائم الحرب والعدالة الدولية" },
+hhh\almjal.html:167:      { main: "مجال القضاء والتحكيم وفض النزاعات", spec: "المحاكم والنيابات", branch: "", 
+detail: "" },
+hhh\almjal.html:168:      { main: "مجال القضاء والتحكيم وفض النزاعات", spec: "مبادرات خاصة في التحكيم والصلح", 
+branch: "التحكيم العقاري", detail: "تسوية قضايا التصرفات (البيع، الشراء، الإيجارات) والمنازعات السكنية" },
+hhh\almjal.html:169:      { main: "مجال القضاء والتحكيم وفض النزاعات", spec: "مبادرات خاصة في التحكيم والصلح", 
+branch: "التحكيم العقاري", detail: "فض النزاعات حول الملكية العقارية" },
+hhh\almjal.html:170:      { main: "مجال القضاء والتحكيم وفض النزاعات", spec: "مبادرات خاصة في التحكيم والصلح", 
+branch: "التحكيم العقاري", detail: "التحكيم في قسمة التركات العقارية" },
+hhh\almjal.html:171:      { main: "مجال القضاء والتحكيم وفض النزاعات", spec: "مبادرات خاصة في التحكيم والصلح", 
+branch: "التحكيم التجاري", detail: "التحكيم وفض النزاع بين الشركات التجارية" },
+hhh\almjal.html:172:      { main: "مجال القضاء والتحكيم وفض النزاعات", spec: "مبادرات خاصة في التحكيم والصلح", 
+branch: "التحكيم التجاري", detail: "التحكيم وفض النزاع بين الشركاء" },
+hhh\almjal.html:173:      { main: "مجال القضاء والتحكيم وفض النزاعات", spec: "مبادرات خاصة في التحكيم والصلح", 
+branch: "التحكيم التجاري", detail: "التصفيات وتوزيع الاصول" },
+hhh\almjal.html:174:      { main: "مجال القضاء والتحكيم وفض النزاعات", spec: "مبادرات خاصة في التحكيم والصلح", 
+branch: "التحكيم الأسري", detail: "حل النزاعات الزوجية خارج المحاكم" },
+hhh\almjal.html:175:      { main: "مجال القضاء والتحكيم وفض النزاعات", spec: "مبادرات خاصة في التحكيم والصلح", 
+branch: "التحكيم الأسري", detail: "تسوية قضايا الحضانة والنفقة بالتراضي" },
+hhh\almjal.html:176:      { main: "مجال القضاء والتحكيم وفض النزاعات", spec: "مبادرات خاصة في التحكيم والصلح", 
+branch: "التحكيم الأسري", detail: "إدارة جلسات الصلح بين أفراد الأسرة" },
+hhh\almjal.html:180:      { main: "المقاولات", spec: "المناقصات وإدارة المشاريع", branch: "المناقصات والتوريدات", 
+detail: "جداول الكميات والعطاءات وتحليل الأسعار" },
+hhh\almjal.html:181:      { main: "المقاولات", spec: "المناقصات وإدارة المشاريع", branch: "المناقصات والتوريدات", 
+detail: "توريد المواد والمشتريات" },
+hhh\almjal.html:182:      { main: "المقاولات", spec: "المناقصات وإدارة المشاريع", branch: "المناقصات والتوريدات", 
+detail: "ضبط التكاليف ومراقبة الميزانية" },
+hhh\almjal.html:183:      { main: "المقاولات", spec: "المناقصات وإدارة المشاريع", branch: "إدارة المشروع 
+والمخططات", detail: "إعداد الجداول الزمنية للمشروع" },
+hhh\almjal.html:184:      { main: "المقاولات", spec: "المناقصات وإدارة المشاريع", branch: "إدارة المشروع 
+والمخططات", detail: "مراجعة المخططات الهندسية والتنفيذية" },
+hhh\almjal.html:185:      { main: "المقاولات", spec: "المناقصات وإدارة المشاريع", branch: "إدارة المشروع 
+والمخططات", detail: "الاشراف ومتابعة التنفيذ" },
+hhh\almjal.html:188:      { main: "المقاولات", spec: "الأعمال الإنشائية والمعمارية", branch: "أعمال الأساسات 
+والهيكل الإنشائي", detail: "الحفر والردم وتسوية الأرض" },
+hhh\almjal.html:189:      { main: "المقاولات", spec: "الأعمال الإنشائية والمعمارية", branch: "أعمال الأساسات 
+والهيكل الإنشائي", detail: "تنفيذ القواعد والأعمدة والأسقف" },
+hhh\almjal.html:190:      { main: "المقاولات", spec: "الأعمال الإنشائية والمعمارية", branch: "أعمال الأساسات 
+والهيكل الإنشائي", detail: "معالجة الخرسانة وفك الشدات" },
+hhh\almjal.html:191:      { main: "المقاولات", spec: "الأعمال الإنشائية والمعمارية", branch: "أعمال البناء 
+والتشطيبات الأساسية", detail: "أعمال الطوب والبناء" },
+hhh\almjal.html:192:      { main: "المقاولات", spec: "الأعمال الإنشائية والمعمارية", branch: "أعمال البناء 
+والتشطيبات الأساسية", detail: "اللياسة والدهانات" },
+hhh\almjal.html:193:      { main: "المقاولات", spec: "الأعمال الإنشائية والمعمارية", branch: "أعمال البناء 
+والتشطيبات الأساسية", detail: "تركيب الأرضيات والسيراميك" },
+hhh\almjal.html:194:      { main: "المقاولات", spec: "الأعمال الإنشائية والمعمارية", branch: "أعمال المعمار 
+والديكور", detail: "تنفيذ الأسقف الجبسية والديكورات" },
+hhh\almjal.html:195:      { main: "المقاولات", spec: "الأعمال الإنشائية والمعمارية", branch: "أعمال المعمار 
+والديكور", detail: "تركيب الأبواب والنوافذ" },
+hhh\almjal.html:196:      { main: "المقاولات", spec: "الأعمال الإنشائية والمعمارية", branch: "أعمال المعمار 
+والديكور", detail: "التشطيبات النهائية والتسليم" },
+hhh\almjal.html:199:      { main: "المقاولات", spec: "الأعمال الكهربائية والميكانيكية والتشطيبات", branch: "الأعمال 
+الكهربائية", detail: "تمديد الكابلات ولوحات التوزيع" },
+hhh\almjal.html:200:      { main: "المقاولات", spec: "الأعمال الكهربائية والميكانيكية والتشطيبات", branch: "الأعمال 
+الكهربائية", detail: "تركيب الإنارة والمفاتيح" },
+hhh\almjal.html:201:      { main: "المقاولات", spec: "الأعمال الكهربائية والميكانيكية والتشطيبات", branch: "الأعمال 
+الكهربائية", detail: "أنظمة التأريض والحماية" },
+hhh\almjal.html:202:      { main: "المقاولات", spec: "الأعمال الكهربائية والميكانيكية والتشطيبات", branch: "الأعمال 
+الميكانيكية والسباكة", detail: "تمديدات المياه والصرف الصحي" },
+hhh\almjal.html:203:      { main: "المقاولات", spec: "الأعمال الكهربائية والميكانيكية والتشطيبات", branch: "الأعمال 
+الميكانيكية والسباكة", detail: "تركيب المضخات والخزانات" },
+hhh\almjal.html:204:      { main: "المقاولات", spec: "الأعمال الكهربائية والميكانيكية والتشطيبات", branch: "الأعمال 
+الميكانيكية والسباكة", detail: "أنظمة التكييف والتهوية" },
+hhh\almjal.html:205:      { main: "المقاولات", spec: "الأعمال الكهربائية والميكانيكية والتشطيبات", branch: 
+"التجهيزات النهائية والتسليم", detail: "اختبار الأنظمة وتسليم المشروع" },
+hhh\almjal.html:206:      { main: "المقاولات", spec: "الأعمال الكهربائية والميكانيكية والتشطيبات", branch: 
+"التجهيزات النهائية والتسليم", detail: "إعداد تقرير التسليم النهائي" },
+hhh\almjal.html:209:{ main: "المجال المالي والإداري", spec: "الشؤون المالية والمحاسبية", branch: "المحاسبة 
+والتقارير المالية", detail: "تسجيل العمليات المالية" },
+hhh\almjal.html:210:{ main: "المجال المالي والإداري", spec: "الشؤون المالية والمحاسبية", branch: "المحاسبة 
+والتقارير المالية", detail: "إعداد القوائم المالية الدورية" },
+hhh\almjal.html:211:{ main: "المجال المالي والإداري", spec: "الشؤون المالية والمحاسبية", branch: "المحاسبة 
+والتقارير المالية", detail: "مراجعة الحسابات والامتثال المالي" },
+hhh\almjal.html:213:{ main: "المجال المالي والإداري", spec: "الشؤون المالية والمحاسبية", branch: "إدارة الميزانية 
+والتحليل المالي", detail: "إعداد الموازنات التقديرية" },
+hhh\almjal.html:214:{ main: "المجال المالي والإداري", spec: "الشؤون المالية والمحاسبية", branch: "إدارة الميزانية 
+والتحليل المالي", detail: "تحليل التكاليف والعوائد" },
+hhh\almjal.html:215:{ main: "المجال المالي والإداري", spec: "الشؤون المالية والمحاسبية", branch: "إدارة الميزانية 
+والتحليل المالي", detail: "مراقبة الإنفاق وتخصيص الموارد" },
+hhh\almjal.html:217:{ main: "المجال المالي والإداري", spec: "الشؤون المالية والمحاسبية", branch: "إدارة المشتريات 
+والمخزون", detail: "التوريد والتعاقدات" },
+hhh\almjal.html:218:{ main: "المجال المالي والإداري", spec: "الشؤون المالية والمحاسبية", branch: "إدارة المشتريات 
+والمخزون", detail: "إدارة المخزون والمواد" },
+hhh\almjal.html:219:{ main: "المجال المالي والإداري", spec: "الشؤون المالية والمحاسبية", branch: "إدارة المشتريات 
+والمخزون", detail: "مراقبة دورة الشراء والتخزين" },
+hhh\almjal.html:221:{ main: "المجال المالي والإداري", spec: "الموارد البشرية", branch: "إدارة الموارد البشرية", 
+detail: "التوظيف والتعيين" },
+hhh\almjal.html:222:{ main: "المجال المالي والإداري", spec: "الموارد البشرية", branch: "إدارة الموارد البشرية", 
+detail: "التدريب والتطوير المهني" },
+hhh\almjal.html:223:{ main: "المجال المالي والإداري", spec: "الموارد البشرية", branch: "إدارة الموارد البشرية", 
+detail: "تقييم الأداء والتحفيز" },
+hhh\almjal.html:225:{ main: "المجال المالي والإداري", spec: "الموارد البشرية", branch: "إدارة العمليات والخدمات 
+العامة", detail: "تنظيم سير العمل الداخلي" },
+hhh\almjal.html:226:{ main: "المجال المالي والإداري", spec: "الموارد البشرية", branch: "إدارة العمليات والخدمات 
+العامة", detail: "تحسين جودة الخدمات والإجراءات" },
+hhh\almjal.html:227:{ main: "المجال المالي والإداري", spec: "الموارد البشرية", branch: "إدارة العمليات والخدمات 
+العامة", detail: "إدارة الوقت والمهام التشغيلية" },
+hhh\almjal.html:231:{ main: "المجال الإعلامي والدعائي", spec: "الإنتاج الإعلامي", branch: "التصوير الفوتوغرافي 
+والفيديو", detail: "تصوير الفعاليات والمناسبات" },
+hhh\almjal.html:232:{ main: "المجال الإعلامي والدعائي", spec: "الإنتاج الإعلامي", branch: "التصوير الفوتوغرافي 
+والفيديو", detail: "تصوير المنتجات والدعاية" },
+hhh\almjal.html:233:{ main: "المجال الإعلامي والدعائي", spec: "الإنتاج الإعلامي", branch: "التصوير الفوتوغرافي 
+والفيديو", detail: "إعداد التقارير الميدانية" },
+hhh\almjal.html:235:{ main: "المجال الإعلامي والدعائي", spec: "الإنتاج الإعلامي", branch: "المونتاج والمؤثرات 
+البصرية", detail: "تحرير الفيديوهات" },
+hhh\almjal.html:236:{ main: "المجال الإعلامي والدعائي", spec: "الإنتاج الإعلامي", branch: "المونتاج والمؤثرات 
+البصرية", detail: "إضافة المؤثرات الصوتية والبصرية" },
+hhh\almjal.html:237:{ main: "المجال الإعلامي والدعائي", spec: "الإنتاج الإعلامي", branch: "المونتاج والمؤثرات 
+البصرية", detail: "إنتاج الفيديوهات الترويجية" },
+hhh\almjal.html:239:{ main: "المجال الإعلامي والدعائي", spec: "الإنتاج الإعلامي", branch: "إدارة البث 
+والاستوديوهات", detail: "البث المباشر" },
+hhh\almjal.html:240:{ main: "المجال الإعلامي والدعائي", spec: "الإنتاج الإعلامي", branch: "إدارة البث 
+والاستوديوهات", detail: "إدارة المعدات الفنية" },
+hhh\almjal.html:241:{ main: "المجال الإعلامي والدعائي", spec: "الإنتاج الإعلامي", branch: "إدارة البث 
+والاستوديوهات", detail: "تسجيل البرامج" },
+hhh\almjal.html:244:{ main: "المجال الإعلامي والدعائي", spec: "التصميم والإبداع البصري", branch: "التصميم 
+الجرافيكي", detail: "تصميم الشعارات والهويات" },
+hhh\almjal.html:245:{ main: "المجال الإعلامي والدعائي", spec: "التصميم والإبداع البصري", branch: "التصميم 
+الجرافيكي", detail: "الإعلانات المطبوعة والرقمية" },
+hhh\almjal.html:246:{ main: "المجال الإعلامي والدعائي", spec: "التصميم والإبداع البصري", branch: "التصميم 
+الجرافيكي", detail: "واجهات المستخدم" },
+hhh\almjal.html:248:{ main: "المجال الإعلامي والدعائي", spec: "التصميم والإبداع البصري", branch: "الأنيميشن والموشن 
+جرافيك", detail: "تحريك الشخصيات" },
+hhh\almjal.html:249:{ main: "المجال الإعلامي والدعائي", spec: "التصميم والإبداع البصري", branch: "الأنيميشن والموشن 
+جرافيك", detail: "فيديوهات توعوية وترويجية" },
+hhh\almjal.html:250:{ main: "المجال الإعلامي والدعائي", spec: "التصميم والإبداع البصري", branch: "الأنيميشن والموشن 
+جرافيك", detail: "رسوم متحركة ثنائية وثلاثية الأبعاد" },
+hhh\almjal.html:252:{ main: "المجال الإعلامي والدعائي", spec: "التصميم والإبداع البصري", branch: "الإخراج الفني 
+والهوية البصرية", detail: "توجيه الحملات الإبداعية" },
+hhh\almjal.html:253:{ main: "المجال الإعلامي والدعائي", spec: "التصميم والإبداع البصري", branch: "الإخراج الفني 
+والهوية البصرية", detail: "تطوير الهوية المؤسسية" },
+hhh\almjal.html:254:{ main: "المجال الإعلامي والدعائي", spec: "التصميم والإبداع البصري", branch: "الإخراج الفني 
+والهوية البصرية", detail: "التنسيق بين فرق الإنتاج" },
+hhh\almjal.html:257:{ main: "المجال الإعلامي والدعائي", spec: "الاتصال والتسويق الإعلامي", branch: "الصحافة 
+والتحرير الرقمي", detail: "كتابة الأخبار والتقارير" },
+hhh\almjal.html:258:{ main: "المجال الإعلامي والدعائي", spec: "الاتصال والتسويق الإعلامي", branch: "الصحافة 
+والتحرير الرقمي", detail: "التحقيقات الصحفية" },
+hhh\almjal.html:259:{ main: "المجال الإعلامي والدعائي", spec: "الاتصال والتسويق الإعلامي", branch: "الصحافة 
+والتحرير الرقمي", detail: "إدارة النشرات والمجلات" },
+hhh\almjal.html:261:{ main: "المجال الإعلامي والدعائي", spec: "الاتصال والتسويق الإعلامي", branch: "الدعاية 
+والإعلان", detail: "كتابة النصوص الإعلانية" },
+hhh\almjal.html:262:{ main: "المجال الإعلامي والدعائي", spec: "الاتصال والتسويق الإعلامي", branch: "الدعاية 
+والإعلان", detail: "تصميم الحملات الدعائية" },
+hhh\almjal.html:263:{ main: "المجال الإعلامي والدعائي", spec: "الاتصال والتسويق الإعلامي", branch: "الدعاية 
+والإعلان", detail: "التسويق الإلكتروني" },
+hhh\almjal.html:265:{ main: "المجال الإعلامي والدعائي", spec: "الاتصال والتسويق الإعلامي", branch: "العلاقات العامة 
+والإعلام المؤسسي", detail: "إدارة السمعة والأزمات" },
+hhh\almjal.html:266:{ main: "المجال الإعلامي والدعائي", spec: "الاتصال والتسويق الإعلامي", branch: "العلاقات العامة 
+والإعلام المؤسسي", detail: "تنظيم المؤتمرات والفعاليات" },
+hhh\almjal.html:267:{ main: "المجال الإعلامي والدعائي", spec: "الاتصال والتسويق الإعلامي", branch: "العلاقات العامة 
+والإعلام المؤسسي", detail: "التواصل والتنسيق مع الجهات الإعلامية" }
+hhh\almjal.html:271:    ];
+hhh\almjal.html:273:    const unique = (arr, key) => [...new Set(arr.map(x => x[key]))];
+hhh\almjal.html:276:    function saveState(key, value) { localStorage.setItem(key, value); }
+hhh\almjal.html:277:    function getState(key) { return localStorage.getItem(key); }
+hhh\almjal.html:284:    function updateBreadcrumb() {
+hhh\almjal.html:290:    }
+hhh\almjal.html:293:    function renderMainIcons() {
+hhh\almjal.html:296:      mains.forEach(m => {
+hhh\almjal.html:299:            <div class="icon-card" data-main="${m}">
+hhh\almjal.html:301:              <div>${m}</div>
+hhh\almjal.html:305:      });
+hhh\almjal.html:306:    }
+hhh\almjal.html:308:    $(document).on("click", ".icon-card[data-main]", function() {
+hhh\almjal.html:317:    });
+hhh\almjal.html:320:    function renderSpecialtyIcons(main) {
+hhh\almjal.html:323:      specs.forEach(s => {
+hhh\almjal.html:326:            <div class="icon-card" data-spec="${s}" data-main="${main}">
+hhh\almjal.html:327:              <div>${s}</div>
+hhh\almjal.html:331:      });
+hhh\almjal.html:332:    }
+hhh\almjal.html:334:    $(document).on("click", ".icon-card[data-spec]", function() {
+hhh\almjal.html:343:    });
+hhh\almjal.html:345:    $("#back-to-main").click(function() {
+hhh\almjal.html:351:    });
+hhh\almjal.html:354:    function renderBranchIcons(main, spec) {
+hhh\almjal.html:357:      branches.forEach(b => {
+hhh\almjal.html:360:            <div class="icon-card" data-branch="${b}" data-spec="${spec}" data-main="${main}">
+hhh\almjal.html:361:              <div>${b || "---"}</div>
+hhh\almjal.html:365:      });
+hhh\almjal.html:366:    }
+hhh\almjal.html:368:    $(document).on("click", ".icon-card[data-branch]", function() {
+hhh\almjal.html:377:    });
+hhh\almjal.html:379:    $("#back-to-specialty").click(function() {
+hhh\almjal.html:385:    });
+hhh\almjal.html:388:    function renderDetailIcons(main, spec, branch) {
+hhh\almjal.html:393:      details.forEach(d => {
+hhh\almjal.html:396:            <div class="icon-card" data-detail="${d}">
+hhh\almjal.html:397:              <div>${d || "---"}</div>
+hhh\almjal.html:401:      });
+hhh\almjal.html:402:    }
+hhh\almjal.html:404:    $(document).on("click", ".icon-card[data-detail]", function() {
+hhh\almjal.html:408:    });
+hhh\almjal.html:410:    $("#back-to-branch").click(function() {
+hhh\almjal.html:416:    });
+hhh\almjal.html:419:$("#btn-requests").click(() => {
+hhh\almjal.html:420:  let path = `${selectedMain}\\${selectedSpec}\\${selectedBranch}\\${selectedDetail}`;
+hhh\almjal.html:424:  if (selectedDetail === "قضايا النزاع") {
+hhh\almjal.html:425:    window.location.href = `createform.html?path=${encodedPath}`;
+hhh\almjal.html:426:  } 
+hhh\almjal.html:427:  else if (selectedDetail === "قضايا النزاع العقاري") {
+hhh\almjal.html:428:    window.location.href = `createform.html?path=${encodedPath}`;
+hhh\almjal.html:429:  } 
+hhh\almjal.html:430:  else if (selectedDetail === "تقسيم بين الورثة") {
+hhh\almjal.html:431:    window.location.href = `createdevided.html?path=${encodedPath}`;
+hhh\almjal.html:432:  } 
+hhh\almjal.html:433:  else if (selectedDetail === "قسمة التركات بين الورثة") {
+hhh\almjal.html:434:    window.location.href = `createdevided.html?path=${encodedPath}`;
+hhh\almjal.html:435:  } 
+hhh\almjal.html:436:  else if (selectedDetail === "مسح التصرفات (بيع، شراء، تأجير)") {
+hhh\almjal.html:437:    window.location.href = `createorder.html?path=${encodedPath}`;
+hhh\almjal.html:438:  } 
+hhh\almjal.html:439:  else if (selectedDetail === "شبكات التثليث") {
+hhh\almjal.html:440:    window.location.href = `createspece.html?path=${encodedPath}`;
+hhh\almjal.html:441:  } 
+hhh\almjal.html:442:  else if (selectedDetail === "رفع مساحي للمشاريع الهندسية") {
+hhh\almjal.html:443:    window.location.href = `createspece.html?path=${encodedPath}`;
+hhh\almjal.html:444:  } 
+hhh\almjal.html:445:  else {
+hhh\almjal.html:446:    window.location.href = `createspece.html?path=${encodedPath}`;
+hhh\almjal.html:447:  }
+hhh\almjal.html:448:});
+hhh\almjal.html:450:   $("#btn-work-form").click(() => {
+hhh\almjal.html:451:  let path = `${selectedMain}\\${selectedSpec}\\${selectedBranch}\\${selectedDetail}`;
+hhh\almjal.html:455:  if (selectedDetail === "مسح التصرفات (بيع، شراء، تأجير)") {
+hhh\almjal.html:456:    window.location.href = `Work_Form.html?path=${encodedPath}`;
+hhh\almjal.html:457:  } 
+hhh\almjal.html:458:  else {
+hhh\almjal.html:459:    window.location.href = `Work_Form1.html?path=${encodedPath}`;
+hhh\almjal.html:460:  }
+hhh\almjal.html:461:});
+hhh\almjal.html:463:$("#btn-work-contract").click(() => {
+hhh\almjal.html:464:  let path = `${selectedMain}\\${selectedSpec}\\${selectedBranch}\\${selectedDetail}`;
+hhh\almjal.html:468:  if (selectedDetail === "مسح التصرفات (بيع، شراء، تأجير)") {
+hhh\almjal.html:469:    window.location.href = `ContractTemplate.html?path=${encodedPath}`;
+hhh\almjal.html:470:  } 
+hhh\almjal.html:471:  else {
+hhh\almjal.html:472:    window.location.href = `ContractTemplate1.html?path=${encodedPath}`;
+hhh\almjal.html:473:  }
+hhh\almjal.html:474:});
+hhh\almjal.html:476:$("#btn-work-wofer").click(() => {
+hhh\almjal.html:477:  let path = `${selectedMain}\\${selectedSpec}\\${selectedBranch}\\${selectedDetail}`;
+hhh\almjal.html:481:  if (selectedDetail === "مسح التصرفات (بيع، شراء، تأجير)") {
+hhh\almjal.html:482:    window.location.href = `WorkOffer.html?path=${encodedPath}`;
+hhh\almjal.html:483:  } 
+hhh\almjal.html:484:  else {
+hhh\almjal.html:485:    window.location.href = `WorkOffer1.html?path=${encodedPath}`;
+hhh\almjal.html:486:  }
+hhh\almjal.html:487:});
+hhh\almjal.html:495:    $(document).ready(function() {
+hhh\almjal.html:497:      if (selectedMain && !selectedSpec) {
+hhh\almjal.html:500:      }
+hhh\almjal.html:501:      if (selectedMain && selectedSpec && !selectedBranch) {
+hhh\almjal.html:505:      }
+hhh\almjal.html:506:      if (selectedMain && selectedSpec && selectedBranch) {
+hhh\almjal.html:511:      }
+hhh\almjal.html:512:    });
+hhh\almjal1.html:51:    const data = [
+hhh\almjal1.html:53:      { main: "المجال الهندسي", spec: "الهندسة المدنية", branch: "المساحة", detail: "رفع مساحي 
+للمشاريع الهندسية" },
+hhh\almjal1.html:54:      { main: "المجال الهندسي", spec: "الهندسة المدنية", branch: "المساحة", detail: "مسح 
+التصرفات (بيع، شراء، تأجير)" },
+hhh\almjal1.html:55:      { main: "المجال الهندسي", spec: "الهندسة المدنية", branch: "المساحة", detail: "قضايا 
+النزاع" },
+hhh\almjal1.html:56:      { main: "المجال الهندسي", spec: "الهندسة المدنية", branch: "المساحة", detail: "تقسيم بين 
+الورثة" },
+hhh\almjal1.html:57:      { main: "المجال الهندسي", spec: "الهندسة المدنية", branch: "المساحة", detail: "شبكات 
+التثليث" },
+hhh\almjal1.html:58:      { main: "المجال الهندسي", spec: "الهندسة المدنية", branch: "الإنشاءات", detail: "التصميم 
+الإنشائي" },
+hhh\almjal1.html:59:      { main: "المجال الهندسي", spec: "الهندسة المدنية", branch: "الإنشاءات", detail: "الإشراف" 
+},
+hhh\almjal1.html:60:      { main: "المجال الهندسي", spec: "الهندسة المدنية", branch: "الإنشاءات", detail: "التنفيذ" 
+},
+hhh\almjal1.html:61:      { main: "المجال الهندسي", spec: "الهندسة المدنية", branch: "الإنشاءات", detail: "فحص 
+واختبار المواد" },
+hhh\almjal1.html:62:      { main: "المجال الهندسي", spec: "الهندسة المدنية", branch: "الإنشاءات", detail: "الصيانة 
+والترميم" },
+hhh\almjal1.html:63:      { main: "المجال الهندسي", spec: "الهندسة المدنية", branch: "الإنشاءات", detail: "تثمين 
+العقارات" },
+hhh\almjal1.html:64:      { main: "المجال الهندسي", spec: "الهندسة المدنية", branch: "الطرق والمواصلات", detail: 
+"تخطيط النقل وهندسة المرور" },
+hhh\almjal1.html:65:      { main: "المجال الهندسي", spec: "الهندسة المدنية", branch: "الطرق والمواصلات", detail: 
+"إنشاء وتنفيذ الطرق" },
+hhh\almjal1.html:66:      { main: "المجال الهندسي", spec: "الهندسة المدنية", branch: "الطرق والمواصلات", detail: 
+"صيانة الرصف" },
+hhh\almjal1.html:67:      { main: "المجال الهندسي", spec: "الهندسة المدنية", branch: "ميكانيكا التربة", detail: 
+"استكشاف الموقع واختبارات التربة" },
+hhh\almjal1.html:68:      { main: "المجال الهندسي", spec: "الهندسة المدنية", branch: "ميكانيكا التربة", detail: 
+"تحليل استقرار المنحدرات" },
+hhh\almjal1.html:69:      { main: "المجال الهندسي", spec: "الهندسة المدنية", branch: "ميكانيكا التربة", detail: 
+"تحسين خواص التربة" },
+hhh\almjal1.html:70:      { main: "المجال الهندسي", spec: "الهندسة المدنية", branch: "هندسة الموارد المائية", 
+detail: "تصميم وتشييد السدود" },
+hhh\almjal1.html:71:      { main: "المجال الهندسي", spec: "الهندسة المدنية", branch: "هندسة الموارد المائية", 
+detail: "تصميم شبكات المياه والصرف الصحي" },
+hhh\almjal1.html:72:      { main: "المجال الهندسي", spec: "الهندسة المدنية", branch: "هندسة الموارد المائية", 
+detail: "تحلية المياه" },
+hhh\almjal1.html:73:      { main: "المجال الهندسي", spec: "الهندسة المدنية", branch: "هندسة الموارد المائية", 
+detail: "الهيدرولوجيا (دراسة دورات المياه)" },
+hhh\almjal1.html:74:      { main: "المجال الهندسي", spec: "الهندسة المدنية", branch: "هندسة الموارد المائية", 
+detail: "معالجة المياه والصرف الصحي" },
+hhh\almjal1.html:75:      { main: "المجال الهندسي", spec: "الهندسة المدنية", branch: "هندسة الموارد المائية", 
+detail: "التقييم البيئي للمشاريع" },
+hhh\almjal1.html:76:      { main: "المجال الهندسي", spec: "الهندسة المدنية", branch: "هندسة وإدارة التشييد", 
+detail: "تخطيط وجدولة المشاريع" },
+hhh\almjal1.html:77:      { main: "المجال الهندسي", spec: "الهندسة المدنية", branch: "هندسة وإدارة التشييد", 
+detail: "تقدير التكاليف وضبط الميزانية" },
+hhh\almjal1.html:78:      { main: "المجال الهندسي", spec: "الهندسة المدنية", branch: "هندسة وإدارة التشييد", 
+detail: "إدارة العقود والمشتريات" },
+hhh\almjal1.html:79:      { main: "المجال الهندسي", spec: "الهندسة المدنية", branch: "هندسة وإدارة التشييد", 
+detail: "إدارة السلامة والصحة المهنية" },
+hhh\almjal1.html:80:      { main: "المجال الهندسي", spec: "الهندسة المدنية", branch: "هندسة وإدارة التشييد", 
+detail: "إدارة الجودة في التشييد" },
+hhh\almjal1.html:81:      { main: "المجال الهندسي", spec: "الهندسة المعمارية", branch: "تصميم المباني", detail: 
+"تصميم مباني سكنية" },
+hhh\almjal1.html:82:      { main: "المجال الهندسي", spec: "الهندسة المعمارية", branch: "تصميم المباني", detail: 
+"تصميم مباني مؤسسية (مستشفيات، مدارس)" },
+hhh\almjal1.html:83:      { main: "المجال الهندسي", spec: "الهندسة المعمارية", branch: "تصميم المباني", detail: 
+"تصميم مباني ثقافية وتجارية" },
+hhh\almjal1.html:84:      { main: "المجال الهندسي", spec: "الهندسة المعمارية", branch: "التصميم الداخلي والديكور", 
+detail: "" },
+hhh\almjal1.html:87:      { main: "المجال القانوني", spec: "القضايا والمعاملات المدنية", branch: " الملكية 
+العقارية", detail: " توثيق عقود التصرفات (البيع، الشراء، التأجير)" },
+hhh\almjal1.html:88:      { main: "المجال القانوني", spec: "القضايا والمعاملات المدنية", branch: " الملكية 
+العقارية", detail: "قضايا النزاع العقاري" },
+hhh\almjal1.html:89:      { main: "المجال القانوني", spec: "القضايا والمعاملات المدنية", branch: " الملكية 
+العقارية", detail: "قسمة التركات بين الورثة" },
+hhh\almjal1.html:90:      { main: "المجال القانوني", spec: "القضايا والمعاملات المدنية", branch: "صياغة العقود 
+المدنية", detail: "مراجعة العقود والاتفاقيات" },
+hhh\almjal1.html:91:      { main: "المجال القانوني", spec: "القضايا والمعاملات المدنية", branch: "صياغة العقود 
+المدنية", detail: "التوثيق والتسجيل القانوني" },
+hhh\almjal1.html:92:      { main: "المجال القانوني", spec: "القضايا والمعاملات المدنية", branch: "المسؤولية المدنية 
+والتعويضات", detail: "دعاوى الأضرار والحوادث" },
+hhh\almjal1.html:93:      { main: "المجال القانوني", spec: "القضايا والمعاملات المدنية", branch: "المسؤولية المدنية 
+والتعويضات", detail: "التعويض عن الإخلال بالعقد" },
+hhh\almjal1.html:95:      { main: "المجال القانوني", spec: "القضايا الجنائية", branch: "الجرائم الجسيمة", detail: 
+"جرائم القتل والاعتداءات الخطيرة" },
+hhh\almjal1.html:96:      { main: "المجال القانوني", spec: "القضايا الجنائية", branch: "الجرائم الجسيمة", detail: 
+"التحقيقات الجنائية والمحاكمات" },
+hhh\almjal1.html:97:      { main: "المجال القانوني", spec: "القضايا الجنائية", branch: "الجرائم المالية 
+والاقتصادية", detail: "جرائم التزوير والاحتيال" },
+hhh\almjal1.html:98:      { main: "المجال القانوني", spec: "القضايا الجنائية", branch: "الجرائم المالية 
+والاقتصادية", detail: "غسل الأموال والرشوة" },
+hhh\almjal1.html:99:      { main: "المجال القانوني", spec: "القضايا الجنائية", branch: "الجرائم الإلكترونية", 
+detail: "اختراق الأنظمة وسرقة البيانات" },
+hhh\almjal1.html:100:      { main: "المجال القانوني", spec: "القضايا الجنائية", branch: "الجرائم الإلكترونية", 
+detail: "الابتزاز الإلكتروني والتشهير" },
+hhh\almjal1.html:102:      { main: "المجال القانوني", spec: "قضايا الأحوال الشخصية", branch: "الزواج والطلاق", 
+detail: "عقود الزواج والاتفاقات السابقة" },
+hhh\almjal1.html:103:      { main: "المجال القانوني", spec: "قضايا الأحوال الشخصية", branch: "الزواج والطلاق", 
+detail: "إجراءات الطلاق والتفريق القضائي" },
+hhh\almjal1.html:104:      { main: "المجال القانوني", spec: "قضايا الأحوال الشخصية", branch: "النفقة والحضانة", 
+detail: "تحديد النفقة الزوجية ونفقة الأبناء" },
+hhh\almjal1.html:105:      { main: "المجال القانوني", spec: "قضايا الأحوال الشخصية", branch: "النفقة والحضانة", 
+detail: "قضايا الحضانة والزيارة" },
+hhh\almjal1.html:106:      { main: "المجال القانوني", spec: "قضايا الأحوال الشخصية", branch: "الميراث والوصايا", 
+detail: "تقسيم التركات وفق الشريعة أو القانون" },
+hhh\almjal1.html:107:      { main: "المجال القانوني", spec: "قضايا الأحوال الشخصية", branch: "الميراث والوصايا", 
+detail: "الطعون في الوصايا والنزاعات بين الورثة" },
+hhh\almjal1.html:109:      { main: "المجال القانوني", spec: "القضايا والمعاملات التجارية", branch: "تأسيس الشركات", 
+detail: "تسجيل الشركات وتوثيق الأنظمة الأساسية" },
+hhh\almjal1.html:110:      { main: "المجال القانوني", spec: "القضايا والمعاملات التجارية", branch: "تأسيس الشركات", 
+detail: "عقود الشراكة والاندماج" },
+hhh\almjal1.html:111:      { main: "المجال القانوني", spec: "القضايا والمعاملات التجارية", branch: "المعاملات 
+التجارية", detail: "عقود البيع والشراء التجارية" },
+hhh\almjal1.html:112:      { main: "المجال القانوني", spec: "القضايا والمعاملات التجارية", branch: "المعاملات 
+التجارية", detail: "الأوراق التجارية (الشيكات، الكمبيالات)" },
+hhh\almjal1.html:113:      { main: "المجال القانوني", spec: "القضايا والمعاملات التجارية", branch: "الإفلاس 
+والتصفية", detail: "إجراءات الإفلاس وإعادة الهيكلة" },
+hhh\almjal1.html:114:      { main: "المجال القانوني", spec: "القضايا والمعاملات التجارية", branch: "الإفلاس 
+والتصفية", detail: "تصفية الشركات وتوزيع الأصول" },
+hhh\almjal1.html:116:      { main: "المجال القانوني", spec: "القضايا والمعاملات الإدارية", branch: "القرارات 
+الإدارية", detail: "الطعن في القرارات الحكومية" },
+hhh\almjal1.html:117:      { main: "المجال القانوني", spec: "القضايا والمعاملات الإدارية", branch: "القرارات 
+الإدارية", detail: "الرقابة القضائية على الإدارة" },
+hhh\almjal1.html:118:      { main: "المجال القانوني", spec: "القضايا والمعاملات الإدارية", branch: "العقود 
+الإدارية", detail: "صياغة وتنفيذ العقود الحكومية" },
+hhh\almjal1.html:119:      { main: "المجال القانوني", spec: "القضايا والمعاملات الإدارية", branch: "العقود 
+الإدارية", detail: "فض النزاعات في العقود الإدارية" },
+hhh\almjal1.html:120:      { main: "المجال القانوني", spec: "القضايا والمعاملات الإدارية", branch: "الوظيفة 
+العامة", detail: "التعيين والترقية والانضباط" },
+hhh\almjal1.html:121:      { main: "المجال القانوني", spec: "القضايا والمعاملات الإدارية", branch: "الوظيفة 
+العامة", detail: "قضايا الفصل والتظلمات الوظيفية" },
+hhh\almjal1.html:123:      { main: "المجال القانوني", spec: "الملكية الفكرية", branch: "حقوق المؤلف والنشر", 
+detail: "حماية الكتب والمحتوى الرقمي" },
+hhh\almjal1.html:124:      { main: "المجال القانوني", spec: "الملكية الفكرية", branch: "حقوق المؤلف والنشر", 
+detail: "قضايا النسخ والانتحال" },
+hhh\almjal1.html:125:      { main: "المجال القانوني", spec: "الملكية الفكرية", branch: "براءات الاختراع", detail: 
+"تسجيل الابتكارات والاختراعات" },
+hhh\almjal1.html:126:      { main: "المجال القانوني", spec: "الملكية الفكرية", branch: "براءات الاختراع", detail: 
+"الطعون في صلاحية البراءة" },
+hhh\almjal1.html:127:      { main: "المجال القانوني", spec: "الملكية الفكرية", branch: "العلامات التجارية", detail: 
+"تسجيل العلامات والشعارات" },
+hhh\almjal1.html:128:      { main: "المجال القانوني", spec: "الملكية الفكرية", branch: "العلامات التجارية", detail: 
+"النزاعات حول التقليد والتشابه" },
+hhh\almjal1.html:130:      { main: "المجال القانوني", spec: "القانون الدولي", branch: "القانون الدولي العام", 
+detail: "المعاهدات والاتفاقيات الدولية" },
+hhh\almjal1.html:131:      { main: "المجال القانوني", spec: "القانون الدولي", branch: "القانون الدولي العام", 
+detail: "قضايا حقوق الإنسان والنزاعات بين الدول" },
+hhh\almjal1.html:132:      { main: "المجال القانوني", spec: "القانون الدولي", branch: "القانون الدولي الخاص", 
+detail: "النزاعات بين الأفراد من جنسيات مختلفة" },
+hhh\almjal1.html:133:      { main: "المجال القانوني", spec: "القانون الدولي", branch: "القانون الدولي الخاص", 
+detail: "تنفيذ الأحكام الأجنبية والتحكيم الدولي" },
+hhh\almjal1.html:134:      { main: "المجال القانوني", spec: "القانون الدولي", branch: "القانون الإنساني الدولي", 
+detail: "حماية المدنيين أثناء النزاعات المسلحة" },
+hhh\almjal1.html:135:      { main: "المجال القانوني", spec: "القانون الدولي", branch: "القانون الإنساني الدولي", 
+detail: "جرائم الحرب والعدالة الدولية" },
+hhh\almjal1.html:137:      { main: "مجال القضاء والتحكيم وفض النزاعات", spec: "المحاكم والنيابات", branch: "", 
+detail: "" },
+hhh\almjal1.html:138:      { main: "مجال القضاء والتحكيم وفض النزاعات", spec: "مبادرات خاصة في التحكيم والصلح", 
+branch: "التحكيم العقاري", detail: "تسوية قضايا التصرفات (البيع، الشراء، الإيجارات) والمنازعات السكنية" },
+hhh\almjal1.html:139:      { main: "مجال القضاء والتحكيم وفض النزاعات", spec: "مبادرات خاصة في التحكيم والصلح", 
+branch: "التحكيم العقاري", detail: "فض النزاعات حول الملكية العقارية" },
+hhh\almjal1.html:140:      { main: "مجال القضاء والتحكيم وفض النزاعات", spec: "مبادرات خاصة في التحكيم والصلح", 
+branch: "التحكيم العقاري", detail: "التحكيم في قسمة التركات العقارية" },
+hhh\almjal1.html:141:      { main: "مجال القضاء والتحكيم وفض النزاعات", spec: "مبادرات خاصة في التحكيم والصلح", 
+branch: "التحكيم التجاري", detail: "التحكيم وفض النزاع بين الشركات التجارية" },
+hhh\almjal1.html:142:      { main: "مجال القضاء والتحكيم وفض النزاعات", spec: "مبادرات خاصة في التحكيم والصلح", 
+branch: "التحكيم التجاري", detail: "التحكيم وفض النزاع بين الشركاء" },
+hhh\almjal1.html:143:      { main: "مجال القضاء والتحكيم وفض النزاعات", spec: "مبادرات خاصة في التحكيم والصلح", 
+branch: "التحكيم التجاري", detail: "التصفيات وتوزيع الاصول" },
+hhh\almjal1.html:144:      { main: "مجال القضاء والتحكيم وفض النزاعات", spec: "مبادرات خاصة في التحكيم والصلح", 
+branch: "التحكيم الأسري", detail: "حل النزاعات الزوجية خارج المحاكم" },
+hhh\almjal1.html:145:      { main: "مجال القضاء والتحكيم وفض النزاعات", spec: "مبادرات خاصة في التحكيم والصلح", 
+branch: "التحكيم الأسري", detail: "تسوية قضايا الحضانة والنفقة بالتراضي" },
+hhh\almjal1.html:146:      { main: "مجال القضاء والتحكيم وفض النزاعات", spec: "مبادرات خاصة في التحكيم والصلح", 
+branch: "التحكيم الأسري", detail: "إدارة جلسات الصلح بين أفراد الأسرة" },
+hhh\almjal1.html:150:      { main: "المقاولات", spec: "المناقصات وإدارة المشاريع", branch: "المناقصات والتوريدات", 
+detail: "جداول الكميات والعطاءات وتحليل الأسعار" },
+hhh\almjal1.html:151:      { main: "المقاولات", spec: "المناقصات وإدارة المشاريع", branch: "المناقصات والتوريدات", 
+detail: "توريد المواد والمشتريات" },
+hhh\almjal1.html:152:      { main: "المقاولات", spec: "المناقصات وإدارة المشاريع", branch: "المناقصات والتوريدات", 
+detail: "ضبط التكاليف ومراقبة الميزانية" },
+hhh\almjal1.html:153:      { main: "المقاولات", spec: "المناقصات وإدارة المشاريع", branch: "إدارة المشروع 
+والمخططات", detail: "إعداد الجداول الزمنية للمشروع" },
+hhh\almjal1.html:154:      { main: "المقاولات", spec: "المناقصات وإدارة المشاريع", branch: "إدارة المشروع 
+والمخططات", detail: "مراجعة المخططات الهندسية والتنفيذية" },
+hhh\almjal1.html:155:      { main: "المقاولات", spec: "المناقصات وإدارة المشاريع", branch: "إدارة المشروع 
+والمخططات", detail: "الاشراف ومتابعة التنفيذ" },
+hhh\almjal1.html:158:      { main: "المقاولات", spec: "الأعمال الإنشائية والمعمارية", branch: "أعمال الأساسات 
+والهيكل الإنشائي", detail: "الحفر والردم وتسوية الأرض" },
+hhh\almjal1.html:159:      { main: "المقاولات", spec: "الأعمال الإنشائية والمعمارية", branch: "أعمال الأساسات 
+والهيكل الإنشائي", detail: "تنفيذ القواعد والأعمدة والأسقف" },
+hhh\almjal1.html:160:      { main: "المقاولات", spec: "الأعمال الإنشائية والمعمارية", branch: "أعمال الأساسات 
+والهيكل الإنشائي", detail: "معالجة الخرسانة وفك الشدات" },
+hhh\almjal1.html:161:      { main: "المقاولات", spec: "الأعمال الإنشائية والمعمارية", branch: "أعمال البناء 
+والتشطيبات الأساسية", detail: "أعمال الطوب والبناء" },
+hhh\almjal1.html:162:      { main: "المقاولات", spec: "الأعمال الإنشائية والمعمارية", branch: "أعمال البناء 
+والتشطيبات الأساسية", detail: "اللياسة والدهانات" },
+hhh\almjal1.html:163:      { main: "المقاولات", spec: "الأعمال الإنشائية والمعمارية", branch: "أعمال البناء 
+والتشطيبات الأساسية", detail: "تركيب الأرضيات والسيراميك" },
+hhh\almjal1.html:164:      { main: "المقاولات", spec: "الأعمال الإنشائية والمعمارية", branch: "أعمال المعمار 
+والديكور", detail: "تنفيذ الأسقف الجبسية والديكورات" },
+hhh\almjal1.html:165:      { main: "المقاولات", spec: "الأعمال الإنشائية والمعمارية", branch: "أعمال المعمار 
+والديكور", detail: "تركيب الأبواب والنوافذ" },
+hhh\almjal1.html:166:      { main: "المقاولات", spec: "الأعمال الإنشائية والمعمارية", branch: "أعمال المعمار 
+والديكور", detail: "التشطيبات النهائية والتسليم" },
+hhh\almjal1.html:169:      { main: "المقاولات", spec: "الأعمال الكهربائية والميكانيكية والتشطيبات", branch: 
+"الأعمال الكهربائية", detail: "تمديد الكابلات ولوحات التوزيع" },
+hhh\almjal1.html:170:      { main: "المقاولات", spec: "الأعمال الكهربائية والميكانيكية والتشطيبات", branch: 
+"الأعمال الكهربائية", detail: "تركيب الإنارة والمفاتيح" },
+hhh\almjal1.html:171:      { main: "المقاولات", spec: "الأعمال الكهربائية والميكانيكية والتشطيبات", branch: 
+"الأعمال الكهربائية", detail: "أنظمة التأريض والحماية" },
+hhh\almjal1.html:172:      { main: "المقاولات", spec: "الأعمال الكهربائية والميكانيكية والتشطيبات", branch: 
+"الأعمال الميكانيكية والسباكة", detail: "تمديدات المياه والصرف الصحي" },
+hhh\almjal1.html:173:      { main: "المقاولات", spec: "الأعمال الكهربائية والميكانيكية والتشطيبات", branch: 
+"الأعمال الميكانيكية والسباكة", detail: "تركيب المضخات والخزانات" },
+hhh\almjal1.html:174:      { main: "المقاولات", spec: "الأعمال الكهربائية والميكانيكية والتشطيبات", branch: 
+"الأعمال الميكانيكية والسباكة", detail: "أنظمة التكييف والتهوية" },
+hhh\almjal1.html:175:      { main: "المقاولات", spec: "الأعمال الكهربائية والميكانيكية والتشطيبات", branch: 
+"التجهيزات النهائية والتسليم", detail: "اختبار الأنظمة وتسليم المشروع" },
+hhh\almjal1.html:176:      { main: "المقاولات", spec: "الأعمال الكهربائية والميكانيكية والتشطيبات", branch: 
+"التجهيزات النهائية والتسليم", detail: "إعداد تقرير التسليم النهائي" },
+hhh\almjal1.html:179:      { main: "المجال المالي والإداري", spec: "الشؤون المالية والمحاسبية", branch: "المحاسبة 
+والتقارير المالية", detail: "تسجيل العمليات المالية" },
+hhh\almjal1.html:180:      { main: "المجال المالي والإداري", spec: "الشؤون المالية والمحاسبية", branch: "المحاسبة 
+والتقارير المالية", detail: "إعداد القوائم المالية الدورية" },
+hhh\almjal1.html:181:      { main: "المجال المالي والإداري", spec: "الشؤون المالية والمحاسبية", branch: "المحاسبة 
+والتقارير المالية", detail: "مراجعة الحسابات والامتثال المالي" },
+hhh\almjal1.html:183:      { main: "المجال المالي والإداري", spec: "الشؤون المالية والمحاسبية", branch: "إدارة 
+الميزانية والتحليل المالي", detail: "إعداد الموازنات التقديرية" },
+hhh\almjal1.html:184:      { main: "المجال المالي والإداري", spec: "الشؤون المالية والمحاسبية", branch: "إدارة 
+الميزانية والتحليل المالي", detail: "تحليل التكاليف والعوائد" },
+hhh\almjal1.html:185:      { main: "المجال المالي والإداري", spec: "الشؤون المالية والمحاسبية", branch: "إدارة 
+الميزانية والتحليل المالي", detail: "مراقبة الإنفاق وتخصيص الموارد" },
+hhh\almjal1.html:187:      { main: "المجال المالي والإداري", spec: "الشؤون المالية والمحاسبية", branch: "إدارة 
+المشتريات والمخزون", detail: "التوريد والتعاقدات" },
+hhh\almjal1.html:188:      { main: "المجال المالي والإداري", spec: "الشؤون المالية والمحاسبية", branch: "إدارة 
+المشتريات والمخزون", detail: "إدارة المخزون والمواد" },
+hhh\almjal1.html:189:      { main: "المجال المالي والإداري", spec: "الشؤون المالية والمحاسبية", branch: "إدارة 
+المشتريات والمخزون", detail: "مراقبة دورة الشراء والتخزين" },
+hhh\almjal1.html:191:      { main: "المجال المالي والإداري", spec: "الموارد البشرية", branch: "إدارة الموارد 
+البشرية", detail: "التوظيف والتعيين" },
+hhh\almjal1.html:192:      { main: "المجال المالي والإداري", spec: "الموارد البشرية", branch: "إدارة الموارد 
+البشرية", detail: "التدريب والتطوير المهني" },
+hhh\almjal1.html:193:      { main: "المجال المالي والإداري", spec: "الموارد البشرية", branch: "إدارة الموارد 
+البشرية", detail: "تقييم الأداء والتحفيز" },
+hhh\almjal1.html:195:      { main: "المجال المالي والإداري", spec: "الموارد البشرية", branch: "إدارة العمليات 
+والخدمات العامة", detail: "تنظيم سير العمل الداخلي" },
+hhh\almjal1.html:196:      { main: "المجال المالي والإداري", spec: "الموارد البشرية", branch: "إدارة العمليات 
+والخدمات العامة", detail: "تحسين جودة الخدمات والإجراءات" },
+hhh\almjal1.html:197:      { main: "المجال المالي والإداري", spec: "الموارد البشرية", branch: "إدارة العمليات 
+والخدمات العامة", detail: "إدارة الوقت والمهام التشغيلية" },
+hhh\almjal1.html:201:      { main: "المجال الإعلامي والدعائي", spec: "الإنتاج الإعلامي", branch: "التصوير 
+الفوتوغرافي والفيديو", detail: "تصوير الفعاليات والمناسبات" },
+hhh\almjal1.html:202:      { main: "المجال الإعلامي والدعائي", spec: "الإنتاج الإعلامي", branch: "التصوير 
+الفوتوغرافي والفيديو", detail: "تصوير المنتجات والدعاية" },
+hhh\almjal1.html:203:      { main: "المجال الإعلامي والدعائي", spec: "الإنتاج الإعلامي", branch: "التصوير 
+الفوتوغرافي والفيديو", detail: "إعداد التقارير الميدانية" },
+hhh\almjal1.html:205:      { main: "المجال الإعلامي والدعائي", spec: "الإنتاج الإعلامي", branch: "المونتاج 
+والمؤثرات البصرية", detail: "تحرير الفيديوهات" },
+hhh\almjal1.html:206:      { main: "المجال الإعلامي والدعائي", spec: "الإنتاج الإعلامي", branch: "المونتاج 
+والمؤثرات البصرية", detail: "إضافة المؤثرات الصوتية والبصرية" },
+hhh\almjal1.html:207:      { main: "المجال الإعلامي والدعائي", spec: "الإنتاج الإعلامي", branch: "المونتاج 
+والمؤثرات البصرية", detail: "إنتاج الفيديوهات الترويجية" },
+hhh\almjal1.html:209:      { main: "المجال الإعلامي والدعائي", spec: "الإنتاج الإعلامي", branch: "إدارة البث 
+والاستوديوهات", detail: "البث المباشر" },
+hhh\almjal1.html:210:      { main: "المجال الإعلامي والدعائي", spec: "الإنتاج الإعلامي", branch: "إدارة البث 
+والاستوديوهات", detail: "إدارة المعدات الفنية" },
+hhh\almjal1.html:211:      { main: "المجال الإعلامي والدعائي", spec: "الإنتاج الإعلامي", branch: "إدارة البث 
+والاستوديوهات", detail: "تسجيل البرامج" },
+hhh\almjal1.html:214:      { main: "المجال الإعلامي والدعائي", spec: "التصميم والإبداع البصري", branch: "التصميم 
+الجرافيكي", detail: "تصميم الشعارات والهويات" },
+hhh\almjal1.html:215:      { main: "المجال الإعلامي والدعائي", spec: "التصميم والإبداع البصري", branch: "التصميم 
+الجرافيكي", detail: "الإعلانات المطبوعة والرقمية" },
+hhh\almjal1.html:216:      { main: "المجال الإعلامي والدعائي", spec: "التصميم والإبداع البصري", branch: "التصميم 
+الجرافيكي", detail: "واجهات المستخدم" },
+hhh\almjal1.html:218:      { main: "المجال الإعلامي والدعائي", spec: "التصميم والإبداع البصري", branch: "الأنيميشن 
+والموشن جرافيك", detail: "تحريك الشخصيات" },
+hhh\almjal1.html:219:      { main: "المجال الإعلامي والدعائي", spec: "التصميم والإبداع البصري", branch: "الأنيميشن 
+والموشن جرافيك", detail: "فيديوهات توعوية وترويجية" },
+hhh\almjal1.html:220:      { main: "المجال الإعلامي والدعائي", spec: "التصميم والإبداع البصري", branch: "الأنيميشن 
+والموشن جرافيك", detail: "رسوم متحركة ثنائية وثلاثية الأبعاد" },
+hhh\almjal1.html:222:      { main: "المجال الإعلامي والدعائي", spec: "التصميم والإبداع البصري", branch: "الإخراج 
+الفني والهوية البصرية", detail: "توجيه الحملات الإبداعية" },
+hhh\almjal1.html:223:      { main: "المجال الإعلامي والدعائي", spec: "التصميم والإبداع البصري", branch: "الإخراج 
+الفني والهوية البصرية", detail: "تطوير الهوية المؤسسية" },
+hhh\almjal1.html:224:      { main: "المجال الإعلامي والدعائي", spec: "التصميم والإبداع البصري", branch: "الإخراج 
+الفني والهوية البصرية", detail: "التنسيق بين فرق الإنتاج" },
+hhh\almjal1.html:227:      { main: "المجال الإعلامي والدعائي", spec: "الاتصال والتسويق الإعلامي", branch: "الصحافة 
+والتحرير الرقمي", detail: "كتابة الأخبار والتقارير" },
+hhh\almjal1.html:228:      { main: "المجال الإعلامي والدعائي", spec: "الاتصال والتسويق الإعلامي", branch: "الصحافة 
+والتحرير الرقمي", detail: "التحقيقات الصحفية" },
+hhh\almjal1.html:229:      { main: "المجال الإعلامي والدعائي", spec: "الاتصال والتسويق الإعلامي", branch: "الصحافة 
+والتحرير الرقمي", detail: "إدارة النشرات والمجلات" },
+hhh\almjal1.html:231:      { main: "المجال الإعلامي والدعائي", spec: "الاتصال والتسويق الإعلامي", branch: "الدعاية 
+والإعلان", detail: "كتابة النصوص الإعلانية" },
+hhh\almjal1.html:232:      { main: "المجال الإعلامي والدعائي", spec: "الاتصال والتسويق الإعلامي", branch: "الدعاية 
+والإعلان", detail: "تصميم الحملات الدعائية" },
+hhh\almjal1.html:233:      { main: "المجال الإعلامي والدعائي", spec: "الاتصال والتسويق الإعلامي", branch: "الدعاية 
+والإعلان", detail: "التسويق الإلكتروني" },
+hhh\almjal1.html:235:      { main: "المجال الإعلامي والدعائي", spec: "الاتصال والتسويق الإعلامي", branch: "العلاقات 
+العامة والإعلام المؤسسي", detail: "إدارة السمعة والأزمات" },
+hhh\almjal1.html:236:      { main: "المجال الإعلامي والدعائي", spec: "الاتصال والتسويق الإعلامي", branch: "العلاقات 
+العامة والإعلام المؤسسي", detail: "تنظيم المؤتمرات والفعاليات" },
+hhh\almjal1.html:237:      { main: "المجال الإعلامي والدعائي", spec: "الاتصال والتسويق الإعلامي", branch: "العلاقات 
+العامة والإعلام المؤسسي", detail: "التواصل والتنسيق مع الجهات الإعلامية" },
+hhh\almjal1.html:244:    ];
+hhh\almjal1.html:246:    const unique = (arr, key) => [...new Set(arr.map(x => x[key]))];
+hhh\almjal1.html:248:    function fillMain() {
+hhh\almjal1.html:251:    }
+hhh\almjal1.html:253:    $("#mainField").on("change", function () {
+hhh\almjal1.html:257:      clearNext(["#branch", "#detail"]);
+hhh\almjal1.html:258:    });
+hhh\almjal1.html:260:    $("#specialty").on("change", function () {
+hhh\almjal1.html:265:      clearNext(["#detail"]);
+hhh\almjal1.html:266:    });
+hhh\almjal1.html:268:    $("#branch").on("change", function () {
+hhh\almjal1.html:276:    });
+hhh\almjal1.html:278:    function fillSelect(select, list, placeholder) {
+hhh\almjal1.html:279:      select.empty().append(`<option value="">${placeholder}</option>`);
+hhh\almjal1.html:280:      list.forEach(i => select.append(`<option value="${i}">${i}</option>`));
+hhh\almjal1.html:281:    }
+hhh\almjal1.html:283:    function clearNext(ids) {
+hhh\almjal1.html:285:    }
+hhh\ContractTemplate.html:10:        body {
+hhh\ContractTemplate.html:13:        }
+hhh\ContractTemplate.html:15:        .contracts-list {
+hhh\ContractTemplate.html:22:        }
+hhh\ContractTemplate.html:24:        .contract-card {
+hhh\ContractTemplate.html:34:        }
+hhh\ContractTemplate.html:36:        .contract-header {
+hhh\ContractTemplate.html:42:        }
+hhh\ContractTemplate.html:44:        .contract-section {
+hhh\ContractTemplate.html:46:        }
+hhh\ContractTemplate.html:48:        .contract-table {
+hhh\ContractTemplate.html:52:        }
+hhh\ContractTemplate.html:54:            .contract-table th, .contract-table td {
+hhh\ContractTemplate.html:59:            }
+hhh\ContractTemplate.html:61:            .contract-table th {
+hhh\ContractTemplate.html:63:            }
+hhh\ContractTemplate.html:65:        .signatures {
+hhh\ContractTemplate.html:69:        }
+hhh\ContractTemplate.html:71:        .signature-block {
+hhh\ContractTemplate.html:74:        }
+hhh\ContractTemplate.html:76:        .footer {
+hhh\ContractTemplate.html:81:        }
+hhh\ContractTemplate.html:83:        .contract-actions {
+hhh\ContractTemplate.html:89:        }
+hhh\ContractTemplate.html:91:        .btn-approve, .btn-reject {
+hhh\ContractTemplate.html:101:        }
+hhh\ContractTemplate.html:103:        .btn-approve {
+hhh\ContractTemplate.html:106:        }
+hhh\ContractTemplate.html:108:            .btn-approve:hover {
+hhh\ContractTemplate.html:112:            }
+hhh\ContractTemplate.html:114:        .btn-reject {
+hhh\ContractTemplate.html:117:        }
+hhh\ContractTemplate.html:119:            .btn-reject:hover {
+hhh\ContractTemplate.html:123:            }
+hhh\ContractTemplate.html:126:        .reject-form {
+hhh\ContractTemplate.html:133:        }
+hhh\ContractTemplate.html:135:            .reject-form h4 {
+hhh\ContractTemplate.html:140:            }
+hhh\ContractTemplate.html:142:        .form-group {
+hhh\ContractTemplate.html:144:        }
+hhh\ContractTemplate.html:146:            .form-group label {
+hhh\ContractTemplate.html:151:            }
+hhh\ContractTemplate.html:153:            .form-group select {
+hhh\ContractTemplate.html:158:            }
+hhh\ContractTemplate.html:160:            .form-group textarea {
+hhh\ContractTemplate.html:167:            }
+hhh\ContractTemplate.html:169:        .form-buttons {
+hhh\ContractTemplate.html:172:        }
+hhh\ContractTemplate.html:174:            .form-buttons button {
+hhh\ContractTemplate.html:180:            }
+hhh\ContractTemplate.html:182:        .btn-cancel {
+hhh\ContractTemplate.html:185:        }
+hhh\ContractTemplate.html:187:        .btn-submit {
+hhh\ContractTemplate.html:190:        }
+hhh\ContractTemplate.html:192:        .btn-cancel:hover {
+hhh\ContractTemplate.html:194:        }
+hhh\ContractTemplate.html:196:        .btn-submit:hover {
+hhh\ContractTemplate.html:198:        }
+hhh\ContractTemplate.html:369:        function showRejectForm() {
+hhh\ContractTemplate.html:372:        }
+hhh\ContractTemplate.html:374:        function hideRejectForm() {
+hhh\ContractTemplate.html:378:        }
+hhh\ContractTemplate.html:380:        document.getElementById('rejectForm').addEventListener('submit', function(e) {
+hhh\ContractTemplate.html:384:            if (selectedReason === "") {
+hhh\ContractTemplate.html:387:            }
+hhh\ContractTemplate.html:393:        });
+hhh\ContractTemplate.html:395:        document.getElementById('approveBtn').addEventListener('click', function() {
+hhh\ContractTemplate.html:399:        });
+hhh\ContractTemplate.html:402:        function closePaymentModal() {
+hhh\ContractTemplate.html:404:        }
+hhh\ContractTemplate.html:407:        function showPaymentForm(method) {
+hhh\ContractTemplate.html:415:            if (method === 'credit_card') {
+hhh\ContractTemplate.html:424:            } else if (method === 'sent_to_client') {
+hhh\ContractTemplate.html:431:            }
+hhh\ContractTemplate.html:432:        }
+hhh\ContractTemplate.html:435:        function backToMethod() {
+hhh\ContractTemplate.html:448:        }
+hhh\ContractTemplate.html:451:        function submitPayment(event) {
+hhh\ContractTemplate.html:457:            if (method === 'credit_card') {
+hhh\ContractTemplate.html:463:                if (!cardNumber || !expiryDate || !cvv) {
+hhh\ContractTemplate.html:466:                }
+hhh\ContractTemplate.html:470:            } else if (method === 'sent_to_client') {
+hhh\ContractTemplate.html:473:                if (!inputValue) {
+hhh\ContractTemplate.html:476:                }
+hhh\ContractTemplate.html:479:            }
+hhh\ContractTemplate.html:482:        }
+hhh\ContractTemplate1.html:10:        body {
+hhh\ContractTemplate1.html:13:        }
+hhh\ContractTemplate1.html:15:        .contracts-list {
+hhh\ContractTemplate1.html:22:        }
+hhh\ContractTemplate1.html:24:        .contract-card {
+hhh\ContractTemplate1.html:34:        }
+hhh\ContractTemplate1.html:36:        .contract-header {
+hhh\ContractTemplate1.html:42:        }
+hhh\ContractTemplate1.html:44:        .contract-section {
+hhh\ContractTemplate1.html:46:        }
+hhh\ContractTemplate1.html:48:        .contract-table {
+hhh\ContractTemplate1.html:52:        }
+hhh\ContractTemplate1.html:54:            .contract-table th, .contract-table td {
+hhh\ContractTemplate1.html:59:            }
+hhh\ContractTemplate1.html:61:            .contract-table th {
+hhh\ContractTemplate1.html:63:            }
+hhh\ContractTemplate1.html:65:        .signatures {
+hhh\ContractTemplate1.html:69:        }
+hhh\ContractTemplate1.html:71:        .signature-block {
+hhh\ContractTemplate1.html:74:        }
+hhh\ContractTemplate1.html:76:        .footer {
+hhh\ContractTemplate1.html:81:        }
+hhh\ContractTemplate1.html:83:        .contract-actions {
+hhh\ContractTemplate1.html:89:        }
+hhh\ContractTemplate1.html:91:        .btn-approve, .btn-reject {
+hhh\ContractTemplate1.html:101:        }
+hhh\ContractTemplate1.html:103:        .btn-approve {
+hhh\ContractTemplate1.html:106:        }
+hhh\ContractTemplate1.html:108:            .btn-approve:hover {
+hhh\ContractTemplate1.html:112:            }
+hhh\ContractTemplate1.html:114:        .btn-reject {
+hhh\ContractTemplate1.html:117:        }
+hhh\ContractTemplate1.html:119:            .btn-reject:hover {
+hhh\ContractTemplate1.html:123:            }
+hhh\ContractTemplate1.html:126:        .reject-form {
+hhh\ContractTemplate1.html:133:        }
+hhh\ContractTemplate1.html:135:            .reject-form h4 {
+hhh\ContractTemplate1.html:140:            }
+hhh\ContractTemplate1.html:142:        .form-group {
+hhh\ContractTemplate1.html:144:        }
+hhh\ContractTemplate1.html:146:            .form-group label {
+hhh\ContractTemplate1.html:151:            }
+hhh\ContractTemplate1.html:153:            .form-group select {
+hhh\ContractTemplate1.html:158:            }
+hhh\ContractTemplate1.html:160:            .form-group textarea {
+hhh\ContractTemplate1.html:167:            }
+hhh\ContractTemplate1.html:169:        .form-buttons {
+hhh\ContractTemplate1.html:172:        }
+hhh\ContractTemplate1.html:174:            .form-buttons button {
+hhh\ContractTemplate1.html:180:            }
+hhh\ContractTemplate1.html:182:        .btn-cancel {
+hhh\ContractTemplate1.html:185:        }
+hhh\ContractTemplate1.html:187:        .btn-submit {
+hhh\ContractTemplate1.html:190:        }
+hhh\ContractTemplate1.html:192:        .btn-cancel:hover {
+hhh\ContractTemplate1.html:194:        }
+hhh\ContractTemplate1.html:196:        .btn-submit:hover {
+hhh\ContractTemplate1.html:198:        }
+hhh\ContractTemplate1.html:314:        function showRejectForm() {
+hhh\ContractTemplate1.html:317:        }
+hhh\ContractTemplate1.html:319:        function hideRejectForm() {
+hhh\ContractTemplate1.html:323:        }
+hhh\ContractTemplate1.html:325:        document.getElementById('rejectForm').addEventListener('submit', function(e) 
+{
+hhh\ContractTemplate1.html:329:            if (selectedReason === "") {
+hhh\ContractTemplate1.html:332:            }
+hhh\ContractTemplate1.html:338:        });
+hhh\ContractTemplate1.html:340:        document.getElementById('approveBtn').addEventListener('click', function() {
+hhh\ContractTemplate1.html:344:        });
+hhh\ContractTemplate1.html:347:        function closePaymentModal() {
+hhh\ContractTemplate1.html:349:        }
+hhh\ContractTemplate1.html:352:        function showPaymentForm(method) {
+hhh\ContractTemplate1.html:360:            if (method === 'credit_card') {
+hhh\ContractTemplate1.html:369:            } else if (method === 'sent_to_client') {
+hhh\ContractTemplate1.html:376:            }
+hhh\ContractTemplate1.html:377:        }
+hhh\ContractTemplate1.html:380:        function backToMethod() {
+hhh\ContractTemplate1.html:393:        }
+hhh\ContractTemplate1.html:396:        function submitPayment(event) {
+hhh\ContractTemplate1.html:402:            if (method === 'credit_card') {
+hhh\ContractTemplate1.html:408:                if (!cardNumber || !expiryDate || !cvv) {
+hhh\ContractTemplate1.html:411:                }
+hhh\ContractTemplate1.html:415:            } else if (method === 'sent_to_client') {
+hhh\ContractTemplate1.html:418:                if (!inputValue) {
+hhh\ContractTemplate1.html:421:                }
+hhh\ContractTemplate1.html:424:            }
+hhh\ContractTemplate1.html:427:        }
+hhh\create.html:11:    body {
+hhh\create.html:16:    }
+hhh\create.html:17:    .section-header {
+hhh\create.html:27:    }
+hhh\create.html:28:    .section-header:hover { background-color: #0b5ed7; }
+hhh\create.html:29:    .section-content {
+hhh\create.html:37:    }
+hhh\create.html:38:    .add-btn { margin-top: 10px; }
+hhh\create.html:39:    .item-box {
+hhh\create.html:46:    }
+hhh\create.html:47:    .action-btns {
+hhh\create.html:51:    }
+hhh\create.html:52:    .action-btns button { margin-left: 5px; }
+hhh\create.html:55:    #cv-preview {
+hhh\create.html:61:    }
+hhh\create.html:62:    #cv-preview h2 {
+hhh\create.html:67:    }
+hhh\create.html:68:    .info p { margin: 0; line-height: 1.8; }
+hhh\create.html:69:    .item-box-preview {
+hhh\create.html:75:    }
+hhh\create.html:285:                document.getElementById("unitSelect").addEventListener("change", function () {
+hhh\create.html:290:                    if (selectedUnit) {
+hhh\create.html:293:                    } else {
+hhh\create.html:296:                    }
+hhh\create.html:297:                });
+hhh\create.html:312:                checkbox.addEventListener('change', function() {
+hhh\create.html:314:                });
+hhh\create.html:357:                            <select class="form-select border-type" 
+name="earthBorders[0].BorderType" style="display:none;">
+hhh\create.html:370:                        <input type="text" class="form-control" 
+name="earthBorders[0].BorderDescription" />
+hhh\create.html:373:                        <input type="hidden" name="earthBorders[3].IdenticalOrDifferent" 
+value="0" />
+hhh\create.html:375:                            name="earthBorders[3].IdenticalOrDifferent" value="1" />
+hhh\create.html:379:                        <input type="text" class="form-control" 
+name="earthBorders[0].Difference" />
+hhh\create.html:392:                            <select class="form-select border-type" 
+name="earthBorders[1].BorderType" style="display:none;">
+hhh\create.html:405:                        <input type="text" class="form-control" 
+name="earthBorders[1].BorderDescription" />
+hhh\create.html:408:                        <input type="hidden" name="earthBorders[3].IdenticalOrDifferent" 
+value="0" />
+hhh\create.html:410:                            name="earthBorders[3].IdenticalOrDifferent" value="1" />
+hhh\create.html:415:                        <input type="text" class="form-control" 
+name="earthBorders[1].Difference" />
+hhh\create.html:428:                            <select class="form-select border-type" 
+name="earthBorders[2].BorderType" style="display:none;">
+hhh\create.html:440:                        <input type="text" class="form-control" 
+name="earthBorders[2].BorderDescription" />
+hhh\create.html:443:                        <input type="hidden" name="earthBorders[3].IdenticalOrDifferent" 
+value="0" />
+hhh\create.html:445:                            name="earthBorders[3].IdenticalOrDifferent" value="1" />
+hhh\create.html:450:        <input type="text" class="form-control" name="earthBorders[0].Difference" readonly />
+hhh\create.html:463:                            <select class="form-select border-type" 
+name="earthBorders[3].BorderType" style="display:none;">
+hhh\create.html:474:                        <input type="text" class="form-control" 
+name="earthBorders[3].BorderDescription" />
+hhh\create.html:477:                        <input type="hidden" name="earthBorders[3].IdenticalOrDifferent" 
+value="0" />
+hhh\create.html:479:                            name="earthBorders[3].IdenticalOrDifferent" value="1" />
+hhh\create.html:484:                        <input type="text" class="form-control" 
+name="earthBorders[3].Difference" />
+hhh\create.html:598:document.addEventListener('DOMContentLoaded', function() {
+hhh\create.html:604:    select.addEventListener('change', function() {
+hhh\create.html:617:        rahaqSection.querySelectorAll('input[type="text"]').forEach(input => input.disabled = 
+false);
+hhh\create.html:618:        rahaqSection.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
+hhh\create.html:619:            const inputField = checkbox.closest('tr').querySelector('input[type="text"]');
+hhh\create.html:621:        });
+hhh\create.html:622:    });
+hhh\create.html:625:    rahaqSection.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
+hhh\create.html:626:        const inputField = checkbox.closest('tr').querySelector('input[type="text"]');
+hhh\create.html:627:        checkbox.addEventListener('change', function() {
+hhh\create.html:630:        });
+hhh\create.html:631:    });
+hhh\create.html:635:    addBuildingBtn.addEventListener('click', function() {
+hhh\create.html:644:    });
+hhh\create.html:645:});
+hhh\create.html:663:        في حال ذكرت الوثيقة [من اعلى - من اسفل] قم بالضغط على المربع والكتابة في الخانة المخصصة
+hhh\create.html:695:    .larger-checkbox {
+hhh\create.html:700:    }
+hhh\create.html:704:    #earthBordersTable2 th {
+hhh\create.html:707:    }
+hhh\create.html:710:    input[disabled] {
+hhh\create.html:713:    }
+hhh\create.html:716:    document.addEventListener('DOMContentLoaded', function() {
+hhh\create.html:720:        select.addEventListener('change', function() {
+hhh\create.html:723:        });
+hhh\create.html:724:    });
+hhh\create.html:727:    document.addEventListener('DOMContentLoaded', function () {
+hhh\create.html:734:        chkUp.addEventListener('change', function () {
+hhh\create.html:737:        });
+hhh\create.html:739:        chkDown.addEventListener('change', function () {
+hhh\create.html:742:        });
+hhh\create.html:743:    });
+hhh\create.html:853:            <input type="file" class="form-control me-2" name="fileAttach[]" />
+hhh\create.html:867:    document.addEventListener('DOMContentLoaded', function() {
+hhh\create.html:871:    addBtn.addEventListener('click', function() {
+hhh\create.html:875:            <input type="file" class="form-control me-2" name="fileAttach[]" />
+hhh\create.html:881:        newRow.querySelector('.remove-attachment').addEventListener('click', function() {
+hhh\create.html:883:        });
+hhh\create.html:884:    });
+hhh\create.html:887:    wrapper.querySelectorAll('.remove-attachment').forEach(btn => {
+hhh\create.html:888:        btn.addEventListener('click', function() {
+hhh\create.html:890:        });
+hhh\create.html:891:    });
+hhh\create.html:892:});
+hhh\create.html:1216:.custom-input-container {
+hhh\create.html:1219:}
+hhh\create.html:1223:.custom-input-container select {
+hhh\create.html:1233:}
+hhh\create.html:1235:.custom-input-container label {
+hhh\create.html:1245:}
+hhh\create.html:1252:.custom-input-container select:not([value=""]) + label {
+hhh\create.html:1256:}
+hhh\create.html:1258:.custom-input-container textarea {
+hhh\create.html:1261:}
+hhh\create.html:1264:.input-with-button {
+hhh\create.html:1267:}
+hhh\create.html:1269:.input-with-button input {
+hhh\create.html:1272:}
+hhh\create.html:1274:.input-with-button button {
+hhh\create.html:1276:}
+hhh\create.html:1280:document.addEventListener('DOMContentLoaded', function() {
+hhh\create.html:1281:    function setupNameAdder(txtId, listId, countId, btnId) {
+hhh\create.html:1287:        let names = [];
+hhh\create.html:1289:        addBtn.addEventListener('click', function() {
+hhh\create.html:1291:            if(name) {
+hhh\create.html:1296:            }
+hhh\create.html:1297:        });
+hhh\create.html:1298:    }
+hhh\create.html:1302:});
+hhh\createdevided.html:11:    body {
+hhh\createdevided.html:16:    }
+hhh\createdevided.html:17:    .section-header {
+hhh\createdevided.html:27:    }
+hhh\createdevided.html:28:    .section-header:hover { background-color: #0b5ed7; }
+hhh\createdevided.html:29:    .section-content {
+hhh\createdevided.html:37:    }
+hhh\createdevided.html:38:    .add-btn { margin-top: 10px; }
+hhh\createdevided.html:39:    .item-box {
+hhh\createdevided.html:46:    }
+hhh\createdevided.html:47:    .action-btns {
+hhh\createdevided.html:51:    }
+hhh\createdevided.html:52:    .action-btns button { margin-left: 5px; }
+hhh\createdevided.html:55:    #cv-preview {
+hhh\createdevided.html:61:    }
+hhh\createdevided.html:62:    #cv-preview h2 {
+hhh\createdevided.html:67:    }
+hhh\createdevided.html:68:    .info p { margin: 0; line-height: 1.8; }
+hhh\createdevided.html:69:    .item-box-preview {
+hhh\createdevided.html:75:    }
+hhh\createdevided.html:293:                document.getElementById("unitSelect").addEventListener("change", 
+function () {
+hhh\createdevided.html:298:                    if (selectedUnit) {
+hhh\createdevided.html:301:                    } else {
+hhh\createdevided.html:304:                    }
+hhh\createdevided.html:305:                });
+hhh\createdevided.html:320:                checkbox.addEventListener('change', function() {
+hhh\createdevided.html:322:                });
+hhh\createdevided.html:365:                            <select class="form-select border-type" 
+name="earthBorders[0].BorderType" style="display:none;">
+hhh\createdevided.html:378:                        <input type="text" class="form-control" 
+name="earthBorders[0].BorderDescription" />
+hhh\createdevided.html:381:                        <input type="hidden" name="earthBorders[3].IdenticalOrDifferent" 
+value="0" />
+hhh\createdevided.html:383:                            name="earthBorders[3].IdenticalOrDifferent" value="1" />
+hhh\createdevided.html:387:                        <input type="text" class="form-control" 
+name="earthBorders[0].Difference" />
+hhh\createdevided.html:400:                            <select class="form-select border-type" 
+name="earthBorders[1].BorderType" style="display:none;">
+hhh\createdevided.html:413:                        <input type="text" class="form-control" 
+name="earthBorders[1].BorderDescription" />
+hhh\createdevided.html:416:                        <input type="hidden" name="earthBorders[3].IdenticalOrDifferent" 
+value="0" />
+hhh\createdevided.html:418:                            name="earthBorders[3].IdenticalOrDifferent" value="1" />
+hhh\createdevided.html:423:                        <input type="text" class="form-control" 
+name="earthBorders[1].Difference" />
+hhh\createdevided.html:436:                            <select class="form-select border-type" 
+name="earthBorders[2].BorderType" style="display:none;">
+hhh\createdevided.html:448:                        <input type="text" class="form-control" 
+name="earthBorders[2].BorderDescription" />
+hhh\createdevided.html:451:                        <input type="hidden" name="earthBorders[3].IdenticalOrDifferent" 
+value="0" />
+hhh\createdevided.html:453:                            name="earthBorders[3].IdenticalOrDifferent" value="1" />
+hhh\createdevided.html:458:        <input type="text" class="form-control" name="earthBorders[0].Difference" 
+readonly />
+hhh\createdevided.html:471:                            <select class="form-select border-type" 
+name="earthBorders[3].BorderType" style="display:none;">
+hhh\createdevided.html:482:                        <input type="text" class="form-control" 
+name="earthBorders[3].BorderDescription" />
+hhh\createdevided.html:485:                        <input type="hidden" name="earthBorders[3].IdenticalOrDifferent" 
+value="0" />
+hhh\createdevided.html:487:                            name="earthBorders[3].IdenticalOrDifferent" value="1" />
+hhh\createdevided.html:492:                        <input type="text" class="form-control" 
+name="earthBorders[3].Difference" />
+hhh\createdevided.html:606:document.addEventListener('DOMContentLoaded', function() {
+hhh\createdevided.html:612:    select.addEventListener('change', function() {
+hhh\createdevided.html:625:        rahaqSection.querySelectorAll('input[type="text"]').forEach(input => 
+input.disabled = false);
+hhh\createdevided.html:626:        rahaqSection.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
+hhh\createdevided.html:627:            const inputField = 
+checkbox.closest('tr').querySelector('input[type="text"]');
+hhh\createdevided.html:629:        });
+hhh\createdevided.html:630:    });
+hhh\createdevided.html:633:    rahaqSection.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
+hhh\createdevided.html:634:        const inputField = checkbox.closest('tr').querySelector('input[type="text"]');
+hhh\createdevided.html:635:        checkbox.addEventListener('change', function() {
+hhh\createdevided.html:638:        });
+hhh\createdevided.html:639:    });
+hhh\createdevided.html:643:    addBuildingBtn.addEventListener('click', function() {
+hhh\createdevided.html:652:    });
+hhh\createdevided.html:653:});
+hhh\createdevided.html:671:        في حال ذكرت الوثيقة [من اعلى - من اسفل] قم بالضغط على المربع والكتابة في الخانة 
+المخصصة
+hhh\createdevided.html:703:    .larger-checkbox {
+hhh\createdevided.html:708:    }
+hhh\createdevided.html:712:    #earthBordersTable2 th {
+hhh\createdevided.html:715:    }
+hhh\createdevided.html:718:    input[disabled] {
+hhh\createdevided.html:721:    }
+hhh\createdevided.html:724:    document.addEventListener('DOMContentLoaded', function() {
+hhh\createdevided.html:728:        select.addEventListener('change', function() {
+hhh\createdevided.html:731:        });
+hhh\createdevided.html:732:    });
+hhh\createdevided.html:735:    document.addEventListener('DOMContentLoaded', function () {
+hhh\createdevided.html:742:        chkUp.addEventListener('change', function () {
+hhh\createdevided.html:745:        });
+hhh\createdevided.html:747:        chkDown.addEventListener('change', function () {
+hhh\createdevided.html:750:        });
+hhh\createdevided.html:751:    });
+hhh\createdevided.html:861:            <input type="file" class="form-control me-2" name="fileAttach[]" />
+hhh\createdevided.html:875:    document.addEventListener('DOMContentLoaded', function() {
+hhh\createdevided.html:879:    addBtn.addEventListener('click', function() {
+hhh\createdevided.html:883:            <input type="file" class="form-control me-2" name="fileAttach[]" />
+hhh\createdevided.html:889:        newRow.querySelector('.remove-attachment').addEventListener('click', function() {
+hhh\createdevided.html:891:        });
+hhh\createdevided.html:892:    });
+hhh\createdevided.html:895:    wrapper.querySelectorAll('.remove-attachment').forEach(btn => {
+hhh\createdevided.html:896:        btn.addEventListener('click', function() {
+hhh\createdevided.html:898:        });
+hhh\createdevided.html:899:    });
+hhh\createdevided.html:900:});
+hhh\createdevided.html:918:.custom-input-container {
+hhh\createdevided.html:921:}
+hhh\createdevided.html:925:.custom-input-container select {
+hhh\createdevided.html:935:}
+hhh\createdevided.html:937:.custom-input-container label {
+hhh\createdevided.html:947:}
+hhh\createdevided.html:954:.custom-input-container select:not([value=""]) + label {
+hhh\createdevided.html:958:}
+hhh\createdevided.html:960:.custom-input-container textarea {
+hhh\createdevided.html:963:}
+hhh\createdevided.html:966:.input-with-button {
+hhh\createdevided.html:969:}
+hhh\createdevided.html:971:.input-with-button input {
+hhh\createdevided.html:974:}
+hhh\createdevided.html:976:.input-with-button button {
+hhh\createdevided.html:978:}
+hhh\createdevided.html:982:document.addEventListener('DOMContentLoaded', function() {
+hhh\createdevided.html:983:    function setupNameAdder(txtId, listId, countId, btnId) {
+hhh\createdevided.html:989:        let names = [];
+hhh\createdevided.html:991:        addBtn.addEventListener('click', function() {
+hhh\createdevided.html:993:            if(name) {
+hhh\createdevided.html:998:            }
+hhh\createdevided.html:999:        });
+hhh\createdevided.html:1000:    }
+hhh\createdevided.html:1004:});
+hhh\createform.html:11:    body {
+hhh\createform.html:16:    }
+hhh\createform.html:19:    .custom-input-container {
+hhh\createform.html:22:  }
+hhh\createform.html:25:      .custom-input-container select {
+hhh\createform.html:33:      }
+hhh\createform.html:36:          .custom-input-container select:focus {
+hhh\createform.html:40:          }
+hhh\createform.html:42:      .custom-input-container label {
+hhh\createform.html:51:      }
+hhh\createform.html:56:      .custom-input-container select:not([value=""]) + label {
+hhh\createform.html:61:      }
+hhh\createform.html:63:  .dropdown-menu {
+hhh\createform.html:65:  }
+hhh\createform.html:72:.input-with-button {
+hhh\createform.html:75:}
+hhh\createform.html:77:.input-with-button input {  
+hhh\createform.html:80:}
+hhh\createform.html:82:.input-with-button button {
+hhh\createform.html:84:}
+hhh\createform.html:87:    #cv-preview {
+hhh\createform.html:93:    }
+hhh\createform.html:94:    #cv-preview h2 {
+hhh\createform.html:99:    }
+hhh\createform.html:100:    .info p { margin: 0; line-height: 1.8; }
+hhh\createform.html:101:    .item-box-preview {
+hhh\createform.html:107:    }
+hhh\createform.html:335:                document.getElementById("unitSelect").addEventListener("change", function 
+() {
+hhh\createform.html:340:                    if (selectedUnit) {
+hhh\createform.html:343:                    } else {
+hhh\createform.html:346:                    }
+hhh\createform.html:347:                });
+hhh\createform.html:362:                checkbox.addEventListener('change', function() {
+hhh\createform.html:364:                });
+hhh\createform.html:407:                            <select class="form-select border-type" 
+name="earthBorders[0].BorderType" style="display:none;">
+hhh\createform.html:420:                        <input type="text" class="form-control" 
+name="earthBorders[0].BorderDescription" />
+hhh\createform.html:423:                        <input type="hidden" name="earthBorders[3].IdenticalOrDifferent" 
+value="0" />
+hhh\createform.html:425:                            name="earthBorders[3].IdenticalOrDifferent" value="1" />
+hhh\createform.html:429:                        <input type="text" class="form-control" 
+name="earthBorders[0].Difference" />
+hhh\createform.html:442:                            <select class="form-select border-type" 
+name="earthBorders[1].BorderType" style="display:none;">
+hhh\createform.html:455:                        <input type="text" class="form-control" 
+name="earthBorders[1].BorderDescription" />
+hhh\createform.html:458:                        <input type="hidden" name="earthBorders[3].IdenticalOrDifferent" 
+value="0" />
+hhh\createform.html:460:                            name="earthBorders[3].IdenticalOrDifferent" value="1" />
+hhh\createform.html:465:                        <input type="text" class="form-control" 
+name="earthBorders[1].Difference" />
+hhh\createform.html:478:                            <select class="form-select border-type" 
+name="earthBorders[2].BorderType" style="display:none;">
+hhh\createform.html:490:                        <input type="text" class="form-control" 
+name="earthBorders[2].BorderDescription" />
+hhh\createform.html:493:                        <input type="hidden" name="earthBorders[3].IdenticalOrDifferent" 
+value="0" />
+hhh\createform.html:495:                            name="earthBorders[3].IdenticalOrDifferent" value="1" />
+hhh\createform.html:500:        <input type="text" class="form-control" name="earthBorders[0].Difference" readonly 
+/>
+hhh\createform.html:513:                            <select class="form-select border-type" 
+name="earthBorders[3].BorderType" style="display:none;">
+hhh\createform.html:524:                        <input type="text" class="form-control" 
+name="earthBorders[3].BorderDescription" />
+hhh\createform.html:527:                        <input type="hidden" name="earthBorders[3].IdenticalOrDifferent" 
+value="0" />
+hhh\createform.html:529:                            name="earthBorders[3].IdenticalOrDifferent" value="1" />
+hhh\createform.html:534:                        <input type="text" class="form-control" 
+name="earthBorders[3].Difference" />
+hhh\createform.html:648:document.addEventListener('DOMContentLoaded', function() {
+hhh\createform.html:654:    select.addEventListener('change', function() {
+hhh\createform.html:667:        rahaqSection.querySelectorAll('input[type="text"]').forEach(input => input.disabled 
+= false);
+hhh\createform.html:668:        rahaqSection.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
+hhh\createform.html:669:            const inputField = checkbox.closest('tr').querySelector('input[type="text"]');
+hhh\createform.html:671:        });
+hhh\createform.html:672:    });
+hhh\createform.html:675:    rahaqSection.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
+hhh\createform.html:676:        const inputField = checkbox.closest('tr').querySelector('input[type="text"]');
+hhh\createform.html:677:        checkbox.addEventListener('change', function() {
+hhh\createform.html:680:        });
+hhh\createform.html:681:    });
+hhh\createform.html:685:    addBuildingBtn.addEventListener('click', function() {
+hhh\createform.html:694:    });
+hhh\createform.html:695:});
+hhh\createform.html:713:        في حال ذكرت الوثيقة [من اعلى - من اسفل] قم بالضغط على المربع والكتابة في الخانة 
+المخصصة
+hhh\createform.html:745:    .larger-checkbox {
+hhh\createform.html:750:    }
+hhh\createform.html:754:    #earthBordersTable2 th {
+hhh\createform.html:757:    }
+hhh\createform.html:760:    input[disabled] {
+hhh\createform.html:763:    }
+hhh\createform.html:766:    document.addEventListener('DOMContentLoaded', function() {
+hhh\createform.html:770:        select.addEventListener('change', function() {
+hhh\createform.html:773:        });
+hhh\createform.html:774:    });
+hhh\createform.html:777:    document.addEventListener('DOMContentLoaded', function () {
+hhh\createform.html:784:        chkUp.addEventListener('change', function () {
+hhh\createform.html:787:        });
+hhh\createform.html:789:        chkDown.addEventListener('change', function () {
+hhh\createform.html:792:        });
+hhh\createform.html:793:    });
+hhh\createform.html:903:            <input type="file" class="form-control me-2" name="fileAttach[]" />
+hhh\createform.html:917:    document.addEventListener('DOMContentLoaded', function() {
+hhh\createform.html:921:    addBtn.addEventListener('click', function() {
+hhh\createform.html:925:            <input type="file" class="form-control me-2" name="fileAttach[]" />
+hhh\createform.html:931:        newRow.querySelector('.remove-attachment').addEventListener('click', function() {
+hhh\createform.html:933:        });
+hhh\createform.html:934:    });
+hhh\createform.html:937:    wrapper.querySelectorAll('.remove-attachment').forEach(btn => {
+hhh\createform.html:938:        btn.addEventListener('click', function() {
+hhh\createform.html:940:        });
+hhh\createform.html:941:    });
+hhh\createform.html:942:});
+hhh\createform.html:1268:document.addEventListener('DOMContentLoaded', function() {
+hhh\createform.html:1269:    function setupNameAdder(txtId, listId, countId, btnId) {
+hhh\createform.html:1275:        let names = [];
+hhh\createform.html:1277:        addBtn.addEventListener('click', function() {
+hhh\createform.html:1279:            if(name) {
+hhh\createform.html:1284:            }
+hhh\createform.html:1285:        });
+hhh\createform.html:1286:    }
+hhh\createform.html:1290:});
+hhh\createorder.html:11:    body {
+hhh\createorder.html:16:    }
+hhh\createorder.html:17:    .section-header {
+hhh\createorder.html:27:    }
+hhh\createorder.html:28:    .section-header:hover { background-color: #0b5ed7; }
+hhh\createorder.html:29:    .section-content {
+hhh\createorder.html:37:    }
+hhh\createorder.html:38:    .add-btn { margin-top: 10px; }
+hhh\createorder.html:39:    .item-box {
+hhh\createorder.html:46:    }
+hhh\createorder.html:47:    .action-btns {
+hhh\createorder.html:51:    }
+hhh\createorder.html:52:    .action-btns button { margin-left: 5px; }
+hhh\createorder.html:55:    #cv-preview {
+hhh\createorder.html:61:    }
+hhh\createorder.html:62:    #cv-preview h2 {
+hhh\createorder.html:67:    }
+hhh\createorder.html:68:    .info p { margin: 0; line-height: 1.8; }
+hhh\createorder.html:69:    .item-box-preview {
+hhh\createorder.html:75:    }
+hhh\createorder.html:292:                document.getElementById("unitSelect").addEventListener("change", function 
+() {
+hhh\createorder.html:297:                    if (selectedUnit) {
+hhh\createorder.html:300:                    } else {
+hhh\createorder.html:303:                    }
+hhh\createorder.html:304:                });
+hhh\createorder.html:319:                checkbox.addEventListener('change', function() {
+hhh\createorder.html:321:                });
+hhh\createorder.html:364:                            <select class="form-select border-type" 
+name="earthBorders[0].BorderType" style="display:none;">
+hhh\createorder.html:377:                        <input type="text" class="form-control" 
+name="earthBorders[0].BorderDescription" />
+hhh\createorder.html:380:                        <input type="hidden" name="earthBorders[3].IdenticalOrDifferent" 
+value="0" />
+hhh\createorder.html:382:                            name="earthBorders[3].IdenticalOrDifferent" value="1" />
+hhh\createorder.html:386:                        <input type="text" class="form-control" 
+name="earthBorders[0].Difference" />
+hhh\createorder.html:399:                            <select class="form-select border-type" 
+name="earthBorders[1].BorderType" style="display:none;">
+hhh\createorder.html:412:                        <input type="text" class="form-control" 
+name="earthBorders[1].BorderDescription" />
+hhh\createorder.html:415:                        <input type="hidden" name="earthBorders[3].IdenticalOrDifferent" 
+value="0" />
+hhh\createorder.html:417:                            name="earthBorders[3].IdenticalOrDifferent" value="1" />
+hhh\createorder.html:422:                        <input type="text" class="form-control" 
+name="earthBorders[1].Difference" />
+hhh\createorder.html:435:                            <select class="form-select border-type" 
+name="earthBorders[2].BorderType" style="display:none;">
+hhh\createorder.html:447:                        <input type="text" class="form-control" 
+name="earthBorders[2].BorderDescription" />
+hhh\createorder.html:450:                        <input type="hidden" name="earthBorders[3].IdenticalOrDifferent" 
+value="0" />
+hhh\createorder.html:452:                            name="earthBorders[3].IdenticalOrDifferent" value="1" />
+hhh\createorder.html:457:        <input type="text" class="form-control" name="earthBorders[0].Difference" readonly 
+/>
+hhh\createorder.html:470:                            <select class="form-select border-type" 
+name="earthBorders[3].BorderType" style="display:none;">
+hhh\createorder.html:481:                        <input type="text" class="form-control" 
+name="earthBorders[3].BorderDescription" />
+hhh\createorder.html:484:                        <input type="hidden" name="earthBorders[3].IdenticalOrDifferent" 
+value="0" />
+hhh\createorder.html:486:                            name="earthBorders[3].IdenticalOrDifferent" value="1" />
+hhh\createorder.html:491:                        <input type="text" class="form-control" 
+name="earthBorders[3].Difference" />
+hhh\createorder.html:605:document.addEventListener('DOMContentLoaded', function() {
+hhh\createorder.html:611:    select.addEventListener('change', function() {
+hhh\createorder.html:624:        rahaqSection.querySelectorAll('input[type="text"]').forEach(input => 
+input.disabled = false);
+hhh\createorder.html:625:        rahaqSection.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
+hhh\createorder.html:626:            const inputField = checkbox.closest('tr').querySelector('input[type="text"]');
+hhh\createorder.html:628:        });
+hhh\createorder.html:629:    });
+hhh\createorder.html:632:    rahaqSection.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
+hhh\createorder.html:633:        const inputField = checkbox.closest('tr').querySelector('input[type="text"]');
+hhh\createorder.html:634:        checkbox.addEventListener('change', function() {
+hhh\createorder.html:637:        });
+hhh\createorder.html:638:    });
+hhh\createorder.html:642:    addBuildingBtn.addEventListener('click', function() {
+hhh\createorder.html:651:    });
+hhh\createorder.html:652:});
+hhh\createorder.html:670:        في حال ذكرت الوثيقة [من اعلى - من اسفل] قم بالضغط على المربع والكتابة في الخانة 
+المخصصة
+hhh\createorder.html:702:    .larger-checkbox {
+hhh\createorder.html:707:    }
+hhh\createorder.html:711:    #earthBordersTable2 th {
+hhh\createorder.html:714:    }
+hhh\createorder.html:717:    input[disabled] {
+hhh\createorder.html:720:    }
+hhh\createorder.html:723:    document.addEventListener('DOMContentLoaded', function() {
+hhh\createorder.html:727:        select.addEventListener('change', function() {
+hhh\createorder.html:730:        });
+hhh\createorder.html:731:    });
+hhh\createorder.html:734:    document.addEventListener('DOMContentLoaded', function () {
+hhh\createorder.html:741:        chkUp.addEventListener('change', function () {
+hhh\createorder.html:744:        });
+hhh\createorder.html:746:        chkDown.addEventListener('change', function () {
+hhh\createorder.html:749:        });
+hhh\createorder.html:750:    });
+hhh\createorder.html:860:            <input type="file" class="form-control me-2" name="fileAttach[]" />
+hhh\createorder.html:874:    document.addEventListener('DOMContentLoaded', function() {
+hhh\createorder.html:878:    addBtn.addEventListener('click', function() {
+hhh\createorder.html:882:            <input type="file" class="form-control me-2" name="fileAttach[]" />
+hhh\createorder.html:888:        newRow.querySelector('.remove-attachment').addEventListener('click', function() {
+hhh\createorder.html:890:        });
+hhh\createorder.html:891:    });
+hhh\createorder.html:894:    wrapper.querySelectorAll('.remove-attachment').forEach(btn => {
+hhh\createorder.html:895:        btn.addEventListener('click', function() {
+hhh\createorder.html:897:        });
+hhh\createorder.html:898:    });
+hhh\createorder.html:899:});
+hhh\createspece.html:11:    body {
+hhh\createspece.html:16:    }
+hhh\createspece.html:17:    .section-header {
+hhh\createspece.html:27:    }
+hhh\createspece.html:28:    .section-header:hover { background-color: #0b5ed7; }
+hhh\createspece.html:29:    .section-content {
+hhh\createspece.html:37:    }
+hhh\createspece.html:38:    .add-btn { margin-top: 10px; }
+hhh\createspece.html:39:    .item-box {
+hhh\createspece.html:46:    }
+hhh\createspece.html:47:    .action-btns {
+hhh\createspece.html:51:    }
+hhh\createspece.html:52:    .action-btns button { margin-left: 5px; }
+hhh\createspece.html:55:    #cv-preview {
+hhh\createspece.html:61:    }
+hhh\createspece.html:62:    #cv-preview h2 {
+hhh\createspece.html:67:    }
+hhh\createspece.html:68:    .info p { margin: 0; line-height: 1.8; }
+hhh\createspece.html:69:    .item-box-preview {
+hhh\createspece.html:75:    }
+hhh\createspece.html:112:document.addEventListener('DOMContentLoaded', function() {
+hhh\createspece.html:118:    select.addEventListener('change', function() {
+hhh\createspece.html:131:        rahaqSection.querySelectorAll('input[type="text"]').forEach(input => 
+input.disabled = false);
+hhh\createspece.html:132:        rahaqSection.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
+hhh\createspece.html:133:            const inputField = checkbox.closest('tr').querySelector('input[type="text"]');
+hhh\createspece.html:135:        });
+hhh\createspece.html:136:    });
+hhh\createspece.html:139:    rahaqSection.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
+hhh\createspece.html:140:        const inputField = checkbox.closest('tr').querySelector('input[type="text"]');
+hhh\createspece.html:141:        checkbox.addEventListener('change', function() {
+hhh\createspece.html:144:        });
+hhh\createspece.html:145:    });
+hhh\createspece.html:149:    addBuildingBtn.addEventListener('click', function() {
+hhh\createspece.html:158:    });
+hhh\createspece.html:159:});
+hhh\createspece.html:173:    .larger-checkbox {
+hhh\createspece.html:178:    }
+hhh\createspece.html:182:    #earthBordersTable2 th {
+hhh\createspece.html:185:    }
+hhh\createspece.html:188:    input[disabled] {
+hhh\createspece.html:191:    }
+hhh\createspece.html:194:    document.addEventListener('DOMContentLoaded', function() {
+hhh\createspece.html:198:        select.addEventListener('change', function() {
+hhh\createspece.html:201:        });
+hhh\createspece.html:202:    });
+hhh\createspece.html:205:    document.addEventListener('DOMContentLoaded', function () {
+hhh\createspece.html:212:        chkUp.addEventListener('change', function () {
+hhh\createspece.html:215:        });
+hhh\createspece.html:217:        chkDown.addEventListener('change', function () {
+hhh\createspece.html:220:        });
+hhh\createspece.html:221:    });
+hhh\createspece.html:252:            <input type="file" class="form-control me-2" name="fileAttach[]" />
+hhh\createspece.html:275:.custom-input-container {
+hhh\createspece.html:278:}
+hhh\createspece.html:282:.custom-input-container select {
+hhh\createspece.html:292:}
+hhh\createspece.html:294:.custom-input-container label {
+hhh\createspece.html:304:}
+hhh\createspece.html:311:.custom-input-container select:not([value=""]) + label {
+hhh\createspece.html:315:}
+hhh\createspece.html:317:.custom-input-container textarea {
+hhh\createspece.html:320:}
+hhh\createspece.html:323:.input-with-button {
+hhh\createspece.html:326:}
+hhh\createspece.html:328:.input-with-button input {
+hhh\createspece.html:331:}
+hhh\createspece.html:333:.input-with-button button {
+hhh\createspece.html:335:}
+hhh\createspece.html:339:document.addEventListener('DOMContentLoaded', function() {
+hhh\createspece.html:340:    function setupNameAdder(txtId, listId, countId, btnId) {
+hhh\createspece.html:346:        let names = [];
+hhh\createspece.html:348:        addBtn.addEventListener('click', function() {
+hhh\createspece.html:350:            if(name) {
+hhh\createspece.html:355:            }
+hhh\createspece.html:356:        });
+hhh\createspece.html:357:    }
+hhh\createspece.html:361:});
+hhh\creatform.html:11:    body {
+hhh\creatform.html:16:    }
+hhh\creatform.html:17:    .section-header {
+hhh\creatform.html:27:    }
+hhh\creatform.html:28:    .section-header:hover { background-color: #0b5ed7; }
+hhh\creatform.html:29:    .section-content {
+hhh\creatform.html:37:    }
+hhh\creatform.html:38:    .add-btn { margin-top: 10px; }
+hhh\creatform.html:39:    .item-box {
+hhh\creatform.html:46:    }
+hhh\creatform.html:47:    .action-btns {
+hhh\creatform.html:51:    }
+hhh\creatform.html:52:    .action-btns button { margin-left: 5px; }
+hhh\creatform.html:55:    #cv-preview {
+hhh\creatform.html:61:    }
+hhh\creatform.html:62:    #cv-preview h2 {
+hhh\creatform.html:67:    }
+hhh\creatform.html:68:    .info p { margin: 0; line-height: 1.8; }
+hhh\creatform.html:69:    .item-box-preview {
+hhh\creatform.html:75:    }
+hhh\creatform.html:284:                document.getElementById("unitSelect").addEventListener("change", function () 
+{
+hhh\creatform.html:289:                    if (selectedUnit) {
+hhh\creatform.html:292:                    } else {
+hhh\creatform.html:295:                    }
+hhh\creatform.html:296:                });
+hhh\creatform.html:311:                checkbox.addEventListener('change', function() {
+hhh\creatform.html:313:                });
+hhh\creatform.html:356:                            <select class="form-select border-type" 
+name="earthBorders[0].BorderType" style="display:none;">
+hhh\creatform.html:369:                        <input type="text" class="form-control" 
+name="earthBorders[0].BorderDescription" />
+hhh\creatform.html:372:                        <input type="hidden" name="earthBorders[3].IdenticalOrDifferent" 
+value="0" />
+hhh\creatform.html:374:                            name="earthBorders[3].IdenticalOrDifferent" value="1" />
+hhh\creatform.html:378:                        <input type="text" class="form-control" 
+name="earthBorders[0].Difference" />
+hhh\creatform.html:391:                            <select class="form-select border-type" 
+name="earthBorders[1].BorderType" style="display:none;">
+hhh\creatform.html:404:                        <input type="text" class="form-control" 
+name="earthBorders[1].BorderDescription" />
+hhh\creatform.html:407:                        <input type="hidden" name="earthBorders[3].IdenticalOrDifferent" 
+value="0" />
+hhh\creatform.html:409:                            name="earthBorders[3].IdenticalOrDifferent" value="1" />
+hhh\creatform.html:414:                        <input type="text" class="form-control" 
+name="earthBorders[1].Difference" />
+hhh\creatform.html:427:                            <select class="form-select border-type" 
+name="earthBorders[2].BorderType" style="display:none;">
+hhh\creatform.html:439:                        <input type="text" class="form-control" 
+name="earthBorders[2].BorderDescription" />
+hhh\creatform.html:442:                        <input type="hidden" name="earthBorders[3].IdenticalOrDifferent" 
+value="0" />
+hhh\creatform.html:444:                            name="earthBorders[3].IdenticalOrDifferent" value="1" />
+hhh\creatform.html:449:        <input type="text" class="form-control" name="earthBorders[0].Difference" readonly />
+hhh\creatform.html:462:                            <select class="form-select border-type" 
+name="earthBorders[3].BorderType" style="display:none;">
+hhh\creatform.html:473:                        <input type="text" class="form-control" 
+name="earthBorders[3].BorderDescription" />
+hhh\creatform.html:476:                        <input type="hidden" name="earthBorders[3].IdenticalOrDifferent" 
+value="0" />
+hhh\creatform.html:478:                            name="earthBorders[3].IdenticalOrDifferent" value="1" />
+hhh\creatform.html:483:                        <input type="text" class="form-control" 
+name="earthBorders[3].Difference" />
+hhh\creatform.html:597:document.addEventListener('DOMContentLoaded', function() {
+hhh\creatform.html:603:    select.addEventListener('change', function() {
+hhh\creatform.html:616:        rahaqSection.querySelectorAll('input[type="text"]').forEach(input => input.disabled 
+= false);
+hhh\creatform.html:617:        rahaqSection.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
+hhh\creatform.html:618:            const inputField = checkbox.closest('tr').querySelector('input[type="text"]');
+hhh\creatform.html:620:        });
+hhh\creatform.html:621:    });
+hhh\creatform.html:624:    rahaqSection.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
+hhh\creatform.html:625:        const inputField = checkbox.closest('tr').querySelector('input[type="text"]');
+hhh\creatform.html:626:        checkbox.addEventListener('change', function() {
+hhh\creatform.html:629:        });
+hhh\creatform.html:630:    });
+hhh\creatform.html:634:    addBuildingBtn.addEventListener('click', function() {
+hhh\creatform.html:643:    });
+hhh\creatform.html:644:});
+hhh\creatform.html:662:        في حال ذكرت الوثيقة [من اعلى - من اسفل] قم بالضغط على المربع والكتابة في الخانة 
+المخصصة
+hhh\creatform.html:694:    .larger-checkbox {
+hhh\creatform.html:699:    }
+hhh\creatform.html:703:    #earthBordersTable2 th {
+hhh\creatform.html:706:    }
+hhh\creatform.html:709:    input[disabled] {
+hhh\creatform.html:712:    }
+hhh\creatform.html:715:    document.addEventListener('DOMContentLoaded', function() {
+hhh\creatform.html:719:        select.addEventListener('change', function() {
+hhh\creatform.html:722:        });
+hhh\creatform.html:723:    });
+hhh\creatform.html:726:    document.addEventListener('DOMContentLoaded', function () {
+hhh\creatform.html:733:        chkUp.addEventListener('change', function () {
+hhh\creatform.html:736:        });
+hhh\creatform.html:738:        chkDown.addEventListener('change', function () {
+hhh\creatform.html:741:        });
+hhh\creatform.html:742:    });
+hhh\creatform.html:852:            <input type="file" class="form-control me-2" name="fileAttach[]" />
+hhh\creatform.html:866:    document.addEventListener('DOMContentLoaded', function() {
+hhh\creatform.html:870:    addBtn.addEventListener('click', function() {
+hhh\creatform.html:874:            <input type="file" class="form-control me-2" name="fileAttach[]" />
+hhh\creatform.html:880:        newRow.querySelector('.remove-attachment').addEventListener('click', function() {
+hhh\creatform.html:882:        });
+hhh\creatform.html:883:    });
+hhh\creatform.html:886:    wrapper.querySelectorAll('.remove-attachment').forEach(btn => {
+hhh\creatform.html:887:        btn.addEventListener('click', function() {
+hhh\creatform.html:889:        });
+hhh\creatform.html:890:    });
+hhh\creatform.html:891:});
+hhh\creatform.html:1215:.custom-input-container {
+hhh\creatform.html:1218:}
+hhh\creatform.html:1222:.custom-input-container select {
+hhh\creatform.html:1232:}
+hhh\creatform.html:1234:.custom-input-container label {
+hhh\creatform.html:1244:}
+hhh\creatform.html:1251:.custom-input-container select:not([value=""]) + label {
+hhh\creatform.html:1255:}
+hhh\creatform.html:1257:.custom-input-container textarea {
+hhh\creatform.html:1260:}
+hhh\creatform.html:1263:.input-with-button {
+hhh\creatform.html:1266:}
+hhh\creatform.html:1268:.input-with-button input {
+hhh\creatform.html:1271:}
+hhh\creatform.html:1273:.input-with-button button {
+hhh\creatform.html:1275:}
+hhh\creatform.html:1279:document.addEventListener('DOMContentLoaded', function() {
+hhh\creatform.html:1280:    function setupNameAdder(txtId, listId, countId, btnId) {
+hhh\creatform.html:1286:        let names = [];
+hhh\creatform.html:1288:        addBtn.addEventListener('click', function() {
+hhh\creatform.html:1290:            if(name) {
+hhh\creatform.html:1295:            }
+hhh\creatform.html:1296:        });
+hhh\creatform.html:1297:    }
+hhh\creatform.html:1301:});
+hhh\devid.html:315:.custom-input-container {
+hhh\devid.html:318:}
+hhh\devid.html:322:.custom-input-container select {
+hhh\devid.html:332:}
+hhh\devid.html:334:.custom-input-container label {
+hhh\devid.html:344:}
+hhh\devid.html:351:.custom-input-container select:not([value=""]) + label {
+hhh\devid.html:355:}
+hhh\devid.html:357:.custom-input-container textarea {
+hhh\devid.html:360:}
+hhh\devid.html:363:.input-with-button {
+hhh\devid.html:366:}
+hhh\devid.html:368:.input-with-button input {
+hhh\devid.html:371:}
+hhh\devid.html:373:.input-with-button button {
+hhh\devid.html:375:}
+hhh\devid.html:379:document.addEventListener('DOMContentLoaded', function() {
+hhh\devid.html:380:    function setupNameAdder(txtId, listId, countId, btnId) {
+hhh\devid.html:386:        let names = [];
+hhh\devid.html:388:        addBtn.addEventListener('click', function() {
+hhh\devid.html:390:            if(name) {
+hhh\devid.html:395:            }
+hhh\devid.html:396:        });
+hhh\devid.html:397:    }
+hhh\devid.html:401:});
+hhh\index.html:11:    body {
+hhh\index.html:16:    }
+hhh\index.html:17:    .section-header {
+hhh\index.html:27:    }
+hhh\index.html:28:    .section-header:hover { background-color: #0b5ed7; }
+hhh\index.html:29:    .section-content {
+hhh\index.html:37:    }
+hhh\index.html:38:    .add-btn { margin-top: 10px; }
+hhh\index.html:39:    .item-box {
+hhh\index.html:46:    }
+hhh\index.html:47:    .action-btns {
+hhh\index.html:51:    }
+hhh\index.html:52:    .action-btns button { margin-left: 5px; }
+hhh\index.html:55:    #cv-preview {
+hhh\index.html:61:    }
+hhh\index.html:62:    #cv-preview h2 {
+hhh\index.html:67:    }
+hhh\index.html:68:    .info p { margin: 0; line-height: 1.8; }
+hhh\index.html:69:    .item-box-preview {
+hhh\index.html:75:    }
+hhh\index.html:144:            function toggleExpTo() {
+hhh\index.html:149:                if (checkbox.checked) {
+hhh\index.html:152:                } else {
+hhh\index.html:154:                }
+hhh\index.html:155:            }
+hhh\index.html:176:            function addTaskField() {
+hhh\index.html:189:            }
+hhh\index.html:191:            function removeTaskField(button) {
+hhh\index.html:193:            }
+hhh\index.html:373:function addManagerRow() {
+hhh\index.html:392:}
+hhh\index.html:393:function toggleMotherLanguage() {
+hhh\index.html:397:}
+hhh\index.html:399:function addLanguage() {
+hhh\index.html:409:        <input class="form-check-input" type="checkbox" id="${id}">
+hhh\index.html:410:        <label class="form-check-label fw-bold" for="${id}">${langName}</label>
+hhh\index.html:417:}
+hhh\index.html:423:function editManagerRow(btn) {
+hhh\index.html:429:    row.find('td.editable').off('blur').on('blur', function () {
+hhh\index.html:432:    });
+hhh\index.html:433:}
+hhh\index.html:435:function deleteManagerRow(btn) {
+hhh\index.html:438:}
+hhh\index.html:440:function showMessage(msg) {
+hhh\index.html:444:}
+hhh\index.html:446:function toggleSection(id) {
+hhh\index.html:448:    sections.forEach(sec => {
+hhh\index.html:451:    });
+hhh\index.html:452:}
+hhh\index.html:454:function createItemBox(content, editCallback) {
+hhh\index.html:457:            <div>${content}</div>
+hhh\index.html:467:}
+hhh\index.html:469:function addSkill() {
+hhh\index.html:472:    const content = `<strong>${name}</strong> (${field})<br><small>${from} - 
+${to}</small><br>${desc}`;
+hhh\index.html:473:    const box = createItemBox(content, () => {
+hhh\index.html:477:    });
+hhh\index.html:479:}
+hhh\index.html:481:function addExperience() {
+hhh\index.html:484:    const content = `<strong>${title}</strong> - ${company}<br><small>${field} (${from} - 
+${to})</small><br>${tasks}`;
+hhh\index.html:485:    const box = createItemBox(content, () => {
+hhh\index.html:489:    });
+hhh\index.html:491:}
+hhh\index.html:493:function addEducation() {
+hhh\index.html:500:    const content = `<strong>${degree} - ${major}</strong> - ${univ}, 
+${country}<br><small>${dept} | سنة ${year}</small><br>التقدير: ${grade}`;
+hhh\index.html:501:    const box = createItemBox(content, () => {
+hhh\index.html:506:    });
+hhh\index.html:508:}
+hhh\index.html:510:function addCert() {
+hhh\index.html:520:        <strong>${name}</strong> - ${org}<br>
+hhh\index.html:521:        <small>${type} | ${field} | ${dept}</small>
+hhh\index.html:524:    const box = createItemBox(content, () => {
+hhh\index.html:531:    });
+hhh\index.html:535:}
+hhh\index.html:537:function addProject() {
+hhh\index.html:540:    const content = `<strong>${name}</strong> - ${company}<br><small>${field} (${from} - 
+${to})</small><br>القيمة: ${value} | الدور: ${role}`;
+hhh\index.html:541:    const box = createItemBox(content, () => {
+hhh\index.html:546:    });
+hhh\index.html:548:}
+hhh\index.html:551:function generateCV() {
+hhh\index.html:558:    const gender = $('input[placeholder="الجنس"]').val();
+hhh\index.html:559:    const nationality = $('input[placeholder="الجنسية"]').val();
+hhh\index.html:560:    const status = $('input[placeholder="الحالة الاجتماعية"]').val();
+hhh\index.html:561:    const birth = $('input[placeholder="تاريخ الميلاد"]').val();
+hhh\index.html:562:    const email = $('input[placeholder="البريد الإلكتروني"]').val();
+hhh\index.html:563:    const phone = $('input[placeholder="رقم الجوال"]').val();
+hhh\index.html:564:    const relative = $('input[placeholder="رقم جوال أحد الأقارب"]').val();
+hhh\index.html:571:                <p><strong>الجنس:</strong> ${gender || '-'} </p>
+hhh\index.html:572:                <p><strong>الجنسية:</strong> ${nationality || '-'} </p>
+hhh\index.html:573:                <p><strong>الحالة الاجتماعية:</strong> ${status || '-'} </p>
+hhh\index.html:574:                <p><strong>تاريخ الميلاد:</strong> ${birth || '-'} </p>
+hhh\index.html:575:                <p><strong>البريد الإلكتروني:</strong> ${email || '-'} </p>
+hhh\index.html:576:                <p><strong>رقم الجوال:</strong> ${phone || '-'} </p>
+hhh\index.html:577:                <p><strong>رقم قريب:</strong> ${relative || '-'} </p>
+hhh\index.html:580:        ${skills ? `<div class="section"><h2>المهارات 
+التقنية</h2>${skills.replaceAll('item-box','item-box-preview')}</div>` : ''}
+hhh\index.html:581:        ${experiences ? `<div class="section"><h2>الخبرات 
+العملية</h2>${experiences.replaceAll('item-box','item-box-preview')}</div>` : ''}
+hhh\index.html:582:        ${educations ? `<div class="section"><h2>المؤهلات 
+العلمية</h2>${educations.replaceAll('item-box','item-box-preview')}</div>` : ''}
+hhh\index.html:583:        ${certs ? `<div class="section"><h2>الشهادات 
+والدورات</h2>${certs.replaceAll('item-box','item-box-preview')}</div>` : ''}
+hhh\index.html:584:        ${projects ? `<div class="section"><h2>المشاريع السابقة 
+والإنجازات</h2>${projects.replaceAll('item-box','item-box-preview')}</div>` : ''}
+hhh\index.html:593:}
+hhh\index.html:595:function editCV() {
+hhh\index.html:598:}
+hhh\WorkOffer.html:15:    .custom-input-container {
+hhh\WorkOffer.html:18:    }
+hhh\WorkOffer.html:21:    .custom-input-container select {
+hhh\WorkOffer.html:29:    }
+hhh\WorkOffer.html:32:    .custom-input-container select:focus {
+hhh\WorkOffer.html:36:    }
+hhh\WorkOffer.html:38:    .custom-input-container label {
+hhh\WorkOffer.html:47:    }
+hhh\WorkOffer.html:52:    .custom-input-container select:not([value=""]) + label {
+hhh\WorkOffer.html:57:    }
+hhh\WorkOffer.html:59:    .dropdown-menu {
+hhh\WorkOffer.html:61:    }
+hhh\WorkOffer.html:102:            endDateOption.addEventListener("change", function () {
+hhh\WorkOffer.html:103:                if (this.value === "specified") {
+hhh\WorkOffer.html:106:                } else {
+hhh\WorkOffer.html:109:                }
+hhh\WorkOffer.html:110:            });
+hhh\WorkOffer.html:180:            function filterTransportRows(value) {
+hhh\WorkOffer.html:181:            document.querySelectorAll("#transportRows tr").forEach(row => {
+hhh\WorkOffer.html:182:                const statuse1 = row.querySelector("input[name='StatuseType1']")?.value;
+hhh\WorkOffer.html:183:                const statuse2 = row.querySelector("input[name='StatuseType2']")?.value;
+hhh\WorkOffer.html:185:                if (value === "myAccount" && statuse1 == "2") {
+hhh\WorkOffer.html:187:                } else if (value === "clientAccount" && statuse2 == "3") {
+hhh\WorkOffer.html:189:                } else if (value === "") {
+hhh\WorkOffer.html:191:                } else {
+hhh\WorkOffer.html:193:                }
+hhh\WorkOffer.html:194:            });
+hhh\WorkOffer.html:195:        }
+hhh\WorkOffer.html:199:         document.getElementById("transportTemplateSelect").addEventListener("change", 
+function() {
+hhh\WorkOffer.html:203:            if (!templateId || templateId === "create-new-template") {
+hhh\WorkOffer.html:206:            }
+hhh\WorkOffer.html:208:            fetch(`@Url.Action("GetTemplateDetails", "WorkOffer")?id=${templateId}`)
+hhh\WorkOffer.html:211:                .catch(err => {
+hhh\WorkOffer.html:213:                    container.innerHTML = `<table class="table table-bordered text-center 
+offer-table"><tbody><tr><td colspan="6" class="text-center text-danger">${err.message}</td></tr></tbody></table>`;
+hhh\WorkOffer.html:214:                });
+hhh\WorkOffer.html:215:        });
+hhh\WorkOffer1.html:15:    .custom-input-container {
+hhh\WorkOffer1.html:18:    }
+hhh\WorkOffer1.html:21:    .custom-input-container select {
+hhh\WorkOffer1.html:29:    }
+hhh\WorkOffer1.html:32:    .custom-input-container select:focus {
+hhh\WorkOffer1.html:36:    }
+hhh\WorkOffer1.html:38:    .custom-input-container label {
+hhh\WorkOffer1.html:47:    }
+hhh\WorkOffer1.html:52:    .custom-input-container select:not([value=""]) + label {
+hhh\WorkOffer1.html:57:    }
+hhh\WorkOffer1.html:59:    .dropdown-menu {
+hhh\WorkOffer1.html:61:    }
+hhh\Work_Form.html:15:    .custom-input-container {
+hhh\Work_Form.html:18:    }
+hhh\Work_Form.html:21:    .custom-input-container select {
+hhh\Work_Form.html:29:    }
+hhh\Work_Form.html:32:    .custom-input-container select:focus {
+hhh\Work_Form.html:36:    }
+hhh\Work_Form.html:38:    .custom-input-container label {
+hhh\Work_Form.html:47:    }
+hhh\Work_Form.html:52:    .custom-input-container select:not([value=""]) + label {
+hhh\Work_Form.html:57:    }
+hhh\Work_Form.html:59:    .dropdown-menu {
+hhh\Work_Form.html:61:    }
+hhh\Work_Form.html:515:        document.getElementById("GovernorateSelect").addEventListener("change", function () {
+hhh\Work_Form.html:516:            if (this.value === "lands") {
+hhh\Work_Form.html:520:                    .then(html => {
+hhh\Work_Form.html:524:                    });
+hhh\Work_Form.html:525:            }
+hhh\Work_Form.html:526:            else if (this.value === "buildings") {
+hhh\Work_Form.html:530:                    .then(html => {
+hhh\Work_Form.html:534:                    });
+hhh\Work_Form.html:535:            }
+hhh\Work_Form.html:536:        });
+hhh\Work_Form_base.html:15:    .custom-input-container {
+hhh\Work_Form_base.html:18:    }
+hhh\Work_Form_base.html:21:    .custom-input-container select {
+hhh\Work_Form_base.html:29:    }
+hhh\Work_Form_base.html:32:    .custom-input-container select:focus {
+hhh\Work_Form_base.html:36:    }
+hhh\Work_Form_base.html:38:    .custom-input-container label {
+hhh\Work_Form_base.html:47:    }
+hhh\Work_Form_base.html:52:    .custom-input-container select:not([value=""]) + label {
+hhh\Work_Form_base.html:57:    }
+hhh\Work_Form_base.html:59:    .dropdown-menu {
+hhh\Work_Form_base.html:61:    }
+hhh\Work_Form_base.html:683:        document.getElementById("GovernorateSelect").addEventListener("change", 
+function () {
+hhh\Work_Form_base.html:684:            if (this.value === "lands") {
+hhh\Work_Form_base.html:688:                    .then(html => {
+hhh\Work_Form_base.html:692:                    });
+hhh\Work_Form_base.html:693:            }
+hhh\Work_Form_base.html:694:            else if (this.value === "buildings") {
+hhh\Work_Form_base.html:698:                    .then(html => {
+hhh\Work_Form_base.html:702:                    });
+hhh\Work_Form_base.html:703:            }
+hhh\Work_Form_base.html:704:        });
+
+
