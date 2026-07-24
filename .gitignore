@@ -74,3 +74,15 @@ Desktop.ini
 project_files.txt
 git
 notepad
+
+bin/
+obj/
+.vs/
+__pycache__/
+
+*.mdf
+*.ldf
+*.bak
+
+# External assets
+EngMohammed_Assets/

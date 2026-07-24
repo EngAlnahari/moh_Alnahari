@@ -1,0 +1,27 @@
+﻿
+FullName                                        Length
+--------                                        ------
+D:\EngMohammed\hhh\AllTemplate.html              92082
+D:\EngMohammed\hhh\almjal.html                   45789
+D:\EngMohammed\hhh\almjal1.html                  37109
+D:\EngMohammed\hhh\ContractTemplate.html         21251
+D:\EngMohammed\hhh\ContractTemplate1.html        17462
+D:\EngMohammed\hhh\create.html                   60820
+D:\EngMohammed\hhh\createdevided.html            49067
+D:\EngMohammed\hhh\createform.html               53544
+D:\EngMohammed\hhh\createorder.html              39902
+D:\EngMohammed\hhh\createspece.html              10944
+D:\EngMohammed\hhh\creatform.html                53767
+D:\EngMohammed\hhh\devid.html                    12864
+D:\EngMohammed\hhh\hhh_inventory.txt                 0
+D:\EngMohammed\hhh\index.html                    27604
+D:\EngMohammed\hhh\localizer.py                   2132
+D:\EngMohammed\hhh\WorkOffer.html                13128
+D:\EngMohammed\hhh\WorkOffer1.html                3699
+D:\EngMohammed\hhh\Work_Form.html                26654
+D:\EngMohammed\hhh\Work_Form_base.html           33328
+D:\EngMohammed\hhh\libs\bootstrap.bundle.min.js  80721
+D:\EngMohammed\hhh\libs\bootstrap.rtl.min.css   232911
+D:\EngMohammed\hhh\libs\jquery.min.js            89795
+
+
