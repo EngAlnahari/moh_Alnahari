@@ -1,0 +1,166 @@
+﻿
+Count Name                      Group                                                                               
+----- ----                      -----                                                                               
+   25 id="typePieceSelect1"     {id="typePieceSelect1", id="typePieceSelect1", id="typePieceSelect1", id="typePie...
+   21 id="documentArea"         {id="documentArea", id="documentArea", id="documentArea", id="documentArea"...}     
+   17 id="txtNotes"             {id="txtNotes", id="txtNotes", id="txtNotes", id="txtNotes"...}                     
+   12 id="earthBordersSection"  {id="earthBordersSection", id="earthBordersSection", id="earthBordersSection", id...
+   12 id="earthBordersTitleU... {id="earthBordersTitleUnique123", id="earthBordersTitleUnique123", id="earthBorde...
+   10 id="tanjezForm"           {id="tanjezForm", id="tanjezForm", id="tanjezForm", id="tanjezForm"...}             
+   10 id="buildingTableSection" {id="buildingTableSection", id="buildingTableSection", id="buildingTableSection",...
+   10 id="addBuildingRow"       {id="addBuildingRow", id="addBuildingRow", id="addBuildingRow", id="addBuildingRo...
+    8 id="breadcrumb"           {id="breadcrumb", id="breadcrumb", id="breadcrumb", id="breadcrumb"...}             
+    7 id="saveRequestBtn"       {id="saveRequestBtn", id="saveRequestBtn", id="saveRequestBtn", id="saveRequestBt...
+    7 id="eastBoundaryType"     {id="eastBoundaryType", id="eastBoundaryType", id="eastBoundaryType", id="eastBou...
+    7 id="attachmentsWrapper"   {id="attachmentsWrapper", id="attachmentsWrapper", id="attachmentsWrapper", id="a...
+    7 id="addAttachmentBtn"     {id="addAttachmentBtn", id="addAttachmentBtn", id="addAttachmentBtn", id="addAtta...
+    6 id="requestTitle"         {id="requestTitle", id="requestTitle", id="requestTitle", id="requestTitle"...}     
+    6 id="Transportation"       {id="Transportation", id="Transportation", id="Transportation", id="Transportatio...
+    6 id="GovernorateSelect"    {id="GovernorateSelect", id="GovernorateSelect", id="GovernorateSelect", id="Gove...
+    6 id="periodType"           {id="periodType", id="periodType", id="periodType", id="periodType"...}             
+    6 id="placeTypeId"          {id="placeTypeId", id="placeTypeId", id="placeTypeId", id="placeTypeId"...}         
+    6 id="descripSelect"        {id="descripSelect", id="descripSelect", id="descripSelect", id="descripSelect"...} 
+    6 id="docImageInput"        {id="docImageInput", id="docImageInput", id="docImageInput", id="docImageInput"...} 
+    6 id="rahaqTableSection"    {id="rahaqTableSection", id="rahaqTableSection", id="rahaqTableSection", id="raha...
+    6 id="chkDown"              {id="chkDown", id="chkDown", id="chkDown", id="chkDown"...}                         
+    6 id="hiddenAreaDifferent"  {id="hiddenAreaDifferent", id="hiddenAreaDifferent", id="hiddenAreaDifferent", id...
+    6 id="maximumDuration"      {id="maximumDuration", id="maximumDuration", id="maximumDuration", id="maximumDur...
+    6 id="chkUp"                {id="chkUp", id="chkUp", id="chkUp", id="chkUp"...}                                 
+    6 id="OverNight"            {id="OverNight", id="OverNight", id="OverNight", id="OverNight"...}                 
+    6 id="addBorderRow"         {id="addBorderRow", id="addBorderRow", id="addBorderRow", id="addBorderRow"...}     
+    6 id="txtUp"                {id="txtUp", id="txtUp", id="txtUp", id="txtUp"...}                                 
+    6 id="AreaDifferentCheck... {id="AreaDifferentCheckbox", id="AreaDifferentCheckbox", id="AreaDifferentCheckbo...
+    6 id="Allowance"            {id="Allowance", id="Allowance", id="Allowance", id="Allowance"...}                 
+    6 id="unitCountDiv"         {id="unitCountDiv", id="unitCountDiv", id="unitCountDiv", id="unitCountDiv"...}     
+    6 id="unitCount"            {id="unitCount", id="unitCount", id="unitCount", id="unitCount"...}                 
+    6 id="unitLabel"            {id="unitLabel", id="unitLabel", id="unitLabel", id="unitLabel"...}                 
+    6 id="typePieceSelect"      {id="typePieceSelect", id="typePieceSelect", id="typePieceSelect", id="typePieceS...
+    6 id="txtDown"              {id="txtDown", id="txtDown", id="txtDown", id="txtDown"...}                         
+    6 id="unitSelect"           {id="unitSelect", id="unitSelect", id="unitSelect", id="unitSelect"...}             
+    6 id="attachBtn"            {id="attachBtn", id="attachBtn", id="attachBtn", id="attachBtn"...}                 
+    5 id="nameList2"            {id="nameList2", id="nameList2", id="nameList2", id="nameList2"...}                 
+    5 id="addNameBtn2"          {id="addNameBtn2", id="addNameBtn2", id="addNameBtn2", id="addNameBtn2"...}         
+    5 id="addNameBtn1"          {id="addNameBtn1", id="addNameBtn1", id="addNameBtn1", id="addNameBtn1"...}         
+    5 id="nameList1"            {id="nameList1", id="nameList1", id="nameList1", id="nameList1"...}                 
+    5 id="txtName1"             {id="txtName1", id="txtName1", id="txtName1", id="txtName1"...}                     
+    5 id="txtName2"             {id="txtName2", id="txtName2", id="txtName2", id="txtName2"...}                     
+    5 id="nameCount2"           {id="nameCount2", id="nameCount2", id="nameCount2", id="nameCount2"...}             
+    5 id="nameCount1"           {id="nameCount1", id="nameCount1", id="nameCount1", id="nameCount1"...}             
+    3 id="GovernorateModal"     {id="GovernorateModal", id="GovernorateModal", id="GovernorateModal"}               
+    3 id="additionalCostCont... {id="additionalCostContainer", id="additionalCostContainer", id="additionalCostCo...
+    3 id="GovernorateContent"   {id="GovernorateContent", id="GovernorateContent", id="GovernorateContent"}         
+    3 id="additionalCostSelect" {id="additionalCostSelect", id="additionalCostSelect", id="additionalCostSelect"}   
+    2 id="expiryDate"           {id="expiryDate", id="expiryDate"}                                                  
+    2 id="wagesTableContainer"  {id="wagesTableContainer", id="wagesTableContainer"}                                
+    2 id="notesAccordion"       {id="notesAccordion", id="notesAccordion"}                                          
+    2 id="rejectFormContainer"  {id="rejectFormContainer", id="rejectFormContainer"}                                
+    2 id="reportNotes"          {id="reportNotes", id="reportNotes"}                                                
+    2 id="rejectBtn"            {id="rejectBtn", id="rejectBtn"}                                                    
+    2 id="rejectForm"           {id="rejectForm", id="rejectForm"}                                                  
+    2 id="transportTemplateS... {id="transportTemplateSelect", id="transportTemplateSelect"}                        
+    2 id="transportTemplateS... {id="transportTemplateSelect1", id="transportTemplateSelect1"}                      
+    2 id="sentToClientField"    {id="sentToClientField", id="sentToClientField"}                                    
+    2 id="transportTableCont... {id="transportTableContainer", id="transportTableContainer"}                        
+    2 id="paymentInput"         {id="paymentInput", id="paymentInput"}                                              
+    2 id="paymentLabel"         {id="paymentLabel", id="paymentLabel"}                                              
+    2 id="paymentForm"          {id="paymentForm", id="paymentForm"}                                                
+    2 id="paymentFormTitle"     {id="paymentFormTitle", id="paymentFormTitle"}                                      
+    2 id="paymentModalContent"  {id="paymentModalContent", id="paymentModalContent"}                                
+    2 id="reason"               {id="reason", id="reason"}                                                          
+    2 id="paymentMethodSection" {id="paymentMethodSection", id="paymentMethodSection"}                              
+    2 id="paymentModal"         {id="paymentModal", id="paymentModal"}                                              
+    2 id="cvv"                  {id="cvv", id="cvv"}                                                                
+    2 id="cardNumber"           {id="cardNumber", id="cardNumber"}                                                  
+    2 id="clientEmail"          {id="clientEmail", id="clientEmail"}                                                
+    2 id="approveBtn"           {id="approveBtn", id="approveBtn"}                                                  
+    2 id="clientForm"           {id="clientForm", id="clientForm"}                                                  
+    2 id="clientPhone"          {id="clientPhone", id="clientPhone"}                                                
+    2 id="collapseNotes"        {id="collapseNotes", id="collapseNotes"}                                            
+    2 id="contractActions"      {id="contractActions", id="contractActions"}                                        
+    2 id="creditCardFields"     {id="creditCardFields", id="creditCardFields"}                                      
+    2 id="clientName"           {id="clientName", id="clientName"}                                                  
+    2 id="adoulModal"           {id="adoulModal", id="adoulModal"}                                                  
+    2 id="endDateOption"        {id="endDateOption", id="endDateOption"}                                            
+    2 id="clientModalLabel"     {id="clientModalLabel", id="clientModalLabel"}                                      
+    2 id="headingNotes"         {id="headingNotes", id="headingNotes"}                                              
+    2 id="acknowledgement"      {id="acknowledgement", id="acknowledgement"}                                        
+    2 id="adoulForm"            {id="adoulForm", id="adoulForm"}                                                    
+    2 id="endDateInput"         {id="endDateInput", id="endDateInput"}                                              
+    2 id="clientModal"          {id="clientModal", id="clientModal"}                                                
+    2 id="adoulModalLabel"      {id="adoulModalLabel", id="adoulModalLabel"}                                        
+    1 id="skillFrom"            {id="skillFrom"}                                                                    
+    1 id="skillName"            {id="skillName"}                                                                    
+    1 id="skills"               {id="skills"}                                                                       
+    1 id="skills-list"          {id="skills-list"}                                                                  
+    1 id="certName"             {id="certName"}                                                                     
+    1 id="certOrg"              {id="certOrg"}                                                                      
+    1 id="${id}"                {id="${id}"}                                                                        
+    1 id="cert-list"            {id="cert-list"}                                                                    
+    1 id="skillField"           {id="skillField"}                                                                   
+    1 id="skillDesc"            {id="skillDesc"}                                                                    
+    1 id="cert"                 {id="cert"}                                                                         
+    1 id="branch-icons"         {id="branch-icons"}                                                                 
+    1 id="branch"               {id="branch"}                                                                       
+    1 id="btn-requests"         {id="btn-requests"}                                                                 
+    1 id="btn-work-form"        {id="btn-work-form"}                                                                
+    1 id="btn-work-contract"    {id="btn-work-contract"}                                                            
+    1 id="type"                 {id="type"}                                                                         
+    1 id="almgal"               {id="almgal"}                                                                       
+    1 id="back-to-branch"       {id="back-to-branch"}                                                               
+    1 id="back-to-specialty"    {id="back-to-specialty"}                                                            
+    1 id="back-to-main"         {id="back-to-main"}                                                                 
+    1 id="tasks-container"      {id="tasks-container"}                                                              
+    1 id="step-branch"          {id="step-branch"}                                                                  
+    1 id="step-container"       {id="step-container"}                                                               
+    1 id="specialty-icons"      {id="specialty-icons"}                                                              
+    1 id="skillTo"              {id="skillTo"}                                                                      
+    1 id="specialty"            {id="specialty"}                                                                    
+    1 id="stillWorking"         {id="stillWorking"}                                                                 
+    1 id="btn-work-wofer"       {id="btn-work-wofer"}                                                               
+    1 id="step-specialty"       {id="step-specialty"}                                                               
+    1 id="step-detail"          {id="step-detail"}                                                                  
+    1 id="step-main"            {id="step-main"}                                                                    
+    1 id="langMother"           {id="langMother"}                                                                   
+    1 id="languages"            {id="languages"}                                                                    
+    1 id="langEnglish"          {id="langEnglish"}                                                                  
+    1 id="eduGrade"             {id="eduGrade"}                                                                     
+    1 id="langArabic"           {id="langArabic"}                                                                   
+    1 id="managers-table"       {id="managers-table"}                                                               
+    1 id="eduDept"              {id="eduDept"}                                                                      
+    1 id="manager-msg"          {id="manager-msg"}                                                                  
+    1 id="mainField"            {id="mainField"}                                                                    
+    1 id="main-icons"           {id="main-icons"}                                                                   
+    1 id="eduMajor"             {id="eduMajor"}                                                                     
+    1 id="expField"             {id="expField"}                                                                     
+    1 id="expFrom"              {id="expFrom"}                                                                      
+    1 id="experience-list"      {id="experience-list"}                                                              
+    1 id="expCompany"           {id="expCompany"}                                                                   
+    1 id="experience"           {id="experience"}                                                                   
+    1 id="eduYear"              {id="eduYear"}                                                                      
+    1 id="eduUniv"              {id="eduUniv"}                                                                      
+    1 id="extra-langs"          {id="extra-langs"}                                                                  
+    1 id="expTitle"             {id="expTitle"}                                                                     
+    1 id="expTo"                {id="expTo"}                                                                        
+    1 id="project-list"         {id="project-list"}                                                                 
+    1 id="projField"            {id="projField"}                                                                    
+    1 id="project"              {id="project"}                                                                      
+    1 id="personal"             {id="personal"}                                                                     
+    1 id="projCompany"          {id="projCompany"}                                                                  
+    1 id="projTo"               {id="projTo"}                                                                       
+    1 id="projValue"            {id="projValue"}                                                                    
+    1 id="projRole"             {id="projRole"}                                                                     
+    1 id="projFrom"             {id="projFrom"}                                                                     
+    1 id="projName"             {id="projName"}                                                                     
+    1 id="cv-form"              {id="cv-form"}                                                                      
+    1 id="education-list"       {id="education-list"}                                                               
+    1 id="education"            {id="education"}                                                                    
+    1 id="eduCountry"           {id="eduCountry"}                                                                   
+    1 id="motherLangOption"     {id="motherLangOption"}                                                             
+    1 id="eduDegree"            {id="eduDegree"}                                                                    
+    1 id="depart"               {id="depart"}                                                                       
+    1 id="cv-preview"           {id="cv-preview"}                                                                   
+    1 id="detail"               {id="detail"}                                                                       
+    1 id="newLang"              {id="newLang"}                                                                      
+    1 id="detail-icons"         {id="detail-icons"}                                                                 
+
+
