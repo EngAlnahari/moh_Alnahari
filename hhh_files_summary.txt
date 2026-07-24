@@ -1,0 +1,24 @@
+﻿
+Name                   Length
+----                   ------
+AllTemplate.html        92082
+almjal.html             45789
+almjal1.html            37109
+ContractTemplate.html   21251
+ContractTemplate1.html  17462
+create.html             60820
+createdevided.html      49067
+createform.html         53544
+createorder.html        39902
+createspece.html        10944
+creatform.html          53767
+devid.html              12864
+hhh_inventory.txt        1353
+index.html              27604
+localizer.py             2132
+WorkOffer.html          13128
+WorkOffer1.html          3699
+Work_Form.html          26654
+Work_Form_base.html     33328
+
+
